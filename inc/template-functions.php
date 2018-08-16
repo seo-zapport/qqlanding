@@ -44,13 +44,49 @@ add_action( 'wp_head', 'qqlanding_pingback_header' );
  */
 function qqlanding_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'qqlanding' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'qqlanding' ),
+		'name'          => esc_html__( 'Right Sidebar', 'qqlanding' ),
+		'id'            => 'right-sidebar',
+		'description'   => esc_html__( 'Add widgets here to appear in the right side of your site.', 'qqlanding' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s" itemprop="mainEntity">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="widget-title-container"><h3 class="widget-title" itemprop="name">',
+		'after_title'   => '</h3></div>',
+	) );
+	register_sidebar( array(
+		'name'			=> esc_html__( 'Left Sidebar', 'qqlanding' ),
+		'id'			=> 'left-sidebar',
+		'description'	=> esc_html__( 'Add widgets here to appear in the left side of your site', 'qqlanding' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s" itemprop="mainEntity">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="widget-title-container"><h3 class="widget-title" itemprop="name">',
+		'after_title'   => '</h3></div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'QQLanding: Right Footer Sidebar', 'qqlanding' ),
+		'id'            => 'right-footer-sidebar',
+		'description'   => esc_html__( 'Add widgets here to appear in the right footer side of your site.', 'qqlanding' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-title-container"><h4 class="widget-title">',
+		'after_title'   => '</h4></div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'QQLanding: Middle Footer Sidebar', 'qqlanding' ),
+		'id'            => 'middle-footer-sidebar',
+		'description'   => esc_html__( 'Add widgets here to appear in the middle footer side of your site.', 'qqlanding' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="widget-title-container"><h4 class="widget-title">',
+		'after_title'   => '</h4></div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'QQLanding: Left Footer Sidebar', 'qqlanding' ),
+		'id'            => 'left-footer-sidebar',
+		'description'   => esc_html__( 'Add widgets here to appear in the left footer side of your site.', 'qqlanding' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="widget-title-container"><h4 class="widget-title">',
+		'after_title'   => '</h4></div>',
 	) );
 }
 add_action( 'widgets_init', 'qqlanding_widgets_init' );
@@ -75,3 +111,130 @@ function acf_admin_enqueue(){
 	wp_enqueue_style( 'acf_styles', get_template_directory_uri() . '/inc/acf/acf-style.css');
 }
 add_action( 'admin_enqueue_scripts', 'acf_admin_enqueue');
+
+/**
+ * load the sections for the front page
+ */
+if( ! function_exists( 'qqlanding_load_section' ) ):
+
+    /**
+     * Load section
+     * @since 1.0.0
+     * @param $section_id
+     */
+    
+	function qqlanding_load_section( $section_id ){
+        /**
+         * Hook before section
+         */
+        
+        do_action( 'qqlanding_before_section_', $section_id );
+        do_action( 'qqlanding_before_section_part_', $section_id );
+
+        get_template_part( 'section-parts/section' , $section_id );
+
+        /**
+         * Hook after section
+         */
+        do_action( 'qqlanding_after_section_part_', $section_id );
+        do_action( 'qqlanding_after_section_', $section_id );
+	}
+
+endif;
+
+/**
+ * Load the slider
+ */
+if( ! function_exists( 'qqlanding_load_slider' ) ):
+
+	function qqlanding_load_slider(){
+		if ( is_page_template( 'template-page.php' ) ) {
+			qqlanding_load_slider('slider');
+		}
+	}
+
+endif;
+
+if ( ! function_exists( 'qqlanding_is_selective_refresh' ) ) :
+    function qqlanding_is_selective_refresh() {
+        return isset($GLOBALS['qqlanding_is_selective_refresh']) && $GLOBALS['qqlanding_is_selective_refresh'] ? true : false;
+    }
+endif;
+
+
+function get_first_image($src = null) {
+   global $post, $posts;
+    $first_img = '';
+    ob_start();
+    ob_end_clean();
+    $output = preg_match_all( '/<img .+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
+    if ( empty( $matches[1][0] ) || is_null( $matches[1][0] ) ) :
+        // defines a fallback image
+        $first_img = $matches[1]; 
+        if ( empty( $matches[1][0] ) || is_null( $matches[1][0] ) ):
+            $first_img = get_template_directory_uri() . "/assets/images/default.jpg";
+        endif;
+    else:
+        $first_img = $matches[1][0]; 
+    endif;
+
+    return $first_img;
+}
+
+function if_file_exists( $image ){
+  stream_context_set_default(
+  	array(
+  		'http' => array('method' => 'HEAD')
+  ));
+  $headers = get_headers($image, 1);
+  return stristr($headers[0], '200');
+}
+
+/**
+ * Custom Posts Navigations
+ * Display navigation to next/previous set of posts when applicable.
+ */
+if ( ! function_exists('qqlanding_post_navigations') ) :
+
+	function qqlanding_post_navigations(){
+
+	    // Don't print empty markup if there's only one page.
+	    if ( $GLOBALS[ 'wp_query' ]->max_num_pages < 2 ) {
+	      return;
+	    }
+	    
+	    $paged = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+	    $pagenum_link = html_entity_decode( get_pagenum_link() );
+	    $query_args = array();
+	    $url_parts = explode( '?', $pagenum_link  );
+
+	    if ( isset( $url_parts[1] ) ) {
+	      wp_parse_str( $url_parts[1], $query_args );
+	    }
+
+	    $pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+	    $pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+
+	    $format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+	    $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+
+	    /*Setup pagination nav*/
+	    $links = paginate_links( array( 
+	      'base'  => $pagenum_link,
+	      'format' => $format,
+	      'total' => $GLOBALS[ 'wp_query' ]->max_num_pages,
+	      'mid_size' => 3,
+	      'add_args' => array_map( 'urlencode', $query_args ),
+	      'prev_text' => __( '<span class="meta-nav-prev"></span> Previous', 'qqlanding' ),
+	      'next_text' => __( 'Next <span class="meta-nav-next"></span>', 'qqlanding' ),
+	      'type'      => 'list'
+	    ));
+	    ?>
+	    <nav class="navigation paging-navigation" role="navigation"  itemscope itemtype="http://schema.org/SiteNavigationElement">
+	      <h1 class="screen-reader-text"><?php _e( 'Posts Navigation','qqlanding' ); ?></h1>
+	      <?php echo $links; ?>
+	    </nav>
+	    <?php
+  }
+
+endif;
