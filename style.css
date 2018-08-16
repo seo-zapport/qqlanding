@@ -805,6 +805,43 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.qqlanding-sites.qqland-no-affix.qqland-qq288 .navbar {
+  background: #07738f;
+}
+.qqlanding-sites.qqland-no-affix.qqland-qq188 .navbar {
+  background: #142e5f;
+}
+.qqlanding-sites.qqland-no-affix.qqland-qq101 .navbar {
+  background: #033709;
+}
+.qqlanding-sites.qqland-no-affix.qqland-qq1x2 .navbar {
+  background: #0044a7;
+}
+.qqlanding-sites.qqland-no-affix.qqland-qq724 .navbar {
+  background: #3e3e3e;
+}
+.qqlanding-sites.qqland-no-affix.qqland-qqfortuna .navbar {
+  background: #300;
+}
+.qqlanding-sites.qqland-affix.qqland-qq288 .navbar {
+  background: rgba(7, 115, 143, 0.78);
+}
+.qqlanding-sites.qqland-affix.qqland-qq188 .navbar {
+  background: rgba(20, 46, 95, 0.78);
+}
+.qqlanding-sites.qqland-affix.qqland-qq101 .navbar {
+  background: rgba(3, 55, 9, 0.78);
+}
+.qqlanding-sites.qqland-affix.qqland-qq1x2 .navbar {
+  background: rgba(0, 68, 167, 0.78);
+}
+.qqlanding-sites.qqland-affix.qqland-qq724 .navbar {
+  background: rgba(62, 62, 62, 0.78);
+}
+.qqlanding-sites.qqland-affix.qqland-qqfortuna .navbar {
+  background: rgba(51, 0, 0, 0.78);
+}
+
 .sticky {
   display: block;
 }
