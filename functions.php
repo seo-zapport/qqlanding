@@ -73,12 +73,12 @@ if ( ! function_exists( 'qqlanding_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
+		/*add_theme_support( 'custom-logo', array(
 			'height'      => 250,
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
-		) );
+		) );*/
 	}
 endif;
 add_action( 'after_setup_theme', 'qqlanding_setup' );
@@ -145,9 +145,14 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+ * load Customizer Sanitization.
+ */
+require get_template_directory() . '/inc/customizer/sanitizer.php';
+
+/**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer/customizer.php';
 
 /**
  * Customizer additions.

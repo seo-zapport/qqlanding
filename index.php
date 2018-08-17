@@ -13,10 +13,14 @@
  */
 
 get_header();
-get_sidebar( 'left' );
-?>
 
-	<div id="primary" class="content-area col-md-8">
+$blogs_sidebar_layout = qqlanding_grid_sets( 'both','blog');
+
+if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'left' || get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'both' ) :
+	get_sidebar( 'left' );
+endif; ?>
+
+	<div id="primary" class="content-area <?php echo $blogs_sidebar_layout['grid_sets'] ?>">
 		<main id="main" class="site-main">
 
 		<?php
@@ -56,5 +60,9 @@ get_sidebar( 'left' );
 	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'right' );
+
+if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'right' || get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'both' ) :
+	get_sidebar( 'right' );
+endif;
+
 get_footer();

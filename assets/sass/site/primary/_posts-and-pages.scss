@@ -2,21 +2,29 @@
 .qqlanding-sites{
 	 //* No Affix
 	&.qqland-no-affix{
-		&.qqland-qq288{ .navbar{background:#07738f} }
-		&.qqland-qq188{ .navbar{background:#142e5f} }
-		&.qqland-qq101{ .navbar{background:#033709} }
-		&.qqland-qq1x2{ .navbar{background:#0044a7} }
-		&.qqland-qq724{ .navbar{background:#3e3e3e} }
-		&.qqland-qqfortuna{ .navbar{background:#300} }
+		&.qqland-qq288{ .navbar{background:$qq288_default} }
+		&.qqland-qq188{ .navbar{background:$qq188_default} }
+		&.qqland-qq101{ .navbar{background:$qq101_default} }
+		&.qqland-qq1x2{ .navbar{background:$qq1x2_blue_ribbon} }
+		&.qqland-qq724{ .navbar{background:$qq724_default} }
+		&.qqland-qqfortuna{ .navbar{background:$qqfortuna_default} }
+		&.qqland-qq801{ .navbar{background:$qq801_default} }
+		&.qqland-qq882{ .navbar{background:$qq882_default} }
+		&.qqland-qq808{ .navbar{background:$qq808_default} }
+		&.qqland-qq828{ .navbar{background:$qq828_default} }
 	}
 	//* Affix
 	&.qqland-affix{
-		&.qqland-qq288{ .navbar{background: rgba(7,115,143,.78)} }
-		&.qqland-qq188{ .navbar{background: rgba(20,46,95,.78)} }
-		&.qqland-qq101{ .navbar{background: rgba(3,55,9,.78)} }
-		&.qqland-qq1x2{ .navbar{background: rgba(0,68,167,.78)} }
-		&.qqland-qq724{ .navbar{background: rgba(62,62,62,.78)} }
-		&.qqland-qqfortuna{ .navbar{background: rgba(51,0,0,.78)} }
+		&.qqland-qq288{ .navbar{background: $qq288_trans} }
+		&.qqland-qq188{ .navbar{background: $qq188_trans} }
+		&.qqland-qq101{ .navbar{background: $qq101_trans} }
+		&.qqland-qq1x2{ .navbar{background: $qq1x2_trans} }
+		&.qqland-qq724{ .navbar{background: $qq724_trans} }
+		&.qqland-qqfortuna{ .navbar{background: $qqfortuna_trans} }
+		&.qqland-qq801{ .navbar{background: $qq801_trans} }
+		&.qqland-qq882{ .navbar{background: $qq882_trans} }
+		&.qqland-qq808{ .navbar{background: $qq808_trans} }
+		&.qqland-qq828{ .navbar{background: $qq828_trans} }
 	}
 }
 
