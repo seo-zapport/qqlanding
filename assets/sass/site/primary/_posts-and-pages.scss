@@ -26,6 +26,111 @@
 		&.qqland-qq808{ .navbar{background: $qq808_trans} }
 		&.qqland-qq828{ .navbar{background: $qq828_trans} }
 	}
+
+	//site-info
+	&.qqland-qq288{
+		.site-top-info{
+			background-color: $qq288_cerulean;
+		}
+	}
+	&.qqland-qq188{
+		.site-top-info{
+			background-color: $color__ea;
+			border-bottom-color:$color__e6;
+		}
+	}
+	&.qqland-qq101{
+		.site-top-info{
+			background-color: $qq101_english_holly;
+			border-bottom-color:$qq101_celtic;
+			color:$color__white;
+		}
+	}
+	&.qqland-qq1x2{
+		.site-top-info{
+			background-color: $qq1x2_default;
+			border-bottom-color:$qq1x2_mercury;
+			color:$color__white;
+		}
+	}
+	&.qqland-qq724{
+		.site-top-info{
+			background-color: $qq724_mine_shaft;
+			border-bottom-color:$color__e6;
+			color:$color__white;
+		}
+	}
+	&.qqland-qqfortuna{
+		.site-top-info{
+			background-color: $qqfortuna_temptress;
+			border-bottom-color:$color__e6;
+			color:$color__white;
+		}
+	}
+	&.qqland-qq801{
+		.site-top-info{
+			background-color: $color__22;
+			border-bottom-color:$color__7f;
+			color:$color__white;
+		}
+	}
+	&.qqland-qq882{
+		.site-top-info{
+			background-color: $color__e6;
+			border-bottom-color:$color__ea;
+			color:$color__7f;
+		}
+	}
+	&.qqland-qq808{
+		.site-top-info{
+			background-color: $qq808_brown_bramble;
+			border-bottom-color:$qq808_di_serria;
+			color:$color__7f;
+		}
+	}
+	&.qqland-qq828{
+		.site-top-info{
+			background-color: $qq828_fire;
+			border-bottom-color:$qq828_givry;
+			color:$color__white;
+		}
+	}
+
+	//sites
+	.site-top-info{
+		border-bottom:1px solid transparent;
+		padding:6px 10px;
+		line-height: 1.5;
+	}
+	.qqlanding-default{
+		/* .site-top-info{
+			margin-bottom:10px;
+		} */
+	}
+
+	//site-title & desc
+	.site-header{
+		margin-bottom:35px;
+	}
+	.site-branding{
+		.site-title,
+		.site-description,
+		.site-logo{
+			line-height:1.5;
+			margin-left: 1.5em;
+		}
+		.site-title{
+		    font-family: "Helvetica Neue", sans-serif;
+		    @include font-size(1.75);
+		    font-weight: 600;
+		    margin: 0.67em 0 0em 0.8em;
+		    line-height:1.5;
+		}
+		.site-description{
+			@include font-size(0.875);
+			margin-bottom: 1em;	
+		}
+	}
 }
 
 .sticky {

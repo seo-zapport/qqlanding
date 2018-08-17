@@ -497,6 +497,7 @@ dd {
 }
 
 img {
+  display: block;
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
@@ -864,6 +865,85 @@ a:hover, a:active {
 }
 .qqlanding-sites.qqland-affix.qqland-qq828 .navbar {
   background: rgba(236, 72, 1, 0.78);
+}
+.qqlanding-sites.qqland-qq288 .site-top-info {
+  background-color: #10aec7;
+}
+.qqlanding-sites.qqland-qq188 .site-top-info {
+  background-color: #eaeaea;
+  border-bottom-color: #e6e6e6;
+}
+.qqlanding-sites.qqland-qq101 .site-top-info {
+  background-color: #023606;
+  border-bottom-color: #153317;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qq1x2 .site-top-info {
+  background-color: #1f1f1f;
+  border-bottom-color: #e1e1e1;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qq724 .site-top-info {
+  background-color: #2f2f2f;
+  border-bottom-color: #e6e6e6;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qqfortuna .site-top-info {
+  background-color: #2e0002;
+  border-bottom-color: #e6e6e6;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qq801 .site-top-info {
+  background-color: #222222;
+  border-bottom-color: #7f7f7f;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qq882 .site-top-info {
+  background-color: #e6e6e6;
+  border-bottom-color: #eaeaea;
+  color: #7f7f7f;
+}
+.qqlanding-sites.qqland-qq808 .site-top-info {
+  background-color: #542604;
+  border-bottom-color: #da954a;
+  color: #7f7f7f;
+}
+.qqlanding-sites.qqland-qq828 .site-top-info {
+  background-color: #a63201;
+  border-bottom-color: #f9e2c2;
+  color: #fff;
+}
+.qqlanding-sites .site-top-info {
+  border-bottom: 1px solid transparent;
+  padding: 6px 10px;
+  line-height: 1.5;
+}
+.qqlanding-sites .qqlanding-default {
+  /* .site-top-info{
+  	margin-bottom:10px;
+  } */
+}
+.qqlanding-sites .site-header {
+  margin-bottom: 35px;
+}
+.qqlanding-sites .site-branding .site-title,
+.qqlanding-sites .site-branding .site-description,
+.qqlanding-sites .site-branding .site-logo {
+  line-height: 1.5;
+  margin-left: 1.5em;
+}
+.qqlanding-sites .site-branding .site-title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0.67em 0 0em 0.8em;
+  line-height: 1.5;
+}
+.qqlanding-sites .site-branding .site-description {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 1em;
 }
 
 .sticky {

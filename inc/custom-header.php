@@ -78,10 +78,6 @@ endif;
 
 function qqlanding_header_set(){
 
-	$before_title = '';
-	$after_title = '';
-	$before_desc = '';
-	$after_desc = '';
 	$template = get_field( 'header_template', 'option' );
 	$alignment = get_field( 'header_nav_alignment', 'option' );
 	$logo = get_theme_mod( 'site_logo', '' );
@@ -91,12 +87,12 @@ function qqlanding_header_set(){
 	if ( is_front_page() || is_home() ) {
 		$before_title = '<h1 class="site-title" itemprop="name">';
 		$after_title = '</h1>';
-		$after_desc = '<h2 class="site-description" itemprop="description">';
+		$before_desc = '<h2 class="site-description" itemprop="description">';
 		$after_desc = '</h2>';
 	}else{
 		$before_title = '<h2 class="site-title" itemprop="name">';
 		$after_title = '</h2>';
-		$after_desc = '<h3 class="site-description" itemprop="description">';
+		$before_desc = '<h3 class="site-description" itemprop="description">';
 		$after_desc = '</h3>';
 	}
 	switch ($template) {
@@ -109,7 +105,7 @@ function qqlanding_header_set(){
 		<div class="site-branding">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-4 px-0">
 						<?php if ( $title_option == 'logo-only' && ! empty( $logo ) ) : ?>
 							<?php echo $before_title; ?><a class="navbar-brand " href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><img src="<?php echo esc_url( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>" itemprop="image"></a><span class="sr-only"><?php echo get_bloginfo('name'); ?></span><?php echo $after_title; ?>
 						<?php endif; ?>
@@ -118,11 +114,11 @@ function qqlanding_header_set(){
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><img src="<?php echo esc_url( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
 							</div>
 							<?php echo $before_title; ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php echo $after_title; ?>
-							<?php echo $after_desc . bloginfo( 'description' ) . $after_desc; ?>
+							<?php echo $before_desc; ?><?php bloginfo( 'description' ); ?> <?php echo $after_desc; ?>
 						<?php endif; ?>
 						<?php if ( $title_option == 'text-only' ): ?>
 							<?php echo $before_title; ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php echo $after_title; ?>
-							<?php echo $after_desc . bloginfo( 'description' ) . $after_desc; ?>
+							<?php echo $before_desc; ?><?php bloginfo( 'description' ); ?> <?php echo $after_desc; ?>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -130,7 +126,7 @@ function qqlanding_header_set(){
 		</div><!-- .site-branding -->
 	<?php endif;?>
 
-	<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light <?php echo $nav_class; ?>">
+	<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg navbar-light py-0">
 		<?php if( $template == 'bare' || $template == 'overlay' ) : ?>
 			<div class="container">
 		<?php endif;?>
@@ -144,11 +140,11 @@ function qqlanding_header_set(){
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><img src="<?php echo esc_url( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
 						</div>
 						<?php echo $before_title; ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php echo $after_title; ?>
-						<?php echo $after_desc . bloginfo( 'description' ) . $after_desc; ?>
+						<?php echo $before_desc; ?><?php bloginfo( 'description' ); ?> <?php echo $after_desc; ?>
 					<?php endif; ?>
 					<?php if ( $title_option == 'text-only' ): ?>
 						<?php echo $before_title; ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php echo $after_title; ?>
-						<?php echo $after_desc . bloginfo( 'description' ) . $after_desc; ?>
+						<?php echo $before_desc; ?> <?php bloginfo( 'description' ); ?> <?php echo $after_desc; ?>
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 			<?php endif;?>
@@ -156,7 +152,7 @@ function qqlanding_header_set(){
 			<span class="navbar-toggler-icon"></span>
 			</button>
 			<?php if( $template == 'default' ) : ?>
-			<div class="container px-0">
+			<div class="container">
 			<?php endif;?>
 				<?php
 				wp_nav_menu( array(
