@@ -126,7 +126,7 @@ function qqlanding_header_set(){
 		</div><!-- .site-branding -->
 	<?php endif;?>
 
-	<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg navbar-light py-0">
+	<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light py-md-0">
 		<?php if( $template == 'bare' || $template == 'overlay' ) : ?>
 			<div class="container">
 		<?php endif;?>

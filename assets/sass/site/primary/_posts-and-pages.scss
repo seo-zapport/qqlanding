@@ -32,11 +32,121 @@
 		.site-top-info{
 			background-color: $qq288_cerulean;
 		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qq288_cerulean;
+						&:hover,&:focus{
+							color: $qq288_blue_stone;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__e6;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq288_blue_stone;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq288_blue_stone;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qq288_cerulean;
+			}
+		}
 	}
 	&.qqland-qq188{
 		.site-top-info{
 			background-color: $color__ea;
 			border-bottom-color:$color__e6;
+		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qq188_gulf_blue;
+						&:hover,&:focus{
+							color: $qq188_reso_blue;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__e6;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq188_reso_blue;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq188_reso_blue;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qq188_gulf_blue;
+			}
 		}
 	}
 	&.qqland-qq101{
@@ -45,12 +155,132 @@
 			border-bottom-color:$qq101_celtic;
 			color:$color__white;
 		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qq101_english_holly;
+						&:hover,&:focus{
+							color: $qq101_celtic;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__e6;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq101_celtic;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq101_celtic;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qq101_english_holly;
+			}
+		}
 	}
 	&.qqland-qq1x2{
 		.site-top-info{
 			background-color: $qq1x2_default;
 			border-bottom-color:$qq1x2_mercury;
 			color:$color__white;
+		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qq1x2_blue_ribbon;
+						&:hover,&:focus{
+							color: $qq1x2_default;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__e6;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq1x2_default;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq1x2_default;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qq1x2_default;
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq1x2_blue_ribbon;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq1x2_blue_ribbon;
+					}
+				}
+			}
 		}
 	}
 	&.qqland-qq724{
@@ -59,12 +289,122 @@
 			border-bottom-color:$color__e6;
 			color:$color__white;
 		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qq724_bay_leaf;
+						&:hover,&:focus{
+							color: $color__fd;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__fd;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$color__fd;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$color__fd;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qq724_mine_shaft;
+			}
+		}
 	}
 	&.qqland-qqfortuna{
 		.site-top-info{
 			background-color: $qqfortuna_temptress;
 			border-bottom-color:$color__e6;
 			color:$color__white;
+		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qqfortuna_mojo;
+						&:hover,&:focus{
+							color: $qqfortuna_temptress;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__e6;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qqfortuna_mojo;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qqfortuna_mojo;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qqfortuna_temptress;
+			}
 		}
 	}
 	&.qqland-qq801{
@@ -73,12 +413,132 @@
 			border-bottom-color:$color__7f;
 			color:$color__white;
 		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qq801_congress_blue;
+						&:hover,&:focus{
+							color: $color__fd;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__e6;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$color__fd;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$color__fd;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qq801_default;
+			}
+		}
 	}
 	&.qqland-qq882{
 		.site-top-info{
 			background-color: $color__e6;
 			border-bottom-color:$color__ea;
 			color:$color__7f;
+		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qq882_purple_heart;
+						&:hover,&:focus{
+							color: $qq882_razzmatazz;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__e6;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq882_razzmatazz;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq882_razzmatazz;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qq882_razzmatazz;
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq882_default;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq882_default;
+					}
+				}
+			}
 		}
 	}
 	&.qqland-qq808{
@@ -87,12 +547,132 @@
 			border-bottom-color:$qq808_di_serria;
 			color:$color__7f;
 		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qq808_brown_bramble;
+						&:hover,&:focus{
+							color: $qq808_di_serria;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__e6;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq808_di_serria;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq808_di_serria;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qq808_brown_bramble;
+			}
+		}
 	}
 	&.qqland-qq828{
 		.site-top-info{
 			background-color: $qq828_fire;
 			border-bottom-color:$qq828_givry;
 			color:$color__white;
+		}
+		&.qqlayout-default{
+			.site-branding{
+				.site-title{
+					a{
+						color: $qq828_default;
+						&:hover,&:focus{
+							color: $qq828_fire;
+						}
+					}
+				}
+			}
+		}
+		&.qqlayout-bare{
+			.site-branding{
+				.site-title,
+				.site-description,
+				.site-logo{
+					margin-bottom: 0.4em;
+					margin-left: 0em;
+				}
+				.site-title{
+					margin:0.3em 0 0em 0em;
+					a{
+						color: $color__white;
+						&:hover,&:focus{
+							color: $color__e6;
+						}
+					}
+				}
+				.site-description{
+					color:$color__ea;
+				}
+			}
+		}
+		#site-navigation{
+			ul{
+				margin: 0;
+				width: 100%;
+			}
+			.navbar-nav{
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq828_fire;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq828_fire;
+					}
+				}
+			} 
+			.dropdown-menu{
+				background-color: $qq828_fire;
+				.nav-link{
+					&:hover,&:focus{
+						background-color:$qq828_default;
+					}
+				}
+				.active{
+					.nav-link{
+						background-color:$qq828_default;
+					}
+				}
+			}
 		}
 	}
 
@@ -129,6 +709,23 @@
 		.site-description{
 			@include font-size(0.875);
 			margin-bottom: 1em;	
+		}
+	}
+	//site-navigation
+	#site-navigation{
+		.navbar-nav{
+			.nav-link{
+				color: $color__white;
+				@include font-size(1);
+				padding-bottom: 0.7em;
+				padding-top: 0.7em;
+			}
+			.dropdown-menu{
+				border-radius: 0;
+				.nav-link{
+						@include font-size(0.9375);
+				}
+			}
 		}
 	}
 }
