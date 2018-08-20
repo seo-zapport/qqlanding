@@ -14,7 +14,7 @@
 
   };
 
-
+if ( jQuery('body').hasClass('qqland-affix') ) {
   jQuery('[data-toggle="affix"]').each(function() {
     var ele = jQuery(this),
         wrapper = jQuery('<div></div>');
@@ -26,4 +26,5 @@
 
     // init
     toggleAffix(ele, wrapper, jQuery(window));
-  });
+  }); 
+}

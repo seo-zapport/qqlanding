@@ -33,7 +33,17 @@
 	<header id="masthead" class="site-header <?php echo $nav_class; ?>">
 		<div class="site-top-info">
 			<div class="container">
-				hello
+				<ul class="social_media float-md-right">
+					<li><a href="#"><i class=" fab fa-facebook-square"></i></a></li><!--facebook-->
+					<li><a href="#"><i class=" fab fa-twitter-square"></i></a></li><!--twitter-->
+					<li><a href="#"><i class=" fab fa-linkedin"></i></a></li><!--linkedin-->
+					<li><a href="#"><i class=" fab fa-youtube-square"></i></a></li><!--youtube-->
+					<li><a href="#"><i class=" fab fa-google-plus-square"></i></a></li><!--googleplus-->
+					<li><a href="#"><i class=" fab fa-pinterest-square"></i></a></li><!--pinterest-->
+					<li><a href="#"><i class=" fab fa-rss-square"></i></a></li><!--rss-->
+					<li><a href="#"><i class=" fab fa-flickr"></i></a></li><!--flickr-->
+				</ul>
+				<span class="clearfix"></span>
 			</div>
 		</div>
 		<?php qqlanding_header_set(); ?>
