@@ -96,6 +96,14 @@
 		&.qqland-qq882{ .navbar{background: $qq882_trans} }
 		&.qqland-qq808{ .navbar{background: $qq808_trans} }
 		&.qqland-qq828{ .navbar{background: $qq828_trans} }
+		.affix{
+			width: 100%;
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: 1030;
+		}
 	}
 	//site-info
 	&.qqland-qq288{

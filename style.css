@@ -944,6 +944,14 @@ a:hover, a:active {
 .qqlanding-sites.qqland-affix.qqland-qq828 .navbar {
   background: rgba(236, 72, 1, 0.78);
 }
+.qqlanding-sites.qqland-affix .affix {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
 .qqlanding-sites.qqland-qq288 .site-top-info {
   background-color: #10aec7;
 }
