@@ -33,7 +33,7 @@
 	<header id="masthead" class="site-header <?php echo $nav_class; ?>">
 		<div class="site-top-info">
 			<div class="container">
-				<ul class="social_media float-md-right">
+				<ul id="social_media" class="float-md-right">
 					<li><a href="#"><i class=" fab fa-facebook-square"></i></a></li><!--facebook-->
 					<li><a href="#"><i class=" fab fa-twitter-square"></i></a></li><!--twitter-->
 					<li><a href="#"><i class=" fab fa-linkedin"></i></a></li><!--linkedin-->
