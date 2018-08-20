@@ -1,8 +1,139 @@
+.qqlanding-sites{
+	&.qqland-qq288{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qq288_default;
+				.widget-title{
+					background-color:$qq288_default;
+				}
+			}
+		}
+	}
+	&.qqland-qq188{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qq188_gulf_blue;
+				.widget-title{
+					background-color:$qq188_gulf_blue;
+				}
+			}
+		}
+	}
+	&.qqland-qq101{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qq188_gulf_blue;
+				.widget-title{
+					background-color:$qq188_gulf_blue;
+				}
+			}
+		}
+	}
+	&.qqland-qq1x2{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qq1x2_blue_ribbon;
+				.widget-title{
+					background-color:$qq1x2_blue_ribbon;	
+				}
+			}
+		}
+	}
+	&.qqland-qq724{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qq724_bay_leaf;
+				.widget-title{
+					background-color:$qq724_bay_leaf;	
+				}
+			}
+		}
+	}
+	&.qqland-qqfortuna{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qqfortuna_mojo;
+				.widget-title{
+					background-color:$qqfortuna_mojo;
+				}
+			}
+		}
+	}
+	&.qqland-qq801{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qq801_default;
+				.widget-title{
+					background-color:$qq801_default;
+				}
+			}
+		}
+	}
+	&.qqland-qq882{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qq882_razzmatazz;
+				.widget-title{
+					background-color:$qq882_razzmatazz;
+				}
+			}
+		}
+	}
+	&.qqland-qq808{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qq808_di_serria;
+				.widget-title{
+					background-color:$qq808_di_serria;
+				}
+			}
+		}
+	}
+	&.qqland-qq828{
+		.widget{
+			.widget-title-container{
+				border-bottom-color:$qq828_fire;
+				.widget-title{
+					background-color:$qq828_fire;
+				}
+			}
+		}
+	}
+}
+
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 2.5em;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+	ul {
+		list-style: none;
+		margin: 0;
+
+		li {
+		  margin: 0.4em 0;
+		  padding: 0 0.5em;
+		  a{
+		  	@include font-size(1);
+		  }
+		}
+	}
+	.widget-title-container{
+		border-bottom: 1px solid $color__b5;
+		margin-bottom: 20px;
+		.widget-title{
+			background-color:$color__b5;
+			color: white;
+			display: inline-block;
+			@include font-size(1.2);
+			font-weight: 500;
+			line-height: 1.3;
+			margin:0px 0px 1px 0px;
+			padding: 0.3em 0.5em;
+			text-transform:uppercase;
+		}
+	}
+
 }
