@@ -20,6 +20,37 @@ if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'left' || get_t
 	get_sidebar( 'left' );
 endif; ?>
 
+<?php /*if ( have_rows( 'th_fonts', 'option' ) ) :
+	while ( have_rows( 'th_fonts', 'option' ) ) : the_row();
+		$smo = 1;
+		$entry_item = get_sub_field('th_entry_item');
+		$font_family = get_sub_field('thr_font_family');
+		$font_size = get_sub_field('thr_font_size');
+		$font_style = get_sub_field('thr_font_style');
+		$font_weight = get_sub_field('thr_font_weight');
+
+		if ( get_sub_field('th_entry_item') == 'body' ) : ?>
+			body.qqlanding-sites{
+		<?php elseif( get_sub_field('th_entry_item') == 'content' ): ?>
+			.page-content,.entry-content,.entry-summary,.comment-content{
+		<?php elseif( get_sub_field('th_entry_item') == 'meta' ): ?>
+			.genpost-entry-meta,.single-entry-meta,.genpost-entry-footer{
+		<?php elseif( get_sub_field('th_entry_item') == 'link' ): ?>
+			a, .page-links{
+		<?php else: ?>
+			.page-entry-title,.archive-page-title,.search-page-title,.entry-title{
+		<?php endif; ?>
+		
+		font-family:
+		<?php foreach ($font_family as $val) {
+			//echo $val . ' ,';
+			//$item = implode(', ', $val);
+			echo item;
+		} ?> ;
+		font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
+	<?php endwhile;
+endif;*/?>
+
 	<div id="primary" class="content-area <?php echo $blogs_sidebar_layout['grid_sets'] ?>">
 		<main id="main" class="site-main">
 
