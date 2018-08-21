@@ -161,6 +161,40 @@ if ( ! function_exists( 'qqlanding_is_selective_refresh' ) ) :
     }
 endif;
 
+<<<<<<< HEAD
+=======
+/**
+ * Display the Grid item
+ */
+if ( ! function_exists( 'qqlanding_grid_sets' ) ) :
+
+	function qqlanding_grid_sets( $grid_sets = 'both', $sets = 'blog' ){
+		if ( $sets == 'page' ) { $sets = 'page'; }
+		elseif ( $sets == 'single' ) { $sets = 'single'; }
+		else{ $sets = 'blog'; }
+
+		$layout = get_theme_mod( 'qqlanding_' . $sets . '_sidebar_layout', $grid_sets );
+
+
+		switch ( $layout ) {
+			case 'right': $grid_sets = 'col-md-9'; $grid_side_sets = 'col-md-3'; break;
+			case 'left': $grid_sets = 'col-md-9';  $grid_side_sets = 'col-md-3';break;
+			case 'none': $grid_sets = 'col-md-12';  $grid_side_sets = '';break;
+			default: $grid_sets = 'col-md-8';  $grid_side_sets = 'col-md-2';break;
+		}
+
+		$grid_args = array( 'grid_sets' => $grid_sets, 'grid_side_sets' => $grid_side_sets );
+		return apply_filters( 'qqlanding_grid_sets',$grid_args, $grid_sets );
+	}
+
+endif;
+
+
+/**
+ * Display the first image of the featured post,
+ * if they don't have the featured post input
+ */
+>>>>>>> 6eedb7e33fed81627fc5e71554e1754b0b749547
 
 function get_first_image($src = null) {
    global $post, $posts;

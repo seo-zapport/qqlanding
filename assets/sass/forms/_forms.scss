@@ -1,3 +1,148 @@
 @import "buttons";
 
 @import "fields";
+<<<<<<< HEAD
+=======
+
+.qqlanding-sites{
+	&.qqland-qq288{
+		.search-form{ 
+			.search-submit{ 
+				background-color:$qq288_cerulean;
+				&:hover{
+					background-color:$qq288_default;
+				}
+			}
+		}
+	}
+	&.qqland-qq188{ 
+		.search-form{ 
+			.search-submit{ 
+				background-color:$qq188_default;
+				&:hover{
+					background-color:$qq188_gulf_blue;
+				}
+			}
+		}
+	}
+	&.qqland-qq101{ 
+		.search-form{
+			.search-submit{ 
+				background-color:$qq101_default;
+				&:hover{
+					background-color:$qq101_celtic;
+				}
+			}
+		}
+	}
+	&.qqland-qq1x2{ 
+		.search-form{ 
+			.search-submit{
+				background-color:$qq1x2_default;
+				&:hover{
+					background-color:$qq1x2_blue_ribbon;
+				}
+			}
+		}
+	}
+	&.qqland-qq724{ 
+		.search-form{
+			.search-submit{
+				background-color:$qq724_default;
+				&:hover{
+					background-color:$color__fd;
+				}
+			}
+		}
+	}
+	&.qqland-qqfortuna{ 
+		.search-form{ 
+			.search-submit{
+				background-color:$qqfortuna_mojo;
+				&:hover{
+					background-color: $color__fd;
+				}
+			}
+		}
+	}
+	&.qqland-qq801{ 
+		.search-form{ 
+			.search-submit{
+				background-color:$qq801_congress_blue;
+				&:hover{
+					background-color:$qq801_regal_blue;
+				} 
+			} 
+		} 
+	}
+	&.qqland-qq882{ 
+		.search-form{ 
+			.search-submit{ 
+				background-color:$qq882_purple_heart;
+				&:hover{
+					background-color:$qq882_razzmatazz;
+				} 
+			} 
+		} 
+	}
+	&.qqland-qq808{ 
+		.search-form{ 
+			.search-submit{ 
+				background-color:$qq808_brown_bramble;
+				&:hover{
+					background-color:$qq808_di_serria;
+				} 
+			} 
+		} 
+	}
+	&.qqland-qq828{ 
+		.search-form{ 
+			.search-submit{ 
+				background-color:$qq828_default;
+				&:hover{
+					background-color:$qq828_fire;
+				} 
+			} 
+		} 
+	}
+}
+
+.search-form{
+	display: block;
+	position: relative;
+	width:100%;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+	label{
+		display:block;
+	}
+	.search-field{
+		display:block;
+		margin:0;
+		padding:10px 80px 10px 10px;
+		width:100%;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    -webkit-appearance: none;
+	}
+	.search-submit{
+		background-color:$color__b5;
+		color: $color__white;
+		@include font-size(0.75);
+		font-weight: bold;
+		height:45px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border: none;
+		padding: 10px 12px;
+		cursor: pointer;
+    	text-transform: uppercase;
+    	&:hover{
+    		background-color: $color__b5;
+    	}
+	}
+}
+>>>>>>> 6eedb7e33fed81627fc5e71554e1754b0b749547
