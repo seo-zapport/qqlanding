@@ -876,77 +876,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-/* .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-} */
 .qqlanding-sites.qqland-no-affix.qqland-qq288 .navbar {
   background: #02849c;
 }
@@ -1058,6 +987,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq188 .site-top-info {
   background-color: #eaeaea;
   border-bottom-color: #e6e6e6;
+}
+.qqlanding-sites.qqland-qq188 .site-top-info ul#social_media li i[class*='fa-'] {
+  color: #061C55;
 }
 .qqlanding-sites.qqland-qq188.qqlayout-default .site-branding .site-title a {
   color: #061C55;
@@ -1316,6 +1248,9 @@ a:hover, a:active {
   background-color: #e6e6e6;
   border-bottom-color: #eaeaea;
   color: #7f7f7f;
+}
+.qqlanding-sites.qqland-qq882 .site-top-info ul#social_media li i[class*='fa-'] {
+  color: #061C55;
 }
 .qqlanding-sites.qqland-qq882.qqlayout-default .site-branding .site-title a {
   color: #8e21ba;
@@ -1810,8 +1745,51 @@ a:hover, a:active {
   font-size: 15px;
   font-size: 0.9375rem;
 }
+.qqlanding-sites.qqland-qq288 .site-footer {
+  background-color: #e6e6e6;
+}
+.qqlanding-sites.qqland-qq188 .site-footer {
+  background-color: #eaeaea;
+}
+.qqlanding-sites.qqland-qq101 .site-footer {
+  background-color: #eaeaea;
+}
+.qqlanding-sites.qqland-qq1x2 .site-footer {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qq1x2 .site-footer a {
+  color: #fff;
+}
+.qqlanding-sites.qqland-qq1x2 .site-footer a:hover, .qqlanding-sites.qqland-qq1x2 .site-footer a:focus {
+  color: #015fe7;
+}
+.qqlanding-sites.qqland-qq724 .site-footer {
+  background-color: #2f2f2f;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qqfortuna .site-footer {
+  background-color: #222222;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qq801 .site-footer {
+  background-color: #013878;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qq882 .site-footer {
+  background-color: #1a0725;
+  color: #fff;
+}
+.qqlanding-sites.qqland-qq808 .site-footer {
+  background-color: #f0eae4;
+  color: #222222;
+}
+.qqlanding-sites.qqland-qq828 .site-footer {
+  background-color: #892c00;
+  color: #fff;
+}
 .qqlanding-sites .site-footer {
-  background: #892c00;
+  background: #222222;
   padding: 25px 0;
 }
 

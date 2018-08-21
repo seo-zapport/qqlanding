@@ -110,8 +110,72 @@
 		}
 	}
 
+	&.qqland-qq288{
+		.site-footer{
+			background-color:$color__e6;
+		}
+	}
+	&.qqland-qq188{
+		.site-footer{
+			background-color:$color__ea;
+		}
+	}
+	&.qqland-qq101{
+		.site-footer{
+			background-color:$color__ea;
+		}
+	}
+	&.qqland-qq1x2{
+		.site-footer{
+			background-color:$qq1x2_default;
+			color: $color__white;
+			a{
+				color: $color__white;
+				&:hover,&:focus{
+					color: $qq1x2_blue_ribbon;
+				}
+			}
+		}
+	}
+	&.qqland-qq724{
+		.site-footer{
+			background-color:$qq724_mine_shaft;
+			color: $color__white;
+		}
+	}
+	&.qqland-qqfortuna{
+		.site-footer{
+			background-color:$color__22;
+			color: $color__white;
+		}
+	}
+	&.qqland-qq801{
+		.site-footer{
+			background-color:$qq801_regal_blue;
+			color: $color__white;
+		}
+	}
+	&.qqland-qq882{
+		.site-footer{
+			background-color:$qq882_dark;
+			color:$color__white;
+		}
+	}
+	&.qqland-qq808{
+		.site-footer{
+			background-color:$qq808_light;
+			color:$color__22;
+		}
+	}
+	&.qqland-qq828{
+		.site-footer{
+			background-color:$qq828_dark;
+			color:$color__white;
+		}
+	}
+
 	.site-footer {
-		background: $qq828_dark;
+		background: $color__22;
 		padding:25px 0;
 	}
 }
