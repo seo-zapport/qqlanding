@@ -1,3 +1,11 @@
+@include font-family('arial_rounded_mt_std_regular', '././assets/fonts/#{$arial_rounded_mt_std_regular}/#{$arial_rounded_mt_std_regular}', 'normal', 'normal');
+@include font-family('big_noodle_titling', '././assets/fonts/#{$big_noodle_titling}/#{$big_noodle_titling}', 'normal', 'normal');
+@include font-family('noto_sans_bold', '././assets/fonts/#{$noto_sans_bold}/#{$noto_sans_bold}', 'normal', 'bold');
+@include font-family('noto_sans_bold_italic', '././assets/fonts/#{$noto_sans_bold_italic}/#{$noto_sans_bold_italic}', 'normal', 'bold');
+@include font-family('noto_sans_italic', '././assets/fonts/#{$noto_sans_italic}/#{$noto_sans_italic}', 'italic', 'normal');
+@include font-family('noto_sans_regular', '././assets/fonts/#{$noto_sans_regular}/#{$noto_sans_regular}', 'normal', 'normal');
+@include font-family('segoe_ui', '././assets/fonts/#{$segoe_ui}/#{$segoe_ui}', 'normal', 'normal');
+
 body,
 button,
 input,

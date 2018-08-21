@@ -1,3 +1,16 @@
+//Render the font family
+@mixin font-family( $font_family, $font_filename, $font_style:'normal', $font_weight:'normal' ){
+	@font-face{
+		font-family: $font_family;
+		src: url('#{$font_filename}.eot?') format("eot");
+		src: url('#{$font_filename}.woff2') format("woff2");
+		src: url('#{$font_filename}.woff') format("woff");
+		src: url('#{$font_filename}.ttf') format("truetype");
+		font-style:$font_style;
+		font-weight:$font_weight;
+	}
+
+}
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;
