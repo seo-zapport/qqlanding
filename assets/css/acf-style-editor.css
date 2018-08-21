@@ -1,0 +1,28 @@
+
+
+/* ================================= */
+/* =========== Slider ============== */
+/* ================================= */
+
+#banner {
+	
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	width: 100%;
+	height: 420px; 
+	margin-bottom:2em;
+} 
+
+#banner-static {
+	background: url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
+	width: 100%;
+	height: 420px;
+	
+}
+
+.banner-static-content {
+	margin: 2em 0;
+	width : 50%;
+	float: right;
+}

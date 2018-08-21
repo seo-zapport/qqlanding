@@ -1,0 +1,32 @@
+/**
+ * ACF Admin Style
+ */
+ul.acf-field-radio li{
+	text-align: center;
+}
+.acf-field-radio label img{
+	vertical-align: middle;
+}
+.acf-field-radio label input {
+    /*display: none;*/
+}
+.acf-field-radio label p {
+	margin: 0;
+	font-weight: 500;
+	text-align: center;
+}
+.acf-field-radio label img,
+.acf-field-radio label i{
+    border: 4px solid #ddd;
+    padding: 8px 9px;
+    margin-bottom: 5px;
+    color: #ddd;
+    background: #e8e8e8;
+}
+.acf-field-radio label input:hover+img,
+.acf-field-radio label input:checked+img,
+.acf-field-radio label input:hover+i,
+.acf-field-radio label input:checked+i{
+	border: solid 4px #999;
+	color: #999;
+}
