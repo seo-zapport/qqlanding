@@ -26,6 +26,8 @@
 			default: $nav_class = "qqlanding-default"; break;
 		}
 	?>
+
+	
 </head>
 <body <?php body_class( 'qqlanding-sites qqland-' . qqlanding_schema( $layout ) ); ?>>
 <div id="page" class="site container<?php echo ( get_field( 'th_layout', 'option' ) == 'wide' ) ? '-full' : ''; ?>">
@@ -50,9 +52,7 @@
 	</header><!-- #masthead -->
 
 
-	<?php 
-		get_template_part( 'section-parts/section', 'slider' );
-	?>
+	<?php if ( is_front_page() && ! is_home() ) qqlanding_load_section('slider'); ?>
 
 	<div id="content" class="site-content container">
 		<div class="row">

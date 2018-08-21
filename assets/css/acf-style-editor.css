@@ -16,7 +16,7 @@
 } 
 
 #banner-static {
-	background: url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
+	background: url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-2.jpg');
 	width: 100%;
 	height: 420px;
 	
@@ -32,3 +32,10 @@
 	width : 50%;
 	float: right;
 }
+
+.carousel-item .view img{
+	width: 100%;
+	height: 420px;	
+}
+
+

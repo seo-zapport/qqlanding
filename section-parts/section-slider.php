@@ -18,8 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 							the_row(); ?>
 						<h3><?php the_sub_field('slider_title'); ?></h3>
 					    <p><?php the_sub_field('slider_content'); ?></p>    	
+						<button>EnterSite</button>
 					<?php endif; ?>
-					<button>EnterSite</button>
 				</div>
 		</div>
 	</div>
@@ -28,44 +28,70 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}elseif(get_field('slider_layout', 'options') == "slider"){		
 ?>
 	<div id="banner-slider">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		  <!-- Indicators -->
-		  <ol class="carousel-indicators">
-		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		    <li data-target="#myCarousel" data-slide-to="1"></li>
-		  </ol>
 
-		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner">
-		    
-		    <div class="item active">
-		      <img src="http://via.placeholder.com/1900x420" alt="Chania">
-		      <div class="carousel-caption">
-		        <h3>Los Angeles</h3>
-		        <p>LA is always so much fun!</p>
-		      </div>
+		<!--Carousel Wrapper-->
+		<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+		    <!--Indicators-->
+		    <ol class="carousel-indicators">
+				
+		       	<?php 
+					$count = "0";
+					if( have_rows('slider_item_r', 'option') ): 
+						while ( have_rows( 'slider_item_r', 'option' ) ) : the_row(); 
+				?>
+		        <li data-target="#carousel-example-2" data-slide-to="<?php echo $count; ?>"  <?php if($count=="0"){ echo " class='active'"; } ?>></li>
+				<?php 
+						$count++;
+					endwhile;
+				endif; ?>
+
+		    </ol>
+		    <!--/.Indicators-->
+		    <!--Slides-->
+		    <div class="carousel-inner" role="listbox">
+
+				<?php 
+					$count = "0";
+					if( have_rows('slider_item_r', 'option') ): 
+						while ( have_rows( 'slider_item_r', 'option' ) ) : the_row(); 
+						$background = get_sub_field('slide_image');	
+				?>
+
+		        <div class="carousel-item<?php if($count == '0'){echo ' active';}else{echo '';} ?>">
+		            <div class="view">
+		                <img class="d-block w-100" src="<?php echo $background['url']; ?>" alt="First slide">
+		                <div class="mask rgba-black-light"></div>
+		            </div>
+		            <div class="carousel-caption">
+		                <h3 class="h3-responsive"><?php the_sub_field('slider_title'); ?></h3>
+					    <p><?php the_sub_field('slider_content'); ?></p>    	
+						<button>EnterSite</button>
+		            </div>
+		        </div>
+
+				<?php 
+						$count++;
+					endwhile;
+				endif; ?>
 		    </div>
-
-		    <div class="item ">
-		      <img src="http://via.placeholder.com/1900x420" alt="Chania">
-		      <div class="carousel-caption">
-		        <h3>Los Angeles</h3>
-		        <p>LA is always so much fun!</p>
-		      </div>
-		    </div>
-
-		  </div>
-
-		  <!-- Left and right controls -->
-		  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-		    <span class="glyphicon glyphicon-chevron-left"></span>
-		    <span class="sr-only">Previous</span>
-		  </a>
-		  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-		    <span class="glyphicon glyphicon-chevron-right"></span>
-		    <span class="sr-only">Next</span>
-		  </a>
+		    <!--/.Slides-->
+		    <!--Controls-->
+		    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+		        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		        <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+		        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		        <span class="sr-only">Next</span>
+		    </a>
+		    <!--/.Controls-->
 		</div>
+		<!--/.Carousel Wrapper-->
+
+
+
+
+
 	</div>
 <?php 
 	}//end of if statement of slider layout
