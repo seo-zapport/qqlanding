@@ -70,8 +70,7 @@ if ( ! function_exists( 'qqlanding_header_style' ) ) :
 		<?php
 	}
 endif;
-<<<<<<< HEAD
-=======
+
 
 
 /**
@@ -176,4 +175,4 @@ function qqlanding_header_set(){
 	</nav><!-- #site-navigation -->
 	<?php
 }
->>>>>>> 6eedb7e33fed81627fc5e71554e1754b0b749547
+

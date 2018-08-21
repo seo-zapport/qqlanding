@@ -161,8 +161,7 @@ if ( ! function_exists( 'qqlanding_is_selective_refresh' ) ) :
     }
 endif;
 
-<<<<<<< HEAD
-=======
+
 /**
  * Display the Grid item
  */
@@ -194,7 +193,7 @@ endif;
  * Display the first image of the featured post,
  * if they don't have the featured post input
  */
->>>>>>> 6eedb7e33fed81627fc5e71554e1754b0b749547
+
 
 function get_first_image($src = null) {
    global $post, $posts;
