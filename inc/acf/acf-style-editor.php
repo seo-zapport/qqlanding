@@ -1,7 +1,6 @@
 <?php
 /**
  * ACF Style Editor
-<<<<<<< HEAD
  */
 
 //Slider Item
@@ -126,9 +125,8 @@ endif;
 	margin: 2em 0;
 	width : <?php echo $contentsize; ?>;
 	<?php echo $contentposition; ?>
-
 }
-=======
- */ 
+
+
 ?>
->>>>>>> 6eedb7e33fed81627fc5e71554e1754b0b749547
+

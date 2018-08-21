@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 // Section Slider
 // If this file is called directly, abort.
@@ -8,7 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section id="banner">
-
 <?php
 	if(get_field('slider_layout', 'options') == "static") {
 ?>
@@ -37,9 +35,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php 
 
 ?>
-
-
 </section>
-=======
-slider
->>>>>>> 6eedb7e33fed81627fc5e71554e1754b0b749547
