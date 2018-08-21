@@ -54,7 +54,21 @@
 			margin-bottom:10px;
 		} */
 	}
-
+	&.qqlayout-overlay{
+		&.qqland-affix{
+			.site-header{
+				&.qqlanding-overlay{
+					height: 140px;
+					.navbar{
+						position: fixed;
+						width: 100%;
+						z-index: 1050;
+					}
+				}
+			}
+		}
+	}
+	
 	//site-title & desc
 	.site-header{
 		margin-bottom:35px;
@@ -94,6 +108,11 @@
 				}
 			}
 		}
+	}
+
+	.site-footer {
+		background: $qq828_dark;
+		padding:25px 0;
 	}
 }
 

@@ -3,6 +3,10 @@
  * ACF Style Editor
  */
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec06e3acea3e50d7a1b06e283902dcabaf5a2244
 //Slider Item
 if(get_field('slider_bg_attr', 'option') == "bg-image") :
 	if(have_rows('slider_item_r', 'option')) : 
@@ -128,6 +132,7 @@ endif;
 	<?php echo $contentposition; ?>
 
 }
+<<<<<<< HEAD
 
 .carousel-item .view img{
 	width: 100%;
@@ -136,6 +141,9 @@ endif;
 
 
 <?php
+=======
+<?php 
+>>>>>>> ec06e3acea3e50d7a1b06e283902dcabaf5a2244
 if ( have_rows( 'th_fonts', 'option' ) ) :
 	while ( have_rows( 'th_fonts', 'option' ) ) : the_row();
 		$font_family = get_sub_field('thr_font_family');
@@ -168,6 +176,10 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 		<?php endif; ?>
 		font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
 	<?php endwhile;
+<<<<<<< HEAD
 endif;
 
 ?>
+=======
+endif;
+>>>>>>> ec06e3acea3e50d7a1b06e283902dcabaf5a2244

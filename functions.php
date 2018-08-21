@@ -147,6 +147,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+ * Extra Functions 
+ */
+require get_template_directory() . '/inc/extra.php';
+
+/**
  * load Customizer Sanitization.
  */
 require get_template_directory() . '/inc/customizer/sanitizer.php';
