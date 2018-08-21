@@ -33,10 +33,6 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 		<?php else: ?>
 			.page-entry-title,.archive-page-title,.search-page-title,.entry-title{
 		<?php endif; ?>
-		font-family:
-		<?php foreach ($font_family as $val) {
-			echo $val . ' ,';
-		} ?> ;
 		font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
 	<?php endwhile;
 endif;
