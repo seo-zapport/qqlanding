@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section id="banner">
+
 <?php
 	if(get_field('slider_layout', 'options') == "static") {
 ?>
@@ -35,4 +36,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php 
 
 ?>
+
+
 </section>

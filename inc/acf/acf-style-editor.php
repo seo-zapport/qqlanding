@@ -125,8 +125,5 @@ endif;
 	margin: 2em 0;
 	width : <?php echo $contentsize; ?>;
 	<?php echo $contentposition; ?>
+
 }
-
-
-?>
-
