@@ -31,28 +31,15 @@
 <div id="page" class="site container<?php echo ( get_field( 'th_layout', 'option' ) == 'wide' ) ? '-full' : ''; ?>">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'qqlanding' ); ?></a>
 	<header id="masthead" class="site-header <?php echo $nav_class; ?>">
-		<div class="site-top-info">
-			<div class="container">
-				<ul id="social_media" class="float-md-right">
-					<li><a href="#"><i class=" fab fa-facebook-square"></i></a></li><!--facebook-->
-					<li><a href="#"><i class=" fab fa-twitter-square"></i></a></li><!--twitter-->
-					<li><a href="#"><i class=" fab fa-linkedin"></i></a></li><!--linkedin-->
-					<li><a href="#"><i class=" fab fa-youtube-square"></i></a></li><!--youtube-->
-					<li><a href="#"><i class=" fab fa-google-plus-square"></i></a></li><!--googleplus-->
-					<li><a href="#"><i class=" fab fa-pinterest-square"></i></a></li><!--pinterest-->
-					<li><a href="#"><i class=" fab fa-rss-square"></i></a></li><!--rss-->
-					<li><a href="#"><i class=" fab fa-flickr"></i></a></li><!--flickr-->
-				</ul>
-				<span class="clearfix"></span>
+		<?php if ( get_field( 'header_top_menu', 'option' ) === true): ?>
+			<div class="site-top-info">
+				<div class="container">
+					<?php qqlanding_social_media(); ?>
+				</div>
 			</div>
-		</div>
+		<?php endif; ?>
 		<?php qqlanding_header_set(); ?>
 	</header><!-- #masthead -->
-
-
-	<?php 
-		get_template_part( 'section-parts/section', 'slider' );
-	?>
-
+	<?php if ( is_front_page() && ! is_home() ) qqlanding_load_section('slider'); ?>
 	<div id="content" class="site-content container">
 		<div class="row">

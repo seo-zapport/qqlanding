@@ -95,6 +95,225 @@ function qqlanding_customizer_register( $wp_customize ){
 			'description'	=> esc_html__( 'Use this section to set Theme options/settings of the site.', 'qqlanding' ),
 		)
 	);
+
+		/**
+		 * ## Social Media
+		 *-------------------------------------*/
+		$wp_customize->add_section(
+			'qqlanding_socialMedia_settings',
+			array(
+				'priority'		=> 3,
+				'title'			=> esc_html__( 'Social Media', 'qqlanding' ),
+				'description' 	=> esc_html__( 'Use this panel settings to set your social media.', 'qqlanding' ),
+				'panel'			=> 'qqlanding_theme_options'
+			)
+		);
+
+		$wp_customize->add_setting(
+			'qqlanding_display_smedia_icon',
+			array(
+				'default' => false,
+				'sanitize_callback' => 'qqlanding_sanitize_checkbox'
+			)
+		);
+		$wp_customize->add_control(
+			'qqlanding_display_smedia_icon',
+			array(
+				'section' => 'qqlanding_socialMedia_settings',
+				'setting' => 'qqlanding_display_smedia_icon',
+				'type'	 => 'checkbox',
+				'label' => __( 'Display social icons?', 'qqlanding' ),
+			)
+		);
+
+			//facebook
+			$wp_customize->add_setting(
+				'facebook_url',
+				array(
+					'default'	=> '',
+					'sanitize_callback' => 'qqlanding_sanitize_url'
+				)
+			);
+			$wp_customize->add_control(
+				'facebook_url',
+				array(
+					'section' => 'qqlanding_socialMedia_settings',
+					'setting' => 'facebook_url',
+					'type'	 => 'url',
+					'label' => __( 'Facebook URL', 'qqlanding' ),
+					'input_attrs' => array(
+						'placeholder' => __( 'Eg: https://facebook.com', 'qqlanding' )
+					)
+				)
+			);
+
+			//twitter
+			$wp_customize->add_setting(
+				'twitter_url',
+				array(
+					'default' => '',
+					'sanitize_callback' => 'qqlanding_sanitize_url'
+				)
+			);
+			$wp_customize->add_control(
+				'twitter_url',
+				array(
+					'section' => 'qqlanding_socialMedia_settings',
+					'setting' => 'twitter_url',
+					'type' => 'url',
+					'label' => __('Twitter URL?', 'qqlanding'),
+					'input_attrs' => array(
+						'placeholder' => __( 'Eg: https://twitter.com/QID', 'qqlanding' )
+					)
+				)
+			);
+
+			//instagram
+			$wp_customize->add_setting(
+				'instagram_url',
+				array(
+					'default' => '',
+					'sanitize_callback' => 'qqlanding_sanitize_url'
+				)
+			);
+			$wp_customize->add_control(
+				'instagram_url',
+				array(
+					'section' => 'qqlanding_socialMedia_settings',
+					'setting' => 'instagram_url',
+					'type' => 'url',
+					'label' => __('Instagram URL?', 'qqlanding'),
+					'input_attrs' => array(
+						'placeholder' => __( 'Eg: https://instagram.com/QID', 'qqlanding' )
+					)
+				)
+			);
+
+			//linkedin
+			$wp_customize->add_setting(
+				'linkedin_url',
+				array(
+					'default' => '',
+					'sanitize_callback' => 'qqlanding_sanitize_url'
+				)
+			);
+			$wp_customize->add_control(
+				'linkedin_url',
+				array(
+					'section' => 'qqlanding_socialMedia_settings',
+					'setting' => 'linkedin_url',
+					'type' => 'url',
+					'label' => __('Linkedin URL?', 'qqlanding'),
+					'input_attrs' => array(
+						'placeholder' => __( 'https://www.linkedin.com/in/QID', 'qqlanding' )
+					)
+				)
+			);
+
+			//youtube
+			$wp_customize->add_setting(
+				'youtube_url',
+				array(
+					'default' => '',
+					'sanitize_callback' => 'qqlanding_sanitize_url'
+				)
+			);
+			$wp_customize->add_control(
+				'youtube_url',
+				array(
+					'section' => 'qqlanding_socialMedia_settings',
+					'setting' => 'youtube_url',
+					'type' => 'url',
+					'label' => __('Youtube URL?', 'qqlanding'),
+					'input_attrs' => array(
+						'placeholder' => __( 'Eg: https://www.youtube.com/watch?v=awEwrR1', 'qqlanding' )
+					)
+				)
+			);
+
+			//google-plus
+			$wp_customize->add_setting(
+				'googleplus_url',
+				array(
+					'default' => '',
+					'sanitize_callback' => 'qqlanding_sanitize_url'
+				)
+			);
+			$wp_customize->add_control(
+				'googleplus_url',
+				array(
+					'section' => 'qqlanding_socialMedia_settings',
+					'setting' => 'googleplus_url',
+					'type' => 'url',
+					'label' => __('Google Plus URL?', 'qqlanding'),
+					'input_attrs' => array(
+						'placeholder' => __( 'Eg: https://plus.google.com/104605854646', 'qqlanding' )
+					)
+				)
+			);
+
+			//pinterest
+			$wp_customize->add_setting(
+				'pinterest_url',
+				array(
+					'default' => '',
+					'sanitize_callback' => 'qqlanding_sanitize_url'
+				)
+			);
+			$wp_customize->add_control(
+				'pinterest_url',
+				array(
+					'section' => 'qqlanding_socialMedia_settings',
+					'setting' => 'pinterest_url',
+					'type' => 'url',
+					'label' => __('Pinterest URL?', 'qqlanding'),
+					'input_attrs' => array(
+						'placeholder' => __( 'Eg: https://www.pinterest.com/QID/', 'qqlanding' )
+					)
+				)
+			);
+
+			//rss
+			$wp_customize->add_setting(
+				'rss_url',
+				array(
+					'default' => '',
+					'sanitize_callback' => 'qqlanding_sanitize_url'
+				)
+			);
+			$wp_customize->add_control(
+				'rss_url',
+				array(
+					'section' => 'qqlanding_socialMedia_settings',
+					'setting' => 'rss_url',
+					'type' => 'url',
+					'label' => __('RSS URL?', 'qqlanding'),
+					'input_attrs' => array(
+						'placeholder' => __( 'Eg: https://www.example.com/QID/', 'qqlanding' )
+					)
+				)
+			);
+
+			//flickr
+			$wp_customize->add_setting(
+				'flickr_url',
+				array(
+					'default' => '',
+					'sanitize_callback' => 'qqlanding_sanitize_url'
+				)
+			);
+			$wp_customize->add_control(
+				'flickr_url',
+				array(
+					'section' => 'qqlanding_socialMedia_settings',
+					'setting' => 'flickr_url',
+					'type' => 'url',
+					'label' => __('Flickr URL?', 'qqlanding'),
+					'input_attrs' => array(
+						'placeholder' => __( 'Eg: https://www.flickr.com/photos/QID', 'qqlanding' )
+					)
+				)
+			);
 		/**
 		 * ## Blogs Section
 		 *-------------------------------------*/

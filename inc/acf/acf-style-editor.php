@@ -3,7 +3,7 @@
  * ACF Style Editor
  */
 
-<<<<<<< HEAD
+
 //Slider Item
 if(get_field('slider_bg_attr', 'option') == "bg-image") :
 	if(have_rows('slider_item_r', 'option')) : 
@@ -129,7 +129,7 @@ endif;
 	<?php echo $contentposition; ?>
 
 }
-=======
+<?php 
 if ( have_rows( 'th_fonts', 'option' ) ) :
 	while ( have_rows( 'th_fonts', 'option' ) ) : the_row();
 		$font_family = get_sub_field('thr_font_family');
@@ -163,4 +163,3 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 		font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
 	<?php endwhile;
 endif;
->>>>>>> 4fbb8163a713cde5bf5b7d0d84fbd4241fbac924
