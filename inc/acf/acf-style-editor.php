@@ -49,8 +49,6 @@ if(get_field('slider_item_r', 'option')) :
 	 elseif(get_sub_field('slide_presets') =='custom'):
 
 	 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:".$repeat.";".$scroll;
-
-
 	 else:
 
 		$presets = "";
@@ -88,13 +86,10 @@ endif;
 //Fonts Settings
 if(have_rows('slider_fonts', 'option')) :
 	the_row();
-	
 	$sliderfont =  get_sub_field('slider_font_family');
 	$sliderfontsize =  get_sub_field('slider_font_size');
 	$sliderfontstyle =  get_sub_field('slider_font_style');
 	$sliderfontweight =  get_sub_field('slider_font_weight');
-
-
 endif;
 ?>
 
@@ -105,6 +100,7 @@ endif;
 
 #banner {
 	
+	font-family: <?php echo $sliderfont[0]; ?>;
 	font-size: <?php echo $sliderfontsize; ?>px;
 	font-style: <?php echo $sliderfontstyle; ?>;
 	font-weight: <?php echo $sliderfontweight; ?>;
@@ -119,6 +115,11 @@ endif;
 	height: <?php echo $slide_height; ?>px;
 	<?php echo $presets; ?>
 
+}
+
+#banner-slider {
+	width: 100%;
+	height: <?php echo $slide_height; ?>px;
 }
 
 .banner-static-content {
