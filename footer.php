@@ -13,7 +13,7 @@
 
 		</div><!-- .row -->
 	</div><!-- #content -->
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer"> 
 		<div class="container">
 			<div class="site-info">
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'qqlanding' ) ); ?>">
