@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+@mixin ease-in-out( $val: 0.5s) {
+	-webkit-transition: all $val ease-in-out;
+	   -moz-transition: all $val ease-in-out;
+		 -o-transition: all $val ease-in-out;
+	 		transition: all $val ease-in-out;
+}
+
 //Render the font family
 @mixin font-family( $font_family, $font_filename, $font_style:'normal', $font_weight:'normal' ){
 	@font-face{
@@ -11,6 +19,8 @@
 	}
 
 }
+=======
+>>>>>>> b6d2702... initial commit
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;

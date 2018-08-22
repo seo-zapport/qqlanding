@@ -70,6 +70,7 @@ if ( ! function_exists( 'qqlanding_header_style' ) ) :
 		<?php
 	}
 endif;
+<<<<<<< HEAD
 
 
 /**
@@ -168,9 +169,11 @@ function qqlanding_header_set(){
 			<?php if( $template == 'default' ) : ?>
 			</div>
 			<?php endif;?>
-		<?php if( $template == 'default' ) : ?>
+		<?php if( $template == 'bare' || $template == 'overlay' ) : ?>
 		</div>
 		<?php endif;?>
 	</nav><!-- #site-navigation -->
 	<?php
 }
+=======
+>>>>>>> b6d2702... initial commit

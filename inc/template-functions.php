@@ -49,8 +49,13 @@ function qqlanding_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here to appear in the right side of your site.', 'qqlanding' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s" itemprop="mainEntity">',
 		'after_widget'  => '</section>',
+<<<<<<< HEAD
+		'before_title'  => '<div class="widget-title-container"><h4 class="widget-title" itemprop="name">',
+		'after_title'   => '</h4></div>',
+=======
 		'before_title'  => '<div class="widget-title-container"><h3 class="widget-title" itemprop="name">',
 		'after_title'   => '</h3></div>',
+>>>>>>> b6d2702... initial commit
 	) );
 	register_sidebar( array(
 		'name'			=> esc_html__( 'Left Sidebar', 'qqlanding' ),
@@ -58,8 +63,13 @@ function qqlanding_widgets_init() {
 		'description'	=> esc_html__( 'Add widgets here to appear in the left side of your site', 'qqlanding' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s" itemprop="mainEntity">',
 		'after_widget'  => '</section>',
+<<<<<<< HEAD
+		'before_title'  => '<div class="widget-title-container"><h4 class="widget-title" itemprop="name">',
+		'after_title'   => '</h4></div>',
+=======
 		'before_title'  => '<div class="widget-title-container"><h3 class="widget-title" itemprop="name">',
 		'after_title'   => '</h3></div>',
+>>>>>>> b6d2702... initial commit
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'QQLanding: Right Footer Sidebar', 'qqlanding' ),
@@ -161,6 +171,7 @@ if ( ! function_exists( 'qqlanding_is_selective_refresh' ) ) :
     }
 endif;
 
+<<<<<<< HEAD
 /**
  * Display the Grid item
  */
@@ -175,10 +186,10 @@ if ( ! function_exists( 'qqlanding_grid_sets' ) ) :
 
 
 		switch ( $layout ) {
-			case 'right': $grid_sets = 'col-md-9'; $grid_side_sets = 'col-md-3'; break;
-			case 'left': $grid_sets = 'col-md-9';  $grid_side_sets = 'col-md-3';break;
+			case 'right': $grid_sets = 'col-12 col-md-12 col-lg-9'; $grid_side_sets = 'col-12 col-md-12 col-lg-3'; break;
+			case 'left': $grid_sets = 'col-12 col-md-12 col-lg-9';  $grid_side_sets = 'col-12 col-md-12 col-lg-3';break;
 			case 'none': $grid_sets = 'col-md-12';  $grid_side_sets = '';break;
-			default: $grid_sets = 'col-md-8';  $grid_side_sets = 'col-md-2';break;
+			default: $grid_sets = 'col-12 col-md-12 col-lg-8';  $grid_side_sets = 'col-12 col-md-12 col-lg-2';break;
 		}
 
 		$grid_args = array( 'grid_sets' => $grid_sets, 'grid_side_sets' => $grid_side_sets );
@@ -192,6 +203,8 @@ endif;
  * Display the first image of the featured post,
  * if they don't have the featured post input
  */
+=======
+>>>>>>> b6d2702... initial commit
 
 function get_first_image($src = null) {
    global $post, $posts;

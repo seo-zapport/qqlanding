@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  var toggleAffix = function(affixElement, wrapper, scrollElement) {
 
     var height = affixElement.outerHeight(),
@@ -28,3 +29,8 @@ if ( jQuery('body').hasClass('qqland-affix') ) {
     toggleAffix(ele, wrapper, jQuery(window));
   }); 
 }
+=======
+window.onscroll = (e) => {
+	console.log('this is the test');
+}
+>>>>>>> b6d2702... initial commit

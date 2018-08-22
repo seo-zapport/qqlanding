@@ -49,6 +49,11 @@ if(get_field('slider_item_r', 'option')) :
 	 elseif(get_sub_field('slide_presets') =='custom'):
 
 	 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:".$repeat.";".$scroll;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b6d2702... initial commit
 	 else:
 
 		$presets = "";
@@ -65,16 +70,47 @@ if(have_rows('slider_appearance_group', 'option')) :
 	$slide_height = get_sub_field('slider_height');
 endif;
 
+<<<<<<< HEAD
 //Fonts Settings
 if(have_rows('slider_fonts', 'option')) :
 	the_row();
+=======
+//Content Settings
+if(have_rows('slider_content_settings', 'option')) :
+	the_row();
+	if(get_sub_field('slider_content_size') == 'full'):
+		$contentsize = "100%";
+	else:
+		$contentsize = "50%";	
+	endif;
+
+	if(get_sub_field('slider_position') == 'right'):
+		$contentposition = "float: right;";
+	elseif(get_sub_field('slider_position') == 'left'):
+		$contentposition = "float: left;";
+	else:
+		$contentposition = "";	
+	endif;
+endif;
+
+//Fonts Settings
+if(have_rows('slider_fonts', 'option')) :
+	the_row();
+	
+>>>>>>> b6d2702... initial commit
 	$sliderfont =  get_sub_field('slider_font_family');
 	$sliderfontsize =  get_sub_field('slider_font_size');
 	$sliderfontstyle =  get_sub_field('slider_font_style');
 	$sliderfontweight =  get_sub_field('slider_font_weight');
+<<<<<<< HEAD
 endif;
 
 
+=======
+
+
+endif;
+>>>>>>> b6d2702... initial commit
 ?>
 
 
@@ -84,7 +120,10 @@ endif;
 
 #banner {
 	
+<<<<<<< HEAD
 	font-family: <?php echo $sliderfont[0]; ?>;
+=======
+>>>>>>> b6d2702... initial commit
 	font-size: <?php echo $sliderfontsize; ?>px;
 	font-style: <?php echo $sliderfontstyle; ?>;
 	font-weight: <?php echo $sliderfontweight; ?>;
@@ -95,6 +134,7 @@ endif;
 
 #banner-static {
 	background: <?php echo $background;?>;
+<<<<<<< HEAD
 	color: #fff;
 	width: 100%;
 	height: <?php echo $slide_height; ?>px;
@@ -212,3 +252,17 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 endif;
 
 ?>
+=======
+	width: 100%;
+	height: <?php echo $slide_height; ?>px;
+	<?php echo $presets; ?>
+
+}
+
+.banner-static-content {
+	margin: 2em 0;
+	width : <?php echo $contentsize; ?>;
+	<?php echo $contentposition; ?>
+
+}
+>>>>>>> b6d2702... initial commit

@@ -44,6 +44,7 @@ endif;
  */
 function qqlanding_schema( $class ){
 	$add_affix = ( get_field('th_nav_settings','option') == true ) ? 'qqland-affix' : 'qqland-no-affix';
+<<<<<<< HEAD
 	$template = get_field( 'header_template', 'option' );
 	switch ($template) {
 		case 'bare': $new_class = "qqlayout-bare"; break;
@@ -66,3 +67,22 @@ function qqlanding_schema( $class ){
 	}
 	return $class;
 }
+=======
+
+	switch ( $class ) {
+		case 'qq188': $class = 'qq188 ' . $add_affix; break;
+		case 'qq101': $class = 'qq101 ' . $add_affix; break;
+		case 'qq1x2': $class = 'qq1x2 ' . $add_affix; break;
+		case 'qq724': $class = 'qq724 ' . $add_affix; break;
+		case 'qqfortuna': $class = 'qqfortuna ' . $add_affix; break;
+		case 'qq801': $class = 'qq801 ' . $add_affix; break;
+		case 'qq882': $class = 'qq882 ' . $add_affix; break;
+		case 'qq808': $class = 'qq808 ' . $add_affix; break;
+		case 'qq828': $class = 'qq828 ' . $add_affix; break;
+		case 'custom': $class = 'custom ' . $add_affix; break;
+		default: $class = 'qq288 ' . $add_affix; break;
+	}
+	return $class;
+}
+
+>>>>>>> b6d2702... initial commit

@@ -6,7 +6,10 @@
 
 #banner {
 	
+<<<<<<< HEAD
 	font-family: notosans-regular;
+=======
+>>>>>>> b6d2702... initial commit
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 500;
@@ -16,13 +19,18 @@
 } 
 
 #banner-static {
+<<<<<<< HEAD
 	background: url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-2.jpg');
 	color: #fff;
+=======
+	background: url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
+>>>>>>> b6d2702... initial commit
 	width: 100%;
 	height: 420px;
 	
 }
 
+<<<<<<< HEAD
 
 
 
@@ -32,7 +40,12 @@
 	height: 420px;	
 }
 
+<<<<<<< HEAD
 .caro-slide-0 {
+=======
+					body.qqlanding-sites{
+				font-size: 14px; font-style: normal; font-weight: 500; }	
+>>>>>>> a0735be647e50afefc6107eae6d176fada8efb07
 		
 	;	
 	;	
@@ -85,3 +98,10 @@
 
 
 
+=======
+.banner-static-content {
+	margin: 2em 0;
+	width : 50%;
+	float: right;
+}
+>>>>>>> b6d2702... initial commit
