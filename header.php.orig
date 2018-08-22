@@ -42,13 +42,11 @@
 		<?php endif; ?>
 		<?php qqlanding_header_set(); ?>
 	</header><!-- #masthead -->
-<<<<<<< HEAD
+
 
 
 	<?php if ( is_front_page() && ! is_home() ) qqlanding_load_section('slider'); ?>
 
-=======
-	<?php if ( is_front_page() && ! is_home() ) qqlanding_load_section('slider'); ?>
->>>>>>> ec06e3acea3e50d7a1b06e283902dcabaf5a2244
+
 	<div id="content" class="site-content container">
 		<div class="row">
