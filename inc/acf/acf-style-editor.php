@@ -106,14 +106,14 @@ endif;
 <?php if(get_field('slider_layout','option') == 'static'): ?>
 
 <?php 
- if( get_field('slider_item_r', 'option') ): the_row();
+ if( have_rows('slider_item_r', 'option') ): the_row();
 ?>
 
 .banner-static-content {
 	margin: 2em 0;
-	<?php if(the_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 50%;"; }else{ echo "width: 100%;";  } ?>	
-	<?php if(the_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".the_sub_field('content_settings')['slider_content_position']; }?>;	
-	<?php echo "text-align:".the_sub_field('content_settings')['slider_text_align'];  ?>;	
+	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 50%;"; }else{ echo "width: 100%;";  } ?>	
+	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position']; }?>;	
+	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'];  ?>;	
 }
 
 <?php endif; ?>
@@ -145,6 +145,8 @@ endif;
 .caro-slide-<?php echo $count; ?> {
 	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 40%;"; } ?>	
 	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position']; }?>;	
+	<?php if(get_sub_field('content_settings')['slider_content_position'] == 'right' ){echo "left: 50%"; }?>;	
+
 	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'];  ?>;	
 	top: 20px;
 	bottom: 0px;

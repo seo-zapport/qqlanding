@@ -24,27 +24,6 @@
 }
 
 
-.banner-static-content {
-	margin: 2em 0;
-	width: 100%;	
-	float:;	
-	text-align:;	
-}
-
-
-
-#banner-slider {
-	width: 100%;
-	height: 420px;
-}
-
-
-
-.carousel-item .view img{
-	width: 100%;
-	height: 420px;	
-}
-
 
 
 
@@ -56,6 +35,8 @@
 .caro-slide-0 {
 		
 	;	
+	;	
+
 	text-align:center;	
 	top: 20px;
 	bottom: 0px;
@@ -69,6 +50,8 @@
 .caro-slide-1 {
 	width: 40%;	
 	float:left;	
+	;	
+
 	text-align:left;	
 	top: 20px;
 	bottom: 0px;
@@ -82,10 +65,21 @@
 .caro-slide-2 {
 	width: 40%;	
 	float:right;	
+	left: 50%;	
+
 	text-align:left;	
 	top: 20px;
 	bottom: 0px;
 }
+
+
+
+.carousel-item .view img{
+	width: 100%;
+	height: 420px;	
+}
+
+
 
 
 
