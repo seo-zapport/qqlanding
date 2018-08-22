@@ -263,6 +263,12 @@ endif;
 	margin: 2em 0;
 	width : <?php echo $contentsize; ?>;
 	<?php echo $contentposition; ?>
-
 }
+<<<<<<< HEAD
 >>>>>>> b6d2702... initial commit
+=======
+
+
+?>
+
+>>>>>>> 52ae31c... Update Commit

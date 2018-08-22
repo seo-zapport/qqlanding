@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section id="banner">
-
 <?php
 	if(get_field('slider_layout', 'options') == "static") {
 ?>
@@ -115,9 +114,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </section>
 =======
 
 
 </section>
 >>>>>>> b6d2702... initial commit
+=======
+</section>
+>>>>>>> 52ae31c... Update Commit
