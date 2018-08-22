@@ -45,8 +45,10 @@ endif; ?>
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
-
-			the_posts_navigation();
+			echo '<span class="clearfix"></span>';
+			echo '<div class="col-12">';
+				qqlanding_post_navigations();
+			echo '</div>';
 
 		else :
 

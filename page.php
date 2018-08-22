@@ -21,7 +21,7 @@ if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'left' || get_t
 endif;
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area <?php echo $blogs_sidebar_layout['grid_sets'] ?>">
 		<main id="main" class="site-main">
 
 		<?php

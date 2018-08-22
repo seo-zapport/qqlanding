@@ -49,8 +49,8 @@ function qqlanding_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here to appear in the right side of your site.', 'qqlanding' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s" itemprop="mainEntity">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<div class="widget-title-container"><h3 class="widget-title" itemprop="name">',
-		'after_title'   => '</h3></div>',
+		'before_title'  => '<div class="widget-title-container"><h4 class="widget-title" itemprop="name">',
+		'after_title'   => '</h4></div>',
 	) );
 	register_sidebar( array(
 		'name'			=> esc_html__( 'Left Sidebar', 'qqlanding' ),
@@ -58,8 +58,8 @@ function qqlanding_widgets_init() {
 		'description'	=> esc_html__( 'Add widgets here to appear in the left side of your site', 'qqlanding' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s" itemprop="mainEntity">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<div class="widget-title-container"><h3 class="widget-title" itemprop="name">',
-		'after_title'   => '</h3></div>',
+		'before_title'  => '<div class="widget-title-container"><h4 class="widget-title" itemprop="name">',
+		'after_title'   => '</h4></div>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'QQLanding: Right Footer Sidebar', 'qqlanding' ),

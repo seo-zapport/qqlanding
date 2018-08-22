@@ -62,14 +62,23 @@ if ( ! function_exists( 'qqlanding_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'qqlanding' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'qqlanding' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				echo '<div class="qqlanding-cat under">';
+					_e( 'Posted in', 'qqlanding' );
+				echo '</div>';
+				echo '<div class="qqlanding-cat-lists">' . $categories_list . '</div>';
+				echo '<div class="clearfix"></div>';
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'qqlanding' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'qqlanding' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				//printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'qqlanding' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				echo '<div class="qqlanding-tag under">';
+					_e( 'Tagged','qqlanding' );
+				echo '</div>';
+				echo '<div class="qqlanding-tag-lists">' . $tags_list . '</div>';
+				echo '<div class="clearfix"></div>';
 			}
 		}
 
