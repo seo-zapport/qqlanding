@@ -2616,6 +2616,7 @@ a:hover, a:active {
 
 .comment-list .children {
   margin: 0 0 0 40px;
+  padding: 0;
 }
 .comment-list > li:last-child:after {
   display: none;
