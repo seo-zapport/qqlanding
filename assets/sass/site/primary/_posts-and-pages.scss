@@ -72,6 +72,8 @@
 	//site-title & desc
 	.site-header{
 		margin-bottom:35px;
+		position: relative;
+		width:100%;
 	}
 	.site-branding{
 		.site-title,
@@ -177,6 +179,27 @@
 	.site-footer {
 		background: $color__22;
 		padding:25px 0;
+		width:100%;
+	}
+
+
+	//Post & Page
+	.qqland-grid-2{
+		.qqland-post{
+			display:inline-block;
+			float:left;
+			position: relative;
+			margin-right: 5.306122448979592%;
+			margin-left: 0;
+			width:47.3469387755102%;
+			vertical-align: top;
+			&:nth-child(2n){
+				margin-right: 0;
+			}
+		}
+	}
+	.qqland-post{
+		margin-bottom: 50px;
 	}
 }
 

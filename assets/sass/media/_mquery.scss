@@ -5,7 +5,17 @@
 		}
 	}
 }
-@media (max-width: 960px){}
+@media (max-width: 960px){
+	.qqlanding-sites{
+		.qqland-grid-2{
+			.qqland-post{
+				float:none;
+				margin-right: 0%;
+				width:100%;
+			}
+		}
+	}
+}
 @media (max-width: 768px){}
 @media (max-width: 640px){}
 @media only screen and (min-width:768px) and (max-width:1024px){}

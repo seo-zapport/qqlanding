@@ -175,10 +175,10 @@ if ( ! function_exists( 'qqlanding_grid_sets' ) ) :
 
 
 		switch ( $layout ) {
-			case 'right': $grid_sets = 'col-md-9'; $grid_side_sets = 'col-md-3'; break;
-			case 'left': $grid_sets = 'col-md-9';  $grid_side_sets = 'col-md-3';break;
+			case 'right': $grid_sets = 'col-12 col-md-12 col-lg-9'; $grid_side_sets = 'col-12 col-md-12 col-lg-3'; break;
+			case 'left': $grid_sets = 'col-12 col-md-12 col-lg-9';  $grid_side_sets = 'col-12 col-md-12 col-lg-3';break;
 			case 'none': $grid_sets = 'col-md-12';  $grid_side_sets = '';break;
-			default: $grid_sets = 'col-md-8';  $grid_side_sets = 'col-md-2';break;
+			default: $grid_sets = 'col-12 col-md-12 col-lg-8';  $grid_side_sets = 'col-12 col-md-12 col-lg-2';break;
 		}
 
 		$grid_args = array( 'grid_sets' => $grid_sets, 'grid_side_sets' => $grid_side_sets );

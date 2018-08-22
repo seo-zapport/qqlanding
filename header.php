@@ -28,7 +28,10 @@
 	?>
 </head>
 <body <?php body_class( 'qqlanding-sites qqland-' . qqlanding_schema( $layout ) ); ?>>
-<div id="page" class="site container<?php echo ( get_field( 'th_layout', 'option' ) == 'wide' ) ? '-full' : ''; ?>">
+<div id="page" class="site container<?php echo ( get_field( 'th_layout', 'option' ) == 'wide' ) ? '-full qqland-site-full' : ' qqland-site-box'; ?>">
+	<?php if (get_field( 'th_layout', 'option' ) == 'box'): ?>
+		<div class="row">
+	<?php endif;?> <!--if wide/box only-->
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'qqlanding' ); ?></a>
 	<header id="masthead" class="site-header <?php echo $nav_class; ?>">
 		<?php if ( get_field( 'header_top_menu', 'option' ) === true): ?>

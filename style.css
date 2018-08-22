@@ -937,12 +937,19 @@ a:hover, a:active {
   background: rgba(236, 72, 1, 0.78);
 }
 .qqlanding-sites.qqland-affix .affix {
-  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  width: 100%;
   z-index: 1030;
+}
+.qqlanding-sites .qqland-site-box {
+  box-shadow: 0 0 2px #ccc;
 }
 .qqlanding-sites.qqland-qq288 .site-top-info {
   background-color: #10aec7;
@@ -1711,6 +1718,8 @@ a:hover, a:active {
 }
 .qqlanding-sites .site-header {
   margin-bottom: 35px;
+  position: relative;
+  width: 100%;
 }
 .qqlanding-sites .site-branding .site-title,
 .qqlanding-sites .site-branding .site-description,
@@ -1791,6 +1800,22 @@ a:hover, a:active {
 .qqlanding-sites .site-footer {
   background: #222222;
   padding: 25px 0;
+  width: 100%;
+}
+.qqlanding-sites .qqland-grid-2 .qqland-post {
+  display: inline-block;
+  float: left;
+  position: relative;
+  margin-right: 5.306122448979592%;
+  margin-left: 0;
+  width: 47.3469387755102%;
+  vertical-align: top;
+}
+.qqlanding-sites .qqland-grid-2 .qqland-post:nth-child(2n) {
+  margin-right: 0;
+}
+.qqlanding-sites .qqland-post {
+  margin-bottom: 50px;
 }
 
 .sticky {
@@ -1934,6 +1959,13 @@ object {
 @media (min-width: 1200px) {
   .qqlanding-sites .container {
     max-width: 1240px;
+  }
+}
+@media (max-width: 960px) {
+  .qqlanding-sites .qqland-grid-2 .qqland-post {
+    float: none;
+    margin-right: 0%;
+    width: 100%;
   }
 }
 
