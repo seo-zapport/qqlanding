@@ -168,7 +168,7 @@ function qqlanding_header_set(){
 			<?php if( $template == 'default' ) : ?>
 			</div>
 			<?php endif;?>
-		<?php if( $template == 'default' ) : ?>
+		<?php if( $template == 'bare' || $template == 'overlay' ) : ?>
 		</div>
 		<?php endif;?>
 	</nav><!-- #site-navigation -->
