@@ -173,16 +173,13 @@ endif;
 endif;
 
 ?>
-
 .carousel-item .view img{
 	width: 100%;
 	height: <?php echo $slide_height; ?>px;	
 }
-
 <?php 
 if ( have_rows( 'th_fonts', 'option' ) ) :
 	while ( have_rows( 'th_fonts', 'option' ) ) : the_row();
-<<<<<<< HEAD
 		$font_family = get_sub_field('thr_font_family');
 		$font_size = get_sub_field('thr_font_size');
 		$font_style = get_sub_field('thr_font_style');
@@ -190,15 +187,6 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 
 		if ( get_sub_field('th_entry_item') == 'body' ) : ?>
 			body.qqlanding-sites{
-=======
-	$font_family = get_sub_field('thr_font_family');
-	$font_size = get_sub_field('thr_font_size');
-	$font_style = get_sub_field('thr_font_style');
-	$font_weight = get_sub_field('thr_font_weight');
-
-		if ( get_sub_field('th_entry_item') == 'body' ) : ?>
-		body.qqlanding-sites{
->>>>>>> f5838f4bcfcbacdecb548dab4838aa0c310561de
 		<?php elseif( get_sub_field('th_entry_item') == 'content' ): ?>
 			.page-content,.entry-content,.entry-summary,.comment-content{
 		<?php elseif( get_sub_field('th_entry_item') == 'meta' ): ?>
@@ -208,6 +196,6 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 		<?php else: ?>
 			.page-entry-title,.archive-page-title,.search-page-title,.entry-title{
 		<?php endif; ?>
-			font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
+		font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
 	<?php endwhile;
 endif;
