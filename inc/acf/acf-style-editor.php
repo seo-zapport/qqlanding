@@ -12,15 +12,6 @@ endif;
 //Fonts Settings
 if(have_rows('slider_fonts', 'option')) :
 	the_row();
-	
-	/*$sliderfont =  array();
-	$countfontfam = count( get_sub_field('slider_font_family') );
-
-	$countwhile = '0';
-	while($countwhile < $countfontfam){
-		$sliderfont[] = get_sub_field('slider_font_family')[$countwhile];
-		$countwhile++;
-	}*/
 
 	$slidefontfam = qqlanding_fontfam(get_sub_field('slider_font_family'));
 	$sliderfontsize =  get_sub_field('slider_font_size');
@@ -33,7 +24,6 @@ endif;
 /* =========== Slider ============== */
 /* ================================= */ 
 #banner {
-	<!-- font-family: <?php //echo join(',',$sliderfont); ?>; -->
 	font-family: <?php echo $slidefontfam; ?>;
 	font-size: <?php echo $sliderfontsize; ?>px;
 	font-style: <?php echo $sliderfontstyle; ?>;
@@ -93,8 +83,8 @@ endif;
 .banner-static-content {
 	margin: 2em 0;
 	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 50%;"; }else{ echo "width: 100%;";  } ?>	
-	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position']; }?>;	
-	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'];  ?>;	
+	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; }?>	
+	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
 }
 
 <?php endif; ?>
@@ -149,9 +139,9 @@ endif;
 }
 .caro-slide-<?php echo $count; ?> {
 	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 40%;"; } ?>	
-	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position']; }?>;	
-	<?php if(get_sub_field('content_settings')['slider_content_position'] == 'right' ){echo "left: 50%"; }?>;	
-	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'];  ?>;	
+	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; }?>	
+	<?php if(get_sub_field('content_settings')['slider_content_position'] == 'right' ){echo "left: 50%;"; }?>	
+	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
 	top: 20px;
 	bottom: 0px;
 }
