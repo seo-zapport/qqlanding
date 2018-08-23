@@ -2,7 +2,6 @@
 /* =========== Slider ============== */
 /* ================================= */ 
 #banner {
-	<!-- font-family: ; -->
 	font-family: notosans-regular,notosans-italic,notosans-bold;
 	font-size: 14px;
 	font-style: normal;
@@ -12,52 +11,42 @@
 	margin-bottom:2em;
 } 
 
-
 .view-0 {
 	background : url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-2.jpg');
 	height: 420px;	
-	background-position:right top; background-repeat:no-repeat;background-attachment: fixed;background-size: cover;}
-
+	}
 .caro-slide-0 {
 		
 	float:left;	
-	;	
-	text-align:center;	
-	
+		
+	text-align:left;	
 	top: 20px;
 	bottom: 0px;
 }
-
 .view-1 {
 	background : url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
 	height: 420px;	
-	background-position:center center; background-repeat:no-repeat;background-attachment: fixed;background-size: cover;}
-
+	}
 .caro-slide-1 {
-	width: 40%;	
+		
 	float:left;	
-	;	
+		
 	text-align:left;	
-	
 	top: 20px;
 	bottom: 0px;
 }
-
 .view-2 {
 	background : url('http://www.qqlocal.com/wp-content/uploads/2017/08/e-background-2.jpg');
 	height: 420px;	
 	}
-
 .caro-slide-2 {
-	width: 40%;	
+		
 	float:right;	
 	left: 50%;	
 	text-align:left;	
-	
 	top: 20px;
 	bottom: 0px;
 }
-
 
 .carousel-item .view img{
 	width: 100%;
