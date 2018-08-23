@@ -3,7 +3,6 @@
  * Display some functions that are somehow needed.
  *
  * @package QQLanding
-<<<<<<< HEAD
  */
 
 
@@ -43,6 +42,4 @@ if (! function_exists( 'qqlanding_social_media' ) ) {
 		<?php endif;
 	}
 }
-=======
- */
->>>>>>> b6d2702... initial commit
+
