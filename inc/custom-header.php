@@ -71,6 +71,10 @@ if ( ! function_exists( 'qqlanding_header_style' ) ) :
 	}
 endif;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> c973dc4... Update Slide
 
 
 /**
@@ -169,11 +173,10 @@ function qqlanding_header_set(){
 			<?php if( $template == 'default' ) : ?>
 			</div>
 			<?php endif;?>
-		<?php if( $template == 'bare' || $template == 'overlay' ) : ?>
+		<?php if( $template == 'default' ) : ?>
 		</div>
 		<?php endif;?>
 	</nav><!-- #site-navigation -->
 	<?php
 }
-=======
->>>>>>> b6d2702... initial commit
+

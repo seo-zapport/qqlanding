@@ -172,6 +172,10 @@ if ( ! function_exists( 'qqlanding_is_selective_refresh' ) ) :
 endif;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> c973dc4... Update Slide
 /**
  * Display the Grid item
  */
@@ -203,8 +207,12 @@ endif;
  * Display the first image of the featured post,
  * if they don't have the featured post input
  */
+<<<<<<< HEAD
 =======
 >>>>>>> b6d2702... initial commit
+=======
+
+>>>>>>> c973dc4... Update Slide
 
 function get_first_image($src = null) {
    global $post, $posts;
