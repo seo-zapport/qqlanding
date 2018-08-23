@@ -67,3 +67,21 @@ function qqlanding_schema( $class ){
 	}
 	return $class;
 }
+
+if ( !function_exists( 'qqlanding_fontfam' ) ) :
+	function qqlanding_fontfam( $font = array()  ){
+
+		$sliderfont =  array();
+		$countfontfam = count( $font );
+
+		$countwhile = '0';
+		while($countwhile < $countfontfam){
+			$sliderfont[] = $font[$countwhile];
+			$countwhile++;
+		}
+		
+		$font = join(',',$sliderfont); 
+
+		return $font;
+	}
+endif;

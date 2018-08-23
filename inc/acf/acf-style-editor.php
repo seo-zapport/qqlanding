@@ -13,14 +13,16 @@ endif;
 if(have_rows('slider_fonts', 'option')) :
 	the_row();
 	
-	$sliderfont =  array();
+/*	$sliderfont =  array();
 	$countfontfam = count( get_sub_field('slider_font_family') );
 
 	$countwhile = '0';
 	while($countwhile < $countfontfam){
 		$sliderfont[] = get_sub_field('slider_font_family')[$countwhile];
 		$countwhile++;
-	}
+	}*/
+
+	$slidefontfam = qqlanding_fontfam(get_sub_field('slider_font_family'));
 	$sliderfontsize =  get_sub_field('slider_font_size');
 	$sliderfontstyle =  get_sub_field('slider_font_style');
 	$sliderfontweight =  get_sub_field('slider_font_weight');
@@ -31,7 +33,8 @@ endif;
 /* =========== Slider ============== */
 /* ================================= */ 
 #banner {
-	font-family: <?php echo join(',',$sliderfont); ?>;
+	<!-- font-family: <?php //echo join(',',$sliderfont); ?>; -->
+	font-family: <?php echo $slidefontfam; ?>;
 	font-size: <?php echo $sliderfontsize; ?>px;
 	font-style: <?php echo $sliderfontstyle; ?>;
 	font-weight: <?php echo $sliderfontweight; ?>;
@@ -162,25 +165,23 @@ endif;
 endif;
 
 ?>
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 18c0114172653a5b86b974f3d238738e9f7f9553
 .carousel-item .view img{
 	width: 100%;
 	height: <?php echo $slide_height; ?>px;	
 }
+
 <?php 
 if ( have_rows( 'th_fonts', 'option' ) ) :
 	while ( have_rows( 'th_fonts', 'option' ) ) : the_row();
-		$font_family = get_sub_field('thr_font_family');
-		$font_size = get_sub_field('thr_font_size');
-		$font_style = get_sub_field('thr_font_style');
-		$font_weight = get_sub_field('thr_font_weight');
+	$font_family = get_sub_field('thr_font_family');
+	$font_size = get_sub_field('thr_font_size');
+	$font_style = get_sub_field('thr_font_style');
+	$font_weight = get_sub_field('thr_font_weight');
 
 		if ( get_sub_field('th_entry_item') == 'body' ) : ?>
-			body.qqlanding-sites{
+		body.qqlanding-sites{
 		<?php elseif( get_sub_field('th_entry_item') == 'content' ): ?>
 			.page-content,.entry-content,.entry-summary,.comment-content{
 		<?php elseif( get_sub_field('th_entry_item') == 'meta' ): ?>
@@ -190,6 +191,6 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 		<?php else: ?>
 			.page-entry-title,.archive-page-title,.search-page-title,.entry-title{
 		<?php endif; ?>
-		font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
+			font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
 	<?php endwhile;
 endif;
