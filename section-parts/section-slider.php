@@ -103,7 +103,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <?php 
+	// if(have_rows('slider_fonts', 'option')) :
+	// 	the_row();
+		
+	// 	$sliderfont =  array();
+	// 	$countfontfam = count( get_sub_field('slider_font_family') );
+	// 	$countfont = get_sub_field('slider_font_family');
 
+	// 	$x = '0';
+	// 	while( $x < $countfontfam){
+	// 		$sliderfont[] = $countfont[$x];
+	// 		$x++;	
+	// 	}
+	// 	$slide = join(',', $sliderfont);
+	// 	echo $slide;	
+
+
+	// endif;
 ?>
 </section>
 

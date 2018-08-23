@@ -71,6 +71,7 @@ if ( ! function_exists( 'qqlanding_header_style' ) ) :
 	}
 endif;
 
+
 /**
  * Header Settings
  */
@@ -173,4 +174,3 @@ function qqlanding_header_set(){
 	</nav><!-- #site-navigation -->
 	<?php
 }
-
