@@ -44,6 +44,7 @@ endif;
  */
 function qqlanding_schema( $class ){
 	$add_affix = ( get_field('th_nav_settings','option') == true ) ? 'qqland-affix' : 'qqland-no-affix';
+
 	$template = get_field( 'header_template', 'option' );
 	switch ($template) {
 		case 'bare': $new_class = "qqlayout-bare"; break;
