@@ -400,6 +400,24 @@ function qqlanding_customizer_register( $wp_customize ){
 	                'description'			=> esc_html__( 'Give some length for your post.', 'qqlanding' )
 	        	)
 	        );
+
+	        //Tag list Display Setting
+	        $wp_customize->add_setting( 'qqlanding_blog_tag_list_display',
+	            array(
+	                'default'               => 1,
+	                'capability'            => 'edit_theme_options',
+	                'sanitize_callback'     => 'qqlanding_sanitize_checkbox'
+	            )
+	        );
+	        //Tag list Display Control
+	        $wp_customize->add_control( 'qqlanding_blog_tag_list_display',
+	            array(
+	                'type'                  => 'checkbox',
+	                'label'                 => esc_html__( 'Display Tag list', 'qqlanding' ),
+	                'description'           => esc_html__( 'This will show or hide your tag list', 'qqlanding' ),
+	                'section'               =>  'qqlanding_blog_options'
+	            )
+	        );
 		
 		/**
 		 * ## Page Section
@@ -548,24 +566,6 @@ function qqlanding_customizer_register( $wp_customize ){
 	                'type'                  => 'checkbox',
 	                'label'                 => esc_html__( 'Display Related Post', 'qqlanding' ),
 	                'description'           => esc_html__( 'This will show or hide your related post', 'qqlanding' ),
-	                'section'               =>  'qqlanding_single_post_options'
-	            )
-	        );
-
-	        //Tag list Display Setting
-	        $wp_customize->add_setting( 'qqlanding_single_tag_list_display',
-	            array(
-	                'default'               => 1,
-	                'capability'            => 'edit_theme_options',
-	                'sanitize_callback'     => 'qqlanding_sanitize_checkbox'
-	            )
-	        );
-	        //Tag list Display Control
-	        $wp_customize->add_control( 'qqlanding_single_tag_list_display',
-	            array(
-	                'type'                  => 'checkbox',
-	                'label'                 => esc_html__( 'Display Tag list', 'qqlanding' ),
-	                'description'           => esc_html__( 'This will show or hide your tag list', 'qqlanding' ),
 	                'section'               =>  'qqlanding_single_post_options'
 	            )
 	        );

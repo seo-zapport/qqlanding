@@ -23,19 +23,19 @@
 		    <?php endif; ?>
 		    <meta itemprop="name" content="<?php bloginfo( 'name' ); ?>">
 		</span>
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="single-entry-title" itemprop="headline">', '</h1>' );
-		else :
-			the_title( '<h2 class="single-entry-title" itemprop="headline"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		 //the_title( '<h2 class="single-entry-title entry-title" itemprop="headline">','</h2>' ); ?>
+		<div class="qqland-entry-wrapper">
+			<?php
+			if ( is_singular() ) :
+				the_title( '<h1 class="single-entry-title" itemprop="headline">', '</h1>' );
+			else :
+				the_title( '<h2 class="single-entry-title" itemprop="headline"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif; ?>
+		 </div>
 		<div class="single-entry-meta">
 			<?php qqlanding_posted_on() . qqlanding_posted_by(); ?>
 		</div>
 	</header>
-	<?php qqLanding_post_thumbnails(); ?>
+	<?php  if ( get_theme_mod( 'qqlanding_single_featured_img_display' ,true ) ) qqLanding_post_thumbnails(); //Display featured image  ?>
 	<div class="entry-content mb-4" itemprop="articleBody">
 		<?php the_content(); ?>
 		<?php 
