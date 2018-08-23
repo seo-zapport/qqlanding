@@ -9,13 +9,13 @@
 
 get_header();
 
-$blogs_sidebar_layout = qqlanding_grid_sets( 'both','single');
+$single_sidebar_layout = qqlanding_grid_sets( 'both','single');
 
-if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'left' || get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'both' ) :
+if ( get_theme_mod( 'qqlanding_single_sidebar_layout', 'both' ) == 'left' || get_theme_mod( 'qqlanding_single_sidebar_layout', 'both' ) == 'both' ) :
 	get_sidebar( 'left' );
 endif; ?>
 
-	<div id="primary" class="content-area <?php echo $blogs_sidebar_layout['grid_sets'] ?>">
+	<div id="primary" class="content-area <?php echo $single_sidebar_layout['grid_sets']; ?>">
 		<main id="main" class="site-main">
 
 		<?php
@@ -24,7 +24,7 @@ endif; ?>
 
 			get_template_part( 'template-parts/content-single', 'single' );
 
-			the_post_navigation();
+			if( get_theme_mod( 'qqlanding_single_post_nav_display', true ) ) the_post_navigation(); // Display post navigation
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -39,7 +39,7 @@ endif; ?>
 
 <?php
 
-if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'right' || get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'both' ) :
+if ( get_theme_mod( 'qqlanding_single_sidebar_layout', 'both' ) == 'right' || get_theme_mod( 'qqlanding_single_sidebar_layout', 'both' ) == 'both' ) :
 	get_sidebar( 'right' );
 endif;
 get_footer();

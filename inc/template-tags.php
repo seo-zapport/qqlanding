@@ -69,16 +69,20 @@ if ( ! function_exists( 'qqlanding_entry_footer' ) ) :
 				echo '<div class="clearfix"></div>';
 			}
 
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'qqlanding' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				//printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'qqlanding' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-				echo '<div class="qqlanding-tag under">';
-					_e( 'Tagged','qqlanding' );
-				echo '</div>';
-				echo '<div class="qqlanding-tag-lists">' . $tags_list . '</div>';
-				echo '<div class="clearfix"></div>';
+			if ( get_theme_mod( 'qqlanding_blog_tag_list_display', true ) ) {
+				# code...
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'qqlanding' ) );
+				
+				if ( $tags_list ) {
+					/* translators: 1: list of tags. */
+					//printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'qqlanding' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+					echo '<div class="qqlanding-tag under">';
+						_e( 'Tagged','qqlanding' );
+					echo '</div>';
+					echo '<div class="qqlanding-tag-lists">' . $tags_list . '</div>';
+					echo '<div class="clearfix"></div>';
+				}
 			}
 		}
 

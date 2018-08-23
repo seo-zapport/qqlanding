@@ -170,7 +170,7 @@ if ( ! function_exists( 'qqlanding_grid_sets' ) ) :
 		if ( $sets == 'page' ) { $sets = 'page'; }
 		elseif ( $sets == 'single' ) { $sets = 'single'; }
 		else{ $sets = 'blog'; }
-
+		
 		$layout = get_theme_mod( 'qqlanding_' . $sets . '_sidebar_layout', $grid_sets );
 
 

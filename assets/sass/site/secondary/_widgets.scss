@@ -8,31 +8,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qq288_default;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qq288_default;
 				.entry-title{
 					background-color:$qq288_default;
-					&:hover{
-						background-color:$qq288_cerulean;
-					}
+					&:hover{background-color:$qq288_cerulean;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qq288_default;
+				.single-entry-title,
 				.page-title{
 					background-color:$qq288_default;
 				}
@@ -48,31 +34,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qq188_gulf_blue;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qq188_gulf_blue;
 				.entry-title{
 					background-color:$qq188_gulf_blue;
-					&:hover{
-						background-color:$qq188_reso_blue;
-					}
+					&:hover{background-color:$qq188_reso_blue;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qq188_gulf_blue;
+				.single-entry-title,
 				.page-title{
 					background-color:$qq188_gulf_blue;
 				}
@@ -88,29 +60,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qq101_english_holly;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qq101_english_holly;
 				.entry-title{
 					background-color:$qq101_english_holly;
 					&:hover{background-color:$qq101_default;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qq101_english_holly;
+				.single-entry-title,
 				.page-title{
 					background-color:$qq101_english_holly;
 				}
@@ -126,29 +86,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qq1x2_blue_ribbon;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qq1x2_blue_ribbon;
 				.entry-title{
 					background-color:$qq1x2_blue_ribbon;
 					&:hover{background-color:$qq1x2_default;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qq1x2_blue_ribbon;
+				.single-entry-title,
 				.page-title{
 					background-color:$qq1x2_blue_ribbon;
 				}
@@ -164,29 +112,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qq724_bay_leaf;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qq724_bay_leaf;
 				.entry-title{
 					background-color:$qq724_bay_leaf;
 					&:hover{background-color:$color__fd;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qq724_bay_leaf;
+				.single-entry-title,
 				.page-title{
 					background-color:$qq724_bay_leaf;
 				}
@@ -202,29 +138,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qqfortuna_mojo;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qqfortuna_mojo;
 				.entry-title{
 					background-color:$qqfortuna_mojo;
 					&:hover{background-color:$qqfortuna_temptress;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qqfortuna_mojo;
+				.single-entry-title,
 				.page-title{
 					background-color:$qqfortuna_mojo;
 				}
@@ -240,29 +164,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qq801_default;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qq801_default;
 				.entry-title{
 					background-color:$qq801_default;
 					&:hover{background-color:$qq801_regal_blue;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qq801_default;
+				.single-entry-title,
 				.page-title{
 					background-color:$qq801_default;
 				}
@@ -278,29 +190,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qq882_razzmatazz;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qq882_razzmatazz;
 				.entry-title{
 					background-color:$qq882_razzmatazz;
 					&:hover{background-color:$qq882_purple_heart;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qq882_razzmatazz;
+				.single-entry-title,
 				.page-title{
 					background-color:$qq882_razzmatazz;
 				}
@@ -316,29 +216,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qq808_di_serria;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qq808_di_serria;
 				.entry-title{
 					background-color:$qq808_di_serria;
 					&:hover{background-color:$qq808_brown_bramble;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qq808_di_serria;
+				.single-entry-title,
 				.page-title{
 					background-color:$qq808_di_serria;
 				}
@@ -354,29 +242,17 @@
 				}
 			}
 		}
-		&.single-post{
-			.qqland-post{
-				.qqland-entry-wrapper{
-					.entry-title{
-						&:hover{
-							background-color:$qq828_fire;
-						}
-					}
-				}
-			}
-		}
-		.qqland-post{
-			.qqland-entry-wrapper{
+		.qqland-post,
+		.qqland-single-post,
+		&.search-no-results{
+			.qqland-entry-wrapper,
+			.page-header{
 				border-bottom-color:$qq828_fire;
 				.entry-title{
 					background-color:$qq828_fire;
 					&:hover{background-color:$qq828_default;}
 				}
-			}
-		}
-		&.search-no-results{
-			.page-header{
-				border-bottom-color:$qq828_fire;
+				.single-entry-title,
 				.page-title{
 					background-color:$qq828_fire;
 				}

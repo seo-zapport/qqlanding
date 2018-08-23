@@ -2,8 +2,12 @@
 /* =========== Slider ============== */
 /* ================================= */ 
 #banner {
+<<<<<<< HEAD
 	<!-- font-family: ; -->
 	font-family: notosans-regular,notosans-italic,notosans-bold;
+=======
+	font-family: notosans-regular;
+>>>>>>> 32adb8860a2e2c3a8bd2a03ae5b09d6b8516a49d
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 500;
@@ -12,6 +16,7 @@
 	margin-bottom:2em;
 } 
 
+<<<<<<< HEAD
 
 .view-0 {
 	background : url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-2.jpg');
@@ -27,33 +32,33 @@
 	top: 20px;
 	bottom: 0px;
 }
+=======
+>>>>>>> 32adb8860a2e2c3a8bd2a03ae5b09d6b8516a49d
 
-.view-1 {
-	background : url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
+.view-0 {
+	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2013/03/image-alignment-1200x4002.jpg');
 	height: 420px;	
-	background-position:center center; background-repeat:no-repeat;background-attachment: fixed;background-size: cover;}
+	background-position:left top; background-repeat:repeat;background-attachment: fixed;background-size: cover;}
 
+<<<<<<< HEAD
 .caro-slide-1 {
 	width: 40%;	
 	float:left;	
 	;	
 
 	text-align:left;	
-	top: 20px;
-	bottom: 0px;
-}
+=======
+.caro-slide-0 {
+		
+	<br />
+<b>Notice</b>:  Array to string conversion in <b>C:\xampp\htdocs\www.sandbox.awakenTheme.com\wp-content\themes\qqlanding\inc\acf\acf-style-editor.php</b> on line <b>151</b><br />
+float:Array;	
+	;	
 
-.view-2 {
-	background : url('http://www.qqlocal.com/wp-content/uploads/2017/08/e-background-2.jpg');
-	height: 420px;	
-	}
-
-.caro-slide-2 {
-	width: 40%;	
-	float:right;	
-	left: 50%;	
-
-	text-align:left;	
+	<br />
+<b>Notice</b>:  Array to string conversion in <b>C:\xampp\htdocs\www.sandbox.awakenTheme.com\wp-content\themes\qqlanding\inc\acf\acf-style-editor.php</b> on line <b>154</b><br />
+text-align:Array;	
+>>>>>>> 32adb8860a2e2c3a8bd2a03ae5b09d6b8516a49d
 	top: 20px;
 	bottom: 0px;
 }
@@ -63,4 +68,14 @@
 	width: 100%;
 	height: 420px;	
 }
+<<<<<<< HEAD
 
+=======
+			body.qqlanding-sites{
+				font-size: 14px; font-style: normal; font-weight: 500; }	
+				.page-content,.entry-content,.entry-summary,.comment-content{
+				font-size: 16px; font-style: normal; font-weight: 500; }	
+				.genpost-entry-meta,.single-entry-meta,.genpost-entry-footer{
+				font-size: 12px; font-style: normal; font-weight: 500; }	
+	
+>>>>>>> 32adb8860a2e2c3a8bd2a03ae5b09d6b8516a49d
