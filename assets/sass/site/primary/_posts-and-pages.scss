@@ -225,6 +225,7 @@
 		}
 	}
 	.qqland-post,
+	.qqland-single-post,
 	&.search-no-results{
 		margin-bottom: 50px;
 		.qqland-entry-wrapper,
@@ -232,6 +233,7 @@
 			border-bottom: 1px solid $color__b5;
 				margin: 0 0 0.5em;
 			.entry-title,
+			.single-entry-title,
 			.page-title{
 				background-color:$color__b5;
 				color: $color__white;

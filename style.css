@@ -2556,21 +2556,34 @@ a:hover, a:active {
 .qqlanding-sites .qqland-grid-2 .qqland-post:nth-child(2n) {
   margin-right: 0;
 }
-.qqlanding-sites .qqland-post, .qqlanding-sites.search-no-results {
+.qqlanding-sites .qqland-post,
+.qqlanding-sites .qqland-single-post, .qqlanding-sites.search-no-results {
   margin-bottom: 50px;
 }
 .qqlanding-sites .qqland-post .qqland-entry-wrapper,
-.qqlanding-sites .qqland-post .page-header, .qqlanding-sites.search-no-results .qqland-entry-wrapper,
+.qqlanding-sites .qqland-post .page-header,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper,
+.qqlanding-sites .qqland-single-post .page-header, .qqlanding-sites.search-no-results .qqland-entry-wrapper,
 .qqlanding-sites.search-no-results .page-header {
   border-bottom: 1px solid #b5b5b5;
   margin: 0 0 0.5em;
 }
 .qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title,
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .single-entry-title,
 .qqlanding-sites .qqland-post .qqland-entry-wrapper .page-title,
 .qqlanding-sites .qqland-post .page-header .entry-title,
-.qqlanding-sites .qqland-post .page-header .page-title, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title,
+.qqlanding-sites .qqland-post .page-header .single-entry-title,
+.qqlanding-sites .qqland-post .page-header .page-title,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .entry-title,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .single-entry-title,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .page-title,
+.qqlanding-sites .qqland-single-post .page-header .entry-title,
+.qqlanding-sites .qqland-single-post .page-header .single-entry-title,
+.qqlanding-sites .qqland-single-post .page-header .page-title, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title,
+.qqlanding-sites.search-no-results .qqland-entry-wrapper .single-entry-title,
 .qqlanding-sites.search-no-results .qqland-entry-wrapper .page-title,
 .qqlanding-sites.search-no-results .page-header .entry-title,
+.qqlanding-sites.search-no-results .page-header .single-entry-title,
 .qqlanding-sites.search-no-results .page-header .page-title {
   background-color: #b5b5b5;
   color: #fff;
@@ -2588,31 +2601,62 @@ a:hover, a:active {
   transition: all 0.6 ease-in-out;
 }
 .qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title a,
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .single-entry-title a,
 .qqlanding-sites .qqland-post .qqland-entry-wrapper .page-title a,
 .qqlanding-sites .qqland-post .page-header .entry-title a,
-.qqlanding-sites .qqland-post .page-header .page-title a, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title a,
+.qqlanding-sites .qqland-post .page-header .single-entry-title a,
+.qqlanding-sites .qqland-post .page-header .page-title a,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .entry-title a,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .single-entry-title a,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .page-title a,
+.qqlanding-sites .qqland-single-post .page-header .entry-title a,
+.qqlanding-sites .qqland-single-post .page-header .single-entry-title a,
+.qqlanding-sites .qqland-single-post .page-header .page-title a, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title a,
+.qqlanding-sites.search-no-results .qqland-entry-wrapper .single-entry-title a,
 .qqlanding-sites.search-no-results .qqland-entry-wrapper .page-title a,
 .qqlanding-sites.search-no-results .page-header .entry-title a,
+.qqlanding-sites.search-no-results .page-header .single-entry-title a,
 .qqlanding-sites.search-no-results .page-header .page-title a {
   color: #fff;
 }
 .qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title a:hover, .qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title a:focus,
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .single-entry-title a:hover,
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .single-entry-title a:focus,
 .qqlanding-sites .qqland-post .qqland-entry-wrapper .page-title a:hover,
 .qqlanding-sites .qqland-post .qqland-entry-wrapper .page-title a:focus,
 .qqlanding-sites .qqland-post .page-header .entry-title a:hover,
 .qqlanding-sites .qqland-post .page-header .entry-title a:focus,
+.qqlanding-sites .qqland-post .page-header .single-entry-title a:hover,
+.qqlanding-sites .qqland-post .page-header .single-entry-title a:focus,
 .qqlanding-sites .qqland-post .page-header .page-title a:hover,
-.qqlanding-sites .qqland-post .page-header .page-title a:focus, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title a:hover, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title a:focus,
+.qqlanding-sites .qqland-post .page-header .page-title a:focus,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .entry-title a:hover,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .entry-title a:focus,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .single-entry-title a:hover,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .single-entry-title a:focus,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .page-title a:hover,
+.qqlanding-sites .qqland-single-post .qqland-entry-wrapper .page-title a:focus,
+.qqlanding-sites .qqland-single-post .page-header .entry-title a:hover,
+.qqlanding-sites .qqland-single-post .page-header .entry-title a:focus,
+.qqlanding-sites .qqland-single-post .page-header .single-entry-title a:hover,
+.qqlanding-sites .qqland-single-post .page-header .single-entry-title a:focus,
+.qqlanding-sites .qqland-single-post .page-header .page-title a:hover,
+.qqlanding-sites .qqland-single-post .page-header .page-title a:focus, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title a:hover, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title a:focus,
+.qqlanding-sites.search-no-results .qqland-entry-wrapper .single-entry-title a:hover,
+.qqlanding-sites.search-no-results .qqland-entry-wrapper .single-entry-title a:focus,
 .qqlanding-sites.search-no-results .qqland-entry-wrapper .page-title a:hover,
 .qqlanding-sites.search-no-results .qqland-entry-wrapper .page-title a:focus,
 .qqlanding-sites.search-no-results .page-header .entry-title a:hover,
 .qqlanding-sites.search-no-results .page-header .entry-title a:focus,
+.qqlanding-sites.search-no-results .page-header .single-entry-title a:hover,
+.qqlanding-sites.search-no-results .page-header .single-entry-title a:focus,
 .qqlanding-sites.search-no-results .page-header .page-title a:hover,
 .qqlanding-sites.search-no-results .page-header .page-title a:focus {
   cursor: pointer;
   text-decoration: none;
 }
-.qqlanding-sites .qqland-post .entry-meta, .qqlanding-sites.search-no-results .entry-meta {
+.qqlanding-sites .qqland-post .entry-meta,
+.qqlanding-sites .qqland-single-post .entry-meta, .qqlanding-sites.search-no-results .entry-meta {
   margin: 0 0 0.5em;
 }
 .qqlanding-sites .single-entry-title {
