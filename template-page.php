@@ -14,11 +14,7 @@ get_header();
 			if ( ! has_action( 'qqlanding_page_section_parts' ) ) :
 
 				$value = array(
-<<<<<<< HEAD
 					'slider','content'
-=======
-					'provider','content'
->>>>>>> b6d2702... initial commit
 				); //items
 				$sections = apply_filters( 'qqlanding_page_sections_order', $value );
 

@@ -13,7 +13,6 @@
  */
 
 get_header();
-<<<<<<< HEAD
 
 $blogs_sidebar_layout = qqlanding_grid_sets( 'both','blog');
 
@@ -23,14 +22,6 @@ endif; ?>
 	<div id="primary" class="content-area <?php echo $blogs_sidebar_layout['grid_sets'] ?>">
 		<main id="main" class="site-main">
 			<div class="qqland-grid-2">
-=======
-get_sidebar( 'left' );
-?>
-
-	<div id="primary" class="content-area col-md-8">
-		<main id="main" class="site-main">
-
->>>>>>> b6d2702... initial commit
 		<?php
 		if ( have_posts() ) :
 
@@ -54,15 +45,10 @@ get_sidebar( 'left' );
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
-<<<<<<< HEAD
 			echo '<span class="clearfix"></span>';
 			echo '<div class="col-12">';
 				qqlanding_post_navigations();
 			echo '</div>';
-=======
-
-			the_posts_navigation();
->>>>>>> b6d2702... initial commit
 
 		else :
 
@@ -70,22 +56,14 @@ get_sidebar( 'left' );
 
 		endif;
 		?>
-<<<<<<< HEAD
 			</div>
-=======
-
->>>>>>> b6d2702... initial commit
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-<<<<<<< HEAD
 
 if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'right' || get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'both' ) :
 	get_sidebar( 'right' );
 endif;
 
-=======
-get_sidebar( 'right' );
->>>>>>> b6d2702... initial commit
 get_footer();

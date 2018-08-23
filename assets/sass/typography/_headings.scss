@@ -1,6 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-<<<<<<< HEAD
 	font-weight: 700;
 	margin: 1em 0;
 }
@@ -26,6 +25,4 @@ h5 {
 
 h6 {
   @include font-size(0.8125);
-=======
->>>>>>> b6d2702... initial commit
 }

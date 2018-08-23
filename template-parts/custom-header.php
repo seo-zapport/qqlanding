@@ -70,11 +70,6 @@ if ( ! function_exists( 'qqlanding_header_style' ) ) :
 		<?php
 	}
 endif;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> c973dc4... Update Slide
 
 
 /**
@@ -179,9 +174,3 @@ function qqlanding_header_set(){
 	</nav><!-- #site-navigation -->
 	<?php
 }
-<<<<<<< HEAD
-=======
->>>>>>> b6d2702... initial commit
-=======
-
->>>>>>> c973dc4... Update Slide

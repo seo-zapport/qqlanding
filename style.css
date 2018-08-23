@@ -379,7 +379,6 @@ template {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-<<<<<<< HEAD
 @font-face {
   font-family: "arial_rounded_mt_std_regular";
   src: url("././assets/fonts/arial_rounded_mt_std_regular/arial_rounded_mt_std_regular.eot?") format("eot");
@@ -443,8 +442,6 @@ template {
   font-style: "normal";
   font-weight: "normal";
 }
-=======
->>>>>>> b6d2702... initial commit
 body,
 button,
 input,
@@ -460,7 +457,6 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-<<<<<<< HEAD
   font-weight: 700;
   margin: 1em 0;
 }
@@ -493,8 +489,6 @@ h5 {
 h6 {
   font-size: 13px;
   font-size: 0.8125rem;
-=======
->>>>>>> b6d2702... initial commit
 }
 
 p {
@@ -572,20 +566,12 @@ hr {
 }
 
 ul, ol {
-<<<<<<< HEAD
   margin: 0 0 1.5em 0.75em;
   padding-left: 0px;
 }
 
 ul {
   list-style: none;
-=======
-  margin: 0 0 1.5em 3em;
-}
-
-ul {
-  list-style: disc;
->>>>>>> b6d2702... initial commit
 }
 
 ol {
@@ -607,10 +593,7 @@ dd {
 }
 
 img {
-<<<<<<< HEAD
   display: block;
-=======
->>>>>>> b6d2702... initial commit
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
@@ -643,11 +626,8 @@ input[type="submit"] {
   font-size: 0.75rem;
   line-height: 1;
   padding: .6em 1em .4em;
-<<<<<<< HEAD
   position: relative;
   text-transform: uppercase;
-=======
->>>>>>> b6d2702... initial commit
 }
 button:hover,
 input[type="button"]:hover,
@@ -665,7 +645,6 @@ input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
 }
 
-<<<<<<< HEAD
 input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
@@ -725,8 +704,6 @@ textarea {
   width: 100%;
 }
 
-=======
->>>>>>> b6d2702... initial commit
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -775,7 +752,6 @@ textarea {
   width: 100%;
 }
 
-<<<<<<< HEAD
 .qqlanding-sites.qqland-qq288 .search-form .search-submit {
   background-color: #10aec7;
 }
@@ -877,15 +853,12 @@ textarea {
   background-color: #b5b5b5;
 }
 
-=======
->>>>>>> b6d2702... initial commit
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-<<<<<<< HEAD
 .qqlanding-sites.qqland-qq288 a {
   color: #02849c;
 }
@@ -977,8 +950,6 @@ textarea {
   color: #a63201;
 }
 
-=======
->>>>>>> b6d2702... initial commit
 a {
   color: royalblue;
 }
@@ -998,52 +969,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-<<<<<<< HEAD
-=======
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-}
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 200px;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
-
->>>>>>> b6d2702... initial commit
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -1067,7 +992,6 @@ a:hover, a:active {
 }
 .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
   float: left;
-<<<<<<< HEAD
   font-weight: 600;
   width: 50%;
 }
@@ -1173,15 +1097,6 @@ a:hover, a:active {
   content: "\f054";
   margin: 0 0 0 5px;
 }
-=======
-  width: 50%;
-}
-.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
->>>>>>> b6d2702... initial commit
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1281,7 +1196,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-<<<<<<< HEAD
 .qqlanding-sites.qqland-qq288 .widget .widget-title-container {
   border-bottom-color: #02849c;
 }
@@ -2858,125 +2772,6 @@ embed,
 iframe,
 object {
   max-width: 100%;
-=======
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
-}
-.widget select {
-  max-width: 100%;
-}
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.qqlanding-sites.qqland-no-affix.qqland-qq288 .navbar {
-  background: #07738f;
-}
-.qqlanding-sites.qqland-no-affix.qqland-qq188 .navbar {
-  background: #142e5f;
-}
-.qqlanding-sites.qqland-no-affix.qqland-qq101 .navbar {
-  background: #033709;
-}
-.qqlanding-sites.qqland-no-affix.qqland-qq1x2 .navbar {
-  background: #0044a7;
-}
-.qqlanding-sites.qqland-no-affix.qqland-qq724 .navbar {
-  background: #3e3e3e;
-}
-.qqlanding-sites.qqland-no-affix.qqland-qqfortuna .navbar {
-  background: #300;
-}
-.qqlanding-sites.qqland-affix.qqland-qq288 .navbar {
-  background: rgba(7, 115, 143, 0.78);
-}
-.qqlanding-sites.qqland-affix.qqland-qq188 .navbar {
-  background: rgba(20, 46, 95, 0.78);
-}
-.qqlanding-sites.qqland-affix.qqland-qq101 .navbar {
-  background: rgba(3, 55, 9, 0.78);
-}
-.qqlanding-sites.qqland-affix.qqland-qq1x2 .navbar {
-  background: rgba(0, 68, 167, 0.78);
-}
-.qqlanding-sites.qqland-affix.qqland-qq724 .navbar {
-  background: rgba(62, 62, 62, 0.78);
-}
-.qqlanding-sites.qqland-affix.qqland-qqfortuna .navbar {
-  background: rgba(51, 0, 0, 0.78);
-}
-
-.sticky {
-  display: block;
-}
-
-.hentry {
-  margin: 0 0 1.5em;
-}
-
-.updated:not(.published) {
-  display: none;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word;
-}
-
-.bypostauthor {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%;
->>>>>>> b6d2702... initial commit
 }
 
 /* Make sure logo link wraps around logo image. */
@@ -3054,7 +2849,6 @@ object {
     max-width: 1240px;
   }
 }
-<<<<<<< HEAD
 @media (max-width: 960px) {
   .qqlanding-sites .qqland-grid-2 .qqland-post {
     float: none;
@@ -3062,7 +2856,5 @@ object {
     width: 100%;
   }
 }
-=======
->>>>>>> b6d2702... initial commit
 
 /*# sourceMappingURL=style.css.map */

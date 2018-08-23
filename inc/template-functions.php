@@ -49,13 +49,8 @@ function qqlanding_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here to appear in the right side of your site.', 'qqlanding' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s" itemprop="mainEntity">',
 		'after_widget'  => '</section>',
-<<<<<<< HEAD
 		'before_title'  => '<div class="widget-title-container"><h4 class="widget-title" itemprop="name">',
 		'after_title'   => '</h4></div>',
-=======
-		'before_title'  => '<div class="widget-title-container"><h3 class="widget-title" itemprop="name">',
-		'after_title'   => '</h3></div>',
->>>>>>> b6d2702... initial commit
 	) );
 	register_sidebar( array(
 		'name'			=> esc_html__( 'Left Sidebar', 'qqlanding' ),
@@ -63,13 +58,8 @@ function qqlanding_widgets_init() {
 		'description'	=> esc_html__( 'Add widgets here to appear in the left side of your site', 'qqlanding' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s" itemprop="mainEntity">',
 		'after_widget'  => '</section>',
-<<<<<<< HEAD
 		'before_title'  => '<div class="widget-title-container"><h4 class="widget-title" itemprop="name">',
 		'after_title'   => '</h4></div>',
-=======
-		'before_title'  => '<div class="widget-title-container"><h3 class="widget-title" itemprop="name">',
-		'after_title'   => '</h3></div>',
->>>>>>> b6d2702... initial commit
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'QQLanding: Right Footer Sidebar', 'qqlanding' ),
@@ -171,11 +161,6 @@ if ( ! function_exists( 'qqlanding_is_selective_refresh' ) ) :
     }
 endif;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> c973dc4... Update Slide
 /**
  * Display the Grid item
  */
@@ -207,12 +192,6 @@ endif;
  * Display the first image of the featured post,
  * if they don't have the featured post input
  */
-<<<<<<< HEAD
-=======
->>>>>>> b6d2702... initial commit
-=======
-
->>>>>>> c973dc4... Update Slide
 
 function get_first_image($src = null) {
    global $post, $posts;

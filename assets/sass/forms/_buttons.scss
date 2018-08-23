@@ -10,11 +10,8 @@ input[type="submit"] {
 	@include font-size(0.75);
 	line-height: 1;
 	padding: .6em 1em .4em;
-<<<<<<< HEAD
     position: relative;
     text-transform: uppercase;
-=======
->>>>>>> b6d2702... initial commit
 
 	&:hover {
 		border-color: $color__border-button-hover;
@@ -25,7 +22,6 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
-<<<<<<< HEAD
 input[type="search"]{
 	-webkit-appearance: textfield;
 	/* Addresses appearance set to searchfield in S5, Chrome */
@@ -77,5 +73,3 @@ textarea {
   /* Improves readability and alignment in all browsers */
   width: 100%;
 }
-=======
->>>>>>> b6d2702... initial commit

@@ -42,4 +42,3 @@ if (! function_exists( 'qqlanding_social_media' ) ) {
 		<?php endif;
 	}
 }
-

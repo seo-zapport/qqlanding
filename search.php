@@ -8,7 +8,6 @@
  */
 
 get_header();
-<<<<<<< HEAD
 
 $blogs_sidebar_layout = qqlanding_grid_sets( 'both','blog');
 
@@ -18,11 +17,6 @@ endif;
 ?>
 
 	<section id="primary" class="content-area <?php echo $blogs_sidebar_layout['grid_sets'] ?>">
-=======
-?>
-
-	<section id="primary" class="content-area">
->>>>>>> b6d2702... initial commit
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -63,11 +57,7 @@ endif;
 	</section><!-- #primary -->
 
 <?php
-<<<<<<< HEAD
 if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'right' || get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'both' ) :
 	get_sidebar( 'right' );
 endif;
-=======
-get_sidebar();
->>>>>>> b6d2702... initial commit
 get_footer();

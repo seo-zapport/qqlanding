@@ -4,10 +4,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> b6d2702... initial commit
 ?>
 
 <section id="banner">
@@ -21,13 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 							the_row(); ?>
 						<h3><?php the_sub_field('slider_title'); ?></h3>
 					    <p><?php the_sub_field('slider_content'); ?></p>    	
-<<<<<<< HEAD
+
 						<button>EnterSite</button>
 					<?php endif; ?>
-=======
-					<?php endif; ?>
-					<button>EnterSite</button>
->>>>>>> b6d2702... initial commit
 				</div>
 		</div>
 	</div>
@@ -36,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}elseif(get_field('slider_layout', 'options') == "slider"){		
 ?>
 	<div id="banner-slider">
-<<<<<<< HEAD
+
 		<!--Carousel Wrapper-->
 		<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
 		    <!--Indicators-->
@@ -103,8 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		    <!--/.Controls-->
 		</div>
 		<!--/.Carousel Wrapper-->
-=======
->>>>>>> b6d2702... initial commit
+
 	</div>
 <?php 
 	}//end of if statement of slider layout
@@ -113,14 +105,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php 
 
 ?>
-<<<<<<< HEAD
-<<<<<<< HEAD
 </section>
-=======
 
-
-</section>
->>>>>>> b6d2702... initial commit
-=======
-</section>
->>>>>>> 52ae31c... Update Commit
