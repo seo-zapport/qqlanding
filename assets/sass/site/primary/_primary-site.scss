@@ -36,6 +36,18 @@
 			left: 0;
 			width: 100%;
 			z-index: 1030;
+			&#site-navigation{
+				.navbar-nav {
+					.nav-link{
+						padding-bottom: 1em;
+						padding-top: 1em;
+					}
+					.dropdown-menu .nav-link{
+						padding-bottom: 0.7em;
+						padding-top: 0.7em;
+					}
+				} 
+			}
 		}
 	}
 	.qqland-site-box{
@@ -124,7 +136,7 @@
 		.qqlanding-tag,.qqlanding-tag-lists{
 			a{
 				background-color: $qq288_default;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $qq288_blue_stone;
 				}
 			}
@@ -141,7 +153,6 @@
 					}
 				}
 			} 
-
 		}
 		&.qqlayout-default{
 			.site-branding{
@@ -221,7 +232,7 @@
 		.qqlanding-tag,.qqlanding-tag-lists{
 			a{
 				background-color: $qq188_reso_blue;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $qq188_gulf_blue;
 				}
 			}
@@ -310,7 +321,7 @@
 		.qqlanding-tag,.qqlanding-tag-lists{
 			a{
 				background-color: $qq101_english_holly;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $qq101_default;
 				}
 			}
@@ -416,7 +427,7 @@
 		.qqlanding-tag,.qqlanding-tag-lists{
 			a{
 				background-color: $qq1x2_default;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $qq1x2_blue_ribbon;
 				}
 			}
@@ -506,7 +517,7 @@
 		.qqlanding-tag,.qqlanding-tag-lists{
 			a{
 				background-color: $qq724_mine_shaft;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $color__fd;
 				}
 			}
@@ -596,7 +607,7 @@
 		.qqlanding-tag,.qqlanding-tag-lists{
 			a{
 				background-color: $qqfortuna_default;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $qqfortuna_mojo;
 				}
 			}
@@ -686,7 +697,7 @@
 		.qqlanding-tag,.qqlanding-tag-lists{
 			a{
 				background-color: $qq801_regal_blue;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $qq801_default;
 				}
 			}
@@ -793,7 +804,7 @@
 		.qqlanding-tag,.qqlanding-tag-lists{
 			a{
 				background-color: $qq882_violet;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $qq882_razzmatazz;
 				}
 			}
@@ -883,7 +894,7 @@
 		.qqlanding-tag,.qqlanding-tag-lists{
 			a{
 				background-color: $qq808_brown_bramble;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $qq808_default;
 				}
 			}
@@ -985,7 +996,7 @@
 			a{
 				background-color: $qq828_givry;
 				color:$qq828_default;
-				&:hover,&:focus{
+				&:hover,&:focus,&:visited{
 					background-color: $qq828_default;
 				}
 			}

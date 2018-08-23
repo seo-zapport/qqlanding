@@ -11,12 +11,35 @@
 	margin-bottom:2em;
 } 
 
+<<<<<<< HEAD
+=======
 #banner-static {
 	background: url('http://www.sandbox.awakentheme.com/wp-content/uploads/2013/03/image-alignment-1200x4002.jpg');
 	color: #fff;
 	width: 100%;
 	height: 420px;
 	
+}
+
+
+
+
+>>>>>>> 18c0114172653a5b86b974f3d238738e9f7f9553
+
+.view-0 {
+	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2013/03/image-alignment-1200x4002.jpg');
+	height: 420px;	
+	background-position:right top; background-repeat:no-repeat;background-attachment: fixed;background-size: cover;}
+
+.caro-slide-0 {
+		
+<<<<<<< HEAD
+	float:left;	
+	;	
+
+	text-align:center;	
+	top: 20px;
+	bottom: 0px;
 }
 
 .view-1 {

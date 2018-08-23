@@ -83,6 +83,8 @@ function qqlanding_header_set(){
 	$logo = get_theme_mod( 'site_logo', '' );
 	$title_option = get_theme_mod( 'site_title_option', 'text-only' );
 
+	$menu_class = ( $template == 'bare' || $template == 'overlay' ) ? 'navbar-nav justify-content-end' : 'navbar-nav';
+
 	//check weather the page is front
 	if ( is_front_page() || is_home() ) {
 		$before_title = '<h1 class="site-title" itemprop="name">';
@@ -160,7 +162,7 @@ function qqlanding_header_set(){
 					'container'			=> 'div',
 					'container_id'		=> 'primary-menu',
 					'container_class'	=> 'navbar-collapse collapse',
-					'menu_class'		=> 'navbar-nav',
+					'menu_class'		=> $menu_class,
 					'fallback_cb'		=> 'wp_navwalker::fallback',
 					'walker'			=> new wp_navwalker()
 				) );

@@ -28,6 +28,7 @@ endif;
 				?>
 			</header><!-- .page-header -->
 
+			<div class="qqland-grid-2">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -42,7 +43,10 @@ endif;
 
 			endwhile;
 
-			the_posts_navigation();
+			echo '<span class="clearfix"></span>';
+			echo '<div class="col-12">';
+				qqlanding_post_navigations();
+			echo '</div>';
 
 		else :
 
@@ -50,7 +54,7 @@ endif;
 
 		endif;
 		?>
-
+			</div><!-- .qqland-grid-2 -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -15,7 +15,6 @@ if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'left' || get_t
 	get_sidebar( 'left' );
 endif;
 ?>
-
 	<section id="primary" class="content-area <?php echo $blogs_sidebar_layout['grid_sets'] ?>">
 		<main id="main" class="site-main">
 
@@ -29,8 +28,8 @@ endif;
 					?>
 				</h1>
 			</header><!-- .page-header -->
-
 			<?php
+			echo '<div class="qqland-grid-2">';
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -43,12 +42,14 @@ endif;
 				get_template_part( 'template-parts/content', 'search' );
 
 			endwhile;
+			echo '</div>';
 
 			the_posts_navigation();
 
 		else :
-
-			get_template_part( 'template-parts/content', 'none' );
+			echo '<div class="qqland-grid-2">';
+				get_template_part( 'template-parts/content', 'none' );
+			echo '</div><!-- .qqland-grid-2 -->';
 
 		endif;
 		?>

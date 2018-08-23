@@ -42,6 +42,12 @@ if ( ! function_exists( 'qqlanding_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		add_image_size( 'default', 724, 410, true );
+		//add_image_size( 'featured-slider', 752, 440, true );
+		add_image_size( 'featured', 388, 220, true );
+		add_image_size( 'small-featured', 292, 180, true );
+		add_image_size( 'small-thumb', 120,85, true );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', 'qqlanding' ),

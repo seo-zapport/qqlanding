@@ -21,11 +21,11 @@
 				margin-bottom: 0em;
 				a{
 					display: block;
-					line-height: 32px;
-					padding-right: 5px;
-					padding-left: 5px;
+					line-height: 30px;
+					padding-right: 3px;
+					padding-left: 3px;
 					text-align: center;
-					width: 32px;
+					width: 30px;
 					vertical-align: middle;
 					&:hover{
 						background-color:$color__white;
@@ -44,7 +44,7 @@
 				}
 				i{
 					&[class*='fa-']{
-						@include font-size(1.2);
+						@include font-size(1.025);
 						color:$color__white;
 					}
 				}
@@ -104,13 +104,13 @@
 			.nav-link{
 				color: $color__white;
 				@include font-size(1);
-				padding-bottom: 0.7em;
-				padding-top: 0.7em;
+				padding-bottom: 0.8em;
+				padding-top: 0.8em;
 			}
 			.dropdown-menu{
 				border-radius: 0;
 				.nav-link{
-						@include font-size(0.9375);
+						@include font-size(0.875);
 				}
 			}
 		}
@@ -201,7 +201,8 @@
 	  padding: 0;
 	}
 	.page-title {
-	  margin: 0;
+		font-weight: normal;
+		margin: 0;
 	}
 	.taxonomy-description {
 	  font-style: italic;
@@ -223,12 +224,15 @@
 			}
 		}
 	}
-	.qqland-post{
+	.qqland-post,
+	&.search-no-results{
 		margin-bottom: 50px;
-		.qqland-entry-wrapper{
+		.qqland-entry-wrapper,
+		.page-header{
 			border-bottom: 1px solid $color__b5;
 				margin: 0 0 0.5em;
-			.entry-title{
+			.entry-title,
+			.page-title{
 				background-color:$color__b5;
 				color: $color__white;
 				display: inline-block;
@@ -252,6 +256,7 @@
 			margin: 0 0 0.5em;
 		}
 	}
+	
 	.single-entry-title{
 	  font-family: "Roboto Condensed", sans-serif;
 	  margin: 0 0 2px 0;
@@ -285,12 +290,25 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			&:hover,
-			&:focus{
+			&:focus,
+			&:visited{
 				color: $color__white;
 			}
 		}
 	}
 
 	.moretag {
+		
+	}
+
+	/* Archive */
+	&.archive{
+		.archive-description{
+			margin-top: 10px;
+			>p{
+				@include font-size( 0.8125 );
+				font-weight: 400;	
+			}
+		}
 	}
 }
