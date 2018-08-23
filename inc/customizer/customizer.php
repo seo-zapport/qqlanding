@@ -364,6 +364,212 @@ function qqlanding_customizer_register( $wp_customize ){
 				)
 			);
 
+			//Excerpt Display Setting
+			$wp_customize->add_setting( 'qqlanding_excerpt_display',
+				array(
+	                'default'               => 1,
+	                'type'       => 'theme_mod',
+	                'capability' => 'edit_theme_options',
+	                'sanitize_callback'     => 'qqlanding_sanitize_checkbox'
+				)
+			);
+	        //Excerpt Display Control
+	        $wp_customize->add_control( 'qqlanding_excerpt_display',
+	            array(
+	                'type'                  => 'checkbox',
+	                'label'                 => esc_html__( 'Display Excerpt', 'qqlanding' ),
+	                'section'               => 'qqlanding_blog_options'
+	            )
+	        );
+
+	        //Excerpt Setting
+	        $wp_customize->add_setting( 'qqlanding_excerpt_lenght',
+	        	array(
+	        		'default' => 85,
+	        		'sanitize_callback' => 'wp_filter_nohtml_kses'
+
+	        	)
+	        );
+
+	        //Excerpt Control
+	        $wp_customize->add_control( 'qqlanding_excerpt_lenght',
+	        	array(
+	                'type'                  => 'text',
+	                'label'                 => esc_html__( 'Excerpt length', 'qqlanding' ),
+	                'section'               => 'qqlanding_blog_options',
+	                'description'			=> esc_html__( 'Give some length for your post.', 'qqlanding' )
+	        	)
+	        );
+		
+		/**
+		 * ## Page Section
+		 *-------------------------------------*/
+		$wp_customize->add_section( 'qqlanding_page_options',
+			array(
+				'priority'		=> 7,
+				'title'		=> esc_html__( 'Page Settings', 'qqlanding' ),
+				'description' => esc_html__( '', 'qqlanding' ),
+				'panel'		=> 'qqlanding_theme_options'
+			)
+		);
+			//Side-bar layout Setting
+			$wp_customize->add_setting( 'qqlanding_page_sidebar_layout',
+				array(
+					'default' => 'right',
+					'sanitize_callback' => 'qqlanding_sanitize_radio'
+				)
+			);
+			$wp_customize->add_control(
+				new QQLanding_Customize_Radio_Image( $wp_customize, 'qqlanding_page_sidebar_layout',
+					array(
+						'label'		=> __( 'Sidebar Layouts', 'qqlanding' ),
+						'section'	=> 'qqlanding_page_options',
+						'settings'	=> 'qqlanding_page_sidebar_layout',
+						'description' => esc_html__( 'Choose a layout for the sidebar.', 'qqlanding' ),
+						'choices'	=> array(
+							'right'	=> array(
+								'label'		=> esc_html__( 'Right Sidebar', 'qqlanding' ),
+								'url'		=> '%sright.jpg'
+							),
+							'left'	=> array(
+								'label'		=> esc_html__( 'Left Sidebar', 'qqlanding' ),
+								'url'		=> '%sleft.jpg'
+							),
+							'both'	=> array(
+								'label'		=> esc_html__( 'Both Sidebar', 'qqlanding' ),
+								'url'		=> '%sboth.jpg'
+							),
+							'none'	=> array(
+								'label'		=> esc_html__( 'No Sidebar', 'qqlanding' ),
+								'url'		=> '%snone.jpg'
+							),
+						)
+					)
+				)
+			);
+
+		/**
+		 * ## Single Post Section
+		 *-------------------------------------*/
+		$wp_customize->add_section( 'qqlanding_single_post_options',
+			array(
+				'priority'		=> 8,
+				'title'		=> esc_html__( 'Single Post Settings', 'qqlanding' ),
+				'description' => esc_html__( '', 'qqlanding' ),
+				'panel'		=> 'qqlanding_theme_options'
+			)
+		);
+			//Side-bar layout Setting
+			$wp_customize->add_setting( 'qqlanding_single_sidebar_layout',
+				array(
+					'default' => 'right',
+					'sanitize_callback' => 'qqlanding_sanitize_radio'
+				)
+			);
+			$wp_customize->add_control(
+				new QQLanding_Customize_Radio_Image( $wp_customize, 'qqlanding_single_sidebar_layout',
+					array(
+						'label'		=> __( 'Sidebar Layouts', 'qqlanding' ),
+						'section'	=> 'qqlanding_single_post_options',
+						'settings'	=> 'qqlanding_single_sidebar_layout',
+						'description' => esc_html__( 'Choose a layout for the sidebar.', 'qqlanding' ),
+						'choices'	=> array(
+							'right'	=> array(
+								'label'		=> esc_html__( 'Right Sidebar', 'qqlanding' ),
+								'url'		=> '%sright.jpg'
+							),
+							'left'	=> array(
+								'label'		=> esc_html__( 'Left Sidebar', 'qqlanding' ),
+								'url'		=> '%sleft.jpg'
+							),
+							'both'	=> array(
+								'label'		=> esc_html__( 'Both Sidebar', 'qqlanding' ),
+								'url'		=> '%sboth.jpg'
+							),
+							'none'	=> array(
+								'label'		=> esc_html__( 'No Sidebar', 'qqlanding' ),
+								'url'		=> '%snone.jpg'
+							),
+						)
+					)
+				)
+			);
+
+	        //Featured Image Display Setting
+	        $wp_customize->add_setting( 'qqlanding_single_featured_img_display',
+	            array(
+	                'default'               => 1,
+	                'type'                  => 'theme_mod',
+	                'capability'            => 'edit_theme_options',
+	                'sanitize_callback'     => 'qqlanding_sanitize_checkbox'
+	            )
+	        );
+	        //Featured Image Display Control
+	        $wp_customize->add_control( 'qqlanding_single_featured_img_display',
+	            array(
+	                'type'                  => 'checkbox',
+	                'label'                 => esc_html__( 'Display Featured Post Image', 'qqlanding' ),
+	                'description'           => esc_html__( 'This will show or hide your featured image', 'qqlanding' ),
+	                'section'               =>  'qqlanding_single_post_options'
+	            )
+	        );
+
+	        //Post Navigation Display Setting
+	        $wp_customize->add_setting( 'qqlanding_single_post_nav_display',
+	            array(
+	                'default'               => 1,
+	                'type'                  => 'theme_mod',
+	                'capability'            => 'edit_theme_options',
+	                'sanitize_callback'     => 'qqlanding_sanitize_checkbox'
+	            )
+	        );
+	        //Post Navigation Display Control
+	        $wp_customize->add_control( 'qqlanding_single_post_nav_display',
+	            array(
+	                'type'                  => 'checkbox',
+	                'label'                 => esc_html__( 'Display Post Navigation', 'qqlanding' ),
+	                'description'           => esc_html__( 'This will show or hide your post navigation', 'qqlanding' ),
+	                'section'               =>  'qqlanding_single_post_options'
+	            )
+	        );
+
+	        //Related Post Display Setting
+	        $wp_customize->add_setting( 'qqlanding_single_related_post_display',
+	            array(
+	                'default'               => 1,
+	                'type'                  => 'theme_mod',
+	                'capability'            => 'edit_theme_options',
+	                'sanitize_callback'     => 'qqlanding_sanitize_checkbox'
+	            )
+	        );
+	        //Related Post Display Control
+	        $wp_customize->add_control( 'qqlanding_single_related_post_display',
+	            array(
+	                'type'                  => 'checkbox',
+	                'label'                 => esc_html__( 'Display Related Post', 'qqlanding' ),
+	                'description'           => esc_html__( 'This will show or hide your related post', 'qqlanding' ),
+	                'section'               =>  'qqlanding_single_post_options'
+	            )
+	        );
+
+	        //Tag list Display Setting
+	        $wp_customize->add_setting( 'qqlanding_single_tag_list_display',
+	            array(
+	                'default'               => 1,
+	                'capability'            => 'edit_theme_options',
+	                'sanitize_callback'     => 'qqlanding_sanitize_checkbox'
+	            )
+	        );
+	        //Tag list Display Control
+	        $wp_customize->add_control( 'qqlanding_single_tag_list_display',
+	            array(
+	                'type'                  => 'checkbox',
+	                'label'                 => esc_html__( 'Display Tag list', 'qqlanding' ),
+	                'description'           => esc_html__( 'This will show or hide your tag list', 'qqlanding' ),
+	                'section'               =>  'qqlanding_single_post_options'
+	            )
+	        );
+
 
 		/**
 		 * ## Footer Section

@@ -898,7 +898,7 @@ textarea {
   font-size: 12px;
   font-size: 0.75rem;
   font-weight: bold;
-  height: 45px;
+  height: 37px;
   position: absolute;
   top: 0;
   right: 0;
@@ -2350,11 +2350,11 @@ a:hover, a:active {
 .qqlanding-sites .site-top-info #social_media li a,
 .qqlanding-sites .site-top-info ul#social_media li a {
   display: block;
-  line-height: 32px;
-  padding-right: 5px;
-  padding-left: 5px;
+  line-height: 30px;
+  padding-right: 3px;
+  padding-left: 3px;
   text-align: center;
-  width: 32px;
+  width: 30px;
   vertical-align: middle;
 }
 .qqlanding-sites .site-top-info #social_media li a:hover,
@@ -2399,8 +2399,8 @@ a:hover, a:active {
 }
 .qqlanding-sites .site-top-info #social_media li i[class*='fa-'],
 .qqlanding-sites .site-top-info ul#social_media li i[class*='fa-'] {
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 16.4px;
+  font-size: 1.025rem;
   color: #fff;
 }
 .qqlanding-sites .qqlanding-default {

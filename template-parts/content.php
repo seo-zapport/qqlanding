@@ -32,7 +32,7 @@
 	</header><!-- .entry-header -->
 
 	<?php qqlanding_post_thumbnail(); ?>
-
+	
 	<div class="entry-excerpt">
 		<?php
 		the_excerpt();

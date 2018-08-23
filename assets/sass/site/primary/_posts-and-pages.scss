@@ -21,11 +21,11 @@
 				margin-bottom: 0em;
 				a{
 					display: block;
-					line-height: 32px;
-					padding-right: 5px;
-					padding-left: 5px;
+					line-height: 30px;
+					padding-right: 3px;
+					padding-left: 3px;
 					text-align: center;
-					width: 32px;
+					width: 30px;
 					vertical-align: middle;
 					&:hover{
 						background-color:$color__white;
@@ -44,7 +44,7 @@
 				}
 				i{
 					&[class*='fa-']{
-						@include font-size(1.2);
+						@include font-size(1.025);
 						color:$color__white;
 					}
 				}
@@ -298,6 +298,7 @@
 	}
 
 	.moretag {
+		
 	}
 
 	/* Archive */

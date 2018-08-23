@@ -187,6 +187,118 @@ if ( ! function_exists( 'qqlanding_grid_sets' ) ) :
 
 endif;
 
+if ( ! function_exists( 'qqLanding_post_thumbnails' ) ) :
+	/**
+	 * Displays an optional post thumbnail.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 */
+	function qqLanding_post_thumbnails() {
+		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+			return;
+		}
+		
+		$file 				= wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+		$html_meta_output		= '';  ?>
+
+		<figure class="blogs-featured-image" itemprop="image" itemscope itemType="http://schema.org/ImageObject">
+			<?php if ( is_singular() ) : ?>
+				<link itemprop="url" href="<?php the_permalink(); ?>">
+					<div class="post-thumbnail">
+				<?php 
+					if ( get_theme_mod( 'qqLanding_single_featured_img_display', true ) ):
+						if( has_post_thumbnail() ) :
+							if ( if_file_exists($file) ) :
+								list($width, $height, $type, $attr) = getimagesize($file);
+								$html_meta_output .= '<meta itemprop="width" content="' . $width . '">';
+								$html_meta_output .= '<meta itemprop="height" content="' . $height . '">';
+							endif;
+						else:
+							$file = get_first_image();
+							if ( if_file_exists($file) ) :
+								list($width, $height, $type, $attr) = getimagesize($file);
+								$html_meta_output .=  '<meta itemprop="url" content="' . get_first_image(). '">';
+								$html_meta_output .= '<meta itemprop="width" content="' . $width . '">';
+								$html_meta_output .= '<meta itemprop="height" content="' . $height . '">';
+							endif;
+						endif;
+
+						the_post_thumbnail('featured-slider', array( 'itemprop' => 'image', 'class' => 'category-list-post-img img-responsive' ) );
+						echo $html_meta_output;
+					else:
+						echo '<img class="sr-only" src="' . get_first_image(). '" itemprop="image">';
+					endif; ?>
+					</div><!-- .post-thumbnail -->
+			<?php else : ?>
+				<a href="<?php echo esc_url( get_permalink( ) ); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" itemprop="url" >
+					<?php if( has_post_thumbnail() ) : ?>
+						<link itemprop="url" href="<?php the_post_thumbnail_url(); ?>">
+					<?php 
+						if ( if_file_exists($file) ) :
+							the_post_thumbnail( 'featured', array( 'itemprop' => 'contentUrl', 'class' => 'category-list-post-img img-responsive' ) );
+							list($width, $height, $type, $attr) = getimagesize($file);
+							$html_meta_output .= '<meta itemprop="width" content="' . $width . '">';
+							$html_meta_output .= '<meta itemprop="height" content="' . $height . '">';
+						endif;
+					else:
+						$html_meta_output .= '<meta itemprop="url" content="' . get_first_image() . '">';
+						$file = get_first_image();
+						if (if_file_exists($file)) :
+							list($width, $height, $type, $attr) = getimagesize($file);
+							$html_meta_output .= '<meta itemprop="width" content="' . $width . '">';
+							$html_meta_output .= '<meta itemprop="height" content="' . $height . '">';
+
+						endif;
+					endif;
+					echo $html_meta_output;
+					?>
+      			</a>
+			<?php endif; // End is_singular(). ?>
+		</figure>
+	<?php }
+endif;
+
+if ( ! function_exists( 'qqLanding_post_img' )) {
+	function qqLanding_post_img(){ ?>
+		<figure class="blogs-featured-image" itemprop="image" itemscope itemType="http://schema.org/ImageObject">
+			<?php
+				$file 				= wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+				$meta_width 		= __( '<meta itemprop="width" content="292">', 'qqLanding' );
+				$meta_height 		= __( '<meta itemprop="height" content="180">', 'qqLanding' );
+				$html_meta_output		= '';
+			?>
+			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+				<link itemprop="url" href="<?php the_permalink(); ?>">
+				<?php 
+				if( has_post_thumbnail() ) : 
+					$file = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+					if ( if_file_exists($file) ) :?>
+						<?php
+						the_post_thumbnail('small-featured', array(
+								'alt' => the_title_attribute( array(
+									'echo' => false,
+								) ),
+								'itemprop' => 'image'
+							));
+						list($width, $height, $type, $attr) = getimagesize($file);
+						$html_meta_output .= '<meta itemprop="width" content="' . $width . '">';
+						$html_meta_output .= '<meta itemprop="height" content="' . $height . '">';
+					endif;
+				else:
+					$file = get_first_image();
+					if (if_file_exists($file)) :
+						list($width, $height, $type, $attr) = getimagesize($file);
+					endif;
+						$html_meta_output .= '<img src="' . get_first_image() . '" class="responsive-img category-list-post-img" itemprop="image" alt="qqLanding-no-thumbnail">';
+						$html_meta_output .= $meta_width;
+						$html_meta_output .= $meta_height;
+				endif;
+				echo $html_meta_output; ?>
+			</a>
+		</figure>
+	<?php }
+}
 
 /**
  * Display the first image of the featured post,
