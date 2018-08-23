@@ -13,7 +13,7 @@ endif;
 if(have_rows('slider_fonts', 'option')) :
 	the_row();
 	
-/*	$sliderfont =  array();
+	/*$sliderfont =  array();
 	$countfontfam = count( get_sub_field('slider_font_family') );
 
 	$countwhile = '0';
@@ -142,18 +142,15 @@ endif;
  			 endif;
 
 ?>
-
 .view-<?php echo $count; ?> {
 	background : <?php echo $background; ?>;
 	height: <?php echo $slide_height; ?>px;	
 	<?php echo $presets; ?>
 }
-
 .caro-slide-<?php echo $count; ?> {
 	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 40%;"; } ?>	
 	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position']; }?>;	
 	<?php if(get_sub_field('content_settings')['slider_content_position'] == 'right' ){echo "left: 50%"; }?>;	
-
 	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'];  ?>;	
 	top: 20px;
 	bottom: 0px;
@@ -165,7 +162,6 @@ endif;
 endif;
 
 ?>
-
 
 .carousel-item .view img{
 	width: 100%;

@@ -3,7 +3,11 @@
 /* ================================= */ 
 #banner {
 	<!-- font-family: ; -->
+<<<<<<< HEAD
 	font-family: notosans-regular;
+=======
+	font-family: notosans-regular,notosans-italic,notosans-bold;
+>>>>>>> 2ef13df1c32512ecb6bac06cb9062fac379f6927
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 500;
@@ -24,13 +28,14 @@
 <b>Notice</b>:  Array to string conversion in <b>C:\xampp\htdocs\www.sandbox.awakenTheme.com\wp-content\themes\qqlanding\inc\acf\acf-style-editor.php</b> on line <b>154</b><br />
 float:Array;	
 	;	
-
 	text-align:center;	
+	
 	top: 20px;
 	bottom: 0px;
 }
 
 .view-1 {
+<<<<<<< HEAD
 	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2011/07/dsc09114.jpg');
 	height: 420px;	
 	background-position:center top; background-repeat:no-repeat;background-attachment: scroll;}
@@ -43,6 +48,33 @@ float:Array;
 	;	
 
 	text-align:center;	
+=======
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
+	height: 420px;	
+	background-position:center center; background-repeat:no-repeat;background-attachment: fixed;background-size: cover;}
+
+.caro-slide-1 {
+	width: 40%;	
+	float:left;	
+	;	
+	text-align:left;	
+	
+	top: 20px;
+	bottom: 0px;
+}
+
+.view-2 {
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/08/e-background-2.jpg');
+	height: 420px;	
+	}
+
+.caro-slide-2 {
+	width: 40%;	
+	float:right;	
+	left: 50%;	
+	text-align:left;	
+	
+>>>>>>> 2ef13df1c32512ecb6bac06cb9062fac379f6927
 	top: 20px;
 	bottom: 0px;
 }
@@ -53,6 +85,7 @@ float:Array;
 	height: 420px;	
 }
 
+<<<<<<< HEAD
 		body.qqlanding-sites{
 					font-size: 14px; font-style: normal; font-weight: 500; }	
 				.page-content,.entry-content,.entry-summary,.comment-content{
@@ -60,3 +93,5 @@ float:Array;
 				.genpost-entry-meta,.single-entry-meta,.genpost-entry-footer{
 					font-size: 12px; font-style: normal; font-weight: 500; }	
 	
+=======
+>>>>>>> 2ef13df1c32512ecb6bac06cb9062fac379f6927
