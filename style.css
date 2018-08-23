@@ -500,6 +500,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
+  font-style: italic;
   margin: 0 1.5em;
 }
 
@@ -525,6 +526,10 @@ code, kbd, tt, var {
   font-size: 0.9375rem;
 }
 
+code {
+  background-color: #eaeaea;
+}
+
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
@@ -533,6 +538,27 @@ abbr, acronym {
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+small {
+  font-size: 75%;
 }
 
 big {
@@ -605,9 +631,36 @@ figure {
   /* Extra wide images within figure tags don't overflow the content area. */
 }
 
-table {
+table, th, td {
+  border: 1px solid #e6e6e6;
   margin: 0 0 1.5em;
   width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+th {
+  font-size: 14px;
+  font-size: 1.4rem;
+  background: #eaeaea;
+  font-weight: bold;
+  padding: 8px 15px;
+}
+
+td {
+  padding: 5px 15px;
+}
+
+.site-footer table, .site-footer th, .site-footer td {
+  border: 1px solid #b5b5b5;
+}
+
+.site-footer th {
+  background: #222222;
 }
 
 /*--------------------------------------------------------------
@@ -723,7 +776,12 @@ textarea {
   color: #666;
   border: 1px solid #ccc;
   border-radius: 3px;
-  padding: 3px;
+  height: 38px;
+  padding: 10px 10px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -1202,6 +1260,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq288 .widget .widget-title-container .widget-title {
   background-color: #02849c;
 }
+.qqlanding-sites.qqland-qq288.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
+  background-color: #02849c;
+}
 .qqlanding-sites.qqland-qq288 .qqland-post .qqland-entry-wrapper {
   border-bottom-color: #02849c;
 }
@@ -1211,10 +1272,19 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq288 .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #10aec7;
 }
+.qqlanding-sites.qqland-qq288.search-no-results .page-header {
+  border-bottom-color: #02849c;
+}
+.qqlanding-sites.qqland-qq288.search-no-results .page-header .page-title {
+  background-color: #02849c;
+}
 .qqlanding-sites.qqland-qq188 .widget .widget-title-container {
   border-bottom-color: #061C55;
 }
 .qqlanding-sites.qqland-qq188 .widget .widget-title-container .widget-title {
+  background-color: #061C55;
+}
+.qqlanding-sites.qqland-qq188.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #061C55;
 }
 .qqlanding-sites.qqland-qq188 .qqland-post .qqland-entry-wrapper {
@@ -1226,10 +1296,19 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq188 .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #002a80;
 }
+.qqlanding-sites.qqland-qq188.search-no-results .page-header {
+  border-bottom-color: #061C55;
+}
+.qqlanding-sites.qqland-qq188.search-no-results .page-header .page-title {
+  background-color: #061C55;
+}
 .qqlanding-sites.qqland-qq101 .widget .widget-title-container {
   border-bottom-color: #023606;
 }
 .qqlanding-sites.qqland-qq101 .widget .widget-title-container .widget-title {
+  background-color: #023606;
+}
+.qqlanding-sites.qqland-qq101.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #023606;
 }
 .qqlanding-sites.qqland-qq101 .qqland-post .qqland-entry-wrapper {
@@ -1241,10 +1320,19 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq101 .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #01740F;
 }
+.qqlanding-sites.qqland-qq101.search-no-results .page-header {
+  border-bottom-color: #023606;
+}
+.qqlanding-sites.qqland-qq101.search-no-results .page-header .page-title {
+  background-color: #023606;
+}
 .qqlanding-sites.qqland-qq1x2 .widget .widget-title-container {
   border-bottom-color: #015fe7;
 }
 .qqlanding-sites.qqland-qq1x2 .widget .widget-title-container .widget-title {
+  background-color: #015fe7;
+}
+.qqlanding-sites.qqland-qq1x2.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #015fe7;
 }
 .qqlanding-sites.qqland-qq1x2 .qqland-post .qqland-entry-wrapper {
@@ -1256,10 +1344,19 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq1x2 .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #1f1f1f;
 }
+.qqlanding-sites.qqland-qq1x2.search-no-results .page-header {
+  border-bottom-color: #015fe7;
+}
+.qqlanding-sites.qqland-qq1x2.search-no-results .page-header .page-title {
+  background-color: #015fe7;
+}
 .qqlanding-sites.qqland-qq724 .widget .widget-title-container {
   border-bottom-color: #6fa67f;
 }
 .qqlanding-sites.qqland-qq724 .widget .widget-title-container .widget-title {
+  background-color: #6fa67f;
+}
+.qqlanding-sites.qqland-qq724.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #6fa67f;
 }
 .qqlanding-sites.qqland-qq724 .qqland-post .qqland-entry-wrapper {
@@ -1271,10 +1368,19 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq724 .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #fdc153;
 }
+.qqlanding-sites.qqland-qq724.search-no-results .page-header {
+  border-bottom-color: #6fa67f;
+}
+.qqlanding-sites.qqland-qq724.search-no-results .page-header .page-title {
+  background-color: #6fa67f;
+}
 .qqlanding-sites.qqland-qqfortuna .widget .widget-title-container {
   border-bottom-color: #c74547;
 }
 .qqlanding-sites.qqland-qqfortuna .widget .widget-title-container .widget-title {
+  background-color: #c74547;
+}
+.qqlanding-sites.qqland-qqfortuna.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #c74547;
 }
 .qqlanding-sites.qqland-qqfortuna .qqland-post .qqland-entry-wrapper {
@@ -1286,10 +1392,19 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qqfortuna .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #2e0002;
 }
+.qqlanding-sites.qqland-qqfortuna.search-no-results .page-header {
+  border-bottom-color: #c74547;
+}
+.qqlanding-sites.qqland-qqfortuna.search-no-results .page-header .page-title {
+  background-color: #c74547;
+}
 .qqlanding-sites.qqland-qq801 .widget .widget-title-container {
   border-bottom-color: #f1392f;
 }
 .qqlanding-sites.qqland-qq801 .widget .widget-title-container .widget-title {
+  background-color: #f1392f;
+}
+.qqlanding-sites.qqland-qq801.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #f1392f;
 }
 .qqlanding-sites.qqland-qq801 .qqland-post .qqland-entry-wrapper {
@@ -1301,10 +1416,19 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq801 .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #013878;
 }
+.qqlanding-sites.qqland-qq801.search-no-results .page-header {
+  border-bottom-color: #f1392f;
+}
+.qqlanding-sites.qqland-qq801.search-no-results .page-header .page-title {
+  background-color: #f1392f;
+}
 .qqlanding-sites.qqland-qq882 .widget .widget-title-container {
   border-bottom-color: #db026b;
 }
 .qqlanding-sites.qqland-qq882 .widget .widget-title-container .widget-title {
+  background-color: #db026b;
+}
+.qqlanding-sites.qqland-qq882.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #db026b;
 }
 .qqlanding-sites.qqland-qq882 .qqland-post .qqland-entry-wrapper {
@@ -1316,10 +1440,19 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq882 .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #8e21ba;
 }
+.qqlanding-sites.qqland-qq882.search-no-results .page-header {
+  border-bottom-color: #db026b;
+}
+.qqlanding-sites.qqland-qq882.search-no-results .page-header .page-title {
+  background-color: #db026b;
+}
 .qqlanding-sites.qqland-qq808 .widget .widget-title-container {
   border-bottom-color: #da954a;
 }
 .qqlanding-sites.qqland-qq808 .widget .widget-title-container .widget-title {
+  background-color: #da954a;
+}
+.qqlanding-sites.qqland-qq808.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #da954a;
 }
 .qqlanding-sites.qqland-qq808 .qqland-post .qqland-entry-wrapper {
@@ -1331,10 +1464,19 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq808 .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #542604;
 }
+.qqlanding-sites.qqland-qq808.search-no-results .page-header {
+  border-bottom-color: #da954a;
+}
+.qqlanding-sites.qqland-qq808.search-no-results .page-header .page-title {
+  background-color: #da954a;
+}
 .qqlanding-sites.qqland-qq828 .widget .widget-title-container {
   border-bottom-color: #a63201;
 }
 .qqlanding-sites.qqland-qq828 .widget .widget-title-container .widget-title {
+  background-color: #a63201;
+}
+.qqlanding-sites.qqland-qq828.single-post .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #a63201;
 }
 .qqlanding-sites.qqland-qq828 .qqland-post .qqland-entry-wrapper {
@@ -1345,6 +1487,12 @@ a:hover, a:active {
 }
 .qqlanding-sites.qqland-qq828 .qqland-post .qqland-entry-wrapper .entry-title:hover {
   background-color: #ec4801;
+}
+.qqlanding-sites.qqland-qq828.search-no-results .page-header {
+  border-bottom-color: #a63201;
+}
+.qqlanding-sites.qqland-qq828.search-no-results .page-header .page-title {
+  background-color: #a63201;
 }
 
 .widget {
@@ -1461,6 +1609,14 @@ a:hover, a:active {
   width: 100%;
   z-index: 1030;
 }
+.qqlanding-sites.qqland-affix .affix#site-navigation .navbar-nav .nav-link {
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.qqlanding-sites.qqland-affix .affix#site-navigation .navbar-nav .dropdown-menu .nav-link {
+  padding-bottom: 0.7em;
+  padding-top: 0.7em;
+}
 .qqlanding-sites .qqland-site-box {
   box-shadow: 0 0 2px #ccc;
 }
@@ -1522,9 +1678,10 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq288 .qqlanding-tag a, .qqlanding-sites.qqland-qq288 .qqlanding-tag-lists a {
   background-color: #02849c;
 }
-.qqlanding-sites.qqland-qq288 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq288 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq288 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq288 .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qq288 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq288 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq288 .qqlanding-cat a:visited, .qqlanding-sites.qqland-qq288 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq288 .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qq288 .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qq288 .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qq288 .qqlanding-tag a:focus, .qqlanding-sites.qqland-qq288 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq288 .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qq288 .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qq288 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq288 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq288 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq288 .qqlanding-tag-lists a:visited {
   background-color: #005c6b;
 }
 .qqlanding-sites.qqland-qq188 .site-top-info {
@@ -1589,9 +1746,10 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq188 .qqlanding-tag a, .qqlanding-sites.qqland-qq188 .qqlanding-tag-lists a {
   background-color: #002a80;
 }
-.qqlanding-sites.qqland-qq188 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq188 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq188 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq188 .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qq188 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq188 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq188 .qqlanding-cat a:visited, .qqlanding-sites.qqland-qq188 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq188 .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qq188 .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qq188 .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qq188 .qqlanding-tag a:focus, .qqlanding-sites.qqland-qq188 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq188 .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qq188 .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qq188 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq188 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq188 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq188 .qqlanding-tag-lists a:visited {
   background-color: #061C55;
 }
 .qqlanding-sites.qqland-qq101 .site-top-info {
@@ -1654,9 +1812,10 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq101 .qqlanding-tag a, .qqlanding-sites.qqland-qq101 .qqlanding-tag-lists a {
   background-color: #023606;
 }
-.qqlanding-sites.qqland-qq101 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq101 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq101 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq101 .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qq101 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq101 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq101 .qqlanding-cat a:visited, .qqlanding-sites.qqland-qq101 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq101 .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qq101 .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qq101 .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qq101 .qqlanding-tag a:focus, .qqlanding-sites.qqland-qq101 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq101 .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qq101 .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qq101 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq101 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq101 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq101 .qqlanding-tag-lists a:visited {
   background-color: #01740F;
 }
 .qqlanding-sites.qqland-qq1x2 .site-top-info {
@@ -1732,9 +1891,10 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq1x2 .qqlanding-tag a, .qqlanding-sites.qqland-qq1x2 .qqlanding-tag-lists a {
   background-color: #1f1f1f;
 }
-.qqlanding-sites.qqland-qq1x2 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq1x2 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq1x2 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq1x2 .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qq1x2 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq1x2 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq1x2 .qqlanding-cat a:visited, .qqlanding-sites.qqland-qq1x2 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq1x2 .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qq1x2 .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qq1x2 .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qq1x2 .qqlanding-tag a:focus, .qqlanding-sites.qqland-qq1x2 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq1x2 .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qq1x2 .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qq1x2 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq1x2 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq1x2 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq1x2 .qqlanding-tag-lists a:visited {
   background-color: #015fe7;
 }
 .qqlanding-sites.qqland-qq724 .site-top-info {
@@ -1798,9 +1958,10 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq724 .qqlanding-tag a, .qqlanding-sites.qqland-qq724 .qqlanding-tag-lists a {
   background-color: #2f2f2f;
 }
-.qqlanding-sites.qqland-qq724 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq724 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq724 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq724 .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qq724 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq724 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq724 .qqlanding-cat a:visited, .qqlanding-sites.qqland-qq724 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq724 .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qq724 .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qq724 .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qq724 .qqlanding-tag a:focus, .qqlanding-sites.qqland-qq724 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq724 .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qq724 .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qq724 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq724 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq724 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq724 .qqlanding-tag-lists a:visited {
   background-color: #fdc153;
 }
 .qqlanding-sites.qqland-qqfortuna .site-top-info {
@@ -1864,9 +2025,10 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qqfortuna .qqlanding-tag a, .qqlanding-sites.qqland-qqfortuna .qqlanding-tag-lists a {
   background-color: #3f0000;
 }
-.qqlanding-sites.qqland-qqfortuna .qqlanding-cat a:hover, .qqlanding-sites.qqland-qqfortuna .qqlanding-cat a:focus, .qqlanding-sites.qqland-qqfortuna .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qqfortuna .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qqfortuna .qqlanding-cat a:hover, .qqlanding-sites.qqland-qqfortuna .qqlanding-cat a:focus, .qqlanding-sites.qqland-qqfortuna .qqlanding-cat a:visited, .qqlanding-sites.qqland-qqfortuna .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qqfortuna .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qqfortuna .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qqfortuna .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qqfortuna .qqlanding-tag a:focus, .qqlanding-sites.qqland-qqfortuna .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qqfortuna .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qqfortuna .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qqfortuna .qqlanding-tag a:visited, .qqlanding-sites.qqland-qqfortuna .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qqfortuna .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qqfortuna .qqlanding-tag-lists a:visited {
   background-color: #c74547;
 }
 .qqlanding-sites.qqland-qq801 .site-top-info {
@@ -1930,9 +2092,10 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq801 .qqlanding-tag a, .qqlanding-sites.qqland-qq801 .qqlanding-tag-lists a {
   background-color: #013878;
 }
-.qqlanding-sites.qqland-qq801 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq801 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq801 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq801 .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qq801 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq801 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq801 .qqlanding-cat a:visited, .qqlanding-sites.qqland-qq801 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq801 .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qq801 .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qq801 .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qq801 .qqlanding-tag a:focus, .qqlanding-sites.qqland-qq801 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq801 .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qq801 .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qq801 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq801 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq801 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq801 .qqlanding-tag-lists a:visited {
   background-color: #f1392f;
 }
 .qqlanding-sites.qqland-qq882 .site-top-info {
@@ -2005,9 +2168,10 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq882 .qqlanding-tag a, .qqlanding-sites.qqland-qq882 .qqlanding-tag-lists a {
   background-color: #300a45;
 }
-.qqlanding-sites.qqland-qq882 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq882 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq882 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq882 .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qq882 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq882 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq882 .qqlanding-cat a:visited, .qqlanding-sites.qqland-qq882 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq882 .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qq882 .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qq882 .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qq882 .qqlanding-tag a:focus, .qqlanding-sites.qqland-qq882 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq882 .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qq882 .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qq882 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq882 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq882 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq882 .qqlanding-tag-lists a:visited {
   background-color: #db026b;
 }
 .qqlanding-sites.qqland-qq808 .site-top-info {
@@ -2071,9 +2235,10 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq808 .qqlanding-tag a, .qqlanding-sites.qqland-qq808 .qqlanding-tag-lists a {
   background-color: #542604;
 }
-.qqlanding-sites.qqland-qq808 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq808 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq808 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq808 .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qq808 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq808 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq808 .qqlanding-cat a:visited, .qqlanding-sites.qqland-qq808 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq808 .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qq808 .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qq808 .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qq808 .qqlanding-tag a:focus, .qqlanding-sites.qqland-qq808 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq808 .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qq808 .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qq808 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq808 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq808 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq808 .qqlanding-tag-lists a:visited {
   background-color: #874c00;
 }
 .qqlanding-sites.qqland-qq828 .site-top-info {
@@ -2145,9 +2310,10 @@ a:hover, a:active {
   background-color: #f9e2c2;
   color: #ec4801;
 }
-.qqlanding-sites.qqland-qq828 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq828 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq828 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq828 .qqlanding-cat-lists a:focus,
+.qqlanding-sites.qqland-qq828 .qqlanding-cat a:hover, .qqlanding-sites.qqland-qq828 .qqlanding-cat a:focus, .qqlanding-sites.qqland-qq828 .qqlanding-cat a:visited, .qqlanding-sites.qqland-qq828 .qqlanding-cat-lists a:hover, .qqlanding-sites.qqland-qq828 .qqlanding-cat-lists a:focus, .qqlanding-sites.qqland-qq828 .qqlanding-cat-lists a:visited,
 .qqlanding-sites.qqland-qq828 .qqlanding-tag a:hover,
-.qqlanding-sites.qqland-qq828 .qqlanding-tag a:focus, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:focus {
+.qqlanding-sites.qqland-qq828 .qqlanding-tag a:focus,
+.qqlanding-sites.qqland-qq828 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:visited {
   background-color: #ec4801;
 }
 
@@ -2160,6 +2326,7 @@ a:hover, a:active {
   font-size: 0.875rem;
   line-height: 1.5;
   /* Normal Post */
+  /* Archive */
 }
 .qqlanding-sites .site-top-info {
   border-bottom: 1px solid transparent;
@@ -2279,15 +2446,15 @@ a:hover, a:active {
   color: #fff;
   font-size: 16px;
   font-size: 1rem;
-  padding-bottom: 0.7em;
-  padding-top: 0.7em;
+  padding-bottom: 0.8em;
+  padding-top: 0.8em;
 }
 .qqlanding-sites #site-navigation .navbar-nav .dropdown-menu {
   border-radius: 0;
 }
 .qqlanding-sites #site-navigation .navbar-nav .dropdown-menu .nav-link {
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 .qqlanding-sites .site-footer {
   background: #222222;
@@ -2370,6 +2537,7 @@ a:hover, a:active {
   padding: 0;
 }
 .qqlanding-sites .page-title {
+  font-weight: normal;
   margin: 0;
 }
 .qqlanding-sites .taxonomy-description {
@@ -2388,14 +2556,22 @@ a:hover, a:active {
 .qqlanding-sites .qqland-grid-2 .qqland-post:nth-child(2n) {
   margin-right: 0;
 }
-.qqlanding-sites .qqland-post {
+.qqlanding-sites .qqland-post, .qqlanding-sites.search-no-results {
   margin-bottom: 50px;
 }
-.qqlanding-sites .qqland-post .qqland-entry-wrapper {
+.qqlanding-sites .qqland-post .qqland-entry-wrapper,
+.qqlanding-sites .qqland-post .page-header, .qqlanding-sites.search-no-results .qqland-entry-wrapper,
+.qqlanding-sites.search-no-results .page-header {
   border-bottom: 1px solid #b5b5b5;
   margin: 0 0 0.5em;
 }
-.qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title {
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title,
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .page-title,
+.qqlanding-sites .qqland-post .page-header .entry-title,
+.qqlanding-sites .qqland-post .page-header .page-title, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title,
+.qqlanding-sites.search-no-results .qqland-entry-wrapper .page-title,
+.qqlanding-sites.search-no-results .page-header .entry-title,
+.qqlanding-sites.search-no-results .page-header .page-title {
   background-color: #b5b5b5;
   color: #fff;
   display: inline-block;
@@ -2411,14 +2587,32 @@ a:hover, a:active {
   -o-transition: all 0.6 ease-in-out;
   transition: all 0.6 ease-in-out;
 }
-.qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title a {
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title a,
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .page-title a,
+.qqlanding-sites .qqland-post .page-header .entry-title a,
+.qqlanding-sites .qqland-post .page-header .page-title a, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title a,
+.qqlanding-sites.search-no-results .qqland-entry-wrapper .page-title a,
+.qqlanding-sites.search-no-results .page-header .entry-title a,
+.qqlanding-sites.search-no-results .page-header .page-title a {
   color: #fff;
 }
-.qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title a:hover, .qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title a:focus {
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title a:hover, .qqlanding-sites .qqland-post .qqland-entry-wrapper .entry-title a:focus,
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .page-title a:hover,
+.qqlanding-sites .qqland-post .qqland-entry-wrapper .page-title a:focus,
+.qqlanding-sites .qqland-post .page-header .entry-title a:hover,
+.qqlanding-sites .qqland-post .page-header .entry-title a:focus,
+.qqlanding-sites .qqland-post .page-header .page-title a:hover,
+.qqlanding-sites .qqland-post .page-header .page-title a:focus, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title a:hover, .qqlanding-sites.search-no-results .qqland-entry-wrapper .entry-title a:focus,
+.qqlanding-sites.search-no-results .qqland-entry-wrapper .page-title a:hover,
+.qqlanding-sites.search-no-results .qqland-entry-wrapper .page-title a:focus,
+.qqlanding-sites.search-no-results .page-header .entry-title a:hover,
+.qqlanding-sites.search-no-results .page-header .entry-title a:focus,
+.qqlanding-sites.search-no-results .page-header .page-title a:hover,
+.qqlanding-sites.search-no-results .page-header .page-title a:focus {
   cursor: pointer;
   text-decoration: none;
 }
-.qqlanding-sites .qqland-post .entry-meta {
+.qqlanding-sites .qqland-post .entry-meta, .qqlanding-sites.search-no-results .entry-meta {
   margin: 0 0 0.5em;
 }
 .qqlanding-sites .single-entry-title {
@@ -2456,10 +2650,19 @@ a:hover, a:active {
   text-decoration: none;
   text-transform: uppercase;
 }
-.qqlanding-sites .qqlanding-cat a:hover, .qqlanding-sites .qqlanding-cat a:focus, .qqlanding-sites .qqlanding-cat-lists a:hover, .qqlanding-sites .qqlanding-cat-lists a:focus,
+.qqlanding-sites .qqlanding-cat a:hover, .qqlanding-sites .qqlanding-cat a:focus, .qqlanding-sites .qqlanding-cat a:visited, .qqlanding-sites .qqlanding-cat-lists a:hover, .qqlanding-sites .qqlanding-cat-lists a:focus, .qqlanding-sites .qqlanding-cat-lists a:visited,
 .qqlanding-sites .qqlanding-tag a:hover,
-.qqlanding-sites .qqlanding-tag a:focus, .qqlanding-sites .qqlanding-tag-lists a:hover, .qqlanding-sites .qqlanding-tag-lists a:focus {
+.qqlanding-sites .qqlanding-tag a:focus,
+.qqlanding-sites .qqlanding-tag a:visited, .qqlanding-sites .qqlanding-tag-lists a:hover, .qqlanding-sites .qqlanding-tag-lists a:focus, .qqlanding-sites .qqlanding-tag-lists a:visited {
   color: #fff;
+}
+.qqlanding-sites.archive .archive-description {
+  margin-top: 10px;
+}
+.qqlanding-sites.archive .archive-description > p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: 400;
 }
 
 /*--------------------------------------------------------------
@@ -2792,6 +2995,9 @@ object {
   margin-right: auto;
 }
 .wp-caption .wp-caption-text {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-style: italic;
   margin: 0.8075em 0;
 }
 
