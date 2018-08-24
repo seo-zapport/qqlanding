@@ -2,6 +2,7 @@
 /**
  * ACF Style Editor
  */
+
  //Appearance Settings
 if(have_rows('slider_appearance_group', 'option')) :
 	the_row();
@@ -12,72 +13,44 @@ endif;
 //Fonts Settings
 if(have_rows('slider_fonts', 'option')) :
 	the_row();
-
 	$slidefontfam = qqlanding_fontfam(get_sub_field('slider_font_family'));
 	$sliderfontsize =  get_sub_field('slider_font_size');
 	$sliderfontstyle =  get_sub_field('slider_font_style');
 	$sliderfontweight =  get_sub_field('slider_font_weight');
-
 endif;
 ?>
+
 /* ================================= */
 /* =========== Slider ============== */
 /* ================================= */ 
+
 #banner {
 	font-family: <?php echo $slidefontfam; ?>;
 	font-size: <?php echo $sliderfontsize; ?>px;
 	font-style: <?php echo $sliderfontstyle; ?>;
 	font-weight: <?php echo $sliderfontweight; ?>;
 	width: 100%;
-	height: <?php echo $slide_height; ?>px; 
+	height: 100%; 
 	margin-bottom:2em;
 } 
 
-<?php if(get_field('slider_layout','option') == 'static'): ?>
+@media screen and (min-width: 768px) {
+ #banner {
+	height: <?php echo $slide_height; ?>px;
+ }
+}
+<?php if(get_field('slider_layout','option') == 'static'): 
 
-<?php 
- if( have_rows('slider_item_r', 'option') ): the_row();
-
- 	if(get_field('slider_bg_attr', 'option') == "bg-image") :
- 			$background = get_sub_field('slide_image');
- 			$background = "url('".$background['url']."')";
- 	else:
- 			$background = get_sub_field('slide_color');
- 	endif;
-
- 	if(get_sub_field('slide_repeat_bg_img') == "Yes"):
- 		$repeat = "repeat";
- 	else:
- 		$repeat = "no-repeat";
- 	endif;	
-
- 	if(get_sub_field('slide_scroll_with_page') == "Yes"):
- 		$scroll = "background-attachment: fixed;";
- 	else:
- 		$scroll = "";
- 	endif;	
-
- 	 if(get_sub_field('slide_presets') =='fill-screen'):
- 	 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:no-repeat;";
- 	 elseif(get_sub_field('slide_presets') =='fit-to-screen'):
- 	 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:".$repeat.";";	
- 	 elseif(get_sub_field('slide_presets') =='repeat'):
- 	 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:no-repeat;".$scroll;
- 	 elseif(get_sub_field('slide_presets') =='custom'):
- 	 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:".$repeat.";".$scroll;
- 	 else:
- 		$presets = "";
- 	 endif;
- 	
+ 	if( have_rows('slider_item_r', 'option') ): the_row();
+	 	$background = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
+	  	$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'));
 ?>
-
 #banner-static {
 	background: <?php echo $background;?>;
 	color: #fff;
 	width: 100%;
-	height: <?php echo $slide_height; ?>px;
-	<?php //echo $presets; ?>
-
+	height: auto;
+	<?php echo $presets; ?>
 }
 
 .banner-static-content {
@@ -86,52 +59,20 @@ endif;
 	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; }?>	
 	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
 }
+<?php endif; //end slider item
+ elseif(get_field('slider_layout','option') == 'slider'): 
 
-<?php endif; ?>
-
-#banner-slider {
-	width: 100%;
-	height: <?php echo $slide_height; ?>px;
-
-}
-
-<?php elseif(get_field('slider_layout','option') == 'slider'): ?>
-<?php 
 	$count = "0";
 	if(have_rows('slider_item_r', 'option')):
 		while(have_rows('slider_item_r', 'option')) : the_row();
- 			if(get_field('slider_bg_attr', 'option') == "bg-image") :
- 					$background = get_sub_field('slide_image');
- 					$background = "url('".$background['url']."')";
- 			else:
- 					$background = get_sub_field('slide_color');
- 			endif;
-
- 			if(get_sub_field('slide_repeat_bg_img') == "Yes"):
- 				$repeat = "repeat";
- 			else:
- 				$repeat = "no-repeat";
- 			endif;	
-
- 			if(get_sub_field('slide_scroll_with_page') == "Yes"):
- 				$scroll = "background-attachment: fixed;background-size: cover;";
- 			else:
- 				$scroll = "background-attachment: scroll;";
- 			endif;	
-
- 			 if(get_sub_field('slide_presets') =='fill-screen'):
- 			 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:no-repeat;";
- 			 elseif(get_sub_field('slide_presets') =='fit-to-screen'):
- 			 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:".$repeat.";";	
- 			 elseif(get_sub_field('slide_presets') =='repeat'):
- 			 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:no-repeat;".$scroll;
- 			 elseif(get_sub_field('slide_presets') =='custom'):
- 			 	$presets = "background-position:".get_sub_field('slide_image_position')."; background-repeat:".$repeat.";".$scroll;
- 			 else:
- 				$presets = "";
- 			 endif;
+ 			$background = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
+ 			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'));
 
 ?>
+#banner-slider {
+	width: 100%;
+	height: auto;
+}
 .view-<?php echo $count; ?> {
 	background : <?php echo $background; ?>;
 	height: <?php echo $slide_height; ?>px;	
@@ -140,7 +81,7 @@ endif;
 .caro-slide-<?php echo $count; ?> {
 	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 40%;"; } ?>	
 	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; }?>	
-	<?php if(get_sub_field('content_settings')['slider_content_position'] == 'right' ){echo "left: 50%;"; }?>	
+	<?php //if(get_sub_field('content_settings')['slider_content_position'] == 'right' ){echo "left: 50%;"; }?>	
 	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
 	top: 20px;
 	bottom: 0px;
@@ -148,16 +89,13 @@ endif;
 <?php 
 		$count++;
 		endwhile;	
-	endif;
-endif;
-
+	endif; //end slider item 
+endif; //end slider layout condition
 ?>
-
 .carousel-item .view img{
 	width: 100%;
 	height: <?php echo $slide_height; ?>px;	
 }
-
 <?php 
 if ( have_rows( 'th_fonts', 'option' ) ) :
 	while ( have_rows( 'th_fonts', 'option' ) ) : the_row();

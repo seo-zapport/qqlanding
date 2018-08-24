@@ -83,3 +83,50 @@ function qqlanding_fontfam( $font ){
 
 return $font;
 }
+
+function qqlanding_preset_acf($repeat, $scroll, $screen, $position){
+
+	if($repeat == "Yes"):
+		$repeat_preset = "repeat";
+	else:
+		$repeat_preset = "no-repeat";
+	endif;	
+
+	if($scroll == "Yes"):
+		$scroll_preset = "background-attachment: fixed;background-size: cover;";
+	else:
+		$scroll_preset = "background-attachment: scroll;";
+	endif;	
+
+	 if($screen =='fill-screen'):
+	 	$presets = "background-position:".$position."; background-repeat:no-repeat;";
+	 elseif($screen =='fit-to-screen'):
+	 	$presets = "background-position:".$position."; background-repeat:".$repeat_preset.";";	
+	 elseif($screen =='repeat'):
+	 	$presets = "background-position:".$position."; background-repeat:no-repeat;".$scroll_preset;
+	 elseif($screen =='custom'):
+	 	$presets = "background-position:".$position."; background-repeat:".$repeat_preset.";".$scroll_preset;
+	 else:
+		$presets = "";
+	 endif;
+
+	 return $presets;
+}
+
+function qqlanding_sliding_bg($slider_attrib, $slide_img, $slide_color){
+
+	if($slider_attrib == "bg-image") :
+			
+		if($slide_img){
+			$background = $slide_img;
+			$background = "url('".$background['url']."')";
+		}else{
+			$background = $slide_color;
+		}
+
+	else:
+			$background = $slide_color;
+	endif;
+
+	return $background;
+}

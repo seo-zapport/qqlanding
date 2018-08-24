@@ -62,12 +62,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 						while ( have_rows( 'slider_item_r', 'option' ) ) : the_row(); 
 						$background = get_sub_field('slide_image');	
 				?>
-		        <div class="carousel-item<?php if($count == '0'){echo ' active';}else{echo '';} ?>">
-		            <div class="view-<?php echo $count; ?>"></div>
+		        <div class="carousel-item<?php if($count == '0'){echo ' active';}else{echo '';} ?> view-<?php echo $count; ?>">
+		            <!-- <div class="view-<?php //echo $count; ?>"></div> -->
 		            <div class="carousel-caption caro-slide-<?php echo $count; ?>">
 		                <h3 class="h3-responsive"><?php the_sub_field('slider_title'); ?></h3>
 					    <p><?php the_sub_field('slider_content'); ?></p>    	
-						<button>EnterSite</button>
+						
+						
+
+						<a href="<?php echo get_sub_field('enter_site_button')['btn_link'] ?>" rel="nofollow" target="_blank"><img class="img-responsive enter-site" src="<?php echo get_sub_field('enter_site_button')['btn_image']['url'] ?>" alt="ENTER SITE" title="ENTER SITE"></a> 
+
+
 		            </div>
 		        </div>
 				<?php 
