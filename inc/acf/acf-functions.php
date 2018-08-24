@@ -84,7 +84,7 @@ function qqlanding_fontfam( $font ){
 return $font;
 }
 
-function qqlanding_preset_acf($repeat, $scroll, $screen, $position){
+function qqlanding_preset_acf($repeat, $scroll, $screen, $position, $image_size){
 
 	if($repeat == "Yes"):
 		$repeat_preset = "repeat";
@@ -99,15 +99,15 @@ function qqlanding_preset_acf($repeat, $scroll, $screen, $position){
 	endif;	
 
 	 if($screen =='fill-screen'):
-	 	$presets = "background-position:".$position."; background-repeat:no-repeat;";
+	 	$presets = "background-size: cover;background-position:".$position."; background-repeat:no-repeat;background-attachment: fixed;";
 	 elseif($screen =='fit-to-screen'):
-	 	$presets = "background-position:".$position."; background-repeat:".$repeat_preset.";";	
+	 	$presets = "background-size: contain;background-position:".$position."; background-repeat:".$repeat_preset.";background-attachment: fixed;";	
 	 elseif($screen =='repeat'):
-	 	$presets = "background-position:".$position."; background-repeat:no-repeat;".$scroll_preset;
+	 	$presets = "background-size: auto;background-position:".$position."; background-repeat:repeat;".$scroll_preset;
 	 elseif($screen =='custom'):
-	 	$presets = "background-position:".$position."; background-repeat:".$repeat_preset.";".$scroll_preset;
+	 	$presets = "background-size:".$image_size.";background-position:".$position."; background-repeat:".$repeat_preset.";".$scroll_preset;
 	 else:
-		$presets = "background-position:center center; background-repeat:no-repeat;";
+		$presets = "background-position: left top; background-repeat: repeat;background-size: auto;background-attachment: scroll;";
 	 endif;
 
 	 return $presets;
