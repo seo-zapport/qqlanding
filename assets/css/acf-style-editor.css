@@ -18,18 +18,53 @@
 	height: 420px;
  }
 }
-#banner-static {
-	background: url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-banner.jpg');
-	color: #fff;
+#banner-slider {
 	width: 100%;
 	height: auto;
-	}
-
-.banner-static-content {
-	margin: 2em 0;
-	width: 100%;	
+}
+.view-0 {
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-banner.jpg');
+	height: 420px;	
+	background-position:center center; background-repeat:no-repeat;}
+.caro-slide-0 {
+		
 	float:left;	
+		
 	text-align:left;	
+	top: 20px;
+	bottom: 0px;
+}
+#banner-slider {
+	width: 100%;
+	height: auto;
+}
+.view-1 {
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
+	height: 420px;	
+	background-position:center center; background-repeat:no-repeat;}
+.caro-slide-1 {
+		
+	float:left;	
+		
+	text-align:left;	
+	top: 20px;
+	bottom: 0px;
+}
+#banner-slider {
+	width: 100%;
+	height: auto;
+}
+.view-2 {
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/08/e-background-2.jpg');
+	height: 420px;	
+	background-position:center center; background-repeat:no-repeat;}
+.caro-slide-2 {
+		
+	float:left;	
+		
+	text-align:left;	
+	top: 20px;
+	bottom: 0px;
 }
 .carousel-item .view img{
 	width: 100%;

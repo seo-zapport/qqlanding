@@ -28,3 +28,8 @@ if ( jQuery('body').hasClass('qqland-affix') ) {
     toggleAffix(ele, wrapper, jQuery(window));
   }); 
 }
+
+
+jQuery('#carousel').carousel({
+    interval: 5000
+})

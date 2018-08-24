@@ -53,6 +53,12 @@ endif;
 	<?php echo $presets; ?>
 }
 
+@media screen and (max-width: 767px) {
+ #banner-static {
+	background-size: cover;
+ }
+}
+
 .banner-static-content {
 	margin: 2em 0;
 	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 50%;"; }else{ echo "width: 100%;";  } ?>	
@@ -79,8 +85,12 @@ endif;
 	<?php echo $presets; ?>
 }
 .caro-slide-<?php echo $count; ?> {
-	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 40%;"; } ?>	
-	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; }?>	
+	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ 
+		echo "width: 40%;"; 
+	} ?>	
+	<?php if(get_sub_field('content_settings')['slider_content_position'] == 'right' || get_sub_field('content_settings')['slider_content_position'] == 'left' ){
+		echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; 
+	}?>	
 	<?php //if(get_sub_field('content_settings')['slider_content_position'] == 'right' ){echo "left: 50%;"; }?>	
 	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
 	top: 20px;

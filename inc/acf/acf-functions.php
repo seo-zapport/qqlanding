@@ -107,7 +107,7 @@ function qqlanding_preset_acf($repeat, $scroll, $screen, $position){
 	 elseif($screen =='custom'):
 	 	$presets = "background-position:".$position."; background-repeat:".$repeat_preset.";".$scroll_preset;
 	 else:
-		$presets = "";
+		$presets = "background-position:center center; background-repeat:no-repeat;";
 	 endif;
 
 	 return $presets;
@@ -116,17 +116,15 @@ function qqlanding_preset_acf($repeat, $scroll, $screen, $position){
 function qqlanding_sliding_bg($slider_attrib, $slide_img, $slide_color){
 
 	if($slider_attrib == "bg-image") :
-			
 		if($slide_img){
 			$background = $slide_img;
 			$background = "url('".$background['url']."')";
 		}else{
 			$background = $slide_color;
 		}
-
 	else:
 			$background = $slide_color;
 	endif;
-
+	
 	return $background;
 }
