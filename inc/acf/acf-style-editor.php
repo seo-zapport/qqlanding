@@ -49,12 +49,13 @@ endif;
 	background: <?php echo $background;?>;
 	color: #fff;
 	width: 100%;
-	height: auto;
+	height: <?php echo $slide_height; ?>px;
 	<?php echo $presets; ?>
 }
 
 @media screen and (max-width: 767px) {
  #banner-static {
+ 	height: auto;	
 	background-size: cover;
  }
 }
