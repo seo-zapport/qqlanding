@@ -17,6 +17,11 @@ function qqlanding_customizer_register( $wp_customize ){
 	$wp_customize->get_setting( 'blogdescription' )->transport 			= 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport 		= 'postMessage';
 	$wp_customize->remove_control('display_header_text');	// Remove the default site title & tag.
+	$wp_customize->get_section( 'colors' )->title =  'Site Colors';
+	$wp_customize->get_section( 'colors' )->panel =  'qqLanding_style_options';
+	$wp_customize->get_section( 'background_image' )->panel 	= 'qqLanding_style_options';
+	$wp_customize->get_section( 'header_image' )->panel 	= 'qqLanding_header_options';
+	$wp_customize->get_section( 'header_image' )->priority 	= 3;
 
  	// Load custom controls.
 	require_once( trailingslashit( get_template_directory() ) . 'inc/customizer/customizer_controls.php' );
@@ -80,6 +85,68 @@ function qqlanding_customizer_register( $wp_customize ){
 				)
 			);
 
+
+	/**
+	 * # Site Style
+	 *-------------------------------------*/
+	$wp_customize->add_panel( 'qqLanding_style_options',
+		array(
+			'priority' 		=> 22,
+			'title'			=> esc_html__( 'Site Styling', 'qqLanding' ),
+			'description' 	=> esc_html__( 'Use this section to setup / edit your site design.', 'qqLanding' )
+		)
+	);
+
+		$wp_customize->add_section( 'qqLanding_custom_style',
+			array(
+				'priority' => 4,
+				'title'			=> esc_html__( 'Site Styling', 'qqLanding' ),
+				'description' 	=> esc_html__( 'Use this section to setup the colors of your site.', 'qqLanding' ),
+				'panel'			=> 'qqLanding_style_options'			
+			)
+		);
+
+			//Primary Colors Settings
+			$wp_customize->add_setting( 'qqLanding_wrap_color',
+				array(
+					'default'			=> '#f7f8f9',
+					'type'				=> 'theme_mod',
+					'capability'		=> 'edit_theme_options',
+					'sanitize_callback'	=> 'qqLanding_sanitize_hex_color'
+				)
+			);
+
+			//Primary Colors Control
+			$wp_customize->add_control( 
+				new WP_Customize_Color_Control( $wp_customize, 'qqLanding_wrap_color',
+					array(
+						'label'			=> __( 'Theme Wrap Color', 'qqLanding' ),
+						'section'		=> 'colors',
+						'setting'		=> 'qqLanding_wrap_color'
+					)
+				)
+			);
+
+			//Theme Text Colors Settings
+			$wp_customize->add_setting( 'qqLanding_theme_text_color',
+				array(
+					'default'			=> '#222',
+					'type'				=> 'theme_mod',
+					'capability'		=> 'edit_theme_options',
+					'sanitize_callback'	=> 'qqLanding_sanitize_hex_color'
+				)
+			);
+
+			//Theme Text Colors Control
+			$wp_customize->add_control( 
+				new WP_Customize_Color_Control( $wp_customize, 'qqLanding_theme_text_color',
+					array(
+						'label'			=> __( 'Theme Primary Color', 'qqLanding' ),
+						'section'		=> 'colors',
+						'setting'		=> 'qqLanding_theme_text_color'
+					)
+				)
+			);
 
 	/**
 	 * # General Settings

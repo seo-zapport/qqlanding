@@ -118,3 +118,79 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 			font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
 	<?php endwhile;
 endif;
+
+$theme_color = get_field( 'th_color_scheme','option' ); //theme color
+
+/**
+ * #Theme Color
+ *---------------------*/
+if ( have_rows('tcc','option') ) :
+
+	while( have_rows('tcc','option') ) : the_row();
+		$link = get_sub_field('tcc_lc');
+		$link_hover = get_sub_field('tcc_lhc');
+		$title_color = get_sub_field('tcc_tc');
+		$title_bg = get_sub_field('tcc_tbgc');
+		$title_tbgch = get_sub_field('tcc_tbgch');
+		$title_bottom = get_sub_field('tcc_tbc');
+		$meta_color = get_sub_field('tcc_meta_color');
+		$meta_bg = get_sub_field('tcc_meta_bg_color');
+		$meta_bg_hover = get_sub_field('tcc_meta_bg_hc');
+	?>
+	.qqlanding-sites.qqland-custom a{color: <?php echo $link; ?>;}
+	.qqlanding-sites.qqland-custom a:hover,.qqlanding-sites.qqland-custom a:focus,a:active{color: <?php echo $link_hover; ?>;}
+	.qqlanding-sites.qqland-custom .widget .widget-title-container{border-bottom-color: <?php echo $title_bottom; ?>;}
+	.qqlanding-sites.qqland-custom .widget .widget-title{background-color: <?php echo $title_bg; ?>;}
+
+	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-post .page-header,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-single-post .page-header,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper,.qqlanding-sites.qqland-custom.search-no-results .page-header{border-bottom-color: <?php echo $title_bottom; ?>;}
+
+	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .page-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .page-title{background-color: <?php echo $title_bg; ?>; color: <?php echo $title_color; ?>;}
+
+	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title:hover{background-color: <?php echo $title_tbgch; ?>;}
+
+	.qqlanding-sites.qqland-custom .qqlanding-cat a,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a,.qqlanding-sites.qqland-custom .qqlanding-tag a,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a{
+		color:<?php echo $meta_color; ?>;}
+
+	.qqlanding-sites.qqland-custom .qqlanding-cat a,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a,.qqlanding-sites.qqland-custom .qqlanding-tag a,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a{
+		background-color:<?php echo $meta_bg; ?>;}
+
+	.qqlanding-sites.qqland-custom .qqlanding-cat a:hover,.qqlanding-sites.qqland-custom .qqlanding-cat a:focus,.qqlanding-sites.qqland-custom .qqlanding-cat a:visited,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:hover,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:focus,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:visited,.qqlanding-sites.qqland-custom .qqlanding-tag a:hover,.qqlanding-sites.qqland-custom .qqlanding-tag a:focus,.qqlanding-sites.qqland-custom .qqlanding-tag a:visited,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:hover,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:focus,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:visited{
+		background-color:<?php echo $meta_bg_hover; ?>;}
+	<?php endwhile;
+
+endif;
+
+
+/**
+ * #Menu Color
+ *---------------------*/
+
+if ( have_rows('menu_color','option') ) :
+
+	while( have_rows('menu_color','option') ) : the_row();
+		$wrap = get_sub_field('menu_wrapper_color');
+		$link = get_sub_field('menu_link_color');
+		$link_hover = get_sub_field('menu_lhc');
+		$menu_text = get_sub_field('menu_mtc');
+		$menu_text_hover = get_sub_field('menu_mth');?>
+		
+		.qqlanding-sites.qqland-custom .navbar{
+			background: <?php echo $wrap; ?>;
+		}
+		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link{
+			background-color: <?php echo $link; ?>;
+			color: <?php echo $menu_text; ?>;
+		}
+		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link:hover,
+		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link:focus{
+			background-color: <?php echo $link_hover; ?>;
+			color: <?php echo $menu_text_hover; ?>;
+		}
+		.qqlanding-sites.qqland-custom #site-navigation .dropdown-menu{
+			background-color: <?php echo $link; ?>;
+		}
+
+	<?php endwhile;
+
+endif;
+ 

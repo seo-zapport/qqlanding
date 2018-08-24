@@ -168,7 +168,12 @@ require get_template_directory() . '/inc/customizer/sanitizer.php';
 require get_template_directory() . '/inc/customizer/customizer.php';
 
 /**
- * Customizer additions.
+ * Customizer custom styles.
+ */
+require get_template_directory() . '/inc/customizer/customizer_style.php';
+
+/**
+ * ACF Functions.
  */
 require get_template_directory() . '/inc/acf/acf-functions.php';
 
