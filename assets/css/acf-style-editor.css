@@ -4,13 +4,8 @@
 /* ================================= */ 
 
 #banner {
-<<<<<<< HEAD
 	font-family: notosans-regular,notosans-italic,notosans-bold;
 	font-size: 16px;
-=======
-	font-family: notosans-regular;
-	font-size: 14px;
->>>>>>> 2501e192f5374eabc50c2f4c2ce6d1785518c4ab
 	font-style: normal;
 	font-weight: 500;
 	width: 100%;
@@ -23,126 +18,20 @@
 	height: 420px;
  }
 }
-#banner-slider {
+#banner-static {
+	background: url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-banner.jpg');
+	color: #fff;
 	width: 100%;
 	height: auto;
-}
-.view-0 {
-	background : url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-banner.jpg');
-	height: 420px;	
-<<<<<<< HEAD
 	}
-.caro-slide-0 {
-		
+
+.banner-static-content {
+	margin: 2em 0;
+	width: 100%;	
 	float:left;	
-		
 	text-align:left;	
-=======
-	background-position:left top; background-repeat:repeat;background-attachment: fixed;background-size: cover;}
-.caro-slide-0 {
-		
-	<br />
-<b>Notice</b>:  Array to string conversion in <b>C:\xampp\htdocs\www.sandbox.awakenTheme.com\wp-content\themes\qqlanding\inc\acf\acf-style-editor.php</b> on line <b>142</b><br />
-float:Array;	
-		
-	text-align:center;	
->>>>>>> 2501e192f5374eabc50c2f4c2ce6d1785518c4ab
-	top: 20px;
-	bottom: 0px;
-}
-#banner-slider {
-	width: 100%;
-	height: auto;
-}
-.view-1 {
-<<<<<<< HEAD
-	background : url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
-	height: 420px;	
-	}
-.caro-slide-1 {
-		
-	float:left;	
-		
-	text-align:left;	
-	top: 20px;
-	bottom: 0px;
-}
-#banner-slider {
-	width: 100%;
-	height: auto;
-}
-.view-2 {
-	background : url('http://www.qqlocal.com/wp-content/uploads/2017/08/e-background-2.jpg');
-	height: 420px;	
-	}
-.caro-slide-2 {
-		
-	float:right;	
-		
-	text-align:left;	
-=======
-	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2011/07/dsc09114.jpg');
-	height: 420px;	
-	background-position:center top; background-repeat:no-repeat;background-attachment: scroll;}
-.caro-slide-1 {
-		
-	<br />
-<b>Notice</b>:  Array to string conversion in <b>C:\xampp\htdocs\www.sandbox.awakenTheme.com\wp-content\themes\qqlanding\inc\acf\acf-style-editor.php</b> on line <b>142</b><br />
-float:Array;	
-		
-	text-align:center;	
->>>>>>> 2501e192f5374eabc50c2f4c2ce6d1785518c4ab
-	top: 20px;
-	bottom: 0px;
 }
 .carousel-item .view img{
 	width: 100%;
 	height: 420px;	
 }
-<<<<<<< HEAD
-=======
-
-		body.qqlanding-sites{
-					font-size: 14px; font-style: normal; font-weight: 500; }	
-				.page-content,.entry-content,.entry-summary,.comment-content{
-					font-size: 16px; font-style: normal; font-weight: 500; }	
-				.genpost-entry-meta,.single-entry-meta,.genpost-entry-footer{
-					font-size: 12px; font-style: normal; font-weight: 500; }	
-		.qqlanding-sites.qqland-custom a{color: #24bee5;}
-	.qqlanding-sites.qqland-custom a:hover,.qqlanding-sites.qqland-custom a:focus,a:active{color: #2d89c6;}
-	.qqlanding-sites.qqland-custom .widget .widget-title-container{border-bottom-color: #81d742;}
-	.qqlanding-sites.qqland-custom .widget .widget-title{background-color: #81d742;}
-
-	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-post .page-header,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-single-post .page-header,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper,.qqlanding-sites.qqland-custom.search-no-results .page-header{border-bottom-color: #81d742;}
-
-	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .page-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .page-title{background-color: #81d742; color: #ffffff;}
-
-	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title:hover{background-color: #666666;}
-
-	.qqlanding-sites.qqland-custom .qqlanding-cat a,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a,.qqlanding-sites.qqland-custom .qqlanding-tag a,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a{
-		color:#ffffff;}
-
-	.qqlanding-sites.qqland-custom .qqlanding-cat a,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a,.qqlanding-sites.qqland-custom .qqlanding-tag a,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a{
-		background-color:#dd9933;}
-
-	.qqlanding-sites.qqland-custom .qqlanding-cat a:hover,.qqlanding-sites.qqland-custom .qqlanding-cat a:focus,.qqlanding-sites.qqland-custom .qqlanding-cat a:visited,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:hover,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:focus,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:visited,.qqlanding-sites.qqland-custom .qqlanding-tag a:hover,.qqlanding-sites.qqland-custom .qqlanding-tag a:focus,.qqlanding-sites.qqland-custom .qqlanding-tag a:visited,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:hover,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:focus,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:visited{
-		background-color:#1e73be;}
-			
-		.qqlanding-sites.qqland-custom .navbar{
-			background: #dd9933;
-		}
-		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link{
-			background-color: #dd9933;
-			color: #ffffff;
-		}
-		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link:hover,
-		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link:focus{
-			background-color: #eeee22;
-			color: #ffffff;
-		}
-		.qqlanding-sites.qqland-custom #site-navigation .dropdown-menu{
-			background-color: #dd9933;
-		}
-
-	
->>>>>>> 2501e192f5374eabc50c2f4c2ce6d1785518c4ab

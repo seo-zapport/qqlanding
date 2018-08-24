@@ -18,8 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							the_row(); ?>
 						<h3><?php the_sub_field('slider_title'); ?></h3>
 					    <p><?php the_sub_field('slider_content'); ?></p>    	
-
-						<button>EnterSite</button>
+					    <a href="<?php echo get_sub_field('enter_site_button')['btn_link'] ?>" rel="nofollow" target="_blank"><img class="img-responsive enter-site" src="<?php echo get_sub_field('enter_site_button')['btn_image']['url'] ?>" alt="ENTER SITE" title="ENTER SITE"></a> 
 					<?php endif; ?>
 				</div>
 		</div>
@@ -67,13 +66,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		            <div class="carousel-caption caro-slide-<?php echo $count; ?>">
 		                <h3 class="h3-responsive"><?php the_sub_field('slider_title'); ?></h3>
 					    <p><?php the_sub_field('slider_content'); ?></p>    	
-						
-						
-
 						<a href="<?php echo get_sub_field('enter_site_button')['btn_link'] ?>" rel="nofollow" target="_blank"><img class="img-responsive enter-site" src="<?php echo get_sub_field('enter_site_button')['btn_image']['url'] ?>" alt="ENTER SITE" title="ENTER SITE"></a> 
-
-
 		            </div>
+		            
 		        </div>
 				<?php 
 						$count++;
