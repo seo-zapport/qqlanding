@@ -68,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					    <p><?php the_sub_field('slider_content'); ?></p>    	
 						<a href="<?php echo get_sub_field('enter_site_button')['btn_link'] ?>" rel="nofollow" target="_blank"><img class="img-responsive enter-site" src="<?php echo get_sub_field('enter_site_button')['btn_image']['url'] ?>" alt="ENTER SITE" title="ENTER SITE"></a> 
 		            </div>
-		            
+
 		        </div>
 				<?php 
 						$count++;
@@ -100,26 +100,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 <?php 
 	}//end of if statement of slider layout
-?>
-
-<?php 
-	// if(have_rows('slider_fonts', 'option')) :
-	// 	the_row();
-		
-	// 	$sliderfont =  array();
-	// 	$countfontfam = count( get_sub_field('slider_font_family') );
-	// 	$countfont = get_sub_field('slider_font_family');
-
-	// 	$x = '0';
-	// 	while( $x < $countfontfam){
-	// 		$sliderfont[] = $countfont[$x];
-	// 		$x++;	
-	// 	}
-	// 	$slide = join(',', $sliderfont);
-	// 	echo $slide;	
-
-
-	// endif;
 ?>
 </section>
 
