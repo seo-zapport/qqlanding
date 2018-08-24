@@ -3,6 +3,24 @@
 		.container{
 			max-width: 1240px;
 		}
+		&.qqlayout-default{
+			#site-navigation{
+				#primary-menu{
+					max-width: 1240px;
+					margin:0 auto;
+				}
+			}	
+		}
+	}
+}
+ @media (min-width: 960px){
+	.qqlanding-sites{
+		#site-navigation{
+			#primary-menu{
+				max-width: 960px;
+				margin:0 auto;
+			}
+		}
 	}
 }
 @media (max-width: 960px){

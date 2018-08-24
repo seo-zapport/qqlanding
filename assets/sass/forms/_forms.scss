@@ -12,6 +12,12 @@
 				}
 			}
 		}
+		input[type="submit"]{
+			background-color:$qq288_cerulean;
+			&:hover{
+				background-color:$qq288_default;
+			}
+		}
 	}
 	&.qqland-qq188{ 
 		.search-form{ 
@@ -20,6 +26,12 @@
 				&:hover{
 					background-color:$qq188_gulf_blue;
 				}
+			}
+		}
+		input[type="submit"]{
+			background-color:$qq188_default;
+			&:hover{
+				background-color:$qq188_gulf_blue;
 			}
 		}
 	}
@@ -32,6 +44,12 @@
 				}
 			}
 		}
+		input[type="submit"]{
+			background-color:$qq101_default;
+			&:hover{
+				background-color:$qq101_celtic;
+			}
+		}
 	}
 	&.qqland-qq1x2{ 
 		.search-form{ 
@@ -40,6 +58,12 @@
 				&:hover{
 					background-color:$qq1x2_blue_ribbon;
 				}
+			}
+		}
+		input[type="submit"]{
+			background-color:$qq1x2_default;
+			&:hover{
+				background-color:$qq1x2_blue_ribbon;
 			}
 		}
 	}
@@ -52,6 +76,12 @@
 				}
 			}
 		}
+		input[type="submit"]{
+			background-color:$qq724_default;
+			&:hover{
+				background-color:$color__fd;
+			}
+		}
 	}
 	&.qqland-qqfortuna{ 
 		.search-form{ 
@@ -60,6 +90,12 @@
 				&:hover{
 					background-color: $color__fd;
 				}
+			}
+		}
+		input[type="submit"]{
+			background-color:$qqfortuna_mojo;
+			&:hover{
+				background-color:$color__fd;
 			}
 		}
 	}
@@ -72,6 +108,12 @@
 				} 
 			} 
 		} 
+		input[type="submit"]{
+			background-color:$qq801_congress_blue;
+			&:hover{
+				background-color:$qq801_regal_blue;
+			}
+		}
 	}
 	&.qqland-qq882{ 
 		.search-form{ 
@@ -82,6 +124,12 @@
 				} 
 			} 
 		} 
+		input[type="submit"]{
+			background-color:$qq882_purple_heart;
+			&:hover{
+				background-color:$qq882_razzmatazz;
+			}
+		}
 	}
 	&.qqland-qq808{ 
 		.search-form{ 
@@ -92,6 +140,12 @@
 				} 
 			} 
 		} 
+		input[type="submit"]{
+			background-color:$qq808_brown_bramble;
+			&:hover{
+				background-color:$qq808_di_serria;
+			}
+		}
 	}
 	&.qqland-qq828{ 
 		.search-form{ 
@@ -102,7 +156,18 @@
 				} 
 			} 
 		} 
+		input[type="submit"]{
+			background-color:$qq828_default;
+			&:hover{
+				background-color:$qq828_fire;
+			}
+		}
+	}	
+	input[type="submit"]{
+		color:$color__white;
+		padding: 12px 10px;
 	}
+	
 }
 
 .search-form{
