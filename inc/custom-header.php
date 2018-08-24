@@ -153,9 +153,9 @@ function qqlanding_header_set(){
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
-			<?php if( $template == 'default' ) : ?>
+			<?php /*if( $template == 'default' ) : ?>
 			<div class="container">
-			<?php endif;?>
+			<?php endif;*/?>
 				<?php
 				wp_nav_menu( array(
 					'theme_location'	=> 'primary',
@@ -167,9 +167,9 @@ function qqlanding_header_set(){
 					'walker'			=> new wp_navwalker()
 				) );
 				?>
-			<?php if( $template == 'default' ) : ?>
+			<?php /*if( $template == 'default' ) : ?>
 			</div>
-			<?php endif;?>
+			<?php endif;*/?>
 		<?php if( $template == 'bare' || $template == 'overlay' ) : ?>
 		</div>
 		<?php endif;?>

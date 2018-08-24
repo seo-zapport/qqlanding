@@ -816,10 +816,22 @@ textarea {
 .qqlanding-sites.qqland-qq288 .search-form .search-submit:hover {
   background-color: #02849c;
 }
+.qqlanding-sites.qqland-qq288 input[type="submit"] {
+  background-color: #10aec7;
+}
+.qqlanding-sites.qqland-qq288 input[type="submit"]:hover {
+  background-color: #02849c;
+}
 .qqlanding-sites.qqland-qq188 .search-form .search-submit {
   background-color: #0153ff;
 }
 .qqlanding-sites.qqland-qq188 .search-form .search-submit:hover {
+  background-color: #061C55;
+}
+.qqlanding-sites.qqland-qq188 input[type="submit"] {
+  background-color: #0153ff;
+}
+.qqlanding-sites.qqland-qq188 input[type="submit"]:hover {
   background-color: #061C55;
 }
 .qqlanding-sites.qqland-qq101 .search-form .search-submit {
@@ -828,10 +840,22 @@ textarea {
 .qqlanding-sites.qqland-qq101 .search-form .search-submit:hover {
   background-color: #153317;
 }
+.qqlanding-sites.qqland-qq101 input[type="submit"] {
+  background-color: #01740F;
+}
+.qqlanding-sites.qqland-qq101 input[type="submit"]:hover {
+  background-color: #153317;
+}
 .qqlanding-sites.qqland-qq1x2 .search-form .search-submit {
   background-color: #1f1f1f;
 }
 .qqlanding-sites.qqland-qq1x2 .search-form .search-submit:hover {
+  background-color: #015fe7;
+}
+.qqlanding-sites.qqland-qq1x2 input[type="submit"] {
+  background-color: #1f1f1f;
+}
+.qqlanding-sites.qqland-qq1x2 input[type="submit"]:hover {
   background-color: #015fe7;
 }
 .qqlanding-sites.qqland-qq724 .search-form .search-submit {
@@ -840,10 +864,22 @@ textarea {
 .qqlanding-sites.qqland-qq724 .search-form .search-submit:hover {
   background-color: #fdc153;
 }
+.qqlanding-sites.qqland-qq724 input[type="submit"] {
+  background-color: #476f54;
+}
+.qqlanding-sites.qqland-qq724 input[type="submit"]:hover {
+  background-color: #fdc153;
+}
 .qqlanding-sites.qqland-qqfortuna .search-form .search-submit {
   background-color: #c74547;
 }
 .qqlanding-sites.qqland-qqfortuna .search-form .search-submit:hover {
+  background-color: #fdc153;
+}
+.qqlanding-sites.qqland-qqfortuna input[type="submit"] {
+  background-color: #c74547;
+}
+.qqlanding-sites.qqland-qqfortuna input[type="submit"]:hover {
   background-color: #fdc153;
 }
 .qqlanding-sites.qqland-qq801 .search-form .search-submit {
@@ -852,10 +888,22 @@ textarea {
 .qqlanding-sites.qqland-qq801 .search-form .search-submit:hover {
   background-color: #013878;
 }
+.qqlanding-sites.qqland-qq801 input[type="submit"] {
+  background-color: #005395;
+}
+.qqlanding-sites.qqland-qq801 input[type="submit"]:hover {
+  background-color: #013878;
+}
 .qqlanding-sites.qqland-qq882 .search-form .search-submit {
   background-color: #8e21ba;
 }
 .qqlanding-sites.qqland-qq882 .search-form .search-submit:hover {
+  background-color: #db026b;
+}
+.qqlanding-sites.qqland-qq882 input[type="submit"] {
+  background-color: #8e21ba;
+}
+.qqlanding-sites.qqland-qq882 input[type="submit"]:hover {
   background-color: #db026b;
 }
 .qqlanding-sites.qqland-qq808 .search-form .search-submit {
@@ -864,11 +912,27 @@ textarea {
 .qqlanding-sites.qqland-qq808 .search-form .search-submit:hover {
   background-color: #da954a;
 }
+.qqlanding-sites.qqland-qq808 input[type="submit"] {
+  background-color: #542604;
+}
+.qqlanding-sites.qqland-qq808 input[type="submit"]:hover {
+  background-color: #da954a;
+}
 .qqlanding-sites.qqland-qq828 .search-form .search-submit {
   background-color: #ec4801;
 }
 .qqlanding-sites.qqland-qq828 .search-form .search-submit:hover {
   background-color: #a63201;
+}
+.qqlanding-sites.qqland-qq828 input[type="submit"] {
+  background-color: #ec4801;
+}
+.qqlanding-sites.qqland-qq828 input[type="submit"]:hover {
+  background-color: #a63201;
+}
+.qqlanding-sites input[type="submit"] {
+  color: #fff;
+  padding: 12px 10px;
 }
 
 .search-form {
@@ -3274,6 +3338,16 @@ object {
 @media (min-width: 1200px) {
   .qqlanding-sites .container {
     max-width: 1240px;
+  }
+  .qqlanding-sites.qqlayout-default #site-navigation #primary-menu {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 960px) {
+  .qqlanding-sites #site-navigation #primary-menu {
+    max-width: 960px;
+    margin: 0 auto;
   }
 }
 @media (max-width: 960px) {

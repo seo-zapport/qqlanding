@@ -15,6 +15,19 @@
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer"> 
 		<div class="container">
+			<div class="site-socker py-3">
+				<div class="row">
+					<div class="col-md-4">
+						<?php if ( is_active_sidebar( 'left-footer-sidebar' ) ) dynamic_sidebar( 'left-footer-sidebar' ); ?>
+					</div>
+					<div class="col-md-4">
+						<?php if ( is_active_sidebar( 'middle-footer-sidebar' ) ) dynamic_sidebar( 'middle-footer-sidebar' ); ?>
+					</div>
+					<div class="col-md-4">
+						<?php if ( is_active_sidebar( 'right-footer-sidebar' ) ) dynamic_sidebar( 'right-footer-sidebar' ); ?>
+					</div>
+				</div>
+			</div>
 			<div class="site-info">
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'qqlanding' ) ); ?>">
 					<?php
