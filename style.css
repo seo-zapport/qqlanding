@@ -2563,10 +2563,13 @@ a:hover, a:active {
   font-size: 1.025rem;
   color: #fff;
 }
-.qqlanding-sites .qqlanding-default {
+.qqlanding-sites.qqlayout-default {
   /* .site-top-info{
   	margin-bottom:10px;
   } */
+}
+.qqlanding-sites.qqlayout-default .site-header {
+  margin-bottom: 0;
 }
 .qqlanding-sites.qqlayout-overlay.qqland-affix .site-header.qqlanding-overlay {
   height: 140px;
@@ -2615,6 +2618,10 @@ a:hover, a:active {
 .qqlanding-sites #site-navigation .navbar-nav .dropdown-menu .nav-link {
   font-size: 14px;
   font-size: 0.875rem;
+}
+.qqlanding-sites .site-content {
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 .qqlanding-sites .site-footer {
   background: #222222;
