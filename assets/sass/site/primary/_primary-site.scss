@@ -1,4 +1,5 @@
 .qqlanding-sites{
+	margin:0;
 	 //* No Affix
 	&.qqland-qq288{ .navbar{background:$qq288_default} }
 	&.qqland-qq188{ .navbar{background:$qq188_default} }
@@ -138,6 +139,24 @@
 				background-color: $qq288_default;
 				&:hover,&:focus,&:visited{
 					background-color: $qq288_blue_stone;
+				}
+			}
+		}
+		//Page: 404
+		&.error404{
+			.error-404{
+				.page-header{
+					.page-title{
+						color:$qq288_default;
+						text-shadow: -2px 0px 0px $color__white, -4px 0px 0px $qq288_default;
+					}
+				}
+				.page-sub-title{
+					color: $qq288_default;
+					text-shadow: -10px 0px 0px $color__white, -18px 0px 0px $qq288_blue_stone;
+				}
+				.page-content{
+					color:$color__7f;
 				}
 			}
 		}
@@ -612,6 +631,24 @@
 				}
 			}
 		}
+		//Page: 404
+		&.error404{
+			.error-404{
+				.page-header{
+					.page-title{
+						color:$qqfortuna_mojo;
+						text-shadow: -2px 0px 0px $color__white, -4px 0px 0px $qqfortuna_temptress;
+					}
+				}
+				.page-sub-title{
+					color: $qqfortuna_mojo;
+					text-shadow: -10px 0px 0px $color__white, -18px 0px 0px $qqfortuna_temptress;
+				}
+				.page-content{
+					color:$color__7f;
+				}
+			}
+		}
 	}
 	&.qqland-qq801{
 		.site-top-info{
@@ -809,6 +846,24 @@
 				}
 			}
 		}
+		//Page: 404
+		&.error404{
+			.error-404{
+				.page-header{
+					.page-title{
+						color:$qq882_purple_heart;
+						text-shadow: -2px 0px 0px $color__white, -4px 0px 0px $qq882_dark;
+					}
+				}
+				.page-sub-title{
+					color: $qq882_purple_heart;
+					text-shadow: -10px 0px 0px $color__white, -18px 0px 0px $qq882_dark;
+				}
+				.page-content{
+					color:$color__7f;
+				}
+			}
+		}
 	}
 	&.qqland-qq808{
 		.site-top-info{
@@ -896,6 +951,24 @@
 				background-color: $qq808_brown_bramble;
 				&:hover,&:focus,&:visited{
 					background-color: $qq808_default;
+				}
+			}
+		}
+		//Page: 404
+		&.error404{
+			.error-404{
+				.page-header{
+					.page-title{
+						color:$qq808_di_serria;
+						text-shadow: -2px 0px 0px $color__white, -4px 0px 0px $qq808_brown_bramble;
+					}
+				}
+				.page-sub-title{
+					color: $qq808_di_serria;
+					text-shadow: -10px 0px 0px $color__white, -18px 0px 0px $qq808_brown_bramble;
+				}
+				.page-content{
+					color:$color__7f;
 				}
 			}
 		}

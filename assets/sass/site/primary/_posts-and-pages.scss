@@ -321,4 +321,39 @@
 			}
 		}
 	}
+
+/**
+ * Page: 404
+ */
+.error-404{
+	.center-blocks{
+		display:block;
+		margin: 3em auto 6em;
+	}
+	.page-header{
+		.page-title{
+			border:none;
+			color:$color__7f;
+			@include font-size(4);
+			outline:none;
+			text-shadow: -2px 0px 0px $color__white, -4px 0px 0px $color__b5;
+		}
+		.page-sub-title{
+			border:none;
+			color: $color__b5;
+			@include font-size(16);
+			line-height: 1.2;
+			outline:none;
+			margin:0;
+			text-shadow: -10px 0px 0px $color__white, -18px 0px 0px $color__7f;
+		}
+	}
+	.page-content{
+		margin: 3em auto 6em;
+		p{
+			color:$color__7f;
+			font-style:italic;
+		}
+	}
+}
 }

@@ -1761,6 +1761,9 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Primary Sites
 --------------------------------------------------------------*/
+.qqlanding-sites {
+  margin: 0;
+}
 .qqlanding-sites.qqland-qq288 .navbar {
   background: #02849c;
 }
@@ -1907,6 +1910,17 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq288 .qqlanding-tag a:focus,
 .qqlanding-sites.qqland-qq288 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq288 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq288 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq288 .qqlanding-tag-lists a:visited {
   background-color: #005c6b;
+}
+.qqlanding-sites.qqland-qq288.error404 .error-404 .page-header .page-title {
+  color: #02849c;
+  text-shadow: -2px 0px 0px #fff, -4px 0px 0px #02849c;
+}
+.qqlanding-sites.qqland-qq288.error404 .error-404 .page-sub-title {
+  color: #02849c;
+  text-shadow: -10px 0px 0px #fff, -18px 0px 0px #005c6b;
+}
+.qqlanding-sites.qqland-qq288.error404 .error-404 .page-content {
+  color: #7f7f7f;
 }
 .qqlanding-sites.qqland-qq188 .site-top-info {
   background-color: #eaeaea;
@@ -2255,6 +2269,17 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qqfortuna .qqlanding-tag a:visited, .qqlanding-sites.qqland-qqfortuna .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qqfortuna .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qqfortuna .qqlanding-tag-lists a:visited {
   background-color: #c74547;
 }
+.qqlanding-sites.qqland-qqfortuna.error404 .error-404 .page-header .page-title {
+  color: #c74547;
+  text-shadow: -2px 0px 0px #fff, -4px 0px 0px #2e0002;
+}
+.qqlanding-sites.qqland-qqfortuna.error404 .error-404 .page-sub-title {
+  color: #c74547;
+  text-shadow: -10px 0px 0px #fff, -18px 0px 0px #2e0002;
+}
+.qqlanding-sites.qqland-qqfortuna.error404 .error-404 .page-content {
+  color: #7f7f7f;
+}
 .qqlanding-sites.qqland-qq801 .site-top-info {
   background-color: #013878;
   border-bottom-color: #7f7f7f;
@@ -2398,6 +2423,17 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq882 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq882 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq882 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq882 .qqlanding-tag-lists a:visited {
   background-color: #db026b;
 }
+.qqlanding-sites.qqland-qq882.error404 .error-404 .page-header .page-title {
+  color: #8e21ba;
+  text-shadow: -2px 0px 0px #fff, -4px 0px 0px #1a0725;
+}
+.qqlanding-sites.qqland-qq882.error404 .error-404 .page-sub-title {
+  color: #8e21ba;
+  text-shadow: -10px 0px 0px #fff, -18px 0px 0px #1a0725;
+}
+.qqlanding-sites.qqland-qq882.error404 .error-404 .page-content {
+  color: #7f7f7f;
+}
 .qqlanding-sites.qqland-qq808 .site-top-info {
   background-color: #542604;
   border-bottom-color: #da954a;
@@ -2464,6 +2500,17 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq808 .qqlanding-tag a:focus,
 .qqlanding-sites.qqland-qq808 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq808 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq808 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq808 .qqlanding-tag-lists a:visited {
   background-color: #874c00;
+}
+.qqlanding-sites.qqland-qq808.error404 .error-404 .page-header .page-title {
+  color: #da954a;
+  text-shadow: -2px 0px 0px #fff, -4px 0px 0px #542604;
+}
+.qqlanding-sites.qqland-qq808.error404 .error-404 .page-sub-title {
+  color: #da954a;
+  text-shadow: -10px 0px 0px #fff, -18px 0px 0px #542604;
+}
+.qqlanding-sites.qqland-qq808.error404 .error-404 .page-content {
+  color: #7f7f7f;
 }
 .qqlanding-sites.qqland-qq828 .site-top-info {
   background-color: #a63201;
@@ -2551,6 +2598,9 @@ a:hover, a:active {
   line-height: 1.5;
   /* Normal Post */
   /* Archive */
+  /**
+   * Page: 404
+   */
 }
 .qqlanding-sites .site-top-info {
   border-bottom: 1px solid transparent;
@@ -2938,6 +2988,35 @@ a:hover, a:active {
   font-size: 13px;
   font-size: 0.8125rem;
   font-weight: 400;
+}
+.qqlanding-sites .error-404 .center-blocks {
+  display: block;
+  margin: 3em auto 6em;
+}
+.qqlanding-sites .error-404 .page-header .page-title {
+  border: none;
+  color: #7f7f7f;
+  font-size: 64px;
+  font-size: 4rem;
+  outline: none;
+  text-shadow: -2px 0px 0px #fff, -4px 0px 0px #b5b5b5;
+}
+.qqlanding-sites .error-404 .page-header .page-sub-title {
+  border: none;
+  color: #b5b5b5;
+  font-size: 256px;
+  font-size: 16rem;
+  line-height: 1.2;
+  outline: none;
+  margin: 0;
+  text-shadow: -10px 0px 0px #fff, -18px 0px 0px #7f7f7f;
+}
+.qqlanding-sites .error-404 .page-content {
+  margin: 3em auto 6em;
+}
+.qqlanding-sites .error-404 .page-content p {
+  color: #7f7f7f;
+  font-style: italic;
 }
 
 /*--------------------------------------------------------------
