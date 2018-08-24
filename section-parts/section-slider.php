@@ -94,7 +94,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				endif; ?>
 		    </div>
 		    <!--/.Slides-->
-		    <!--Controls-->
+		    <!--.Controls-->
 			<?php
 				if(get_field('slider_appearance_group','option')) : 
 					if(get_sub_field('slider_arrows') == "Yes"):  
