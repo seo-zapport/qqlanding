@@ -128,3 +128,7 @@ function qqlanding_sliding_bg($slider_attrib, $slide_img, $slide_color){
 	
 	return $background;
 }
+
+/**
+ * Providers
+ *---------------------*/

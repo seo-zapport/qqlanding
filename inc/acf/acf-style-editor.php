@@ -203,5 +203,43 @@ if ( have_rows('menu_color','option') ) :
 
 	<?php endwhile;
 
-endif;
- 
+endif; 
+
+/**
+ * #Providers
+ *---------------------*/
+$pvs_layout = get_field( 'pvs_layout', 'option' );
+$theme_color = get_field( 'layout', 'option' ); // General Setting
+$pvs_bg_color = get_field( 'pvs_bg_color', 'option' ); // BG color for featured post
+if ( have_rows( 'pvs_settings', 'option' ) ) :
+	while ( have_rows( 'pvs_settings', 'option' ) ) : the_row();
+		$pvs_layout = get_sub_field( 'pvs_icons_colors', 'option' );
+		$pvs_bg_color = get_sub_field( 'pvs_bg_color', 'option' );
+		$pvs_border = get_sub_field( 'pvs_border_color', 'option' );
+
+		switch ( $pvs_layout ) {
+		case 'white':
+			$nth_class = 'default';
+			$bg_class = 'w';
+			break;
+		case 'colored':
+			$nth_class = 'category';
+			$bg_class = 'g';
+			break;
+		default:
+			$nth_class = 'default';
+			$bg_class = 'g';
+			break;
+		}?>
+
+		#Fproviders{background-color: <?php echo $pvs_bg_color; ?> !important;}
+		.provider-group[class*='-category']{<?php if ( $pvs_border ): ?>border-color: <?php echo $pvs_border; ?> !important;<?php else: ?>border-color: #7f7f7f;<?php endif; ?>}.provider-group .provider-item > i{ background: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/providers/ico_reco-<?php echo $bg_class; ?>.png') no-repeat; }
+	<?php endwhile;
+endif;?>
+
+/**
+ * Media Query
+ *-------------------------*/
+@media (min-width: 768px){<?php /**
+		 * Providers Item
+		 *-------------------------*/if ( have_rows( 'pvs_items', 'option' ) ) : $prov_count = 1; ?><?php while( have_rows('pvs_items', 'option') ): the_row();   // loop through rows (parent repeater) ?>.provider-group[class*='-<?php echo $nth_class; ?>']:nth-child(<?php echo $prov_count; ?>){<?php if ( get_sub_field( 'pvs_pi_max_width' ) ): ?>max-width: <?php the_sub_field( 'pvs_pi_max_width' ); ?>%;<?php else: ?>max-width: inherit;<?php endif; ?>}<?php $prov_count++; endwhile; ?><?php endif; ?>}
