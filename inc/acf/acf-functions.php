@@ -129,6 +129,7 @@ function qqlanding_sliding_bg($slider_attrib, $slide_img, $slide_color){
 	return $background;
 }
 
+<<<<<<< HEAD
 
 function qqlanding_btn_entersite($link, $btn_image, $link_rel, $link_target){
 
@@ -153,3 +154,8 @@ function qqlanding_btn_entersite($link, $btn_image, $link_rel, $link_target){
 	   return $entersite;
 
 } 
+=======
+/**
+ * Providers
+ *---------------------*/
+>>>>>>> 9238aa93241c15020a44273edaa979aeb7d751d7

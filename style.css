@@ -2587,6 +2587,276 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq828 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:visited {
   background-color: #ec4801;
 }
+.qqlanding-sites #Fproviders .provider-group {
+  position: relative;
+  flex-direction: column;
+  flex: auto;
+  display: -ms-flexbox;
+  display: flex;
+  /**
+   * prov-cat
+   *----------*/
+  /**
+   * prov-default
+   *--------------*/
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'], .qqlanding-sites #Fproviders .provider-group[class*='-default'] {
+  border: 1px solid #7f7f7f;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  padding: 8px 10px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-license'] .pagcor {
+  background-position: 0 0;
+  width: 140px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .bet368 {
+  width: 86px;
+  background-position: 3px -302px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .opus {
+  width: 138px;
+  background-position: 5px -2001px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .onework {
+  width: 105px;
+  background-position: 3px -1517px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .gameplay {
+  width: 130px;
+  background-position: 5px -1420px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .gd {
+  background-position: 5px -960px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .gp {
+  background-position: 5px -906px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .allbet {
+  width: 90px;
+  background-position: 5px -1117px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .ag {
+  width: 90px;
+  background-position: 3px -1317px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .og {
+  width: 58px;
+  background-position: 5px -1904px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .royal {
+  width: 90px;
+  background-position: 5px -1218px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .playtech {
+  width: 105px;
+  background-position: 3px -731px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .ebet {
+  width: 105px;
+  background-position: -167px -41px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .spadegaming {
+  width: 150px;
+  background-position: 3px -648px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .ttg {
+  width: 110px;
+  background-position: 5px -2267px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .gameos {
+  width: 120px;
+  background-position: 5px -2189px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .mg {
+  width: 130px;
+  background-position: 3px -2100px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .betsoft {
+  width: 90px;
+  background-position: 3px -2436px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .habanero {
+  width: 120px;
+  background-position: 3px -1611px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .isin4d {
+  background-position: 3px -1706px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .txbet {
+  background-position: 3px -394px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .idn {
+  width: 92px;
+  background-position: 3px -806px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .xo {
+  width: 116px;
+  background-position: 3px -2345px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .txbet4d {
+  width: 100px;
+  background-position: -158px -144px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .txbet6d {
+  width: 100px;
+  background-position: -158px -240px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .lottery {
+  width: 140px;
+  height: 40px;
+  background-position: 3px -160px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .saba {
+  background-position: 3px -209px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .ok368 {
+  background-position: -158px -352px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .pragmaticplay {
+  background-position: -158px -412px;
+  width: 90px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-category'] .thegamingplatform {
+  background-position: -158px -556px;
+  width: 127px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .allbet, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .allbet {
+  width: 90px;
+  background-position: 5px -1066px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .ag, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .ag {
+  width: 90px;
+  background-position: 3px -1268px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .bet368, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .bet368 {
+  width: 86px;
+  background-position: 3px -256px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .betsoft, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .betsoft {
+  width: 90px;
+  background-position: 3px -2392px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .ebet, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .ebet {
+  width: 105px;
+  background-position: -167px 4px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .gameplay, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gameplay {
+  width: 130px;
+  background-position: 5px -1368px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .gd, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gd {
+  background-position: 5px -960px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .gp, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gp {
+  background-position: 5px -855px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .gameos, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gameos {
+  width: 120px;
+  background-position: 5px -2189px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .habanero, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .habanero {
+  width: 120px;
+  background-position: 3px -1562px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .isin4d, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .isin4d {
+  background-position: 3px -1655px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .idn, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .idn {
+  width: 92px;
+  background-position: 3px -770px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .lottery, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .lottery {
+  width: 140px;
+  height: 40px;
+  background-position: 3px -117px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .mg, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .mg {
+  width: 130px;
+  background-position: 3px -2053px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .og, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .og {
+  width: 58px;
+  background-position: 5px -1853px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .ok368, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .ok368 {
+  background-position: -158px -291px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .opus, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .opus {
+  width: 138px;
+  background-position: 5px -1953px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .onework, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .onework {
+  width: 105px;
+  background-position: 3px -1468px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .playtech, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .playtech {
+  width: 105px;
+  background-position: 3px -693px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .pragmaticplay, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .pragmaticplay {
+  background-position: -158px -412px;
+  width: 90px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .royal, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .royal {
+  width: 90px;
+  background-position: 5px -1167px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .saba, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .saba {
+  background-position: 3px -209px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .spadegaming, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .spadegaming {
+  width: 150px;
+  background-position: 3px -600px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .ttg, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .ttg {
+  width: 110px;
+  background-position: 5px -2231px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .txbet, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .txbet {
+  background-position: 3px -351px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .txbet4d, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .txbet4d {
+  width: 100px;
+  background-position: -158px -95px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .txbet6d, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .txbet6d {
+  width: 100px;
+  background-position: -158px -192px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .thegamingplatform, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .thegamingplatform {
+  background-position: -158px -506px;
+  width: 125px;
+}
+.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .xo, .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .xo {
+  width: 116px;
+  background-position: 3px -2306px;
+}
+.qqlanding-sites #Fproviders .provider-title {
+  position: absolute;
+  top: -12px;
+  background: #e6e6e6;
+  color: #222222;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 2px 7px;
+  text-transform: uppercase;
+}
+.qqlanding-sites #Fproviders .provider-item {
+  cursor: pointer;
+  display: inline;
+  float: left;
+  margin-bottom: 3px;
+}
+.qqlanding-sites #Fproviders .provider-item > i {
+  display: block;
+  font-size: 0;
+  height: 38px;
+  width: 80px;
+  text-indent: -999999px;
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -3429,6 +3699,24 @@ object {
     margin: 0 auto;
   }
 }
+@media (min-width: 768px) {
+  .provider-group {
+    margin-right: 10px;
+  }
+  .provider-group:last-child {
+    margin-right: inherit;
+  }
+  .provider-group .provider-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .provider-group:first-child {
+    max-width: 32%;
+  }
+  .provider-group.prov-license {
+    max-width: 100% !important;
+  }
+}
 @media (max-width: 960px) {
   .qqlanding-sites .qqland-grid-2 .qqland-post {
     float: none;
@@ -3445,6 +3733,56 @@ object {
   }
   .qqlanding-sites #site-navigation.navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+}
+@media (max-width: 768px) {
+  .provider-item {
+    float: none;
+    display: inline-block;
+  }
+
+  #fpContentA {
+    min-height: auto;
+  }
+}
+@media (max-width: 640px) {
+  .provider-group .provider-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 996px) and (max-width: 1198px) {
+  .provider-group {
+    max-width: 100% !important;
+    margin-right: 5px;
+  }
+  .provider-group .provider-wrap {
+    display: initial;
+    justify-content: initial;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .provider-group {
+    max-width: 100% !important;
+    margin-right: 5px;
+  }
+  .provider-group .provider-wrap {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .provider-group {
+    max-width: 100% !important;
+    margin-right: 5px;
+  }
+  .provider-group .provider-wrap {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 }
 

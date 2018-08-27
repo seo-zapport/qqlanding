@@ -10,8 +10,9 @@
  */
 
 ?>
-
+		<?php if ( ! is_front_page() && ! is_home() ): ?>
 		</div><!-- .row -->
+		<?php endif; ?>
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer"> 
 		<div class="container">
