@@ -15,35 +15,17 @@
 
 @media screen and (min-width: 768px) {
  #banner {
-<<<<<<< HEAD
-	height: 490px;
+	height: 520px;
  }
 }
 #banner-slider {
 	width: 100%;
 	height: auto;
-=======
-	height: 520px;
- }
-}
-#banner-static {
-	background: url('http://www.sandbox.awakentheme.com/wp-content/uploads/2011/07/dsc09114.jpg');
-	color: #fff;
-	width: 100%;
-	height: 520px;
-	background-size:auto;background-position:center center; background-repeat:no-repeat;background-attachment: scroll;}
-
-@media screen and (max-width: 767px) {
- #banner-static {
- 	height: auto;	
-	background-size: cover;
- }
->>>>>>> 9238aa93241c15020a44273edaa979aeb7d751d7
 }
 .view-0 {
-	background : url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-banner.jpg');
-	height: 490px;	
-	background-size: cover;background-position:center center; background-repeat:no-repeat;background-attachment: fixed;}
+	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2011/07/dsc09114.jpg');
+	height: 520px;	
+	background-size:cover;background-position:center center; background-repeat:no-repeat;background-attachment: scroll;}
 .caro-slide-0 {
 		
 	float:left;	
@@ -57,26 +39,10 @@
 	height: auto;
 }
 .view-1 {
-	background : url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
-	height: 490px;	
-	background-size: cover;background-position:center center; background-repeat:no-repeat;background-attachment: fixed;}
+	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2013/03/image-alignment-1200x4002.jpg');
+	height: 520px;	
+	background-size:cover;background-position:left top; background-repeat:no-repeat;background-attachment: scroll;}
 .caro-slide-1 {
-		
-	float:left;	
-		
-	text-align:left;	
-	top: 20px;
-	bottom: 0px;
-}
-#banner-slider {
-	width: 100%;
-	height: auto;
-}
-.view-2 {
-	background : url('http://www.qqlocal.com/wp-content/uploads/2017/08/e-background-2.jpg');
-	height: 490px;	
-	background-size: cover;background-position:left top; background-repeat:no-repeat;background-attachment: fixed;}
-.caro-slide-2 {
 		
 	float:left;	
 		
@@ -86,11 +52,7 @@
 }
 .carousel-item .view img{
 	width: 100%;
-<<<<<<< HEAD
-	height: 490px;	
-=======
 	height: 520px;	
->>>>>>> 9238aa93241c15020a44273edaa979aeb7d751d7
 }
 		body.qqlanding-sites{
 					font-size: 14px; font-style: normal; font-weight: 500; }	
@@ -139,8 +101,8 @@
 		}
 
 	
-		#Fproviders{background-color: #000000 !important;}
-		.provider-group[class*='-category']{border-color: #272727 !important;}.provider-group .provider-item > i{ background: url('http://www.sandbox.awakentheme.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-w.png') no-repeat; }
+		#Fproviders{background-color: rgba(0,0,0,0) !important;}
+		.provider-group[class*='-category']{border-color: #272727 !important;}.provider-group .provider-item > i{ background: url('http://www.sandbox.awakentheme.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
 	
 /**
  * Media Query
