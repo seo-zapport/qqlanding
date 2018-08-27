@@ -128,3 +128,28 @@ function qqlanding_sliding_bg($slider_attrib, $slide_img, $slide_color){
 	
 	return $background;
 }
+
+
+function qqlanding_btn_entersite($link, $btn_image, $link_rel, $link_target){
+
+	 	if($btn_image){
+	 		$imgbutton = $btn_image;
+	 	}else{
+	 		$imgbutton = get_template_directory_uri().'/assets/images/default/enter.png';
+	 	}
+	 	if($link_rel == 'yes'){
+	 		$linkRel = 'nofollow';
+	 	}else{
+	 		$linkRel = 'follow';
+	 	}
+	 	if($link_target == 'yes'){
+	 		$linktar = '_blank';
+	 	}else{
+	 		$linktar = '_self';
+	 	}
+	
+	   $entersite = '<a href="'.$link.'" rel="'.$linkRel.'" target="'.$linktar.'"><img class="img-responsive enter-site" src="'.$imgbutton.'" alt="ENTER SITE" title="ENTER SITE"></a>';
+	 
+	   return $entersite;
+
+} 

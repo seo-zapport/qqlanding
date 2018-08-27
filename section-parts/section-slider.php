@@ -14,38 +14,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div id="banner-static" >	
 		<div id="banner-static-feature" class="site-content container">
 				<div class="banner-static-content">	
-					<?php if( have_rows('slider_item_r', 'option') ): 
-							the_row(); ?>
+					<?php if( have_rows('slider_item_r', 'option') ): the_row(); ?>
 						<h3><?php the_sub_field('slider_title'); ?></h3>
 					    <p><?php the_sub_field('slider_content'); ?></p>    
-						 
-						 <?php 
-						 	if(get_sub_field('enter_site_button')['btn_image']['url']){
-						 		$imgbutton = get_sub_field('enter_site_button')['btn_image']['url'];
-						 	}else{
-						 		$imgbutton ="";
-						 	}
-						 ?>
-
-					    <a href="<?php echo get_sub_field('enter_site_button')['btn_link']; ?>" rel="nofollow" target="_blank"><img class="img-responsive enter-site" src="<?php echo $imgbutton;?>" alt="ENTER SITE" title="ENTER SITE"></a> 
-					
+						<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
 					<?php endif; ?>
 				</div>
 		</div>
 	</div>
-
 <?php 
 	}elseif(get_field('slider_layout', 'options') == "slider"){		
 ?>
 	<div id="banner-slider">
-
+		<?php 
+			if(have_rows('slider_animations_group','option')) : the_row(); 
+				if(get_sub_field('slider_animation_fade') == "Yes"): 
+					$fade = "carousel-fade";
+				else:
+					$fade = "";
+				endif;
+			endif;
+		?>
+		<?php  if(have_rows('slider_appearance_group','option')) : the_row(); ?>
 		<!--Carousel Wrapper-->
-		<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+		<div id="carousel" class="carousel slide <?php echo $fade; ?>" data-ride="carousel" <?php if(get_sub_field('slider_autoplay') != "Yes"): echo 'data-interval="false"'; endif; ?> >	
+		    <?php if(get_sub_field('slider_nav_dots') == "Yes"): ?>
 		    <!--Indicators-->
-		    <?php
-		    	if(have_rows('slider_appearance_group','option')) : the_row(); 
-		    		if(get_sub_field('slider_nav_dots') == "Yes"):  
-		    ?>
 		    <ol class="carousel-indicators">	
 		       	<?php 
 					$count = "0";
@@ -58,11 +52,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					endwhile;
 				endif; ?>
 		    </ol>
-		    <?php
-		    	 	endif;
+		    <!--/.Indicators-->
+		    <?php 
 		    	endif;  
 		    ?>
-		    <!--/.Indicators-->
 		    <!--Slides-->
 		    <div class="carousel-inner" role="listbox">
 				<?php 
@@ -72,21 +65,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 						$background = get_sub_field('slide_image');	
 				?>
 		        <div class="carousel-item<?php if($count == '0'){echo ' active';}else{echo '';} ?> view-<?php echo $count; ?>">
-		            <!-- <div class="view-<?php //echo $count; ?>"></div> -->
 		            <div class="carousel-caption caro-slide-<?php echo $count; ?>">
 		                <h3 class="h3-responsive"><?php the_sub_field('slider_title'); ?></h3>
 					    <p><?php the_sub_field('slider_content'); ?></p>    	
-						 <?php 
-					 	if(get_sub_field('enter_site_button')['btn_image']['url']){
-					 		$imgbutton = get_sub_field('enter_site_button')['btn_image']['url'];
-					 	}else{
-					 		$imgbutton ="";
-					 	}
-						 ?>
-
-					    <a href="<?php echo get_sub_field('enter_site_button')['btn_link']; ?>" rel="nofollow" target="_blank"><img class="img-responsive enter-site" src="<?php echo $imgbutton;?>" alt="ENTER SITE" title="ENTER SITE"></a> 
+						<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
 		            </div>
-
 		        </div>
 				<?php 
 						$count++;
@@ -94,11 +77,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				endif; ?>
 		    </div>
 		    <!--/.Slides-->
+			<?php if(get_sub_field('slider_arrows') == "Yes"): ?>
 		    <!--.Controls-->
-			<?php
-				if(get_field('slider_appearance_group','option')) : 
-					if(get_sub_field('slider_arrows') == "Yes"):  
-			?>
 		    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 		        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 		        <span class="sr-only">Previous</span>
@@ -107,19 +87,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 		        <span class="carousel-control-next-icon" aria-hidden="true"></span>
 		        <span class="sr-only">Next</span>
 		    </a>
+		    <!--/.Controls-->
 		    <?php
-		    	 	endif;
 		    	endif;  
 		    ?>
-		    <!--/.Controls-->
 		</div>
-		<!--/.Carousel Wrapper-->
-
+		<!--/.Carousel Wrapper-->	
+	   	 <?php endif;  ?>
 	</div>
 <?php 
 	}//end of if statement of slider layout
 ?>
-
-
 </section>
 

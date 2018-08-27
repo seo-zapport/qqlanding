@@ -171,11 +171,9 @@ if ( have_rows('tcc','option') ) :
 
 endif;
 
-
 /**
  * #Menu Color
  *---------------------*/
-
 if ( have_rows('menu_color','option') ) :
 
 	while( have_rows('menu_color','option') ) : the_row();

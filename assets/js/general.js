@@ -29,7 +29,3 @@ if ( jQuery('body').hasClass('qqland-affix') ) {
   }); 
 }
 
-
-jQuery('#carousel').carousel({
-    interval: 5000
-})
