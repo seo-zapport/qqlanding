@@ -4,8 +4,8 @@
 /* ================================= */ 
 
 #banner {
-	font-family: notosans-regular,notosans-italic,notosans-bold;
-	font-size: 16px;
+	font-family: notosans-regular,notosans-bold;
+	font-size: 18px;
 	font-style: normal;
 	font-weight: 500;
 	width: 100%;
@@ -15,33 +15,12 @@
 
 @media screen and (min-width: 768px) {
  #banner {
-<<<<<<< HEAD
-	height: 490px;
-=======
 	height: 520px;
->>>>>>> 3e58577de344665f23aae4a6113a7190b23457a4
  }
 }
 #banner-slider {
 	width: 100%;
 	height: auto;
-=======
-	height: 520px;
- }
-}
-#banner-static {
-	background: url('http://www.sandbox.awakentheme.com/wp-content/uploads/2011/07/dsc09114.jpg');
-	color: #fff;
-	width: 100%;
-	height: 520px;
-	background-size:auto;background-position:center center; background-repeat:no-repeat;background-attachment: scroll;}
-
-@media screen and (max-width: 767px) {
- #banner-static {
- 	height: auto;	
-	background-size: cover;
- }
->>>>>>> 9238aa93241c15020a44273edaa979aeb7d751d7
 }
 .view-0 {
 	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2011/07/dsc09114.jpg');
@@ -73,17 +52,23 @@
 }
 .carousel-item .view img{
 	width: 100%;
-<<<<<<< HEAD
-	height: 490px;	
-=======
 	height: 520px;	
->>>>>>> 3e58577de344665f23aae4a6113a7190b23457a4
 }
+		body.qqlanding-sites{
+					font-size: 14px; font-style: normal; font-weight: 500; }	
+				.page-content,.entry-content,.entry-summary,.comment-content{
+					font-size: 16px; font-style: normal; font-weight: 500; }	
+				.genpost-entry-meta,.single-entry-meta,.genpost-entry-footer{
+					font-size: 12px; font-style: normal; font-weight: 500; }	
+		.qqlanding-sites.qqland-custom a{color: #ffffff;}
+	.qqlanding-sites.qqland-custom a:hover,.qqlanding-sites.qqland-custom a:focus,a:active{color: #eeee22;}
+	.qqlanding-sites.qqland-custom .widget .widget-title-container{border-bottom-color: #1e73be;}
+	.qqlanding-sites.qqland-custom .widget .widget-title{background-color: #81d742;}
 
-<<<<<<< HEAD
-		#Fproviders{background-color: transparent !important;}
-		.provider-group[class*='-category']{border-color: #ffffff !important;}.provider-group .provider-item > i{ background: url('http://www.qqlocal.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
-=======
+	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-post .page-header,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-single-post .page-header,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper,.qqlanding-sites.qqland-custom.search-no-results .page-header{border-bottom-color: #1e73be;}
+
+	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .page-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .page-title{background-color: #81d742; color: #0a0a0a;}
+
 	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title:hover{background-color: #eeee22;}
 
 	.qqlanding-sites.qqland-custom .qqlanding-cat a,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a,.qqlanding-sites.qqland-custom .qqlanding-tag a,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a{
@@ -118,13 +103,8 @@
 	
 		#Fproviders{background-color: rgba(0,0,0,0) !important;}
 		.provider-group[class*='-category']{border-color: #272727 !important;}.provider-group .provider-item > i{ background: url('http://www.sandbox.awakentheme.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
->>>>>>> 3e58577de344665f23aae4a6113a7190b23457a4
 	
 /**
  * Media Query
  *-------------------------*/
-<<<<<<< HEAD
-@media (min-width: 768px){.provider-group[class*='-default']:nth-child(1){max-width: 30%;}.provider-group[class*='-default']:nth-child(2){max-width: 45%;}}
-=======
-@media (min-width: 768px){.provider-group[class*='-category']:nth-child(1){max-width: 32%;}.provider-group[class*='-category']:nth-child(2){max-width: inherit;}.provider-group[class*='-category']:nth-child(3){max-width: inherit;}.provider-group[class*='-category']:nth-child(4){max-width: 75%;}.provider-group[class*='-category']:nth-child(5){max-width: 25%;}.provider-group[class*='-category']:nth-child(6){max-width: 25%;}.provider-group[class*='-category']:nth-child(7){max-width: 10%;}}
->>>>>>> 3e58577de344665f23aae4a6113a7190b23457a4
+@media (min-width: 768px){.provider-group[class*='-default']:nth-child(1){max-width: 32%;}.provider-group[class*='-default']:nth-child(2){max-width: inherit;}.provider-group[class*='-default']:nth-child(3){max-width: inherit;}.provider-group[class*='-default']:nth-child(4){max-width: 75%;}.provider-group[class*='-default']:nth-child(5){max-width: 25%;}.provider-group[class*='-default']:nth-child(6){max-width: 25%;}.provider-group[class*='-default']:nth-child(7){max-width: 10%;}}

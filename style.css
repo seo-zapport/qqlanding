@@ -2900,6 +2900,7 @@ a:hover, a:active {
   background-position: 5px -960px;
 }
 .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gp {
+  width: 95px;
   background-position: 5px -855px;
 }
 .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gameos {
@@ -2931,7 +2932,8 @@ a:hover, a:active {
   background-position: 5px -1853px;
 }
 .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .ok368 {
-  background-position: -158px -291px;
+  width: 70px;
+  background-position: -173px -250px;
 }
 .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .opus {
   width: 138px;
@@ -2965,7 +2967,8 @@ a:hover, a:active {
   background-position: 5px -2231px;
 }
 .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .txbet {
-  background-position: 3px -351px;
+  width: 50px;
+  background-position: -3px -395px;
 }
 .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .txbet4d {
   width: 100px;
@@ -2973,7 +2976,7 @@ a:hover, a:active {
 }
 .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .txbet6d {
   width: 100px;
-  background-position: -158px -192px;
+  background-position: -158px -171px;
 }
 .qqlanding-sites #Fproviders .provider-group[class*='-default'].white .thegamingplatform {
   background-position: -158px -457px;

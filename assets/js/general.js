@@ -43,6 +43,7 @@ $owl.owlCarousel({
     loop: true,
     margin: 10,
     autoplay: true,
+    pagination:true,
     autoplayTimeout: 2500,
     responsiveClass:true,
     responsive:{
