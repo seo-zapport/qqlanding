@@ -1,6 +1,4 @@
-<?php
-$pvs_title = get_field( 'pvs_title', 'option' ); // providers custom repeater
-?>
+<?php $pvs_title = get_field( 'pvs_title', 'option' ); // providers custom repeater ?>
 <section id="Fproviders" class="py-3">
 	<div class="container">
 		<h3 class="sec-entry-title"><?php esc_html_e( $pvs_title , 'qqlanding' ) ?></h3> <!--Nhà cung cấp-->

@@ -275,7 +275,12 @@ if ( ! function_exists( 'qqLanding_post_img' )) {
 					$file = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
 					if ( if_file_exists($file) ) :?>
 						<?php
-						the_post_thumbnail('small-featured', array(
+						if ( is_page_template( 'template-page.php' ) ) {
+							$size = 'fp-featured';
+						}else{
+							$size = 'small-featured';
+						}
+						the_post_thumbnail( $size, array(
 								'alt' => the_title_attribute( array(
 									'echo' => false,
 								) ),
@@ -315,7 +320,7 @@ function get_first_image($src = null) {
         // defines a fallback image
         $first_img = $matches[1]; 
         if ( empty( $matches[1][0] ) || is_null( $matches[1][0] ) ):
-            $first_img = get_template_directory_uri() . "/assets/images/default.jpg";
+            $first_img = get_template_directory_uri() . "/assets/images/default/thumbnail-default.png";
         endif;
     else:
         $first_img = $matches[1][0]; 
@@ -331,6 +336,35 @@ function if_file_exists( $image ){
   ));
   $headers = get_headers($image, 1);
   return stristr($headers[0], '200');
+}
+
+//Excerpt for frontpage
+if ( ! function_exists('qqlanding_excerpt_length') ) {
+	function qqlanding_excerpt_length( $length ){
+		$fp_excerpt = get_theme_mod( 'qqlanding_excerpt_lenght', 85 );
+		return $fp_excerpt;
+	}
+	add_filter( 'excerpt_length', 'qqlanding_excerpt_length', 999 );
+}
+
+function qqlanding_excerpt_max_charlength( $length, $allias ){
+	$excerpt = get_the_excerpt(); //Retrieves the post excerpt.
+	$length++;
+
+	if ( mb_strlen( $excerpt ) > $length) :
+		$subs = mb_substr( $excerpt, 0, $length - 5 );
+		$exwords = explode( ' ', $subs );
+		$excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
+		
+		if ( $excut < 0 ) :
+			$excerpt = mb_substr( $subs, 0, $excut );
+		else:
+			$excerpt = $subs;
+		endif;
+		$excerpt .= $allias;
+	endif;
+
+	echo $excerpt;
 }
 
 /**

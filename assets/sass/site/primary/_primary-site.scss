@@ -160,6 +160,12 @@
 				}
 			}
 		}
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qq288_trans;
+			}
+		}
 	}
 	&.qqland-qq188{
 		.site-top-info{
@@ -256,6 +262,12 @@
 				}
 			}
 		}
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qq188_gb_trans;
+			}
+		}
 	}
 	&.qqland-qq101{
 		.site-top-info{
@@ -343,6 +355,13 @@
 				&:hover,&:focus,&:visited{
 					background-color: $qq101_default;
 				}
+			}
+		}
+
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qq101_eh_trans;
 			}
 		}
 	}
@@ -451,6 +470,12 @@
 				}
 			}
 		}
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qq1x2_1f_trans;
+			}
+		}
 	}
 	&.qqland-qq724{
 		.site-top-info{
@@ -539,6 +564,12 @@
 				&:hover,&:focus,&:visited{
 					background-color: $color__fd;
 				}
+			}
+		}
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qq724_trans;
 			}
 		}
 	}
@@ -649,6 +680,13 @@
 				}
 			}
 		}
+
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qqfortuna_trans;
+			}
+		}
 	} 
 	&.qqland-qq801{
 		.site-top-info{
@@ -737,6 +775,12 @@
 				&:hover,&:focus,&:visited{
 					background-color: $qq801_default;
 				}
+			}
+		}
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qq801_trans;
 			}
 		}
 	}
@@ -864,6 +908,12 @@
 				}
 			}
 		}
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qq882_trans;
+			}
+		}
 	}
 	&.qqland-qq808{
 		.site-top-info{
@@ -972,6 +1022,12 @@
 				}
 			}
 		}
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qq808_trans;
+			}
+		}
 	}
 	&.qqland-qq828{
 		.site-top-info{
@@ -1074,9 +1130,16 @@
 				}
 			}
 		}
+		//Page : Front Page
+		.card-overlay{
+			.card-o-btm{
+				background-color: $qq828_trans;
+			}
+		}
 	}
 
 
+	
 	//Page : Front Page
 
 	#Fproviders{
@@ -1138,8 +1201,7 @@
 			 * prov-default
 			 *--------------*/
 			 &[class*='-default']{
-			 	&.gray,
-			 	&.white{
+			 	&.gray{
 					.allbet{width:90px;background-position:5px -1066px;}
 					.ag{width:90px;background-position:3px -1268px;}
 					.bet368{width:86px;background-position:3px -256px;}
@@ -1170,6 +1232,37 @@
 					.thegamingplatform{background-position:-158px -506px;width: 125px;}
 					.xo{width:116px;background-position:3px -2306px;}
 			 	}
+			 	&.white{
+					.allbet{width:90px;background-position:5px -1066px;}
+					.ag{width:90px;background-position:3px -1268px;}
+					.bet368{width:86px;background-position:3px -301px;}
+					.betsoft{width:90px;background-position:3px -2392px;}
+					.ebet{width:98px;background-position:-160px -5px;}
+					.gameplay{width:130px;background-position:5px -1368px;}
+					.gd{background-position:5px -960px;}
+					.gp{background-position:5px -855px;}
+					.gameos{width:120px;background-position:5px -2189px;}
+					.habanero{width:120px;background-position:3px -1562px;}
+					.isin4d{background-position:3px -1655px;}
+					.idn{width:92px;background-position:3px -770px;}
+					.lottery{width:140px;height:40px;background-position:3px -117px;}
+					.mg{width:130px;background-position:3px -2053px;}
+					.og{width:58px;background-position:5px -1853px;}
+					.ok368{background-position:-158px -291px;}
+					.opus{width:138px;background-position:5px -1953px;}
+					.onework{width:105px;background-position:3px -1468px;}
+					.playtech{width:105px;background-position:3px -693px;}
+					.pragmaticplay{background-position:-158px -353px;width: 90px;}
+					.royal{width:90px;background-position:5px -1167px;}
+					.saba{background-position:3px -209px;}
+					.spadegaming{width:150px;background-position:3px -600px;}
+					.ttg{width:110px;background-position:5px -2231px;}
+					.txbet{background-position:3px -351px;}
+					.txbet4d{width:100px;background-position:-158px -95px;}
+					.txbet6d{width:100px;background-position:-158px -192px;}
+					.thegamingplatform{background-position:-158px -457px;width: 125px;}
+					.xo{width:116px;background-position:3px -2306px;}
+			 	}
 			 }
 
 		}
@@ -1196,6 +1289,64 @@
 				width: 80px;
 				text-indent: -999999px;
 			}
+		}
+	}
+
+	#Fpost{
+		.card-overlay{
+			overflow:hidden;
+			color: $color__white;
+			.card-o-btm{
+				bottom:-67px;
+				cursor:pointer;
+				padding: 10px;
+				@include ease-in-out();
+				width:100%;
+			}
+			&:hover{
+				.card-o-btm{
+					bottom: 0;
+				}
+			}
+		}
+		figure{
+			margin: 0;
+		}
+		.owl-carousel{
+			.owl-item{
+				> div {
+				  cursor: pointer;
+				  margin: 6% 8%;
+				  transition: margin 0.4s ease;
+				}
+				&.center{
+					> div{
+					  cursor: auto;
+					  margin: 0;
+					}
+				}
+				&:not(.center){
+					> div {
+						&:hover{
+							opacity: .75;
+						}
+					}
+				}
+			}
+			/* .owl-dots{
+				text-align: center;
+				position: fixed;
+				bottom: 5px;
+				width: 100%;
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				background-color: red;	
+				&.active{
+					background-color: yellow;
+				}
+			} */
 		}
 	}
 }
