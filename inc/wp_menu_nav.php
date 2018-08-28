@@ -89,7 +89,7 @@ if ( ! class_exists( 'wp_navwalker' ) ) {
 				$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
 				$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
-				$output .= $indent . '<li' . $id . $value . $class_names .' itemprop="url">';
+				$output .= $indent . '<li' . $id . $value . $class_names .' itemprop="name">';
 
 				$atts = array();
 				//$atts['title']  = ! empty( $item->title )	? $item->title	: '';
@@ -128,7 +128,7 @@ if ( ! class_exists( 'wp_navwalker' ) ) {
 				if ( ! empty( $item->attr_title ) )
 					$item_output .= '<a'. $attributes .' class="nav-link"><span class="glyphicon ' . esc_attr( $item->attr_title ) . '"></span>&nbsp;';
 				else
-					$item_output .= '<a'. $attributes .' class="nav-link" itemprop="name">';
+					$item_output .= '<a'. $attributes .' class="nav-link" itemprop="url">';
 
 				$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 				$item_output .= '</a>';

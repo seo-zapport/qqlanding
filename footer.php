@@ -14,7 +14,13 @@
 		</div><!-- .row -->
 		<?php endif; ?>
 	</div><!-- #content -->
-	<footer id="colophon" class="site-footer"> 
+	<footer id="footer" class="site-footer" itemscope itemtype="http://schema.org/WPFooter"> 
+		<meta itemprop="name" content="Webpage footer for <?php wp_title('&raquo;', true, 'right'); ?>"/>
+		<meta itemprop="description" content="Information about imprint and data protection"/>
+		<meta itemprop="keywords" content="Imprint, Data Protection, Copyright Data, QR-Code"/>
+		<meta itemprop="copyrightYear" content="2018"/>
+		<meta itemprop="copyrightHolder" content="<?php echo force_relative_url(); ?>"/>
+
 		<div class="container">
 			<div class="site-socker py-3">
 				<div class="row">
