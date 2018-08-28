@@ -45,6 +45,7 @@ if ( ! function_exists( 'qqlanding_setup' ) ) :
 		add_image_size( 'default', 724, 410, true );
 		//add_image_size( 'featured-slider', 752, 440, true );
 		add_image_size( 'featured', 388, 220, true );
+		add_image_size( 'fp-featured', 381, 251, true );
 		add_image_size( 'small-featured', 292, 180, true );
 		add_image_size( 'small-thumb', 120,85, true );
 
@@ -116,7 +117,11 @@ function qqlanding_scripts() {
 
 	wp_enqueue_style( 'qqlanding-acf-style', get_template_directory_uri() . '/assets/css/acf-style-editor.css', 'v1.0.0' );
 
+	wp_enqueue_style( 'qqlanding-owl-carousel', get_template_directory_uri() . '/assets/css/owl.carousel.css', 'v2.3.4' );
+
 	wp_enqueue_style( 'qqlanding-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.js', array('jquery'), 'v2.3.4', true );
 
 	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery'), 'v4.1.1', true );
 

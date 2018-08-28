@@ -14,7 +14,7 @@ get_header();
 			if ( ! has_action( 'qqlanding_page_section_parts' ) ) :
 
 				$value = array(
-					'provider',
+					'provider','post',
 				); //items
 				$sections = apply_filters( 'qqlanding_page_sections_order', $value );
 

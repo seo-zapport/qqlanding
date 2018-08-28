@@ -1922,6 +1922,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq288.error404 .error-404 .page-content {
   color: #7f7f7f;
 }
+.qqlanding-sites.qqland-qq288 .card-overlay .card-o-btm {
+  background-color: rgba(2, 132, 156, 0.78);
+}
 .qqlanding-sites.qqland-qq188 .site-top-info {
   background-color: #eaeaea;
   border-bottom-color: #e6e6e6;
@@ -1990,6 +1993,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq188 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq188 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq188 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq188 .qqlanding-tag-lists a:visited {
   background-color: #061C55;
 }
+.qqlanding-sites.qqland-qq188 .card-overlay .card-o-btm {
+  background-color: rgba(6, 28, 85, 0.78);
+}
 .qqlanding-sites.qqland-qq101 .site-top-info {
   background-color: #023606;
   border-bottom-color: #153317;
@@ -2055,6 +2061,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq101 .qqlanding-tag a:focus,
 .qqlanding-sites.qqland-qq101 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq101 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq101 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq101 .qqlanding-tag-lists a:visited {
   background-color: #01740F;
+}
+.qqlanding-sites.qqland-qq101 .card-overlay .card-o-btm {
+  background-color: rgba(2, 54, 6, 0.78);
 }
 .qqlanding-sites.qqland-qq1x2 .site-top-info {
   background-color: #1f1f1f;
@@ -2135,6 +2144,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq1x2 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq1x2 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq1x2 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq1x2 .qqlanding-tag-lists a:visited {
   background-color: #015fe7;
 }
+.qqlanding-sites.qqland-qq1x2 .card-overlay .card-o-btm {
+  background-color: rgba(31, 31, 31, 0.78);
+}
 .qqlanding-sites.qqland-qq724 .site-top-info {
   background-color: #2f2f2f;
   border-bottom-color: #e6e6e6;
@@ -2201,6 +2213,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq724 .qqlanding-tag a:focus,
 .qqlanding-sites.qqland-qq724 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq724 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq724 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq724 .qqlanding-tag-lists a:visited {
   background-color: #fdc153;
+}
+.qqlanding-sites.qqland-qq724 .card-overlay .card-o-btm {
+  background-color: rgba(71, 111, 84, 0.78);
 }
 .qqlanding-sites.qqland-qqfortuna .site-top-info {
   background-color: #2e0002;
@@ -2280,6 +2295,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qqfortuna.error404 .error-404 .page-content {
   color: #7f7f7f;
 }
+.qqlanding-sites.qqland-qqfortuna .card-overlay .card-o-btm {
+  background-color: rgba(63, 0, 0, 0.78);
+}
 .qqlanding-sites.qqland-qq801 .site-top-info {
   background-color: #013878;
   border-bottom-color: #7f7f7f;
@@ -2346,6 +2364,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq801 .qqlanding-tag a:focus,
 .qqlanding-sites.qqland-qq801 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq801 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq801 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq801 .qqlanding-tag-lists a:visited {
   background-color: #f1392f;
+}
+.qqlanding-sites.qqland-qq801 .card-overlay .card-o-btm {
+  background-color: rgba(241, 57, 47, 0.78);
 }
 .qqlanding-sites.qqland-qq882 .site-top-info {
   background-color: #1a0725;
@@ -2434,6 +2455,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq882.error404 .error-404 .page-content {
   color: #7f7f7f;
 }
+.qqlanding-sites.qqland-qq882 .card-overlay .card-o-btm {
+  background-color: rgba(69, 20, 101, 0.78);
+}
 .qqlanding-sites.qqland-qq808 .site-top-info {
   background-color: #542604;
   border-bottom-color: #da954a;
@@ -2512,6 +2536,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq808.error404 .error-404 .page-content {
   color: #7f7f7f;
 }
+.qqlanding-sites.qqland-qq808 .card-overlay .card-o-btm {
+  background-color: rgba(135, 76, 0, 0.78);
+}
 .qqlanding-sites.qqland-qq828 .site-top-info {
   background-color: #a63201;
   border-bottom-color: #f9e2c2;
@@ -2586,6 +2613,9 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq828 .qqlanding-tag a:focus,
 .qqlanding-sites.qqland-qq828 .qqlanding-tag a:visited, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:hover, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:focus, .qqlanding-sites.qqland-qq828 .qqlanding-tag-lists a:visited {
   background-color: #ec4801;
+}
+.qqlanding-sites.qqland-qq828 .card-overlay .card-o-btm {
+  background-color: rgba(236, 72, 1, 0.78);
 }
 .qqlanding-sites #Fproviders .provider-group {
   position: relative;
@@ -2967,6 +2997,54 @@ a:hover, a:active {
   height: 38px;
   width: 80px;
   text-indent: -999999px;
+}
+.qqlanding-sites #Fpost .card-overlay {
+  overflow: hidden;
+  color: #fff;
+}
+.qqlanding-sites #Fpost .card-overlay .card-o-btm {
+  bottom: -67px;
+  cursor: pointer;
+  padding: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+.qqlanding-sites #Fpost .card-overlay:hover .card-o-btm {
+  bottom: 0;
+}
+.qqlanding-sites #Fpost figure {
+  margin: 0;
+}
+.qqlanding-sites #Fpost .owl-carousel {
+  /* .owl-dots{
+  	text-align: center;
+  	position: fixed;
+  	bottom: 5px;
+  	width: 100%;
+  	-webkit-backface-visibility: hidden;
+  	-moz-backface-visibility: hidden;
+  	-ms-backface-visibility: hidden;
+  	backface-visibility: hidden;
+  	background-color: red;	
+  	&.active{
+  		background-color: yellow;
+  	}
+  } */
+}
+.qqlanding-sites #Fpost .owl-carousel .owl-item > div {
+  cursor: pointer;
+  margin: 6% 8%;
+  transition: margin 0.4s ease;
+}
+.qqlanding-sites #Fpost .owl-carousel .owl-item.center > div {
+  cursor: auto;
+  margin: 0;
+}
+.qqlanding-sites #Fpost .owl-carousel .owl-item:not(.center) > div:hover {
+  opacity: .75;
 }
 
 /*--------------------------------------------------------------

@@ -29,3 +29,38 @@ if ( jQuery('body').hasClass('qqland-affix') ) {
   }); 
 }
 
+
+
+var $owl = jQuery('.owl-carousel');
+
+$owl.children().each( function( index ) {
+  jQuery(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
+});
+
+$owl.owlCarousel({
+    center: true,
+    items: 3,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items: 1,
+            dotsEach: 1,
+        },
+        600:{
+            items:2,
+            dotsEach: 2,
+        },
+        1000:{
+            items: 3,
+            dotsEach: 3,
+        }
+    }
+});
+
+jQuery(document).on('click', '.owl-item>div', function() {
+  $owl.trigger('to.owl.carousel', jQuery(this).data( 'position' ) );
+});
