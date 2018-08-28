@@ -161,7 +161,8 @@
 			}
 		}
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qq288_trans;
 			}
@@ -263,7 +264,8 @@
 			}
 		}
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qq188_gb_trans;
 			}
@@ -359,7 +361,8 @@
 		}
 
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qq101_eh_trans;
 			}
@@ -471,7 +474,8 @@
 			}
 		}
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qq1x2_1f_trans;
 			}
@@ -567,7 +571,8 @@
 			}
 		}
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qq724_trans;
 			}
@@ -682,7 +687,8 @@
 		}
 
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qqfortuna_trans;
 			}
@@ -778,7 +784,8 @@
 			}
 		}
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qq801_trans;
 			}
@@ -909,7 +916,8 @@
 			}
 		}
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qq882_trans;
 			}
@@ -1023,7 +1031,8 @@
 			}
 		}
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qq808_trans;
 			}
@@ -1131,7 +1140,8 @@
 			}
 		}
 		//Page : Front Page
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			.card-o-btm{
 				background-color: $qq828_trans;
 			}
@@ -1293,7 +1303,8 @@
 	}
 
 	#Fpost{
-		.card-overlay{
+		.card-overlay,
+		.slider-item{
 			overflow:hidden;
 			color: $color__white;
 			.card-o-btm{
@@ -1307,6 +1318,15 @@
 				.card-o-btm{
 					bottom: 0;
 				}
+			}
+			.card-title > a,
+			.entry-meta > small{
+				color: $color__white !important;
+			}
+		}
+		.slider-item{
+			.card-o-btm{
+				bottom: 0;
 			}
 		}
 		figure{
