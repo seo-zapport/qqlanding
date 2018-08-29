@@ -13,9 +13,14 @@ get_header();
 			do_action( 'qqlanding_page_before_section_parts' );
 			if ( ! has_action( 'qqlanding_page_section_parts' ) ) :
 
-				$value = array(
-					'provider','post','content',
+				 $value = array(
+					'provider','content-a','post','content',
 				); //items
+
+				if(get_field('fa_show_content') == "Yes" ){
+					array_push($value,"content-b");
+				}	
+
 				$sections = apply_filters( 'qqlanding_page_sections_order', $value );
 
 				foreach ($sections as $section) :

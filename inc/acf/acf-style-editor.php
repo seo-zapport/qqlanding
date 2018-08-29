@@ -107,6 +107,86 @@ endif; //end slider layout condition
 	width: 100%;
 	height: <?php echo $slide_height; ?>px;	
 }
+
+/* ================================= */
+/* =========== Content ============== */
+/* ================================= */ 
+<?php
+	$count = '1';
+
+ 	if( have_rows('content_item', 'option') ): 
+ 		while ( have_rows( 'content_item', 'option') ) : the_row();
+ 		
+ 		if($count == 1){
+ 			$val = "first";
+ 		}else{
+ 			$val = "last";
+ 		}
+ 		$backgroundcf = "";
+		$presetscf = "";
+ 		
+ 		if(get_sub_field('ci_bg', 'option') == "bg-color"){
+		 	$backgroundcf = qqlanding_sliding_bg(get_sub_field('ci_bg', 'option'),get_sub_field('ci_image'),get_sub_field('ci_color'));
+ 		
+ 		}else{
+		 	$backgroundcf = qqlanding_sliding_bg(get_sub_field('ci_bg', 'option'),get_sub_field('ci_image'),get_sub_field('ci_color'));
+		  	$presetscf = qqlanding_preset_acf(get_sub_field('ci_repeat_bg_img'),get_sub_field('ci_scroll_with_page'),get_sub_field('ci_presets'),get_sub_field('ci_image_position'),get_sub_field('ci_image_size'));
+
+ 		}
+
+
+ 		$top = "";
+		$left = "";
+		$right = "";
+		$buttom = ""; 
+	  	if(get_sub_field('images_pos_prop', 'option') == "Yes"){
+	  	
+	  		$position = "position: absolute;";
+			  	if(get_sub_field('fp_img_position')['fp_position_top']){
+				  	 $top = "top: ".get_sub_field('fp_img_position')['fp_position_top']."px;"; 
+			  	} 
+			  	if(get_sub_field('fp_img_position')['fp_position_left']){
+			  		 $left = "left: ".get_sub_field('fp_img_position')['fp_position_left']."px;";  
+			  	}
+			  	if(get_sub_field('fp_img_position')['fp_position_right']){
+			  	 	$right = "right: ".get_sub_field('fp_img_position')['fp_position_right']."px;";  
+			  	}
+			  	if(get_sub_field('fp_img_position')['fp_position_buttom']){
+			  	 	$buttom = "buttom: ".get_sub_field('fp_img_position')['fp_position_buttom']."px;"; 
+			  	}
+	  	}else{
+	  		$position = "";
+	  	}
+	  	
+
+
+?>
+
+.content-<?php echo $val; ?> {
+	
+	background : <?php echo $backgroundcf; ?>;
+	<?php echo @$presetscf; ?>
+
+}
+
+.content-<?php echo $val; ?>-img {
+	<?php echo $position; ?>
+	<?php echo @$top; ?>
+	<?php echo @$left; ?>
+	<?php echo @$right; ?>
+	<?php echo @$buttom; ?>
+
+}
+
+<?php 
+			$count++;
+		endwhile;
+	endif;
+?>	
+
+
+
+
 <?php 
 if ( have_rows( 'th_fonts', 'option' ) ) :
 	while ( have_rows( 'th_fonts', 'option' ) ) : the_row();

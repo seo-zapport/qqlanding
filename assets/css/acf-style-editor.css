@@ -4,8 +4,8 @@
 /* ================================= */ 
 
 #banner {
-	font-family: notosans-regular,notosans-bold;
-	font-size: 18px;
+	font-family: notosans-regular,notosans-italic,notosans-bold;
+	font-size: 16px;
 	font-style: normal;
 	font-weight: 500;
 	width: 100%;
@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 768px) {
  #banner {
-	height: 520px;
+	height: 490px;
  }
 }
 #banner-slider {
@@ -23,9 +23,9 @@
 	height: auto;
 }
 .view-0 {
-	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2011/07/dsc09114.jpg');
-	height: 520px;	
-	background-size:cover;background-position:center center; background-repeat:no-repeat;background-attachment: scroll;}
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/11/mmk-banner.jpg');
+	height: 490px;	
+	background-size: cover;background-position:center center; background-repeat:no-repeat;background-attachment: fixed;}
 .caro-slide-0 {
 		
 	float:left;	
@@ -39,10 +39,26 @@
 	height: auto;
 }
 .view-1 {
-	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2013/03/image-alignment-1200x4002.jpg');
-	height: 520px;	
-	background-size:cover;background-position:left top; background-repeat:no-repeat;background-attachment: scroll;}
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
+	height: 490px;	
+	background-size: cover;background-position:center center; background-repeat:no-repeat;background-attachment: fixed;}
 .caro-slide-1 {
+		
+	float:left;	
+		
+	text-align:left;	
+	top: 20px;
+	bottom: 0px;
+}
+#banner-slider {
+	width: 100%;
+	height: auto;
+}
+.view-2 {
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/08/e-background-2.jpg');
+	height: 490px;	
+	background-size: cover;background-position:left top; background-repeat:no-repeat;background-attachment: fixed;}
+.caro-slide-2 {
 		
 	float:left;	
 		
@@ -52,59 +68,44 @@
 }
 .carousel-item .view img{
 	width: 100%;
-	height: 520px;	
+	height: 490px;	
 }
-		body.qqlanding-sites{
-					font-size: 14px; font-style: normal; font-weight: 500; }	
-				.page-content,.entry-content,.entry-summary,.comment-content{
-					font-size: 16px; font-style: normal; font-weight: 500; }	
-				.genpost-entry-meta,.single-entry-meta,.genpost-entry-footer{
-					font-size: 12px; font-style: normal; font-weight: 500; }	
-		.qqlanding-sites.qqland-custom a{color: #ffffff;}
-	.qqlanding-sites.qqland-custom a:hover,.qqlanding-sites.qqland-custom a:focus,a:active{color: #eeee22;}
-	.qqlanding-sites.qqland-custom .widget .widget-title-container{border-bottom-color: #1e73be;}
-	.qqlanding-sites.qqland-custom .widget .widget-title{background-color: #81d742;}
 
-	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-post .page-header,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-single-post .page-header,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper,.qqlanding-sites.qqland-custom.search-no-results .page-header{border-bottom-color: #1e73be;}
+/* ================================= */
+/* =========== Content ============== */
+/* ================================= */ 
 
-	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .page-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .page-title{background-color: #81d742; color: #0a0a0a;}
+.content-first {
+	
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/09/s-background.jpg');
+	background-position: left top; background-repeat: repeat;background-size: auto;background-attachment: scroll;
+}
 
-	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title:hover{background-color: #eeee22;}
+.content-first-img {
+	position: absolute;	top: -130px;			
+}
 
-	.qqlanding-sites.qqland-custom .qqlanding-cat a,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a,.qqlanding-sites.qqland-custom .qqlanding-tag a,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a{
-		color:#000000;}
 
-	.qqlanding-sites.qqland-custom .qqlanding-cat a,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a,.qqlanding-sites.qqland-custom .qqlanding-tag a,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a{
-		background-color:#81d742;}
+.content-last {
+	
+	background : url('http://www.qqlocal.com/wp-content/uploads/2017/08/e-background-2.jpg');
+	background-size: cover;background-position:center center; background-repeat:no-repeat;background-attachment: fixed;
+}
 
-	.qqlanding-sites.qqland-custom .qqlanding-cat a:hover,.qqlanding-sites.qqland-custom .qqlanding-cat a:focus,.qqlanding-sites.qqland-custom .qqlanding-cat a:visited,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:hover,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:focus,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:visited,.qqlanding-sites.qqland-custom .qqlanding-tag a:hover,.qqlanding-sites.qqland-custom .qqlanding-tag a:focus,.qqlanding-sites.qqland-custom .qqlanding-tag a:visited,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:hover,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:focus,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:visited{
-		background-color:#8224e3;}
-
-	.qqlanding-sites.qqland-custom .search-form .search-submit,.qqlanding-sites.qqland-custom .paging-navigation li a{background-color:#000000;color:#ffffff;}
-	.qqlanding-sites.qqland-custom .search-form .search-submit:hover,.qqlanding-sites.qqland-custom .paging-navigation li a:hover,.qqlanding-sites.qqland-custom .page-numbers .current{background-color:#dd9933;}
-	.qqlanding-sites.qqland-custom .search-form .search-submit:focus,.qqlanding-sites.qqland-custom .paging-navigation li a:focus{background-color:#eeee22;}
-			
-		.qqlanding-sites.qqland-custom .navbar{
-			background: #dd9933;
-		}
-		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link{
-			background-color: #dd9933;
-			color: #ffffff;
-		}
-		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link:hover,
-		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link:focus{
-			background-color: #eeee22;
-			color: #ffffff;
-		}
-		.qqlanding-sites.qqland-custom #site-navigation .dropdown-menu{
-			background-color: #dd9933;
-		}
+.content-last-img {
+					
+}
 
 	
-		#Fproviders{background-color: rgba(0,0,0,0) !important;}
-		.provider-group[class*='-category']{border-color: #272727 !important;}.provider-group .provider-item > i{ background: url('http://www.sandbox.awakentheme.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
+
+
+
+
+
+		#Fproviders{background-color: transparent !important;}
+		.provider-group[class*='-category']{border-color: #ffffff !important;}.provider-group .provider-item > i{ background: url('http://www.qqlocal.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
 	
 /**
  * Media Query
  *-------------------------*/
-@media (min-width: 768px){.provider-group[class*='-default']:nth-child(1){max-width: 32%;}.provider-group[class*='-default']:nth-child(2){max-width: inherit;}.provider-group[class*='-default']:nth-child(3){max-width: inherit;}.provider-group[class*='-default']:nth-child(4){max-width: 75%;}.provider-group[class*='-default']:nth-child(5){max-width: 25%;}.provider-group[class*='-default']:nth-child(6){max-width: 25%;}.provider-group[class*='-default']:nth-child(7){max-width: 10%;}}
+@media (min-width: 768px){.provider-group[class*='-default']:nth-child(1){max-width: 32%;}.provider-group[class*='-default']:nth-child(2){max-width: 68%;}.provider-group[class*='-default']:nth-child(3){max-width: inherit;}.provider-group[class*='-default']:nth-child(4){max-width: 75%;}.provider-group[class*='-default']:nth-child(5){max-width: 25%;}.provider-group[class*='-default']:nth-child(6){max-width: 25%;}.provider-group[class*='-default']:nth-child(7){max-width: 10%;}}
