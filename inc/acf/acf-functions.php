@@ -26,16 +26,10 @@ if ( function_exists( 'acf_add_options_page' ) ) :
 	) ); //Front Page Settings
 	
 	acf_add_options_sub_page( array(
-		'page_title' 	=> __( 'Promo Banners Settings', 'qqlanding' ),
-		'menu_title' 	=> __( 'Promo Banners', 'qqlanding' ),
+		'page_title' 	=> __( 'Banner Ads Settings', 'qqlanding' ),
+		'menu_title' 	=> __( 'Banner Ads', 'qqlanding' ),
 		'parent_slug'	=> 'general-theme-settings',
 	) ); //Promo Banners Settings
-	
-	acf_add_options_sub_page( array(
-		'page_title' 	=> __( '404 Page Settings', 'qqlanding' ),
-		'menu_title' 	=> __( '404 Page', 'qqlanding' ),
-		'parent_slug'	=> 'general-theme-settings',
-	) ); //404 Page Settings
 
 endif;
 
@@ -203,4 +197,49 @@ function qqlanding_btn_entersite($link, $btn_image, $link_rel, $link_target){
  		return $content;
 
  }
+
+
+function floating_banner( $field ){
+	$float_layout = get_sub_field( 'fb__layout', 'option' );
+	if ( have_rows( $field, 'option' ) ): 
+		while( have_rows($field, 'option' ) ) : the_row();
+			$link_alt = get_sub_field( 'fb_link_url' );
+			$img_title = get_sub_field( 'fb__item_title' );
+			$img_link = get_sub_field( 'fb__item_img_url' );
+			$link_target = get_sub_field( 'fb__item_link_target' );
+			$rel_alt = get_sub_field( 'fb__item_xfn' );
+			$bg_color = get_sub_field( 'fb__item_img_bg_color' );
+			$shadow_color = get_sub_field( 'fb__item_img_shadow' );
+
+			$rel_text = '';
+			if ( empty( $link_alt ) ) { $link_alt = esc_url( home_url('/') ); }
+			if ( $link_target === true ) {
+				$target = '_blank';
+			}else{
+				$target = '_self';
+			}
+			if ( $rel_alt ) { $rel_text = 'nofollow'; }
+			if ( $float_layout == 'classic' ) {
+				$link_class = 'qqgroup-item img-responsive';
+			}else{
+				$link_class = 'img-responsive';
+			}
+			
+			$item_link = '<a href="' . do_shortcode("$link_alt") . ' " title="' .  $img_title . '" target="' . esc_attr( $target ) . '" rel="' . esc_attr( $rel_text ) . '">';
+				$item_link .= '<img src="' .  $img_link . '" class="' . $link_class . '" title="' . esc_html( $img_title ) . '" alt="' . esc_html( $img_title ) . '" >';
+			$item_link .= '</a>';
+
+			if ( $float_layout == 'classic' ) {
+				$item = $item_link;
+			}else{
+				$item = '<div class="qqgroup-item" >';
+					$item .= $item_link;
+				$item .= '</div>';
+			}
+			
+			echo $item;
+		endwhile; 
+	endif; 
+}
+
  

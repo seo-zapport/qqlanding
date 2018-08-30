@@ -313,7 +313,38 @@ if ( have_rows( 'pvs_settings', 'option' ) ) :
 		#Fproviders{background-color: <?php echo $pvs_bg_color; ?> !important;}
 		.provider-group[class*='-category']{<?php if ( $pvs_border ): ?>border-color: <?php echo $pvs_border; ?> !important;<?php else: ?>border-color: #7f7f7f;<?php endif; ?>}.provider-group .provider-item > i{ background: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/providers/ico_reco-<?php echo $bg_class; ?>.png') no-repeat; }
 	<?php endwhile;
-endif;?>
+endif;
+
+
+/**
+ * #Floating banner
+ *---------------------*/
+
+if ( have_rows( 'fb_layout_settings' ,'option' ) ) :
+	while( have_rows( 'fb_layout_settings' ,'option' ) ): the_row();
+
+		$layout = get_sub_field( 'fb__layout', 'option' );?>
+		.qqgroup-sidebox,.m-qqgroup-ads{ background-color:<?php echo get_sub_field('fb__item_side_bg_color', 'option'); ?>;}.qqgroup-logo{color:<?php echo get_sub_field('fb__item_side_color', 'option');  ?>;}
+
+
+		<?php if ( have_rows( 'fb__item' ,'option' ) ) : $count  = 1;
+			while( have_rows( 'fb__item' ,'option' ) ): the_row();
+
+				if ($layout === 'flat') {
+					$style = 'background-color:' . esc_attr( get_sub_field( 'fb__item_img_bg_color','option' ) );
+				}else{
+					$style = 'box-shadow:4px 5px 10px ' . esc_attr( get_sub_field( 'fb__item_img_shadow', 'option') );
+				}?>
+				.qqgroup-item:nth-child(<?php echo $count ?>){ <?php echo $style; ?> }
+
+			<?php $count++; endwhile; //end of fb__item
+		endif; //end of fb__item
+
+	endwhile;//end of fb_layout_settings
+endif;//end of fb_layout_settings
+
+?>
+
 
 /**
  * Media Query
