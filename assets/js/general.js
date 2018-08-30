@@ -69,7 +69,7 @@ jQuery(document).on('click', '.owl-item>div', function() {
 });
 
 
-<<<<<<< HEAD
+
 function init_carousel() {
             H = +(jQuery(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
             
@@ -81,21 +81,10 @@ function init_carousel() {
         }
 window.onload = init_carousel;
 init_carousel();
-=======
+
 /**
  * Banner
  *------------------*/
-/* jQuery('.banner-slider').owlCarousel({
-    center: true,
-    items:5,
-    loop:true,
-    margin:10,
-    responsive:{
-        600:{
-            items:4
-        }
-    }
-});*/
 
 var $owl = jQuery('.banner-slider');
 
@@ -171,4 +160,4 @@ jQuery('.m-button-ad').click( function(){
     jQuery('.m-banner-ad').slideToggle('70');
     jQuery('.m-button-ad i').toggleClass('fa-chevron-down fa-chevron-up');
 });
->>>>>>> ec111ad233d69ff03b20d443686b7524788ec1f0
+
