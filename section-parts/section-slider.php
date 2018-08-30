@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div id="banner-static-feature" class="site-content container">
 				<div class="banner-static-content">	
 					<?php if( have_rows('slider_item_r', 'option') ): the_row(); ?>
-						<h3><?php the_sub_field('slider_title'); ?></h3>
-					    <p><?php the_sub_field('slider_content'); ?></p>    
+						<h3 class="h2"><?php the_sub_field('slider_title'); ?></h3>
+					    <?php the_sub_field('slider_content'); ?>    
 						<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
 					<?php endif; ?>
 				</div>
@@ -66,8 +66,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 		        <div class="carousel-item<?php if($count == '0'){echo ' active';}else{echo '';} ?> view-<?php echo $count; ?>">
 		            <div class="carousel-caption caro-slide-<?php echo $count; ?>">
-		                <h3 class="h3-responsive"><?php the_sub_field('slider_title'); ?></h3>
-					    <p><?php the_sub_field('slider_content'); ?></p>    	
+		                <h3 class="h2"><?php the_sub_field('slider_title'); ?></h3>
+					    <?php the_sub_field('slider_content'); ?>  	
 						<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
 		            </div>
 		        </div>

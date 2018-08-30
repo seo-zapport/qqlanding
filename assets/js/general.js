@@ -65,3 +65,16 @@ $owl.owlCarousel({
 jQuery(document).on('click', '.owl-item>div', function() {
   $owl.trigger('to.owl.carousel', jQuery(this).data( 'position' ) );
 });
+
+
+function init_carousel() {
+            H = +(jQuery(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
+            
+            if(H <= 768){
+                jQuery('.carousel-item').css('height', H+200 + 'px');    
+            }
+  
+
+        }
+window.onload = init_carousel;
+init_carousel();

@@ -34,6 +34,12 @@ endif;
 	margin-bottom:2em;
 } 
 
+.enter-site {
+	margin-left : auto;
+	margin-right : auto;
+
+}
+
 @media screen and (min-width: 768px) {
  #banner {
 	height: <?php echo $slide_height; ?>px;
@@ -80,11 +86,20 @@ endif;
 	width: 100%;
 	height: auto;
 }
+
 .view-<?php echo $count; ?> {
 	background : <?php echo $background; ?>;
-	height: <?php echo $slide_height; ?>px;	
 	<?php echo $presets; ?>
+	height: 100%;
+	
 }
+@media (min-width: 992px) {
+	.view-<?php echo $count; ?> {
+		height: <?php echo $slide_height; ?>px;	
+	}	
+}
+
+
 .caro-slide-<?php echo $count; ?> {
 	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ 
 		echo "width: 40%;"; 
@@ -96,6 +111,7 @@ endif;
 	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
 	top: 20px;
 	bottom: 0px;
+	height: 100%;
 }
 <?php 
 		$count++;
@@ -103,10 +119,7 @@ endif;
 	endif; //end slider item 
 endif; //end slider layout condition
 ?>
-.carousel-item .view img{
-	width: 100%;
-	height: <?php echo $slide_height; ?>px;	
-}
+
 
 /* ================================= */
 /* =========== Content ============== */
@@ -138,10 +151,11 @@ endif; //end slider layout condition
  		$top = "";
 		$left = "";
 		$right = "";
-		$buttom = ""; 
+		$bottom = ""; 
 	  	if(get_sub_field('images_pos_prop', 'option') == "Yes"){
 	  	
 	  		$position = "position: absolute;";
+			
 			  	if(get_sub_field('fp_img_position')['fp_position_top']){
 				  	 $top = "top: ".get_sub_field('fp_img_position')['fp_position_top']."px;"; 
 			  	} 
@@ -152,12 +166,16 @@ endif; //end slider layout condition
 			  	 	$right = "right: ".get_sub_field('fp_img_position')['fp_position_right']."px;";  
 			  	}
 			  	if(get_sub_field('fp_img_position')['fp_position_buttom']){
-			  	 	$buttom = "buttom: ".get_sub_field('fp_img_position')['fp_position_buttom']."px;"; 
+			  	 	$bottom = "bottom: ".get_sub_field('fp_img_position')['fp_position_buttom']."px;"; 
 			  	}
 	  	}else{
 	  		$position = "";
 	  	}
 	  	
+	  		$height ="";
+	  if(get_sub_field('fp_app_set')['ca_height']){
+	  		$height = "height : ".get_sub_field('fp_app_set')['ca_height'].';';
+	  }	
 
 
 ?>
@@ -169,12 +187,18 @@ endif; //end slider layout condition
 
 }
 
+@media (min-width: 992px) {
+	.content-<?php echo $val; ?> {
+		<?php echo @$height; ?>
+	}
+}
+
 .content-<?php echo $val; ?>-img {
 	<?php echo $position; ?>
 	<?php echo @$top; ?>
 	<?php echo @$left; ?>
 	<?php echo @$right; ?>
-	<?php echo @$buttom; ?>
+	<?php echo @$bottom; ?>
 
 }
 

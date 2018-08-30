@@ -14,7 +14,7 @@ get_header();
 			if ( ! has_action( 'qqlanding_page_section_parts' ) ) :
 
 				 $value = array(
-					'provider','content-a','post','content',
+					'provider','content-a','post',
 				); //items
 
 				if(get_field('fa_show_content') == "Yes" ){
