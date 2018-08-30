@@ -6,7 +6,7 @@ $card_layout = get_field('fp_ts_cards_layout', 'option'); // Cards Theme
 <section id="Fpost" class="py-3">
 	<div class="container">
 		<h3 class="sec-entry-title"><?php the_field( 'fp_post_title' ); ?></h3>
-		<div class="<?php echo ( $layout == 'static' ) ? 'card-deck' : 'owl-carousel'; ?>">
+		<div class="<?php echo ( $layout == 'static' ) ? 'card-deck' : 'owl-post owl-carousel'; ?>">
 			<?php if ( have_rows( 'fp_post_post' ) ): ?>
 				<?php while( have_rows( 'fp_post_post' ) ) : the_row() ?>
 					<?php

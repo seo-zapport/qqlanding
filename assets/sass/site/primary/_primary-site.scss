@@ -1303,10 +1303,23 @@
 	}
 
 	#Fpost{
+		.card-overlay{
+			color: $color__white;
+			.card-title > a,
+			.entry-meta > small{
+				color: $color__white !important;
+			}
+		}
+		.slider-item{
+			color: $color__7f;
+			.card-title > a,
+			.entry-meta > small{
+				color: $color__7f !important;
+			}
+		}
 		.card-overlay,
 		.slider-item{
 			overflow:hidden;
-			color: $color__white;
 			.card-o-btm{
 				bottom:-67px;
 				cursor:pointer;
@@ -1318,10 +1331,6 @@
 				.card-o-btm{
 					bottom: 0;
 				}
-			}
-			.card-title > a,
-			.entry-meta > small{
-				color: $color__white !important;
 			}
 		}
 		.slider-item{
@@ -1368,5 +1377,144 @@
 				}
 			} */
 		}
+	}
+
+	#qqgroup-wrap{
+		&.qqgroup-float{
+			position: fixed;
+			top:0;
+			z-index: 1031;
+			.btn-float-b{
+				background-color: #fdc153;
+				border-color: transparent;
+				border-radius: 0;
+				outline: none;		
+			}
+			.float-classic,
+			.float-flat{
+				.qqgroup-sidebox{
+					width:45px;
+				}
+			}
+			/** slider-classic ----------------*/
+			.qqgroup-sidebox{
+				cursor:pointer;
+				position:relative;
+				overflow:hidden;
+			}
+			.float-classic{
+				.qqgroup-sidebox{
+					height:260px;
+					>.qqgroup-logo{
+						height:100%;
+						padding:5px 8px;
+						position:relative;
+						text-align:center;
+						h3{
+							@include font-size(1.5);
+							font-weight:700;
+							line-height:1.12em;
+							margin-top:0;
+							margin-bottom:5px;
+							padding-top:3px;
+							text-transform:uppercase;
+							word-break:break-all;
+							word-wrap:break-word;
+						}
+						i{
+							font-weight:700;
+						}
+					}
+				}
+				.qqgroup-img{
+					background-color: rgba(2,95,203,0.6) !important;
+					min-height:450px;
+					padding:7px 10px;
+					width:180px;
+					.qqgroup-item{
+						margin:10px auto;
+						-webkit-box-shadow:4px 5px 10px rgba(89,89,89,.82);
+						-moz-box-shadow:4px 5px 10px rgba(89,89,89,.82);
+						box-shadow:4px 5px 10px rgba(89,89,89,.82);
+					}
+				}
+			}
+
+			/** slider-flat ----------------*/
+			.float-flat{
+				.qqgroup-sidebox{height:100%;}
+				.p_logo{
+					padding: 8px 0;
+					height: 187px;
+					position: relative;
+					vertical-align: middle;
+					display: flex;
+					align-items: center;
+					&:nth-of-type(1){
+						height:170px;
+					}
+					img{
+						display: block;
+						margin-left: auto;
+						margin-right: auto;
+						height: 100%;
+					}
+					
+				}
+				.qqgroup-img{
+					background: 0 0;
+					width: 181px;
+					margin-left: 0;
+					cursor: pointer;
+					padding: 0;
+					>.qqgroup-item{
+						overflow: hidden;
+						padding: 0 1em 0 0;  
+						min-height: 150px;
+						>a>img{padding:8px 0;}
+					}
+				}
+				.boxWrap{margin-left:-178px;}
+				.qq288_box{
+					background-color:red;
+				}
+			}
+			
+		}
+		&.qqgroup-slider{
+			position: relative;
+		}
+	}
+
+	.m-banner{
+		background: rgba(251, 251, 251, 0.7);
+		margin: auto;
+		position: fixed;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 2000;
+		.m-float_classic{
+			bottom:0;
+		}
+		.m-button-ad{
+			min-height:33px;padding:8px 0;position:absolute;bottom:-40px;width:155px;
+			.m-title{color:#fff;display:inline-block;font-weight:600;font-size:18px;margin:0;line-height:1.3}
+			>i{color:#fff;display:inline-block;margin-left:8px;margin-right:10px}
+		}
+		.m-float_classic{
+			.m-button-ad {bottom:initial;top:-40px;text-align:center;width:100%;}
+		} 
+		.m-banner-ad{padding:1em .7em;margin:0}
+		.m-banner-flex{
+			display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;
+			.m-ads{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1 0 0%;-ms-flex:1 0 0%;flex:1 0 0%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
+		}
+		.m-ads-qq288,.m-ads-qq188,.m-ads-qq101,
+		.m-ads-qq1x2,.m-ads-qq724,.m-ads-qqfortuna,.m-ads-801,.m-ads-882,.m-ads-808,.m-ads-828{background:rgba(0,0,0,.7)}
+		.m-ads{position:relative;background-color:#fff;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}
+		.m-banner-flex .m-ads:not(:last-child){margin-right: 3px;}
+		.m-banner-flex .m-ads:not(:first-child){margin-left: 3px;}
 	}
 }

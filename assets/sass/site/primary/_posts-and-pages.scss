@@ -73,6 +73,34 @@
 			}
 		}
 	}
+	&.qqlayout-bare{
+		.site-header{
+			margin-bottom: 0;
+		}
+		#site-navigation{
+			.site-branding{
+				padding:0;
+			}
+			.site-title,
+			.site-description{
+				line-height: 1.2;
+				margin:0;
+			}
+			.navbar-nav{
+				.nav-link{
+					padding-bottom:1.8em;
+					padding-top:1.8em;
+				}
+			}
+			.dropdown-menu{
+				.nav-link{
+					padding-bottom:0.8em;
+					padding-top:0.8em;
+				}
+			}
+
+		}
+	}
 
 	
 	//site-title & desc
@@ -121,7 +149,6 @@
 	}
 	.site-content{
 		padding-top: 35px;
-		padding-bottom: 35px;
 	}
 	.site-footer {
 		background: $color__22;
