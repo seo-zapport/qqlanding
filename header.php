@@ -44,8 +44,8 @@
 		<?php qqlanding_header_set(); ?>
 	</header><!-- #masthead -->
 	<?php if ( is_front_page() && ! is_home() ) qqlanding_load_section('slider'); ?>
-	<div id="content" class="site-content <?php echo ( ! is_front_page() && ! is_home() ) ? 'container' : ''; ?>">
+	<div id="content" class="site-content <?php echo ( ! is_front_page() || is_home() ) ? 'container' : ''; ?>">
 		<div class="col-12"><?php qqlanding_breadcrumb_list(); ?></div>
-		<?php if ( ! is_front_page() && ! is_home() ): ?>
+		<?php if ( ! is_front_page() || is_home() ): ?>
 			<div class="row">
 		<?php endif; ?>
