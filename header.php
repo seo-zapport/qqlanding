@@ -25,9 +25,10 @@
 			case 'overlay': $nav_class = "qqlanding-overlay"; break;
 			default: $nav_class = "qqlanding-default"; break;
 		}
+		$front_class = ( is_front_page() ) ? ' qqland-front' : '';
 	?>
 </head>
-<body <?php body_class( 'qqlanding-sites qqland-' . qqlanding_schema( $layout ) ); ?>>
+<body <?php body_class( 'qqlanding-sites qqland-' . qqlanding_schema( $layout ) . $front_class); ?>>
 <div id="page" class="site container<?php echo ( get_field( 'th_layout', 'option' ) == 'wide' ) ? '-full qqland-site-full' : ' qqland-site-box'; ?>">
 	<?php if (get_field( 'th_layout', 'option' ) == 'box'): ?>
 		<div class="row">

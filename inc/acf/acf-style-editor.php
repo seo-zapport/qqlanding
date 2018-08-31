@@ -37,7 +37,6 @@ endif;
 .enter-site {
 	margin-left : auto;
 	margin-right : auto;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -338,6 +337,26 @@ if ( have_rows( 'pvs_settings', 'option' ) ) :
 		.provider-group[class*='-category']{<?php if ( $pvs_border ): ?>border-color: <?php echo $pvs_border; ?> !important;<?php else: ?>border-color: #7f7f7f;<?php endif; ?>}.provider-group .provider-item > i{ background: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/providers/ico_reco-<?php echo $bg_class; ?>.png') no-repeat; }
 	<?php endwhile;
 endif;
+
+
+/**
+ * #Featured Post
+ *---------------------*/
+if ( have_rows( 'th_presets', 'option') ) :
+	while ( have_rows( 'th_presets', 'option') ) : the_row();
+
+		$repeat = get_sub_field('fp_repeat_bg_img');
+		$scroll = get_sub_field('fp_scroll_with_page');
+		$screen = get_sub_field('fp_presets');
+		$position = get_sub_field('fp_image_position');
+		$image_size = get_sub_field('fp_image_size');
+
+		$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size); ?>
+		#Fpost{<?php if ( get_field( 'fp_bg_attr','option' ) == 'bg-color' ): ?>background-color: <?php echo get_field('fp_bg_color','option'); ?>;<?php else: ?>background-image: url(<?php echo get_field('fp_bg_image','option'); ?>);<?php echo $bg_attr; ?><?php endif; ?>}
+
+	<?php endwhile;	
+endif;
+
 
 
 /**

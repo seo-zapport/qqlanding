@@ -1,7 +1,7 @@
 <?php $pvs_title = get_field( 'pvs_title', 'option' ); // providers custom repeater ?>
-<section id="Fproviders" class="py-3">
+<section id="Fproviders" class="py-5">
 	<div class="container">
-		<h3 class="sec-entry-title"><?php esc_html_e( $pvs_title , 'qqlanding' ) ?></h3> <!--Nhà cung cấp-->
+		<h3 class="sec-entry-title text-center"><?php esc_html_e( $pvs_title , 'qqlanding' ) ?></h3> <!--Nhà cung cấp-->
 		<?php
 		if ( have_rows( 'pvs_settings', 'option' ) ) :
 			while ( have_rows( 'pvs_settings', 'option' ) ) : the_row();

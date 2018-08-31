@@ -5,7 +5,7 @@
  */
 
 // 1. customize ACF path
-/*add_filter('acf/settings/path', 'my_acf_settings_path');
+add_filter('acf/settings/path', 'my_acf_settings_path');
  
 function my_acf_settings_path( $path ) {
  
@@ -212,13 +212,6 @@ acf_add_local_field_group(array(
 								'value' => 'float',
 							),
 						),
-						array(
-							array(
-								'field' => 'field_5b873deb92c22',
-								'operator' => '==',
-								'value' => 'slider',
-							),
-						),
 					),
 					'wrapper' => array(
 						'width' => '100',
@@ -237,7 +230,7 @@ acf_add_local_field_group(array(
 							'name' => 'fb__item_title',
 							'type' => 'text',
 							'instructions' => 'Indicate the title of your item',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array(
 								'width' => '',
@@ -256,7 +249,7 @@ acf_add_local_field_group(array(
 							'name' => 'fb__item_img_url',
 							'type' => 'url',
 							'instructions' => 'Indicate the image link of your image.',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array(
 								'width' => '',
@@ -272,7 +265,7 @@ acf_add_local_field_group(array(
 							'name' => 'fb__item_url',
 							'type' => 'text',
 							'instructions' => 'Indicate the link url of your ads.',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array(
 								'width' => '',
@@ -291,7 +284,7 @@ acf_add_local_field_group(array(
 							'name' => 'fb__item_mobile_url',
 							'type' => 'text',
 							'instructions' => 'Indicate the mobile link url of your ads.',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array(
 								'width' => '',
@@ -369,6 +362,203 @@ acf_add_local_field_group(array(
 						),
 						array(
 							'key' => 'field_5b8748fd92c30',
+							'label' => 'Image Shadow',
+							'name' => 'fb__item_img_shadow',
+							'type' => 'extended-color-picker',
+							'instructions' => 'Indicate the shadow of your image wrapper.',
+							'required' => 0,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b87419192c24',
+										'operator' => '==',
+										'value' => 'classic',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'fb__item_img_shadow',
+							),
+							'default_value' => 'rgba(89,89,89,.82)',
+							'color_palette' => '',
+							'hide_palette' => 0,
+						),
+					),
+				),
+				array(
+					'key' => 'field_5b88e14ff05a2',
+					'label' => 'Items',
+					'name' => 'fb__items',
+					'type' => 'repeater',
+					'instructions' => 'Add the item of your banner here.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b873deb92c22',
+								'operator' => '==',
+								'value' => 'slider',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b873deb92c22',
+								'operator' => '==',
+								'value' => 'pop_up',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '100',
+						'class' => '',
+						'id' => 'fb__items',
+					),
+					'collapsed' => '',
+					'min' => 1,
+					'max' => 0,
+					'layout' => 'table',
+					'button_label' => 'Add Banner Item',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5b88e14ff05a3',
+							'label' => 'Item Title',
+							'name' => 'fb__item_title',
+							'type' => 'text',
+							'instructions' => 'Indicate the title of your item',
+							'required' => 1,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'fb__item_title',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b88e14ff05a4',
+							'label' => 'Image URL',
+							'name' => 'fb__item_img_url',
+							'type' => 'url',
+							'instructions' => 'Indicate the image link of your image.',
+							'required' => 1,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'fb__item_img_url',
+							),
+							'default_value' => 'https://via.placeholder.com/150x160',
+							'placeholder' => 'Eg: http://example.com/288/banner.gif',
+						),
+						array(
+							'key' => 'field_5b88e14ff05a5',
+							'label' => 'URL',
+							'name' => 'fb__item_url',
+							'type' => 'text',
+							'instructions' => 'Indicate the link url of your ads.',
+							'required' => 1,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'fb__item_url',
+							),
+							'default_value' => '[link_alt ms=\'288\']',
+							'placeholder' => 'ex : www.qq288rr.com',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b88e14ff05a6',
+							'label' => 'Mobile URL',
+							'name' => 'fb__item_mobile_url',
+							'type' => 'text',
+							'instructions' => 'Indicate the mobile link url of your ads.',
+							'required' => 1,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'fb__item_mobile_url',
+							),
+							'default_value' => '[link_alt ms=\'m288\']',
+							'placeholder' => 'ex : www.qq288rr.com',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b88e14ff05a7',
+							'label' => 'Link Target',
+							'name' => 'fb__item_link_target',
+							'type' => 'true_false',
+							'instructions' => 'Indicate whether you want to open the link in a new window or not.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'fb__item_link_target',
+							),
+							'message' => 'Open link in a new window',
+							'default_value' => 0,
+							'ui' => 0,
+							'ui_on_text' => '',
+							'ui_off_text' => '',
+						),
+						array(
+							'key' => 'field_5b88e14ff05a8',
+							'label' => 'Link Relationship (XFN)',
+							'name' => 'fb__item_xfn',
+							'type' => 'text',
+							'instructions' => 'Indicate the link relation of your ads.',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'fb__item_xfn',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b88e14ff05a9',
+							'label' => 'Image BG Color',
+							'name' => 'fb__item_img_bg_color',
+							'type' => 'extended-color-picker',
+							'instructions' => 'Indicate the background color of your image wrapper.',
+							'required' => 0,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b87419192c24',
+										'operator' => '==',
+										'value' => 'flat',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'fb__item_img_bg_color',
+							),
+							'default_value' => '#272727',
+							'color_palette' => '',
+							'hide_palette' => 0,
+						),
+						array(
+							'key' => 'field_5b88e14ff05aa',
 							'label' => 'Image Shadow',
 							'name' => 'fb__item_img_shadow',
 							'type' => 'extended-color-picker',
@@ -501,6 +691,80 @@ acf_add_local_field_group(array(
 							'mime_types' => 'jpg,png',
 						),
 					),
+				),
+			),
+		),
+		array(
+			'key' => 'field_5b88e0efdbd78',
+			'label' => 'Appearance Settings',
+			'name' => 'fb_slider_appearance_group',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'fb_slider_appearance_group',
+			),
+			'layout' => 'table',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5b88e0efdbd79',
+					'label' => 'Autoplay',
+					'name' => 'slider_autoplay',
+					'type' => 'true_false',
+					'instructions' => 'Indicate whether or not autoplay will enabled',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slider_autoplay',
+					),
+					'message' => 'Enable Autoplay ?',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b88e0efdbd7a',
+					'label' => 'Arrows',
+					'name' => 'slider_arrows',
+					'type' => 'true_false',
+					'instructions' => 'Indicate whether the arrow buttons will be created.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slider_arrows',
+					),
+					'message' => 'Display Arrows?',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b88e0efdbd7b',
+					'label' => 'Navigation Dots',
+					'name' => 'slider_nav_dots',
+					'type' => 'true_false',
+					'instructions' => 'Indicate whether the navigation dots will be created.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slider_nav_dots',
+					),
+					'message' => 'Display nav dots?',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
 				),
 			),
 		),
@@ -950,6 +1214,290 @@ acf_add_local_field_group(array(
 			'max_height' => '',
 			'max_size' => '',
 			'mime_types' => 'jpg,png',
+		),
+		array(
+			'key' => 'field_5b88c9b8337ad',
+			'label' => 'Presets Settings',
+			'name' => 'th_presets',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5b836bd4c7a86',
+						'operator' => '==',
+						'value' => 'bg-image',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'th_presets',
+			),
+			'layout' => 'block',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5b88c94b337ac',
+					'label' => 'Presets',
+					'name' => 'fp_presets',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '100',
+						'class' => '',
+						'id' => 'fp_presets',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'fill-screen' => 'Fill Screen',
+						'fit-to-screen' => 'Fit to Screen',
+						'repeat' => 'Repeat',
+						'custom' => 'Custom',
+					),
+					'default_value' => array(
+						0 => 'default',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 1,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5b88c9cf337b1',
+					'label' => 'Image Position',
+					'name' => 'fp_image_position',
+					'type' => 'radio',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'fill-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'fit-to-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'fp_image_position',
+					),
+					'choices' => array(
+						'left top' => 'Left Top',
+						'center top' => 'Center Top',
+						'right top' => 'Right Top',
+						'left center' => 'Left Center',
+						'center center' => 'Center Center',
+						'right center' => 'Right Center',
+						'left bottom' => 'Left Bottom',
+						'center bottom' => 'Center Bottom',
+						'right-bottom' => 'Right Bottom',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => 'left top',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
+				),
+				array(
+					'key' => 'field_5b88c9ce337b0',
+					'label' => 'Repeat Background Image',
+					'name' => 'fp_repeat_bg_img',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'fit-to-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'fp_repeat_bg_img',
+					),
+					'message' => 'Enable Repeat Background Image',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b88c9ca337af',
+					'label' => 'Scroll with Page',
+					'name' => 'fp_scroll_with_page',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'fp_scroll_with_page',
+					),
+					'message' => 'Enable Scroll Page',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b88c9c0337ae',
+					'label' => 'Image Size',
+					'name' => 'fp_image_size',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b836bd4c7a86',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b88c94b337ac',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'fp_image_size',
+					),
+					'choices' => array(
+						'auto' => 'Original',
+						'contain' => 'Fit to Screen',
+						'cover' => 'Fill Screen',
+					),
+					'default_value' => array(
+						0 => 'auto',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 1,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+			),
 		),
 		array(
 			'key' => 'field_5b83721f771a6',
@@ -1611,6 +2159,61 @@ acf_add_local_field_group(array(
 					'max_height' => '',
 					'max_size' => '',
 					'mime_types' => 'jpg,png',
+				),
+				array(
+					'key' => 'field_5b89085c48487',
+					'label' => 'Appearance Settings',
+					'name' => 'fp_app_set',
+					'type' => 'group',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'layout' => 'block',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5b89088148488',
+							'label' => 'Height',
+							'name' => 'ca_height',
+							'type' => 'text',
+							'instructions' => 'Set Min and Max Height of the Article',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => 'ca_height',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b89098b98883',
+							'label' => 'Hide Image',
+							'name' => 'ca_hide_image',
+							'type' => 'true_false',
+							'instructions' => 'Hide Image when it\'s Mobile Platform',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => 'ca_hide_image',
+							),
+							'message' => '',
+							'default_value' => 0,
+							'ui' => 1,
+							'ui_on_text' => 'Yes',
+							'ui_off_text' => 'No',
+						),
+					),
 				),
 				array(
 					'key' => 'field_5b863230c5770',
@@ -2835,6 +3438,421 @@ acf_add_local_field_group(array(
 			'ui_on_text' => 'Yes',
 			'ui_off_text' => 'No',
 		),
+		array(
+			'key' => 'field_5b88e487b0519',
+			'label' => 'Footer Settings',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5b88e4a8b051a',
+			'label' => 'Licensed settings',
+			'name' => 'licensed_settings',
+			'type' => 'group',
+			'instructions' => 'Display the licensed in your footer area.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'licensed_settings',
+			),
+			'layout' => 'table',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5b88e605b051c',
+					'label' => '',
+					'name' => 'lcs_allow',
+					'type' => 'true_false',
+					'instructions' => 'Indicate whether you want to show/hide your licensed.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'lcs_allow',
+					),
+					'message' => 'Allow to enable ?',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b88e5d2b051b',
+					'label' => 'Title',
+					'name' => 'lcs_title',
+					'type' => 'text',
+					'instructions' => 'Indicate the licensed title.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'lcs_title',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5b88e65db051d',
+			'label' => 'Banks',
+			'name' => 'banks',
+			'type' => 'group',
+			'instructions' => 'This is the settings where you can set up your banks by country.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'banks',
+			),
+			'layout' => 'block',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5b88ed74b051e',
+					'label' => 'Title',
+					'name' => 'b_title',
+					'type' => 'text',
+					'instructions' => 'Indicate the title of your bank here.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33333333333333',
+						'class' => '',
+						'id' => 'b_title',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5b88edacb051f',
+					'label' => '',
+					'name' => 'b_allow_bank',
+					'type' => 'true_false',
+					'instructions' => 'Allow enabling the bank\'s item.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33333333333333',
+						'class' => '',
+						'id' => 'b_allow_bank',
+					),
+					'message' => 'Enable bank items',
+					'default_value' => 0,
+					'ui' => 0,
+					'ui_on_text' => '',
+					'ui_off_text' => '',
+				),
+				array(
+					'key' => 'field_5b88ee69b0522',
+					'label' => 'Country',
+					'name' => 'b_country',
+					'type' => 'select',
+					'instructions' => 'Choose the country where the bank is located.',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33333333333333',
+						'class' => '',
+						'id' => 'b_country',
+					),
+					'choices' => array(
+						'zh' => 'China',
+						'id' => 'Indonesia',
+						'my' => 'Malaysia',
+						'th' => 'Thailand',
+						'vn' => 'vietnam',
+					),
+					'default_value' => array(
+						0 => 'id',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 1,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5b88edfeb0520',
+					'label' => 'Item',
+					'name' => 'b_item',
+					'type' => 'repeater',
+					'instructions' => 'Allow choosing a bank item here.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b88edacb051f',
+								'operator' => '==',
+								'value' => '1',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'collapsed' => '',
+					'min' => 1,
+					'max' => 0,
+					'layout' => 'table',
+					'button_label' => 'Add banks',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5b88ee48b0521',
+							'label' => 'Bank Title',
+							'name' => 'bb__title',
+							'type' => 'text',
+							'instructions' => 'Indicate the title of your bank.',
+							'required' => 1,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'bb__title',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b88f141b0527',
+							'label' => 'Bank Logo',
+							'name' => 'bb_logo_zh',
+							'type' => 'select',
+							'instructions' => 'Choose the banks that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'th',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'bb_logo_id',
+							),
+							'choices' => array(
+								'bos' => 'Bank of Shanghai',
+								'ibank' => 'Industrial Bank',
+								'spd_bank' => 'SPD Bank',
+								'ccbank: China Citic Bank' => 'ccbank: China Citic Bank',
+								'b_beijing' => 'Bank of Beijing',
+								'huaxia_bank' => 'Huaxia Bank',
+								'pinganbank' => 'Pinganbank',
+								'maybank' => 'Maybank',
+								'public_bank' => 'Public Bank',
+								'cimb' => 'CIMB Bank',
+								'ce_bank' => 'China Everbright Bank',
+								'b_china' => 'Bank of China',
+								'icbc' => 'ICBC',
+								'abc' => 'Agricultural Bank of China',
+								'cc_bank' => 'China construction Bank',
+								'cm_bank' => 'China minsheng Bank',
+								'bank_com' => 'Bank of communication',
+								'crm_bank' => 'China rural commercial Bank',
+								'psbchina' => 'Postal savings Bank of China',
+							),
+							'default_value' => array(
+								0 => 'bos',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5b88eee0b0523',
+							'label' => 'Bank Logo',
+							'name' => 'bb_logo_id',
+							'type' => 'select',
+							'instructions' => 'Choose the banks that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'id',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'bb_logo_id',
+							),
+							'choices' => array(
+								'bank_bri' => 'BANK BRI',
+								'bca' => 'BCA',
+								'bni' => 'BNI',
+								'danamon' => 'Danamon',
+								'mandiri' => 'Mandiri',
+							),
+							'default_value' => array(
+								0 => 'danamon',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5b88f0b1b0526',
+							'label' => 'Bank Logo',
+							'name' => 'bb_logo_my',
+							'type' => 'select',
+							'instructions' => 'Choose the banks that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'my',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'bb_logo_my',
+							),
+							'choices' => array(
+								'affinbank' => 'Affinbank',
+								'alliance_bank' => 'Alliance Bank',
+								'ambank_group' => 'Ambank Group',
+								'bankrakyat' => 'bankRakyat',
+								'citibank' => 'Citibank',
+								'hongleong_bank' => 'Hongleong Bank',
+								'hsbc' => 'HSBC',
+								'ocbc_bank' => 'OCBC Bank',
+								'rhb' => 'RHB',
+								'uob' => 'UOB',
+							),
+							'default_value' => array(
+								0 => 'citibank',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5b88ef74b0524',
+							'label' => 'Bank Logo',
+							'name' => 'bb_logo_th',
+							'type' => 'select',
+							'instructions' => 'Choose the banks that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'th',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'bb_logo_id',
+							),
+							'choices' => array(
+								'bangkok_bank' => 'Bangkok Bank',
+								'gsb' => 'Government Savings Bank',
+								'kasikorn_bank' => 'Kasikorn Bank',
+								'krungsri' => 'Krungsri',
+								'krungthai_bank' => 'Krungthai Bank',
+								'scb' => 'SCB',
+							),
+							'default_value' => array(
+								0 => 'bangkok_bank',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5b88f05eb0525',
+							'label' => 'Bank Logo',
+							'name' => 'bb_logo_vn',
+							'type' => 'select',
+							'instructions' => 'Choose the banks that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'vn',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'bb_logo_vn',
+							),
+							'choices' => array(
+								'acb' => 'ACB',
+								'bidv' => 'BIDV',
+								'sacombank' => 'Sacombank',
+								'techcombank' => 'Techcombank',
+								'vietinbank' => 'Vietinbank',
+								'vietcombank' => 'Vietcombank',
+							),
+							'default_value' => array(
+								0 => 'acb',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+					),
+				),
+			),
+		),
 	),
 	'location' => array(
 		array(
@@ -2872,7 +3890,7 @@ acf_add_local_field_group(array(
 	'title' => 'Slider',
 	'fields' => array(
 		array(
-			'key' => 'field_5b87357e7b42d',
+			'key' => 'field_5b87a0120c223',
 			'label' => 'Notes',
 			'name' => '',
 			'type' => 'message',
@@ -3210,7 +4228,7 @@ acf_add_local_field_group(array(
 					'key' => 'field_5b76565d453cb',
 					'label' => 'Content',
 					'name' => 'slider_content',
-					'type' => 'wysiwyg',
+					'type' => 'textarea',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
@@ -3220,10 +4238,10 @@ acf_add_local_field_group(array(
 						'id' => '',
 					),
 					'default_value' => '',
-					'tabs' => 'all',
-					'toolbar' => 'basic',
-					'media_upload' => 1,
-					'delay' => 0,
+					'placeholder' => '',
+					'maxlength' => '',
+					'rows' => '',
+					'new_lines' => '',
 				),
 				array(
 					'key' => 'field_5b7cbe7c82248',
@@ -3286,7 +4304,6 @@ acf_add_local_field_group(array(
 								'id' => '',
 							),
 							'choices' => array(
-								'center' => 'Center',
 								'left' => 'Left',
 								'right' => 'Right',
 							),
@@ -3327,6 +4344,185 @@ acf_add_local_field_group(array(
 							'return_format' => 'value',
 							'ajax' => 0,
 							'placeholder' => '',
+						),
+					),
+				),
+				array(
+					'key' => 'field_5b889b604dced',
+					'label' => 'Content Slider Images',
+					'name' => 'content_slider_images',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b7cbeae82249',
+								'operator' => '==',
+								'value' => 'half',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'default',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_5b889f814dcee',
+					'label' => 'Images Position Property',
+					'name' => 'slid_position_property',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b7cbeae82249',
+								'operator' => '==',
+								'value' => 'half',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b88cf30be092',
+					'label' => 'Hide Image',
+					'name' => 'slide_hide_image',
+					'type' => 'true_false',
+					'instructions' => 'Hide Image when it\'s Mobile Platform',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b88a0a74dcef',
+					'label' => 'Position',
+					'name' => 'slider_img_position',
+					'type' => 'group',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b889f814dcee',
+								'operator' => '==',
+								'value' => '1',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'layout' => 'table',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5b88a1234dcf0',
+							'label' => 'Top',
+							'name' => 'slid_position_top',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => 'px',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b88a1424dcf1',
+							'label' => 'Left',
+							'name' => 'slid_position_left',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => 'px',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b88a16a4dcf2',
+							'label' => 'Right',
+							'name' => 'slid_position_right',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => 'px',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b88a1754dcf3',
+							'label' => 'Bottom',
+							'name' => 'slid_position_bottom',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => 'px',
+							'maxlength' => '',
 						),
 					),
 				),
@@ -4143,7 +5339,7 @@ acf_add_local_field_group(array(
 	'description' => 'Display the settings for Template: front page of qqlanding',
 ));
 
-endif;*/
+endif;
 
 
 if ( function_exists( 'acf_add_options_page' ) ) :
@@ -4222,13 +5418,13 @@ return $font;
 
 function qqlanding_preset_acf($repeat, $scroll, $screen, $position, $image_size){
 
-	if($repeat == "Yes"):
+	if($repeat == "Yes" || $repeat == true):
 		$repeat_preset = "repeat";
 	else:
 		$repeat_preset = "no-repeat";
 	endif;	
 
-	if($scroll == "Yes"):
+	if($scroll == "Yes" || $scroll == true):
 		$scroll_preset = "background-attachment: fixed;background-size: cover;";
 	else:
 		$scroll_preset = "background-attachment: scroll;";
@@ -4384,4 +5580,32 @@ function floating_banner( $field ){
 	endif; 
 }
 
- 
+
+function qqlanding_owl_carousel(){ ?>
+<?php
+	$appearance = get_field( 'fp_slider_appearance_group', 'option');
+	$_appearance = get_field( 'fb_slider_appearance_group', 'option');
+
+	//post settings
+	$autoplay = $appearance['slider_autoplay'];
+	$nav = $appearance['slider_arrows'];
+	$dots = $appearance['slider_nav_dots'];
+
+	//banner settings
+	$_autoplay = $_appearance['slider_autoplay'];
+	$_nav = $_appearance['slider_arrows'];
+	$_dots = $_appearance['slider_nav_dots'];
+?>
+<script type="text/javascript">
+	//post
+	var autoplay = '<?php echo $autoplay; ?>',
+		nav = '<?php echo $nav; ?>',
+		dots = '<?php echo $dots; ?>';
+
+	//banner
+	var _autoplay = '<?php echo $_autoplay; ?>',
+		_nav = '<?php echo $_nav; ?>',
+		_dots = '<?php echo $_dots; ?>';
+</script>
+<?php }
+add_action( 'wp_footer','qqlanding_owl_carousel' );

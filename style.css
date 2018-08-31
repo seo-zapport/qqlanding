@@ -2627,7 +2627,15 @@ a:hover, a:active {
 .qqlanding-sites.qqland-qq828 .slider-item .card-o-btm {
   background-color: rgba(236, 72, 1, 0.78);
 }
-.qqlanding-sites #Fproviders .provider-group {
+.qqlanding-sites.qqland-front .site-content {
+  padding-top: 0;
+}
+.qqlanding-sites.qqland-front .sec-entry-title {
+  font-size: 25.024px;
+  font-size: 1.564rem;
+  margin-bottom: 45px;
+}
+.qqlanding-sites .provider-group {
   position: relative;
   flex-direction: column;
   flex: auto;
@@ -2640,353 +2648,416 @@ a:hover, a:active {
    * prov-default
    *--------------*/
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'], .qqlanding-sites #Fproviders .provider-group[class*='-default'] {
+.qqlanding-sites .provider-group[class*='-category'], .qqlanding-sites .provider-group[class*='-default'] {
   border: 1px solid #7f7f7f;
   border-radius: 5px;
   margin-bottom: 18px;
   padding: 8px 10px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-license'] .pagcor {
+.qqlanding-sites .provider-group[class*='-license'] .pagcor {
   background-position: 0 0;
   width: 140px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .bet368 {
+.qqlanding-sites .provider-group[class*='-category'] .bet368 {
   width: 86px;
   background-position: 3px -302px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .opus {
+.qqlanding-sites .provider-group[class*='-category'] .opus {
   width: 138px;
   background-position: 5px -2001px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .onework {
+.qqlanding-sites .provider-group[class*='-category'] .onework {
   width: 105px;
   background-position: 3px -1517px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .gameplay {
+.qqlanding-sites .provider-group[class*='-category'] .gameplay {
   width: 130px;
   background-position: 5px -1420px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .gd {
+.qqlanding-sites .provider-group[class*='-category'] .gd {
   background-position: 5px -960px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .gp {
+.qqlanding-sites .provider-group[class*='-category'] .gp {
   background-position: 5px -906px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .allbet {
+.qqlanding-sites .provider-group[class*='-category'] .allbet {
   width: 90px;
   background-position: 5px -1117px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .ag {
+.qqlanding-sites .provider-group[class*='-category'] .ag {
   width: 90px;
   background-position: 3px -1317px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .og {
+.qqlanding-sites .provider-group[class*='-category'] .og {
   width: 58px;
   background-position: 5px -1904px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .royal {
+.qqlanding-sites .provider-group[class*='-category'] .royal {
   width: 90px;
   background-position: 5px -1218px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .playtech {
+.qqlanding-sites .provider-group[class*='-category'] .playtech {
   width: 105px;
   background-position: 3px -731px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .ebet {
+.qqlanding-sites .provider-group[class*='-category'] .ebet {
   width: 105px;
   background-position: -167px -41px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .spadegaming {
+.qqlanding-sites .provider-group[class*='-category'] .spadegaming {
   width: 150px;
   background-position: 3px -648px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .ttg {
+.qqlanding-sites .provider-group[class*='-category'] .ttg {
   width: 110px;
   background-position: 5px -2267px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .gameos {
+.qqlanding-sites .provider-group[class*='-category'] .gameos {
   width: 120px;
   background-position: 5px -2189px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .mg {
+.qqlanding-sites .provider-group[class*='-category'] .mg {
   width: 130px;
   background-position: 3px -2100px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .betsoft {
+.qqlanding-sites .provider-group[class*='-category'] .betsoft {
   width: 90px;
   background-position: 3px -2436px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .habanero {
+.qqlanding-sites .provider-group[class*='-category'] .habanero {
   width: 120px;
   background-position: 3px -1611px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .isin4d {
+.qqlanding-sites .provider-group[class*='-category'] .isin4d {
   background-position: 3px -1706px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .txbet {
+.qqlanding-sites .provider-group[class*='-category'] .txbet {
   background-position: 3px -394px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .idn {
+.qqlanding-sites .provider-group[class*='-category'] .idn {
   width: 92px;
   background-position: 3px -806px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .xo {
+.qqlanding-sites .provider-group[class*='-category'] .xo {
   width: 116px;
   background-position: 3px -2345px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .txbet4d {
+.qqlanding-sites .provider-group[class*='-category'] .txbet4d {
   width: 100px;
   background-position: -158px -144px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .txbet6d {
+.qqlanding-sites .provider-group[class*='-category'] .txbet6d {
   width: 100px;
   background-position: -158px -240px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .lottery {
+.qqlanding-sites .provider-group[class*='-category'] .lottery {
   width: 140px;
   height: 40px;
   background-position: 3px -160px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .saba {
+.qqlanding-sites .provider-group[class*='-category'] .saba {
   background-position: 3px -209px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .ok368 {
+.qqlanding-sites .provider-group[class*='-category'] .ok368 {
   background-position: -158px -352px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .pragmaticplay {
+.qqlanding-sites .provider-group[class*='-category'] .pragmaticplay {
   background-position: -158px -412px;
   width: 90px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-category'] .thegamingplatform {
+.qqlanding-sites .provider-group[class*='-category'] .thegamingplatform {
   background-position: -158px -556px;
   width: 127px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .allbet {
+.qqlanding-sites .provider-group[class*='-default'].gray .allbet {
   width: 90px;
   background-position: 5px -1066px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .ag {
+.qqlanding-sites .provider-group[class*='-default'].gray .ag {
   width: 90px;
   background-position: 3px -1268px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .bet368 {
+.qqlanding-sites .provider-group[class*='-default'].gray .bet368 {
   width: 86px;
   background-position: 3px -256px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .betsoft {
+.qqlanding-sites .provider-group[class*='-default'].gray .betsoft {
   width: 90px;
   background-position: 3px -2392px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .ebet {
+.qqlanding-sites .provider-group[class*='-default'].gray .ebet {
   width: 105px;
   background-position: -167px 4px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .gameplay {
+.qqlanding-sites .provider-group[class*='-default'].gray .gameplay {
   width: 130px;
   background-position: 5px -1368px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .gd {
+.qqlanding-sites .provider-group[class*='-default'].gray .gd {
   background-position: 5px -960px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .gp {
+.qqlanding-sites .provider-group[class*='-default'].gray .gp {
   background-position: 5px -855px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .gameos {
+.qqlanding-sites .provider-group[class*='-default'].gray .gameos {
   width: 120px;
   background-position: 5px -2189px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .habanero {
+.qqlanding-sites .provider-group[class*='-default'].gray .habanero {
   width: 120px;
   background-position: 3px -1562px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .isin4d {
+.qqlanding-sites .provider-group[class*='-default'].gray .isin4d {
   background-position: 3px -1655px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .idn {
+.qqlanding-sites .provider-group[class*='-default'].gray .idn {
   width: 92px;
   background-position: 3px -770px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .lottery {
+.qqlanding-sites .provider-group[class*='-default'].gray .lottery {
   width: 140px;
   height: 40px;
   background-position: 3px -117px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .mg {
+.qqlanding-sites .provider-group[class*='-default'].gray .mg {
   width: 130px;
   background-position: 3px -2053px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .og {
+.qqlanding-sites .provider-group[class*='-default'].gray .og {
   width: 58px;
   background-position: 5px -1853px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .ok368 {
+.qqlanding-sites .provider-group[class*='-default'].gray .ok368 {
   background-position: -158px -291px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .opus {
+.qqlanding-sites .provider-group[class*='-default'].gray .opus {
   width: 138px;
   background-position: 5px -1953px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .onework {
+.qqlanding-sites .provider-group[class*='-default'].gray .onework {
   width: 105px;
   background-position: 3px -1468px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .playtech {
+.qqlanding-sites .provider-group[class*='-default'].gray .playtech {
   width: 105px;
   background-position: 3px -693px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .pragmaticplay {
+.qqlanding-sites .provider-group[class*='-default'].gray .pragmaticplay {
   background-position: -158px -412px;
   width: 90px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .royal {
+.qqlanding-sites .provider-group[class*='-default'].gray .royal {
   width: 90px;
   background-position: 5px -1167px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .saba {
+.qqlanding-sites .provider-group[class*='-default'].gray .saba {
   background-position: 3px -209px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .spadegaming {
+.qqlanding-sites .provider-group[class*='-default'].gray .spadegaming {
   width: 150px;
   background-position: 3px -600px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .ttg {
+.qqlanding-sites .provider-group[class*='-default'].gray .ttg {
   width: 110px;
   background-position: 5px -2231px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .txbet {
+.qqlanding-sites .provider-group[class*='-default'].gray .txbet {
   background-position: 3px -351px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .txbet4d {
+.qqlanding-sites .provider-group[class*='-default'].gray .txbet4d {
   width: 100px;
   background-position: -158px -95px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .txbet6d {
+.qqlanding-sites .provider-group[class*='-default'].gray .txbet6d {
   width: 100px;
   background-position: -158px -192px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .thegamingplatform {
+.qqlanding-sites .provider-group[class*='-default'].gray .thegamingplatform {
   background-position: -158px -506px;
   width: 125px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].gray .xo {
+.qqlanding-sites .provider-group[class*='-default'].gray .xo {
   width: 116px;
   background-position: 3px -2306px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .allbet {
+.qqlanding-sites .provider-group[class*='-default'].white .allbet {
   width: 90px;
   background-position: 5px -1066px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .ag {
+.qqlanding-sites .provider-group[class*='-default'].white .ag {
   width: 90px;
   background-position: 3px -1268px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .bet368 {
+.qqlanding-sites .provider-group[class*='-default'].white .bet368 {
   width: 86px;
   background-position: 3px -301px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .betsoft {
+.qqlanding-sites .provider-group[class*='-default'].white .betsoft {
   width: 90px;
   background-position: 3px -2392px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .ebet {
+.qqlanding-sites .provider-group[class*='-default'].white .ebet {
   width: 98px;
   background-position: -160px -5px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gameplay {
+.qqlanding-sites .provider-group[class*='-default'].white .gameplay {
   width: 130px;
   background-position: 5px -1368px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gd {
+.qqlanding-sites .provider-group[class*='-default'].white .gd {
   background-position: 5px -960px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gp {
+.qqlanding-sites .provider-group[class*='-default'].white .gp {
   width: 95px;
   background-position: 5px -855px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .gameos {
+.qqlanding-sites .provider-group[class*='-default'].white .gameos {
   width: 120px;
   background-position: 5px -2189px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .habanero {
+.qqlanding-sites .provider-group[class*='-default'].white .habanero {
   width: 120px;
   background-position: 3px -1562px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .isin4d {
+.qqlanding-sites .provider-group[class*='-default'].white .isin4d {
   background-position: 3px -1655px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .idn {
+.qqlanding-sites .provider-group[class*='-default'].white .idn {
   width: 92px;
   background-position: 3px -770px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .lottery {
+.qqlanding-sites .provider-group[class*='-default'].white .lottery {
   width: 140px;
   height: 40px;
   background-position: 3px -117px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .mg {
+.qqlanding-sites .provider-group[class*='-default'].white .mg {
   width: 130px;
   background-position: 3px -2053px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .og {
+.qqlanding-sites .provider-group[class*='-default'].white .og {
   width: 58px;
   background-position: 5px -1853px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .ok368 {
+.qqlanding-sites .provider-group[class*='-default'].white .ok368 {
   width: 70px;
   background-position: -173px -250px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .opus {
+.qqlanding-sites .provider-group[class*='-default'].white .opus {
   width: 138px;
   background-position: 5px -1953px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .onework {
+.qqlanding-sites .provider-group[class*='-default'].white .onework {
   width: 105px;
   background-position: 3px -1468px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .playtech {
+.qqlanding-sites .provider-group[class*='-default'].white .playtech {
   width: 105px;
   background-position: 3px -693px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .pragmaticplay {
+.qqlanding-sites .provider-group[class*='-default'].white .pragmaticplay {
   background-position: -158px -353px;
   width: 90px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .royal {
+.qqlanding-sites .provider-group[class*='-default'].white .royal {
   width: 90px;
   background-position: 5px -1167px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .saba {
+.qqlanding-sites .provider-group[class*='-default'].white .saba {
   background-position: 3px -209px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .spadegaming {
+.qqlanding-sites .provider-group[class*='-default'].white .spadegaming {
   width: 150px;
   background-position: 3px -600px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .ttg {
+.qqlanding-sites .provider-group[class*='-default'].white .ttg {
   width: 110px;
   background-position: 5px -2231px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .txbet {
+.qqlanding-sites .provider-group[class*='-default'].white .txbet {
   width: 50px;
   background-position: -3px -395px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .txbet4d {
+.qqlanding-sites .provider-group[class*='-default'].white .txbet4d {
   width: 100px;
   background-position: -158px -95px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .txbet6d {
+.qqlanding-sites .provider-group[class*='-default'].white .txbet6d {
   width: 100px;
   background-position: -158px -171px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .thegamingplatform {
+.qqlanding-sites .provider-group[class*='-default'].white .thegamingplatform {
   background-position: -158px -457px;
   width: 125px;
 }
-.qqlanding-sites #Fproviders .provider-group[class*='-default'].white .xo {
+.qqlanding-sites .provider-group[class*='-default'].white .xo {
   width: 116px;
   background-position: 3px -2306px;
 }
-.qqlanding-sites #Fproviders .provider-title {
+.qqlanding-sites .provider-group[class*='-banks'] .provider-item > i {
+  background: url("../qqlanding/assets/images/providers/ico_bank.png") no-repeat;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .bank_bri {
+  background-position: 3px -406px;
+  width: 115px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .bca {
+  background-position: 3px -308px;
+  width: 85px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .bni {
+  background-position: 3px -188px;
+  width: 83px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .danamon {
+  background-position: 3px -73px;
+  width: 135px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .mandiri {
+  background-position: 3px -495px;
+  width: 98px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .affinbank {
+  background-position: 3px -3604px;
+  width: 125px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .alliance_bank {
+  background-position: 3px -3688px;
+  width: 120px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .ambank_group {
+  background-position: 3px -3773px;
+  width: 120px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .bankrakyat {
+  background-position: 3px -3856px;
+  width: 135px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .citibank {
+  background-position: 3px -3940px;
+  width: 120px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .hongleong_bank {
+  background-position: 3px -4023px;
+  width: 127px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .hsbc {
+  background-position: 3px -4107px;
+  width: 120px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .ocbc_bank {
+  background-position: 3px -4190px;
+  width: 120px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .rhb {
+  background-position: 3px -4277px;
+  width: 90px;
+}
+.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .uob {
+  background-position: 3px -4361px;
+  width: 98px;
+}
+.qqlanding-sites .provider-title {
   position: absolute;
   top: -12px;
   background: #e6e6e6;
@@ -2998,13 +3069,13 @@ a:hover, a:active {
   padding: 2px 7px;
   text-transform: uppercase;
 }
-.qqlanding-sites #Fproviders .provider-item {
+.qqlanding-sites .provider-item {
   cursor: pointer;
   display: inline;
   float: left;
   margin-bottom: 3px;
 }
-.qqlanding-sites #Fproviders .provider-item > i {
+.qqlanding-sites .provider-item > i {
   display: block;
   font-size: 0;
   height: 38px;
@@ -3050,33 +3121,98 @@ a:hover, a:active {
 .qqlanding-sites #Fpost figure {
   margin: 0;
 }
-.qqlanding-sites #Fpost .owl-carousel {
-  /* .owl-dots{
-  	text-align: center;
-  	position: fixed;
-  	bottom: 5px;
-  	width: 100%;
-  	-webkit-backface-visibility: hidden;
-  	-moz-backface-visibility: hidden;
-  	-ms-backface-visibility: hidden;
-  	backface-visibility: hidden;
-  	background-color: red;	
-  	&.active{
-  		background-color: yellow;
-  	}
-  } */
-}
-.qqlanding-sites #Fpost .owl-carousel .owl-item > div {
+.qqlanding-sites .owl-post.owl-carousel .owl-item > div,
+.qqlanding-sites .banner-slider.owl-carousel .owl-item > div {
   cursor: pointer;
   margin: 6% 8%;
   transition: margin 0.4s ease;
 }
-.qqlanding-sites #Fpost .owl-carousel .owl-item.center > div {
+.qqlanding-sites .owl-post.owl-carousel .owl-item.center > div,
+.qqlanding-sites .banner-slider.owl-carousel .owl-item.center > div {
   cursor: auto;
   margin: 0;
 }
-.qqlanding-sites #Fpost .owl-carousel .owl-item:not(.center) > div:hover {
+.qqlanding-sites .owl-post.owl-carousel .owl-item:not(.center) > div:hover,
+.qqlanding-sites .banner-slider.owl-carousel .owl-item:not(.center) > div:hover {
   opacity: .75;
+}
+.qqlanding-sites .owl-post.owl-carousel .owl-dots,
+.qqlanding-sites .banner-slider.owl-carousel .owl-dots {
+  margin-top: 30px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.qqlanding-sites .owl-post.owl-carousel .owl-dots .owl-dot,
+.qqlanding-sites .banner-slider.owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+  outline: none;
+  zoom: 1;
+}
+.qqlanding-sites .owl-post.owl-carousel .owl-dots .owl-dot span,
+.qqlanding-sites .banner-slider.owl-carousel .owl-dots .owl-dot span {
+  width: 30px;
+  height: 3px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+  -webkit-user-select: none;
+  /* Safari 3.1+ */
+  -moz-user-select: none;
+  /* Firefox 2+ */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Standard syntax */
+}
+.qqlanding-sites .owl-post.owl-carousel .owl-dots .owl-dot.active span, .qqlanding-sites .owl-post.owl-carousel .owl-dots .owl-dot:hover span,
+.qqlanding-sites .banner-slider.owl-carousel .owl-dots .owl-dot.active span,
+.qqlanding-sites .banner-slider.owl-carousel .owl-dots .owl-dot:hover span {
+  background-color: #7f7f7f;
+}
+.qqlanding-sites .owl-post.owl-carousel .owl-nav .owl-prev,
+.qqlanding-sites .owl-post.owl-carousel .owl-nav .owl-next,
+.qqlanding-sites .banner-slider.owl-carousel .owl-nav .owl-prev,
+.qqlanding-sites .banner-slider.owl-carousel .owl-nav .owl-next {
+  -webkit-user-select: none;
+  /* Safari 3.1+ */
+  -moz-user-select: none;
+  /* Firefox 2+ */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Standard syntax */
+}
+.qqlanding-sites .owl-post.owl-carousel .owl-nav .owl-prev > i,
+.qqlanding-sites .owl-post.owl-carousel .owl-nav .owl-next > i,
+.qqlanding-sites .banner-slider.owl-carousel .owl-nav .owl-prev > i,
+.qqlanding-sites .banner-slider.owl-carousel .owl-nav .owl-next > i {
+  font-size: 2em;
+}
+.qqlanding-sites .owl-post.owl-carousel .owl-nav button,
+.qqlanding-sites .banner-slider.owl-carousel .owl-nav button {
+  background-color: transparent;
+  color: #869791;
+  display: inline-block;
+  font-size: 40px;
+  margin: 0;
+  line-height: 300px;
+  outline: none;
+  padding: 0 60px !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  zoom: 1;
+}
+.qqlanding-sites .owl-post.owl-carousel .owl-nav .owl-prev,
+.qqlanding-sites .banner-slider.owl-carousel .owl-nav .owl-prev {
+  left: 0;
+}
+.qqlanding-sites .owl-post.owl-carousel .owl-nav .owl-next,
+.qqlanding-sites .banner-slider.owl-carousel .owl-nav .owl-next {
+  right: 0;
 }
 .qqlanding-sites #qqgroup-wrap.qqgroup-float {
   position: fixed;
@@ -4133,13 +4269,19 @@ object {
   }
   .provider-group .provider-wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   .provider-group:first-child {
     max-width: 32%;
   }
+  .provider-group.prov-banks {
+    max-width: 100%;
+  }
   .provider-group.prov-license {
     max-width: 100% !important;
+  }
+  .provider-group .prov-banks {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 960px) {
@@ -4164,10 +4306,6 @@ object {
   .provider-item {
     float: none;
     display: inline-block;
-  }
-
-  #fpContentA {
-    min-height: auto;
   }
 
   .desk {

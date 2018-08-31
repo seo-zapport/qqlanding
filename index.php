@@ -60,7 +60,6 @@ endif; ?>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
 
 if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'right' || get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'both' ) :

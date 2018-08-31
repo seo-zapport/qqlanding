@@ -16,7 +16,6 @@
 .enter-site {
 	margin-left : auto;
 	margin-right : auto;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -167,6 +166,8 @@
 	
 		#Fproviders{background-color: rgba(0,0,0,0) !important;}
 		.provider-group[class*='-category']{border-color: #272727 !important;}.provider-group .provider-item > i{ background: url('http://www.sandbox.awakentheme.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
+			#Fpost{background-image: url(http://www.sandbox.awakentheme.com/wp-content/uploads/2013/03/image-alignment-1200x4002.jpg);background-size:cover;background-position:center center; background-repeat:repeat;background-attachment: fixed;background-size: cover;}
+
 			.qqgroup-sidebox,.m-qqgroup-ads{ background-color:#1f1f1f;}.qqgroup-logo{color:#ffffff;}
 
 

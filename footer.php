@@ -22,6 +22,58 @@
 		<meta itemprop="copyrightHolder" content="<?php echo force_relative_url(); ?>"/>
 
 		<div class="container">
+			<div class="site-bank-wrapper widget py-3">
+				<div class="row">
+					<?php if ( have_rows('licensed_settings', 'option')  ): ?>
+						<?php while ( have_rows('licensed_settings', 'option')  ): the_row(); ?>
+							<?php if ( get_sub_field( 'lcs_allow','option' ) === true ): ?>
+								<div class="col-12 col-md-3 col-lg-3">
+									<div class="provider-group prov-license">
+										<div class="widget-title-container">
+											<h4 class="widget-title"><?php echo get_sub_field( 'lcs_title','option' ); ?></h4>
+										</div>
+										<div class="provider-wrap">
+											<span class="provider-item "><i class="pagcor">pagcor</i></span>
+										</div>
+									</div>
+								</div>
+							<?php endif;?>
+						<?php endwhile; ?>
+					<?php endif; ?>
+					<?php if ( have_rows('banks', 'option')  ): ?>
+						<?php while ( have_rows('banks', 'option')  ): the_row(); ?>
+							<?php $country = get_sub_field( 'b_country', 'option' );?>
+							<div class="col-12 col-md-9 col-lg-9">
+								<div class="provider-group prov-banks">
+									<div class="widget-title-container">
+										<h4 class="widget-title"><?php echo get_sub_field( 'b_title','option' ); ?></h4>
+									</div>
+									<?php if ( get_sub_field( 'b_allow_bank','option' ) == true ): ?>
+										<?php if ( have_rows( 'b_item','option' ) ): ?>
+											<div class="provider-wrap prov-banks">
+												<?php while ( have_rows('b_item', 'option')  ): the_row(); ?>
+													<?php switch ($country) {
+														case 'my':
+															$country_class = 'malay';
+															$logo = get_sub_field( 'bb_logo_my', 'option' );
+															break;
+														default:
+															$country_class = 'indo';
+															$logo = get_sub_field( 'bb_logo_id', 'option' );
+															break;
+													} ?>
+													<span class="provider-item bank-<?php echo $country_class; ?>"><i class="<?php echo $logo; ?>"><?php the_sub_field('bb__title','option'); ?></i></span>
+												<?php endwhile; ?>
+											</div>
+										<?php endif; ?>
+									<?php endif; ?>
+								</div>
+							</div>
+						<?php endwhile; ?>
+					<?php endif; ?>
+
+				</div>
+			</div>
 			<div class="site-socker py-3">
 				<div class="row">
 					<div class="col-md-4">
