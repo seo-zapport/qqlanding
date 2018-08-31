@@ -14,11 +14,54 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div id="banner-static" >	
 		<div id="banner-static-feature" class="site-content container">
 				<div class="banner-static-content">	
-					<?php if( have_rows('slider_item_r', 'option') ): the_row(); ?>
-						<h3 class="h2"><?php the_sub_field('slider_title'); ?></h3>
-					    <?php the_sub_field('slider_content'); ?>    
-						<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
+					<?php if( have_rows('slider_item_r', 'option') ): the_row(); 
+						echo get_sub_field('slide_hide_image','option');
+							$hidemob = content_img_hide(get_sub_field('slide_hide_image'));
+					?>
+
+
+						<?php if(get_sub_field('content_settings')['slider_content_size'] == 'full' ): ?>
+						
+								<div class="col-xs-12 col-sm-12 col-md-12 text-white">
+
+								<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content')); ?>
+								
+								<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
+
+								</div>
+						
+						<?php else: ?>
+
+							<div class="row">
+							<div class="<?php if(get_sub_field('content_settings')['slider_content_position'] == "left"): echo $hidemob; else: echo 'col-xs-12 col-sm-12'; endif ?> col-md-6 text-white">
+								<?php 
+									if(get_sub_field('content_settings')['slider_content_position'] == "left"):	
+											echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
+									else:
+											 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
+											 echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); 
+
+									endif; 
+								?>
+
+							</div>
+							<div class="<?php if(get_sub_field('content_settings')['slider_content_position'] == "right"): echo $hidemob; else: echo 'col-xs-12 col-sm-12'; endif ?> col-md-6 text-white">
+									<?php 
+										if(get_sub_field('content_settings')['slider_content_position'] == "left"):	
+												 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
+												 echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); 
+										else:
+												echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
+										endif; 
+									?>
+							</div>
+							</div>
+	
+					
+						<?php endif;//end of contentsize ?>
+
 					<?php endif; ?>
+
 				</div>
 		</div>
 	</div>
@@ -26,6 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}elseif(get_field('slider_layout', 'options') == "slider"){		
 ?>
 	<div id="banner-slider">
+
 		<?php 
 			if(have_rows('slider_animations_group','option')) : the_row(); 
 				if(get_sub_field('slider_animation_fade') == "Yes"): 
@@ -34,8 +78,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					$fade = "";
 				endif;
 			endif;
+
 		?>
-		<?php  if(have_rows('slider_appearance_group','option')) : the_row(); ?>
+		<?php  if(have_rows('slider_appearance_group','option')) : the_row(); 
+		?>
 		<!--Carousel Wrapper-->
 		<div id="carousel" class="carousel slide <?php echo $fade; ?>" data-ride="carousel" <?php if(get_sub_field('slider_autoplay') != "Yes"): echo 'data-interval="false"'; endif; ?> >	
 		    <?php if(get_sub_field('slider_nav_dots') == "Yes"): ?>
@@ -63,14 +109,57 @@ if ( ! defined( 'ABSPATH' ) ) {
 					if( have_rows('slider_item_r', 'option') ): 
 						while ( have_rows( 'slider_item_r', 'option' ) ) : the_row(); 
 						$background = get_sub_field('slide_image');	
+						$hidemob = content_img_hide(get_sub_field('slide_hide_image'));
+
 				?>
+		       
+		         <?php if(get_sub_field('content_settings')['slider_content_size'] == 'full' ): ?>
+
+
 		        <div class="carousel-item<?php if($count == '0'){echo ' active';}else{echo '';} ?> view-<?php echo $count; ?>">
 		            <div class="carousel-caption caro-slide-<?php echo $count; ?>">
-		                <h3 class="h2"><?php the_sub_field('slider_title'); ?></h3>
-					    <?php the_sub_field('slider_content'); ?>  	
-						<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
+		               	<div class="col-xs-12 col-sm-12 col-md-12 text-white">
+								<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content')); ?>
+								<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
+						</div>
 		            </div>
 		        </div>
+
+			
+				<?php else: ?>
+
+				<div class="carousel-item<?php if($count == '0'){echo ' active';}else{echo '';} ?> view-<?php echo $count; ?>">
+				    <div class="carousel-caption caro-slide-<?php echo $count; ?>">
+				    	<div class="row">
+				    	<div class="<?php if(get_sub_field('content_settings')['slider_content_position'] == "left"): echo $hidemob; else: echo 'col-xs-12 col-sm-12'; endif ?> col-md-6 text-white">
+				    		<?php 
+				    			if(get_sub_field('content_settings')['slider_content_position'] == "left"):	
+				    					echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
+				    			else:
+				    					 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
+				    					 echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); 
+
+				    			endif; 
+				    		?>
+
+				    	</div>
+				    	<div class="<?php if(get_sub_field('content_settings')['slider_content_position'] == "right"): echo $hidemob; else: echo 'col-xs-12 col-sm-12'; endif ?> col-md-6 text-white">
+				    			<?php 
+				    				if(get_sub_field('content_settings')['slider_content_position'] == "left"):	
+				    						 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
+				    						 echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); 
+				    				else:
+				    						echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
+				    				endif; 
+				    			?>
+				    	</div>
+				    	</div>
+				    </div>
+				</div>    	
+				<?php endif ?>
+
+
+
 				<?php 
 						$count++;
 					endwhile;

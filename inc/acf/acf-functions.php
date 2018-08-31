@@ -4291,7 +4291,6 @@ function qqlanding_btn_entersite($link, $btn_image, $link_rel, $link_target){
 
 } 
 
-
  function fpcontent_img_position($img,$class){
 
 		$htmlleft = '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
@@ -4316,7 +4315,7 @@ function qqlanding_btn_entersite($link, $btn_image, $link_rel, $link_target){
  		$content .= '<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="'.get_permalink().'"/>';			
  		$content .= '<header class="entry-header">';	
  		//$content .= '<h3 itemprop="headline">'.get_field("fa_title").'</h3>';	
- 		$content .= '<h3 itemprop="headline">'.$mmk_title.'</h3>';	
+ 		$content .= '<h3 class="h2" itemprop="headline">'.$mmk_title.'</h3>';	
  		$content .= '<!-- .AMP  -->';	
  		$content .= '<meta itemprop="author" content="'.get_the_author().'">';	
  		$content .= '<meta itemprop="datePublished" content="'.get_the_time('c').'">';	
@@ -4384,4 +4383,39 @@ function floating_banner( $field ){
 	endif; 
 }
 
+function content_img_postion($position_conditon, $top, $right, $left, $bottom) {
+
+		  	
+		  	if($position_conditon == "Yes"){
+		  	
+		  		$positionprop = "position: absolute;";				
+				  	
+				  	if($top){
+					  	 $positionprop .= "top: ".$top."px;"; 
+				  	} 
+				  	if($left){
+				  		 $positionprop .= "left: ".$left."px;";  
+				  	}
+				  	if($right){
+				  	 	$positionprop .= "right: ".$right."px;";  
+				  	}
+				  	if($bottom){
+				  	 	$positionprop .= "bottom: ".$bottom."px;"; 
+				  	}
+
+		  	}else{
+		  		$positionprop = "";
+		  	}
+
+	return $positionprop;
+}
  
+function content_img_hide($hide){
+
+	if($hide == "yes"){
+		$hideclass = "d-none d-sm-block";
+	}else{
+		$hideclass = "col-xs-12 col-sm-12";
+	}
+	return $hideclass;
+}

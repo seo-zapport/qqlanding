@@ -69,10 +69,7 @@ jQuery(document).on('click', '.owl-item>div', function() {
 });
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 69291bf0a669425ea02e4510610c4f279d046a75
 function init_carousel() {
             H = +(jQuery(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
             
