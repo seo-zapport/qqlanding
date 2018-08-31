@@ -183,6 +183,16 @@ require get_template_directory() . '/inc/customizer/customizer_style.php';
 require get_template_directory() . '/inc/acf/acf-functions.php';
 
 /**
+ * TGM Plugins.
+ */
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+
+/**
+ * Require.
+ */
+require_once get_template_directory() . '/inc/require.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
