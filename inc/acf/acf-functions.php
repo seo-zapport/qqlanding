@@ -5579,7 +5579,7 @@ function floating_banner( $field ){
 	endif; 
 }
 
-<<<<<<< HEAD
+
 
 function qqlanding_owl_carousel(){ ?>
 <?php
@@ -5609,7 +5609,7 @@ function qqlanding_owl_carousel(){ ?>
 </script>
 <?php }
 add_action( 'wp_footer','qqlanding_owl_carousel' );
-=======
+
 function content_img_postion($position_conditon, $top, $right, $left, $bottom) {
 
 		  	
@@ -5646,4 +5646,3 @@ function content_img_hide($hide){
 	}
 	return $hideclass;
 }
->>>>>>> 973ff09d7353d02528fd7a592a711c9984e97b17
