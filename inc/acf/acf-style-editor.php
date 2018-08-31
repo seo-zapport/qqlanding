@@ -35,6 +35,7 @@ endif;
 } 
 
 .enter-site {
+    margin-top: 10%;
 	margin-left : auto;
 	margin-right : auto;
 }
@@ -49,6 +50,7 @@ endif;
  	if( have_rows('slider_item_r', 'option') ): the_row();
 	 	$background = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
 	  	$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
+	  	$positionslid = content_img_postion(get_sub_field('slid_position_property', 'option'),get_sub_field('slider_img_position')['slid_position_top'],get_sub_field('slider_img_position')['slid_position_right'],get_sub_field('slider_img_position')['slid_position_left'],get_sub_field('slider_img_position')['slid_position_bottom']);
 ?>
 #banner-static {
 	background: <?php echo $background;?>;
@@ -67,10 +69,16 @@ endif;
 
 .banner-static-content {
 	margin: 2em 0;
-	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 50%;"; }else{ echo "width: 100%;";  } ?>	
-	<?php if(get_sub_field('content_settings')['slider_content_position'] != 'center' ){echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; }?>	
+	<!-- <?php //if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 50%;"; }else{ echo "width: 100%;";  } ?>	 -->
+	<!-- <?php //echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; ?> -->
 	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
 }
+
+.content-slider-img {
+	<?php echo $positionslid; ?>
+
+}
+
 <?php endif; //end slider item
  elseif(get_field('slider_layout','option') == 'slider'): 
 
@@ -79,6 +87,9 @@ endif;
 		while(have_rows('slider_item_r', 'option')) : the_row();
  			$background = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
  			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
+ 			$positionslid = content_img_postion(get_sub_field('slid_position_property', 'option'),get_sub_field('slider_img_position')['slid_position_top'],get_sub_field('slider_img_position')['slid_position_right'],get_sub_field('slider_img_position')['slid_position_left'],get_sub_field('slider_img_position')['slid_position_bottom']);
+
+
 
 ?>
 #banner-slider {
@@ -90,28 +101,31 @@ endif;
 	background : <?php echo $background; ?>;
 	<?php echo $presets; ?>
 	height: 100%;
-	
 }
-@media (min-width: 992px) {
-	.view-<?php echo $count; ?> {
-		height: <?php echo $slide_height; ?>px;	
-	}	
-}
-
 
 .caro-slide-<?php echo $count; ?> {
-	<?php if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ 
-		echo "width: 40%;"; 
-	} ?>	
-	<?php if(get_sub_field('content_settings')['slider_content_position'] == 'right' || get_sub_field('content_settings')['slider_content_position'] == 'left' ){
-		echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; 
-	}?>	
+		
+	<?php //if(get_sub_field('content_settings')['slider_content_position'] == 'right' || get_sub_field('content_settings')['slider_content_position'] == 'left' ){
+		//echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; 
+	//}?>	
 	<?php //if(get_sub_field('content_settings')['slider_content_position'] == 'right' ){echo "left: 50%;"; }?>	
 	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
 	top: 20px;
 	bottom: 0px;
 	height: 100%;
 }
+
+@media (min-width: 992px) {
+	.view-<?php echo $count; ?> {
+		height: <?php echo $slide_height; ?>px;	
+	}	
+	<!-- .caro-slide-<?php echo $count; ?> {
+		<?php //if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ 
+			//echo "width: 40%;"; 
+		//} ?>
+	} -->
+}
+
 <?php 
 		$count++;
 		endwhile;	
@@ -146,30 +160,7 @@ endif; //end slider layout condition
 
  		}
 
-
- 		$top = "";
-		$left = "";
-		$right = "";
-		$bottom = ""; 
-	  	if(get_sub_field('images_pos_prop', 'option') == "Yes"){
-	  	
-	  		$position = "position: absolute;";
-			
-			  	if(get_sub_field('fp_img_position')['fp_position_top']){
-				  	 $top = "top: ".get_sub_field('fp_img_position')['fp_position_top']."px;"; 
-			  	} 
-			  	if(get_sub_field('fp_img_position')['fp_position_left']){
-			  		 $left = "left: ".get_sub_field('fp_img_position')['fp_position_left']."px;";  
-			  	}
-			  	if(get_sub_field('fp_img_position')['fp_position_right']){
-			  	 	$right = "right: ".get_sub_field('fp_img_position')['fp_position_right']."px;";  
-			  	}
-			  	if(get_sub_field('fp_img_position')['fp_position_buttom']){
-			  	 	$bottom = "bottom: ".get_sub_field('fp_img_position')['fp_position_buttom']."px;"; 
-			  	}
-	  	}else{
-	  		$position = "";
-	  	}
+ 		$position = content_img_postion(get_sub_field('images_pos_prop', 'option'),get_sub_field('fp_img_position')['fp_position_top'],get_sub_field('fp_img_position')['fp_position_right'],get_sub_field('fp_img_position')['fp_position_left'],get_sub_field('fp_img_position')['fp_position_buttom']);
 	  	
 	  		$height ="";
 	  if(get_sub_field('fp_app_set')['ca_height']){
@@ -180,10 +171,8 @@ endif; //end slider layout condition
 ?>
 
 .content-<?php echo $val; ?> {
-	
 	background : <?php echo $backgroundcf; ?>;
 	<?php echo @$presetscf; ?>
-
 }
 
 @media (min-width: 992px) {
@@ -194,11 +183,6 @@ endif; //end slider layout condition
 
 .content-<?php echo $val; ?>-img {
 	<?php echo $position; ?>
-	<?php echo @$top; ?>
-	<?php echo @$left; ?>
-	<?php echo @$right; ?>
-	<?php echo @$bottom; ?>
-
 }
 
 <?php 
