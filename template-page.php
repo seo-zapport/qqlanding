@@ -14,11 +14,9 @@ get_header();
 			if ( ! has_action( 'qqlanding_page_section_parts' ) ) :
 
 				 $value = array(
-<<<<<<< HEAD
-					'provider','content-a','post',
-=======
+
 					'banner','provider','content-a','post',
->>>>>>> ec111ad233d69ff03b20d443686b7524788ec1f0
+
 				); //items
 
 				//array push
