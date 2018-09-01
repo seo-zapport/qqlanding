@@ -4,7 +4,7 @@
  *
  * @package QQLanding
  */
-
+if ( ! defined('ABSPATH')) exit;
 
 if (! function_exists( 'qqlanding_social_media' ) ) {
 	function qqlanding_social_media(){

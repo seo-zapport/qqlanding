@@ -70,8 +70,7 @@
 								$shadow_color = get_sub_field( 'fb__item_img_shadow' );
 
 								$rel_text = '';
-								if ( empty( $link_alt ) ) { $link_alts = esc_url( home_url('/') ); }
-								else{ $link_alts = $link_alt; }
+								if ( empty( $link_alt ) ) { $link_alt = esc_url( home_url('/') ); }
 								if ( $link_target === true ) {
 									$target = '_blank';
 								}else{
@@ -83,7 +82,7 @@
 								}else{
 									$link_class = 'img-responsive';
 								}  
-								$item_link = '<a href="' . do_shortcode("$link_alts") . ' " title="' .  $img_title . '" target="' . esc_attr( $target ) . '" rel="' . esc_attr( $rel_text ) . '">';
+								$item_link = '<a href="' . do_shortcode("$link_alt") . ' " title="' .  $img_title . '" target="' . esc_attr( $target ) . '" rel="' . esc_attr( $rel_text ) . '">';
 									$item_link .= '<img src="' .  $img_link . '" class="' . $link_class . '" title="' . esc_html( $img_title ) . '" alt="' . esc_html( $img_title ) . '" >';
 								$item_link .= '</a>';?>
 								<div><?php echo $item_link; ?></div>
@@ -95,9 +94,9 @@
 			<?php endwhile; ?>
 		<?php endif; ?>
 	<?php if ($layout == 'slider'): ?>
-		</div>
+		</div><!--Desktop-slider-->
 	<?php endif; ?>
-</section><!--Desktop-->
+</section>
 
 <?php if ( $layout == 'float' ): ?>
 	<?php if ( have_rows('fb_layout_settings', 'option') ): ?>
@@ -148,8 +147,8 @@
 		        	<?php endif; ?><!--Mobile Float-->
 
 			     </div>
-			</section>
+			</section><!--Mobile Float-->
 
 		<?php endwhile; ?><!--Mobile Float-->
 	<?php endif; ?><!--Mobile Float-->
-<?php endif; ?><!--Mobile Float-->
+<?php endif; ?>

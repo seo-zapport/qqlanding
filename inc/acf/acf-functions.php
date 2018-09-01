@@ -3,9 +3,10 @@
  * This is were all of the functions for the 
  * ACF settings are created.
  */
+if ( ! defined('ABSPATH')) exit;
 
 // 1. customize ACF path
-/*add_filter('acf/settings/path', 'my_acf_settings_path');
+add_filter('acf/settings/path', 'my_acf_settings_path');
  
 function my_acf_settings_path( $path ) {
  
@@ -3580,7 +3581,7 @@ acf_add_local_field_group(array(
 						'id' => 'Indonesia',
 						'my' => 'Malaysia',
 						'th' => 'Thailand',
-						'vn' => 'vietnam',
+						'vn' => 'Vietnam',
 					),
 					'default_value' => array(
 						0 => 'id',
@@ -3637,58 +3638,6 @@ acf_add_local_field_group(array(
 							'prepend' => '',
 							'append' => '',
 							'maxlength' => '',
-						),
-						array(
-							'key' => 'field_5b88f141b0527',
-							'label' => 'Bank Logo',
-							'name' => 'bb_logo_zh',
-							'type' => 'select',
-							'instructions' => 'Choose the banks that you want to display.',
-							'required' => 1,
-							'conditional_logic' => array(
-								array(
-									array(
-										'field' => 'field_5b88ee69b0522',
-										'operator' => '==',
-										'value' => 'th',
-									),
-								),
-							),
-							'wrapper' => array(
-								'width' => '',
-								'class' => '',
-								'id' => 'bb_logo_id',
-							),
-							'choices' => array(
-								'bos' => 'Bank of Shanghai',
-								'ibank' => 'Industrial Bank',
-								'spd_bank' => 'SPD Bank',
-								'ccbank: China Citic Bank' => 'ccbank: China Citic Bank',
-								'b_beijing' => 'Bank of Beijing',
-								'huaxia_bank' => 'Huaxia Bank',
-								'pinganbank' => 'Pinganbank',
-								'maybank' => 'Maybank',
-								'public_bank' => 'Public Bank',
-								'cimb' => 'CIMB Bank',
-								'ce_bank' => 'China Everbright Bank',
-								'b_china' => 'Bank of China',
-								'icbc' => 'ICBC',
-								'abc' => 'Agricultural Bank of China',
-								'cc_bank' => 'China construction Bank',
-								'cm_bank' => 'China minsheng Bank',
-								'bank_com' => 'Bank of communication',
-								'crm_bank' => 'China rural commercial Bank',
-								'psbchina' => 'Postal savings Bank of China',
-							),
-							'default_value' => array(
-								0 => 'bos',
-							),
-							'allow_null' => 0,
-							'multiple' => 0,
-							'ui' => 1,
-							'ajax' => 0,
-							'return_format' => 'value',
-							'placeholder' => '',
 						),
 						array(
 							'key' => 'field_5b88eee0b0523',
@@ -3834,6 +3783,7 @@ acf_add_local_field_group(array(
 							'choices' => array(
 								'acb' => 'ACB',
 								'bidv' => 'BIDV',
+								'donga' => 'Donga bank',
 								'sacombank' => 'Sacombank',
 								'techcombank' => 'Techcombank',
 								'vietinbank' => 'Vietinbank',
@@ -3841,6 +3791,59 @@ acf_add_local_field_group(array(
 							),
 							'default_value' => array(
 								0 => 'acb',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5b88f141b0527',
+							'label' => 'Bank Logo',
+							'name' => 'bb_logo_zh',
+							'type' => 'select',
+							'instructions' => 'Choose the banks that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'zh',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'bb_logo_id',
+							),
+							'choices' => array(
+								'bos' => 'Bank of Shanghai',
+								'ibank' => 'Industrial Bank',
+								'spd_bank' => 'SPD Bank',
+								'ccbank' => 'China Citic Bank',
+								'b_beijing' => 'Bank of Beijing',
+								'huaxia_bank' => 'Huaxia Bank',
+								'pinganbank' => 'Pinganbank',
+								'maybank' => 'Maybank',
+								'public_bank' => 'Public Bank',
+								'cimb' => 'CIMB Bank',
+								'ce_bank' => 'China Everbright Bank',
+								'b_china' => 'Bank of China',
+								'icbc' => 'ICBC',
+								'abc' => 'Agricultural Bank of China',
+								'cc_bank' => 'China Construction Bank',
+								'cm_bank' => 'China Merchants Bank',
+								'bank_com' => 'Bank of Communication',
+								'crm_bank' => 'China Rural Commercial Bank',
+								'cminshing_bank' => 'China Minsheng Bank',
+								'psbchina' => 'Postal Savings Bank of China',
+							),
+							'default_value' => array(
+								0 => 'bos',
 							),
 							'allow_null' => 0,
 							'multiple' => 0,
@@ -5339,7 +5342,7 @@ acf_add_local_field_group(array(
 	'description' => 'Display the settings for Template: front page of qqlanding',
 ));
 
-endif;*/
+endif;
 
 
 if ( function_exists( 'acf_add_options_page' ) ) :

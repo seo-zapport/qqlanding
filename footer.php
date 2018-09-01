@@ -8,9 +8,8 @@
  *
  * @package QQLanding
  */
-
-?>
-		<?php if ( ! is_front_page() && ! is_home() ): ?>
+if ( ! defined( 'ABSPATH' ) ) die; ?>
+		<?php if ( ! is_page_template( 'template-page.php' ) || is_home() ): ?>
 		</div><!-- .row -->
 		<?php endif; ?>
 	</div><!-- #content -->

@@ -111,17 +111,12 @@
 .content-last-img {
 	}
 
-	
-
-
-
-
-		body.qqlanding-sites{
-					font-size: 14px; font-style: normal; font-weight: 500; }	
+			body.qqlanding-sites{
+					font-family:arial;font-size: 14px; font-style: normal; font-weight: 500; }	
 				.page-content,.entry-content,.entry-summary,.comment-content{
-					font-size: 16px; font-style: normal; font-weight: 500; }	
+					font-family:segoe_ui;font-size: 16px; font-style: normal; font-weight: 500; }	
 				.genpost-entry-meta,.single-entry-meta,.genpost-entry-footer{
-					font-size: 12px; font-style: normal; font-weight: 500; }	
+					font-family:sans-serif;font-size: 12px; font-style: normal; font-weight: 500; }	
 		.qqlanding-sites.qqland-custom a{color: #ffffff;}
 	.qqlanding-sites.qqland-custom a:hover,.qqlanding-sites.qqland-custom a:focus,a:active{color: #eeee22;}
 	.qqlanding-sites.qqland-custom .widget .widget-title-container{border-bottom-color: #1e73be;}

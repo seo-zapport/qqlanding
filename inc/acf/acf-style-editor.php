@@ -189,21 +189,19 @@ endif; //end slider layout condition
 			$count++;
 		endwhile;
 	endif;
-?>	
 
-
-
-
-<?php 
+/**
+ * #Theme Default
+ *---------------------*/
 if ( have_rows( 'th_fonts', 'option' ) ) :
 	while ( have_rows( 'th_fonts', 'option' ) ) : the_row();
-	$font_family = get_sub_field('thr_font_family');
+	$font_family = qqlanding_fontfam( get_sub_field('thr_font_family') );
 	$font_size = get_sub_field('thr_font_size');
 	$font_style = get_sub_field('thr_font_style');
 	$font_weight = get_sub_field('thr_font_weight');
 
 		if ( get_sub_field('th_entry_item') == 'body' ) : ?>
-		body.qqlanding-sites{
+			body.qqlanding-sites{
 		<?php elseif( get_sub_field('th_entry_item') == 'content' ): ?>
 			.page-content,.entry-content,.entry-summary,.comment-content{
 		<?php elseif( get_sub_field('th_entry_item') == 'meta' ): ?>
@@ -213,12 +211,11 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 		<?php else: ?>
 			.page-entry-title,.archive-page-title,.search-page-title,.entry-title{
 		<?php endif; ?>
-			font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
+			font-family:<?php echo $font_family; ?>;font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
 	<?php endwhile;
 endif;
 
 $theme_color = get_field( 'th_color_scheme','option' ); //theme color
-
 /**
  * #Theme Color
  *---------------------*/

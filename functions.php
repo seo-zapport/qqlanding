@@ -7,6 +7,8 @@
  * @package QQLanding
  */
 
+if ( ! defined('ABSPATH')) exit;
+
 if ( ! function_exists( 'qqlanding_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
