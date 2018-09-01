@@ -30,7 +30,7 @@ function my_acf_settings_dir( $dir ) {
 add_filter('acf/settings/show_admin', '__return_false');
 
 // 4. Include ACF
-include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro/acf.php' );*/
+include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro/acf.php' );
 
 
 if( function_exists('acf_add_local_field_group') ):
@@ -5339,7 +5339,7 @@ acf_add_local_field_group(array(
 	'description' => 'Display the settings for Template: front page of qqlanding',
 ));
 
-endif;
+endif;*/
 
 
 if ( function_exists( 'acf_add_options_page' ) ) :

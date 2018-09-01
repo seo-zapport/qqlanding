@@ -1,5 +1,4 @@
 <?php 
-	echo count(get_field('content_item', 'option'));
 	if(count(get_field('content_item', 'option') == "1" )){
 		$class ="first";
 	}else{
@@ -15,7 +14,7 @@
 
 				$hidemob = content_img_hide(get_sub_field('fp_app_set')['ca_hide_image']);
 
-				// while(have_rows('content_item', 'option') ) : the_row();
+				while(have_rows('content_item', 'option') ) : the_row();
 
 					if(get_sub_field('fp_position') == "default"):
 		?>
@@ -51,7 +50,7 @@
 				
 			<?php 
 					endif;
-				// endwhile;		
+				 endwhile;		
 			endif;
 		?>
 	 </div>

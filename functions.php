@@ -119,6 +119,8 @@ function qqlanding_scripts() {
 
 	wp_enqueue_style( 'qqlanding-owl-carousel', get_template_directory_uri() . '/assets/css/owl.carousel.css', 'v2.3.4' );
 
+	wp_enqueue_style( 'qqlanding-assets', get_template_directory_uri() . '/assets/css/__assets.css', 'v0.0.1', true );
+
 	wp_enqueue_style( 'qqlanding-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), 'v2.3.4' );

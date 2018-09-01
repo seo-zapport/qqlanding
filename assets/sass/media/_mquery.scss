@@ -65,37 +65,61 @@
 	}
 }
 @media (max-width: 768px){
-	.provider-item{float:none;display:inline-block;}
+	.provider-item{float:none;display:inline-block;margin-right:15px;margin-bottom: 10px;}
 	.desk{display:none;}
 }
 @media (max-width: 640px){
-  .provider-group{
-  	.provider-wrap{display:flex;flex-wrap: wrap;align-items: center;justify-content:center}
-  }
+	.provider-group{
+		.provider-wrap{
+			display:flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content:center;
+		}
+		&[class*='-banks']{
+			.provider-wrap{
+				justify-content:inherit;
+			}
+		}
+	}
 }
 @media only screen and (min-width:996px) and (max-width:1198px){
-  .provider-group{
-  	max-width:100%!important;margin-right:5px;
-  	.provider-wrap{display:initial;justify-content:initial}
-  }
+	.provider-group{
+		max-width:100%!important;margin-right:5px;
+		.provider-wrap{display:initial;justify-content:initial}
+		&[class*='-banks']{
+			.provider-wrap{
+				justify-content:inherit;
+			}
+		}
+	}
 }
 @media only screen and (min-width:768px) and (max-width:1024px){
-  .provider-group{
-  	max-width:100%!important;margin-right:5px;
-  	.provider-wrap{flex-wrap: wrap;align-items: center;justify-content:center}
-  }
+	.provider-group{
+		max-width:100%!important;margin-right:5px;
+		.provider-wrap{flex-wrap: wrap;align-items: center;justify-content:center}
+		&[class*='-banks']{
+			.provider-wrap{
+				display:flex;
+				justify-content:space-between;
+			}
+		}
+	}
   .float-classic .qqgroup-img{width:159px}.float-flat .qqgroup-img{width:152px}
 }
 @media only screen and (min-width:768px) and (max-width:992px){
-  .provider-group{
-  	max-width:100%!important;margin-right:5px;
-  	.provider-wrap{flex-wrap: wrap;align-items: center;justify-content:center}
-  }
+	.provider-group{
+		max-width:100%!important;margin-right:5px;
+		.provider-wrap{flex-wrap: wrap;align-items: center;justify-content:center}
+		&[class*='-banks']{
+			.provider-wrap{
+				justify-content:space-evenly;
+			}
+		}
+	}
 }
 @media only screen and (min-width:640px) and (max-width:768px){}
 @media only screen and (min-width:320px) and (max-width:639px){}
-
-
 @media only screen and (min-width:1024px) and (max-width:1366px){.float-flat .qqgroup-img{width:175px}}
 @media only screen and (min-width:950px) and (max-width:1280px){.float-flat .qqgroup-img{width:185px}}
 @media only screen and (min-width:900px) and (max-width:1440px){.float-flat .qqgroup-img{width:178px}.float-flat .p_logo{height:180px}.float-flat .p_logo:nth-of-type(1){height:160px}}

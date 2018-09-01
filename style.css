@@ -2635,453 +2635,6 @@ a:hover, a:active {
   font-size: 1.564rem;
   margin-bottom: 45px;
 }
-.qqlanding-sites .provider-group {
-  position: relative;
-  flex-direction: column;
-  flex: auto;
-  display: -ms-flexbox;
-  display: flex;
-  /**
-   * prov-cat
-   *----------*/
-  /**
-   * prov-default
-   *--------------*/
-}
-.qqlanding-sites .provider-group[class*='-category'], .qqlanding-sites .provider-group[class*='-default'] {
-  border: 1px solid #7f7f7f;
-  border-radius: 5px;
-  margin-bottom: 18px;
-  padding: 8px 10px;
-}
-.qqlanding-sites .provider-group[class*='-license'] .pagcor {
-  background-position: 0 0;
-  width: 140px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .bet368 {
-  width: 86px;
-  background-position: 3px -302px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .opus {
-  width: 138px;
-  background-position: 5px -2001px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .onework {
-  width: 105px;
-  background-position: 3px -1517px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .gameplay {
-  width: 130px;
-  background-position: 5px -1420px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .gd {
-  background-position: 5px -960px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .gp {
-  background-position: 5px -906px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .allbet {
-  width: 90px;
-  background-position: 5px -1117px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .ag {
-  width: 90px;
-  background-position: 3px -1317px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .og {
-  width: 58px;
-  background-position: 5px -1904px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .royal {
-  width: 90px;
-  background-position: 5px -1218px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .playtech {
-  width: 105px;
-  background-position: 3px -731px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .ebet {
-  width: 105px;
-  background-position: -167px -41px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .spadegaming {
-  width: 150px;
-  background-position: 3px -648px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .ttg {
-  width: 110px;
-  background-position: 5px -2267px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .gameos {
-  width: 120px;
-  background-position: 5px -2189px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .mg {
-  width: 130px;
-  background-position: 3px -2100px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .betsoft {
-  width: 90px;
-  background-position: 3px -2436px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .habanero {
-  width: 120px;
-  background-position: 3px -1611px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .isin4d {
-  background-position: 3px -1706px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .txbet {
-  background-position: 3px -394px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .idn {
-  width: 92px;
-  background-position: 3px -806px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .xo {
-  width: 116px;
-  background-position: 3px -2345px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .txbet4d {
-  width: 100px;
-  background-position: -158px -144px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .txbet6d {
-  width: 100px;
-  background-position: -158px -240px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .lottery {
-  width: 140px;
-  height: 40px;
-  background-position: 3px -160px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .saba {
-  background-position: 3px -209px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .ok368 {
-  background-position: -158px -352px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .pragmaticplay {
-  background-position: -158px -412px;
-  width: 90px;
-}
-.qqlanding-sites .provider-group[class*='-category'] .thegamingplatform {
-  background-position: -158px -556px;
-  width: 127px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .allbet {
-  width: 90px;
-  background-position: 5px -1066px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .ag {
-  width: 90px;
-  background-position: 3px -1268px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .bet368 {
-  width: 86px;
-  background-position: 3px -256px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .betsoft {
-  width: 90px;
-  background-position: 3px -2392px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .ebet {
-  width: 105px;
-  background-position: -167px 4px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .gameplay {
-  width: 130px;
-  background-position: 5px -1368px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .gd {
-  background-position: 5px -960px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .gp {
-  background-position: 5px -855px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .gameos {
-  width: 120px;
-  background-position: 5px -2189px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .habanero {
-  width: 120px;
-  background-position: 3px -1562px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .isin4d {
-  background-position: 3px -1655px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .idn {
-  width: 92px;
-  background-position: 3px -770px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .lottery {
-  width: 140px;
-  height: 40px;
-  background-position: 3px -117px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .mg {
-  width: 130px;
-  background-position: 3px -2053px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .og {
-  width: 58px;
-  background-position: 5px -1853px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .ok368 {
-  background-position: -158px -291px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .opus {
-  width: 138px;
-  background-position: 5px -1953px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .onework {
-  width: 105px;
-  background-position: 3px -1468px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .playtech {
-  width: 105px;
-  background-position: 3px -693px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .pragmaticplay {
-  background-position: -158px -412px;
-  width: 90px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .royal {
-  width: 90px;
-  background-position: 5px -1167px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .saba {
-  background-position: 3px -209px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .spadegaming {
-  width: 150px;
-  background-position: 3px -600px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .ttg {
-  width: 110px;
-  background-position: 5px -2231px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .txbet {
-  background-position: 3px -351px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .txbet4d {
-  width: 100px;
-  background-position: -158px -95px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .txbet6d {
-  width: 100px;
-  background-position: -158px -192px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .thegamingplatform {
-  background-position: -158px -506px;
-  width: 125px;
-}
-.qqlanding-sites .provider-group[class*='-default'].gray .xo {
-  width: 116px;
-  background-position: 3px -2306px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .allbet {
-  width: 90px;
-  background-position: 5px -1066px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .ag {
-  width: 90px;
-  background-position: 3px -1268px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .bet368 {
-  width: 86px;
-  background-position: 3px -301px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .betsoft {
-  width: 90px;
-  background-position: 3px -2392px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .ebet {
-  width: 98px;
-  background-position: -160px -5px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .gameplay {
-  width: 130px;
-  background-position: 5px -1368px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .gd {
-  background-position: 5px -960px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .gp {
-  width: 95px;
-  background-position: 5px -855px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .gameos {
-  width: 120px;
-  background-position: 5px -2189px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .habanero {
-  width: 120px;
-  background-position: 3px -1562px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .isin4d {
-  background-position: 3px -1655px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .idn {
-  width: 92px;
-  background-position: 3px -770px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .lottery {
-  width: 140px;
-  height: 40px;
-  background-position: 3px -117px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .mg {
-  width: 130px;
-  background-position: 3px -2053px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .og {
-  width: 58px;
-  background-position: 5px -1853px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .ok368 {
-  width: 70px;
-  background-position: -173px -250px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .opus {
-  width: 138px;
-  background-position: 5px -1953px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .onework {
-  width: 105px;
-  background-position: 3px -1468px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .playtech {
-  width: 105px;
-  background-position: 3px -693px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .pragmaticplay {
-  background-position: -158px -353px;
-  width: 90px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .royal {
-  width: 90px;
-  background-position: 5px -1167px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .saba {
-  background-position: 3px -209px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .spadegaming {
-  width: 150px;
-  background-position: 3px -600px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .ttg {
-  width: 110px;
-  background-position: 5px -2231px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .txbet {
-  width: 50px;
-  background-position: -3px -395px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .txbet4d {
-  width: 100px;
-  background-position: -158px -95px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .txbet6d {
-  width: 100px;
-  background-position: -158px -171px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .thegamingplatform {
-  background-position: -158px -457px;
-  width: 125px;
-}
-.qqlanding-sites .provider-group[class*='-default'].white .xo {
-  width: 116px;
-  background-position: 3px -2306px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .provider-item > i {
-  background: url("../qqlanding/assets/images/providers/ico_bank.png") no-repeat;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .bank_bri {
-  background-position: 3px -406px;
-  width: 115px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .bca {
-  background-position: 3px -308px;
-  width: 85px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .bni {
-  background-position: 3px -188px;
-  width: 83px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .danamon {
-  background-position: 3px -73px;
-  width: 135px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-indo .mandiri {
-  background-position: 3px -495px;
-  width: 98px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .affinbank {
-  background-position: 3px -3604px;
-  width: 125px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .alliance_bank {
-  background-position: 3px -3688px;
-  width: 120px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .ambank_group {
-  background-position: 3px -3773px;
-  width: 120px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .bankrakyat {
-  background-position: 3px -3856px;
-  width: 135px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .citibank {
-  background-position: 3px -3940px;
-  width: 120px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .hongleong_bank {
-  background-position: 3px -4023px;
-  width: 127px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .hsbc {
-  background-position: 3px -4107px;
-  width: 120px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .ocbc_bank {
-  background-position: 3px -4190px;
-  width: 120px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .rhb {
-  background-position: 3px -4277px;
-  width: 90px;
-}
-.qqlanding-sites .provider-group[class*='-banks'] .bank-malay .uob {
-  background-position: 3px -4361px;
-  width: 98px;
-}
-.qqlanding-sites .provider-title {
-  position: absolute;
-  top: -12px;
-  background: #e6e6e6;
-  color: #222222;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin: 0;
-  padding: 2px 7px;
-  text-transform: uppercase;
-}
-.qqlanding-sites .provider-item {
-  cursor: pointer;
-  display: inline;
-  float: left;
-  margin-bottom: 3px;
-}
-.qqlanding-sites .provider-item > i {
-  display: block;
-  font-size: 0;
-  height: 38px;
-  width: 80px;
-  text-indent: -999999px;
-}
 .qqlanding-sites #Fpost .card-overlay {
   color: #fff;
 }
@@ -4306,6 +3859,8 @@ object {
   .provider-item {
     float: none;
     display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
   }
 
   .desk {
@@ -4319,6 +3874,9 @@ object {
     align-items: center;
     justify-content: center;
   }
+  .provider-group[class*='-banks'] .provider-wrap {
+    justify-content: inherit;
+  }
 }
 @media only screen and (min-width: 996px) and (max-width: 1198px) {
   .provider-group {
@@ -4328,6 +3886,9 @@ object {
   .provider-group .provider-wrap {
     display: initial;
     justify-content: initial;
+  }
+  .provider-group[class*='-banks'] .provider-wrap {
+    justify-content: inherit;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -4339,6 +3900,10 @@ object {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+  .provider-group[class*='-banks'] .provider-wrap {
+    display: flex;
+    justify-content: space-between;
   }
 
   .float-classic .qqgroup-img {
@@ -4358,6 +3923,9 @@ object {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+  .provider-group[class*='-banks'] .provider-wrap {
+    justify-content: space-evenly;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {

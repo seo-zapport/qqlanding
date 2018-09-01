@@ -42,27 +42,28 @@
 					<?php endif; ?>
 					<?php if ( have_rows('banks', 'option')  ): ?>
 						<?php while ( have_rows('banks', 'option')  ): the_row(); ?>
-							<?php $country = get_sub_field( 'b_country', 'option' );?>
+							<?php $country = get_sub_field( 'b_country', 'option' );
+								switch ($country) {
+									case 'my': $country_class = 'malaysia'; break;
+									case 'th': $country_class = 'thailand'; break;
+									case 'vn': $country_class = 'vietnam'; break;
+									case 'zh': $country_class = 'china'; break;
+									default: $country_class = 'indo'; break;
+								} 
+							?>
 							<div class="col-12 col-md-9 col-lg-9">
-								<div class="provider-group prov-banks">
+								<div class="provider-group prov-banks flex-wrap">
 									<div class="widget-title-container">
 										<h4 class="widget-title"><?php echo get_sub_field( 'b_title','option' ); ?></h4>
 									</div>
 									<?php if ( get_sub_field( 'b_allow_bank','option' ) == true ): ?>
 										<?php if ( have_rows( 'b_item','option' ) ): ?>
-											<div class="provider-wrap prov-banks">
+											<div class="provider-wrap bank-<?php echo $country_class; ?> flex-wrap">
 												<?php while ( have_rows('b_item', 'option')  ): the_row(); ?>
-													<?php switch ($country) {
-														case 'my':
-															$country_class = 'malay';
-															$logo = get_sub_field( 'bb_logo_my', 'option' );
-															break;
-														default:
-															$country_class = 'indo';
-															$logo = get_sub_field( 'bb_logo_id', 'option' );
-															break;
-													} ?>
-													<span class="provider-item bank-<?php echo $country_class; ?>"><i class="<?php echo $logo; ?>"><?php the_sub_field('bb__title','option'); ?></i></span>
+													<?php 
+													$val = 'bb_logo_' . $country;
+													$logo = get_sub_field( $val, 'option' ); ?>
+													<span class="provider-item"><i class="<?php echo $logo; ?>"><?php the_sub_field('bb__title','option'); ?></i></span>
 												<?php endwhile; ?>
 											</div>
 										<?php endif; ?>
