@@ -4,6 +4,7 @@
  *
  * @package QQLanding
  */
+if ( ! defined('ABSPATH')) exit;
 
 /**
  * Adds custom classes to the array of body classes.

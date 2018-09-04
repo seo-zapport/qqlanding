@@ -6,7 +6,7 @@
  *
  * @package QQLanding
  */
-
+if ( ! defined('ABSPATH')) exit;
 get_header();
 
 $blogs_sidebar_layout = qqlanding_grid_sets( 'both','blog');

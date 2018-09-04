@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* ================================= */
 /* =========== Slider ============== */
@@ -157,3 +158,5 @@
  * Media Query
  *-------------------------*/
 @media (min-width: 768px){.provider-group[class*='-default']:nth-child(1){max-width: 32%;}.provider-group[class*='-default']:nth-child(2){max-width: 68%;}.provider-group[class*='-default']:nth-child(3){max-width: inherit;}.provider-group[class*='-default']:nth-child(4){max-width: 75%;}.provider-group[class*='-default']:nth-child(5){max-width: 25%;}.provider-group[class*='-default']:nth-child(6){max-width: 25%;}.provider-group[class*='-default']:nth-child(7){max-width: 10%;}}
+=======
+>>>>>>> 6bdf7dd5a92ee5341e7e29bfd804b45be29e3ddc

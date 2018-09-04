@@ -59,10 +59,9 @@
 							<div class="qqgroup-img boxWrap"><?php floating_banner('fb__item'); ?></div>
 						<?php endif; ?>
 					<?php else: ?>
-
-					    <?php if ( have_rows( 'fb__item', 'option' ) ):  ?>
-						    <?php while( have_rows( 'fb__item', 'option' ) ): the_row();
-								$link_alt = get_sub_field( 'fb_link_url' );
+					    <?php if ( have_rows( 'fb__items', 'option' ) ):  ?>
+						    <?php while( have_rows( 'fb__items', 'option' ) ): the_row();
+								$link_alt = get_sub_field( 'fb__item_url' );
 								$img_title = get_sub_field( 'fb__item_title' );
 								$img_link = get_sub_field( 'fb__item_img_url' );
 								$link_target = get_sub_field( 'fb__item_link_target' );
@@ -87,7 +86,6 @@
 									$item_link .= '<img src="' .  $img_link . '" class="' . $link_class . '" title="' . esc_html( $img_title ) . '" alt="' . esc_html( $img_title ) . '" >';
 								$item_link .= '</a>';?>
 								<div><?php echo $item_link; ?></div>
-
 							<?php endwhile; // slider?>
 						<?php endif; // slider?>
 
@@ -96,9 +94,9 @@
 			<?php endwhile; ?>
 		<?php endif; ?>
 	<?php if ($layout == 'slider'): ?>
-		</div>
+		</div><!--Desktop-slider-->
 	<?php endif; ?>
-</section><!--Desktop-->
+</section>
 
 <?php if ( $layout == 'float' ): ?>
 	<?php if ( have_rows('fb_layout_settings', 'option') ): ?>
@@ -149,8 +147,8 @@
 		        	<?php endif; ?><!--Mobile Float-->
 
 			     </div>
-			</section>
+			</section><!--Mobile Float-->
 
 		<?php endwhile; ?><!--Mobile Float-->
 	<?php endif; ?><!--Mobile Float-->
-<?php endif; ?><!--Mobile Float-->
+<?php endif; ?>

@@ -38,7 +38,6 @@ endif;
     margin-top: 10%;
 	margin-left : auto;
 	margin-right : auto;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -190,21 +189,19 @@ endif; //end slider layout condition
 			$count++;
 		endwhile;
 	endif;
-?>	
 
-
-
-
-<?php 
+/**
+ * #Theme Default
+ *---------------------*/
 if ( have_rows( 'th_fonts', 'option' ) ) :
 	while ( have_rows( 'th_fonts', 'option' ) ) : the_row();
-	$font_family = get_sub_field('thr_font_family');
+	$font_family = qqlanding_fontfam( get_sub_field('thr_font_family') );
 	$font_size = get_sub_field('thr_font_size');
 	$font_style = get_sub_field('thr_font_style');
 	$font_weight = get_sub_field('thr_font_weight');
 
 		if ( get_sub_field('th_entry_item') == 'body' ) : ?>
-		body.qqlanding-sites{
+			body.qqlanding-sites{
 		<?php elseif( get_sub_field('th_entry_item') == 'content' ): ?>
 			.page-content,.entry-content,.entry-summary,.comment-content{
 		<?php elseif( get_sub_field('th_entry_item') == 'meta' ): ?>
@@ -214,12 +211,11 @@ if ( have_rows( 'th_fonts', 'option' ) ) :
 		<?php else: ?>
 			.page-entry-title,.archive-page-title,.search-page-title,.entry-title{
 		<?php endif; ?>
-			font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
+			font-family:<?php echo $font_family; ?>;font-size: <?php echo $font_size; ?>px; font-style: <?php echo $font_style; ?>; font-weight: <?php echo $font_weight; ?>; }	
 	<?php endwhile;
 endif;
 
 $theme_color = get_field( 'th_color_scheme','option' ); //theme color
-
 /**
  * #Theme Color
  *---------------------*/
@@ -322,6 +318,26 @@ if ( have_rows( 'pvs_settings', 'option' ) ) :
 		.provider-group[class*='-category']{<?php if ( $pvs_border ): ?>border-color: <?php echo $pvs_border; ?> !important;<?php else: ?>border-color: #7f7f7f;<?php endif; ?>}.provider-group .provider-item > i{ background: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/providers/ico_reco-<?php echo $bg_class; ?>.png') no-repeat; }
 	<?php endwhile;
 endif;
+
+
+/**
+ * #Featured Post
+ *---------------------*/
+if ( have_rows( 'th_presets', 'option') ) :
+	while ( have_rows( 'th_presets', 'option') ) : the_row();
+
+		$repeat = get_sub_field('fp_repeat_bg_img');
+		$scroll = get_sub_field('fp_scroll_with_page');
+		$screen = get_sub_field('fp_presets');
+		$position = get_sub_field('fp_image_position');
+		$image_size = get_sub_field('fp_image_size');
+
+		$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size); ?>
+		#Fpost{<?php if ( get_field( 'fp_bg_attr','option' ) == 'bg-color' ): ?>background-color: <?php echo get_field('fp_bg_color','option'); ?>;<?php else: ?>background-image: url(<?php echo get_field('fp_bg_image','option'); ?>);<?php echo $bg_attr; ?><?php endif; ?>}
+
+	<?php endwhile;	
+endif;
+
 
 
 /**

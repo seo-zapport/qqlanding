@@ -7,6 +7,8 @@
  * @package QQLanding
  */
 
+if ( ! defined('ABSPATH')) exit;
+
 if ( ! function_exists( 'qqlanding_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -119,9 +121,11 @@ function qqlanding_scripts() {
 
 	wp_enqueue_style( 'qqlanding-owl-carousel', get_template_directory_uri() . '/assets/css/owl.carousel.css', 'v2.3.4' );
 
+	wp_enqueue_style( 'qqlanding-assets', get_template_directory_uri() . '/assets/css/__assets.css', 'v0.0.1', true );
+
 	wp_enqueue_style( 'qqlanding-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.js', array('jquery'), 'v2.3.4', true );
+	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), 'v2.3.4' );
 
 	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery'), 'v4.1.1', true );
 
@@ -198,4 +202,3 @@ require_once get_template_directory() . '/inc/require.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

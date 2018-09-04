@@ -1149,159 +1149,17 @@
 	}
 
 
-	
-	//Page : Front Page
-
-	#Fproviders{
-		.provider-group{
-			position:relative;
-			flex-direction:column;
-			flex:auto;
-			display:-ms-flexbox;
-			display:flex;
-			&[class*='-category'],
-			&[class*='-default']{
-				border:1px solid $color__7f;
-				border-radius:5px;
-				margin-bottom:18px;
-				padding:8px 10px;
-			}
-			&[class*='-license']{
-				.pagcor{
-					background-position:0 0;width:140px;
-				}
-			}
-
-			/**
-			 * prov-cat
-			 *----------*/
-			&[class*='-category']{
-				.bet368{width:86px;background-position:3px -302px;}
-				.opus{width:138px;background-position:5px -2001px;}
-				.onework{width:105px;background-position:3px -1517px;}
-				.gameplay{width:130px;background-position:5px -1420px;}
-				.gd{background-position:5px -960px;}
-				.gp{background-position:5px -906px;}
-				.allbet{width:90px;background-position:5px -1117px;}
-				.ag{width:90px;background-position:3px -1317px;}
-				.og{width:58px;background-position:5px -1904px;}
-				.royal{width:90px;background-position:5px -1218px;}
-				.playtech{width:105px;background-position:3px -731px;}
-				.ebet{width:105px;background-position:-167px -41px;}
-				.spadegaming{width:150px;background-position:3px -648px;}
-				.ttg{width:110px;background-position:5px -2267px;}
-				.gameos{width:120px;background-position:5px -2189px;}
-				.mg{width:130px;background-position:3px -2100px;}
-				.betsoft{width:90px;background-position:3px -2436px;}
-				.habanero{width:120px;background-position:3px -1611px;}
-				.isin4d{background-position:3px -1706px;}
-				.txbet{background-position:3px -394px;}
-				.idn{width:92px;background-position:3px -806px;}
-				.xo{width:116px;background-position:3px -2345px;}
-				.txbet4d{width:100px;background-position:-158px -144px;}
-				.txbet6d{width:100px;background-position:-158px -240px;}
-				.lottery{width:140px;height:40px;background-position:3px -160px;}
-				.saba{background-position:3px -209px;}
-				.ok368{background-position:-158px -352px;}
-				.pragmaticplay{background-position:-158px -412px;width: 90px;}
-				.thegamingplatform{background-position:-158px -556px;width: 127px;}
-			}
-
-			/**
-			 * prov-default
-			 *--------------*/
-			 &[class*='-default']{
-			 	&.gray{
-					.allbet{width:90px;background-position:5px -1066px;}
-					.ag{width:90px;background-position:3px -1268px;}
-					.bet368{width:86px;background-position:3px -256px;}
-					.betsoft{width:90px;background-position:3px -2392px;}
-					.ebet{width:105px;background-position:-167px 4px;}
-					.gameplay{width:130px;background-position:5px -1368px;}
-					.gd{background-position:5px -960px;}
-					.gp{background-position:5px -855px;}
-					.gameos{width:120px;background-position:5px -2189px;}
-					.habanero{width:120px;background-position:3px -1562px;}
-					.isin4d{background-position:3px -1655px;}
-					.idn{width:92px;background-position:3px -770px;}
-					.lottery{width:140px;height:40px;background-position:3px -117px;}
-					.mg{width:130px;background-position:3px -2053px;}
-					.og{width:58px;background-position:5px -1853px;}
-					.ok368{background-position:-158px -291px;}
-					.opus{width:138px;background-position:5px -1953px;}
-					.onework{width:105px;background-position:3px -1468px;}
-					.playtech{width:105px;background-position:3px -693px;}
-					.pragmaticplay{background-position:-158px -412px;width: 90px;}
-					.royal{width:90px;background-position:5px -1167px;}
-					.saba{background-position:3px -209px;}
-					.spadegaming{width:150px;background-position:3px -600px;}
-					.ttg{width:110px;background-position:5px -2231px;}
-					.txbet{background-position:3px -351px;}
-					.txbet4d{width:100px;background-position:-158px -95px;}
-					.txbet6d{width:100px;background-position:-158px -192px;}
-					.thegamingplatform{background-position:-158px -506px;width: 125px;}
-					.xo{width:116px;background-position:3px -2306px;}
-			 	}
-			 	&.white{
-					.allbet{width:90px;background-position:5px -1066px;}
-					.ag{width:90px;background-position:3px -1268px;}
-					.bet368{width:86px;background-position:3px -301px;}
-					.betsoft{width:90px;background-position:3px -2392px;}
-					.ebet{width:98px;background-position:-160px -5px;}
-					.gameplay{width:130px;background-position:5px -1368px;}
-					.gd{background-position:5px -960px;}
-					.gp{width: 95px;background-position:5px -855px;}
-					.gameos{width:120px;background-position:5px -2189px;}
-					.habanero{width:120px;background-position:3px -1562px;}
-					.isin4d{background-position:3px -1655px;}
-					.idn{width:92px;background-position:3px -770px;}
-					.lottery{width:140px;height:40px;background-position:3px -117px;}
-					.mg{width:130px;background-position:3px -2053px;}
-					.og{width:58px;background-position:5px -1853px;}
-					.ok368{width: 70px;background-position:-173px -250px;}
-					.opus{width:138px;background-position:5px -1953px;}
-					.onework{width:105px;background-position:3px -1468px;}
-					.playtech{width:105px;background-position:3px -693px;}
-					.pragmaticplay{background-position:-158px -353px;width: 90px;}
-					.royal{width:90px;background-position:5px -1167px;}
-					.saba{background-position:3px -209px;}
-					.spadegaming{width:150px;background-position:3px -600px;}
-					.ttg{width:110px;background-position:5px -2231px;}
-					.txbet{width:50px;background-position:-3px -395px;}
-					.txbet4d{width:100px;background-position:-158px -95px;}
-					.txbet6d{width:100px;background-position:-158px -171px;}
-					.thegamingplatform{background-position:-158px -457px;width: 125px;}
-					.xo{width:116px;background-position:3px -2306px;}
-			 	}
-			 }
-
+	&.qqland-front{
+		.site-content{
+    		padding-top: 0;
 		}
-		.provider-title{
-			position: absolute;
-			top: -12px;
-			background: $color__e6;
-			color: $color__22;
-			@include font-size(0.875);
-			font-weight: 600;
-			margin: 0;
-			padding: 2px 7px;
-			text-transform: uppercase;
-		}
-		.provider-item{
-			cursor: pointer;
-			display: inline;
-			float: left;
-			margin-bottom: 3px;
-			> i{
-				display: block;
-				font-size: 0;
-				height: 38px;
-				width: 80px;
-				text-indent: -999999px;
-			}
+		.sec-entry-title{
+			@include font-size(1.564);
+     		margin-bottom: 45px;
 		}
 	}
-
+	
+	//Page : Front Page
 	#Fpost{
 		.card-overlay{
 			color: $color__white;
@@ -1341,7 +1199,10 @@
 		figure{
 			margin: 0;
 		}
-		.owl-carousel{
+	}
+	.owl-post,
+	.banner-slider{
+		&.owl-carousel{
 			.owl-item{
 				> div {
 				  cursor: pointer;
@@ -1362,20 +1223,68 @@
 					}
 				}
 			}
-			/* .owl-dots{
+			.owl-dots{
+				margin-top:30px;
 				text-align: center;
-				position: fixed;
-				bottom: 5px;
-				width: 100%;
-				-webkit-backface-visibility: hidden;
-				-moz-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				background-color: red;	
-				&.active{
-					background-color: yellow;
+				-webkit-tap-highlight-color: transparent;
+				.owl-dot{
+					display: inline-block;
+					outline:none;
+					zoom: 1;
+					span{
+						width: 30px;
+						height: 3px;
+						margin: 5px 7px;
+						background: $color__d6;
+						display: block;
+						-webkit-backface-visibility: visible;
+						transition: opacity .2s ease;
+						border-radius: 30px;
+						-webkit-user-select: none; /* Safari 3.1+ */
+						-moz-user-select: none; /* Firefox 2+ */
+						-ms-user-select: none; /* IE 10+ */
+						user-select: none; /* Standard syntax */
+					}
+					&.active,
+					&:hover{
+						span{
+							background-color: $color__7f;
+						}
+					}
 				}
-			} */
+			}
+			.owl-nav{
+				.owl-prev,
+				.owl-next{
+					-webkit-user-select: none; /* Safari 3.1+ */
+					-moz-user-select: none; /* Firefox 2+ */
+					-ms-user-select: none; /* IE 10+ */
+					user-select: none; /* Standard syntax */
+					> i{
+						font-size: 2em;
+					}
+				}
+				button{
+					background-color:transparent;
+					color: #869791;
+					display: inline-block;
+					font-size: 40px;
+					margin: 0;
+					line-height: 300px;
+					outline:none;
+					padding: 0 60px !important;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					zoom: 1;
+				}
+				.owl-prev{
+					left:0;
+				}
+				.owl-next{
+					right:0;
+				}			
+			}
 		}
 	}
 

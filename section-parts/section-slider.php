@@ -15,9 +15,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div id="banner-static-feature" class="site-content container">
 				<div class="banner-static-content">	
 					<?php if( have_rows('slider_item_r', 'option') ): the_row(); 
+<<<<<<< HEAD
 						
 							$hidemob = content_img_hide(get_sub_field('slide_hide_image'));
 					?>
+=======
+							$hidemob = content_img_hide(get_sub_field('slide_hide_image'));?>
+>>>>>>> 6bdf7dd5a92ee5341e7e29bfd804b45be29e3ddc
 
 
 						<?php if(get_sub_field('content_settings')['slider_content_size'] == 'full' ): ?>

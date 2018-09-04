@@ -7,6 +7,8 @@
  * @package QQLanding
  */
 
+if ( ! defined('ABSPATH')) exit;
+
 if ( ! function_exists( 'qqlanding_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
