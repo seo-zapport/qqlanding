@@ -69,19 +69,19 @@ jQuery(document).on('click', '.owl-item>div', function() {
 });
 
 
+jQuery( document ).ready(function() {
+    function init_carousel() {
+                H = +(jQuery(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
+                
+                if(H <= 768){
+                    jQuery('.carousel-item').css('height', H+200 + 'px');    
+                }
+      
 
-function init_carousel() {
-            H = +(jQuery(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
-            
-            if(H <= 768){
-                jQuery('.carousel-item').css('height', H+200 + 'px');    
             }
-  
-
-        }
-window.onload = init_carousel;
-init_carousel();
-
+    window.onload = init_carousel;
+    init_carousel();
+});
 /**
  * Banner
  *------------------*/

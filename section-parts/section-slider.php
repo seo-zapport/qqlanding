@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div id="banner-static-feature" class="site-content container">
 				<div class="banner-static-content">	
 					<?php if( have_rows('slider_item_r', 'option') ): the_row(); 
-						echo get_sub_field('slide_hide_image','option');
+						
 							$hidemob = content_img_hide(get_sub_field('slide_hide_image'));
 					?>
 
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						
 								<div class="col-xs-12 col-sm-12 col-md-12 text-white">
 
-								<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content')); ?>
+								<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images')); ?>
 								
 								<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
 
@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									if(get_sub_field('content_settings')['slider_content_position'] == "left"):	
 											echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
 									else:
-											 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
+											 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'));
 											 echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); 
 
 									endif; 
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<div class="<?php if(get_sub_field('content_settings')['slider_content_position'] == "right"): echo $hidemob; else: echo 'col-xs-12 col-sm-12'; endif ?> col-md-6 text-white">
 									<?php 
 										if(get_sub_field('content_settings')['slider_content_position'] == "left"):	
-												 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
+												 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'));
 												 echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); 
 										else:
 												echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
@@ -119,7 +119,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		        <div class="carousel-item<?php if($count == '0'){echo ' active';}else{echo '';} ?> view-<?php echo $count; ?>">
 		            <div class="carousel-caption caro-slide-<?php echo $count; ?>">
 		               	<div class="col-xs-12 col-sm-12 col-md-12 text-white">
-								<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content')); ?>
+								<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'slide-'.$count,get_sub_field('content_slider_images')); ?>
 								<?php echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); ?>
 						</div>
 		            </div>
@@ -136,7 +136,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				    			if(get_sub_field('content_settings')['slider_content_position'] == "left"):	
 				    					echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
 				    			else:
-				    					 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
+				    					 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'slide-'.$count,get_sub_field('content_slider_images'));
 				    					 echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); 
 
 				    			endif; 
@@ -146,7 +146,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				    	<div class="<?php if(get_sub_field('content_settings')['slider_content_position'] == "right"): echo $hidemob; else: echo 'col-xs-12 col-sm-12'; endif ?> col-md-6 text-white">
 				    			<?php 
 				    				if(get_sub_field('content_settings')['slider_content_position'] == "left"):	
-				    						 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
+				    						 echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'slide-'.$count,get_sub_field('content_slider_images'));
 				    						 echo qqlanding_btn_entersite(get_sub_field('enter_site_button')['btn_link'], get_sub_field('enter_site_button')['btn_image']['url'],get_sub_field('enter_site_button')['link_relationship'],get_sub_field('enter_site_button')['link_target']  ); 
 				    				else:
 				    						echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
