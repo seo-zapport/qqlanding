@@ -37,7 +37,7 @@
         owlBanner = $('.banner-slider');
 
     owlPost.children().each( function( index ) { $(this).attr( 'data-position', index ); /* NB: .attr() instead of .data()*/ });
-    owlBanner.children().each( function( index ) { $(this).attr( 'data-position', index ); /* NB: .attr() instead of .data()*/ });
+    //owlBanner.children().each( function( index ) { $(this).attr( 'data-position', index ); /* NB: .attr() instead of .data()*/ });
 
     owlPost.owlCarousel({
         center:true,
@@ -67,11 +67,15 @@
         }
     });
 
+    $(document).on('click', '.owl-item>div', function() {
+      owlPost.trigger('to.owl.carousel', $(this).data( 'position' ) );
+    });
+
     owlBanner.owlCarousel({
         center:true,
         loop:true,
         item:4,
-        margin:10,
+        margin:0,
         autoplay:_autoplay,
         autoplayTimeout: 1900,
         nav:_nav,
@@ -95,15 +99,13 @@
         }
     });
 
-    $(document).on('click', '.owl-item>div', function() {
-      owlPost.trigger('to.owl.carousel', $(this).data( 'position' ) );
-    });
-
-    $(document).on('click', '.owl-item>div', function() {
+    /*$(document).on('click', '.owl-item>div', function() {
       owlBanner.trigger('to.owl.carousel', $(this).data( 'position' ) );
+    });*/
+
+   $('.carousel').carousel({
+        interval: _interval
     });
-
-
     /**
      * Float classic
      *------------------*/
@@ -139,14 +141,15 @@
         $('.m-button-ad i').toggleClass('fa-chevron-down fa-chevron-up');
     });
 
+    // function init_carousel() {
+    //     H = +($(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
+
+    //     if(H <= 768){
+    //         $('.carousel-item').css('height', H+200 + 'px');    
+    //     }
+    // }
+    // window.onload = init_carousel;
+    // init_carousel();
+
+
 })(jQuery);
-
-function init_carousel() {
-    H = +(jQuery(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
-
-    if(H <= 768){
-        jQuery('.carousel-item').css('height', H+200 + 'px');    
-    }
-}
-window.onload = init_carousel;
-init_carousel();

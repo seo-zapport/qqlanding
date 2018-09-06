@@ -419,10 +419,10 @@ endif;
 
 /* Blog URL */
 function force_relative_url(){
-// get host name from URL
-preg_match("/^(http:\/\/)?([^\/]+)/i",home_url(), $matches);
-$host = $matches[2];
-// get last two segments of host name
-preg_match("/[^\.\/]+\.[^\.\/]+$/", $host, $matches);
-return strtoupper($matches[0]);
+	// get host name from URL
+	preg_match("/^(http:\/\/)?([^\/]+)/i",home_url(), $matches);
+	$host = $matches[2];
+	// get last two segments of host name
+	preg_match("/[^\.\/]+\.[^\.\/]+$/", $host, $matches);
+	return strtoupper($matches[0]);
 }

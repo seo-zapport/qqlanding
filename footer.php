@@ -28,9 +28,11 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 							<?php if ( get_sub_field( 'lcs_allow','option' ) === true ): ?>
 								<div class="col-12 col-md-3 col-lg-3">
 									<div class="provider-group prov-license">
-										<div class="widget-title-container">
-											<h4 class="widget-title"><?php echo get_sub_field( 'lcs_title','option' ); ?></h4>
-										</div>
+										<?php if ( ! empty( get_sub_field( 'lcs_title','option' ) ) ): ?>
+											<div class="widget-title-container">
+												<h4 class="widget-title"><?php echo get_sub_field( 'lcs_title','option' ); ?></h4>
+											</div>
+										<?php endif; ?>
 										<div class="provider-wrap">
 											<span class="provider-item "><i class="pagcor">pagcor</i></span>
 										</div>
@@ -52,9 +54,11 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 							?>
 							<div class="col-12 col-md-9 col-lg-9">
 								<div class="provider-group prov-banks flex-wrap">
-									<div class="widget-title-container">
-										<h4 class="widget-title"><?php echo get_sub_field( 'b_title','option' ); ?></h4>
-									</div>
+									<?php if ( ! empty( get_sub_field( 'b_title','option' ) ) ): ?>
+										<div class="widget-title-container">
+											<h4 class="widget-title"><?php echo get_sub_field( 'b_title','option' ); ?></h4>
+										</div>
+									<?php endif; ?>
 									<?php if ( get_sub_field( 'b_allow_bank','option' ) == true ): ?>
 										<?php if ( have_rows( 'b_item','option' ) ): ?>
 											<div class="provider-wrap bank-<?php echo $country_class; ?> flex-wrap">
@@ -71,9 +75,9 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 							</div>
 						<?php endwhile; ?>
 					<?php endif; ?>
-
 				</div>
 			</div>
+			<?php if ( is_active_sidebar( 'left-footer-sidebar' ) || is_active_sidebar( 'middle-footer-sidebar' ) || is_active_sidebar( 'middle-footer-sidebar' ) ) : ?>
 			<div class="site-socker py-3">
 				<div class="row">
 					<div class="col-md-4">
@@ -87,6 +91,8 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 					</div>
 				</div>
 			</div>
+<?php endif; ?>
+
 			<div class="site-info">
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'qqlanding' ) ); ?>">
 					<?php
@@ -102,7 +108,7 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 			</div><!-- .site-info -->
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
-	<?php if ( get_field( 'th_layout', 'option' ) == 'wide'): ?>
+	<?php if ( is_home() || is_page_template( 'template-page.php' ) && get_field( 'th_layout', 'option' ) === 'box'): ?>
 		</div>
 	<?php endif;?> <!--if wide/box only-->
 </div><!-- #page -->

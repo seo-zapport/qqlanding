@@ -26,3 +26,6 @@ h5 {
 h6 {
   @include font-size(0.8125);
 }
+.bold{
+	font-weight: Bold;
+}

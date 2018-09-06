@@ -1,16 +1,17 @@
 .qqlanding-sites{
 	margin:0;
 	 //* No Affix
-	&.qqland-qq288{ .navbar{background:$qq288_default} }
-	&.qqland-qq188{ .navbar{background:$qq188_default} }
-	&.qqland-qq101{ .navbar{background:$qq101_default} }
-	&.qqland-qq1x2{ .navbar{background:$qq1x2_blue_ribbon} }
-	&.qqland-qq724{ .navbar{background:$qq724_default} }
-	&.qqland-qqfortuna{ .navbar{background:$qqfortuna_default} }
-	&.qqland-qq801{ .navbar{background:$qq801_default} }
-	&.qqland-qq882{ .navbar{background:$qq882_default} }
-	&.qqland-qq808{ .navbar{background:$qq808_default} }
-	&.qqland-qq828{ .navbar{background:$qq828_default} }
+	&.qqland-qq288{ .color_288{ color:$qq288_blue_stone;} .navbar{background:$qq288_default} }
+	&.qqland-qq188{ .color_188{ color:$qq188_reso_blue;} .navbar{background:$qq188_default} }
+	&.qqland-qq101{ .color_101{ color:$qq101_celtic;} .navbar{background:$qq101_default} }
+	&.qqland-qq1x2{ .color_1x2{ color:$qq1x2_default;} .navbar{background:$qq1x2_blue_ribbon} }
+	&.qqland-qq724{ .color_724{ color:$color__fd;} .navbar{background:$qq724_default} }
+	&.qqland-qqfortuna{ .color_fortuna{ color:$qqfortuna_temptress;} .navbar{background:$qqfortuna_default} }
+	&.qqland-qq801{ .color_801{ color:$qq801_regal_blue;} .navbar{background:$qq801_default} }
+	&.qqland-qq882{ .color_882{ color:$qq882_violet;} .navbar{background:$qq882_default} }
+	&.qqland-qq808{ .color_808{ color:$qq808_di_serria;} .navbar{background:$qq808_default} }
+	&.qqland-qq828{ .color_828{ color:$qq828_fire;} .navbar{background:$qq828_default} }
+	&.qqland-custom{ .color_custom{ color:$color__22;} }
 
 	//* Affix
 	&.qqland-affix{
@@ -1148,11 +1149,7 @@
 		}
 	}
 
-
 	&.qqland-front{
-		.site-content{
-    		padding-top: 0;
-		}
 		.sec-entry-title{
 			@include font-size(1.564);
      		margin-bottom: 45px;
@@ -1160,6 +1157,60 @@
 	}
 	
 	//Page : Front Page
+	#banner{
+		margin-bottom:2em;
+		max-height: 100%;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		#banner-static{
+			width: 100%;
+			&:after{
+				content: '';
+				display:block;
+				height: 100%;
+				position: absolute;
+				top:0;
+				left:0;
+				bottom:0;
+				right:0;
+				width: 100%;
+				z-index: -1;
+			}
+		}
+		.banner-static-content{
+			padding-top: 2.5em;
+			padding-bottom: 2.5em;
+		}
+		.slider-filters{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			z-index: -1;
+		}
+		#banner-slider{
+			.carousel-caption{
+				position: static;
+				bottom:0;
+				left:0;
+			}
+			[class*='slider-views-']{
+				&.slider-filter{
+					&:after{
+						content: '';
+						display:block;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						width: 100%;
+						z-index: -1;
+					}
+				}
+			}
+		}
+	}
+
 	#Fpost{
 		.card-overlay{
 			color: $color__white;

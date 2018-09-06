@@ -12,10 +12,10 @@ get_header();
 		<?php
 			do_action( 'qqlanding_page_before_section_parts' );
 			if ( ! has_action( 'qqlanding_page_section_parts' ) ) :
-
+				/*'provider','content-a','post',*/
 				 $value = array(
 
-					'banner','provider','content-a','post',
+					'provider',
 
 				); //items
 

@@ -3,7 +3,7 @@
  * This is were all of the functions for the 
  * ACF settings are created.
  */
-if ( ! defined('ABSPATH')) exit;
+/*if ( ! defined('ABSPATH')) exit;
 
 // 1. customize ACF path
 add_filter('acf/settings/path', 'my_acf_settings_path');
@@ -3926,13 +3926,865 @@ acf_add_local_field_group(array(
 			'endpoint' => 0,
 		),
 		array(
+			'key' => 'field_5b8ccb8df1eaa',
+			'label' => 'Static Image Settings',
+			'name' => 'slider_item_static',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5b74eeaa29852',
+						'operator' => '==',
+						'value' => 'static',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'slider_item_static',
+			),
+			'layout' => 'block',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5b8ccbcdf1eab',
+					'label' => 'Image',
+					'name' => 'slide_image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slide_image',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'medium_large',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => 'jpg,png',
+				),
+				array(
+					'key' => 'field_5b8ccbe0f1eac',
+					'label' => 'Color',
+					'name' => 'slide_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-color',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slide_color',
+					),
+					'default_value' => '#000000',
+				),
+				array(
+					'key' => 'field_5b8ccbe6f1ead',
+					'label' => 'Presets',
+					'name' => 'slide_presets',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '100',
+						'class' => '',
+						'id' => 'slide_presets',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'fill-screen' => 'Fill Screen',
+						'fit-to-screen' => 'Fit to Screen',
+						'repeat' => 'Repeat',
+						'custom' => 'Custom',
+					),
+					'default_value' => array(
+						0 => 'default',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 1,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5b8ccbedf1eae',
+					'label' => 'Image Position',
+					'name' => 'slide_image_position',
+					'type' => 'radio',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b8ccbe6f1ead',
+								'operator' => '==',
+								'value' => 'fill-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b8ccbe6f1ead',
+								'operator' => '==',
+								'value' => 'fit-to-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b8ccbe6f1ead',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b8ccbe6f1ead',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'slide_image_position',
+					),
+					'choices' => array(
+						'left top' => 'Left Top',
+						'center top' => 'Center Top',
+						'right top' => 'Right Top',
+						'left center' => 'Left Center',
+						'center center' => 'Center Center',
+						'right center' => 'Right Center',
+						'left bottom' => 'Left Bottom',
+						'center bottom' => 'Center Bottom',
+						'right-bottom' => 'Right Bottom',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => 'left top',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
+				),
+				array(
+					'key' => 'field_5b8ccbf5f1eaf',
+					'label' => 'Repeat Background Image',
+					'name' => 'slide_repeat_bg_img',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b8ccbe6f1ead',
+								'operator' => '==',
+								'value' => 'fit-to-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b8ccbe6f1ead',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'slide_repeat_bg_img',
+					),
+					'message' => 'Enable Repeat Background Image',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b8ccbf7f1eb0',
+					'label' => 'Scroll with Page',
+					'name' => 'slide_scroll_with_page',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b8ccbe6f1ead',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b8ccbe6f1ead',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'slide_scroll_with_page',
+					),
+					'message' => 'Enable Scroll Page',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b8ccbfaf1eb1',
+					'label' => 'Image Size',
+					'name' => 'slide_image_size',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74efcc29857',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5b8ccbe6f1ead',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'slide_image_size',
+					),
+					'choices' => array(
+						'auto' => 'Original',
+						'contain' => 'Fit to Screen',
+						'cover' => 'Fill Screen',
+					),
+					'default_value' => array(
+						0 => 'auto',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 1,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5b8ccbfcf1eb2',
+					'label' => 'Title',
+					'name' => 'slider_title',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => 'Title Slider',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5b8ccbfef1eb3',
+					'label' => 'Content',
+					'name' => 'slider_content',
+					'type' => 'textarea',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'maxlength' => '',
+					'rows' => '',
+					'new_lines' => '',
+				),
+				array(
+					'key' => 'field_5b8ccc01f1eb4',
+					'label' => 'Content Settings',
+					'name' => 'content_settings',
+					'type' => 'group',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'layout' => 'table',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5b8ccc01f1eb5',
+							'label' => 'Content Size',
+							'name' => 'slider_content_size',
+							'type' => 'radio',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '25',
+								'class' => '',
+								'id' => '',
+							),
+							'choices' => array(
+								'full' => 'Full',
+								'half' => 'Half',
+							),
+							'allow_null' => 0,
+							'other_choice' => 0,
+							'default_value' => 'full',
+							'layout' => 'horizontal',
+							'return_format' => 'value',
+							'save_other_choice' => 0,
+						),
+						array(
+							'key' => 'field_5b8ccc01f1eb6',
+							'label' => 'Content Position',
+							'name' => 'slider_content_position',
+							'type' => 'select',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b8ccc01f1eb5',
+										'operator' => '==',
+										'value' => 'half',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '25',
+								'class' => '',
+								'id' => '',
+							),
+							'choices' => array(
+								'left' => 'Left',
+								'right' => 'Right',
+							),
+							'default_value' => array(
+								0 => 'left',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 0,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5b8ccc01f1eb7',
+							'label' => 'Text Align',
+							'name' => 'slider_text_align',
+							'type' => 'select',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '25',
+								'class' => '',
+								'id' => '',
+							),
+							'choices' => array(
+								'center' => 'Center',
+								'left' => 'Left',
+								'right' => 'Right',
+							),
+							'default_value' => array(
+								0 => 'left',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 0,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+					),
+				),
+				array(
+					'key' => 'field_5b8ccc03f1eb8',
+					'label' => 'Content Slider Images',
+					'name' => 'content_slider_images',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b7cbeae82249',
+								'operator' => '==',
+								'value' => 'half',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'medium',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_5b8ccc06f1eb9',
+					'label' => 'Images Position Property',
+					'name' => 'slid_position_property',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b7cbeae82249',
+								'operator' => '==',
+								'value' => 'half',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b8ccc08f1eba',
+					'label' => 'Hide Image',
+					'name' => 'slide_hide_image',
+					'type' => 'true_false',
+					'instructions' => 'Hide Image when it\'s Mobile Platform',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5b8ccc0bf1ebb',
+					'label' => 'Position',
+					'name' => 'slider_img_position',
+					'type' => 'group',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b8ccc06f1eb9',
+								'operator' => '==',
+								'value' => '1',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'layout' => 'table',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5b8ccc0bf1ebc',
+							'label' => 'Top',
+							'name' => 'slid_position_top',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => 'px',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b8ccc0bf1ebd',
+							'label' => 'Left',
+							'name' => 'slid_position_left',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => 'px',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b8ccc0bf1ebe',
+							'label' => 'Right',
+							'name' => 'slid_position_right',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => 'px',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b8ccc0bf1ebf',
+							'label' => 'Bottom',
+							'name' => 'slid_position_bottom',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => 'px',
+							'maxlength' => '',
+						),
+					),
+				),
+				array(
+					'key' => 'field_5b8ccc0df1ec0',
+					'label' => 'Enter Site Button',
+					'name' => 'enter_site_button',
+					'type' => 'repeater',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'enter_site_button',
+					),
+					'collapsed' => '',
+					'min' => 1,
+					'max' => 2,
+					'layout' => 'table',
+					'button_label' => 'Add button',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5b8ce8f9ba9bc',
+							'label' => 'Track Links',
+							'name' => 'btn_link',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 1,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'btn_link',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b8ce9d3ba9be',
+							'label' => 'Image',
+							'name' => 'btn_image',
+							'type' => 'image',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b8ce96dba9bd',
+										'operator' => '==',
+										'value' => 'image',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'btn_image',
+							),
+							'return_format' => 'array',
+							'preview_size' => 'thumbnail',
+							'library' => 'all',
+							'min_width' => 235,
+							'min_height' => 52,
+							'min_size' => '',
+							'max_width' => 255,
+							'max_height' => 71,
+							'max_size' => '',
+							'mime_types' => 'jpg,png,gif',
+						),
+						array(
+							'key' => 'field_5b8cea40ba9c0',
+							'label' => 'Link Text',
+							'name' => 'btn_text',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b8ce96dba9bd',
+										'operator' => '==',
+										'value' => 'text',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'btn_text',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b8cea90ba9c1',
+							'label' => 'Link Relationship (xfn)',
+							'name' => 'btn_xfn',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'btn_xfn',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b8ceadfba9c2',
+							'label' => 'Link Target',
+							'name' => 'btn_target',
+							'type' => 'select',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'btn_target',
+							),
+							'choices' => array(
+								'_blank' => 'Blank',
+								'_self' => 'Self',
+							),
+							'default_value' => array(
+								0 => '_self',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 0,
+							'return_format' => 'value',
+							'ajax' => 0,
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5b8ce96dba9bd',
+							'label' => 'Buttons Type',
+							'name' => 'btn_type',
+							'type' => 'radio',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'btn_type',
+							),
+							'choices' => array(
+								'image' => 'Image',
+								'text' => 'Text',
+							),
+							'allow_null' => 0,
+							'other_choice' => 0,
+							'default_value' => 'image',
+							'layout' => 'horizontal',
+							'return_format' => 'value',
+							'save_other_choice' => 0,
+						),
+						array(
+							'key' => 'field_5b8cebdfba9c4',
+							'label' => 'Device',
+							'name' => 'btn_device',
+							'type' => 'select',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'choices' => array(
+								'desktop' => 'Desktop',
+								'mobile' => 'Mobile',
+							),
+							'default_value' => array(
+								0 => 'desktop',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 0,
+							'return_format' => 'value',
+							'ajax' => 0,
+							'placeholder' => '',
+						),
+					),
+				),
+			),
+		),
+		array(
 			'key' => 'field_5b7503328dc50',
 			'label' => '',
 			'name' => 'slider_item_r',
 			'type' => 'repeater',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5b74eeaa29852',
+						'operator' => '==',
+						'value' => 'slider',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -3966,7 +4818,7 @@ acf_add_local_field_group(array(
 						'id' => 'slide_image',
 					),
 					'return_format' => 'array',
-					'preview_size' => 'full',
+					'preview_size' => 'medium_large',
 					'library' => 'all',
 					'min_width' => '',
 					'min_height' => '',
@@ -4367,12 +5219,12 @@ acf_add_local_field_group(array(
 						),
 					),
 					'wrapper' => array(
-						'width' => '',
+						'width' => '33.33',
 						'class' => '',
 						'id' => '',
 					),
 					'return_format' => 'array',
-					'preview_size' => 'default',
+					'preview_size' => 'medium',
 					'library' => 'all',
 					'min_width' => '',
 					'min_height' => '',
@@ -4399,7 +5251,7 @@ acf_add_local_field_group(array(
 						),
 					),
 					'wrapper' => array(
-						'width' => '25',
+						'width' => '33.33',
 						'class' => '',
 						'id' => '',
 					),
@@ -4418,7 +5270,7 @@ acf_add_local_field_group(array(
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
-						'width' => '25',
+						'width' => '33.33',
 						'class' => '',
 						'id' => '',
 					),
@@ -4530,96 +5382,198 @@ acf_add_local_field_group(array(
 					),
 				),
 				array(
-					'key' => 'field_5b7f72f0da8f9',
+					'key' => 'field_5b8f3b09720d5',
 					'label' => 'Enter Site Button',
 					'name' => 'enter_site_button',
-					'type' => 'group',
+					'type' => 'repeater',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
-						'id' => '',
+						'id' => 'enter_site_button',
 					),
-					'layout' => 'block',
+					'collapsed' => '',
+					'min' => 1,
+					'max' => 2,
+					'layout' => 'table',
+					'button_label' => 'Add button',
 					'sub_fields' => array(
 						array(
-							'key' => 'field_5b7f731cda8fa',
-							'label' => 'Track Link',
+							'key' => 'field_5b8f3b09720d6',
+							'label' => 'Track Links',
 							'name' => 'btn_link',
-							'type' => 'link',
+							'type' => 'text',
 							'instructions' => '',
 							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array(
 								'width' => '',
 								'class' => '',
-								'id' => '',
+								'id' => 'btn_link',
 							),
-							'return_format' => 'url',
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
 						),
 						array(
-							'key' => 'field_5b7f7365da8fb',
-							'label' => 'Enter Site Image',
+							'key' => 'field_5b8f3b09720d7',
+							'label' => 'Image',
 							'name' => 'btn_image',
 							'type' => 'image',
 							'instructions' => '',
 							'required' => 0,
-							'conditional_logic' => 0,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b8f3b09720db',
+										'operator' => '==',
+										'value' => 'image',
+									),
+								),
+							),
 							'wrapper' => array(
-								'width' => '50',
+								'width' => '',
 								'class' => '',
-								'id' => '',
+								'id' => 'btn_image',
 							),
 							'return_format' => 'array',
-							'preview_size' => 'full',
+							'preview_size' => 'thumbnail',
 							'library' => 'all',
-							'min_width' => '',
-							'min_height' => '',
+							'min_width' => 235,
+							'min_height' => 52,
 							'min_size' => '',
-							'max_width' => '',
-							'max_height' => '',
+							'max_width' => 255,
+							'max_height' => 71,
 							'max_size' => '',
-							'mime_types' => '',
+							'mime_types' => 'jpg,png,gif',
 						),
 						array(
-							'key' => 'field_5b83473cd283b',
-							'label' => 'Link Relationship (XFN)',
-							'name' => 'link_relationship',
-							'type' => 'true_false',
+							'key' => 'field_5b8f3b09720d8',
+							'label' => 'Link Text',
+							'name' => 'btn_text',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b8f3b09720db',
+										'operator' => '==',
+										'value' => 'text',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'btn_text',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b8f3b09720d9',
+							'label' => 'Link Relationship (xfn)',
+							'name' => 'btn_xfn',
+							'type' => 'text',
 							'instructions' => '',
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '25',
+								'width' => '',
 								'class' => '',
-								'id' => '',
+								'id' => 'btn_xfn',
 							),
-							'message' => '',
-							'default_value' => 0,
-							'ui' => 1,
-							'ui_on_text' => '',
-							'ui_off_text' => '',
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
 						),
 						array(
-							'key' => 'field_5b8347b5d283c',
+							'key' => 'field_5b8f3b09720da',
 							'label' => 'Link Target',
-							'name' => 'link_target',
-							'type' => 'true_false',
+							'name' => 'btn_target',
+							'type' => 'select',
 							'instructions' => '',
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '25',
+								'width' => '',
+								'class' => '',
+								'id' => 'btn_target',
+							),
+							'choices' => array(
+								'_blank' => 'Blank',
+								'_self' => 'Self',
+							),
+							'default_value' => array(
+								0 => '_self',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 0,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5b8f3b09720db',
+							'label' => 'Buttons Type',
+							'name' => 'btn_type',
+							'type' => 'radio',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'btn_type',
+							),
+							'choices' => array(
+								'image' => 'Image',
+								'text' => 'Text',
+							),
+							'allow_null' => 0,
+							'other_choice' => 0,
+							'save_other_choice' => 0,
+							'default_value' => 'image',
+							'layout' => 'horizontal',
+							'return_format' => 'value',
+						),
+						array(
+							'key' => 'field_5b8f3b09720dc',
+							'label' => 'Device',
+							'name' => 'btn_device',
+							'type' => 'select',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
 								'class' => '',
 								'id' => '',
 							),
-							'message' => '',
-							'default_value' => 0,
-							'ui' => 1,
-							'ui_on_text' => '',
-							'ui_off_text' => '',
+							'choices' => array(
+								'desktop' => 'Desktop',
+								'mobile' => 'Mobile',
+							),
+							'default_value' => array(
+								0 => 'desktop',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 0,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
 						),
 					),
 				),
@@ -4650,7 +5604,7 @@ acf_add_local_field_group(array(
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
-				'width' => '',
+				'width' => '33.33',
 				'class' => '',
 				'id' => 'slider_layout',
 			),
@@ -4674,7 +5628,7 @@ acf_add_local_field_group(array(
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
-				'width' => '',
+				'width' => '33.33',
 				'class' => '',
 				'id' => 'slider_bg_attr',
 			),
@@ -4688,6 +5642,27 @@ acf_add_local_field_group(array(
 			'layout' => 'horizontal',
 			'return_format' => 'value',
 			'save_other_choice' => 0,
+		),
+		array(
+			'key' => 'field_5b8f1e35d896d',
+			'label' => 'Opacity',
+			'name' => 'slider_opacity',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '33.33',
+				'class' => '',
+				'id' => 'slider_opacity',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => '',
+			'max' => '',
+			'step' => '',
 		),
 		array(
 			'key' => 'field_5b74ef3229854',
@@ -4705,55 +5680,21 @@ acf_add_local_field_group(array(
 			'layout' => 'table',
 			'sub_fields' => array(
 				array(
-					'key' => 'field_5b74ef5029855',
-					'label' => 'Width',
-					'name' => 'slider_width',
-					'type' => 'number',
-					'instructions' => 'Sets the width of the slide',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => 'slider_width',
-					),
-					'default_value' => 1920,
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => 'px',
-					'min' => '',
-					'max' => '',
-					'step' => '',
-				),
-				array(
-					'key' => 'field_5b74ef7929856',
-					'label' => 'Height',
-					'name' => 'slider_height',
-					'type' => 'number',
-					'instructions' => 'Sets the height of the slide',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => 'slider_height',
-					),
-					'default_value' => 420,
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => 'px',
-					'min' => '',
-					'max' => '',
-					'step' => '',
-				),
-				array(
 					'key' => 'field_5b74f0a7aaf3e',
 					'label' => 'Autoplay',
 					'name' => 'slider_autoplay',
 					'type' => 'true_false',
 					'instructions' => 'Indicate whether or not autoplay will enabled',
 					'required' => 0,
-					'conditional_logic' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74eeaa29852',
+								'operator' => '==',
+								'value' => 'slider',
+							),
+						),
+					),
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
@@ -4772,7 +5713,15 @@ acf_add_local_field_group(array(
 					'type' => 'true_false',
 					'instructions' => 'Indicate whether the arrow buttons will be created.',
 					'required' => 0,
-					'conditional_logic' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74eeaa29852',
+								'operator' => '==',
+								'value' => 'slider',
+							),
+						),
+					),
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
@@ -4791,7 +5740,15 @@ acf_add_local_field_group(array(
 					'type' => 'true_false',
 					'instructions' => 'Indicate whether the navigation dots will be created.',
 					'required' => 0,
-					'conditional_logic' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b74eeaa29852',
+								'operator' => '==',
+								'value' => 'slider',
+							),
+						),
+					),
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
@@ -4812,7 +5769,15 @@ acf_add_local_field_group(array(
 			'type' => 'group',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5b74eeaa29852',
+						'operator' => '==',
+						'value' => 'slider',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -4840,25 +5805,6 @@ acf_add_local_field_group(array(
 					'ui_off_text' => 'No',
 				),
 				array(
-					'key' => 'field_5b74ffe2ab9e0',
-					'label' => 'Fade Duration',
-					'name' => 'slider_animation_fade_duration',
-					'type' => 'text',
-					'instructions' => 'Sets the duration of fade effect',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => 'slider_animation_fade_duration',
-					),
-					'default_value' => 500,
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
 					'key' => 'field_5b75000aab9e1',
 					'label' => 'Slider Animation Duration',
 					'name' => 'slider_animation_duration',
@@ -4877,24 +5823,253 @@ acf_add_local_field_group(array(
 					'append' => '',
 					'maxlength' => '',
 				),
+			),
+		),
+		array(
+			'key' => 'field_5b909889cad91',
+			'label' => 'Device Settings',
+			'name' => 'rwd_settings',
+			'type' => 'group',
+			'instructions' => 'Indicate the height & width of your slider in every devices.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'rwd_settings',
+			),
+			'layout' => 'table',
+			'sub_fields' => array(
 				array(
-					'key' => 'field_5b750029ab9e2',
-					'label' => 'Height Animation Duration',
-					'name' => 'slider_height_animation_duration',
-					'type' => 'text',
-					'instructions' => 'Sets the duration of the height animation',
+					'key' => 'field_5b74ef5029855',
+					'label' => 'Desktop Width',
+					'name' => 'slider_width',
+					'type' => 'number',
+					'instructions' => 'Sets the desktop width of the slide',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
-						'id' => 'slider_animation_duration',
+						'id' => 'slider_width',
 					),
-					'default_value' => 700,
+					'default_value' => 1920,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5b74ef7929856',
+					'label' => 'Desktop Height',
+					'name' => 'slider_height',
+					'type' => 'number',
+					'instructions' => 'Sets the desktop height of the slide',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slider_height',
+					),
+					'default_value' => 420,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5b9099428e674',
+					'label' => 'Tablet Width',
+					'name' => 'slider_tablet_width',
+					'type' => 'number',
+					'instructions' => 'Sets the tablet width of the slide',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slider_tablet_width',
+					),
+					'default_value' => 1920,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5b90993e8e672',
+					'label' => 'Tablet Height',
+					'name' => 'slider_tablet_height',
+					'type' => 'number',
+					'instructions' => 'Sets the tablet height of the slide',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slider_tablet_height',
+					),
+					'default_value' => 420,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5b9099448e675',
+					'label' => 'Mobile Width',
+					'name' => 'slider_mobile_width',
+					'type' => 'number',
+					'instructions' => 'Sets the mobile width of the slide',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slider_mobile_width',
+					),
+					'default_value' => 1920,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5b9099408e673',
+					'label' => 'Mobile Height',
+					'name' => 'slider_mobile_height',
+					'type' => 'number',
+					'instructions' => 'Sets the mobile height of the slide',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'slider_mobile_height',
+					),
+					'default_value' => 420,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5b8cefab2b003',
+			'label' => 'Filter Fields',
+			'name' => 'filter_fields',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'filter_fields',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => 'Add Css Filter',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5b8cefff2b004',
+					'label' => 'Selection',
+					'name' => 'filter_selection',
+					'type' => 'select',
+					'instructions' => 'Choose your filter elements.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'filter_selection',
+					),
+					'choices' => array(
+						'blur' => 'Blur',
+						'brightness' => 'Brightness',
+						'contrast' => 'Contrast',
+						'grayscale' => 'Grayscale',
+						'hue-rotate' => 'Hue rotate',
+						'invert' => 'Invert',
+						'opacity' => 'Opacity',
+						'saturate' => 'Saturate',
+						'sepia' => 'Sepia',
+					),
+					'default_value' => array(
+						0 => 'blur',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5b8cf0622b005',
+					'label' => 'Values',
+					'name' => 'filter_values',
+					'type' => 'number',
+					'instructions' => 'Indicate number only',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'filter_values',
+					),
+					'default_value' => '',
 					'placeholder' => '',
 					'prepend' => '',
 					'append' => '',
-					'maxlength' => '',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5b8cf08b2b006',
+					'label' => 'Dimension',
+					'name' => 'filter_dimension',
+					'type' => 'select',
+					'instructions' => 'Choose your dimension property.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'filter_dimension',
+					),
+					'choices' => array(
+						'none' => 'No Value',
+						'%' => 'Percentage',
+						'deg' => 'Degree',
+						'px' => 'Pixel',
+					),
+					'default_value' => array(
+						0 => 'none',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
 				),
 			),
 		),
@@ -4928,16 +6103,18 @@ acf_add_local_field_group(array(
 					),
 					'choices' => array(
 						'arial' => 'Arial',
-						'big-noodle' => 'Big Noodle Titling',
+						'arial_rounded_mt_std_regular' => 'Arial Arounded',
+						'big_noodle_titling' => 'Big Noodle Titling',
 						'helvetica' => 'Helvetica',
-						'notosans-bold' => 'NotoSans-Bold',
-						'notosans-bolditalic' => 'NotoSans-BoldItalic',
-						'notosans-italic' => 'NotoSans-Italic',
-						'notosans-regular' => 'NotoSans-Regular',
+						'noto_sans_bold' => 'NotoSans-Bold',
+						'noto_sans_bold_italic' => 'NotoSans-BoldItalic',
+						'noto_sans_italic' => 'NotoSans-Italic',
+						'noto_sans_regular' => 'NotoSans-Regular',
 						'sans-serif' => 'Sans-serif',
+						'segoe_ui' => 'Segoe UI',
 					),
 					'default_value' => array(
-						0 => 'notosans-regular',
+						0 => 'noto_sans_regular',
 					),
 					'allow_null' => 0,
 					'multiple' => 1,
@@ -5342,7 +6519,7 @@ acf_add_local_field_group(array(
 	'description' => 'Display the settings for Template: front page of qqlanding',
 ));
 
-endif;
+endif;*/
 
 
 if ( function_exists( 'acf_add_options_page' ) ) :
@@ -5403,21 +6580,67 @@ function qqlanding_schema( $class ){
 	return $class;
 }
 
+function qqlanding_text_color($color){
+	switch ( $color ) {
+		case 'qq188': $color = 'color_188 '; break;
+		case 'qq101': $color = 'color_101 '; break;
+		case 'qq1x2': $color = 'color_1x2 '; break;
+		case 'qq724': $color = 'color_724 '; break;
+		case 'qqfortuna': $color = 'color_fortuna '; break;
+		case 'qq801': $color = 'color_801 '; break;
+		case 'qq882': $color = 'color_882 '; break;
+		case 'qq808': $color = 'color_808 '; break;
+		case 'qq828': $color = 'color_828 '; break;
+		case 'custom': $color = 'color_custom '; break;
+		default: $color = 'color_288 '; break;
+	}
+	return $color;
+}
+
 function qqlanding_fontfam( $font ){
 
-	$sliderfont =  array();
-	$countfontfam = count( $font );
+	if ( ! empty($font) ) {
+		$sliderfont =  array();
 
-	$countwhile = '0';
-	while($countwhile < $countfontfam){
-		$sliderfont[] = $font[$countwhile];
-		$countwhile++;
+		$countfontfam = count( $font );
+
+		$countwhile = '0';
+		while($countwhile < $countfontfam){
+			$sliderfont[] = $font[$countwhile];
+			$countwhile++;
+		}
+
+		$font = join(',',$sliderfont);
+
+		return $font;
 	}
-
-	$font = join(',',$sliderfont); 
-
-return $font;
 }
+
+/**
+ * Return the filter functions from Theme settings
+ *-------------------------------------------------*/
+function qqlanding_filters( $field, $func, $val, $dim){
+	if ( have_rows( $field , 'option' ) ) :
+		$filter_field = get_field( $field, 'option' );
+		//$output = array();
+		foreach ($filter_field as $value) {
+			$dim_val = ( $value[$dim] == 'none' ) ? ' ' : $dim ;
+			$output[] = $value[$func] . '(' . $value[$val] . '' . @$value[$dim_val] . ')';
+		}
+	endif;
+	$rep_args = str_replace(array('[', ']'), '', htmlspecialchars(json_encode($output), ENT_NOQUOTES));
+	$rep_args2 = str_replace('"', '', $rep_args);
+	$fiter_output = str_replace(',', ' ', $rep_args2);?>
+
+	-webkit-filter:<?php echo $fiter_output; ?>;
+	-moz-filter:<?php echo $fiter_output; ?>;
+	-ms-filter:<?php echo $fiter_output; ?>;
+	-o-filter:<?php echo $fiter_output; ?>;
+	filter:<?php echo $fiter_output; ?>;
+
+<?php }
+
+
 
 function qqlanding_preset_acf($repeat, $scroll, $screen, $position, $image_size){
 
@@ -5436,7 +6659,7 @@ function qqlanding_preset_acf($repeat, $scroll, $screen, $position, $image_size)
 	 if($screen =='fill-screen'):
 	 	$presets = "background-size: cover;background-position:".$position."; background-repeat:no-repeat;background-attachment: fixed;";
 	 elseif($screen =='fit-to-screen'):
-	 	$presets = "background-size: contain;background-position:".$position."; background-repeat:".$repeat_preset.";background-attachment: fixed;";	
+	 	$presets = "background-size: contain;background-position:".$position."; background-repeat:".$repeat_preset.";background-attachment: fixed;";
 	 elseif($screen =='repeat'):
 	 	$presets = "background-size: auto;background-position:".$position."; background-repeat:repeat;".$scroll_preset;
 	 elseif($screen =='custom'):
@@ -5466,28 +6689,22 @@ function qqlanding_sliding_bg($slider_attrib, $slide_img, $slide_color){
 
 
 
-function qqlanding_btn_entersite($link, $btn_image, $link_rel, $link_target){
+function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn, $link_target, $btn_dev){
 
-	 	if($btn_image){
-	 		$imgbutton = $btn_image;
-	 	}else{
-	 		$imgbutton = get_template_directory_uri().'/assets/images/default/enter.png';
-	 	}
-	 	if($link_rel == 'yes'){
-	 		$linkRel = 'nofollow';
-	 	}else{
-	 		$linkRel = 'follow';
-	 	}
-	 	if($link_target == 'yes'){
-	 		$linktar = '_blank';
-	 	}else{
-	 		$linktar = '_self';
-	 	}
-	
-	   $entersite = '<a href="'.$link.'" rel="'.$linkRel.'" target="'.$linktar.'"><img class="img-responsive enter-site" src="'.$imgbutton.'" alt="ENTER SITE" title="ENTER SITE"></a>';
-	 
-	   return $entersite;
+	$links = ($link) ? do_shortcode( $link ) : esc_url( home_url( '/' ) ); //links
+	$imgbutton = ($btn_image['url']) ? $btn_image['url'] : get_template_directory_uri().'/assets/images/default/enter.png'; //image
+	if( ! empty($link_xfn)){ $linkRel = $link_xfn; }else{$linkRel = '';} //link relationship
+	$linktar = ($link_target == '_blank') ? '_blank' : '_self'; //Target
+	$device = ( $btn_dev == 'desktop' ) ? 'd-none d-md-block d-lg-block' : 'd-block d-md-none d-lg-none'; //Device Item
 
+	if ( $type == 'image' ) {
+		$item = '<img class="img-responsive enter-site" src="' . $imgbutton . '" alt="' . $btn_image['alt'] . '" title="' . $btn_image['title'] . '">';
+	}else{
+		$item = $btn_text;
+	}
+	$entersite = '<a href="' . $links . '" rel="'.$linkRel.'" target="'.$linktar.'" class="' . $device . ' mt-3">' . $item . '</a>';
+
+	return $entersite;
 } 
 
  function fpcontent_img_position($img,$class){
@@ -5514,7 +6731,7 @@ function qqlanding_btn_entersite($link, $btn_image, $link_rel, $link_target){
  		$content .= '<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="'.get_permalink().'"/>';			
  		$content .= '<header class="entry-header">';	
  		//$content .= '<h3 itemprop="headline">'.get_field("fa_title").'</h3>';	
- 		$content .= '<h3 class="h2" itemprop="headline">'.$mmk_title.'</h3>';	
+ 		$content .= '<h3 class="h2 mt-0" itemprop="headline">'.$mmk_title.'</h3>';	
  		$content .= '<!-- .AMP  -->';	
  		$content .= '<meta itemprop="author" content="'.get_the_author().'">';	
  		$content .= '<meta itemprop="datePublished" content="'.get_the_time('c').'">';	
@@ -5588,6 +6805,7 @@ function qqlanding_owl_carousel(){ ?>
 <?php
 	$appearance = get_field( 'fp_slider_appearance_group', 'option');
 	$_appearance = get_field( 'fb_slider_appearance_group', 'option');
+	$boot_appearance = get_field( 'slider_animations_group', 'option');
 
 	//post settings
 	$autoplay = $appearance['slider_autoplay'];
@@ -5598,6 +6816,9 @@ function qqlanding_owl_carousel(){ ?>
 	$_autoplay = $_appearance['slider_autoplay'];
 	$_nav = $_appearance['slider_arrows'];
 	$_dots = $_appearance['slider_nav_dots'];
+
+	//bootstrap carousel
+	$interval = $boot_appearance['slider_animation_duration'];
 ?>
 <script type="text/javascript">
 	//post
@@ -5609,6 +6830,8 @@ function qqlanding_owl_carousel(){ ?>
 	var _autoplay = '<?php echo $_autoplay; ?>',
 		_nav = '<?php echo $_nav; ?>',
 		_dots = '<?php echo $_dots; ?>';
+
+	var _interval = <?php echo $interval;?>;
 </script>
 <?php }
 add_action( 'wp_footer','qqlanding_owl_carousel' );
@@ -5642,10 +6865,6 @@ function content_img_postion($position_conditon, $top, $right, $left, $bottom) {
  
 function content_img_hide($hide){
 
-	if($hide == "yes"){
-		$hideclass = "d-none d-sm-block";
-	}else{
-		$hideclass = "col-xs-12 col-sm-12";
-	}
+	$hideclass = ($hide == true) ? 'd-none d-lg-block' : 'd-block';
 	return $hideclass;
 }

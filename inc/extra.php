@@ -212,7 +212,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 						$html_output .= '<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><span itemprop="' . $schema_name . '">' . get_the_title() . '</span></li>';
 					}else{
 
-						$html_output .= '<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="2"><a href="' . get_permalink() . '" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">' . get_the_title() . '</span></li>';
+						$html_output .= '<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="2"><a href="' . get_permalink() . '" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">' . get_the_title() . '</span></a></li>';
 					}
 				elseif ( is_tag() ) :
 
