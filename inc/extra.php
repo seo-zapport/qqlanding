@@ -112,7 +112,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 
 					$html_output .= sprintf('<li class="' . $breadcrumb__item_class . '" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><a title="' . get_the_time( 'F' ) . '" href="%1$s" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">%2$s</span></a>',get_month_link( get_the_time( 'Y' ), get_the_time( 'm' ) ), get_the_time( 'F' ) ,'</li>'); //Monthly
 
-					$html_output .= sprintf('<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="4"><a title="' . get_the_time( 'd' ) . '" href="%1$s" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">' . get_the_time( 'd' ) . '</span></a>',get_day_link( get_the_time( 'Y' ), get_the_time( 'm' ), get_the_time( 'd' )) ,'</li>');
+					$html_output .= sprintf('<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="4"><a title="' . get_the_time( 'd' ) . '" href="'.get_day_link( get_the_time( 'Y' ), get_the_time( 'm' ), get_the_time( 'd' )).'" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">' . get_the_time( 'd' ) . '</span></a></li>');
 				
 				elseif ( is_month() ) :
 					$html_output .= sprintf('<li class="' . $breadcrumb__item_class . '" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="2"><a title="' . get_the_time( 'Y' ) . '" href="%1$s" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">%2$s</span></a>',get_year_link( get_the_time( 'Y' ) ), get_the_time( 'Y' ) );	 //Yearly
@@ -181,7 +181,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 						 if ( !empty( $last_category ) ) {
 						 	 $html_output .= $cat_display;
 
-							$html_output .= '<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><a href="'.get_permalink().'" itemprop="item" title="'.get_the_title().'"><span itemprop="' . $schema_name . '">' . get_the_title() . '</span></li>';
+							$html_output .= '<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><a href="'.get_permalink().'" itemprop="item" title="'.get_the_title().'"><span itemprop="' . $schema_name . '">' . get_the_title() . '</span></a></li>';
 
 						 }elseif(!empty( $cat_id )){
 
@@ -195,7 +195,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 					}
 				elseif ( is_category() ) :
 
-					$html_output .= '<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="2"><a href="'.get_category_link(get_cat_ID(single_cat_title( '', false ))).'" itemprop="item" title="'.single_cat_title( '', false ).'"><span itemprop="' . $schema_name . '">' . single_cat_title( '', false ) . '</span></li>';
+					$html_output .= '<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="2"><a href="'.get_category_link(get_cat_ID(single_cat_title( '', false ))).'" itemprop="item" title="'.single_cat_title( '', false ).'"><span itemprop="' . $schema_name . '">' . single_cat_title( '', false ) . '</span></a></li>';
 
 				elseif ( is_page() ) :
 					// Standard page

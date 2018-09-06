@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 /* ================================= */
 /* =========== Slider ============== */
@@ -18,7 +17,6 @@
     margin-top: 10%;
 	margin-left : auto;
 	margin-right : auto;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -141,11 +139,6 @@
 .content-last-img {
 	}
 
-	
-
-
-
-
 
 		#Fproviders{background-color: transparent !important;}
 		.provider-group[class*='-category']{border-color: #ffffff !important;}.provider-group .provider-item > i{ background: url('http://www.qqlocal.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
@@ -158,5 +151,3 @@
  * Media Query
  *-------------------------*/
 @media (min-width: 768px){.provider-group[class*='-default']:nth-child(1){max-width: 32%;}.provider-group[class*='-default']:nth-child(2){max-width: 68%;}.provider-group[class*='-default']:nth-child(3){max-width: inherit;}.provider-group[class*='-default']:nth-child(4){max-width: 75%;}.provider-group[class*='-default']:nth-child(5){max-width: 25%;}.provider-group[class*='-default']:nth-child(6){max-width: 25%;}.provider-group[class*='-default']:nth-child(7){max-width: 10%;}}
-=======
->>>>>>> 6bdf7dd5a92ee5341e7e29bfd804b45be29e3ddc
