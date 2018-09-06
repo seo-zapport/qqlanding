@@ -6707,7 +6707,7 @@ function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn,
 	return $entersite;
 } 
 
- function fpcontent_img_position($img,$class){
+function fpcontent_img_position($img,$class){
 
  		$size = 'medium';
 		$thumb = $img['sizes'][ $size ];
@@ -6754,15 +6754,13 @@ function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn,
 
  		$content = '<article id="post-'.$id_description.'" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">';
  		$content .= '<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="'.get_permalink().'"/>';			
- 		$content .= '<header class="entry-header">';
- 		$content .= '<h3 class="h2 mt-0" itemprop="headline">'.$mmk_title.'</h3>';	
+ 		$content .= '<header class="entry-header">';	
  		$content .= '<h3 class="h2" itemprop="headline">'.$mmk_title.'</h3>';
  		$content .= '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
  		$content .= '<meta itemprop="url" content="'.$imgObj.'">';	
  		$content .= '<meta itemprop="width" content="'.$imgwidth.'"/>';	
  		$content .= '<meta itemprop="height" content="'.$imgheight.'"/>';	
  		$content .= '</div>';	
-
  		$content .= '<!-- .AMP  -->';	
  		$content .= '<meta itemprop="author" content="'.get_the_author().'">';	
  		$content .= '<meta itemprop="datePublished" content="'.get_the_time('c').'">';	

@@ -649,6 +649,24 @@ function qqlanding_customizer_register( $wp_customize ){
 				'panel'		=> 'qqlanding_theme_options'
 			)
 		);
+			//Display Footer
+			$wp_customize->add_setting(
+				'qqlanding_display_footer_option',
+				array(
+					'default' => false,
+					'sanitize_callback' => 'qqlanding_sanitize_checkbox'
+				)
+			);
+			
+			$wp_customize->add_control(
+				'qqlanding_display_footer_option',
+				array(
+					'section' => 'qqlanding_footer_options',
+					'setting' => 'qqlanding_footer_display_settings',
+					'type'	 => 'checkbox',
+					'label' => __( 'Display Footer Site Info?', 'qqlanding' ),
+				)
+			);
 
 			//Footer Settings
 			$wp_customize->add_setting( 'qqlanding_footer_settings',

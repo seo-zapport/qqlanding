@@ -21,7 +21,7 @@
 		?>
 				<div class="col-xs-12 col-sm-12 col-md-12 text-white text-justify">
 					
-						<?php echo fpcontent_content_position(get_field("fb_title"),get_field("fb_content")); ?>
+						<?php echo fpcontent_content_position(get_field('fb_title'),get_field('fb_content'),'mmk-last',get_sub_field('fp_images')); ?>
 
 				</div>
 

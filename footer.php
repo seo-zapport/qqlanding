@@ -91,21 +91,27 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 					</div>
 				</div>
 			</div>
-<?php endif; ?>
+		<?php endif; ?>
 
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'qqlanding' ) ); ?>">
-					<?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'qqlanding' ), 'WordPress' );
-					?>
-				</a>
-				<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'qqlanding' ), 'qqlanding', '<a href="https://github.com/seo-zapport">Zapport SEO Dev</a>' );
-					?>
-			</div><!-- .site-info -->
+			<?php  if(get_theme_mod("qqlanding_display_footer_option") == '1'): ?>
+				<div class="site-info">		
+					<?php if(get_theme_mod('qqlanding_footer_settings')): 
+							echo get_theme_mod('qqlanding_footer_settings');
+					 else: ?>
+					<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'qqlanding' ) );*/ ?>">
+						<?php
+						/* translators: %s: CMS name, i.e. WordPress. */
+						printf( esc_html__( 'Proudly powered by %s', 'qqlanding' ), 'WordPress' );
+						?>
+					</a>
+					<span class="sep"> | </span>
+						<?php
+						/* translators: 1: Theme name, 2: Theme author. */
+						printf( esc_html__( 'Theme: %1$s by %2$s.', 'qqlanding' ), 'qqlanding', '<a href="https://github.com/seo-zapport">Zapport SEO Dev</a>' );
+						?>
+					<?php endif; //end copyright editor?>			
+				</div><!-- .site-info -->
+			<?php endif; //end qqlanding_display_footer_option?>
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
 	<?php if ( is_home() || is_page_template( 'template-page.php' ) && get_field( 'th_layout', 'option' ) === 'box'): ?>
