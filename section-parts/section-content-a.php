@@ -11,7 +11,7 @@
 
 				<div class="col-xs-12 col-sm-12 col-md-12 text-white text-justify">
 					
-					<?php echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content")); ?>
+					<?php echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"),'mmk-first',get_sub_field('fp_images')); ?>
 
 				</div>
 
@@ -22,14 +22,14 @@
 						if(get_sub_field('fp_position') == "left"):	
 								echo fpcontent_img_position(get_sub_field('fp_images'),'first');
 						else:
-								echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"));
+								echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"),'mmk-first',get_sub_field('fp_images'));
 						endif; 
 					?>
 				</div>
 				<div class="<?php if(get_sub_field('fp_position') == "right"): echo $hidemob; else: echo 'col-xs-12 col-sm-12'; endif ?> col-md-6 text-white">
 						<?php 
 							if(get_sub_field('fp_position') == "left"):	
-									echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"));
+									echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"), 'mmk-first',get_sub_field('fp_images'));
 							else:
 									echo fpcontent_img_position(get_sub_field('fp_images'),'first');
 							endif; 

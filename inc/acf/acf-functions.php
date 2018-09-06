@@ -6709,10 +6709,17 @@ function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn,
 
  function fpcontent_img_position($img,$class){
 
+ 		$size = 'medium';
+		$thumb = $img['sizes'][ $size ];
+		$width = $img['sizes'][ $size . '-width' ];
+		$height = $img['sizes'][ $size . '-height' ];
+
+
 		$htmlleft = '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
 		$htmlleft .= '<img src="'.$img['url'].'" alt="'.$img['alt'].'" class="content-'.$class.'-img">';	
-		$htmlleft .= '<meta itemprop="width" content=""/>';	
-		$htmlleft .= '<meta itemprop="height" content=""/>';	
+		$htmlleft .= '<meta itemprop="url" content="'.$img['url'].'">';	
+		$htmlleft .= '<meta itemprop="width" content="'.$width.'"/>';	
+		$htmlleft .= '<meta itemprop="height" content="'.$height.'"/>';	
 		$htmlleft .= '</div>';	
 
  		return $htmlleft;
@@ -6720,33 +6727,58 @@ function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn,
  }
 
  //function fpcontent_content_position(){
- function fpcontent_content_position($mmk_title, $mmk_content){
+ function fpcontent_content_position($mmk_title, $mmk_content, $id_description,$img){
 
-		$logo = get_theme_mod( 'site_logo', '' ); 
+		    $logo = get_theme_mod( 'site_logo', '' ); 
+	
 			if ( !empty( $logo ) ) : 
-			list($width, $height, $type, $attr) = getimagesize($logo);
+			list($width, $height, $type, $attr) = getimagesize($logo);			
  			endif;			
 
- 		$content = '<article id="post-'.get_the_ID().'" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">';
+ 			if($img):
+
+		 		$size = 'medium';
+				$thumb = $img['sizes'][ $size ];
+
+ 				$imgObj = $img['url'];
+ 				$imgwidth = $img['sizes'][ $size . '-width' ];
+ 				$imgheight = $img['sizes'][ $size . '-height' ];
+
+ 			else:
+ 				
+ 				$imgObj = esc_url( $logo );
+ 				$imgwidth = $width;
+ 				$imgheight = $height;
+ 			
+ 			endif;
+
+ 		$content = '<article id="post-'.$id_description.'" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">';
  		$content .= '<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="'.get_permalink().'"/>';			
  		$content .= '<header class="entry-header">';	
+<<<<<<< HEAD
  		//$content .= '<h3 itemprop="headline">'.get_field("fa_title").'</h3>';	
  		$content .= '<h3 class="h2 mt-0" itemprop="headline">'.$mmk_title.'</h3>';	
+=======
+ 		$content .= '<h3 class="h2" itemprop="headline">'.$mmk_title.'</h3>';
+ 		$content .= '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
+ 		$content .= '<meta itemprop="url" content="'.$imgObj.'">';	
+ 		$content .= '<meta itemprop="width" content="'.$imgwidth.'"/>';	
+ 		$content .= '<meta itemprop="height" content="'.$imgheight.'"/>';	
+ 		$content .= '</div>';	
+>>>>>>> 3a8908a5fda9e5f3ffdeffcdccf2b751aebe19da
  		$content .= '<!-- .AMP  -->';	
  		$content .= '<meta itemprop="author" content="'.get_the_author().'">';	
  		$content .= '<meta itemprop="datePublished" content="'.get_the_time('c').'">';	
  		$content .= '<meta itemprop="dateModified" content="'.get_the_modified_time('c').'">';	
  		$content .= '<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">';	
  		$content .= ' <meta itemprop="name" content="'.get_permalink().'"/>';	
- 		
  		$content .= '<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">';	
  		$content .= ' <meta itemprop="url" content="'.esc_url( $logo ).'"/>';	
  		$content .= ' <meta itemprop="width" content="'.$width.'"/>';	
  		$content .= ' <meta itemprop="height" content="'.$height.'"/>';	
  		$content .= '</div>';	
  		$content .= '</header>';	
- 		$content .= '<div itemprop="articleBody" class="entry-content">';	
- 		//$content .= get_field("fa_content");
+ 		$content .= '<div id="content-'.$id_description.'" itemprop="description" class="entry-content">';	
  		$content .= $mmk_content;
  		$content .= '</div><!-- .entry-content -->';
  		$content .='</article>';	

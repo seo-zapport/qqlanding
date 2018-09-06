@@ -101,11 +101,62 @@
 
     /*$(document).on('click', '.owl-item>div', function() {
       owlBanner.trigger('to.owl.carousel', $(this).data( 'position' ) );
+<<<<<<< HEAD
     });*/
 
    $('.carousel').carousel({
         interval: _interval
     });
+=======
+    });
+
+jQuery( document ).ready(function() {
+    function init_carousel() {
+                H = +(jQuery(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
+                
+                if(H <= 768){
+                    jQuery('.carousel-item').css('height', H+200 + 'px');    
+                }
+      
+
+<<<<<<< HEAD
+            }
+    window.onload = init_carousel;
+    init_carousel();
+});
+/**
+ * Banner
+ *------------------*/
+
+var $owl = jQuery('.banner-slider');
+
+$owl.children().each( function( index ) {
+  jQuery(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
+});
+
+$owl.owlCarousel({
+    center: true,
+    items: 5,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    pagination:true,
+    autoplayTimeout: 2500,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items: 1,
+            dotsEach: 1,
+        },
+        600:{
+            items:2,
+            dotsEach: 2,
+        },
+        1000:{
+            items: 5,
+            dotsEach: 5,
+=======
+>>>>>>> 3a8908a5fda9e5f3ffdeffcdccf2b751aebe19da
     /**
      * Float classic
      *------------------*/
@@ -132,6 +183,7 @@
         } else {
             $('.boxWrap').stop(true,false).animate({marginLeft : "-178px"},500);
             $(this).find('i.fa').removeClass('fa-arrow-left').addClass('fa-arrow-right');      
+>>>>>>> 6bdf7dd5a92ee5341e7e29bfd804b45be29e3ddc
         }
         $.data(this, 'clickToggle', ! toggle);
     });
