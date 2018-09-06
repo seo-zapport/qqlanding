@@ -6754,18 +6754,15 @@ function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn,
 
  		$content = '<article id="post-'.$id_description.'" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">';
  		$content .= '<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="'.get_permalink().'"/>';			
- 		$content .= '<header class="entry-header">';	
-<<<<<<< HEAD
- 		//$content .= '<h3 itemprop="headline">'.get_field("fa_title").'</h3>';	
+ 		$content .= '<header class="entry-header">';
  		$content .= '<h3 class="h2 mt-0" itemprop="headline">'.$mmk_title.'</h3>';	
-=======
  		$content .= '<h3 class="h2" itemprop="headline">'.$mmk_title.'</h3>';
  		$content .= '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
  		$content .= '<meta itemprop="url" content="'.$imgObj.'">';	
  		$content .= '<meta itemprop="width" content="'.$imgwidth.'"/>';	
  		$content .= '<meta itemprop="height" content="'.$imgheight.'"/>';	
  		$content .= '</div>';	
->>>>>>> 3a8908a5fda9e5f3ffdeffcdccf2b751aebe19da
+
  		$content .= '<!-- .AMP  -->';	
  		$content .= '<meta itemprop="author" content="'.get_the_author().'">';	
  		$content .= '<meta itemprop="datePublished" content="'.get_the_time('c').'">';	
