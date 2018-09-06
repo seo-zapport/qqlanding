@@ -8,9 +8,8 @@
  *
  * @package QQLanding
  */
-
-?>
-		<?php if ( ! is_front_page() && ! is_home() ): ?>
+if ( ! defined( 'ABSPATH' ) ) die; ?>
+		<?php if ( ! is_page_template( 'template-page.php' ) || is_home() ): ?>
 		</div><!-- .row -->
 		<?php endif; ?>
 	</div><!-- #content -->
@@ -22,16 +21,18 @@
 		<meta itemprop="copyrightHolder" content="<?php echo force_relative_url(); ?>"/>
 
 		<div class="container">
-			<div class="site-bank-wrapper widget py-3 mb-0">
+			<div class="site-bank-wrapper widget py-3">
 				<div class="row">
 					<?php if ( have_rows('licensed_settings', 'option')  ): ?>
 						<?php while ( have_rows('licensed_settings', 'option')  ): the_row(); ?>
 							<?php if ( get_sub_field( 'lcs_allow','option' ) === true ): ?>
 								<div class="col-12 col-md-3 col-lg-3">
 									<div class="provider-group prov-license">
-										<div class="widget-title-container">
-											<h4 class="widget-title"><?php echo get_sub_field( 'lcs_title','option' ); ?></h4>
-										</div>
+										<?php if ( ! empty( get_sub_field( 'lcs_title','option' ) ) ): ?>
+											<div class="widget-title-container">
+												<h4 class="widget-title"><?php echo get_sub_field( 'lcs_title','option' ); ?></h4>
+											</div>
+										<?php endif; ?>
 										<div class="provider-wrap">
 											<span class="provider-item "><i class="pagcor">pagcor</i></span>
 										</div>
@@ -42,27 +43,30 @@
 					<?php endif; ?>
 					<?php if ( have_rows('banks', 'option')  ): ?>
 						<?php while ( have_rows('banks', 'option')  ): the_row(); ?>
-							<?php $country = get_sub_field( 'b_country', 'option' );?>
+							<?php $country = get_sub_field( 'b_country', 'option' );
+								switch ($country) {
+									case 'my': $country_class = 'malaysia'; break;
+									case 'th': $country_class = 'thailand'; break;
+									case 'vn': $country_class = 'vietnam'; break;
+									case 'zh': $country_class = 'china'; break;
+									default: $country_class = 'indo'; break;
+								} 
+							?>
 							<div class="col-12 col-md-9 col-lg-9">
-								<div class="provider-group prov-banks">
-									<div class="widget-title-container">
-										<h4 class="widget-title"><?php echo get_sub_field( 'b_title','option' ); ?></h4>
-									</div>
+								<div class="provider-group prov-banks flex-wrap">
+									<?php if ( ! empty( get_sub_field( 'b_title','option' ) ) ): ?>
+										<div class="widget-title-container">
+											<h4 class="widget-title"><?php echo get_sub_field( 'b_title','option' ); ?></h4>
+										</div>
+									<?php endif; ?>
 									<?php if ( get_sub_field( 'b_allow_bank','option' ) == true ): ?>
 										<?php if ( have_rows( 'b_item','option' ) ): ?>
-											<div class="provider-wrap prov-banks">
+											<div class="provider-wrap bank-<?php echo $country_class; ?> flex-wrap">
 												<?php while ( have_rows('b_item', 'option')  ): the_row(); ?>
-													<?php switch ($country) {
-														case 'my':
-															$country_class = 'malay';
-															$logo = get_sub_field( 'bb_logo_my', 'option' );
-															break;
-														default:
-															$country_class = 'indo';
-															$logo = get_sub_field( 'bb_logo_id', 'option' );
-															break;
-													} ?>
-													<span class="provider-item bank-<?php echo $country_class; ?>"><i class="<?php echo $logo; ?>"><?php the_sub_field('bb__title','option'); ?></i></span>
+													<?php 
+													$val = 'bb_logo_' . $country;
+													$logo = get_sub_field( $val, 'option' ); ?>
+													<span class="provider-item"><i class="<?php echo $logo; ?>"><?php the_sub_field('bb__title','option'); ?></i></span>
 												<?php endwhile; ?>
 											</div>
 										<?php endif; ?>
@@ -71,7 +75,6 @@
 							</div>
 						<?php endwhile; ?>
 					<?php endif; ?>
-
 				</div>
 			</div>
 			<?php if ( is_active_sidebar( 'left-footer-sidebar' ) || is_active_sidebar( 'middle-footer-sidebar' ) || is_active_sidebar( 'middle-footer-sidebar' ) ) : ?>
@@ -88,8 +91,8 @@
 					</div>
 				</div>
 			</div>
-			<?php endif; ?>
-			
+		<?php endif; ?>
+
 			<?php  if(get_theme_mod("qqlanding_display_footer_option") == '1'): ?>
 				<div class="site-info">		
 					<?php if(get_theme_mod('qqlanding_footer_settings')): 
@@ -109,10 +112,9 @@
 					<?php endif; //end copyright editor?>			
 				</div><!-- .site-info -->
 			<?php endif; //end qqlanding_display_footer_option?>
-
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
-	<?php if ( get_field( 'th_layout', 'option' ) == 'wide'): ?>
+	<?php if ( is_home() || is_page_template( 'template-page.php' ) && get_field( 'th_layout', 'option' ) === 'box'): ?>
 		</div>
 	<?php endif;?> <!--if wide/box only-->
 </div><!-- #page -->

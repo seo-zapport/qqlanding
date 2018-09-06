@@ -35,8 +35,11 @@ function theme_site_colors(){
 		$theme_custom_style .= '
 		.qqlanding-sites{
 			color: ' . $theme_text_color . ';
-		}
-		';
+		}';
+	}
+
+	if ( is_page_template( 'template-page.php' ) ) {
+		$theme_custom_style .= '.qqlanding-sites .site-content{padding-top: 0;}';
 	}
 
 	if ( ! empty($theme_custom_style) ) : ?>

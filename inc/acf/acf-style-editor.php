@@ -4,134 +4,104 @@
  */
 
  //Appearance Settings
-if(have_rows('slider_appearance_group', 'option')) :
-	the_row();
-	$slide_width = get_sub_field('slider_width');
-	$slide_height = get_sub_field('slider_height');
+if(have_rows('rwd_settings', 'option')) :
+	while(have_rows('rwd_settings', 'option')) : the_row();
+		$slide_width = get_sub_field('slider_width');
+		$slide_height = get_sub_field('slider_height');
+		$slide_tablet_width = get_sub_field('slider_tablet_width');
+		$slide_tablet_height = get_sub_field('slider_tablet_height');
+		$slide_mobile_width = get_sub_field('slider_mobile_width');
+		$slide_mobile_height = get_sub_field('slider_mobile_height');
+	endwhile;
 endif;
 
 //Fonts Settings
 if(have_rows('slider_fonts', 'option')) :
-	the_row();
-	$slidefontfam = qqlanding_fontfam(get_sub_field('slider_font_family'));
-	$sliderfontsize =  get_sub_field('slider_font_size');
-	$sliderfontstyle =  get_sub_field('slider_font_style');
-	$sliderfontweight =  get_sub_field('slider_font_weight');
+	while(have_rows('slider_fonts', 'option')) : the_row();
+		$slidefontfam = qqlanding_fontfam(get_sub_field('slider_font_family', 'option'));
+		$sliderfontsize =  get_sub_field('slider_font_size', 'option');
+		$sliderfontstyle =  get_sub_field('slider_font_style', 'option');
+		$sliderfontweight =  get_sub_field('slider_font_weight', 'option');
+	endwhile;
 endif;
+
+$filter = get_field( 'filter_fields', 'option' ); /*--filters*/
 ?>
 
 /* ================================= */
 /* =========== Slider ============== */
 /* ================================= */ 
-
-#banner {
+#banner .banner-static-content{
 	font-family: <?php echo $slidefontfam; ?>;
 	font-size: <?php echo $sliderfontsize; ?>px;
 	font-style: <?php echo $sliderfontstyle; ?>;
 	font-weight: <?php echo $sliderfontweight; ?>;
-	width: 100%;
-	height: 100%; 
-	margin-bottom:2em;
-} 
-
-.enter-site {
-    margin-top: 10%;
-	margin-left : auto;
-	margin-right : auto;
 }
 
-@media screen and (min-width: 768px) {
- #banner {
-	height: <?php echo $slide_height; ?>px;
- }
-}
-<?php if(get_field('slider_layout','option') == 'static'): 
+<?php if ( get_field('slider_layout','option') == 'static' ): ?>
+	<?php if ( have_rows( 'slider_item_static', 'option' ) ): ?>
+		<?php while ( have_rows( 'slider_item_static', 'option' ) ): the_row();
+			$bg = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
+			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
+			if ( ! empty($filter) ): ?>
+			.slider-filters{background: <?php echo $bg;?>;<?php echo $presets; ?><?php if ( ! empty( get_field( 'slider_opacity', 'option' ) ) && get_field( 'slider_opacity', 'option' ) != '0' ) : ?>opacity: <?php the_field( 'slider_opacity', 'option' ); ?><?php endif; ?>;}
+			@media screen and (min-width: 960px) {
+				#banner-static,.slider-filters{height: <?php echo $slide_height; ?>px;}
+			}
+			<?php else: ?>
+			<?php if ( empty( get_field( 'slider_opacity', 'option' ) ) || get_field( 'slider_opacity', 'option' ) == '0' ) : ?>#banner-static{background: <?php echo $bg;?>;<?php echo $presets; ?>}<?php endif; ?>
+			<?php if ( ! empty( get_field( 'slider_opacity', 'option' ) ) && get_field( 'slider_opacity', 'option' ) != '0' ) : ?>#banner-static:after{background: <?php echo $bg;?>;<?php echo $presets; ?> opacity: <?php the_field( 'slider_opacity', 'option' ); ?>;}<?php endif; ?>
+			@media screen and (min-width: 960px) {
+				#banner-static{height: <?php echo $slide_height; ?>px;}
+			}
+			<?php endif; ?>
 
- 	if( have_rows('slider_item_r', 'option') ): the_row();
-	 	$background = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
-	  	$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
-	  	$positionslid = content_img_postion(get_sub_field('slid_position_property', 'option'),get_sub_field('slider_img_position')['slid_position_top'],get_sub_field('slider_img_position')['slid_position_right'],get_sub_field('slider_img_position')['slid_position_left'],get_sub_field('slider_img_position')['slid_position_bottom']);
-?>
-#banner-static {
-	background: <?php echo $background;?>;
-	color: #fff;
-	width: 100%;
-	height: <?php echo $slide_height; ?>px;
-	<?php echo $presets; ?>
-}
-
-@media screen and (max-width: 767px) {
- #banner-static {
- 	height: auto;	
-	background-size: cover;
- }
-}
-
-.banner-static-content {
-	margin: 2em 0;
-	<!-- <?php //if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ echo "width: 50%;"; }else{ echo "width: 100%;";  } ?>	 -->
-	<!-- <?php //echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; ?> -->
-	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
-}
-
-.content-slider-img {
-	<?php echo $positionslid; ?>
-
-}
-
-<?php endif; //end slider item
- elseif(get_field('slider_layout','option') == 'slider'): 
-
-	$count = "0";
-	if(have_rows('slider_item_r', 'option')):
-		while(have_rows('slider_item_r', 'option')) : the_row();
- 			$background = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
- 			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
- 			$positionslid = content_img_postion(get_sub_field('slid_position_property', 'option'),get_sub_field('slider_img_position')['slid_position_top'],get_sub_field('slider_img_position')['slid_position_right'],get_sub_field('slider_img_position')['slid_position_left'],get_sub_field('slider_img_position')['slid_position_bottom']);
-
-
-
-?>
-#banner-slider {
-	width: 100%;
-	height: auto;
-}
-
-.view-<?php echo $count; ?> {
-	background : <?php echo $background; ?>;
-	<?php echo $presets; ?>
-	height: 100%;
-}
-
-.caro-slide-<?php echo $count; ?> {
+		<?php endwhile; //end of slider_item_static?>
+	<?php endif; //check the static slider?>
+<?php else: ?>
+	<?php if ( have_rows( 'slider_item_r', 'option' ) ): $count = 0;?>
+		<?php while ( have_rows( 'slider_item_r', 'option' ) ): the_row();
+			$filter = get_field( 'filter_fields', 'option' );
+			$bg = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
+			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
+			if ( ! empty($filter) ): ?>
+				.slider-views-<?php echo $count;?>.slider-filter:after{
+					background: <?php echo $bg;?>;
+					<?php echo $presets;?>
+					<?php if (empty( get_field( 'slider_opacity', 'option' ) ) || get_field( 'slider_opacity', 'option' ) != '0'): ?>opacity: <?php the_field( 'slider_opacity', 'option' ); ?>;<?php endif; ?>
+				}
+			<?php else: ?>
+				.slider-views-<?php echo $count;?>{
+					background: <?php echo $bg;?>;
+					<?php echo $presets;?>
+					<?php if (empty( get_field( 'slider_opacity', 'option' ) ) || get_field( 'slider_opacity', 'option' ) != '0'): ?>opacity: <?php the_field( 'slider_opacity', 'option' ); ?>;<?php endif; ?>
+				}
+			<?php endif; ?>
+		<?php $count++; endwhile;
+		$countd = 0;
+		$countt = 0;
+		$countm = 0;
+		//desktop
+		while ( have_rows( 'slider_item_r', 'option' ) ): the_row();?>
+			.slider-views-<?php echo $countd;?>{height: <?php echo $slide_height; ?>px;}
+		<?php $countd++; endwhile; ?>
+		@media (min-width:768px) and (max-width:1024px){
+			<?php //Tablet
+			while ( have_rows( 'slider_item_r', 'option' ) ): the_row();?>
+				.slider-views-<?php echo $countt;?>{height: <?php echo $slide_tablet_height; ?>px;}
+			<?php $countt++; endwhile;?>
+		}
+		@media (min-width:320px) and (max-width:768px){
+			<?php //mobile
+			while ( have_rows( 'slider_item_r', 'option' ) ): the_row();?>
+				.slider-views-<?php echo $countm;?>{height: <?php echo $slide_mobile_height; ?>px;}
+			<?php $countm++; endwhile;?>
+		}
 		
-	<?php //if(get_sub_field('content_settings')['slider_content_position'] == 'right' || get_sub_field('content_settings')['slider_content_position'] == 'left' ){
-		//echo "float:".get_sub_field('content_settings')['slider_content_position'].";"; 
-	//}?>	
-	<?php //if(get_sub_field('content_settings')['slider_content_position'] == 'right' ){echo "left: 50%;"; }?>	
-	<?php echo "text-align:".get_sub_field('content_settings')['slider_text_align'].";";  ?>	
-	top: 20px;
-	bottom: 0px;
-	height: 100%;
-}
-
-@media (min-width: 992px) {
-	.view-<?php echo $count; ?> {
-		height: <?php echo $slide_height; ?>px;	
-	}	
-	<!-- .caro-slide-<?php echo $count; ?> {
-		<?php //if(get_sub_field('content_settings')['slider_content_size'] == 'half' ){ 
-			//echo "width: 40%;"; 
-		//} ?>
-	} -->
-}
-
-<?php 
-		$count++;
-		endwhile;	
-	endif; //end slider item 
-endif; //end slider layout condition
-?>
+	<?php endif; //check the slider?>
+<?php endif; //check the slider layout ?>
+<?php if ( ! empty( get_field( 'filter_fields', 'option' ) ) ): ?>.slider-filters{<?php echo qqlanding_filters( 'filter_fields', 'filter_selection', 'filter_values','filter_dimension' ); ?>}
+[class*='slider-views-'].slider-filter:after{<?php echo qqlanding_filters( 'filter_fields', 'filter_selection', 'filter_values','filter_dimension' ); ?>}<?php endif; ?>
 
 
 /* ================================= */

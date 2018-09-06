@@ -1,6 +1,26 @@
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
+/**--assets*/
+.full-wh,
+.full-wrap{
+	height: 320px;
+	margin: 0;
+	padding: 0;
+}
+.full-wh{
+	background-color: $color__ea;
+	font-family:'arial_rounded_mt_std_regular',sans-serif;
+	display: table;
+	overflow: hidden;
+	width: 100%;
+	.full-wrap{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+/**--Providers*/
 .provider-title{
 	position: absolute;
 	top: -12px;

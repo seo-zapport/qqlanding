@@ -1,2 +1,612 @@
-.provider-title{position:absolute;top:-12px;background:#e6e6e6;color:#222;font-size:14px;font-size:.875rem;font-weight:600;margin:0;padding:2px 7px;text-transform:uppercase}.provider-item{cursor:pointer;display:inline;float:left;margin-bottom:3px}.provider-item>i{display:block;font-size:0;height:38px;width:80px;text-indent:-999999px}.provider-group{position:relative;flex-direction:column;flex:auto;display:-ms-flexbox;display:flex}.provider-group[class*='-category'],.provider-group[class*='-default']{border:1px solid #7f7f7f;border-radius:5px;margin-bottom:18px;padding:8px 10px}.provider-group[class*='-license'] .pagcor{background-position:0 0;width:140px}.provider-group[class*='-category'] .bet368{width:86px;background-position:3px -302px}.provider-group[class*='-category'] .opus{width:138px;background-position:5px -2001px}.provider-group[class*='-category'] .onework{width:105px;background-position:3px -1517px}.provider-group[class*='-category'] .gameplay{width:130px;background-position:5px -1420px}.provider-group[class*='-category'] .gd{background-position:5px -960px}.provider-group[class*='-category'] .gp{background-position:5px -906px}.provider-group[class*='-category'] .allbet{width:90px;background-position:5px -1117px}.provider-group[class*='-category'] .ag{width:90px;background-position:3px -1317px}.provider-group[class*='-category'] .og{width:58px;background-position:5px -1904px}.provider-group[class*='-category'] .royal{width:90px;background-position:5px -1218px}.provider-group[class*='-category'] .playtech{width:105px;background-position:3px -731px}.provider-group[class*='-category'] .ebet{width:105px;background-position:-167px -41px}.provider-group[class*='-category'] .spadegaming{width:150px;background-position:3px -648px}.provider-group[class*='-category'] .ttg{width:110px;background-position:5px -2267px}.provider-group[class*='-category'] .gameos{width:120px;background-position:5px -2189px}.provider-group[class*='-category'] .mg{width:130px;background-position:3px -2100px}.provider-group[class*='-category'] .betsoft{width:90px;background-position:3px -2436px}.provider-group[class*='-category'] .habanero{width:120px;background-position:3px -1611px}.provider-group[class*='-category'] .isin4d{background-position:3px -1706px}.provider-group[class*='-category'] .txbet{background-position:3px -394px}.provider-group[class*='-category'] .idn{width:92px;background-position:3px -806px}.provider-group[class*='-category'] .xo{width:116px;background-position:3px -2345px}.provider-group[class*='-category'] .txbet4d{width:100px;background-position:-158px -144px}.provider-group[class*='-category'] .txbet6d{width:100px;background-position:-158px -240px}.provider-group[class*='-category'] .lottery{width:140px;height:40px;background-position:3px -160px}.provider-group[class*='-category'] .saba{background-position:3px -209px}.provider-group[class*='-category'] .ok368{background-position:-158px -352px}.provider-group[class*='-category'] .pragmaticplay{background-position:-158px -412px;width:90px}.provider-group[class*='-category'] .thegamingplatform{background-position:-158px -556px;width:127px}.provider-group[class*='-default'].gray .allbet{width:90px;background-position:5px -1066px}.provider-group[class*='-default'].gray .ag{width:90px;background-position:3px -1268px}.provider-group[class*='-default'].gray .bet368{width:86px;background-position:3px -256px}.provider-group[class*='-default'].gray .betsoft{width:90px;background-position:3px -2392px}.provider-group[class*='-default'].gray .ebet{width:105px;background-position:-167px 4px}.provider-group[class*='-default'].gray .gameplay{width:130px;background-position:5px -1368px}.provider-group[class*='-default'].gray .gd{background-position:5px -960px}.provider-group[class*='-default'].gray .gp{background-position:5px -855px}.provider-group[class*='-default'].gray .gameos{width:120px;background-position:5px -2189px}.provider-group[class*='-default'].gray .habanero{width:120px;background-position:3px -1562px}.provider-group[class*='-default'].gray .isin4d{background-position:3px -1655px}.provider-group[class*='-default'].gray .idn{width:92px;background-position:3px -770px}.provider-group[class*='-default'].gray .lottery{width:140px;height:40px;background-position:3px -117px}.provider-group[class*='-default'].gray .mg{width:130px;background-position:3px -2053px}.provider-group[class*='-default'].gray .og{width:58px;background-position:5px -1853px}.provider-group[class*='-default'].gray .ok368{background-position:-158px -291px}.provider-group[class*='-default'].gray .opus{width:138px;background-position:5px -1953px}.provider-group[class*='-default'].gray .onework{width:105px;background-position:3px -1468px}.provider-group[class*='-default'].gray .playtech{width:105px;background-position:3px -693px}.provider-group[class*='-default'].gray .pragmaticplay{background-position:-158px -412px;width:90px}.provider-group[class*='-default'].gray .royal{width:90px;background-position:5px -1167px}.provider-group[class*='-default'].gray .saba{background-position:3px -209px}.provider-group[class*='-default'].gray .spadegaming{width:150px;background-position:3px -600px}.provider-group[class*='-default'].gray .ttg{width:110px;background-position:5px -2231px}.provider-group[class*='-default'].gray .txbet{background-position:3px -351px}.provider-group[class*='-default'].gray .txbet4d{width:100px;background-position:-158px -95px}.provider-group[class*='-default'].gray .txbet6d{width:100px;background-position:-158px -192px}.provider-group[class*='-default'].gray .thegamingplatform{background-position:-158px -506px;width:125px}.provider-group[class*='-default'].gray .xo{width:116px;background-position:3px -2306px}.provider-group[class*='-default'].white .allbet{width:90px;background-position:5px -1066px}.provider-group[class*='-default'].white .ag{width:90px;background-position:3px -1268px}.provider-group[class*='-default'].white .bet368{width:86px;background-position:3px -301px}.provider-group[class*='-default'].white .betsoft{width:90px;background-position:3px -2392px}.provider-group[class*='-default'].white .ebet{width:98px;background-position:-160px -5px}.provider-group[class*='-default'].white .gameplay{width:130px;background-position:5px -1368px}.provider-group[class*='-default'].white .gd{background-position:5px -960px}.provider-group[class*='-default'].white .gp{width:95px;background-position:5px -855px}.provider-group[class*='-default'].white .gameos{width:120px;background-position:5px -2189px}.provider-group[class*='-default'].white .habanero{width:120px;background-position:3px -1562px}.provider-group[class*='-default'].white .isin4d{background-position:3px -1655px}.provider-group[class*='-default'].white .idn{width:92px;background-position:3px -770px}.provider-group[class*='-default'].white .lottery{width:140px;height:40px;background-position:3px -117px}.provider-group[class*='-default'].white .mg{width:130px;background-position:3px -2053px}.provider-group[class*='-default'].white .og{width:58px;background-position:5px -1853px}.provider-group[class*='-default'].white .ok368{width:70px;background-position:-173px -250px}.provider-group[class*='-default'].white .opus{width:138px;background-position:5px -1953px}.provider-group[class*='-default'].white .onework{width:105px;background-position:3px -1468px}.provider-group[class*='-default'].white .playtech{width:105px;background-position:3px -693px}.provider-group[class*='-default'].white .pragmaticplay{background-position:-158px -353px;width:90px}.provider-group[class*='-default'].white .royal{width:90px;background-position:5px -1167px}.provider-group[class*='-default'].white .saba{background-position:3px -209px}.provider-group[class*='-default'].white .spadegaming{width:150px;background-position:3px -600px}.provider-group[class*='-default'].white .ttg{width:110px;background-position:5px -2231px}.provider-group[class*='-default'].white .txbet{width:50px;background-position:-3px -395px}.provider-group[class*='-default'].white .txbet4d{width:100px;background-position:-158px -95px}.provider-group[class*='-default'].white .txbet6d{width:100px;background-position:-158px -171px}.provider-group[class*='-default'].white .thegamingplatform{background-position:-158px -457px;width:125px}.provider-group[class*='-default'].white .xo{width:116px;background-position:3px -2306px}.provider-group[class*='-banks'] .provider-item>i{background:url("../../assets/images/providers/ico_bank.png") no-repeat}.provider-group[class*='-banks'] .bank-indo .provider-item .bank_bri{background-position:3px -406px;width:115px}.provider-group[class*='-banks'] .bank-indo .provider-item .bca{background-position:3px -308px;width:85px}.provider-group[class*='-banks'] .bank-indo .provider-item .bni{background-position:3px -188px;width:83px}.provider-group[class*='-banks'] .bank-indo .provider-item .danamon{background-position:3px -73px;width:135px}.provider-group[class*='-banks'] .bank-indo .provider-item .mandiri{background-position:3px -495px;width:98px}.provider-group[class*='-banks'] .bank-malaysia .affinbank{background-position:3px -3604px;width:125px}.provider-group[class*='-banks'] .bank-malaysia .alliance_bank{background-position:3px -3688px;width:120px}.provider-group[class*='-banks'] .bank-malaysia .ambank_group{background-position:3px -3773px;width:120px}.provider-group[class*='-banks'] .bank-malaysia .bankrakyat{background-position:3px -3856px;width:135px}.provider-group[class*='-banks'] .bank-malaysia .citibank{background-position:3px -3940px;width:120px}.provider-group[class*='-banks'] .bank-malaysia .hongleong_bank{background-position:3px -4023px;width:127px}.provider-group[class*='-banks'] .bank-malaysia .hsbc{background-position:3px -4107px;width:120px}.provider-group[class*='-banks'] .bank-malaysia .ocbc_bank{background-position:3px -4190px;width:120px}.provider-group[class*='-banks'] .bank-malaysia .rhb{background-position:3px -4277px;width:90px}.provider-group[class*='-banks'] .bank-malaysia .uob{background-position:3px -4361px;width:98px}.provider-group[class*='-banks'] .bank-thailand .bangkok_bank{background-position:3px -601px;width:125px}.provider-group[class*='-banks'] .bank-thailand .gsb{background-position:3px -688px;width:102px}.provider-group[class*='-banks'] .bank-thailand .kasikorn_bank{background-position:3px -775px;width:123px}.provider-group[class*='-banks'] .bank-thailand .krungsri{background-position:3px -863px;width:94px}.provider-group[class*='-banks'] .bank-thailand .krungthai_bank{background-position:3px -950px;width:133px}.provider-group[class*='-banks'] .bank-thailand .scb{background-position:3px -1040px;width:90px}.provider-group[class*='-banks'] .bank-vietnam .acb{background-position:3px -3016px;width:70px}.provider-group[class*='-banks'] .bank-vietnam .bidv{background-position:3px -3100px;width:108px}.provider-group[class*='-banks'] .bank-vietnam .donga{background-position:3px -3185px;width:125px}.provider-group[class*='-banks'] .bank-vietnam .sacombank{background-position:3px -3265px;width:128px}.provider-group[class*='-banks'] .bank-vietnam .techcombank{background-position:3px -3350px;width:130px}.provider-group[class*='-banks'] .bank-vietnam .vietinbank{background-position:3px -3434px;width:127px}.provider-group[class*='-banks'] .bank-vietnam .vietcombank{background-position:3px -3520px;width:120px}.provider-group[class*='-banks'] .bank-china .bos{background-position:3px -2183px;width:97px}.provider-group[class*='-banks'] .bank-china .ibank{background-position:3px -1305px;width:115px}.provider-group[class*='-banks'] .bank-china .spd_bank{background-position:3px -1392px;width:109px}.provider-group[class*='-banks'] .bank-china .ccbank{background-position:3px -1480px;width:120px}.provider-group[class*='-banks'] .bank-china .b_beijing{background-position:3px -1568px;width:125px}.provider-group[class*='-banks'] .bank-china .huaxia_bank{background-position:3px -1655px;width:127px}.provider-group[class*='-banks'] .bank-china .pinganbank{background-position:3px -1745px;width:131px}.provider-group[class*='-banks'] .bank-china .maybank{background-position:3px -1840px;width:120px}.provider-group[class*='-banks'] .bank-china .public_bank{background-position:3px -1928px;width:120px}.provider-group[class*='-banks'] .bank-china .cimb{background-position:3px -2013px;width:118px}.provider-group[class*='-banks'] .bank-china .ce_bank{background-position:3px -2095px;width:130px}.provider-group[class*='-banks'] .bank-china .b_china{background-position:3px -2183px;width:97px}.provider-group[class*='-banks'] .bank-china .icbc{background-position:3px -2268px;width:81px}.provider-group[class*='-banks'] .bank-china .abc{background-position:3px -2350px;width:127px}.provider-group[class*='-banks'] .bank-china .cc_bank{background-position:3px -2438px;width:127px}.provider-group[class*='-banks'] .bank-china .cm_bank{background-position:3px -2520px;width:101px}.provider-group[class*='-banks'] .bank-china .bank_com{background-position:3px -2600px;width:125px}.provider-group[class*='-banks'] .bank-china .cminshing_bank{background-position:3px -2680px;width:130px}.provider-group[class*='-banks'] .bank-china .crm_bank{background-position:3px -2765px;width:130px}.provider-group[class*='-banks'] .bank-china .psbchina{background-position:3px -2848px;width:130px}
+/**--assets*/
+.full-wh,
+.full-wrap {
+  height: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+.full-wh {
+  background-color: #eaeaea;
+  font-family: 'arial_rounded_mt_std_regular',sans-serif;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+}
+.full-wh .full-wrap {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/**--Providers*/
+.provider-title {
+  position: absolute;
+  top: -12px;
+  background: #e6e6e6;
+  color: #222222;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 2px 7px;
+  text-transform: uppercase;
+}
+
+.provider-item {
+  cursor: pointer;
+  display: inline;
+  float: left;
+  margin-bottom: 3px;
+}
+.provider-item > i {
+  display: block;
+  font-size: 0;
+  height: 38px;
+  width: 80px;
+  text-indent: -999999px;
+}
+
+.provider-group {
+  position: relative;
+  flex-direction: column;
+  flex: auto;
+  display: -ms-flexbox;
+  display: flex;
+  /**
+   * prov-cat
+   *----------*/
+  /**
+  * prov-default
+  *--------------*/
+}
+.provider-group[class*='-category'], .provider-group[class*='-default'] {
+  border: 1px solid #7f7f7f;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  padding: 8px 10px;
+}
+.provider-group[class*='-license'] .pagcor {
+  background-position: 0 0;
+  width: 140px;
+}
+.provider-group[class*='-category'] .bet368 {
+  width: 86px;
+  background-position: 3px -302px;
+}
+.provider-group[class*='-category'] .opus {
+  width: 138px;
+  background-position: 5px -2001px;
+}
+.provider-group[class*='-category'] .onework {
+  width: 105px;
+  background-position: 3px -1517px;
+}
+.provider-group[class*='-category'] .gameplay {
+  width: 130px;
+  background-position: 5px -1420px;
+}
+.provider-group[class*='-category'] .gd {
+  background-position: 5px -960px;
+}
+.provider-group[class*='-category'] .gp {
+  background-position: 5px -906px;
+}
+.provider-group[class*='-category'] .allbet {
+  width: 90px;
+  background-position: 5px -1117px;
+}
+.provider-group[class*='-category'] .ag {
+  width: 90px;
+  background-position: 3px -1317px;
+}
+.provider-group[class*='-category'] .og {
+  width: 58px;
+  background-position: 5px -1904px;
+}
+.provider-group[class*='-category'] .royal {
+  width: 90px;
+  background-position: 5px -1218px;
+}
+.provider-group[class*='-category'] .playtech {
+  width: 105px;
+  background-position: 3px -731px;
+}
+.provider-group[class*='-category'] .ebet {
+  width: 105px;
+  background-position: -167px -41px;
+}
+.provider-group[class*='-category'] .spadegaming {
+  width: 150px;
+  background-position: 3px -648px;
+}
+.provider-group[class*='-category'] .ttg {
+  width: 110px;
+  background-position: 5px -2267px;
+}
+.provider-group[class*='-category'] .gameos {
+  width: 120px;
+  background-position: 5px -2189px;
+}
+.provider-group[class*='-category'] .mg {
+  width: 130px;
+  background-position: 3px -2100px;
+}
+.provider-group[class*='-category'] .betsoft {
+  width: 90px;
+  background-position: 3px -2436px;
+}
+.provider-group[class*='-category'] .habanero {
+  width: 120px;
+  background-position: 3px -1611px;
+}
+.provider-group[class*='-category'] .isin4d {
+  background-position: 3px -1706px;
+}
+.provider-group[class*='-category'] .txbet {
+  background-position: 3px -394px;
+}
+.provider-group[class*='-category'] .idn {
+  width: 92px;
+  background-position: 3px -806px;
+}
+.provider-group[class*='-category'] .xo {
+  width: 116px;
+  background-position: 3px -2345px;
+}
+.provider-group[class*='-category'] .txbet4d {
+  width: 100px;
+  background-position: -158px -144px;
+}
+.provider-group[class*='-category'] .txbet6d {
+  width: 100px;
+  background-position: -158px -240px;
+}
+.provider-group[class*='-category'] .lottery {
+  width: 140px;
+  height: 40px;
+  background-position: 3px -160px;
+}
+.provider-group[class*='-category'] .saba {
+  background-position: 3px -209px;
+}
+.provider-group[class*='-category'] .ok368 {
+  background-position: -158px -352px;
+}
+.provider-group[class*='-category'] .pragmaticplay {
+  background-position: -158px -412px;
+  width: 90px;
+}
+.provider-group[class*='-category'] .thegamingplatform {
+  background-position: -158px -556px;
+  width: 127px;
+}
+.provider-group[class*='-default'].gray .allbet {
+  width: 90px;
+  background-position: 5px -1066px;
+}
+.provider-group[class*='-default'].gray .ag {
+  width: 90px;
+  background-position: 3px -1268px;
+}
+.provider-group[class*='-default'].gray .bet368 {
+  width: 86px;
+  background-position: 3px -256px;
+}
+.provider-group[class*='-default'].gray .betsoft {
+  width: 90px;
+  background-position: 3px -2392px;
+}
+.provider-group[class*='-default'].gray .ebet {
+  width: 105px;
+  background-position: -167px 4px;
+}
+.provider-group[class*='-default'].gray .gameplay {
+  width: 130px;
+  background-position: 5px -1368px;
+}
+.provider-group[class*='-default'].gray .gd {
+  background-position: 5px -960px;
+}
+.provider-group[class*='-default'].gray .gp {
+  background-position: 5px -855px;
+}
+.provider-group[class*='-default'].gray .gameos {
+  width: 120px;
+  background-position: 5px -2189px;
+}
+.provider-group[class*='-default'].gray .habanero {
+  width: 120px;
+  background-position: 3px -1562px;
+}
+.provider-group[class*='-default'].gray .isin4d {
+  background-position: 3px -1655px;
+}
+.provider-group[class*='-default'].gray .idn {
+  width: 92px;
+  background-position: 3px -770px;
+}
+.provider-group[class*='-default'].gray .lottery {
+  width: 140px;
+  height: 40px;
+  background-position: 3px -117px;
+}
+.provider-group[class*='-default'].gray .mg {
+  width: 130px;
+  background-position: 3px -2053px;
+}
+.provider-group[class*='-default'].gray .og {
+  width: 58px;
+  background-position: 5px -1853px;
+}
+.provider-group[class*='-default'].gray .ok368 {
+  background-position: -158px -291px;
+}
+.provider-group[class*='-default'].gray .opus {
+  width: 138px;
+  background-position: 5px -1953px;
+}
+.provider-group[class*='-default'].gray .onework {
+  width: 105px;
+  background-position: 3px -1468px;
+}
+.provider-group[class*='-default'].gray .playtech {
+  width: 105px;
+  background-position: 3px -693px;
+}
+.provider-group[class*='-default'].gray .pragmaticplay {
+  background-position: -158px -412px;
+  width: 90px;
+}
+.provider-group[class*='-default'].gray .royal {
+  width: 90px;
+  background-position: 5px -1167px;
+}
+.provider-group[class*='-default'].gray .saba {
+  background-position: 3px -209px;
+}
+.provider-group[class*='-default'].gray .spadegaming {
+  width: 150px;
+  background-position: 3px -600px;
+}
+.provider-group[class*='-default'].gray .ttg {
+  width: 110px;
+  background-position: 5px -2231px;
+}
+.provider-group[class*='-default'].gray .txbet {
+  background-position: 3px -351px;
+}
+.provider-group[class*='-default'].gray .txbet4d {
+  width: 100px;
+  background-position: -158px -95px;
+}
+.provider-group[class*='-default'].gray .txbet6d {
+  width: 100px;
+  background-position: -158px -192px;
+}
+.provider-group[class*='-default'].gray .thegamingplatform {
+  background-position: -158px -506px;
+  width: 125px;
+}
+.provider-group[class*='-default'].gray .xo {
+  width: 116px;
+  background-position: 3px -2306px;
+}
+.provider-group[class*='-default'].white .allbet {
+  width: 90px;
+  background-position: 5px -1066px;
+}
+.provider-group[class*='-default'].white .ag {
+  width: 90px;
+  background-position: 3px -1268px;
+}
+.provider-group[class*='-default'].white .bet368 {
+  width: 86px;
+  background-position: 3px -301px;
+}
+.provider-group[class*='-default'].white .betsoft {
+  width: 90px;
+  background-position: 3px -2392px;
+}
+.provider-group[class*='-default'].white .ebet {
+  width: 98px;
+  background-position: -160px -5px;
+}
+.provider-group[class*='-default'].white .gameplay {
+  width: 130px;
+  background-position: 5px -1368px;
+}
+.provider-group[class*='-default'].white .gd {
+  background-position: 5px -960px;
+}
+.provider-group[class*='-default'].white .gp {
+  width: 95px;
+  background-position: 5px -855px;
+}
+.provider-group[class*='-default'].white .gameos {
+  width: 120px;
+  background-position: 5px -2189px;
+}
+.provider-group[class*='-default'].white .habanero {
+  width: 120px;
+  background-position: 3px -1562px;
+}
+.provider-group[class*='-default'].white .isin4d {
+  background-position: 3px -1655px;
+}
+.provider-group[class*='-default'].white .idn {
+  width: 92px;
+  background-position: 3px -770px;
+}
+.provider-group[class*='-default'].white .lottery {
+  width: 140px;
+  height: 40px;
+  background-position: 3px -117px;
+}
+.provider-group[class*='-default'].white .mg {
+  width: 130px;
+  background-position: 3px -2053px;
+}
+.provider-group[class*='-default'].white .og {
+  width: 58px;
+  background-position: 5px -1853px;
+}
+.provider-group[class*='-default'].white .ok368 {
+  width: 70px;
+  background-position: -173px -250px;
+}
+.provider-group[class*='-default'].white .opus {
+  width: 138px;
+  background-position: 5px -1953px;
+}
+.provider-group[class*='-default'].white .onework {
+  width: 105px;
+  background-position: 3px -1468px;
+}
+.provider-group[class*='-default'].white .playtech {
+  width: 105px;
+  background-position: 3px -693px;
+}
+.provider-group[class*='-default'].white .pragmaticplay {
+  background-position: -158px -353px;
+  width: 90px;
+}
+.provider-group[class*='-default'].white .royal {
+  width: 90px;
+  background-position: 5px -1167px;
+}
+.provider-group[class*='-default'].white .saba {
+  background-position: 3px -209px;
+}
+.provider-group[class*='-default'].white .spadegaming {
+  width: 150px;
+  background-position: 3px -600px;
+}
+.provider-group[class*='-default'].white .ttg {
+  width: 110px;
+  background-position: 5px -2231px;
+}
+.provider-group[class*='-default'].white .txbet {
+  width: 50px;
+  background-position: -3px -395px;
+}
+.provider-group[class*='-default'].white .txbet4d {
+  width: 100px;
+  background-position: -158px -95px;
+}
+.provider-group[class*='-default'].white .txbet6d {
+  width: 100px;
+  background-position: -158px -171px;
+}
+.provider-group[class*='-default'].white .thegamingplatform {
+  background-position: -158px -457px;
+  width: 125px;
+}
+.provider-group[class*='-default'].white .xo {
+  width: 116px;
+  background-position: 3px -2306px;
+}
+.provider-group[class*='-banks'] .provider-item > i {
+  background: url("../../assets/images/providers/ico_bank.png") no-repeat;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .bank_bri {
+  background-position: 3px -406px;
+  width: 115px;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .bca {
+  background-position: 3px -308px;
+  width: 85px;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .bni {
+  background-position: 3px -188px;
+  width: 83px;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .danamon {
+  background-position: 3px -73px;
+  width: 135px;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .mandiri {
+  background-position: 3px -495px;
+  width: 98px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .affinbank {
+  background-position: 3px -3604px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .alliance_bank {
+  background-position: 3px -3688px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .ambank_group {
+  background-position: 3px -3773px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .bankrakyat {
+  background-position: 3px -3856px;
+  width: 135px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .citibank {
+  background-position: 3px -3940px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .hongleong_bank {
+  background-position: 3px -4023px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .hsbc {
+  background-position: 3px -4107px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .ocbc_bank {
+  background-position: 3px -4190px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .rhb {
+  background-position: 3px -4277px;
+  width: 90px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .uob {
+  background-position: 3px -4361px;
+  width: 98px;
+}
+.provider-group[class*='-banks'] .bank-thailand {
+  /* .bangkok_bank{background-position: 3px -557px;width: 125px;}
+  .gsb{background-position: 3px -642px;width: 102px;}
+  .kasikorn_bank{background-position: 3px -730px;width: 123px;}
+  .krungsri{background-position: 3px -817px;width: 94px;}
+  .krungthai_bank{background-position: 3px -906px;width: 133px;}
+  .scb{background-position: 3px -995px;width: 90px;} */
+}
+.provider-group[class*='-banks'] .bank-thailand .bangkok_bank {
+  background-position: 3px -601px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-thailand .gsb {
+  background-position: 3px -688px;
+  width: 102px;
+}
+.provider-group[class*='-banks'] .bank-thailand .kasikorn_bank {
+  background-position: 3px -775px;
+  width: 123px;
+}
+.provider-group[class*='-banks'] .bank-thailand .krungsri {
+  background-position: 3px -863px;
+  width: 94px;
+}
+.provider-group[class*='-banks'] .bank-thailand .krungthai_bank {
+  background-position: 3px -950px;
+  width: 133px;
+}
+.provider-group[class*='-banks'] .bank-thailand .scb {
+  background-position: 3px -1040px;
+  width: 90px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .acb {
+  background-position: 3px -3016px;
+  width: 70px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .bidv {
+  background-position: 3px -3100px;
+  width: 108px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .donga {
+  background-position: 3px -3185px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .sacombank {
+  background-position: 3px -3265px;
+  width: 128px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .techcombank {
+  background-position: 3px -3350px;
+  width: 130px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .vietinbank {
+  background-position: 3px -3434px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .vietcombank {
+  background-position: 3px -3520px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-china .bos {
+  background-position: 3px -2183px;
+  width: 97px;
+}
+.provider-group[class*='-banks'] .bank-china .ibank {
+  background-position: 3px -1305px;
+  width: 115px;
+}
+.provider-group[class*='-banks'] .bank-china .spd_bank {
+  background-position: 3px -1392px;
+  width: 109px;
+}
+.provider-group[class*='-banks'] .bank-china .ccbank {
+  background-position: 3px -1480px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-china .b_beijing {
+  background-position: 3px -1568px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-china .huaxia_bank {
+  background-position: 3px -1655px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-china .pinganbank {
+  background-position: 3px -1745px;
+  width: 131px;
+}
+.provider-group[class*='-banks'] .bank-china .maybank {
+  background-position: 3px -1840px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-china .public_bank {
+  background-position: 3px -1928px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-china .cimb {
+  background-position: 3px -2013px;
+  width: 118px;
+}
+.provider-group[class*='-banks'] .bank-china .ce_bank {
+  background-position: 3px -2095px;
+  width: 130px;
+}
+.provider-group[class*='-banks'] .bank-china .b_china {
+  background-position: 3px -2183px;
+  width: 97px;
+}
+.provider-group[class*='-banks'] .bank-china .icbc {
+  background-position: 3px -2268px;
+  width: 81px;
+}
+.provider-group[class*='-banks'] .bank-china .abc {
+  background-position: 3px -2350px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-china .cc_bank {
+  background-position: 3px -2438px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-china .cm_bank {
+  background-position: 3px -2520px;
+  width: 101px;
+}
+.provider-group[class*='-banks'] .bank-china .bank_com {
+  background-position: 3px -2600px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-china .cminshing_bank {
+  background-position: 3px -2680px;
+  width: 130px;
+}
+.provider-group[class*='-banks'] .bank-china .crm_bank {
+  background-position: 3px -2765px;
+  width: 130px;
+}
+.provider-group[class*='-banks'] .bank-china .psbchina {
+  background-position: 3px -2848px;
+  width: 130px;
+}
+
 /*# sourceMappingURL=__assets.css.map */

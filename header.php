@@ -28,8 +28,9 @@ if ( ! defined('ABSPATH')) exit; ?>
 	?>
 </head>
 <body <?php body_class( 'qqlanding-sites qqland-' . qqlanding_schema( $layout ) . $front_class); ?>>
+
 <div id="page" class="site container<?php echo ( get_field( 'th_layout', 'option' ) == 'wide' ) ? '-full qqland-site-full' : ' qqland-site-box'; ?>">
-	<?php if (get_field( 'th_layout', 'option' ) == 'box'): ?>
+	<?php if ( is_home() || is_page_template( 'template-page.php' ) && get_field( 'th_layout', 'option' ) === 'box'): ?>
 		<div class="row">
 	<?php endif;?> <!--if wide/box only-->
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'qqlanding' ); ?></a>
@@ -44,7 +45,7 @@ if ( ! defined('ABSPATH')) exit; ?>
 		<?php qqlanding_header_set(); ?>
 	</header><!-- #masthead -->
 	<?php if ( is_front_page() && ! is_home() ) qqlanding_load_section('slider'); ?>
-	<div id="content" class="site-content <?php echo ( ! is_page_template( 'template-page.php' ) || is_home() ) ? 'container' : ''; ?>">
+	<div id="content" class="site-content <?php echo ( ! is_page_template( 'template-page.php' ) ) ? 'container' : ''; ?>">
 		<?php 
 			qqlanding_breadcrumb_list(); //breadcrumbs
 			if ( ! is_page_template( 'template-page.php' ) || is_home() ): ?>

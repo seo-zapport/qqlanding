@@ -24,6 +24,10 @@
 	}
 }
 @media (min-width: 768px){
+	.full-wh,
+	.full-wrap{
+		height: 520px;
+	}
 	.provider-group{
 		margin-right:10px;
 		&:last-child{margin-right:inherit}
@@ -67,6 +71,9 @@
 @media (max-width: 768px){
 	.provider-item{float:none;display:inline-block;margin-right:15px;margin-bottom: 10px;}
 	.desk{display:none;}
+	#banner-static{
+		height: 100%;
+	}
 }
 @media (max-width: 640px){
 	.provider-group{
