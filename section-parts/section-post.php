@@ -1,8 +1,10 @@
 <?php
+$disable = get_field( 'fp_enable_section', 'option' ); //Content Enable/Disable
 $layout = get_field('fp_layout', 'option'); // layout of the page
 $item_layout = get_field('fp_ts_layout', 'option'); // Item Layout
 $card_layout = get_field('fp_ts_cards_layout', 'option'); // Cards Theme
-?>
+if ( acf_selective_refresh($disable) ) return $disable = false;
+if ($disable) : ?>
 <section id="Fpost" class="py-5">
 	<div class="container">
 		<h3 class="sec-entry-title text-center"><?php the_field( 'fp_post_title' ); ?></h3>
@@ -77,3 +79,4 @@ $card_layout = get_field('fp_ts_cards_layout', 'option'); // Cards Theme
 		</div>
 	</div>
 </section>
+<?php endif;?>

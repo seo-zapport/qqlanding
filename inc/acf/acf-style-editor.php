@@ -107,58 +107,59 @@ $filter = get_field( 'filter_fields', 'option' ); /*--filters*/
 /* ================================= */
 /* =========== Content ============== */
 /* ================================= */ 
-<?php
-	$count = '1';
 
- 	if( have_rows('content_item', 'option') ): 
- 		while ( have_rows( 'content_item', 'option') ) : the_row();
- 		
- 		if($count == 1){
- 			$val = "first";
- 		}else{
- 			$val = "last";
- 		}
- 		$backgroundcf = "";
+<?php 
+function conten_bg($field,$type){
+
+	if ($field) :
+
+		$backgroundcf = "";
 		$presetscf = "";
- 		
- 		if(get_sub_field('ci_bg', 'option') == "bg-color"){
-		 	$backgroundcf = qqlanding_sliding_bg(get_sub_field('ci_bg', 'option'),get_sub_field('ci_image'),get_sub_field('ci_color'));
- 		
- 		}else{
-		 	$backgroundcf = qqlanding_sliding_bg(get_sub_field('ci_bg', 'option'),get_sub_field('ci_image'),get_sub_field('ci_color'));
-		  	$presetscf = qqlanding_preset_acf(get_sub_field('ci_repeat_bg_img'),get_sub_field('ci_scroll_with_page'),get_sub_field('ci_presets'),get_sub_field('ci_image_position'),get_sub_field('ci_image_size'));
+		$height ="";
 
- 		}
+		$ci_bg = $field['ci_bg'];
+		$ci_image = $field['ci_image'];
+		$ci_color = $field['ci_color'];
 
- 		$position = content_img_postion(get_sub_field('images_pos_prop', 'option'),get_sub_field('fp_img_position')['fp_position_top'],get_sub_field('fp_img_position')['fp_position_right'],get_sub_field('fp_img_position')['fp_position_left'],get_sub_field('fp_img_position')['fp_position_buttom']);
-	  	
-	  		$height ="";
-	  if(get_sub_field('fp_app_set')['ca_height']){
-	  		$height = "height : ".get_sub_field('fp_app_set')['ca_height'].';';
-	  }	
+		//Presets
+		$ci_repeat_bg_img = $field['ci_repeat_bg_img'];
+		$ci_scroll_with_page = $field['ci_scroll_with_page'];
+		$ci_presets = $field['ci_presets'];
+		$ci_image_position = $field['ci_image_position'];
+		$ci_image_size = $field['ci_image_size'];
 
+		//Position
+		$images_pos_prop = $field['images_pos_prop'];
+		$fp_img_position = $field['fp_img_position'];
 
-?>
+		//
+		$fp_app_set = $field['fp_app_set'];
 
-.content-<?php echo $val; ?> {
+		if ( $ci_bg == "bg-color" ) :
+			$backgroundcf = qqlanding_sliding_bg($ci_bg,$ci_image,$ci_color);
+		else:
+			$backgroundcf = qqlanding_sliding_bg($ci_bg,$ci_image,$ci_color);
+			$presetscf = qqlanding_preset_acf($ci_repeat_bg_img,$ci_scroll_with_page,$ci_presets,$ci_image_position,$ci_image_size);
+		endif;
+
+	 		$position = content_img_postion($images_pos_prop,$fp_img_position['fp_position_top'],$fp_img_position['fp_position_right'],$fp_img_position['fp_position_left'],$fp_img_position['fp_position_buttom']);
+
+		  if($fp_app_set['ca_height']) $height = "height : ".$fp_app_set['ca_height'].';';
+
+		  $class_var = ($type == 'a' || $type == 'A') ? 'first' : 'last' ;?>
+
+.content-<?php echo $class_var; ?>{
 	background : <?php echo $backgroundcf; ?>;
 	<?php echo @$presetscf; ?>
 }
-
-@media (min-width: 992px) {
-	.content-<?php echo $val; ?> {
-		<?php echo @$height; ?>
-	}
+		  	
+	<?php endif;
 }
 
-.content-<?php echo $val; ?>-img {
-	<?php echo $position; ?>
-}
-
-<?php 
-			$count++;
-		endwhile;
-	endif;
+$content_item_a = get_field( 'content_item_a', 'option' );
+$content_item_b = get_field( 'content_item_b', 'option' );
+echo conten_bg($content_item_a,'a');
+echo conten_bg($content_item_b,'b');
 
 /**
  * #Theme Default

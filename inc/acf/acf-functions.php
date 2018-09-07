@@ -6651,7 +6651,7 @@ function qqlanding_preset_acf($repeat, $scroll, $screen, $position, $image_size)
 	endif;	
 
 	if($scroll == "Yes" || $scroll == true):
-		$scroll_preset = "background-attachment: fixed;background-size: cover;";
+		$scroll_preset = "background-attachment: fixed;";
 	else:
 		$scroll_preset = "background-attachment: scroll;";
 	endif;	
@@ -6665,7 +6665,7 @@ function qqlanding_preset_acf($repeat, $scroll, $screen, $position, $image_size)
 	 elseif($screen =='custom'):
 	 	$presets = "background-size:".$image_size.";background-position:".$position."; background-repeat:".$repeat_preset.";".$scroll_preset;
 	 else:
-		$presets = "background-position: left top; background-repeat: repeat;background-size: auto;background-attachment: scroll;";
+		$presets = "background-position: left top; background-repeat: repeat;-backgroundsize: auto;background-attachment: scroll;";
 	 endif;
 
 	 return $presets;
@@ -6726,63 +6726,68 @@ function fpcontent_img_position($img,$class){
 
  }
 
- //function fpcontent_content_position(){
+/**
+ * Display the exact content for the content section
+ * @param  $mmk_title      [description]
+ * @param  $mmk_content    [description]
+ * @param  $id_description [description]
+ * @param  $img            [description]
+ * @return                 [description]
+ */
  function fpcontent_content_position($mmk_title, $mmk_content, $id_description,$img){
 
 		    $logo = get_theme_mod( 'site_logo', '' ); 
 	
-			if ( !empty( $logo ) ) : 
-			list($width, $height, $type, $attr) = getimagesize($logo);			
- 			endif;			
+			if ( !empty( $logo ) ) list($width, $height, $type, $attr) = getimagesize($logo);	//check if logo is not empty
 
  			if($img):
-
-		 		$size = 'medium';
-				$thumb = $img['sizes'][ $size ];
-
- 				$imgObj = $img['url'];
- 				$imgwidth = $img['sizes'][ $size . '-width' ];
- 				$imgheight = $img['sizes'][ $size . '-height' ];
-
+		 		$size = 'medium'; //thumbnail size
+				$thumb = $img['sizes'][ $size ]; //image size
+ 				$imgObj = $img['url']; //image url
+ 				$imgwidth = $img['sizes'][ $size . '-width' ]; //image exact width
+ 				$imgheight = $img['sizes'][ $size . '-height' ]; //image exact hiegth
  			else:
- 				
- 				$imgObj = esc_url( $logo );
- 				$imgwidth = $width;
- 				$imgheight = $height;
- 			
+ 				$imgObj = esc_url( $logo ); // escape the url
+ 				$imgwidth = $width; // image width
+ 				$imgheight = $height; // image height
  			endif;
 
- 		$content = '<article id="post-'.$id_description.'" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">';
- 		$content .= '<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="'.get_permalink().'"/>';			
- 		$content .= '<header class="entry-header">';	
- 		$content .= '<h3 class="h2" itemprop="headline">'.$mmk_title.'</h3>';
- 		$content .= '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
- 		$content .= '<meta itemprop="url" content="'.$imgObj.'">';	
- 		$content .= '<meta itemprop="width" content="'.$imgwidth.'"/>';	
- 		$content .= '<meta itemprop="height" content="'.$imgheight.'"/>';	
- 		$content .= '</div>';	
- 		$content .= '<!-- .AMP  -->';	
- 		$content .= '<meta itemprop="author" content="'.get_the_author().'">';	
- 		$content .= '<meta itemprop="datePublished" content="'.get_the_time('c').'">';	
- 		$content .= '<meta itemprop="dateModified" content="'.get_the_modified_time('c').'">';	
- 		$content .= '<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">';	
- 		$content .= ' <meta itemprop="name" content="'.get_permalink().'"/>';	
- 		$content .= '<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">';	
- 		$content .= ' <meta itemprop="url" content="'.esc_url( $logo ).'"/>';	
- 		$content .= ' <meta itemprop="width" content="'.$width.'"/>';	
- 		$content .= ' <meta itemprop="height" content="'.$height.'"/>';	
- 		$content .= '</div>';	
- 		$content .= '</header>';	
- 		$content .= '<div id="content-'.$id_description.'" itemprop="description" class="entry-content">';	
- 		$content .= $mmk_content;
- 		$content .= '</div><!-- .entry-content -->';
- 		$content .='</article>';	
+
+			$content = '<article id="post-'.$id_description.'" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">';
+				$content .= '<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="'.get_permalink().'"/>';
+				$content .= '<header class="entry-header">';	
+					$content .= '<h3 class="h2" itemprop="headline">'.$mmk_title.'</h3>';
+					$content .= '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
+						$content .= '<meta itemprop="url" content="'.$imgObj.'">';	
+						$content .= '<meta itemprop="width" content="'.$imgwidth.'"/>';	
+						$content .= '<meta itemprop="height" content="'.$imgheight.'"/>';	
+					$content .= '</div>';	
+					$content .= '<!-- .AMP  -->';	
+					$content .= '<meta itemprop="author" content="'.get_the_author().'">';	
+					$content .= '<meta itemprop="datePublished" content="'.get_the_time('c').'">';	
+					$content .= '<meta itemprop="dateModified" content="'.get_the_modified_time('c').'">';	
+					$content .= '<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">';	
+						$content .= '<meta itemprop="name" content="'.get_permalink().'"/>';	
+						$content .= '<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">';	
+						$content .= '<meta itemprop="url" content="'.esc_url( $logo ).'"/>';	
+						$content .= '<meta itemprop="width" content="'.$width.'"/>';	
+						$content .= '<meta itemprop="height" content="'.$height.'"/>';	
+					$content .= '</div>';	
+				$content .= '</header>';	
+				$content .= '<div id="content-'.$id_description.'" itemprop="description" class="entry-content">';	
+					$content .= $mmk_content;
+				$content .= '</div><!-- .entry-content -->';
+			$content .='</article>';
 
  		return $content;
 
  }
 
-
+/**
+ * Display the actual link & banner image
+ * for the floating banner.
+ * @param  $field  ID of the field
+ */
 function floating_banner( $field ){
 	$float_layout = get_sub_field( 'fb__layout', 'option' );
 	if ( have_rows( $field, 'option' ) ): 
@@ -6827,7 +6832,11 @@ function floating_banner( $field ){
 }
 
 
-
+/**
+ * Convert PHP value to Javascript value
+ * & call it to each function in the 
+ * General.js File
+ */
 function qqlanding_owl_carousel(){ ?>
 <?php
 	$appearance = get_field( 'fp_slider_appearance_group', 'option');
@@ -6889,9 +6898,24 @@ function content_img_postion($position_conditon, $top, $right, $left, $bottom) {
 
 	return $positionprop;
 }
- 
-function content_img_hide($hide){
 
+/**
+ * Acf Content IMG HIDE
+ * It Allow you to show/hide the right image
+ * in the content area of your section.
+ * @param  $hide ID of the field
+ * @return return the class
+ */
+function content_img_hide($hide){
 	$hideclass = ($hide == true) ? 'd-none d-lg-block' : 'd-block';
 	return $hideclass;
+}
+
+/**
+ * Callback for inputing your sections.
+ * @param  [type] $id [description]
+ * @return return if true or false
+ */
+function acf_selective_refresh($id){
+	return get_field(  $id,'option' ) ? true : false;
 }

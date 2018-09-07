@@ -1,45 +1,36 @@
+<?php 
+$disable = get_field( 'content_enable_section', 'option' ); //Content Enable/Disable
+$content_item = get_field( 'content_item_a', 'option' ); //Content
+if ( acf_selective_refresh($disable) ) return $disable = false;
+if ($disable) : ?>
 <section id="Fcontent" class="content-first py-5">
 	<div class="container">
-		<div class="flexwrap flex-just-center row">
-		<?php 
-			if( have_rows('content_item', 'option') ): the_row();	
-				
-				$hidemob = content_img_hide(get_sub_field('fp_app_set')['ca_hide_image']);
+		<div class="row d-flex justify-content-center">
+			<?php if ( $content_item ):
+				$hidemob = content_img_hide($content_item['fp_app_set']['ca_hide_image']);
+				$position = $content_item['fp_position'];
 
-				if(get_sub_field('fp_position') == "default"):
-		?>
-
-				<div class="col-xs-12 col-sm-12 col-md-12 text-white text-justify">
-					
-					<?php echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"),'mmk-first',get_sub_field('fp_images')); ?>
-
-				</div>
-
-			<?php else: ?>
-
-				<div class="<?php if(get_sub_field('fp_position') == "left"): echo $hidemob; else: echo 'col-xs-12 col-sm-12'; endif ?> col-md-6 text-white">
-					<?php 
-						if(get_sub_field('fp_position') == "left"):	
-								echo fpcontent_img_position(get_sub_field('fp_images'),'first');
-						else:
-								echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"),'mmk-first',get_sub_field('fp_images'));
-						endif; 
-					?>
-				</div>
-				<div class="<?php if(get_sub_field('fp_position') == "right"): echo $hidemob; else: echo 'col-xs-12 col-sm-12'; endif ?> col-md-6 text-white">
-						<?php 
-							if(get_sub_field('fp_position') == "left"):	
-									echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"), 'mmk-first',get_sub_field('fp_images'));
-							else:
-									echo fpcontent_img_position(get_sub_field('fp_images'),'first');
-							endif; 
-						?>
-				</div>
-				
-			<?php 
-				endif;
-			endif;
-		?>
-	 </div>
+				if($content_item['fp_position'] == "default"): ?>
+					<div class="col-xs-12 col-sm-12 col-md-12 text-white text-justify">
+						<?php echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"),'mmk-first',$content_item['fp_images']); ?>
+					</div>
+				<?php else: ?>
+					<?php if ( $position == 'left' ): ?>
+						<div class="<?php echo $hidemob; ?> col-12 col-lg-6 text-white align-self-center">
+							<?php echo fpcontent_img_position($content_item['fp_images'],'first'); ?>
+						</div>
+					<?php endif; //Left Image ?>
+					<div class="col-12 col-lg-6 text-white align-self-center">
+						<?php echo fpcontent_content_position(get_field("fa_title"),get_field("fa_content"),'mmk-first',$content_item['fp_images']); ?>
+					</div>
+					<?php if ( $position == 'right' ): ?>
+						<div class="<?php echo $hidemob; ?> col-12 col-lg-6 text-white align-self-center">
+							<?php echo fpcontent_img_position($content_item['fp_images'],'first'); ?>
+						</div>
+					<?php endif; //Right Image ?>
+				<?php endif; ?>
+			<?php endif; ?>
+	 	</div>
    </div>
 </section>
+<?php endif;?>

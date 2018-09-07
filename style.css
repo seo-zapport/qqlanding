@@ -2669,6 +2669,9 @@ a:hover, a:active {
   font-size: 1.564rem;
   margin-bottom: 45px;
 }
+.qqlanding-sites.qqland-front #banner {
+  margin-bottom: 0em;
+}
 .qqlanding-sites #banner {
   margin-bottom: 2em;
   max-height: 100%;

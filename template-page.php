@@ -15,17 +15,15 @@ get_header();
 				/*'provider','content-a','post',*/
 				 $value = array(
 
-					'provider',
+					'banner','provider','content-a','post','content-b',
 
 				); //items
 
 				//array push
 				
-				if(get_field('fa_show_content') == "Yes" ){
+				/*if(get_field('fa_show_content') == "Yes" ){
 					array_push($value,"content-b");
-				}
-
-
+				}*/
 				$sections = apply_filters( 'qqlanding_page_sections_order', $value );
 
 				foreach ($sections as $section) :
