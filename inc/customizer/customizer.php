@@ -148,6 +148,79 @@ function qqlanding_customizer_register( $wp_customize ){
 				)
 			);
 
+			//Theme Text Colors Settings
+			$wp_customize->add_setting( 'qqLanding_theme_link_color',
+				array(
+					'default'			=> '#02849c',
+					'type'				=> 'theme_mod',
+					'capability'		=> 'edit_theme_options',
+					'sanitize_callback'	=> 'qqLanding_sanitize_hex_color'
+				)
+			);
+
+			//Theme Text Colors Control
+			$wp_customize->add_control( 
+				new WP_Customize_Color_Control( $wp_customize, 'qqLanding_theme_link_color',
+					array(
+						'label'			=> __( 'Link Color', 'qqLanding' ),
+						'section'		=> 'colors',
+						'setting'		=> 'qqLanding_theme_link_color'
+					)
+				)
+			);
+
+			//Theme Text Colors Settings
+			$wp_customize->add_setting( 'qqLanding_theme_link_hover_color',
+				array(
+					'default'			=> '#10aec7',
+					'type'				=> 'theme_mod',
+					'capability'		=> 'edit_theme_options',
+					'sanitize_callback'	=> 'qqLanding_sanitize_hex_color'
+				)
+			);
+
+			//Theme Text Colors Control
+			$wp_customize->add_control( 
+				new WP_Customize_Color_Control( $wp_customize, 'qqLanding_theme_link_hover_color',
+					array(
+						'label'			=> __( 'Link Color', 'qqLanding' ),
+						'section'		=> 'colors',
+						'setting'		=> 'qqLanding_theme_link_hover_color'
+					)
+				)
+			);
+	/**
+     * Custom CSS section
+     */
+    $wp_customize->add_section( 
+    	'qqLanding_custom_css', 
+    	array(
+			'title' 		=> __( 'Custom CSS', 'qqLanding' ),
+			'panel' 		=> 'qqLanding_style_options',
+			'priority'		=> 50
+		) 
+	);
+
+	$wp_customize->add_setting(
+		'custom_css',
+		array(
+			'default'			=> '',
+			'type'				=> 'theme_mod',
+			'capability'		=> 'edit_theme_options',
+			'sanitize_callback'	=> 'qqLanding_sanitize_css'
+		)
+	);
+	$wp_customize->add_control(
+		'custom_css',
+		array(
+			'settings'		=> 'custom_css',
+			'section'		=> 'qqLanding_custom_css',
+			'type'			=> 'textarea',
+			'label'			=> __( 'Custom CSS', 'qqLanding' ),
+			'description'	=> __( 'Define custom CSS be used for your site. Do not enclose in script tags.', 'qqLanding' ),
+		)
+	);
+
 	/**
 	 * # General Settings
 	 *-------------------------------------*/
@@ -396,7 +469,7 @@ function qqlanding_customizer_register( $wp_customize ){
 			$wp_customize->add_setting(
 				'qqlanding_blog_sidebar_layout',
 				array(
-					'default' => 'both',
+					'default' => 'right',
 					'sanitize_callback' => 'qqlanding_sanitize_radio'
 				)
 			);
@@ -671,7 +744,7 @@ function qqlanding_customizer_register( $wp_customize ){
 			$wp_customize->add_setting(
 				'qqlanding_display_footer_option',
 				array(
-					'default' => false,
+					'default' => 1,
 					'sanitize_callback' => 'qqlanding_sanitize_checkbox'
 				)
 			);

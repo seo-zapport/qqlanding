@@ -7268,7 +7268,7 @@ acf_add_local_field_group(array(
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
-				'id' => '',
+				'id' => 'fb_content',
 			),
 			'default_value' => '',
 			'tabs' => 'all',
@@ -7295,7 +7295,7 @@ acf_add_local_field_group(array(
 		array(
 			'key' => 'field_5b85ef383190d',
 			'label' => 'Title',
-			'name' => 'fb_title',
+			'name' => 'fb_title_b',
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
@@ -7303,7 +7303,7 @@ acf_add_local_field_group(array(
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
-				'id' => '',
+				'id' => 'fb_title_b',
 			),
 			'default_value' => '',
 			'placeholder' => '',
@@ -7314,7 +7314,7 @@ acf_add_local_field_group(array(
 		array(
 			'key' => 'field_5b85ef1b3190c',
 			'label' => '',
-			'name' => 'fb_content',
+			'name' => 'fb_content_b',
 			'type' => 'wysiwyg',
 			'instructions' => '',
 			'required' => 0,
@@ -7322,7 +7322,7 @@ acf_add_local_field_group(array(
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
-				'id' => '',
+				'id' => 'fb_content_b',
 			),
 			'default_value' => '',
 			'tabs' => 'all',
@@ -7571,7 +7571,9 @@ function fpcontent_img_position($img,$class){
  */
  function fpcontent_content_position($mmk_title, $mmk_content, $id_description,$img){
 
-		    $logo = get_theme_mod( 'site_logo', '' ); 
+		    $logo = get_theme_mod( 'site_logo', '' );
+		    $width = ''; 
+		    $height = ''; 
 	
 			if ( !empty( $logo ) ) list($width, $height, $type, $attr) = getimagesize($logo);	//check if logo is not empty
 
@@ -7594,8 +7596,8 @@ function fpcontent_img_position($img,$class){
 					$content .= '<h3 class="h2" itemprop="headline">'.$mmk_title.'</h3>';
 					$content .= '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
 						$content .= '<meta itemprop="url" content="'.$imgObj.'">';	
-						$content .= '<meta itemprop="width" content="'.$imgwidth.'"/>';	
-						$content .= '<meta itemprop="height" content="'.$imgheight.'"/>';	
+						$content .= '<meta itemprop="width" content="' . $imgwidth . '"/>';	
+						$content .= '<meta itemprop="height" content="' . $imgheight . '"/>';	
 					$content .= '</div>';	
 					$content .= '<!-- .AMP  -->';	
 					$content .= '<meta itemprop="author" content="'.get_the_author().'">';	
@@ -7605,8 +7607,8 @@ function fpcontent_img_position($img,$class){
 						$content .= '<meta itemprop="name" content="'.get_permalink().'"/>';	
 						$content .= '<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">';	
 						$content .= '<meta itemprop="url" content="'.esc_url( $logo ).'"/>';	
-						$content .= '<meta itemprop="width" content="'.$width.'"/>';	
-						$content .= '<meta itemprop="height" content="'.$height.'"/>';	
+						$content .= '<meta itemprop="width" content="'  . $width . '"/>';	
+						$content .= '<meta itemprop="height" content="' . $height .'"/>';	
 					$content .= '</div>';	
 				$content .= '</header>';	
 				$content .= '<div id="content-'.$id_description.'" itemprop="description" class="entry-content">';	
@@ -7702,7 +7704,7 @@ function qqlanding_owl_carousel(){ ?>
 		_nav = '<?php echo $_nav; ?>',
 		_dots = '<?php echo $_dots; ?>';
 
-	var _interval = <?php echo $interval;?>;
+	var _interval = '<?php echo $interval;?>';
 </script>
 <?php }
 add_action( 'wp_footer','qqlanding_owl_carousel' );

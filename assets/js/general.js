@@ -44,7 +44,7 @@
         loop:true,
         item:3,
         margin:10,
-        autoplay:autoplay,
+        autoplay: autoplay,
         autoplayTimeout: 1800,
         nav:nav,
         navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
@@ -150,6 +150,23 @@
     // }
     // window.onload = init_carousel;
     // init_carousel();
+
+    /**
+     * Back to Top
+     *------------------*/
+     $(window).scroll(function () {
+        if ( $(this).scrollTop() > 50) {
+            $('#site_back_top').addClass('show');
+        }else{
+            $('#site_back_top').removeClass('show');
+        }
+     });
+     $('#site_back_top').on('click',function(e){
+        e.preventDefault();
+         $('html,body').animate({
+            scrollTop: 0
+         }, 600);
+     });
 
 
 })(jQuery);

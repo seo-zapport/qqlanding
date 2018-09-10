@@ -15,7 +15,7 @@ if ( ! defined('ABSPATH')) exit;
 
 get_header();
 
-$blogs_sidebar_layout = qqlanding_grid_sets( 'both','blog');
+$blogs_sidebar_layout = qqlanding_grid_sets( 'right','blog');
 
 if ( get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'left' || get_theme_mod( 'qqlanding_blog_sidebar_layout', 'both' ) == 'both' ) :
 	get_sidebar( 'left' );

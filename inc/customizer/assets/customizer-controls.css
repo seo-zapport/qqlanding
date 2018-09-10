@@ -101,6 +101,157 @@
     height: auto;
 }
 
+/**--Accordion-Design-*/
+#customize-controls .control-section .accordion-section-title:focus, 
+#customize-controls .control-section .accordion-section-title:hover,
+#customize-controls .control-section.open .accordion-section-title, 
+#customize-controls .control-section:hover>.accordion-section-title{
+    color: #0eb4ba;
+    background: #f3f3f5;
+    border-left-color: #0eb4ba; 
+}
+#customize-outer-theme-controls .control-section .accordion-section-title:focus:after,
+#customize-outer-theme-controls .control-section .accordion-section-title:hover:after,
+#customize-outer-theme-controls .control-section.open .accordion-section-title:after,
+#customize-outer-theme-controls .control-section:hover>.accordion-section-title:after,
+#customize-theme-controls .control-section .accordion-section-title:focus:after,
+#customize-theme-controls .control-section .accordion-section-title:hover:after,
+#customize-theme-controls .control-section.open .accordion-section-title:after,
+#customize-theme-controls .control-section:hover>.accordion-section-title:after{
+    color: #0daab0;
+}
+.control-section h3.accordion-section-title:before {
+    right: 0;
+    content: '\f105';
+    border: none;
+    background: 0 0;
+    font: 400 16px/1 FontAwesome;
+    speak: none;
+    display: block;
+    padding: 0;
+    text-indent: 0;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none!important;
+    margin: 2px 17px 0 15px;
+    float: left;
+    width: 23px;
+    color: #007f84;
+}
+.nav-menus-php .item-edit:before, .widget-top a.widget-action:before {
+    content: '';
+}
+.control-section h3.accordion-section-title {
+    padding-left: 0;
+}
+#accordion-panel-widgets .control-section h3.accordion-section-title:before {
+    content: none;
+}
+
+#accordion-panel-widgets .control-section h3.accordion-section-title {
+    padding-left: 20px;
+}
+
+#accordion-panel-nav_menus .control-section h3.accordion-section-title:before {
+    content: none;
+}
+
+#accordion-panel-nav_menus .control-section h3.accordion-section-title {
+    padding-left: 20px;
+}/* Icons */
+
+/* Site Identity */
+#accordion-section-title_tagline h3.accordion-section-title:before {
+    content: '\f1ad';
+}
+
+/* General Settings */
+#accordion-panel-qqlanding_theme_options h3.accordion-section-title:before {
+    content: '\f0ad';
+}
+
+/* Post Settings */
+#accordion-section-tiervpn_post_settings h3.accordion-section-title:before {
+    content: '\f15b';
+}
+
+/* Site Styling */
+#accordion-panel-qqLanding_style_options h3.accordion-section-title:before {
+    content: '\f1fc';
+}
+
+/* Social Media */
+#accordion-section-tiervpn_social_media h3.accordion-section-title:before {
+    content: '\f0c0';
+}
+
+/* Menus */
+#accordion-panel-nav_menus > h3.accordion-section-title:before {
+    content: '\f0c9';
+} 
+
+#sub-accordion-panel-nav_menus h3.accordion-section-title:before {
+    content: none !important;
+} 
+
+#sub-accordion-panel-nav_menus h3.accordion-section-title {
+    padding-left: 14px;
+} 
+
+/* Widgets */
+#accordion-panel-widgets > h3.accordion-section-title:before {
+    content: '\f187';
+} 
+
+#sub-accordion-panel-widgets h3.accordion-section-title:before {
+    content: none !important;
+} 
+
+#sub-accordion-panel-widgets h3.accordion-section-title {
+    padding-left: 14px;
+} 
+
+#accordion-section-colors h3.accordion-section-title:before {
+    content: '\f1fc';
+}
+
+/* Background Image */
+#accordion-section-background_image h3.accordion-section-title:before {
+    content: '\f1c5';
+}  
+
+/* Custom CSS */ 
+#accordion-section-qqLanding_custom_css h3.accordion-section-title:before {
+    content: '\f044';
+}  
+
+/* Static Frontpage */ 
+#accordion-section-static_front_page h3.accordion-section-title:before {
+    content: '\f015';
+    font-size: 20px;
+} 
+
+/* Social Media */ 
+#accordion-section-qqlanding_socialMedia_settings h3.accordion-section-title:before {
+   /*  content: '\f044'; */
+    content: '\f005';
+    font-size: 20px;
+}  
+/* Blogs */ 
+#accordion-section-qqlanding_blog_options h3.accordion-section-title:before,
+#accordion-section-qqlanding_page_options h3.accordion-section-title:before,
+#accordion-section-qqlanding_single_post_options h3.accordion-section-title:before {
+    content: '\f15b';
+    font-size: 20px;
+}  
+/* Copyright */ 
+#accordion-section-qqlanding_footer_options h3.accordion-section-title:before {
+    content: '\f1f9';
+    font-size: 20px;
+}  
+
+
 /* Special element */
 .repeatable-customize-control.show-display-field-only .widget-content .item{
     display: none;

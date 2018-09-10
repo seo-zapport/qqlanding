@@ -10,12 +10,11 @@ if ( ! defined('ABSPATH')) exit;
 
 get_header();
 
-$single_sidebar_layout = qqlanding_grid_sets( 'both','single');
+$single_sidebar_layout = qqlanding_grid_sets( 'right','single');
 
 if ( get_theme_mod( 'qqlanding_single_sidebar_layout', 'both' ) == 'left' || get_theme_mod( 'qqlanding_single_sidebar_layout', 'both' ) == 'both' ) :
 	get_sidebar( 'left' );
 endif; ?>
-
 	<div id="primary" class="content-area <?php echo $single_sidebar_layout['grid_sets']; ?>">
 		<main id="main" class="site-main">
 
