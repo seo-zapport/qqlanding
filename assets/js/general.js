@@ -109,29 +109,33 @@
     /**
      * Float classic
      *------------------*/
-    var myBool = true;
+    /*var myBool = true;
     $('.float-classic .btn-pangclose').on('click', function() {
         if (myBool) {
-            $('#qqgroup-wrap').stop(true,false).animate({left : "-178px"},500);
+            //$('#qqgroup-wrap').stop(true,false).animate({left : "-178px"},500);
             $(this).find('i.fa').removeClass('fa-angle-double-left').addClass('fa-angle-double-right');
             
         }else {
-            $('#qqgroup-wrap').stop(true,false).animate({left : "0px"},500);
+            //$('#qqgroup-wrap').stop(true,false).animate({left : "0px"},500);
             $(this).find('i.fa').removeClass('fa-angle-double-right').addClass('fa-angle-double-left');
         }
         myBool = !myBool;
-    });
+    });*/
     /**
      * Float Flat
      *------------------*/
     $('.btn-pangclose').click(function() {
         var toggle = $.data(this, 'clickToggle') == null ? true : $.data(this, 'clickToggle');
         if ( toggle ) {
-            $('.boxWrap').stop(true,false).animate({marginLeft : "0px"},500);
-            $(this).find('i.fa').removeClass('fa-arrow-right').addClass('fa-arrow-left');
-        } else {
+            /*$('.boxWrap').stop(true,false).animate({marginLeft : "0px"},500);
+            $(this).find('i.fa').removeClass('fa-angle-double-right').addClass('fa-angle-double-left');*/
             $('.boxWrap').stop(true,false).animate({marginLeft : "-178px"},500);
-            $(this).find('i.fa').removeClass('fa-arrow-left').addClass('fa-arrow-right');      
+            $(this).find('i.fa').removeClass('fa-angle-double-left').addClass('fa-angle-double-right');
+        } else {
+            /*$('.boxWrap').stop(true,false).animate({marginLeft : "-178px"},500);
+            $(this).find('i.fa').removeClass('fa-angle-double-left').addClass('fa-angle-double-right');  */    
+            $('.boxWrap').stop(true,false).animate({marginLeft : "0px"},500);
+            $(this).find('i.fa').removeClass('fa-angle-double-right').addClass('fa-angle-double-left');
         }
         $.data(this, 'clickToggle', ! toggle);
     });
@@ -168,5 +172,31 @@
          }, 600);
      });
 
+
+    function sample(){
+        var body_h = $(window).height(),
+            wrap_innerh = $('#qqgroup-wrap').innerHeight(),
+            body_w = $(window).width();
+        var new_height = ( body_h / 2 ) - 80;
+        var s_h = (new_height / 2) + 42;
+
+        if( window.matchMedia("(min-width: 1024px)").matches && window.matchMedia("(max-width: 1266px)").matches ){
+            if (body_w === 1024) {
+                var nee_h =  wrap_innerh - 150;
+                $('#qqgroup-wrap').css({ 'height' : nee_h });
+            }
+            $('#qqgroup-wrap').css({ 'height' : wrap_innerh });
+
+        }else if ( window.matchMedia("(min-width: 768px)").matches ) {
+            $('#qqgroup-wrap').css({ 'height' : new_height });
+            //console.log('true || ' + wrap_innerh);
+        }else{
+            $('#qqgroup-wrap').css({ 'height' : 'auto' });
+             //console.log('else || ' + wrap_innerh);
+        } 
+    }
+    $(window).on('load resize', function(){
+        sample();
+    });
 
 })(jQuery);

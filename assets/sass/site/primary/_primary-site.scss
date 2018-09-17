@@ -1343,6 +1343,7 @@
 	}
 
 	#qqgroup-wrap{
+		height: calc(100% / 2 - 80px);
 		&.qqgroup-float{
 			position: fixed;
 			top:0;
@@ -1446,6 +1447,8 @@
 		}
 		&.qqgroup-slider{
 			position: relative;
+			padding-top: 25px;
+			padding-bottom: 25px;
 		}
 	}
 

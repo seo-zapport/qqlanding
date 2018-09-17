@@ -115,7 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 			<?php endif; //end qqlanding_display_footer_option?>
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
-	<?php if ( get_field( 'th_layout', 'option' ) === 'box'): ?>
+	<?php if ( th_layout() === 'box' ): ?>
 		</div>
 	<?php endif;?> <!--if wide/box only-->
 </div><!-- #page -->
@@ -123,6 +123,7 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 <?php wp_footer(); ?>
 
 <a id="site_back_top"><i class="fas fa-chevron-up"></i></a>
+
 
 </body>
 </html>

@@ -30,7 +30,7 @@ if ( ! defined('ABSPATH')) exit; ?>
 <body <?php body_class( 'qqlanding-sites qqland-' . qqlanding_schema( $layout ) . $front_class); ?>>
 
 <div id="page" class="site container<?php echo ( get_field( 'th_layout', 'option' ) == 'wide' ) ? '-full qqland-site-full' : ' qqland-site-box'; ?>">
-	<?php if ( get_field( 'th_layout', 'option' ) === 'box'): ?>
+	<?php if ( th_layout() === 'box' ): ?>
 		<div class="row">
 	<?php endif;?> <!--if wide/box only-->
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'qqlanding' ); ?></a>

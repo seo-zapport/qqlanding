@@ -6,7 +6,7 @@
 if ( ! defined('ABSPATH')) exit;
 
 // 1. customize ACF path
-add_filter('acf/settings/path', 'my_acf_settings_path');
+/*add_filter('acf/settings/path', 'my_acf_settings_path');
  
 function my_acf_settings_path( $path ) {
  
@@ -7354,7 +7354,7 @@ acf_add_local_field_group(array(
 	'description' => 'Display the settings for Template: front page of qqlanding',
 ));
 
-endif;
+endif;*/
 
 
 if ( function_exists( 'acf_add_options_page' ) ) :
@@ -7755,4 +7755,9 @@ function content_img_hide($hide){
  */
 function acf_selective_refresh($id){
 	return get_field(  $id,'option' ) ? true : false;
+}
+
+function th_layout(){
+	$th_layout = ( ! empty( get_field( 'th_layout', 'option' ) ) ) ? get_field( 'th_layout', 'option' ) : 'box';
+	return $th_layout;
 }
