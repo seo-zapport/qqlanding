@@ -3236,7 +3236,7 @@ acf_add_local_field_group(array(
 					'conditional_logic' => array(
 						array(
 							array(
-								'field' => 'field_5b92071cacb22',
+								'field' => 'field_5b922f9663ae3',
 								'operator' => '==',
 								'value' => 'bg-image',
 							),
