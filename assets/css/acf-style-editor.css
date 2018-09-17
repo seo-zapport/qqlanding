@@ -1,0 +1,53 @@
+
+/* ================================= */
+/* =========== Slider ============== */
+/* ================================= */ 
+#banner .banner-static-content{
+	font-family: noto_sans_regular;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+						#banner-static{background: #21c6b6;background-position: left top; background-repeat: repeat;-backgroundsize: auto;background-attachment: scroll;}						@media screen and (min-width: 960px) {
+				#banner-static{height: 420px;}
+			}
+			
+			
+
+/* ================================= */
+/* =========== Content ============== */
+/* ================================= */ 
+
+
+.content-first{
+	background : url('http://www.sandbox.awakentheme.com/wp-content/uploads/2018/09/article-bg.jpg');
+	background-size:contain;background-position:left top; background-repeat:no-repeat;background-attachment: scroll;}
+		  	
+	
+.content-last{
+	background : #000000;
+	background-size:contain;background-position:left top; background-repeat:no-repeat;background-attachment: scroll;}
+		  	
+	
+		#Fproviders{background-color: #000000 !important;}
+		.provider-group[class*='-category']{border-color: #ffffff !important;}.provider-group .provider-item > i{ background: url('http://www.sandbox.awakentheme.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
+			.qqgroup-sidebox,.m-qqgroup-ads{ background-color:#000000;}.qqgroup-logo{color:#FFFFFF;}
+
+
+						.qqgroup-item:nth-child(1){ background-color:#272727 }
+
+							.qqgroup-item:nth-child(2){ background-color:#272727 }
+
+							.qqgroup-item:nth-child(3){ background-color:#272727 }
+
+							.qqgroup-item:nth-child(4){ background-color:#272727 }
+
+							.qqgroup-item:nth-child(5){ background-color:#272727 }
+
+			
+
+/**
+ * Media Query
+ *-------------------------*/
+@media (min-width: 768px){.provider-group[class*='-default']:nth-child(1){max-width: inherit;}.provider-group[class*='-default']:nth-child(2){max-width: inherit;}.provider-group[class*='-default']:nth-child(3){max-width: inherit;}.provider-group[class*='-default']:nth-child(4){max-width: inherit;}.provider-group[class*='-default']:nth-child(5){max-width: 25%;}.provider-group[class*='-default']:nth-child(6){max-width: 25%;}.provider-group[class*='-default']:nth-child(7){max-width: 10%;}}

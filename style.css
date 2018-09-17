@@ -858,7 +858,7 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites #site-navigation .navbar-nav .dropdown-menu .nav-link { font-size: 14px; font-size: 0.875rem; }
 .qqlanding-sites .site-content { padding-top: 35px; }
 .qqlanding-sites .site-footer { background: #222222; padding: 25px 0; width: 100%; }
-.qqlanding-sites #site_back_top { background-color: #7f7f7f; border-radius: 2px; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.28); color: #fff; cursor: pointer; height: 37px; line-height: 37px; width: 37px; opacity: 0; filter: alpha(opacity=0); position: fixed; right: 7px; bottom: 7px; text-align: center; text-decoration: none; z-index: 9999; }
+.qqlanding-sites #site_back_top { background-color: #7f7f7f; border-radius: 2px; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.28); color: #fff; cursor: pointer; display: block; height: 37px; line-height: 37px; width: 37px; opacity: 0; filter: alpha(opacity=0); position: fixed; right: 7px; bottom: 7px; text-align: center; text-decoration: none; z-index: 9999; }
 .qqlanding-sites #site_back_top.show { opacity: 1; filter: alpha(opacity=1); -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 .qqlanding-sites .sticky { display: block; }
 .qqlanding-sites .hentry { margin: 0 0 1.5em; }
