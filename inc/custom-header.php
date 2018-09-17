@@ -73,6 +73,20 @@ endif;
 
 
 /**
+ * This function Contains All The scripts that Will be Loaded in the Theme Header including Custom Javascript, Custom CSS, etc.
+ */
+function QQLanding_initialize_header(){
+	
+	//CSS Begins
+	echo "<style>";
+		echo get_theme_mod( 'custom_css', '' );	
+	echo "</style>";
+	//CSS Ends
+}
+add_action( 'wp_head', 'QQLanding_initialize_header');
+
+
+/**
  * Header Settings
  */
 
