@@ -13,9 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 		</div><!-- .row -->
 		<?php endif; ?>
 	</div><!-- #content -->
-	<div class="samplelang">
-		ahhahahaha
-	</div>
 	<footer id="footer" class="site-footer" itemscope itemtype="http://schema.org/WPFooter"> 
 		<meta itemprop="name" content="Webpage footer for <?php wp_title('&raquo;', true, 'right'); ?>"/>
 		<meta itemprop="description" content="Information about imprint and data protection"/>

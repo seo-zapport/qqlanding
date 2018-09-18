@@ -4,6 +4,29 @@
 .full-wh { background-color: #eaeaea; font-family: 'arial_rounded_mt_std_regular',sans-serif; display: table; overflow: hidden; width: 100%; }
 .full-wh .full-wrap { display: table-cell; vertical-align: middle; }
 
+/**--Enter site*/
+.qqlanding-sites .btn-entersite { color: #fff !important; }
+.qqlanding-sites .btn-entersite.bg_color_288 { border-color: #02849c; }
+.qqlanding-sites .btn-entersite.bg_color_288:hover, .qqlanding-sites .btn-entersite.bg_color_288:focus { background: #005c6b; border-color: #005c6b; }
+.qqlanding-sites .btn-entersite.bg_color_188 { border-color: #0153ff; }
+.qqlanding-sites .btn-entersite.bg_color_188:hover, .qqlanding-sites .btn-entersite.bg_color_188:focus { background: #002a80; border-color: #002a80; }
+.qqlanding-sites .btn-entersite.bg_color_101 { border-color: #01740F; }
+.qqlanding-sites .btn-entersite.bg_color_101:hover, .qqlanding-sites .btn-entersite.bg_color_101:focus { background: #153317; border-color: #153317; }
+.qqlanding-sites .btn-entersite.bg_color_1x2 { border-color: #015fe7; }
+.qqlanding-sites .btn-entersite.bg_color_1x2:hover, .qqlanding-sites .btn-entersite.bg_color_1x2:focus { background: #1f1f1f; border-color: #1f1f1f; }
+.qqlanding-sites .btn-entersite.bg_color_724 { border-color: #476f54; }
+.qqlanding-sites .btn-entersite.bg_color_724:hover, .qqlanding-sites .btn-entersite.bg_color_724:focus { background: #fdc153; border-color: #fdc153; }
+.qqlanding-sites .btn-entersite.bg_color_fortuna { border-color: #3f0000; }
+.qqlanding-sites .btn-entersite.bg_color_fortuna:hover, .qqlanding-sites .btn-entersite.bg_color_fortuna:focus { background: #c74547; border-color: #c74547; }
+.qqlanding-sites .btn-entersite.bg_color_801 { border-color: #f1392f; }
+.qqlanding-sites .btn-entersite.bg_color_801:hover, .qqlanding-sites .btn-entersite.bg_color_801:focus { background: #005395; border-color: #005395; }
+.qqlanding-sites .btn-entersite.bg_color_882 { border-color: #451465; }
+.qqlanding-sites .btn-entersite.bg_color_882:hover, .qqlanding-sites .btn-entersite.bg_color_882:focus { background: #db026b; border-color: #db026b; }
+.qqlanding-sites .btn-entersite.bg_color_808 { border-color: #da954a; }
+.qqlanding-sites .btn-entersite.bg_color_808:hover, .qqlanding-sites .btn-entersite.bg_color_808:focus { background: #874c00; border-color: #874c00; }
+.qqlanding-sites .btn-entersite.bg_color_828 { border-color: #ec4801; }
+.qqlanding-sites .btn-entersite.bg_color_828:hover, .qqlanding-sites .btn-entersite.bg_color_828:focus { background: #a63201; border-color: #a63201; }
+
 /**--Providers*/
 .provider-title { position: absolute; top: -12px; background: #e6e6e6; color: #222222; font-size: 14px; font-size: 0.875rem; font-weight: 600; margin: 0; padding: 2px 7px; text-transform: uppercase; }
 

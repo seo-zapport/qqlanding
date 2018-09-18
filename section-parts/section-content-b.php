@@ -1,10 +1,12 @@
 <?php 
-/*$countlabel =  count(get_field('content_item', 'option'));
-if($countlabel == 1 ){ $class ="first";}else{ $class ="last"; }*/
 $disable = get_field( 'content_enable_section_b', 'option' ); //Content Enable/Disable
 $content_item_b = get_field( 'content_item_b', 'option' ); //Content
+$filters = get_field( 'filter_fields_b', 'option' );
 if ($disable) : ?>
-<section id="Fcontent" class="content-last py-5">
+<section id="Fcontent_b" class="content-last py-5">
+	<?php if ( ! empty( $filters ) ): ?>
+		<div class="slider-filters"></div>
+	<?php endif; ?>
 	<div class="container">
 		<div class="row d-flex justify-content-center">
 			<?php if ( $content_item_b ):

@@ -507,26 +507,37 @@ a:hover, a:active { outline: 0; }
 ## Primary Sites
 --------------------------------------------------------------*/
 .qqlanding-sites { margin: 0; }
+.qqlanding-sites.qqland-qq288 .bg_color_288 { background: #02849c; }
 .qqlanding-sites.qqland-qq288 .color_288 { color: #005c6b; }
 .qqlanding-sites.qqland-qq288 .navbar { background: #02849c; }
+.qqlanding-sites.qqland-qq188 .bg_color_188 { background: #0153ff; }
 .qqlanding-sites.qqland-qq188 .color_188 { color: #002a80; }
 .qqlanding-sites.qqland-qq188 .navbar { background: #0153ff; }
+.qqlanding-sites.qqland-qq101 .bg_color_101 { background: #01740F; }
 .qqlanding-sites.qqland-qq101 .color_101 { color: #153317; }
 .qqlanding-sites.qqland-qq101 .navbar { background: #01740F; }
+.qqlanding-sites.qqland-qq1x2 .bg_color_1x2 { background: #015fe7; }
 .qqlanding-sites.qqland-qq1x2 .color_1x2 { color: #1f1f1f; }
 .qqlanding-sites.qqland-qq1x2 .navbar { background: #015fe7; }
+.qqlanding-sites.qqland-qq724 .bg_color_724 { background: #476f54; }
 .qqlanding-sites.qqland-qq724 .color_724 { color: #fdc153; }
 .qqlanding-sites.qqland-qq724 .navbar { background: #476f54; }
+.qqlanding-sites.qqland-qqfortuna .bg_color_fortuna { background: #3f0000; }
 .qqlanding-sites.qqland-qqfortuna .color_fortuna { color: #2e0002; }
 .qqlanding-sites.qqland-qqfortuna .navbar { background: #3f0000; }
+.qqlanding-sites.qqland-qq801 .bg_color_801 { background: #f1392f; }
 .qqlanding-sites.qqland-qq801 .color_801 { color: #013878; }
 .qqlanding-sites.qqland-qq801 .navbar { background: #f1392f; }
+.qqlanding-sites.qqland-qq882 .bg_color_882 { background: #451465; }
 .qqlanding-sites.qqland-qq882 .color_882 { color: #300a45; }
 .qqlanding-sites.qqland-qq882 .navbar { background: #451465; }
+.qqlanding-sites.qqland-qq808 .bg_color_808 { background: #da954a; }
 .qqlanding-sites.qqland-qq808 .color_808 { color: #da954a; }
 .qqlanding-sites.qqland-qq808 .navbar { background: #874c00; }
+.qqlanding-sites.qqland-qq828 .bg_color_828 { background: #ec4801; }
 .qqlanding-sites.qqland-qq828 .color_828 { color: #a63201; }
 .qqlanding-sites.qqland-qq828 .navbar { background: #ec4801; }
+.qqlanding-sites.qqland-custom .bg_color_custom { background: #222222; }
 .qqlanding-sites.qqland-custom .color_custom { color: #222222; }
 .qqlanding-sites.qqland-affix.qqland-overlay.qqland-qq288 .navbar { background: rgba(2, 132, 156, 0.78); }
 .qqlanding-sites.qqland-affix.qqland-overlay.qqland-qq188 .navbar { background: rgba(1, 83, 255, 0.78); }
@@ -763,6 +774,8 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites #banner .slider-filters { position: absolute; top: 0; bottom: 0; width: 100%; z-index: -1; }
 .qqlanding-sites #banner #banner-slider .carousel-caption { position: static; bottom: 0; left: 0; }
 .qqlanding-sites #banner #banner-slider [class*='slider-views-'].slider-filter:after { content: ''; display: block; position: absolute; top: 0; bottom: 0; width: 100%; z-index: -1; }
+.qqlanding-sites #Fcontent_a, .qqlanding-sites #Fcontent_b { position: relative; }
+.qqlanding-sites #Fcontent_a .slider-filters, .qqlanding-sites #Fcontent_b .slider-filters { content: ''; display: block; position: absolute; top: 0; bottom: 0; width: 100%; z-index: -1; }
 .qqlanding-sites #Fpost .card-overlay { color: #fff; }
 .qqlanding-sites #Fpost .card-overlay .card-title > a, .qqlanding-sites #Fpost .card-overlay .entry-meta > small { color: #fff !important; }
 .qqlanding-sites #Fpost .slider-item { color: #7f7f7f; }

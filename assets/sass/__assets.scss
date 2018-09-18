@@ -19,7 +19,82 @@
 		vertical-align: middle;
 	}
 }
-
+/**--Enter site*/
+.qqlanding-sites{
+	.btn-entersite{
+		color: $color__white !important;
+		&.bg_color_288{
+			border-color:$qq288_default;
+			&:hover,&:focus{
+				background:$qq288_blue_stone;
+				border-color:$qq288_blue_stone;
+			}
+		}
+		&.bg_color_188{
+			border-color:$qq188_default;
+			&:hover,&:focus{
+				background:$qq188_reso_blue;
+				border-color:$qq188_reso_blue;
+			}
+		}
+		&.bg_color_101{
+			border-color:$qq101_default;
+			&:hover,&:focus{
+				background:$qq101_celtic;
+				border-color:$qq101_celtic;
+			}
+		}
+		&.bg_color_1x2{
+			border-color:$qq1x2_blue_ribbon;
+			&:hover,&:focus{
+				background:$qq1x2_default;
+				border-color:$qq1x2_default;
+			}
+		}
+		&.bg_color_724{
+			border-color:$qq724_default;
+			&:hover,&:focus{
+				background:$color__fd;
+				border-color:$color__fd;
+			}
+		}
+		&.bg_color_fortuna{
+			border-color:$qqfortuna_default;
+			&:hover,&:focus{
+				background:$qqfortuna_mojo;
+				border-color:$qqfortuna_mojo;
+			}
+		}
+		&.bg_color_801{
+			border-color:$qq801_default;
+			&:hover,&:focus{
+				background:$qq801_congress_blue;
+				border-color:$qq801_congress_blue;
+			}
+		}
+		&.bg_color_882{
+			border-color:$qq882_default;
+			&:hover,&:focus{
+				background:$qq882_razzmatazz;
+				border-color:$qq882_razzmatazz;
+			}
+		}
+		&.bg_color_808{
+			border-color:$qq808_di_serria;
+			&:hover,&:focus{
+				background:$qq808_default;
+				border-color:$qq808_default;
+			}
+		}
+		&.bg_color_828{
+			border-color:$qq828_default;
+			&:hover,&:focus{
+				background:$qq828_fire;
+				border-color:$qq828_fire;
+			}
+		}
+	}
+}
 /**--Providers*/
 .provider-title{
 	position: absolute;

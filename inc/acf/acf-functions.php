@@ -3615,16 +3615,16 @@ acf_add_local_field_group(array(
 				'id' => 'th_color_scheme',
 			),
 			'choices' => array(
-				'qq288' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq288.jpg">',
-				'qq188' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq188.jpg">',
-				'qq101' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq101.jpg">',
-				'qq1x2' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq1x2.jpg">',
-				'qq724' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq724.jpg">',
-				'qqfortuna' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qqfortuna.jpg">',
-				'qq801' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq801.jpg">',
-				'qq882' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq882.jpg">',
-				'qq808' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq808.jpg">',
-				'qq828' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq828.jpg">',
+				'qq288' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq288.jpg"><span class="th_title">QQ288</span>',
+				'qq188' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq188.jpg"><span class="th_title">QQ188</span>',
+				'qq101' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq101.jpg"><span class="th_title">QQ101</span>',
+				'qq1x2' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq1x2.jpg"><span class="th_title">QQ1x2</span>',
+				'qq724' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq724.jpg"><span class="th_title">QQ724</span>',
+				'qqfortuna' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qqfortuna.jpg"><span class="th_title">QQfortuna</span>',
+				'qq801' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq801.jpg"><span class="th_title">QQ801</span>',
+				'qq882' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq882.jpg"><span class="th_title">QQ882</span>',
+				'qq808' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq808.jpg"><span class="th_title">QQ808</span>',
+				'qq828' => '<img src="/wp-content/themes/qqlanding/assets/images/acf-img/qq828.jpg"><span class="th_title">QQ828</span>',
 				'custom' => 'Custom',
 			),
 			'allow_null' => 0,
@@ -7406,7 +7406,6 @@ function qqlanding_schema( $class ){
 		case 'overlay': $new_class = "qqlayout-overlay"; break;
 		default: $new_class = "qqlayout-default"; break;
 	}
-
 	switch ( $class ) {
 		case 'qq188': $class = 'qq188 ' . $add_affix . ' ' . $new_class; break;
 		case 'qq101': $class = 'qq101 ' . $add_affix . ' ' . $new_class; break;
@@ -7438,6 +7437,23 @@ function qqlanding_text_color($color){
 		default: $color = 'color_288 '; break;
 	}
 	return $color;
+}
+
+function qqlanding_bg_color($bg_color){
+	switch ( $bg_color ) {
+	case 'qq188': $class = '188'; break;
+	case 'qq101': $class = '101'; break;
+	case 'qq1x2': $class = '1x2'; break;
+	case 'qq724': $class = '724'; break;
+	case 'qqfortuna': $class = 'fortuna'; break;
+	case 'qq801': $class = '801'; break;
+	case 'qq882': $class = '882'; break;
+	case 'qq808': $class = '808'; break;
+	case 'qq828': $class = '828'; break;
+	case 'custom': $class = 'custom'; break;
+	default: $class = '288'; break;
+	}
+	return $class;
 }
 
 function qqlanding_fontfam( $font ){
@@ -7482,8 +7498,6 @@ function qqlanding_filters( $field, $func, $val, $dim){
 	filter:<?php echo $fiter_output; ?>;
 
 <?php }
-
-
 
 function qqlanding_preset_acf($repeat, $scroll, $screen, $position, $image_size){
 
@@ -7530,22 +7544,27 @@ function qqlanding_sliding_bg($slider_attrib, $slide_img, $slide_color){
 	return $background;
 }
 
-
-
 function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn, $link_target, $btn_dev){
-
+	$th_layout = get_field( 'th_color_scheme', 'option' );
 	$links = ($link) ? do_shortcode( $link ) : esc_url( home_url( '/' ) ); //links
 	$imgbutton = ($btn_image['url']) ? $btn_image['url'] : get_template_directory_uri().'/assets/images/default/enter.png'; //image
 	if( ! empty($link_xfn)){ $linkRel = $link_xfn; }else{$linkRel = '';} //link relationship
 	$linktar = ($link_target == '_blank') ? '_blank' : '_self'; //Target
-	$device = ( $btn_dev == 'desktop' ) ? 'd-none d-md-block d-lg-block' : 'd-block d-md-none d-lg-none'; //Device Item
+	$device = ( $btn_dev == 'desktop' ) ? 'd-none d-md-inline-block d-lg-inline-block' : 'd-block d-md-none d-lg-none'; //Device Item
 
 	if ( $type == 'image' ) {
+		$item_class = '';
 		$item = '<img class="img-responsive enter-site" src="' . $imgbutton . '" alt="' . $btn_image['alt'] . '" title="' . $btn_image['title'] . '">';
 	}else{
-		$item = $btn_text;
+		$item_class = qqlanding_bg_color($th_layout, 'button');
+
+		$devices = ( $btn_dev == 'desktop' ) ? "<i class='fas fa-desktop'></i> " : "<i class='fas fa-mobile-alt'></i> ";
+
+		$item = $devices . ' ' . $btn_text;
 	}
-	$entersite = '<a href="' . $links . '" rel="'.$linkRel.'" target="'.$linktar.'" class="' . $device . ' mt-3">' . $item . '</a>';
+	$entersite = '<div class="' . $device . '">';
+		$entersite .= '<a href="' . $links . '" rel="'.$linkRel.'" target="'.$linktar.'" class="btn btn-lg btn-entersite bg_color_' . $item_class . ' mt-3">' . $item . '</a>';
+	$entersite .= '</div>';
 
 	return $entersite;
 } 

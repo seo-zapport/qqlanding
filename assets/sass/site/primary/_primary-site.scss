@@ -1,17 +1,17 @@
 .qqlanding-sites{
 	margin:0;
 	 //* No Affix
-	&.qqland-qq288{ .color_288{ color:$qq288_blue_stone;} .navbar{background:$qq288_default} }
-	&.qqland-qq188{ .color_188{ color:$qq188_reso_blue;} .navbar{background:$qq188_default} }
-	&.qqland-qq101{ .color_101{ color:$qq101_celtic;} .navbar{background:$qq101_default} }
-	&.qqland-qq1x2{ .color_1x2{ color:$qq1x2_default;} .navbar{background:$qq1x2_blue_ribbon} }
-	&.qqland-qq724{ .color_724{ color:$color__fd;} .navbar{background:$qq724_default} }
-	&.qqland-qqfortuna{ .color_fortuna{ color:$qqfortuna_temptress;} .navbar{background:$qqfortuna_default} }
-	&.qqland-qq801{ .color_801{ color:$qq801_regal_blue;} .navbar{background:$qq801_default} }
-	&.qqland-qq882{ .color_882{ color:$qq882_violet;} .navbar{background:$qq882_default} }
-	&.qqland-qq808{ .color_808{ color:$qq808_di_serria;} .navbar{background:$qq808_default} }
-	&.qqland-qq828{ .color_828{ color:$qq828_fire;} .navbar{background:$qq828_default} }
-	&.qqland-custom{ .color_custom{ color:$color__22;} }
+	&.qqland-qq288{ .bg_color_288{background:$qq288_default;} .color_288{ color:$qq288_blue_stone;} .navbar{background:$qq288_default} }
+	&.qqland-qq188{ .bg_color_188{background:$qq188_default;} .color_188{ color:$qq188_reso_blue;} .navbar{background:$qq188_default} }
+	&.qqland-qq101{ .bg_color_101{background:$qq101_default;} .color_101{ color:$qq101_celtic;} .navbar{background:$qq101_default} }
+	&.qqland-qq1x2{ .bg_color_1x2{background:$qq1x2_blue_ribbon;} .color_1x2{ color:$qq1x2_default;} .navbar{background:$qq1x2_blue_ribbon} }
+	&.qqland-qq724{ .bg_color_724{background:$qq724_default;} .color_724{ color:$color__fd;} .navbar{background:$qq724_default} }
+	&.qqland-qqfortuna{ .bg_color_fortuna{background:$qqfortuna_default;} .color_fortuna{ color:$qqfortuna_temptress;} .navbar{background:$qqfortuna_default} }
+	&.qqland-qq801{ .bg_color_801{background:$qq801_default;} .color_801{ color:$qq801_regal_blue;} .navbar{background:$qq801_default} }
+	&.qqland-qq882{ .bg_color_882{background:$qq882_default;} .color_882{ color:$qq882_violet;} .navbar{background:$qq882_default} }
+	&.qqland-qq808{ .bg_color_808{background:$qq808_di_serria;} .color_808{ color:$qq808_di_serria;} .navbar{background:$qq808_default} }
+	&.qqland-qq828{ .bg_color_828{background:$qq828_default;} .color_828{ color:$qq828_fire;} .navbar{background:$qq828_default} }
+	&.qqland-custom{ .bg_color_custom{background:$color__22;} .color_custom{ color:$color__22;} }
 
 	//* Affix
 	&.qqland-affix{
@@ -1211,6 +1211,18 @@
 					}
 				}
 			}
+		}
+	}
+	#Fcontent_a,#Fcontent_b{
+		position: relative;
+		.slider-filters{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			z-index: -1;
 		}
 	}
 

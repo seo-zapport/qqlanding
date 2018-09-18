@@ -4,11 +4,10 @@ $content_item = get_field( 'content_item_a', 'option' ); //Content
 $filters = get_field( 'filter_fields_a', 'option' );
 if ( acf_selective_refresh($disable) ) return $disable = false;
 if ($disable) : ?>
-<section id="Fcontent" class="content-first py-5">
+<section id="Fcontent_a" class="content-first py-5">
 	<?php if ( ! empty( $filters ) ): ?>
 		<div class="slider-filters"></div>
 	<?php endif; ?>
-	
 	<div class="container">
 		<div class="row d-flex justify-content-center">
 			<?php if ( $content_item ):

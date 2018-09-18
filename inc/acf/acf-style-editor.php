@@ -26,6 +26,7 @@ if(have_rows('slider_fonts', 'option')) :
 endif;
 
 $filter = get_field( 'filter_fields', 'option' ); /*--filters*/
+$filter_a = get_field( 'filter_fields_a', 'option' ); /*--filters*/
 ?>
 
 /* ================================= */
@@ -44,7 +45,7 @@ $filter = get_field( 'filter_fields', 'option' ); /*--filters*/
 			$bg = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
 			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
 			if ( ! empty($filter) ): ?>
-			.slider-filters{background: <?php echo $bg;?>;<?php echo $presets; ?><?php if ( ! empty( get_field( 'slider_opacity', 'option' ) ) && get_field( 'slider_opacity', 'option' ) != '0' ) : ?>opacity: <?php the_field( 'slider_opacity', 'option' ); ?><?php endif; ?>;}
+			#banner .slider-filters{background: <?php echo $bg;?>;<?php echo $presets; ?><?php if ( ! empty( get_field( 'slider_opacity', 'option' ) ) && get_field( 'slider_opacity', 'option' ) != '0' ) : ?>opacity: <?php the_field( 'slider_opacity', 'option' ); ?><?php endif; ?>;}
 			@media screen and (min-width: 960px) {
 				#banner-static,.slider-filters{height: <?php echo $slide_height; ?>px;}
 			}
@@ -100,7 +101,7 @@ $filter = get_field( 'filter_fields', 'option' ); /*--filters*/
 		
 	<?php endif; //check the slider?>
 <?php endif; //check the slider layout ?>
-<?php if ( ! empty( get_field( 'filter_fields', 'option' ) ) ): ?>.slider-filters{<?php echo qqlanding_filters( 'filter_fields', 'filter_selection', 'filter_values','filter_dimension' ); ?>}
+<?php if ( ! empty( get_field( 'filter_fields', 'option' ) ) ): ?>#banner .slider-filters{<?php echo qqlanding_filters( 'filter_fields', 'filter_selection', 'filter_values','filter_dimension' ); ?>}
 [class*='slider-views-'].slider-filter:after{<?php echo qqlanding_filters( 'filter_fields', 'filter_selection', 'filter_values','filter_dimension' ); ?>}<?php endif; ?>
 
 
@@ -112,11 +113,24 @@ $filter = get_field( 'filter_fields', 'option' ); /*--filters*/
 function conten_bg($field,$type){
 
 	if ($field) :
-
 		$backgroundcf = "";
 		$presetscf = "";
 		$height ="";
+		$filters ="";
 
+		//Determined whether the type of filters is a or b
+		if ($type == 'a' || $type == 'A') {
+			$filters = get_field( 'filter_fields_a', 'option' );
+			$filters_val ='filter_fields_a';
+		}else if ($type == 'b' || $type == 'B'){
+			$filters = get_field( 'filter_fields_b', 'option' );
+			$filters_val = 'filter_fields_b';
+		}else{
+			$filters ="";
+			$filters_val ="";
+		}
+
+		//Fields
 		$ci_bg = $field['ci_bg'];
 		$ci_image = $field['ci_image'];
 		$ci_color = $field['ci_color'];
@@ -132,9 +146,10 @@ function conten_bg($field,$type){
 		$images_pos_prop = $field['images_pos_prop'];
 		$fp_img_position = $field['fp_img_position'];
 
-		//
+		//Appearance Settings
 		$fp_app_set = $field['fp_app_set'];
 
+		//Determined whether the $ci_bg var is color or image
 		if ( $ci_bg == "bg-color" ) :
 			$backgroundcf = qqlanding_sliding_bg($ci_bg,$ci_image,$ci_color);
 		else:
@@ -142,18 +157,27 @@ function conten_bg($field,$type){
 			$presetscf = qqlanding_preset_acf($ci_repeat_bg_img,$ci_scroll_with_page,$ci_presets,$ci_image_position,$ci_image_size);
 		endif;
 
-	 		$position = content_img_postion($images_pos_prop,$fp_img_position['fp_position_top'],$fp_img_position['fp_position_right'],$fp_img_position['fp_position_left'],$fp_img_position['fp_position_buttom']);
+		//Image Position
+	 	$position = content_img_postion($images_pos_prop,$fp_img_position['fp_position_top'],$fp_img_position['fp_position_right'],$fp_img_position['fp_position_left'],$fp_img_position['fp_position_buttom']);
 
-		  if($fp_app_set['ca_height']) $height = "height : ".$fp_app_set['ca_height'].';';
+	 	//Checking the height of the elem.
+		if($fp_app_set['ca_height']) $height = "height : ".$fp_app_set['ca_height'].';';
 
-		  $class_var = ($type == 'a' || $type == 'A') ? 'first' : 'last' ;?>
+		//Determined the type of the $type var.
+		$class_var = ($type == 'a' || $type == 'A') ? 'first' : 'last' ;?>
 
+<?php 
+//Checking if the filters is not empty or empty. 
+if ( ! empty($filters) ): /*add the slider-filter class and put the bg values to it also add the filter values.*/ ?>
+	.content-<?php echo $class_var; ?> .slider-filters{background : <?php echo $backgroundcf; ?>;<?php echo @$presetscf; ?><?php echo qqlanding_filters( $filters_val, 'filter_selection', 'filter_values','filter_dimension' ); ?>}
+<?php else: /* Usual class */  ?>
 .content-<?php echo $class_var; ?>{
 	background : <?php echo $backgroundcf; ?>;
 	<?php echo @$presetscf; ?>
 }
-		  	
-	<?php endif;
+<?php endif; // End of filters
+
+	endif; // End of Field
 }
 
 $content_item_a = get_field( 'content_item_a', 'option' );

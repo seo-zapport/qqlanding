@@ -684,7 +684,15 @@
                 "type": "group",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5b873deb92c22",
+                            "operator": "==",
+                            "value": "slider"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -3189,7 +3197,7 @@
                         "conditional_logic": [
                             [
                                 {
-                                    "field": "field_5b92071cacb22",
+                                    "field": "field_5b922f9663ae3",
                                     "operator": "==",
                                     "value": "bg-image"
                                 },
@@ -3567,16 +3575,16 @@
                     "id": "th_color_scheme"
                 },
                 "choices": {
-                    "qq288": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq288.jpg\">",
-                    "qq188": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq188.jpg\">",
-                    "qq101": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq101.jpg\">",
-                    "qq1x2": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq1x2.jpg\">",
-                    "qq724": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq724.jpg\">",
-                    "qqfortuna": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qqfortuna.jpg\">",
-                    "qq801": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq801.jpg\">",
-                    "qq882": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq882.jpg\">",
-                    "qq808": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq808.jpg\">",
-                    "qq828": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq828.jpg\">",
+                    "qq288": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq288.jpg\"><span class=\"th_title\">QQ288<\/span>",
+                    "qq188": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq188.jpg\"><span class=\"th_title\">QQ188<\/span>",
+                    "qq101": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq101.jpg\"><span class=\"th_title\">QQ101<\/span>",
+                    "qq1x2": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq1x2.jpg\"><span class=\"th_title\">QQ1x2<\/span>",
+                    "qq724": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq724.jpg\"><span class=\"th_title\">QQ724<\/span>",
+                    "qqfortuna": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qqfortuna.jpg\"><span class=\"th_title\">QQfortuna<\/span>",
+                    "qq801": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq801.jpg\"><span class=\"th_title\">QQ801<\/span>",
+                    "qq882": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq882.jpg\"><span class=\"th_title\">QQ882<\/span>",
+                    "qq808": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq808.jpg\"><span class=\"th_title\">QQ808<\/span>",
+                    "qq828": "<img src=\"\/wp-content\/themes\/qqlanding\/assets\/images\/acf-img\/qq828.jpg\"><span class=\"th_title\">QQ828<\/span>",
                     "custom": "Custom"
                 },
                 "allow_null": 0,
@@ -7222,7 +7230,7 @@
                 "wrapper": {
                     "width": "",
                     "class": "",
-                    "id": ""
+                    "id": "fb_content"
                 },
                 "default_value": "",
                 "tabs": "all",
@@ -7249,7 +7257,7 @@
             {
                 "key": "field_5b85ef383190d",
                 "label": "Title",
-                "name": "fb_title",
+                "name": "fb_title_b",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -7257,7 +7265,7 @@
                 "wrapper": {
                     "width": "",
                     "class": "",
-                    "id": ""
+                    "id": "fb_title_b"
                 },
                 "default_value": "",
                 "placeholder": "",
@@ -7268,7 +7276,7 @@
             {
                 "key": "field_5b85ef1b3190c",
                 "label": "",
-                "name": "fb_content",
+                "name": "fb_content_b",
                 "type": "wysiwyg",
                 "instructions": "",
                 "required": 0,
@@ -7276,7 +7284,7 @@
                 "wrapper": {
                     "width": "",
                     "class": "",
-                    "id": ""
+                    "id": "fb_content_b"
                 },
                 "default_value": "",
                 "tabs": "all",
