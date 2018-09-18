@@ -7550,24 +7550,24 @@ function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn,
 	$imgbutton = ($btn_image['url']) ? $btn_image['url'] : get_template_directory_uri().'/assets/images/default/enter.png'; //image
 	if( ! empty($link_xfn)){ $linkRel = $link_xfn; }else{$linkRel = '';} //link relationship
 	$linktar = ($link_target == '_blank') ? '_blank' : '_self'; //Target
-	$device = ( $btn_dev == 'desktop' ) ? 'd-none d-md-inline-block d-lg-inline-block' : 'd-block d-md-none d-lg-none'; //Device Item
+	$device = ( $btn_dev == 'desktop' ) ? 'd-none d-md-inline-block d-lg-inline-block mt-3' : 'd-block d-md-none d-lg-none mt-3'; //Device Item
 
 	if ( $type == 'image' ) {
 		$item_class = '';
 		$item = '<img class="img-responsive enter-site" src="' . $imgbutton . '" alt="' . $btn_image['alt'] . '" title="' . $btn_image['title'] . '">';
 	}else{
-		$item_class = qqlanding_bg_color($th_layout, 'button');
+		$item_class = 'btn btn-lg btn-entersite bg_color_' . qqlanding_bg_color($th_layout, 'button') ;
 
 		$devices = ( $btn_dev == 'desktop' ) ? "<i class='fas fa-desktop'></i> " : "<i class='fas fa-mobile-alt'></i> ";
 
 		$item = $devices . ' ' . $btn_text;
 	}
 	$entersite = '<div class="' . $device . '">';
-		$entersite .= '<a href="' . $links . '" rel="'.$linkRel.'" target="'.$linktar.'" class="btn btn-lg btn-entersite bg_color_' . $item_class . ' mt-3">' . $item . '</a>';
+		$entersite .= '<a href="' . $links . '" rel="'.$linkRel.'" target="'.$linktar.'" class="' . $item_class . '">' . $item . '</a>';
 	$entersite .= '</div>';
 
 	return $entersite;
-} 
+}  
 
 function fpcontent_img_position($img,$class){
 
