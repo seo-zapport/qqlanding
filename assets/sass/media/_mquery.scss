@@ -21,9 +21,17 @@
 				margin:0 auto;
 			}
 		}
-		/* .qqgroup-slider{
-			height: 395px;
-		} */
+		.site-footer{
+			#footer-menu-wrap{
+				.footer-menu{
+					> li{
+						display: inline-block;
+						margin-bottom: 0.3em;
+						padding-left: 0.7em;
+					}
+				}
+			}
+		}
 	}
 }
 @media (min-width: 768px){

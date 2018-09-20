@@ -872,7 +872,7 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites .site-content { padding-top: 35px; }
 .qqlanding-sites .site-footer { background: #222222; padding: 25px 0; width: 100%; }
 .qqlanding-sites .site-footer #footer-menu-wrap .footer-menu { margin: 0; padding: 0; }
-.qqlanding-sites .site-footer #footer-menu-wrap .footer-menu > li { display: inline-block; list-style: none; margin-bottom: 0.2em; padding-left: 0.7em; }
+.qqlanding-sites .site-footer #footer-menu-wrap .footer-menu > li { list-style: none; margin-bottom: 0.5em; }
 .qqlanding-sites .site-footer #footer-menu-wrap .footer-menu > li:first-child { padding-left: 0em; }
 .qqlanding-sites #site_back_top { background-color: #7f7f7f; border-radius: 2px; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.28); color: #fff; cursor: pointer; display: block; height: 37px; line-height: 37px; width: 37px; opacity: 0; filter: alpha(opacity=0); position: fixed; right: 7px; bottom: 7px; text-align: center; text-decoration: none; z-index: 9999; }
 .qqlanding-sites #site_back_top.show { opacity: 1; filter: alpha(opacity=1); -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
@@ -1050,10 +1050,8 @@ embed, iframe, object { max-width: 100%; }
 --------------------------------------------------------------*/
 @media (min-width: 1200px) { .qqlanding-sites .container { max-width: 1240px; }
   .qqlanding-sites.qqlayout-default #site-navigation #primary-menu { max-width: 1240px; margin: 0 auto; } }
-@media (min-width: 960px) { .qqlanding-sites { /* .qqgroup-slider{
-	height: 395px;
-} */ }
-  .qqlanding-sites #site-navigation #primary-menu { max-width: 960px; margin: 0 auto; } }
+@media (min-width: 960px) { .qqlanding-sites #site-navigation #primary-menu { max-width: 960px; margin: 0 auto; }
+  .qqlanding-sites .site-footer #footer-menu-wrap .footer-menu > li { display: inline-block; margin-bottom: 0.3em; padding-left: 0.7em; } }
 @media (min-width: 768px) { .full-wh, .full-wrap { height: 520px; }
   .provider-group { margin-right: 10px; }
   .provider-group:last-child { margin-right: inherit; }

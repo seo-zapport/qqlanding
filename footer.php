@@ -119,7 +119,7 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 						wp_nav_menu( array(
 							'theme_location'  => 'footer',
 							'container'       => 'div',
-							'container_class' => $footer_socket_class['has_nav_class'],
+							'container_class' => $footer_socket_class['has_nav_class'] . ' mt-3 mt-md-3 mt-lg-0',
 							'container_id'    => 'footer-menu-wrap',
 							'menu_class'      => 'footer-menu',
 							'echo'            => true,
