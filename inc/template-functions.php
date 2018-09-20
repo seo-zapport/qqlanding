@@ -426,3 +426,24 @@ function force_relative_url(){
 	preg_match("/[^\.\/]+\.[^\.\/]+$/", $host, $matches);
 	return strtoupper($matches[0]);
 }
+
+function qqlanding_footer_socket_class($footer_option, $has_nav){
+	
+	if ( $footer_option == 1 && $has_nav == true ) {
+		$footer_class = 'col-12 col-md-6 col-lg-6';
+		$has_nav_class = 'col-12 col-md-6 col-lg-6';
+	}elseif (  $footer_option != 1 && $has_nav == true ) {
+		$footer_class = '';
+		$has_nav_class = 'col-12 col-md-12 col-lg-12';
+	}elseif (  $footer_option == 1 && $has_nav == false) {
+		$footer_class = 'col-12 col-md-12 col-lg-12';
+		$has_nav_class = '';
+	}else{
+		$footer_class = '';
+		$has_nav_class = '';
+	}
+
+	$footer_socket_args = array( 'footer_class' => $footer_class, 'has_nav_class' => $has_nav_class );
+
+	return $footer_socket_args;
+}

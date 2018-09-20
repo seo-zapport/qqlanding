@@ -1215,6 +1215,7 @@
 	}
 	#Fcontent_a,#Fcontent_b{
 		position: relative;
+		overflow: hidden;
 		.slider-filters{
 			content: '';
 			display: block;

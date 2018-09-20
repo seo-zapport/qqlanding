@@ -93,26 +93,44 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 					</div>
 				</div>
 			</div>
-		<?php endif; ?>
-			<?php  if(get_theme_mod("qqlanding_display_footer_option") == 1): ?>
-				<div class="site-info">		
-					<?php if(get_theme_mod('qqlanding_footer_settings')): 
-							echo get_theme_mod('qqlanding_footer_settings');
-					 else: ?>
-					<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'qqlanding' ) );*/ ?>">
-						<?php
-						/* translators: %s: CMS name, i.e. WordPress. */
-						printf( esc_html__( 'Proudly powered by %s', 'qqlanding' ), 'WordPress' );
-						?>
-					</a>
-					<span class="sep"> | </span>
-						<?php
-						/* translators: 1: Theme name, 2: Theme author. */
-						printf( esc_html__( 'Theme: %1$s by %2$s.', 'qqlanding' ), 'qqlanding', '<a href="https://github.com/seo-zapport">Zapport SEO Dev</a>' );
-						?>
-					<?php endif; //end copyright editor?>			
-				</div><!-- .site-info -->
-			<?php endif; //end qqlanding_display_footer_option?>
+			<?php endif; ?>
+			<div class="row">
+				<?php $footer_socket_class = qqlanding_footer_socket_class( get_theme_mod('qqlanding_display_footer_option'),  has_nav_menu('footer') ); ?>
+				<?php  if( get_theme_mod("qqlanding_display_footer_option") == 1 ): ?>
+					<div class="site-info <?php echo $footer_socket_class['footer_class']; ?>">		
+						<?php if(get_theme_mod('qqlanding_footer_settings')): 
+								echo get_theme_mod('qqlanding_footer_settings');
+						 else: ?>
+						<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'qqlanding' ) );*/ ?>">
+							<?php
+							/* translators: %s: CMS name, i.e. WordPress. */
+							printf( esc_html__( 'Proudly powered by %s', 'qqlanding' ), 'WordPress' );
+							?>
+						</a>
+						<span class="sep"> | </span>
+							<?php
+							/* translators: 1: Theme name, 2: Theme author. */
+							printf( esc_html__( 'Theme: %1$s by %2$s.', 'qqlanding' ), 'qqlanding', '<a href="https://github.com/seo-zapport">Zapport SEO Dev</a>' );
+							?>
+						<?php endif; //end copyright editor?>			
+					</div><!-- .site-info -->
+				<?php endif; //end qqlanding_display_footer_option
+					if ( has_nav_menu('footer') ):
+						wp_nav_menu( array(
+							'theme_location'  => 'footer',
+							'container'       => 'div',
+							'container_class' => $footer_socket_class['has_nav_class'],
+							'container_id'    => 'footer-menu-wrap',
+							'menu_class'      => 'footer-menu',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+							'depth'           => 0,
+						) );
+					endif;
+				?>
+			</div>
+
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
 	<?php if ( th_layout() === 'box' ): ?>

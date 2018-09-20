@@ -12,6 +12,9 @@ if(have_rows('rwd_settings', 'option')) :
 		$slide_tablet_height = get_sub_field('slider_tablet_height');
 		$slide_mobile_width = get_sub_field('slider_mobile_width');
 		$slide_mobile_height = get_sub_field('slider_mobile_height');
+		$slide_height = ( ! empty($slide_height) ) ? $slide_height . 'px;': 'auto;';
+		$slide_tablet_height = ( ! empty($slide_tablet_height) ) ? $slide_tablet_height . 'px;': 'auto;';
+		$slide_mobile_height = ( ! empty($slide_mobile_height) ) ? $slide_mobile_height . 'px;': 'auto;';
 	endwhile;
 endif;
 
@@ -46,14 +49,26 @@ $filter_a = get_field( 'filter_fields_a', 'option' ); /*--filters*/
 			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
 			if ( ! empty($filter) ): ?>
 			#banner .slider-filters{background: <?php echo $bg;?>;<?php echo $presets; ?><?php if ( ! empty( get_field( 'slider_opacity', 'option' ) ) && get_field( 'slider_opacity', 'option' ) != '0' ) : ?>opacity: <?php the_field( 'slider_opacity', 'option' ); ?><?php endif; ?>;}
-			@media screen and (min-width: 960px) {
-				#banner-static,.slider-filters{height: <?php echo $slide_height; ?>px;}
+			@media screen and (min-width: 1024px) {
+				.qqlanding-sites #banner-static,#banner .slider-filters{height: <?php echo $slide_height; ?>}
+			}
+			@media only screen and (min-width:768px) and (max-width:1024px){
+				.qqlanding-sites #banner-static,#banner .slider-filters{height: <?php echo $slide_tablet_height; ?>}
+			}
+			@media only screen and (min-width:320px) and (max-width:768px){
+				.qqlanding-sites #banner-static,#banner .slider-filters{height: <?php echo $slide_mobile_height; ?>}
 			}
 			<?php else: ?>
 			<?php if ( empty( get_field( 'slider_opacity', 'option' ) ) || get_field( 'slider_opacity', 'option' ) == '0' ) : ?>#banner-static{background: <?php echo $bg;?>;<?php echo $presets; ?>}<?php endif; ?>
 			<?php if ( ! empty( get_field( 'slider_opacity', 'option' ) ) && get_field( 'slider_opacity', 'option' ) != '0' ) : ?>#banner-static:after{background: <?php echo $bg;?>;<?php echo $presets; ?> opacity: <?php the_field( 'slider_opacity', 'option' ); ?>;}<?php endif; ?>
-			@media screen and (min-width: 960px) {
-				#banner-static{height: <?php echo $slide_height; ?>px;}
+			@media screen and (min-width: 1024px) {
+				.qqlanding-sites #banner-static{height: <?php echo $slide_height; ?>}
+			}
+			@media only screen and (min-width:768px) and (max-width:1024px){
+				.qqlanding-sites #banner-static{height: <?php echo $slide_tablet_height; ?>}
+			}
+			@media only screen and (min-width:320px) and (max-width:768px){
+				.qqlanding-sites #banner-static{height: <?php echo $slide_mobile_height; ?>}
 			}
 			<?php endif; ?>
 
@@ -161,7 +176,8 @@ function conten_bg($field,$type){
 	 	$position = content_img_postion($images_pos_prop,$fp_img_position['fp_position_top'],$fp_img_position['fp_position_right'],$fp_img_position['fp_position_left'],$fp_img_position['fp_position_buttom']);
 
 	 	//Checking the height of the elem.
-		if($fp_app_set['ca_height']) $height = "height : ".$fp_app_set['ca_height'].';';
+		//if($fp_app_set['ca_height']) $height = "height : " . $fp_app_set['ca_height'] . ';';
+		$height = ( ! empty( $fp_app_set['ca_height'] ) ) ? 'height :' . $fp_app_set['ca_height'] .';' : 'height:auto;';
 
 		//Determined the type of the $type var.
 		$class_var = ($type == 'a' || $type == 'A') ? 'first' : 'last' ;?>
@@ -173,10 +189,14 @@ if ( ! empty($filters) ): /*add the slider-filter class and put the bg values to
 <?php else: /* Usual class */  ?>
 .content-<?php echo $class_var; ?>{
 	background : <?php echo $backgroundcf; ?>;
-	<?php echo @$presetscf; ?>
+	<?php echo @$presetscf;?>
 }
-<?php endif; // End of filters
-
+<?php endif; // End of filters ?>
+	<?php if ( $class_var == 'first' ):  ?>#Fcontent_a{ <?php echo $height; ?> }<?php endif; ?>
+	<?php if ( $class_var == 'last' ):  ?>#Fcontent_b{ <?php echo $height; ?> } <?php endif; ?>
+	<?php if ( $position ) { ?>
+		.content-<?php echo $class_var; ?>-img{<?php echo @$position; ?>}
+	<?php }
 	endif; // End of Field
 }
 

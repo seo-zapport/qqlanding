@@ -7739,7 +7739,7 @@ add_action( 'wp_footer','qqlanding_owl_carousel' );
 function content_img_postion($position_conditon, $top, $right, $left, $bottom) {
 
 		  	
-		  	if($position_conditon == "Yes"){
+		  	if($position_conditon == true){
 		  	
 		  		$positionprop = "position: absolute;";				
 				  	
