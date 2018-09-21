@@ -7,8 +7,6 @@ $slider_layout = get_field('slider_layout', 'options');
 $slider_app = get_field('slider_appearance_group', 'options');
 
 ?>
-
-
 <section id="banner">
 	<?php if ( $slider_layout == 'static' ): ?>
 		<?php if (  have_rows('slider_item_static','option') ) : ?>
@@ -92,7 +90,7 @@ $slider_app = get_field('slider_appearance_group', 'options');
 				</div>
 			</div>
 		<?php endif; ?>
-	<?php else: ?>
+	<?php elseif( $slider_layout == 'static' ): ?>
 		<div id="banner-slider">
 			<?php 
 			$animation = get_field( 'slider_animations_group', 'option' );
@@ -210,4 +208,15 @@ $slider_app = get_field('slider_appearance_group', 'options');
 			<?php endif; //end of slider appearance ?>
 		</div>
 	<?php endif; //end of slider layout ?>
+	<?php if ( empty( get_field('slider_item_static','option') ) ) : ?>
+		<div id="banner-no-item">
+			<div class="text-center">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default/slider-default.jpg">
+				<div class="slider-img-overlay">
+					<h5>Sample text</h5>
+					<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus</p>
+				</div>
+			</div>
+		</div>
+	<?php endif; //end of default ?>
 </section>

@@ -774,8 +774,13 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites #banner .slider-filters { position: absolute; top: 0; bottom: 0; width: 100%; z-index: -1; }
 .qqlanding-sites #banner #banner-slider .carousel-caption { position: static; bottom: 0; left: 0; }
 .qqlanding-sites #banner #banner-slider [class*='slider-views-'].slider-filter:after { content: ''; display: block; position: absolute; top: 0; bottom: 0; width: 100%; z-index: -1; }
-.qqlanding-sites #Fcontent_a, .qqlanding-sites #Fcontent_b { position: relative; overflow: hidden; }
+.qqlanding-sites #banner #banner-no-item { position: relative; }
+.qqlanding-sites #banner #banner-no-item .slider-img-overlay { position: absolute; right: 0; bottom: 0; left: 0; padding: 1.25rem; }
+.qqlanding-sites .sectionsNoItem { box-shadow: inset 0 0px 2px 0px rgba(0, 0, 0, 0.15); min-height: 250px; }
+.qqlanding-sites .sectionsNoItem .sectionsItem { line-height: 125px; }
+.qqlanding-sites #Fcontent_a, .qqlanding-sites #Fcontent_b { position: relative; overflow: hidden; box-shadow: inset 0 0px 2px 0px rgba(0, 0, 0, 0.15); }
 .qqlanding-sites #Fcontent_a .slider-filters, .qqlanding-sites #Fcontent_b .slider-filters { content: ''; display: block; position: absolute; top: 0; bottom: 0; width: 100%; z-index: -1; }
+.qqlanding-sites #Fpost { box-shadow: inset 0 0px 2px 0px rgba(0, 0, 0, 0.15); }
 .qqlanding-sites #Fpost .card-overlay { color: #fff; }
 .qqlanding-sites #Fpost .card-overlay .card-title > a, .qqlanding-sites #Fpost .card-overlay .entry-meta > small { color: #fff !important; }
 .qqlanding-sites #Fpost .slider-item { color: #7f7f7f; }

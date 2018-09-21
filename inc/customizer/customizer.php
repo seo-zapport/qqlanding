@@ -606,6 +606,26 @@ function qqlanding_customizer_register( $wp_customize ){
 				)
 			);
 
+	        //Comment Display Setting
+	        $wp_customize->add_setting( 'qqlanding_page_display_comment',
+	            array(
+	                'default'               => 0,
+	                'type'                  => 'theme_mod',
+	                'capability'            => 'edit_theme_options',
+	                'sanitize_callback'     => 'qqlanding_sanitize_checkbox'
+	            )
+	        );
+	        //Comment Display Control
+	        $wp_customize->add_control( 'qqlanding_page_display_comment',
+	            array(
+	                'type'                  => 'checkbox',
+	                'label'                 => esc_html__( 'Display Comment in the page.', 'qqlanding' ),
+	                'description'           => esc_html__( 'This will show or hide your comment', 'qqlanding' ),
+	                'section'               =>  'qqlanding_page_options'
+	            )
+	        );
+
+
 		/**
 		 * ## Single Post Section
 		 *-------------------------------------*/
@@ -723,24 +743,6 @@ function qqlanding_customizer_register( $wp_customize ){
 			)
 		);
 			//Display Footer
-			$wp_customize->add_setting(
-				'qqlanding_display_footer_option',
-				array(
-					'default' => false,
-					'sanitize_callback' => 'qqlanding_sanitize_checkbox'
-				)
-			);
-			
-			$wp_customize->add_control(
-				'qqlanding_display_footer_option',
-				array(
-					'section' => 'qqlanding_footer_options',
-					'setting' => 'qqlanding_footer_display_settings',
-					'type'	 => 'checkbox',
-					'label' => __( 'Display Footer Site Info?', 'qqlanding' ),
-				)
-			);
-
 			$wp_customize->add_setting(
 				'qqlanding_display_footer_option',
 				array(

@@ -43,3 +43,7 @@ if ($disable) : ?>
 	</div>
 </section>
 <?php endif;?>
+
+<?php if ( empty( get_field('pvs_settings','option') ) ) {
+	qqlanding_load_section('default');
+} ?>

@@ -80,3 +80,38 @@ if ($disable) : ?>
 	</div>
 </section>
 <?php endif;?>
+<?php if ( empty( get_field('fp_post_post','option') ) ) { ?>
+	<section id="Fpost" class="sectionsNoItem py-5">
+		<div class="container">
+			<h3 class="sec-entry-title text-center">Featured Post</h3>
+			<div class="card-deck">
+			<?php
+				$args_wp = array(
+					'post_type'	=> 'post',
+					'posts_per_page' => '2'
+				);
+				$new_item = new WP_Query($args_wp);
+
+				if ( $new_item->have_posts() ) {
+
+					while($new_item->have_posts()) : $new_item->the_post(); ?>
+						<div class="col-12 col-md-4 col-lg-4 p-0">
+							<div class="card position-relative">
+								<?php echo qqLanding_post_img();?>
+								<div class="card-body">
+									<h5 class="card-title" itemprop="headline"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h5><!-- schema edited -->
+									<p class="card-text" itemprop="description"><?php qqlanding_excerpt_max_charlength( '150', '...' ); ?></p><!-- schema edited -->
+								</div>
+								<div class="card-footer">
+									<small class="text-muted"><?php the_date( 'F j, Y' ); ?></small>
+								</div>
+							</div>
+						</div>
+					<?php endwhile;
+					wp_reset_postdata();
+				}
+			?>
+			</div>
+		</div>
+	</section>
+<?php } ?>

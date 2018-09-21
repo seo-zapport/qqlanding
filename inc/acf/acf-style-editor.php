@@ -21,10 +21,15 @@ endif;
 //Fonts Settings
 if(have_rows('slider_fonts', 'option')) :
 	while(have_rows('slider_fonts', 'option')) : the_row();
-		$slidefontfam = qqlanding_fontfam(get_sub_field('slider_font_family', 'option'));
-		$sliderfontsize =  get_sub_field('slider_font_size', 'option');
-		$sliderfontstyle =  get_sub_field('slider_font_style', 'option');
-		$sliderfontweight =  get_sub_field('slider_font_weight', 'option');
+		$slidefontfam = '';
+		$sliderfontsize = '';
+		$sliderfontstyle = '';
+		$sliderfontweight = '';
+
+		$slidefontfam =  ( ! empty( get_sub_field('slider_font_family', 'option') ) ) ? qqlanding_fontfam(get_sub_field('slider_font_family', 'option')) : '' ;
+		$sliderfontsize =  ( ! empty( get_sub_field('slider_font_size', 'option') ) ) ? get_sub_field('slider_font_size', 'option') : '' ;
+		$sliderfontstyle =  ( ! empty( get_sub_field('slider_font_style', 'option') ) ) ? get_sub_field('slider_font_style', 'option') : '' ;
+		$sliderfontweight =  ( ! empty( get_sub_field('slider_font_weight', 'option') ) ) ? get_sub_field('slider_font_weight', 'option') : '' ;
 	endwhile;
 endif;
 
@@ -35,12 +40,14 @@ $filter_a = get_field( 'filter_fields_a', 'option' ); /*--filters*/
 /* ================================= */
 /* =========== Slider ============== */
 /* ================================= */ 
-#banner .banner-static-content{
-	font-family: <?php echo $slidefontfam; ?>;
-	font-size: <?php echo $sliderfontsize; ?>px;
-	font-style: <?php echo $sliderfontstyle; ?>;
-	font-weight: <?php echo $sliderfontweight; ?>;
-}
+<?php if(have_rows('slider_fonts', 'option')) : ?>
+	#banner .banner-static-content{
+		font-family: <?php echo $slidefontfam; ?>;
+		font-size: <?php echo $sliderfontsize; ?>px;
+		font-style: <?php echo $sliderfontstyle; ?>;
+		font-weight: <?php echo $sliderfontweight; ?>;
+	}
+<?php endif; ?>
 
 <?php if ( get_field('slider_layout','option') == 'static' ): ?>
 	<?php if ( have_rows( 'slider_item_static', 'option' ) ): ?>

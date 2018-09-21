@@ -7703,6 +7703,8 @@ function floating_banner( $field ){
  */
 function qqlanding_owl_carousel(){ ?>
 <?php
+	$th_layout = get_field( 'th_layout', 'option' );
+	$template = get_field( 'header_template', 'option' );
 	$appearance = get_field( 'fp_slider_appearance_group', 'option');
 	$_appearance = get_field( 'fb_slider_appearance_group', 'option');
 	$boot_appearance = get_field( 'slider_animations_group', 'option');
@@ -7721,15 +7723,14 @@ function qqlanding_owl_carousel(){ ?>
 	$interval = $boot_appearance['slider_animation_duration'];
 ?>
 <script type="text/javascript">
+	//Template
+	var layout = '<?php echo $th_layout; ?>',template = '<?php echo $template; ?>';
+	
 	//post
-	var autoplay = '<?php echo $autoplay; ?>',
-		nav = '<?php echo $nav; ?>',
-		dots = '<?php echo $dots; ?>';
+	var autoplay = '<?php echo $autoplay; ?>',nav = '<?php echo $nav; ?>',dots = '<?php echo $dots; ?>';
 
 	//banner
-	var _autoplay = '<?php echo $_autoplay; ?>',
-		_nav = '<?php echo $_nav; ?>',
-		_dots = '<?php echo $_dots; ?>';
+	var _autoplay = '<?php echo $_autoplay; ?>',_nav = '<?php echo $_nav; ?>',_dots = '<?php echo $_dots; ?>';
 
 	var _interval = '<?php echo $interval;?>';
 </script>

@@ -16,6 +16,21 @@
 
 (function($){
 
+    /**
+     * Check the width
+     *------------------*/
+    if( layout == 'box' ){
+        $(window).on( 'load resize', function(e){
+            e.preventDefault();
+            var page_w = $('#page').innerWidth();
+            $('#site-navigation').css({'width': page_w + 'px', 'margin' : 'auto'});
+        } );
+    }
+
+    /**
+     * Add height the extra div element when it
+     * have the class of qqland-affix
+     *------------------------------------------*/
     if ( $('body').hasClass('qqland-affix') ) {
       $('[data-toggle="affix"]').each(function() {
         var ele = $(this),

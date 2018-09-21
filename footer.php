@@ -21,7 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 		<meta itemprop="copyrightHolder" content="<?php echo force_relative_url(); ?>"/>
 
 		<div class="container">
-			<?php if (have_rows('licensed_settings', 'option') || have_rows('banks', 'option')): ?>
+			<?php $licensed = have_rows('licensed_settings', 'option');
+			$banks_enabled = have_rows('banks', 'option'); ?>
+			<?php if ($licensed['lcs_allow'] == true || $banks_enabled['b_allow_bank'] == true): ?>
 				<div class="site-bank-wrapper widget py-3">
 					<div class="row">
 						<?php if ( have_rows('licensed_settings', 'option')  ): ?>
@@ -96,7 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 			<?php endif; ?>
 			<div class="row">
 				<?php $footer_socket_class = qqlanding_footer_socket_class( get_theme_mod('qqlanding_display_footer_option'),  has_nav_menu('footer') ); ?>
-				<?php  if( get_theme_mod("qqlanding_display_footer_option") == 1 ): ?>
+				<?php if( get_theme_mod("qqlanding_display_footer_option") == 1 ): ?>
 					<div class="site-info <?php echo $footer_socket_class['footer_class']; ?>">		
 						<?php if(get_theme_mod('qqlanding_footer_settings')): 
 								echo get_theme_mod('qqlanding_footer_settings');

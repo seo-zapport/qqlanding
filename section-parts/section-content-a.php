@@ -38,3 +38,6 @@ if ($disable) : ?>
    </div>
 </section>
 <?php endif;?>
+<?php if ( empty( get_field('content_item_a','option') ) ) {
+	qqlanding_load_section('default');
+} ?>
