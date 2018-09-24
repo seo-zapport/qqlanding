@@ -94,74 +94,28 @@ function qqlanding_header_set(){
 
 	$template = get_field( 'header_template', 'option' );
 	$alignment = get_field( 'header_nav_alignment', 'option' );
-	$logo = get_theme_mod( 'site_logo', '' );
-	$title_option = get_theme_mod( 'site_title_option', 'text-only' );
 
 	$menu_class = ( $template == 'bare' || $template == 'overlay' ) ? 'navbar-nav justify-content-end' : 'navbar-nav';
 
-	//check weather the page is front
-	if ( is_front_page() || is_home() ) {
-		$before_title = '<h1 class="site-title" itemprop="headline">';
-		$after_title = '</h1>';
-		$before_desc = '<h2 class="site-description" itemprop="description">';
-		$after_desc = '</h2>';
-	}else{
-		$before_title = '<h2 class="site-title" itemprop="headline">';
-		$after_title = '</h2>';
-		$before_desc = '<h3 class="site-description" itemprop="description">';
-		$after_desc = '</h3>';
-	}
-	switch ($template) {
-		case 'bare': $nav_class = "qqlanding-bare"; break;
-		case 'overlay': $nav_class = "qqlanding-overlay"; break;
-		default: $nav_class = "qqlanding-default"; break;
-	}
-
-	if ( $template == 'default' ) : ?>
+	if ( empty( $template ) || $template == 'default' ):  ?>
 		<div class="site-branding">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 px-0">
-						<?php if ( $title_option == 'logo-only' && ! empty( $logo ) ) : ?>
-							<?php echo $before_title; ?><a class="navbar-brand " href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><img src="<?php echo esc_url( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>" itemprop="image"></a><span class="sr-only"><?php echo get_bloginfo('name'); ?></span><?php echo $after_title; ?>
-						<?php endif; ?>
-						<?php if ( $title_option == 'text-logo' && ! empty( $logo ) ) : ?>
-							<div class="site-logo">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><img src="<?php echo esc_url( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>" itemprop="image"></a>
-							</div>
-							<?php echo $before_title; ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><?php bloginfo( 'name' ); ?></a><?php echo $after_title; ?>
-							<?php echo $before_desc; ?><?php bloginfo( 'description' ); ?> <?php echo $after_desc; ?>
-						<?php endif; ?>
-						<?php if ( $title_option == 'text-only' ): ?>
-							<?php echo $before_title; ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><?php bloginfo( 'name' ); ?></a><?php echo $after_title; ?>
-							<?php echo $before_desc; ?><?php bloginfo( 'description' ); ?> <?php echo $after_desc; ?>
-						<?php endif; ?>
+						<?php echo QQLanding_site_identity(); ?>
 					</div>
 				</div>
 			</div>
 		</div><!-- .site-branding -->
-	<?php endif;?>
+	<?php endif; ?>
 
-	<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light py-md-0" data-toggle="affix" itemscope itemtype='http://schema.org/SiteNavigationElement'>
+	<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light py-lg-0" data-toggle="affix" itemscope itemtype='http://schema.org/SiteNavigationElement'>
 		<?php if( $template == 'bare' || $template == 'overlay' ) : ?>
 			<div class="container">
 		<?php endif;?>
 			<?php if( $template == 'bare' || $template == 'overlay' ) : ?>
 				<div class="site-branding navbar-brand">
-					<?php if ( $title_option == 'logo-only' && ! empty( $logo ) ) : ?>
-						<?php echo $before_title; ?><a class="navbar-brand " href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><img src="<?php echo esc_url( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>" itemprop="image"></a><span class="sr-only"><?php echo get_bloginfo('name'); ?></span><?php echo $after_title; ?>
-					<?php endif; ?>
-					<?php if ( $title_option == 'text-logo' && ! empty( $logo ) ) : ?>
-						<div class="site-logo">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><img src="<?php echo esc_url( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
-						</div>
-						<?php echo $before_title; ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php echo $after_title; ?>
-						<?php echo $before_desc; ?><?php bloginfo( 'description' ); ?> <?php echo $after_desc; ?>
-					<?php endif; ?>
-					<?php if ( $title_option == 'text-only' ): ?>
-						<?php echo $before_title; ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php echo $after_title; ?>
-						<?php echo $before_desc; ?> <?php bloginfo( 'description' ); ?> <?php echo $after_desc; ?>
-					<?php endif; ?>
+					<?php echo QQLanding_site_identity(); ?>
 				</div><!-- .site-branding -->
 			<?php endif;?>
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">

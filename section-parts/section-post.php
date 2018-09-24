@@ -4,13 +4,14 @@ $layout = get_field('fp_layout', 'option'); // layout of the page
 $item_layout = get_field('fp_ts_layout', 'option'); // Item Layout
 $card_layout = get_field('fp_ts_cards_layout', 'option'); // Cards Theme
 if ( acf_selective_refresh($disable) ) return $disable = false;
+$card_class = ( $layout == 'static' ) ? 'card-deck' : 'owl-post owl-carousel';
 if ($disable) : ?>
 <section id="Fpost" class="py-5">
 	<div class="container">
 		<h3 class="sec-entry-title text-center"><?php the_field( 'fp_post_title' ); ?></h3>
-		<div class="<?php echo ( $layout == 'static' ) ? 'card-deck' : 'owl-post owl-carousel'; ?>"> <!---->
-			<?php if ( have_rows( 'fp_post_post' ) ): ?>
-				<?php while( have_rows( 'fp_post_post' ) ) : the_row() ?>
+		<div class="<?php echo ( ! empty( get_field('fp_post_post') ) ) ? $card_class : ''; ?>"> <!---->
+			<?php if ( have_rows( 'fp_post_post' ) ): $count= 0;?>
+				<?php while( have_rows( 'fp_post_post' ) ) : the_row(); ?>
 					<?php
 						$post_fields = get_sub_field('fp_post_p_object');
 						$fp_excerpt = get_field( 'fp_post_excerpt_length' );
@@ -26,9 +27,9 @@ if ($disable) : ?>
 								$card_class = '';
 							}
 						?>
-						<div <?php echo ( $layout == 'static' ) ? 'class="col-12 col-md-4 col-lg-4 p-0"' : ''; ?> >
+						<div <?php echo ( $layout == 'static' ) ? 'class="col-12 col-md-4 col-lg-4 p-0 mb-3"' : ''; ?> >
 							
-							<div class="card <?php echo $card_class;  ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting"><!-- schema edited -->
+							<div class="card <?php echo $card_class;  ?> post-card-item-<?php echo $count;?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting"><!-- schema edited -->
 								<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="<?php echo get_permalink(); ?>"/><!-- schema edited -->
 								<?php echo qqLanding_post_img(); ?>
 
@@ -74,13 +75,17 @@ if ($disable) : ?>
 						</div>
 					<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
-				<?php endwhile; ?>
+				<?php $count++; endwhile; ?>
+			<?php else: ?>
+				<div class="text-center">
+					<h4 style="font-size:1.5em;">No Post Found</h4>
+				</div>
 			<?php endif; ?>
 		</div>
 	</div>
 </section>
 <?php endif;?>
-<?php if ( empty( get_field('fp_post_post','option') ) ) { ?>
+<?php if ( empty( $layout ) && empty( get_field('fp_post_post') ) ) { ?>
 	<section id="Fpost" class="sectionsNoItem py-5">
 		<div class="container">
 			<h3 class="sec-entry-title text-center">Featured Post</h3>

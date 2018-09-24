@@ -786,7 +786,7 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites #Fpost .slider-item { color: #7f7f7f; }
 .qqlanding-sites #Fpost .slider-item .card-title > a, .qqlanding-sites #Fpost .slider-item .entry-meta > small { color: #7f7f7f !important; }
 .qqlanding-sites #Fpost .card-overlay, .qqlanding-sites #Fpost .slider-item { overflow: hidden; }
-.qqlanding-sites #Fpost .card-overlay .card-o-btm, .qqlanding-sites #Fpost .slider-item .card-o-btm { bottom: -67px; cursor: pointer; padding: 10px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; width: 100%; }
+.qqlanding-sites #Fpost .card-overlay .card-o-btm, .qqlanding-sites #Fpost .slider-item .card-o-btm { bottom: -5px; cursor: pointer; padding: 10px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; width: 100%; }
 .qqlanding-sites #Fpost .card-overlay:hover .card-o-btm, .qqlanding-sites #Fpost .slider-item:hover .card-o-btm { bottom: 0; }
 .qqlanding-sites #Fpost .slider-item .card-o-btm { bottom: 0; }
 .qqlanding-sites #Fpost figure { margin: 0; }

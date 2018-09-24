@@ -345,6 +345,36 @@ endif;
 /**
  * #Featured Post
  *---------------------*/
+$item_layout = get_field('fp_ts_layout', 'option'); // Item Layout
+$item_padding = get_field('fp_padding', 'option'); // Item padding
+$item_border = get_field('fp_border', 'option'); // Item padding
+$pad_top = ( ! empty( $item_padding['fp_padding_top'] ) ) ? $item_padding['fp_padding_top'] . 'px' : '0px';
+$pad_left = ( ! empty( $item_padding['fp_padding_left'] ) ) ? $item_padding['fp_padding_left'] . 'px' : '0px';
+$pad_bottom = ( ! empty( $item_padding['fp_padding_bottom'] ) ) ? $item_padding['fp_padding_bottom'] . 'px' : '0px';
+$pad_right = ( ! empty( $item_padding['fp_padding_right'] ) ) ? $item_padding['fp_padding_right'] . 'px' : '0px';
+
+if ( $item_layout == 'flat-colors' ) {
+	if ( have_rows( 'fp_flat_colors', 'option' ) ) { $count= 0;
+		while( have_rows( 'fp_flat_colors', 'option' ) ) : the_row(); ?>
+			.post-card-item-<?php echo $count;?>{
+				background-color:<?php echo get_sub_field('fp_fc_color','option'); ?>;
+				color: <?php echo get_sub_field('fp_fc_txt_color','option'); ?>;
+			}
+			.qqlanding-sites .card.post-card-item-<?php echo $count;?> a{
+				color: <?php echo get_sub_field('fp_fc_txt_color','option'); ?>;
+			}
+			.post-card-item-<?php echo $count;?> .card-footer small{color: <?php echo get_sub_field('fp_fc_txt_color','option'); ?> !important;}
+		<?php $count++;
+		endwhile; 
+	}
+	if ( ! empty( $item_padding ) ): ?>
+		.card-body, .card-footer{padding: <?php echo $pad_top . ' ' . $pad_left . ' ' . $pad_bottom . ' ' . $pad_right; ?>;}
+	<?php endif; 
+	if ( ! empty( $item_border ) ) : ?>
+		.card{border: <?php echo $item_border['fp_border_width'] . 'px ' .  $item_border['fp_border_style'] . ' ' . $item_border['fp_border_color']?>;}
+	<?php endif;
+}
+
 if ( have_rows( 'th_presets', 'option') ) :
 	while ( have_rows( 'th_presets', 'option') ) : the_row();
 
@@ -359,6 +389,7 @@ if ( have_rows( 'th_presets', 'option') ) :
 
 	<?php endwhile;	
 endif;
+
 
 
 

@@ -162,6 +162,44 @@ if ( ! function_exists( 'qqlanding_is_selective_refresh' ) ) :
     }
 endif;
 
+
+function QQLanding_site_identity(){
+
+	$site_branding_output = '';
+	$title_option = get_theme_mod( 'site_title_option', 'text-only' );
+	$logo = get_theme_mod( 'site_logo', '' );
+
+	//check weather the page is front
+	if ( is_front_page() || is_home() ) {
+		$before_title = '<h1 class="site-title" itemprop="headline">';
+		$after_title = '</h1>';
+		$before_desc = '<h2 class="site-description" itemprop="description">';
+		$after_desc = '</h2>';
+	}else{
+		$before_title = '<h2 class="site-title" itemprop="headline">';
+		$after_title = '</h2>';
+		$before_desc = '<h3 class="site-description" itemprop="description">';
+		$after_desc = '</h3>';
+	}
+
+	if ( $title_option == 'logo-only' && ! empty( $logo ) ) :
+		$site_branding_output .= $before_title . '<a class="navbar-brand " href="' . esc_url( home_url( '/' ) ) . '" rel="home" itemprop="url"><img src="' . esc_url( $logo ) . '" alt="' . get_bloginfo( 'name' ) . '" itemprop="image"></a><span class="sr-only">' . get_bloginfo('name') . '</span>' . $after_title;
+			$site_branding_output .= '</div>';
+	endif;
+	if ( $title_option == 'text-logo' && ! empty( $logo ) ) :
+		$site_branding_output .= '<div class="site-logo">';
+			$site_branding_output .= '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home" itemprop="url"><img src="' . esc_url( $logo ) . '" alt="' . get_bloginfo( 'name' ) .'" itemprop="image"></a>';
+		$site_branding_output .= '</div>';
+	endif;
+	if ( $title_option == 'text-only' ):
+		$site_branding_output .= $before_title . '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home" itemprop="url">' . get_bloginfo( 'name' ) . '</a>' . $after_desc;
+		$site_branding_output .= $before_desc . get_bloginfo( 'description' ) . $after_desc;
+	endif;
+
+	return $site_branding_output;
+}
+
+
 /**
  * Display the Grid item
  */
@@ -447,3 +485,10 @@ function qqlanding_footer_socket_class($footer_option, $has_nav){
 
 	return $footer_socket_args;
 }
+
+function wp_customizer_footer_script(){
+	if ( ! empty( get_theme_mod( 'custom_script' ) ) ) {
+		echo get_theme_mod( 'custom_script', '' );
+	}
+}
+add_action( 'wp_footer', 'wp_customizer_footer_script');

@@ -155,3 +155,17 @@ function qqlanding_sanitize_select( $input, $setting ){
 	//return input if valid or return default option
 	return ( array_key_exists($input, $choices) ? $input : $setting->default);
 }
+
+/**
+ * script input sanitization function
+ */
+function qqlanding_sanitize_js_code( $input ){
+	return base64_encode($input);
+}
+
+/**
+ * output escape function
+ */
+function qqlanding_sanitize_js_output( $input ){
+	return esc_textarea( base64_decode($input) );
+}

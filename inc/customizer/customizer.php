@@ -201,25 +201,56 @@ function qqlanding_customizer_register( $wp_customize ){
 		) 
 	);
 
-	$wp_customize->add_setting(
-		'custom_css',
-		array(
-			'default'			=> '',
-			'type'				=> 'theme_mod',
-			'capability'		=> 'edit_theme_options',
-			'sanitize_callback'	=> 'qqLanding_sanitize_css'
-		)
+		$wp_customize->add_setting(
+			'custom_css',
+			array(
+				'default'			=> '',
+				'type'				=> 'theme_mod',
+				'capability'		=> 'edit_theme_options',
+				'sanitize_callback'	=> 'qqLanding_sanitize_css'
+			)
+		);
+		$wp_customize->add_control(
+			'custom_css',
+			array(
+				'settings'		=> 'custom_css',
+				'section'		=> 'qqLanding_custom_css',
+				'type'			=> 'textarea',
+				'label'			=> __( 'Custom CSS', 'qqLanding' ),
+				'description'	=> __( 'Define custom CSS be used for your site. Do not enclose in script tags.', 'qqLanding' ),
+			)
+		);
+
+	/**
+     * Script Editor section
+     */
+    $wp_customize->add_section( 
+    	'qqLanding_custom_script', 
+    	array(
+			'title' 		=> __( 'Script Editor', 'qqLanding' ),
+			'panel' 		=> 'qqLanding_style_options',
+			'priority'		=> 50
+		) 
 	);
-	$wp_customize->add_control(
-		'custom_css',
-		array(
-			'settings'		=> 'custom_css',
-			'section'		=> 'qqLanding_custom_css',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Custom CSS', 'qqLanding' ),
-			'description'	=> __( 'Define custom CSS be used for your site. Do not enclose in script tags.', 'qqLanding' ),
-		)
-	);
+	    $wp_customize->add_setting( 
+	    	'custom_script',
+	    	array(
+				'default'			=> '',
+				'type'				=> 'theme_mod',
+				'capability'		=> 'edit_theme_options',
+	    	)
+	    );
+
+		$wp_customize->add_control(
+			'custom_script',
+			array(
+				'settings'		=> 'custom_script',
+				'section'		=> 'qqLanding_custom_script',
+				'type'			=> 'textarea',
+				'label'			=> __( 'Script Editor', 'qqLanding' ),
+				'description'	=> __( 'Define custom Script be used for your site.', 'qqLanding' ),
+			)
+		);
 
 	/**
 	 * # General Settings
@@ -746,7 +777,7 @@ function qqlanding_customizer_register( $wp_customize ){
 			$wp_customize->add_setting(
 				'qqlanding_display_footer_option',
 				array(
-					'default' => 1,
+					'default' => 0,
 					'sanitize_callback' => 'qqlanding_sanitize_checkbox'
 				)
 			);
