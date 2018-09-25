@@ -183,7 +183,7 @@ function qqlanding_customizer_register( $wp_customize ){
 			$wp_customize->add_control( 
 				new WP_Customize_Color_Control( $wp_customize, 'qqLanding_theme_link_hover_color',
 					array(
-						'label'			=> __( 'Link Color', 'qqLanding' ),
+						'label'			=> __( 'Link Hover Color', 'qqLanding' ),
 						'section'		=> 'colors',
 						'setting'		=> 'qqLanding_theme_link_hover_color'
 					)
