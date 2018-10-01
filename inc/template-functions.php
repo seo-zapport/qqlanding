@@ -184,7 +184,6 @@ function QQLanding_site_identity(){
 
 	if ( $title_option == 'logo-only' && ! empty( $logo ) ) :
 		$site_branding_output .= $before_title . '<a class="navbar-brand " href="' . esc_url( home_url( '/' ) ) . '" rel="home" itemprop="url"><img src="' . esc_url( $logo ) . '" alt="' . get_bloginfo( 'name' ) . '" itemprop="image"></a><span class="sr-only">' . get_bloginfo('name') . '</span>' . $after_title;
-			$site_branding_output .= '</div>';
 	endif;
 	if ( $title_option == 'text-logo' && ! empty( $logo ) ) :
 		$site_branding_output .= '<div class="site-logo">';

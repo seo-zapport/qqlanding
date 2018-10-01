@@ -8,6 +8,7 @@ $slider_app = get_field('slider_appearance_group', 'options');
 
 ?>
 <section id="banner">
+	
 	<?php if ( $slider_layout == 'static' ): ?>
 		<?php if (  have_rows('slider_item_static','option') ) : ?>
 			<?php while ( have_rows('slider_item_static','option') ): the_row();
@@ -36,9 +37,12 @@ $slider_app = get_field('slider_appearance_group', 'options');
 											$esite_link = get_sub_field('btn_link','option');
 											$esite_img = get_sub_field('btn_image','option');
 											$esite_txt = get_sub_field('btn_text','option');
-											$esite_xfn = get_sub_field('btn_xfn','option');
+											//$esite_xfn = get_sub_field('btn_xfn','option');
+											$esite_xfn = get_sub_field('btn_xfn_r','option');
 											$esite_trget = get_sub_field('btn_target','option');
 											$esite_dev = get_sub_field('btn_device','option');
+
+											//var_dump( $esite_xfn );
 
 											echo qqlanding_btn_entersite($esite_type,$esite_link,$esite_img,$esite_txt,$esite_xfn,$esite_trget,$esite_dev);
 										endwhile;
@@ -64,7 +68,7 @@ $slider_app = get_field('slider_appearance_group', 'options');
 												$esite_link = get_sub_field('btn_link','option');
 												$esite_img = get_sub_field('btn_image','option');
 												$esite_txt = get_sub_field('btn_text','option');
-												$esite_xfn = get_sub_field('btn_xfn','option');
+												$esite_xfn = get_sub_field('btn_xfn_r','option');
 												$esite_trget = get_sub_field('btn_target','option');
 												$esite_dev = get_sub_field('btn_device','option');
 												echo qqlanding_btn_entersite($esite_type,$esite_link,$esite_img,$esite_txt,$esite_xfn,$esite_trget,$esite_dev);
@@ -90,7 +94,7 @@ $slider_app = get_field('slider_appearance_group', 'options');
 				</div>
 			</div>
 		<?php endif; ?>
-	<?php elseif( $slider_layout == 'static' ): ?>
+	<?php else: ?>
 		<div id="banner-slider">
 			<?php 
 			$animation = get_field( 'slider_animations_group', 'option' );
@@ -137,7 +141,7 @@ $slider_app = get_field('slider_appearance_group', 'options');
 															$esite_link = get_sub_field('btn_link','option');
 															$esite_img = get_sub_field('btn_image','option');
 															$esite_txt = get_sub_field('btn_text','option');
-															$esite_xfn = get_sub_field('btn_xfn','option');
+															$esite_xfn = get_sub_field('btn_xfn_r','option');
 															$esite_trget = get_sub_field('btn_target','option');
 															$esite_dev = get_sub_field('btn_device','option');
 
@@ -164,7 +168,7 @@ $slider_app = get_field('slider_appearance_group', 'options');
 																$esite_link = get_sub_field('btn_link','option');
 																$esite_img = get_sub_field('btn_image','option');
 																$esite_txt = get_sub_field('btn_text','option');
-																$esite_xfn = get_sub_field('btn_xfn','option');
+																$esite_xfn = get_sub_field('btn_xfn_r','option');
 																$esite_trget = get_sub_field('btn_target','option');
 																$esite_dev = get_sub_field('btn_device','option');
 																echo qqlanding_btn_entersite($esite_type,$esite_link,$esite_img,$esite_txt,$esite_xfn,$esite_trget,$esite_dev);
@@ -213,8 +217,8 @@ $slider_app = get_field('slider_appearance_group', 'options');
 			<div class="text-center">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default/slider-default.jpg">
 				<div class="slider-img-overlay">
-					<h5>Sample text</h5>
-					<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus</p>
+					<h5>No item found.</h5>
+					<p>It's seems that you need to have a hero section, why not try to create a new one <a href="<?php echo home_url( '/' ); ?>wp-admin/admin.php?page=acf-options-slider">click here</a></p>
 				</div>
 			</div>
 		</div>

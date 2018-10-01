@@ -5493,7 +5493,7 @@ acf_add_local_field_group(array(
 					'collapsed' => '',
 					'min' => 1,
 					'max' => 2,
-					'layout' => 'table',
+					'layout' => 'block',
 					'button_label' => 'Add button',
 					'sub_fields' => array(
 						array(
@@ -5505,7 +5505,7 @@ acf_add_local_field_group(array(
 							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_link',
 							),
@@ -5532,7 +5532,7 @@ acf_add_local_field_group(array(
 								),
 							),
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_image',
 							),
@@ -5564,7 +5564,7 @@ acf_add_local_field_group(array(
 								),
 							),
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_text',
 							),
@@ -5575,23 +5575,44 @@ acf_add_local_field_group(array(
 							'maxlength' => '',
 						),
 						array(
-							'key' => 'field_5b8cea90ba9c1',
+							'key' => 'field_5bb1d4c7e847d',
 							'label' => 'Link Relationship (xfn)',
-							'name' => 'btn_xfn',
-							'type' => 'text',
+							'name' => 'btn_xfn_r',
+							'type' => 'repeater',
 							'instructions' => '',
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
-								'id' => 'btn_xfn',
+								'id' => 'btn_xfn_item',
 							),
-							'default_value' => '',
-							'placeholder' => '',
-							'prepend' => '',
-							'append' => '',
-							'maxlength' => '',
+							'collapsed' => '',
+							'min' => 1,
+							'max' => 0,
+							'layout' => 'block',
+							'button_label' => 'add rel',
+							'sub_fields' => array(
+								array(
+									'key' => 'field_5bb1d4c7e847e',
+									'label' => '',
+									'name' => 'btn_xfn_item',
+									'type' => 'text',
+									'instructions' => '',
+									'required' => 0,
+									'conditional_logic' => 0,
+									'wrapper' => array(
+										'width' => '',
+										'class' => '',
+										'id' => 'btn_xfn_item',
+									),
+									'default_value' => '',
+									'placeholder' => '',
+									'prepend' => '',
+									'append' => '',
+									'maxlength' => '',
+								),
+							),
 						),
 						array(
 							'key' => 'field_5b8ceadfba9c2',
@@ -5602,7 +5623,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_target',
 							),
@@ -5629,7 +5650,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_type',
 							),
@@ -5653,7 +5674,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => '',
 							),
@@ -6288,7 +6309,7 @@ acf_add_local_field_group(array(
 					),
 				),
 				array(
-					'key' => 'field_5b8f3b09720d5',
+					'key' => 'field_5bb1e878caefa',
 					'label' => 'Enter Site Button',
 					'name' => 'enter_site_button',
 					'type' => 'repeater',
@@ -6303,11 +6324,11 @@ acf_add_local_field_group(array(
 					'collapsed' => '',
 					'min' => 1,
 					'max' => 2,
-					'layout' => 'table',
+					'layout' => 'block',
 					'button_label' => 'Add button',
 					'sub_fields' => array(
 						array(
-							'key' => 'field_5b8f3b09720d6',
+							'key' => 'field_5bb1e878caefb',
 							'label' => 'Track Links',
 							'name' => 'btn_link',
 							'type' => 'text',
@@ -6315,7 +6336,7 @@ acf_add_local_field_group(array(
 							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_link',
 							),
@@ -6326,7 +6347,7 @@ acf_add_local_field_group(array(
 							'maxlength' => '',
 						),
 						array(
-							'key' => 'field_5b8f3b09720d7',
+							'key' => 'field_5bb1e878caefc',
 							'label' => 'Image',
 							'name' => 'btn_image',
 							'type' => 'image',
@@ -6335,14 +6356,14 @@ acf_add_local_field_group(array(
 							'conditional_logic' => array(
 								array(
 									array(
-										'field' => 'field_5b8f3b09720db',
+										'field' => 'field_5bb1e878caf01',
 										'operator' => '==',
 										'value' => 'image',
 									),
 								),
 							),
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_image',
 							),
@@ -6358,7 +6379,7 @@ acf_add_local_field_group(array(
 							'mime_types' => 'jpg,png,gif',
 						),
 						array(
-							'key' => 'field_5b8f3b09720d8',
+							'key' => 'field_5bb1e878caefd',
 							'label' => 'Link Text',
 							'name' => 'btn_text',
 							'type' => 'text',
@@ -6367,14 +6388,14 @@ acf_add_local_field_group(array(
 							'conditional_logic' => array(
 								array(
 									array(
-										'field' => 'field_5b8f3b09720db',
+										'field' => 'field_5bb1e878caf01',
 										'operator' => '==',
 										'value' => 'text',
 									),
 								),
 							),
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_text',
 							),
@@ -6385,26 +6406,47 @@ acf_add_local_field_group(array(
 							'maxlength' => '',
 						),
 						array(
-							'key' => 'field_5b8f3b09720d9',
+							'key' => 'field_5bb1e878caefe',
 							'label' => 'Link Relationship (xfn)',
-							'name' => 'btn_xfn',
-							'type' => 'text',
+							'name' => 'btn_xfn_r',
+							'type' => 'repeater',
 							'instructions' => '',
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
-								'id' => 'btn_xfn',
+								'id' => 'btn_xfn_item',
 							),
-							'default_value' => '',
-							'placeholder' => '',
-							'prepend' => '',
-							'append' => '',
-							'maxlength' => '',
+							'collapsed' => '',
+							'min' => 1,
+							'max' => 0,
+							'layout' => 'block',
+							'button_label' => 'add rel',
+							'sub_fields' => array(
+								array(
+									'key' => 'field_5bb1e878caeff',
+									'label' => '',
+									'name' => 'btn_xfn_item',
+									'type' => 'text',
+									'instructions' => '',
+									'required' => 0,
+									'conditional_logic' => 0,
+									'wrapper' => array(
+										'width' => '',
+										'class' => '',
+										'id' => 'btn_xfn_item',
+									),
+									'default_value' => '',
+									'placeholder' => '',
+									'prepend' => '',
+									'append' => '',
+									'maxlength' => '',
+								),
+							),
 						),
 						array(
-							'key' => 'field_5b8f3b09720da',
+							'key' => 'field_5bb1e878caf00',
 							'label' => 'Link Target',
 							'name' => 'btn_target',
 							'type' => 'select',
@@ -6412,7 +6454,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_target',
 							),
@@ -6431,7 +6473,7 @@ acf_add_local_field_group(array(
 							'placeholder' => '',
 						),
 						array(
-							'key' => 'field_5b8f3b09720db',
+							'key' => 'field_5bb1e878caf01',
 							'label' => 'Buttons Type',
 							'name' => 'btn_type',
 							'type' => 'radio',
@@ -6439,7 +6481,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => 'btn_type',
 							),
@@ -6455,7 +6497,7 @@ acf_add_local_field_group(array(
 							'return_format' => 'value',
 						),
 						array(
-							'key' => 'field_5b8f3b09720dc',
+							'key' => 'field_5bb1e878caf02',
 							'label' => 'Device',
 							'name' => 'btn_device',
 							'type' => 'select',
@@ -6463,7 +6505,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '33.33',
 								'class' => '',
 								'id' => '',
 							),
@@ -7224,13 +7266,45 @@ acf_add_local_field_group(array(
 			'step' => '',
 		),
 		array(
+			'key' => 'field_5bade24393486',
+			'label' => 'Post type',
+			'name' => 'fp_post_type',
+			'type' => 'radio',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'fp_post_type',
+			),
+			'choices' => array(
+				'recent' => 'Recent Post',
+				'manual' => 'Featured Post',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+		array(
 			'key' => 'field_5b84a2315d79e',
-			'label' => 'Post',
+			'label' => 'Featured Post Item',
 			'name' => 'fp_post_post',
 			'type' => 'repeater',
 			'instructions' => 'Select your best post to appear on the front page.',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5bade24393486',
+						'operator' => '==',
+						'value' => 'manual',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -7256,6 +7330,8 @@ acf_add_local_field_group(array(
 						'id' => 'fp_post_p_object',
 					),
 					'post_type' => array(
+						0 => 'post',
+						1 => 'page',
 					),
 					'taxonomy' => array(
 					),
@@ -7263,6 +7339,110 @@ acf_add_local_field_group(array(
 					'multiple' => 0,
 					'return_format' => 'object',
 					'ui' => 1,
+				),
+			),
+		),
+		array(
+			'key' => 'field_5bade322be9b4',
+			'label' => 'Recent Post Item',
+			'name' => 'fp_recent_item',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5bade24393486',
+						'operator' => '==',
+						'value' => 'recent',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'fp_recent_item',
+			),
+			'layout' => 'table',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5bade352be9b5',
+					'label' => 'Number of post to show',
+					'name' => 'fp_post_num',
+					'type' => 'number',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'fp_post_num',
+					),
+					'default_value' => 3,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5bade397be9b6',
+					'label' => 'Order By',
+					'name' => 'fp_post_order_by',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'fp_post_order_by',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'id' => 'ID',
+						'author' => 'Author',
+						'title' => 'Title',
+						'date' => 'Date',
+						'rand' => 'Random Order',
+					),
+					'default_value' => array(
+						0 => 'rand',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5bade48dbe9b7',
+					'label' => 'Order',
+					'name' => 'fp_post_order',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'fp_post_order',
+					),
+					'choices' => array(
+						'asc' => 'ASC',
+						'desc' => 'DESC',
+					),
+					'default_value' => array(
+						0 => 'desc',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
 				),
 			),
 		),
@@ -7584,7 +7764,8 @@ function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn,
 	$th_layout = get_field( 'th_color_scheme', 'option' );
 	$links = ($link) ? do_shortcode( $link ) : esc_url( home_url( '/' ) ); //links
 	$imgbutton = ($btn_image['url']) ? $btn_image['url'] : get_template_directory_uri().'/assets/images/default/enter.png'; //image
-	if( ! empty($link_xfn)){ $linkRel = $link_xfn; }else{$linkRel = '';} //link relationship
+	//if( ! empty($link_xfn)){ $linkRel = $link_xfn; }else{$linkRel = '';} //link relationship
+	$linkRel = implode(' ', array_map(function ($i) { return $i['btn_xfn_item']; }, $link_xfn)); //link relationship
 	$linktar = ($link_target == '_blank') ? '_blank' : '_self'; //Target
 	$device = ( $btn_dev == 'desktop' ) ? 'd-none d-md-inline-block d-lg-inline-block mt-3' : 'd-block d-md-none d-lg-none mt-3'; //Device Item
 
@@ -7599,7 +7780,7 @@ function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn,
 		$item = $devices . ' ' . $btn_text;
 	}
 	$entersite = '<div class="' . $device . '">';
-		$entersite .= '<a href="' . $links . '" rel="'.$linkRel.'" target="'.$linktar.'" class="' . $item_class . '">' . $item . '</a>';
+		$entersite .= '<a href="' . $links . '" rel="' . $linkRel . '" target="'.$linktar.'" class="' . $item_class . '">' . $item . '</a>';
 	$entersite .= '</div>';
 
 	return $entersite;
