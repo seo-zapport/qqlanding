@@ -21,14 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 		<meta itemprop="copyrightHolder" content="<?php echo force_relative_url(); ?>"/>
 
 		<div class="container">
-			<?php $licensed = have_rows('licensed_settings', 'option');
-			$banks_enabled = have_rows('banks', 'option'); ?>
+			<?php $licensed = get_field('licensed_settings', 'option');
+			$banks_enabled = get_field('banks', 'option'); ?>
 			<?php if ($licensed['lcs_allow'] == true || $banks_enabled['b_allow_bank'] == true): ?>
 				<div class="site-bank-wrapper widget py-3">
 					<div class="row">
 						<?php if ( have_rows('licensed_settings', 'option')  ): ?>
 							<?php while ( have_rows('licensed_settings', 'option')  ): the_row(); ?>
-								<?php if ( get_sub_field( 'lcs_allow','option' ) === true ): ?>
+								<?php if ( get_sub_field( 'lcs_allow','option' ) == true ): ?>
 									<div class="col-12 col-md-3 col-lg-3">
 										<div class="provider-group prov-license">
 											<?php if ( ! empty( get_sub_field( 'lcs_title','option' ) ) ): ?>
