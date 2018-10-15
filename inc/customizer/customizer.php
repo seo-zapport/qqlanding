@@ -656,6 +656,26 @@ function qqlanding_customizer_register( $wp_customize ){
 	            )
 	        );
 
+	        // Video Page Modal Display Settings
+	        $wp_customize->add_setting( 'qqlanding_video_page_display_settings', 
+	        	array( 
+	        		'default'			=>	0,
+	        		'type'				=>	'theme_mod',
+	        		'capability'		=>	'edit_theme_options',
+	        		'sanitize_callback'	=>	'qqlanding_sanitize_checkbox'
+	        	 )
+	         );
+
+	        // Video Page Modal Display Control
+	        $wp_customize->add_control( 'qqlanding_video_page_display_settings', 
+	        	array( 
+	        		'type'			=> 'checkbox',
+	        		'label'			=>	esc_html__( 'Display Matches with Modal', 'qqlanding' ),
+	        		'description'	=>	esc_html__( 'This will show or hide your matches with modal', 'qqlanding' ),
+	        		'section'		=>	'qqlanding_page_options'
+	        	 )
+	         );
+
 
 		/**
 		 * ## Single Post Section

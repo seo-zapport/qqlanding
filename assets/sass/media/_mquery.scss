@@ -136,6 +136,12 @@
 		}
 	}
 }
+@media only screen and ( max-width: 1024px ){
+	.modal-btn{
+		bottom: 5%!important;
+		right: 4%!important;
+	}
+}
 @media only screen and (min-width:640px) and (max-width:768px){}
 @media only screen and (min-width:320px) and (max-width:639px){}
 @media only screen and (min-width:1024px) and (max-width:1366px){.float-flat .qqgroup-img{width:175px}}

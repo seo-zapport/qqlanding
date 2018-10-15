@@ -4795,6 +4795,137 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_5bc3df7f99c0f',
+	'title' => 'Matches',
+	'fields' => array(
+		array(
+			'key' => 'field_5bc3df83f2b4b',
+			'label' => 'Matches',
+			'name' => 'matches',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 1,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5bc3dfb7f2b4c',
+					'label' => 'Match',
+					'name' => 'match',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => 'Enter Match here!',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5bc3dfd4f2b4d',
+					'label' => 'Country',
+					'name' => 'country',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => 'Enter Country here!',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5bc3dff2f2b4e',
+					'label' => 'TV',
+					'name' => 'tv',
+					'type' => 'url',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => 'Enter Channel here!',
+				),
+				array(
+					'key' => 'field_5bc3e009f2b4f',
+					'label' => 'Date',
+					'name' => 'date',
+					'type' => 'date_time_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'display_format' => 'd/m/Y g:i a',
+					'return_format' => 'd/m/Y g:i a',
+					'first_day' => 1,
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-video',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => array(
+		0 => 'permalink',
+		1 => 'the_content',
+		2 => 'excerpt',
+		3 => 'discussion',
+		4 => 'comments',
+		5 => 'revisions',
+		6 => 'slug',
+		7 => 'author',
+		8 => 'format',
+		9 => 'page_attributes',
+		10 => 'featured_image',
+		11 => 'categories',
+		12 => 'tags',
+		13 => 'send-trackbacks',
+	),
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5b74e81d04180',
 	'title' => 'Slider',
 	'fields' => array(
@@ -7578,6 +7709,105 @@ acf_add_local_field_group(array(
 	'description' => 'Display the settings for Template: front page of qqlanding',
 ));
 
+acf_add_local_field_group(array(
+	'key' => 'group_5bc3dd44610d9',
+	'title' => 'Videos',
+	'fields' => array(
+		array(
+			'key' => 'field_5bc3dd4d5b9e3',
+			'label' => 'Videos',
+			'name' => 'videos',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 1,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5bc3dd5e5b9e4',
+					'label' => 'Video url',
+					'name' => 'video_url',
+					'type' => 'oembed',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'width' => '',
+					'height' => '',
+				),
+				array(
+					'key' => 'field_5bc3dd825b9e5',
+					'label' => 'Video Title',
+					'name' => 'video_title',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => 'Enter Video Title here!',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5bc3ddc15b9e6',
+					'label' => 'Description',
+					'name' => 'description',
+					'type' => 'textarea',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => 'Enter Video description here!',
+					'maxlength' => '',
+					'rows' => 10,
+					'new_lines' => '',
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-video',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
 endif;
 
 
@@ -7605,6 +7835,12 @@ if ( function_exists( 'acf_add_options_page' ) ) :
 	acf_add_options_sub_page( array(
 		'page_title' 	=> __( 'Banner Ads Settings', 'qqlanding' ),
 		'menu_title' 	=> __( 'Banner Ads', 'qqlanding' ),
+		'parent_slug'	=> 'general-theme-settings',
+	) ); //Promo Banners Settings
+	
+	acf_add_options_sub_page( array(
+		'page_title' 	=> __( 'Video Settings', 'qqlanding' ),
+		'menu_title' 	=> __( 'Video', 'qqlanding' ),
 		'parent_slug'	=> 'general-theme-settings',
 	) ); //Promo Banners Settings
 

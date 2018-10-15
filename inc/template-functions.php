@@ -491,3 +491,20 @@ function wp_customizer_footer_script(){
 	}
 }
 add_action( 'wp_footer', 'wp_customizer_footer_script');
+
+
+/*ACF Videos*/
+function custom_field_excerpt() {
+	global $post;
+	$text = get_sub_field('description'); //Replace 'your_field_name'
+	if ( '' != $text ) {
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]&gt;', ']]&gt;', $text);
+		$excerpt_length = 50; // 20 words
+		$permalink = get_sub_field('video_url', false, false);
+		$excerpt_more = apply_filters('excerpt_more', ' ' . '<a href="'.$permalink.'" rel="nofollow" target="_blank">[Read more...]</a>');
+		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+	}
+	return apply_filters('the_excerpt', $text);
+}

@@ -506,7 +506,7 @@ a:hover, a:active { outline: 0; }
 /*--------------------------------------------------------------
 ## Primary Sites
 --------------------------------------------------------------*/
-.qqlanding-sites { margin: 0; }
+.qqlanding-sites { margin: 0; /* Bootstrap table */ }
 .qqlanding-sites.qqland-qq288 .bg_color_288 { background: #02849c; }
 .qqlanding-sites.qqland-qq288 .color_288 { color: #005c6b; }
 .qqlanding-sites.qqland-qq288 .navbar { background: #02849c; }
@@ -836,6 +836,12 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites .m-banner .m-ads { position: relative; background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.125); border-radius: .25rem; }
 .qqlanding-sites .m-banner .m-banner-flex .m-ads:not(:last-child) { margin-right: 3px; }
 .qqlanding-sites .m-banner .m-banner-flex .m-ads:not(:first-child) { margin-left: 3px; }
+.qqlanding-sites .embed-container { position: relative; padding-bottom: 56.25%; overflow: hidden; max-width: 100%; height: auto; }
+.qqlanding-sites .embed-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.qqlanding-sites .embed-container object { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.qqlanding-sites .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.qqlanding-sites table, .qqlanding-sites th, .qqlanding-sites td { table-layout: fixed; }
+.qqlanding-sites .modal-btn { position: fixed; z-index: 1000; bottom: 60%; right: 8%; cursor: pointer; }
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -1085,6 +1091,7 @@ embed, iframe, object { max-width: 100%; }
 @media only screen and (min-width: 768px) and (max-width: 992px) { .provider-group { max-width: 100% !important; margin-right: 5px; }
   .provider-group .provider-wrap { flex-wrap: wrap; align-items: center; justify-content: center; }
   .provider-group[class*='-banks'] .provider-wrap { justify-content: space-evenly; } }
+@media only screen and (max-width: 1024px) { .modal-btn { bottom: 5% !important; right: 4% !important; } }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) { .float-flat .qqgroup-img { width: 175px; } }
 @media only screen and (min-width: 950px) and (max-width: 1280px) { .float-flat .qqgroup-img { width: 185px; } }
 @media only screen and (min-width: 900px) and (max-width: 1440px) { .float-flat .qqgroup-img { width: 178px; }

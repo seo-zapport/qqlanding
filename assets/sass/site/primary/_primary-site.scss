@@ -1515,4 +1515,52 @@
 		.m-banner-flex .m-ads:not(:last-child){margin-right: 3px;}
 		.m-banner-flex .m-ads:not(:first-child){margin-left: 3px;}
 	}
+
+	//Video Page
+	
+	.embed-container { 
+		position: relative; 
+		padding-bottom: 56.25%;
+		overflow: hidden;
+		max-width: 100%;
+		height: auto;
+
+		iframe { 
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		object { 
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		embed { 
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+	} 
+
+	/* Bootstrap table */
+	table, th, td {
+	    table-layout: fixed;
+	}
+
+	.modal-btn{
+		position: fixed;
+		z-index: 1000;
+		bottom: 60%;
+		right: 8%;
+		cursor: pointer;
+	}
 }
