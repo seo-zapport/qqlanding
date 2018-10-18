@@ -191,7 +191,7 @@ function QQLanding_site_identity(){
 		$site_branding_output .= '</div>';
 	endif;
 	if ( $title_option == 'text-only' ):
-		$site_branding_output .= $before_title . '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home" itemprop="url">' . get_bloginfo( 'name' ) . '</a>' . $after_desc;
+		$site_branding_output .= $before_title . '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home" itemprop="url">' . get_bloginfo( 'name' ) . '</a>' . $after_title;
 		$site_branding_output .= $before_desc . get_bloginfo( 'description' ) . $after_desc;
 	endif;
 

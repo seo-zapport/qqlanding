@@ -86,32 +86,14 @@ echo $after_wrap; ?>
 
 					 	// loop through the rows of data
 					    while ( have_rows('videos','option') ) : the_row();?>
-						<div class="<?php echo ( $counter > 1 ) ? 'col-12 col-xl-6' : 'col-12 col-xl-12'; ?> mb-4">
+						<div class="<?php echo ( $counter > 1 ) ? 'col-12 col-xl-4' : 'col-12 col-xl-12'; ?> mb-4">
 							<!-- <div class="row"> -->
-
-								<?php
-									$iframe = get_sub_field('video_url');// use preg_match to find iframe src
-									preg_match('/src="(.+?)"/', $iframe, $matches);
-									$src = $matches[1];
-
-									// add extra params to iframe src
-									$params = array(
-									'controls'    => 0,
-									'hd'        => 1,
-									'autohide'    => 1
-									);
-
-									$new_src = add_query_arg($params, $src);
-
-									$iframe = str_replace($src, $new_src, $iframe);
-
-									// add extra attributes to iframe html
-									$attributes = 'frameborder="0"';
-
-									$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
-									
-								?>
-								<?php if ( get_sub_field('video_type') == 'upload' ):
+							<div class="vid-card">
+								<?php 
+								$url = ( ! empty( get_sub_field('vid_url') ) ) ? esc_url( get_sub_field('vid_url') ) : esc_url( home_url('/') );
+								$thumb = ( ! empty( get_sub_field('video_thumb') ) ) ? esc_attr( get_sub_field('video_thumb') ) : get_template_directory_uri() . '/assets/images/default/featured.png';
+								$date = ( ! empty( get_sub_field('vid_pub_date') ) ) ? get_sub_field('vid_pub_date') : get_the_date('F j, Y');
+								/*if ( get_sub_field('video_type') == 'upload' ):
 									$vid = get_sub_field('video_upload');
 									$vid_url = $vid['url'];
 									$mime_type = ( !empty( $vid['mime_type'] ) ) ? $vid['mime_type'] : 'video/mp4';
@@ -124,11 +106,17 @@ echo $after_wrap; ?>
 									</div>
 								<?php else: ?>
 									<div class="col-12 embed-container m-auto"><?php echo $iframe; ?></div>
-								<?php endif; ?>
-							    <div class="col-12"><h2 class="text-center text-capitalize"><?php the_sub_field('video_title'); ?></h2></div>
-							    <div class="col-12"><?php echo custom_field_excerpt(); ?></div><hr>
+								<?php endif; */?>
+								<a href="<?php echo $url; ?>" rel="nofollow"><img src="<?php echo $thumb; ?>" class="img-fluid vid-img"></a>
+								<div class="vid-body">
+									<h3 class="vid-title"><a href="<?php echo $url; ?>" rel="nofollow"><?php the_sub_field('video_title'); ?></a></h3>
+									<?php echo custom_field_excerpt(); ?>
+								</div>
+								<div class="vid-footer">
+									<i class="far fa-calendar"></i><small class="muted"><?php echo $date; ?></small>
+								</div>
 						
-							<!-- </div> -->
+							</div>
 						</div>
 
 					    <?php endwhile;
@@ -160,8 +148,8 @@ echo $after_wrap; ?>
 							</div>
 						<?php endif; ?>
 
-						<h1 class="text-center mb-2">Next Matches</h1>
-						<h3>Select Number of Rows</h3>
+						<h4 class="text-center mb-2">Next Matches</h4>
+						<p>Select Number of Rows</p>
 						<div class="form-group">
 							<select name="state" id="maxRows" class="form-control">
 								<option value="5000">Show all</option>

@@ -839,6 +839,13 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites .embed-container { position: relative; padding-bottom: 56.25%; overflow: hidden; max-width: 100%; height: auto; }
 .qqlanding-sites .embed-container iframe, .qqlanding-sites .embed-container object, .qqlanding-sites .embed-container embed, .qqlanding-sites .embed-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .qqlanding-sites .embed-container video { background-color: #000; max-width: 100%; }
+.qqlanding-sites .vid-card { position: relative; background-color: #f7f7f7; box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.35); word-wrap: break-word; }
+.qqlanding-sites .vid-card:hover, .qqlanding-sites .vid-card:focus { background-color: #f4f4f4; box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.35); }
+.qqlanding-sites .vid-card .vid-img { height: 217px; width: 100%; display: block; }
+.qqlanding-sites .vid-card .vid-body, .qqlanding-sites .vid-card .vid-footer { padding: 0.6em; position: relative; }
+.qqlanding-sites .vid-card .vid-title { margin: 0rem 0px 0rem; font-size: 16px; font-size: 1rem; font-weight: 600; line-height: 1.5; }
+.qqlanding-sites .vid-card .vid-footer i { margin-right: 5px; }
+.qqlanding-sites .vid-card .vid-footer i, .qqlanding-sites .vid-card .vid-footer small { display: inline-block; }
 .qqlanding-sites table, .qqlanding-sites th, .qqlanding-sites td { table-layout: fixed; }
 .qqlanding-sites .modal-btn { position: fixed; z-index: 1000; bottom: 60%; right: 8%; cursor: pointer; }
 
