@@ -2,11 +2,12 @@
 // Section Slider
 // If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) die;
+$disable = get_field('slider_enable_section', 'options');
 $layout = get_field( 'th_color_scheme', 'option' );
 $slider_layout = get_field('slider_layout', 'options');
 $slider_app = get_field('slider_appearance_group', 'options');
-
-?>
+if ( acf_selective_refresh($disable) ) return $disable = false;
+if ($disable) : ?>
 <section id="banner">
 	
 	<?php if ( $slider_layout == 'static' ): ?>
@@ -224,3 +225,4 @@ $slider_app = get_field('slider_appearance_group', 'options');
 		</div>
 	<?php endif; //end of default ?>
 </section>
+<?php endif;?>

@@ -86,11 +86,51 @@ echo $after_wrap; ?>
 
 					 	// loop through the rows of data
 					    while ( have_rows('videos','option') ) : the_row();?>
-
 						<div class="<?php echo ( $counter > 1 ) ? 'col-12 col-xl-6' : 'col-12 col-xl-12'; ?> mb-4">
 							<!-- <div class="row"> -->
-						
-								<div class="col-12 embed-container m-auto"><?php the_sub_field('video_url'); ?></div>
+
+								<?php
+									$iframe = get_sub_field('video_url');// use preg_match to find iframe src
+									preg_match('/src="(.+?)"/', $iframe, $matches);
+									$src = $matches[1];
+
+
+									// add extra params to iframe src
+									$params = array(
+									'controls'    => 0,
+									'hd'        => 1,
+									'autohide'    => 1
+									);
+
+									$new_src = add_query_arg($params, $src);
+
+									$iframe = str_replace($src, $new_src, $iframe);
+
+
+									// add extra attributes to iframe html
+									$attributes = 'frameborder="0"';
+
+									$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+
+									// echo $iframe
+									
+								?>
+								<?php if ( get_sub_field('video_type') == 'upload' ):
+									$vid = get_sub_field('video_upload');
+									//var_dump($vid);
+									$vid_url = $vid['url'];
+									$mime_type = ( !empty( $vid['mime_type'] ) ) ? $vid['mime_type'] : 'video/mp4';
+									//$icon = ( !empty( $vid['icon'] ) ) ? $vid['icon'] : get_template_directory_uri() . 'assets/images/default/featured.png';
+								?>
+									<div id="uploadVideo" class="col-12 embed-container m-auto">
+										<video width="590" height="332" playsinline controls>
+										  <source src="<?php echo $vid_url; ?>" type="<?php echo $mime_type; ?>">
+										</video>
+									</div>
+								<?php else: ?>
+									<div class="col-12 embed-container m-auto"><?php echo $iframe; ?></div>
+								<?php endif; ?>
 							    <div class="col-12"><h2 class="text-center text-capitalize"><?php the_sub_field('video_title'); ?></h2></div>
 							    <div class="col-12"><?php echo custom_field_excerpt(); ?></div><hr>
 						
@@ -149,20 +189,20 @@ echo $after_wrap; ?>
 							<?php
 
 							// check if the repeater field has rows of data
-							if( have_rows('matches', 'option') ) : $item_tb = '';
+							if( have_rows('matches', 'option') ) : 
 
 							 	// loop through the rows of data
-							    while ( have_rows('matches', 'option') ) : the_row();
-							    	$item_tb .= '<tr>';
-								    	$item_tb .= '<td class="text-capitalize">' . get_sub_field('match') . '</td>'; // display a sub field value
-								    	$item_tb .= '<td class="text-capitalize">' . get_sub_field('country') . '</td>'; // display a sub field value
-								    	$item_tb .= '<td ><a href="' . get_sub_field('tv') . '" target="_blank">Watch Here!</a></td>'; // display a sub field value
-								    	$item_tb .= '<td >' . get_sub_field('date') . '</td>'; // display a sub field value
-							    	$item_tb .= '</tr>';
+							    while ( have_rows('matches', 'option') ) : the_row(); ?>
+							    	<tr>
+								    	<td class="text-capitalize"><?php the_sub_field('match'); ?></td> <!--// display a sub field value-->
+								    	<td class="text-capitalize"><?php the_sub_field('country'); ?></td><!--// display a sub field value-->
+								    	<td ><a href="<?php the_sub_field('tv'); ?>" target="_blank">Watch Here!</a></td> <!--// display a sub field value-->
+								    	<td ><?php the_sub_field('date'); ?></td> <!--// display a sub field value-->
+							    	</tr>
 
-							    	echo $item_tb;
+							    	<!--echo $item_tb;-->
 
-							    endwhile;
+							    <?php endwhile;
 
 							else :
 

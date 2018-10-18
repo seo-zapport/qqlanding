@@ -18,7 +18,7 @@ if ( ! is_front_page() )
 	endif;
 ?>
 
-	<div id="primary" class="content-area <?php echo $page_sidebar_layout['grid_sets']; ?>">
+	<div id="primary" class="content-area <?php echo ( ! is_front_page() ) ? $page_sidebar_layout['grid_sets'] : ''; ?>">
 		<main id="main" class="site-main">
 
 		<?php
