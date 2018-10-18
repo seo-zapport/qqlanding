@@ -94,7 +94,6 @@ echo $after_wrap; ?>
 									preg_match('/src="(.+?)"/', $iframe, $matches);
 									$src = $matches[1];
 
-
 									// add extra params to iframe src
 									$params = array(
 									'controls'    => 0,
@@ -106,19 +105,14 @@ echo $after_wrap; ?>
 
 									$iframe = str_replace($src, $new_src, $iframe);
 
-
 									// add extra attributes to iframe html
 									$attributes = 'frameborder="0"';
 
 									$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
-
-
-									// echo $iframe
 									
 								?>
 								<?php if ( get_sub_field('video_type') == 'upload' ):
 									$vid = get_sub_field('video_upload');
-									//var_dump($vid);
 									$vid_url = $vid['url'];
 									$mime_type = ( !empty( $vid['mime_type'] ) ) ? $vid['mime_type'] : 'video/mp4';
 									//$icon = ( !empty( $vid['icon'] ) ) ? $vid['icon'] : get_template_directory_uri() . 'assets/images/default/featured.png';
@@ -176,7 +170,7 @@ echo $after_wrap; ?>
 								<option value="15">15</option>
 							</select>
 						</div>
-						<table id="mytable" class="table table-responsive-xl table-striped">
+						<table id="mytable" class="table table-responsive table-responsive-xl table-striped">
 						  <thead>
 						    <tr>
 						      <th scope="col">Matches</th>
