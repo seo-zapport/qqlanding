@@ -105,13 +105,13 @@ echo $after_wrap; ?>
 								$thumb = ( ! empty( get_sub_field('video_thumb') ) ) ? esc_attr( get_sub_field('video_thumb') ) : get_template_directory_uri() . '/assets/images/default/featured.png';
 								$date = ( ! empty( get_sub_field('vid_pub_date') ) ) ? get_sub_field('vid_pub_date') : get_the_date('F j, Y'); ?>
 								<div class="vid-img-wrap">
-									<a href="<?php echo $url; ?>" rel="nofollow">
+									<a href="<?php echo $url; ?>" rel="nofollow" target="_blank">
 										<span id="vid-oflow"><i class="far fa-play-circle fa-7x"></i></span>
 										<img src="<?php echo $thumb; ?>" class="img-fluid vid-img">
 									</a>
 								</div>
 								<div class="vid-body">
-									<h3 class="vid-title"><a href="<?php echo $url; ?>" rel="nofollow"><?php the_sub_field('video_title'); ?></a></h3>
+									<h3 class="vid-title"><a href="<?php echo $url; ?>" rel="nofollow" target="_blank"><?php the_sub_field('video_title'); ?></a></h3>
 									<?php echo custom_field_excerpt(); ?>
 								</div>
 								<div class="vid-footer">
