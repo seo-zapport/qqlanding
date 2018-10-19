@@ -176,8 +176,10 @@
      $(window).scroll(function () {
         if ( $(this).scrollTop() > 50) {
             $('#site_back_top').addClass('show');
+            $('.modal-btn').css({ 'bottom' : '10%' });
         }else{
             $('#site_back_top').removeClass('show');
+            $('.modal-btn').css({ 'bottom' : '0.75%' });
         }
      });
      $('#site_back_top').on('click',function(e){

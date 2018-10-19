@@ -4755,100 +4755,7 @@
     {
         "key": "group_5bc3df7f99c0f",
         "title": "Matches",
-        "fields": [
-            {
-                "key": "field_5bc3df83f2b4b",
-                "label": "Matches",
-                "name": "matches",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "collapsed": "",
-                "min": 1,
-                "max": 0,
-                "layout": "table",
-                "button_label": "",
-                "sub_fields": [
-                    {
-                        "key": "field_5bc3dfb7f2b4c",
-                        "label": "Match",
-                        "name": "match",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "Enter Match here!",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    },
-                    {
-                        "key": "field_5bc3dfd4f2b4d",
-                        "label": "Country",
-                        "name": "country",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "Enter Country here!",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    },
-                    {
-                        "key": "field_5bc3dff2f2b4e",
-                        "label": "TV",
-                        "name": "tv",
-                        "type": "url",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "Enter Channel here!"
-                    },
-                    {
-                        "key": "field_5bc3e009f2b4f",
-                        "label": "Date",
-                        "name": "date",
-                        "type": "date_time_picker",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "display_format": "d\/m\/Y g:i a",
-                        "return_format": "d\/m\/Y g:i a",
-                        "first_day": 1
-                    }
-                ]
-            }
-        ],
+        "fields": false,
         "location": [
             [
                 {
@@ -5598,7 +5505,7 @@
                             "id": "enter_site_button"
                         },
                         "collapsed": "",
-                        "min": 1,
+                        "min": 0,
                         "max": 2,
                         "layout": "block",
                         "button_label": "Add button",
@@ -6429,7 +6336,7 @@
                             "id": "enter_site_button"
                         },
                         "collapsed": "",
-                        "min": 1,
+                        "min": 0,
                         "max": 2,
                         "layout": "block",
                         "button_label": "Add button",
@@ -7683,8 +7590,24 @@
     },
     {
         "key": "group_5bc3dd44610d9",
-        "title": "Videos",
+        "title": "Videos & Matches",
         "fields": [
+            {
+                "key": "field_5bc96041f5a9f",
+                "label": "Video Settings",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
             {
                 "key": "field_5bc3dd4d5b9e3",
                 "label": "Videos",
@@ -7698,11 +7621,11 @@
                     "class": "",
                     "id": ""
                 },
-                "collapsed": "",
+                "collapsed": "field_5bc3dd825b9e5",
                 "min": 1,
                 "max": 0,
                 "layout": "table",
-                "button_label": "",
+                "button_label": "Add Video",
                 "sub_fields": [
                     {
                         "key": "field_5bc8190fe6d47",
@@ -7800,6 +7723,98 @@
                         "first_day": 1
                     }
                 ]
+            },
+            {
+                "key": "field_5bc96053f5aa0",
+                "label": "Match Settings",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5bc3df83f2b4b",
+                "label": "Matches",
+                "name": "matches",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 1,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5bc3dfb7f2b4c",
+                        "label": "Home Team",
+                        "name": "match_home",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": "match_home"
+                        },
+                        "default_value": "",
+                        "placeholder": "Enter Home team here!",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5bc3dfd4f2b4d",
+                        "label": "Away Team",
+                        "name": "match_away",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": "match_away"
+                        },
+                        "default_value": "",
+                        "placeholder": "Enter Away Team here!",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5bc3e009f2b4f",
+                        "label": "Date",
+                        "name": "date",
+                        "type": "date_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "F j, Y",
+                        "return_format": "F j, Y",
+                        "first_day": 1
+                    }
+                ]
             }
         ],
         "location": [
@@ -7807,7 +7822,7 @@
                 {
                     "param": "options_page",
                     "operator": "==",
-                    "value": "acf-options-video"
+                    "value": "acf-options-video-matches"
                 }
             ]
         ],

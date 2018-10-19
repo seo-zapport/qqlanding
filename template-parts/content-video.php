@@ -85,18 +85,31 @@ echo $after_wrap; ?>
 					if( have_rows('videos','option') ):
 
 					 	// loop through the rows of data
-					    while ( have_rows('videos','option') ) : the_row();?>
-						<div class="<?php echo ( $counter > 1 ) ? 'col-12 col-xl-4' : 'col-12 col-xl-12'; ?> mb-4">
+					    while ( have_rows('videos','option') ) : the_row();
+					    	if ( $counter > 1 && $counter < 3) {
+					    		$grid_class = 'col-md-6 col-xl-6';
+					    		$card_class = 'vgrid-2';
+					    	}else if ($counter >= 3) {
+					    		$grid_class = 'col-md-4 col-xl-4';
+					    		$card_class = 'vgrid-3';
+					    	}else{
+					    		$grid_class = '';
+					    		$card_class = 'vgrid-1';
+					    	}
+					    	?>
+						<div class="col-12 <?php /*echo ( $counter > 1 ) ? 'col-12 col-xl-4' : 'col-12 col-xl-12';*/ echo $grid_class; ?> mb-4">
 							<!-- <div class="row"> -->
-							<div class="vid-card">
+							<div class="vid-card <?php echo $card_class; ?>">
 								<?php 
 								$url = ( ! empty( get_sub_field('vid_url') ) ) ? esc_url( get_sub_field('vid_url') ) : esc_url( home_url('/') );
 								$thumb = ( ! empty( get_sub_field('video_thumb') ) ) ? esc_attr( get_sub_field('video_thumb') ) : get_template_directory_uri() . '/assets/images/default/featured.png';
 								$date = ( ! empty( get_sub_field('vid_pub_date') ) ) ? get_sub_field('vid_pub_date') : get_the_date('F j, Y'); ?>
-								<a href="<?php echo $url; ?>" rel="nofollow">
-									<span id="vid-oflow"><i class="far fa-play-circle fa-7x"></i></span>
-									<img src="<?php echo $thumb; ?>" class="img-fluid vid-img">
-								</a>
+								<div class="vid-img-wrap">
+									<a href="<?php echo $url; ?>" rel="nofollow">
+										<span id="vid-oflow"><i class="far fa-play-circle fa-7x"></i></span>
+										<img src="<?php echo $thumb; ?>" class="img-fluid vid-img">
+									</a>
+								</div>
 								<div class="vid-body">
 									<h3 class="vid-title"><a href="<?php echo $url; ?>" rel="nofollow"><?php the_sub_field('video_title'); ?></a></h3>
 									<?php echo custom_field_excerpt(); ?>
@@ -118,7 +131,7 @@ echo $after_wrap; ?>
 
 			<!-- Large modal -->
 			<!-- <button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target=".bd-example-modal-lg">View Matches</button> -->
-			<img class="modal-btn" title="Kontes SEO QQLIGA TERBESAR SEASIA 2018" src="http://via.placeholder.com/150x150" alt="Kontes SEO QQLIGA TERBESAR SEASIA 2018" data-toggle="modal" data-target=".bd-example-modal-lg">
+			<img class="modal-btn" title="Kontes SEO QQLIGA TERBESAR SEASIA 2018" src="http://via.placeholder.com/75x100" alt="Kontes SEO QQLIGA TERBESAR SEASIA 2018" data-toggle="modal" data-target=".bd-example-modal-lg">
 
 			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 			  <div class="modal-dialog modal-lg">
@@ -147,13 +160,12 @@ echo $after_wrap; ?>
 								<option value="15">15</option>
 							</select>
 						</div>
-						<table id="mytable" class="table table-responsive table-responsive-xl table-striped">
+						<table id="mytable" class="table table-striped">
 						  <thead>
 						    <tr>
-						      <th scope="col">Matches</th>
-						      <th scope="col">Country</th>
-						      <th scope="col">TV</th>
-						      <th scope="col">Date</th>
+						      <th class="col-2 h4" scope="col">Date</th>
+						      <th class="col-5 h4" scope="col">Home Team</th>
+						      <th class="col-5 h4" scope="col">Away Team</th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -165,10 +177,9 @@ echo $after_wrap; ?>
 							 	// loop through the rows of data
 							    while ( have_rows('matches', 'option') ) : the_row(); ?>
 							    	<tr>
-								    	<td class="text-capitalize"><?php the_sub_field('match'); ?></td> <!--// display a sub field value-->
-								    	<td class="text-capitalize"><?php the_sub_field('country'); ?></td><!--// display a sub field value-->
-								    	<td ><a href="<?php the_sub_field('tv'); ?>" target="_blank">Watch Here!</a></td> <!--// display a sub field value-->
-								    	<td ><?php the_sub_field('date'); ?></td> <!--// display a sub field value-->
+								    	<td class="col-2" ><?php the_sub_field('date'); ?></td> <!--// display a sub field value-->
+								    	<td class="col-5" ><?php the_sub_field('match_home'); ?></td> <!--// display a sub field value-->
+								    	<td style="width: 80%;" ><?php the_sub_field('match_away'); ?></td><!--// display a sub field value-->
 							    	</tr>
 
 							    	<!--echo $item_tb;-->
