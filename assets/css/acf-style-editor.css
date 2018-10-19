@@ -1,0 +1,44 @@
+
+/* ================================= */
+/* =========== Slider ============== */
+/* ================================= */ 
+	#banner .banner-static-content{
+		font-family: noto_sans_regular;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+	}
+
+						#banner-static{background: #000000;background-position: left top; background-repeat: repeat;-backgroundsize: auto;background-attachment: scroll;}						@media screen and (min-width: 1024px) {
+				.qqlanding-sites #banner-static{height: 650px;}
+			}
+			@media only screen and (min-width:768px) and (max-width:1024px){
+				.qqlanding-sites #banner-static{height: 420px;}
+			}
+			@media only screen and (min-width:320px) and (max-width:768px){
+				.qqlanding-sites #banner-static{height: 420px;}
+			}
+			
+			
+
+/* ================================= */
+/* =========== Content ============== */
+/* ================================= */ 
+
+
+.content-first{
+	background : #000000;
+	}
+	#Fcontent_a{ height:auto; }		
+.content-last{
+	background : #000000;
+	}
+		#Fcontent_b{ height:auto; } 	
+		#Fproviders{background-color: transparent !important;}
+		.provider-group[class*='-category']{border-color: #ffffff !important;}.provider-group .provider-item > i{ background: url('http://www.sandbox.awakentheme.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
+	
+
+/**
+ * Media Query
+ *-------------------------*/
+@media (min-width: 768px){}

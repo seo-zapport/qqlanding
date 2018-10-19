@@ -34,7 +34,7 @@ add_filter('acf/settings/show_admin', '__return_false');
 include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro/acf.php' );
 
 
-if( function_exists('acf_add_local_field_group') ):
+/*if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
 	'key' => 'group_5b87376114e45',
@@ -7868,7 +7868,7 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-endif;
+endif;*/
 
 
 if ( function_exists( 'acf_add_options_page' ) ) :

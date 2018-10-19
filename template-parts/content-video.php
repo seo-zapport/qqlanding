@@ -92,22 +92,11 @@ echo $after_wrap; ?>
 								<?php 
 								$url = ( ! empty( get_sub_field('vid_url') ) ) ? esc_url( get_sub_field('vid_url') ) : esc_url( home_url('/') );
 								$thumb = ( ! empty( get_sub_field('video_thumb') ) ) ? esc_attr( get_sub_field('video_thumb') ) : get_template_directory_uri() . '/assets/images/default/featured.png';
-								$date = ( ! empty( get_sub_field('vid_pub_date') ) ) ? get_sub_field('vid_pub_date') : get_the_date('F j, Y');
-								/*if ( get_sub_field('video_type') == 'upload' ):
-									$vid = get_sub_field('video_upload');
-									$vid_url = $vid['url'];
-									$mime_type = ( !empty( $vid['mime_type'] ) ) ? $vid['mime_type'] : 'video/mp4';
-									//$icon = ( !empty( $vid['icon'] ) ) ? $vid['icon'] : get_template_directory_uri() . 'assets/images/default/featured.png';
-								?>
-									<div id="uploadVideo" class="col-12 embed-container m-auto">
-										<video width="590" height="332" playsinline controls>
-										  <source src="<?php echo $vid_url; ?>" type="<?php echo $mime_type; ?>">
-										</video>
-									</div>
-								<?php else: ?>
-									<div class="col-12 embed-container m-auto"><?php echo $iframe; ?></div>
-								<?php endif; */?>
-								<a href="<?php echo $url; ?>" rel="nofollow"><img src="<?php echo $thumb; ?>" class="img-fluid vid-img"></a>
+								$date = ( ! empty( get_sub_field('vid_pub_date') ) ) ? get_sub_field('vid_pub_date') : get_the_date('F j, Y'); ?>
+								<a href="<?php echo $url; ?>" rel="nofollow">
+									<span id="vid-oflow"><i class="far fa-play-circle fa-7x"></i></span>
+									<img src="<?php echo $thumb; ?>" class="img-fluid vid-img">
+								</a>
 								<div class="vid-body">
 									<h3 class="vid-title"><a href="<?php echo $url; ?>" rel="nofollow"><?php the_sub_field('video_title'); ?></a></h3>
 									<?php echo custom_field_excerpt(); ?>
