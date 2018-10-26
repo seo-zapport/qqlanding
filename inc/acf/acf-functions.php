@@ -6,7 +6,7 @@
 if ( ! defined('ABSPATH')) exit;
 
 // 1. customize ACF path
-/*add_filter('acf/settings/path', 'my_acf_settings_path');
+add_filter('acf/settings/path', 'my_acf_settings_path');
  
 function my_acf_settings_path( $path ) {
  
@@ -4140,6 +4140,25 @@ acf_add_local_field_group(array(
 			'endpoint' => 0,
 		),
 		array(
+			'key' => 'field_5bd2cb7ef6333',
+			'label' => 'Header Navigation',
+			'name' => 'header_nav_en',
+			'type' => 'true_false',
+			'instructions' => 'Indicate whether or not to enable the menu.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '50',
+				'class' => '',
+				'id' => 'header_nav_en',
+			),
+			'message' => 'Enable the Menu ?',
+			'default_value' => 1,
+			'ui' => 1,
+			'ui_on_text' => 'Yes',
+			'ui_off_text' => 'No',
+		),
+		array(
 			'key' => 'field_5b73c21e8945f',
 			'label' => 'Header Settings',
 			'name' => 'th_nav_settings',
@@ -4327,23 +4346,83 @@ acf_add_local_field_group(array(
 			),
 		),
 		array(
-			'key' => 'field_5b751039fe5aa',
-			'label' => 'Top Menu',
-			'name' => 'header_top_menu',
-			'type' => 'true_false',
-			'instructions' => 'Indicate whether or not to enable the top menu.',
+			'key' => 'field_5bd2b483bcb5a',
+			'label' => 'Social Media Settings',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
-				'id' => 'header_top_menu',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5b751039fe5aa',
+			'label' => 'Social Media in header',
+			'name' => 'sm_header',
+			'type' => 'true_false',
+			'instructions' => 'Indicate whether or not to enable the top menu.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '50',
+				'class' => '',
+				'id' => 'sm_header',
 			),
 			'message' => 'Enable Top Menu ?',
 			'default_value' => 1,
 			'ui' => 1,
 			'ui_on_text' => 'Yes',
 			'ui_off_text' => 'No',
+		),
+		array(
+			'key' => 'field_5bd2b4b9bcb5c',
+			'label' => 'Social Media in footer',
+			'name' => 'sm_footer',
+			'type' => 'true_false',
+			'instructions' => 'Indicate whether or not to enable social media.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '50',
+				'class' => '',
+				'id' => 'sm_footer',
+			),
+			'message' => 'Enable Social media?',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => 'Yes',
+			'ui_off_text' => 'No',
+		),
+		array(
+			'key' => 'field_5bd2b6d8f0581',
+			'label' => 'Social Media Icon Shape',
+			'name' => 'sm_icon_shape',
+			'type' => 'radio',
+			'instructions' => 'Choose you\'re the best icon shape.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '100',
+				'class' => '',
+				'id' => 'sm_icon_shape',
+			),
+			'choices' => array(
+				'circle' => 'Circle',
+				'square' => 'Square',
+				'no_shape' => 'No Shape',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => 'square',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
 		),
 		array(
 			'key' => 'field_5b88e487b0519',
@@ -4890,7 +4969,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5b8ccb8df1eaa',
-			'label' => 'Static Image Settings',
+			'label' => 'Static Settings',
 			'name' => 'slider_item_static',
 			'type' => 'group',
 			'instructions' => '',
@@ -5356,6 +5435,70 @@ acf_add_local_field_group(array(
 					),
 				),
 				array(
+					'key' => 'field_5bd2db4c8dc61',
+					'label' => 'Content Format Type',
+					'name' => 'content_format_type',
+					'type' => 'radio',
+					'instructions' => 'Choose between video or image you want to show.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b8ccc01f1eb5',
+								'operator' => '==',
+								'value' => 'half',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'content_format_type',
+					),
+					'choices' => array(
+						'image' => 'Image',
+						'video' => 'Video',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => 'image',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
+				),
+				array(
+					'key' => 'field_5bd2da508dc60',
+					'label' => 'Content Slider Video',
+					'name' => 'content_slider_video',
+					'type' => 'file',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b8ccc01f1eb5',
+								'operator' => '==',
+								'value' => 'half',
+							),
+							array(
+								'field' => 'field_5bd2db4c8dc61',
+								'operator' => '==',
+								'value' => 'video',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'library' => 'all',
+					'min_size' => '',
+					'max_size' => '',
+					'mime_types' => '.mp4, .webm, .ogg, .swf, .flv',
+				),
+				array(
 					'key' => 'field_5b8ccc03f1eb8',
 					'label' => 'Content Slider Images',
 					'name' => 'content_slider_images',
@@ -5365,7 +5508,12 @@ acf_add_local_field_group(array(
 					'conditional_logic' => array(
 						array(
 							array(
-								'field' => 'field_5b7cbeae82249',
+								'field' => 'field_5bd2db4c8dc61',
+								'operator' => '==',
+								'value' => 'image',
+							),
+							array(
+								'field' => 'field_5b8ccc01f1eb5',
 								'operator' => '==',
 								'value' => 'half',
 							),
@@ -5397,9 +5545,14 @@ acf_add_local_field_group(array(
 					'conditional_logic' => array(
 						array(
 							array(
-								'field' => 'field_5b7cbeae82249',
+								'field' => 'field_5b8ccc01f1eb5',
 								'operator' => '==',
 								'value' => 'half',
+							),
+							array(
+								'field' => 'field_5bd2db4c8dc61',
+								'operator' => '==',
+								'value' => 'image',
 							),
 						),
 					),
@@ -6676,7 +6829,15 @@ acf_add_local_field_group(array(
 			'type' => 'group',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5b74eeaa29852',
+						'operator' => '==',
+						'value' => 'slider',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -6691,15 +6852,7 @@ acf_add_local_field_group(array(
 					'type' => 'true_false',
 					'instructions' => 'Indicate whether or not autoplay will enabled',
 					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74eeaa29852',
-								'operator' => '==',
-								'value' => 'slider',
-							),
-						),
-					),
+					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
@@ -6718,15 +6871,7 @@ acf_add_local_field_group(array(
 					'type' => 'true_false',
 					'instructions' => 'Indicate whether the arrow buttons will be created.',
 					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74eeaa29852',
-								'operator' => '==',
-								'value' => 'slider',
-							),
-						),
-					),
+					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
@@ -6745,15 +6890,7 @@ acf_add_local_field_group(array(
 					'type' => 'true_false',
 					'instructions' => 'Indicate whether the navigation dots will be created.',
 					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74eeaa29852',
-								'operator' => '==',
-								'value' => 'slider',
-							),
-						),
-					),
+					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
@@ -7208,6 +7345,25 @@ acf_add_local_field_group(array(
 					'placeholder' => '',
 				),
 			),
+		),
+		array(
+			'key' => 'field_5bd2d98849f10',
+			'label' => 'Skew',
+			'name' => 'slider_skew',
+			'type' => 'true_false',
+			'instructions' => 'Indicate whether you want to enable the skew or not.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'slider_skew',
+			),
+			'message' => 'Enable skew ?',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => 'Yes',
+			'ui_off_text' => 'No',
 		),
 	),
 	'location' => array(
@@ -7883,7 +8039,7 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-endif;*/
+endif;
 
 
 if ( function_exists( 'acf_add_options_page' ) ) :
