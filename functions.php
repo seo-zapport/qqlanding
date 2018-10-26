@@ -132,6 +132,16 @@ function qqlanding_scripts() {
 
 	wp_enqueue_script( 'general-script', get_template_directory_uri() . '/assets/js/general.js', array('jquery'), 'v0.1.1', true );
 
+	if ( is_page_template( 'template-videos.php' ) ) {
+
+		wp_enqueue_script( 'cpt-script', get_template_directory_uri() . '/assets/js/qqlanding_cpt.js', array('jquery'), 'v0.1.1', true );
+		wp_localize_script( 'cpt-script', 'ajax_post', array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'noposts' => __('No older posts found', 'qqLanding'),
+		) );
+	}
+	
+
 	//wp_enqueue_script( 'qqlanding-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'qqlanding-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -151,6 +161,26 @@ require get_template_directory() . '/inc/wp_menu_nav.php';
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Admin Functions.
+ */
+require get_template_directory() . '/inc/template-admin.php';
+
+/**
+ * Admin Functions.
+ */
+require get_template_directory() . '/inc/admin-template/template-enqueue.php';
+
+/**
+ * Admin Videos Functions.
+ */
+require get_template_directory() . '/inc/admin-template/videos.php';
+
+/**
+ * Admin Matches Functions.
+ */
+require get_template_directory() . '/inc/admin-template/matches.php';
 
 /**
  * Custom template tags for this theme.

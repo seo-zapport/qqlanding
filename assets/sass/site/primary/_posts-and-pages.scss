@@ -14,10 +14,44 @@
 			list-style-type: none;
 			margin:0;
 			padding:0;
+			&.sm-circle{
+				li{
+					margin-right: 5px;
+					a{
+						background-color: $color__white;
+						border-radius: 50%;
+						line-height: 24px;
+						width: 24px;
+						@include ease-in-out();
+						&:hover{
+							&[class*="icon-facebook"]{background-color: #4267b2;}
+							&[class*="twitter"]{background-color: #1da1f2;}
+							&[class*="instagram"]{background-color: #c32aa3;}
+							&[class*="linkedin"]{background-color: #007bb5;}
+							&[class*="youtube"]{background-color: #ff0000;}
+							&[class*="google-plus"]{background-color: #dd4b39;}
+							&[class*="pinterest"]{background-color: #bd081c;}
+							&[class*="rss"]{background-color: #FB6405;}
+							&[class*="flickr"]{background-color: #f40083;}
+							i{
+								color: $color__white !important;
+							}
+						}
+						i{
+							color: $color__22;
+						}
+					}
+				}
+				i{
+					&[class*='fa-']{
+						@include font-size(0.8);
+					}
+				}
+			}
 			li{
 				display: inline-block;
 				position: relative;
-				padding: 0em;
+				padding: 0.45em 0;
 				margin-bottom: 0em;
 				a{
 					display: block;
@@ -27,6 +61,7 @@
 					text-align: center;
 					width: 30px;
 					vertical-align: middle;
+					@include ease-in-out();
 					&:hover{
 						background-color:$color__white;
 						i{
@@ -72,6 +107,17 @@
 				}
 			}
 		}
+		.site-header{
+			&.qqlanding-overlay{
+				position: absolute;
+				top:0;
+				z-index: 1001;
+			}
+			.site-top-info, .navbar{
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		}
+
 	}
 	&.qqlayout-bare{
 		.site-header{

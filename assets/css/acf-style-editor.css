@@ -1,0 +1,84 @@
+
+/* ================================= */
+/* =========== Slider ============== */
+/* ================================= */ 
+	#banner .banner-static-content{
+		font-family: noto_sans_regular;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+	}
+
+						#banner-static{background: url('http://www.sandbox.awakentheme.com/wp-content/uploads/2011/07/100_5540-4.jpg');background-size:cover;background-position:left top; background-repeat:no-repeat;background-attachment: scroll;}						@media screen and (min-width: 1024px) {
+				.qqlanding-sites #banner-static{height: 650px;}
+			}
+			@media only screen and (min-width:768px) and (max-width:1024px){
+				.qqlanding-sites #banner-static{height: 420px;}
+			}
+			@media only screen and (min-width:320px) and (max-width:768px){
+				.qqlanding-sites #banner-static{height: 420px;}
+			}
+			
+			
+
+/* ================================= */
+/* =========== Content ============== */
+/* ================================= */ 
+
+
+.content-first{
+	background : #000000;
+	}
+	#Fcontent_a{ height:auto; }		
+.content-last{
+	background : #000000;
+	}
+		#Fcontent_b{ height:auto; } 		.qqlanding-sites.qqland-custom a{color: #ffffff;}
+	.qqlanding-sites.qqland-custom a:hover,.qqlanding-sites.qqland-custom a:focus,a:active{color: #b5b5b5;}
+	.qqlanding-sites.qqland-custom .widget .widget-title-container{border-bottom-color: #b5b5b5;}
+	.qqlanding-sites.qqland-custom .widget .widget-title{background-color: #b5b5b5;}
+
+	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-post .page-header,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper,.qqlanding-sites.qqland-custom .qqland-single-post .page-header,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper,.qqlanding-sites.qqland-custom.search-no-results .page-header{border-bottom-color: #b5b5b5;}
+
+	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-post .page-header .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .single-entry-title,.qqlanding-sites.qqland-custom .qqland-single-post .page-header .page-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .page-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .single-entry-title,.qqlanding-sites.qqland-custom.search-no-results .page-header .page-title{background-color: #b5b5b5; color: #ffffff;}
+
+	.qqlanding-sites.qqland-custom .qqland-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom .qqland-single-post .page-header .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .qqland-entry-wrapper .entry-title:hover, .qqlanding-sites.qqland-custom.search-no-results .page-header .entry-title:hover{background-color: #666666;}
+
+	.qqlanding-sites.qqland-custom .qqlanding-cat a,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a,.qqlanding-sites.qqland-custom .qqlanding-tag a,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a{
+		color:#7f7f7f;}
+
+	.qqlanding-sites.qqland-custom .qqlanding-cat a,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a,.qqlanding-sites.qqland-custom .qqlanding-tag a,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a{
+		background-color:#7f7f7f;}
+
+	.qqlanding-sites.qqland-custom .qqlanding-cat a:hover,.qqlanding-sites.qqland-custom .qqlanding-cat a:focus,.qqlanding-sites.qqland-custom .qqlanding-cat a:visited,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:hover,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:focus,.qqlanding-sites.qqland-custom .qqlanding-cat-lists a:visited,.qqlanding-sites.qqland-custom .qqlanding-tag a:hover,.qqlanding-sites.qqland-custom .qqlanding-tag a:focus,.qqlanding-sites.qqland-custom .qqlanding-tag a:visited,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:hover,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:focus,.qqlanding-sites.qqland-custom .qqlanding-tag-lists a:visited{
+		background-color:#7f7f7f;}
+
+	.qqlanding-sites.qqland-custom .search-form .search-submit,.qqlanding-sites.qqland-custom .paging-navigation li a{background-color:#e6e6e6;color:#eaeaea;}
+	.qqlanding-sites.qqland-custom .search-form .search-submit:hover,.qqlanding-sites.qqland-custom .paging-navigation li a:hover,.qqlanding-sites.qqland-custom .page-numbers .current{background-color:#cccccc;}
+	.qqlanding-sites.qqland-custom .search-form .search-submit:focus,.qqlanding-sites.qqland-custom .paging-navigation li a:focus{background-color:#aaaaaa;}
+			
+		.qqlanding-sites.qqland-custom .navbar{
+			background: #222222;
+		}
+		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link{
+			background-color: #b5b5b5;
+			color: #FFFFFF;
+		}
+		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link:hover,
+		.qqlanding-sites.qqland-custom #site-navigation .navbar-nav .nav-link:focus{
+			background-color: #7f7f7f;
+			color: #7b7b7b7;
+		}
+		.qqlanding-sites.qqland-custom #site-navigation .dropdown-menu{
+			background-color: #b5b5b5;
+		}
+
+	
+		#Fproviders{background-color: transparent !important;}
+		.provider-group[class*='-category']{border-color: #ffffff !important;}.provider-group .provider-item > i{ background: url('http://www.sandbox.awakentheme.com/wp-content/themes/qqlanding/assets/images/providers/ico_reco-g.png') no-repeat; }
+	
+
+/**
+ * Media Query
+ *-------------------------*/
+@media (min-width: 768px){}

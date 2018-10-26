@@ -1,0 +1,72 @@
+table.table, .table th, .table td {
+    border: 1px solid #e6e6e6;
+    margin: 0 0 1.5em;
+    width: 100%;
+}
+table.table {
+    border-collapse: collapse;
+    margin: 0 0 1.5em;
+    width: 100%;
+}
+table.table {
+    border-collapse: collapse;
+}
+.table td, .table th{
+	padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.post-type-qqlanding-matches label{
+    font-weight: 600;
+    display: inline-block;    
+}
+.post-type-qqlanding-matches input[type=text], .post-type-qqlanding-matches input[type=search],
+.post-type-qqlanding-matches input[type=radio],.post-type-qqlanding-matches input[type=tel],
+.post-type-qqlanding-matches input[type=time],.post-type-qqlanding-matches input[type=url],
+.post-type-qqlanding-matches input[type=week],.post-type-qqlanding-matches input[type=password],
+.post-type-qqlanding-matches input[type=checkbox],.post-type-qqlanding-matches input[type=color],
+.post-type-qqlanding-matches input[type=date],.post-type-qqlanding-matches input[type=datetime],
+.post-type-qqlanding-matches input[type=datetime-local],.post-type-qqlanding-matches input[type=email],
+.post-type-qqlanding-matches input[type=month],.post-type-qqlanding-matches input[type=number],
+select{
+    display: inline-block;
+    width: 100%;
+}
+.post-type-qqlanding-matches .desc{
+    font-style: italic;
+    margin-top: 5px;
+}
+.post-type-qqlanding-matches #poststuff .inside{
+    margin:0;
+    padding:0;
+}
+.post-type-qqlanding-matches .table{
+    border:0;
+    margin:0;
+}
+.post-type-qqlanding-matches .table th{
+    border-top: 0;
+}
+.post-type-qqlanding-matches .table th:first-child,
+.post-type-qqlanding-matches .table td:first-child{
+    border-left:0;
+}
+.post-type-qqlanding-matches .table th:last-child,
+.post-type-qqlanding-matches .table td:last-child{
+    border-right:0;
+}

@@ -70,145 +70,145 @@ echo $after_wrap; ?>
 				}
 			?>
 
+			<?php 
+			$match_args_a = array(
+				'post_type' 		=> 'qqlanding-matches',
+				'post_status'		=> 'post',
+				'posts_per_page'	=> 6,
+				'meta_key'			=>  '_type_matches_key',
+				'meta_value'		=>  'match_a',
+				'meta_compare' 		=> '=',
+			);
+			$match_args_b = array(
+				'post_type' 		=> 'qqlanding-matches',
+				'post_status'		=> 'post',
+				'posts_per_page'	=> 6,
+				'meta_key'			=>  '_type_matches_key',
+				'meta_value'		=>  'match_b',
+				'meta_compare' 		=> '=',
+			);
+			$match_a = new WP_Query($match_args_a);
+			$match_b = new WP_Query($match_args_b);?>
+			<div class="row mb-4">
+				<?php if ( $match_a->have_posts() ) : ?>
+					<div class="col-12 col-lg-6">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">Date</th>
+									<th scope="col">Home Team</th>
+									<th scope="col">Away Team</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php while($match_a->have_posts()) : $match_a->the_post(); ?>
+								<tr>
+									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_date_matches_key', true ) ); ?></td>
+									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_home_matches_key', true ) ); ?></td>
+									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_away_matches_key', true ) ); ?></td>
+								</tr>
+								<?php endwhile;
+				    			wp_reset_postdata(); ?>
+							</tbody>
+						</table>
+					</div>
+				<?php endif; //Match A end ?>
+				<?php if ($match_b->have_posts()) : ?>
+					<div class="col-12 col-lg-6">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">Date</th>
+									<th scope="col">Home Team</th>
+									<th scope="col">Away Team</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php while($match_b->have_posts()) : $match_b->the_post(); ?>
+								<tr>
+									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_date_matches_key', true ) ); ?></td>
+									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_home_matches_key', true ) ); ?></td>
+									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_away_matches_key', true ) ); ?></td>
+								</tr>
+								<?php endwhile;
+				    			wp_reset_postdata(); ?>
+							</tbody>
+						</table>
+					</div>
+				<?php endif; //Match B end ?>
+			</div>
 			<!-- Start of Embeded Videos -->
-			<div class="row aritcle-content-img mb-5">
+			<div class="row aritcle-content-img mb-5" id="appendItem">
 			<?php
-				if( have_rows('videos','option') ):
+
+				$args = array(
+					'post_type'			=> 'video',
+					'post_status'		=> 'post',
+					'posts_per_page'	=> 3,
+				);
+				$video = new WP_Query($args);
+
+				if ( $video->have_posts() ):
 					$counter = 0;
-					while ( have_rows('videos','option') ) : the_row();
+					while ( $video->have_posts() ) : $video->the_post();
 					$counter++;
 					endwhile;
 				endif;
-
 				//if ( $counter > 1 ):
 					// check if the repeater field has rows of data
-					if( have_rows('videos','option') ):
+					if ( $video->have_posts() ): $checker = 1;
 
 					 	// loop through the rows of data
-					    while ( have_rows('videos','option') ) : the_row();
-					    	if ( $counter > 1 && $counter < 3) {
-					    		$grid_class = 'col-md-6 col-xl-6';
-					    		$card_class = 'vgrid-2';
-					    	}else if ($counter >= 3) {
-					    		$grid_class = 'col-md-4 col-xl-4';
-					    		$card_class = 'vgrid-3';
-					    	}else{
-					    		$grid_class = '';
-					    		$card_class = 'vgrid-1';
-					    	}
+					    while ( $video->have_posts() ) : $video->the_post();
+					    	if ( $checker <= 6 ) :
+						    		# code...
+						    	if ( $counter > 1 && $counter < 3) {
+						    		$grid_class = 'col-md-6 col-xl-6';
+						    		$card_class = 'vgrid-2';
+						    	}else if ($counter >= 3) {
+						    		$grid_class = 'col-md-4 col-xl-4';
+						    		$card_class = 'vgrid-3';
+						    	}else{
+						    		$grid_class = '';
+						    		$card_class = 'vgrid-1';
+						    	}
 					    	?>
-						<div class="col-12 <?php /*echo ( $counter > 1 ) ? 'col-12 col-xl-4' : 'col-12 col-xl-12';*/ echo $grid_class; ?> mb-4">
-							<!-- <div class="row"> -->
-							<div class="vid-card <?php echo $card_class; ?>">
-								<?php 
-								$url = ( ! empty( get_sub_field('vid_url') ) ) ? esc_url( get_sub_field('vid_url') ) : esc_url( home_url('/') );
-								$thumb = ( ! empty( get_sub_field('video_thumb') ) ) ? esc_attr( get_sub_field('video_thumb') ) : get_template_directory_uri() . '/assets/images/default/featured.png';
-								$date = ( ! empty( get_sub_field('vid_pub_date') ) ) ? get_sub_field('vid_pub_date') : get_the_date('F j, Y'); ?>
-								<div class="vid-img-wrap">
-									<a href="<?php echo $url; ?>" rel="nofollow" target="_blank">
-										<span id="vid-oflow"><i class="far fa-play-circle fa-7x"></i></span>
-										<img src="<?php echo $thumb; ?>" class="img-fluid vid-img">
-									</a>
+								<div class="col-12 <?php /*echo ( $counter > 1 ) ? 'col-12 col-xl-4' : 'col-12 col-xl-12';*/ echo $grid_class; ?> mb-4">
+									<!-- <div class="row"> -->
+									<div class="vid-card <?php echo $card_class; ?>">
+										<div class="vid-img-wrap">
+											<a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank">
+												<span id="vid-oflow"><i class="far fa-play-circle fa-7x"></i></span>
+												<?php if ( has_post_thumbnail()) :
+													the_post_thumbnail( 'fp-featured', array('class' => 'img-fluid vid-img') );
+												else : ?>
+													<img src="<?php echo get_first_image(); ?>" class="img-fluid vid-img">
+												<?php endif; ?>
+											</a>
+										</div>
+										<div class="vid-body">
+											<h3 class="vid-title"><a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a></h3>
+											<?php //echo custom_field_excerpt(); ?>
+										</div>
+										<div class="vid-footer">
+											<i class="far fa-clock"></i><small class="muted"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></small>
+										</div>
+								
+									</div>
 								</div>
-								<div class="vid-body">
-									<h3 class="vid-title"><a href="<?php echo $url; ?>" rel="nofollow" target="_blank"><?php the_sub_field('video_title'); ?></a></h3>
-									<?php echo custom_field_excerpt(); ?>
-								</div>
-								<div class="vid-footer">
-									<i class="far fa-calendar"></i><small class="muted"><?php echo $date; ?></small>
-								</div>
-						
-							</div>
-						</div>
-
-					    <?php endwhile;
-
-					endif;
-				?>
-			</div><!-- End of Embeded Videos -->
-			<!-- Start of Matches with Modal -->
-		<?php if( get_theme_mod( 'qqlanding_video_page_display_settings' ) == 1 ): ?>
-
-			<!-- Large modal -->
-			<!-- <button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target=".bd-example-modal-lg">View Matches</button> -->
-			<img class="modal-btn" title="Kontes SEO QQLIGA TERBESAR SEASIA 2018" src="http://via.placeholder.com/75x100" alt="Kontes SEO QQLIGA TERBESAR SEASIA 2018" data-toggle="modal" data-target=".bd-example-modal-lg">
-
-			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-			  <div class="modal-dialog modal-lg">
-			    <div class="modal-content">
-
-				<?php endif; ?>
-
-			    	<!-- Table -->
-					<div class="col-12">
-
-						<?php if( get_theme_mod( 'qqlanding_video_page_display_settings' ) == 1 ): ?>
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
-						<?php endif; ?>
-
-						<h4 class="text-center mb-2">Next Matches</h4>
-						<p>Select Number of Rows</p>
-						<div class="form-group">
-							<select name="state" id="maxRows" class="form-control">
-								<option value="5000">Show all</option>
-								<option value="5">5</option>
-								<option value="10">10</option>
-								<option value="15">15</option>
-							</select>
-						</div>
-						<table id="mytable" class="table table-striped">
-						  <thead>
-						    <tr>
-						      <th class="col-2 h4" scope="col">Date</th>
-						      <th class="col-5 h4" scope="col">Home Team</th>
-						      <th class="col-5 h4" scope="col">Away Team</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-							<?php
-
-							// check if the repeater field has rows of data
-							if( have_rows('matches', 'option') ) : 
-
-							 	// loop through the rows of data
-							    while ( have_rows('matches', 'option') ) : the_row(); ?>
-							    	<tr>
-								    	<td class="col-2" ><?php the_sub_field('date'); ?></td> <!--// display a sub field value-->
-								    	<td class="col-5" ><?php the_sub_field('match_home'); ?></td> <!--// display a sub field value-->
-								    	<td style="width: 80%;" ><?php the_sub_field('match_away'); ?></td><!--// display a sub field value-->
-							    	</tr>
-
-							    	<!--echo $item_tb;-->
-
-							    <?php endwhile;
-
-							else :
-
-							    Echo "<h4>No matches yet!</h4>";
-
-							endif;
-
-							?>
-						  </tbody>
-						</table>
-						<div class="pagination-container">
-							<nav>
-								<ul class="pagination"></ul>
-							</nav>
-						</div>
+					    <?php
+						endif; //checker
+					    $checker++;
+					endwhile;
+   	 				wp_reset_postdata(); ?>
+					<div class="col-12 d-block text-center mb-5">
+						<button id="qqlandingLoadMoreVideo" class="btn btn-lg btn-primary">Please Load new Things here</button>
 					</div>
-					<!-- End of Table -->
-				<?php if( get_theme_mod( 'qqlanding_video_page_display_settings' ) == 1 ): ?>
-			    </div>
-			  </div>
-			</div>
-		<?php endif; ?><!-- End of Matches with Modal -->
+				<?php endif; ?>
+			</div><!-- End of Embeded Videos -->
+			<!-- <div id="appendItem"></div> -->
 
-
+			<!-- Start of Matches with Modal -->
 		<?php if ( ! is_front_page() && get_edit_post_link() ) : ?>
 			<footer class="entry-footer">
 				<?php

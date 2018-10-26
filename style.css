@@ -863,8 +863,22 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites { font-family: 'noto_sans_regular'; font-size: 14px; font-size: 0.875rem; line-height: 1.5; /* Normal Post */ /* Archive */ /** Page: 404 */ }
 .qqlanding-sites .site-top-info { border-bottom: 1px solid transparent; padding: 0px 10px; line-height: 1.5; position: relative; }
 .qqlanding-sites .site-top-info #social_media, .qqlanding-sites .site-top-info ul#social_media { list-style-type: none; margin: 0; padding: 0; }
-.qqlanding-sites .site-top-info #social_media li, .qqlanding-sites .site-top-info ul#social_media li { display: inline-block; position: relative; padding: 0em; margin-bottom: 0em; }
-.qqlanding-sites .site-top-info #social_media li a, .qqlanding-sites .site-top-info ul#social_media li a { display: block; line-height: 30px; padding-right: 3px; padding-left: 3px; text-align: center; width: 30px; vertical-align: middle; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li, .qqlanding-sites .site-top-info ul#social_media.sm-circle li { margin-right: 5px; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a, .qqlanding-sites .site-top-info ul#social_media.sm-circle li a { background-color: #fff; border-radius: 50%; line-height: 24px; width: 24px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="icon-facebook"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="icon-facebook"] { background-color: #4267b2; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="twitter"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="twitter"] { background-color: #1da1f2; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="instagram"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="instagram"] { background-color: #c32aa3; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="linkedin"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="linkedin"] { background-color: #007bb5; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="youtube"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="youtube"] { background-color: #ff0000; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="google-plus"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="google-plus"] { background-color: #dd4b39; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="pinterest"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="pinterest"] { background-color: #bd081c; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="rss"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="rss"] { background-color: #FB6405; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="flickr"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="flickr"] { background-color: #f40083; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover i, .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover i { color: #fff !important; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a i, .qqlanding-sites .site-top-info ul#social_media.sm-circle li a i { color: #222222; }
+.qqlanding-sites .site-top-info #social_media.sm-circle i[class*='fa-'], .qqlanding-sites .site-top-info ul#social_media.sm-circle i[class*='fa-'] { font-size: 12.8px; font-size: 0.8rem; }
+.qqlanding-sites .site-top-info #social_media li, .qqlanding-sites .site-top-info ul#social_media li { display: inline-block; position: relative; padding: 0.45em 0; margin-bottom: 0em; }
+.qqlanding-sites .site-top-info #social_media li a, .qqlanding-sites .site-top-info ul#social_media li a { display: block; line-height: 30px; padding-right: 3px; padding-left: 3px; text-align: center; width: 30px; vertical-align: middle; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 .qqlanding-sites .site-top-info #social_media li a:hover, .qqlanding-sites .site-top-info ul#social_media li a:hover { background-color: #fff; }
 .qqlanding-sites .site-top-info #social_media li a:hover i[class*="facebook"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="facebook"] { color: #4267b2; }
 .qqlanding-sites .site-top-info #social_media li a:hover i[class*="twitter"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="twitter"] { color: #1da1f2; }
@@ -882,6 +896,8 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites.qqlayout-default .site-header { margin-bottom: 0; }
 .qqlanding-sites.qqlayout-overlay.qqland-affix .site-header.qqlanding-overlay { height: 140px; }
 .qqlanding-sites.qqlayout-overlay.qqland-affix .site-header.qqlanding-overlay .navbar { position: fixed; width: 100%; z-index: 1050; }
+.qqlanding-sites.qqlayout-overlay .site-header.qqlanding-overlay { position: absolute; top: 0; z-index: 1001; }
+.qqlanding-sites.qqlayout-overlay .site-header .site-top-info, .qqlanding-sites.qqlayout-overlay .site-header .navbar { background-color: rgba(0, 0, 0, 0.4); }
 .qqlanding-sites.qqlayout-bare .site-header { margin-bottom: 0; }
 .qqlanding-sites.qqlayout-bare #site-navigation .site-branding { padding: 0; }
 .qqlanding-sites.qqlayout-bare #site-navigation .site-title, .qqlanding-sites.qqlayout-bare #site-navigation .site-description { line-height: 1.2; margin: 0; }

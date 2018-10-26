@@ -6,36 +6,107 @@
  */
 if ( ! defined('ABSPATH')) exit;
 
+
+/**
+ * Load More Videos
+ */
+function more_post_ajax(){
+
+	//global $post;
+
+    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
+    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+    $off = (isset($_POST['off'])) ? $_POST['off'] : 3;
+    header("Content-Type: text/html");
+    $args = array(
+    	'post_type' 		=> 'qqlanding-video',
+    	'post_status'		=> 'post',
+    	'posts_per_page'	=> $ppp,
+    	'offset'    		=> $off,
+    	'paged'				=> $page
+    );
+    $new_args = new WP_Query($args);
+    $out = '';
+    echo $off;
+    if ( $new_args->have_posts() ) : $counter = 1;
+    	while( $new_args->have_posts() ): $new_args->the_post();
+    		//echo $post->ID;
+	    	if ( $counter > 1 && $counter < 3) {
+	    		$grid_class = 'col-md-6 col-xl-6';
+	    		$card_class = 'vgrid-2';
+	    	}else if ($counter >= 3) {
+	    		$grid_class = 'col-md-4 col-xl-4';
+	    		$card_class = 'vgrid-3';
+	    	}else{
+	    		$grid_class = '';
+	    		$card_class = 'vgrid-1';
+	    	} ?>
+	    	<div class="col-12 col-md-4 col-xl-4 mb-4">
+	    		<div class="vid-card vgrid-3">
+					<div class="vid-img-wrap">
+						<a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank">
+							<span id="vid-oflow"><i class="far fa-play-circle fa-7x"></i></span>
+							<?php if ( has_post_thumbnail()) :
+								the_post_thumbnail( 'fp-featured', array('class' => 'img-fluid vid-img') );
+							else : ?>
+								<img src="<?php echo get_first_image(); ?>" class="img-fluid vid-img">
+							<?php endif; ?>
+						</a>
+					</div>
+					<div class="vid-body">
+						<h3 class="vid-title"><a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a></h3>
+					</div>
+					<div class="vid-footer">
+						<i class="far fa-clock"></i><small class="muted"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></small>
+					</div>
+	    		</div>
+	    	</div>
+    	<?php endwhile;
+    	wp_reset_postdata();
+    else:
+    	$out .= 'uala na ';
+    endif;
+    //echo $out;
+    die($out);
+}
+add_action( 'wp_ajax_nopriv_more_post_ajax','more_post_ajax' );
+add_action( 'wp_ajax_more_post_ajax','more_post_ajax' );
+
+
 if (! function_exists( 'qqlanding_social_media' ) ) {
 	function qqlanding_social_media(){
-		if ( get_theme_mod( 'qqlanding_display_smedia_icon', false ) == true ) : ?>
-				<ul id="social_media" class="float-md-right" itemscope itemtype='http://schema.org/SiteNavigationElement'>
+		if ( get_theme_mod( 'qqlanding_display_smedia_icon', false ) == true ) : 
+			if ( get_field( 'sm_icon_shape', 'option' ) === 'circle' ) : $sm_shape = 'sm-circle'; 
+			elseif ( get_field( 'sm_icon_shape', 'option' ) === 'square' ) : $sm_shape = 'sm-square';
+			else: $sm_shape = 'sm-no-shape'; endif;
+			?>
+				<ul id="social_media" class="float-md-right <?php echo $sm_shape; ?>" itemscope itemtype='http://schema.org/SiteNavigationElement'>
 					<?php if ( get_theme_mod( 'facebook_url', '' ) ) : ?>
-						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'facebook_url', '' ) ) ?>" target="_blank" itemprop="url"><i class=" fab fa-facebook-square"></i></a></li> <!--facebook-->
+						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'facebook_url', '' ) ) ?>" target="_blank" itemprop="url" class="sm-icon-facebook"><i class=" fab fa-<?php echo ( get_field( 'sm_icon_shape', 'option' ) === 'square' ) ? 'facebook-square' : 'facebook-f'; ?>"></i></a></li> <!--facebook-->
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'twitter_url', '' ) ) : ?>
-						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'twitter_url', '' ) ) ?>" target="_blank" itemprop="url"><i class="fab fa-twitter-square"></i></a></li> <!--twitter-->
+						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'twitter_url', '' ) ) ?>" target="_blank" itemprop="url" class="sm-icon-twitter"><i class="fab fa-<?php echo ( get_field( 'sm_icon_shape', 'option' ) === 'square' ) ? 'twitter-square' : 'twitter'; ?>"></i></a></li> <!--twitter-->
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'instagram_url', '' ) ) : ?>
-						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'instagram_url', '' ) ) ?>" target="_blank" itemprop="url"><i class="fab fa-instagram"></i></a></li> <!--instagram-->
+						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'instagram_url', '' ) ) ?>" target="_blank" itemprop="url" class="sm-icon-instagram"><i class="fab fa-instagram"></i></a></li> <!--instagram-->
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'linkedin_url', '' ) ) : ?>
-						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'linkedin_url', '' ) ) ?>" target="_blank" itemprop="url"><i class="fab fa-linkedin"></i></a></li> <!--linkedin-->
+						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'linkedin_url', '' ) ) ?>" target="_blank" itemprop="url" class="sm-icon-linkedin"><i class="fab fa-<?php echo ( get_field( 'sm_icon_shape', 'option' ) === 'square' ) ? 'linkedin' : 'linkedin-in'; ?>"></i></a></li> <!--linkedin-->
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'youtube_url', '' ) ) : ?>
-						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'youtube_url', '' ) ) ?>" target="_blank" itemprop="url"><i class="fab fa-youtube-square"></i></a></li> <!--youtube-->
+						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'youtube_url', '' ) ) ?>" target="_blank" itemprop="url" class="sm-icon-youtube"><i class="fab fa-<?php echo ( get_field( 'sm_icon_shape', 'option' ) === 'square' ) ? 'youtube-square' : 'youtube'; ?>"></i></a></li> <!--youtube-->
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'googleplus_url', '' ) ) : ?>
-						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'googleplus_url', '' ) ) ?>" target="_blank" itemprop="url"><i class="fab fa-google-plus-square"></i></a></li> <!--googleplus-->
+						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'googleplus_url', '' ) ) ?>" target="_blank" itemprop="url" class="sm-icon-google-plus"><i class="fab fa-<?php echo ( get_field( 'sm_icon_shape', 'option' ) === 'square' ) ? 'google-plus-square' : 'google-plus-g'; ?>"></i></a></li> <!--googleplus-->
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'pinterest_url', '' ) ) : ?>
-						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'pinterest_url', '' ) ) ?>" target="_blank" itemprop="url"><i class="fab fa-pinterest-square"></i></a></li> <!--pinterest-->
+						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'pinterest_url', '' ) ) ?>" target="_blank" itemprop="url" class="sm-icon-pinterest"><i class="fab fa-<?php echo ( get_field( 'sm_icon_shape', 'option' ) === 'square' ) ? 'pinterest-square' : 'pinterest-p'; ?>"></i></a></li> <!--pinterest-->
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'rss_url', '' ) ) : ?>
-						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'rss_url', '' ) ) ?>" target="_blank" itemprop="url"><i class="fas fa-rss-square"></i></a></li> <!--rss-->
+						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'rss_url', '' ) ) ?>" target="_blank" itemprop="url" class="sm-icon-rss"><i class="fas fa-<?php echo ( get_field( 'sm_icon_shape', 'option' ) === 'square' ) ? 'rss-square' : 'rss'; ?>"></i></a></li> <!--rss-->
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'flickr_url', '' ) ) : ?>
-						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'flickr_url', '' ) ) ?>" target="_blank" itemprop="url"><i class="fab fa-flickr"></i></a></li> <!--flickr-->
+						<li itemprop="name"><a href="<?php echo esc_url ( get_theme_mod( 'flickr_url', '' ) ) ?>" target="_blank" itemprop="url" class="sm-icon-flickr"><i class="fab fa-flickr"></i></a></li> <!--flickr-->
 					<?php endif; ?>
 				</ul>
 				<span class="clearfix"></span>
@@ -136,13 +207,15 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 
 					$html_output .= sprintf('<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><a href="%1$s" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">%2$s</span></a>',$post_type_archive, $custom_tax_name);
 
-				elseif( is_single() && !is_attachment() ):
-					
-					if ( $post_type != 'post' ) {
+				elseif( is_single() && ! is_attachment() ):
+					if( $post_type === 'video' ){
+						$html_output .= '<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><span itemprop="' . $schema_name . '">' . get_the_title() . '</span></li>';
+					}
+					else if ( $post_type != 'post' ) {
 						$post_type_object = get_post_type_object($post_type);
-						$post_type_archive = get_post_type_archive_link($post_type->name);
-
-						$html_output .= sprintf('<li class="' . $breadcrumb__item_class . '" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><a href="%1$s" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">%2$s</span></a>',$post_type_archive , $post_type_object->labels->singular_name );	
+						$post_type_archive = get_post_type_archive_link($post_type);
+						
+						$html_output .= sprintf('<li class="' . $breadcrumb__item_class . '" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><a href="%1$s" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">%2$s</span></a>', $post_type_archive , $post_type_object->labels->singular_name);
 					}else{
 						$category = get_the_category(); // Get post category info
 						if ( !empty( $category ) ) {

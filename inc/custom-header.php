@@ -94,6 +94,7 @@ function qqlanding_header_set(){
 
 	$template = get_field( 'header_template', 'option' );
 	$alignment = get_field( 'header_nav_alignment', 'option' );
+	$enabled = ( get_field( 'header_nav_en', 'option' ) == true) ? 'd-block' : 'd-none';
 
 	$menu_class = ( $template == 'bare' || $template == 'overlay' ) ? 'navbar-nav justify-content-end' : 'navbar-nav';
 
@@ -109,7 +110,7 @@ function qqlanding_header_set(){
 		</div><!-- .site-branding -->
 	<?php endif; ?>
 
-	<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light py-md-0" data-toggle="affix" itemscope itemtype='http://schema.org/SiteNavigationElement'>
+	<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light py-md-0 <?php echo $enabled; ?>" data-toggle="affix" itemscope itemtype='http://schema.org/SiteNavigationElement'>
 		<?php if( $template == 'bare' || $template == 'overlay' ) : ?>
 			<div class="container">
 		<?php endif;?>

@@ -35,7 +35,8 @@ if ( ! defined('ABSPATH')) exit; ?>
 	<?php endif;?> <!--if wide/box only-->
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'qqlanding' ); ?></a>
 	<header id="masthead" class="site-header <?php echo $nav_class; ?>" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-		<?php if ( get_field( 'header_top_menu', 'option' ) === true): ?>
+		<?php if ( get_field( 'sm_header', 'option' ) === true): ?>
+		<?php //if ( get_field( 'header_top_menu', 'option' ) === true): ?>
 			<div class="site-top-info">
 				<div class="container">
 					<?php qqlanding_social_media(); ?>
