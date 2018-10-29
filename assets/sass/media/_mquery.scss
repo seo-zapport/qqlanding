@@ -32,6 +32,12 @@
 				}
 			}
 		}
+		#banner{
+			#video_wrap{
+				height: 450px;
+				margin-top: 54px;
+			}
+		}
 	}
 }
 @media (min-width: 768px){
@@ -119,8 +125,10 @@
 @media (max-width: 768px){
 	.provider-item{float:none;display:inline-block;margin-right:15px;margin-bottom: 10px;}
 	.desk{display:none;}
-	#banner-static{
-		height: 100%;
+	#banner{
+		#banner-static{
+			height: 100%;
+		}
 	}
 }
 @media (max-width: 640px){

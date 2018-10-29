@@ -6,6 +6,7 @@ $disable = get_field('slider_enable_section', 'options');
 $layout = get_field( 'th_color_scheme', 'option' );
 $slider_layout = get_field('slider_layout', 'options');
 $slider_app = get_field('slider_appearance_group', 'options');
+$skew_opt = get_field('slider_skew', 'options');
 if ( acf_selective_refresh($disable) ) return $disable = false;
 if ($disable) : ?>
 <section id="banner">
@@ -17,6 +18,8 @@ if ($disable) : ?>
 				$hide_mob = content_img_hide(get_sub_field('slide_hide_image', 'option'));
 				$con_settings = get_sub_field('content_settings', 'option');
 				$text_align = $con_settings['slider_text_align'];
+				$format = get_sub_field('content_format_type', 'option');
+				$video = get_sub_field('content_slider_video', 'option');
 				switch ($text_align) {
 					case 'center': $txt_class = 'center';break;
 					case 'right': $txt_class = 'right';break;
@@ -26,7 +29,7 @@ if ($disable) : ?>
 					<div class="slider-filters"></div>
 				<?php endif; ?>
 
-				<div id="banner-static">
+				<div id="banner-static" <?php echo ( $skew_opt !== true )? '' : 'class="banner-skew"'; ?>>
 					<div class="banner-static-content container text-<?php echo $txt_class; ?>">
 						<?php if ( $con_settings['slider_content_size'] == 'full' ): ?>
 							<div class="col-12 col-md-12 col-lg-12 text-white">
@@ -49,15 +52,19 @@ if ($disable) : ?>
 										endwhile;
 									endif;
 								?>
-							</div>
+							</div> <!--Full-width-->
 						<?php else: ?>
 							<div class="row d-flex">
 								<?php $slider_post = $con_settings['slider_content_position']; ?>
 								<?php if ( $slider_post == 'left' ): ?>
 									<div class="<?php echo $hide_mob; ?> col-12 col-lg-6 text-white align-self-center">
-										<?php echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider'); ?>
+										<?php if ( $format == 'image' ): ?>
+											<?php echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider'); ?>
+										<?php else: ?>
+											Video Here left
+										<?php endif ?>
 									</div>
-								<?php endif;?>
+								<?php endif; //left?>
 								<div class="col-12 col-lg-6 text-white align-self-center">
 									<?php
 										//echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
@@ -80,9 +87,14 @@ if ($disable) : ?>
 								</div>
 								<?php if ( $slider_post == 'right' ): ?>
 									<div class="<?php echo $hide_mob; ?> col-12 col-lg-6 text-white align-self-center">
-										<?php echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider'); ?>
+										<?php if ( $format == 'image' ): 
+											echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
+										else:
+											//var_dump($video);
+											echo fpv_video_settings($video, 'video');
+										endif ?>
 									</div>
-								<?php endif;?>
+								<?php endif; //rigth?>
 							</div>
 						<?php endif; ?>
 					</div>

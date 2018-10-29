@@ -18,21 +18,6 @@ if(have_rows('rwd_settings', 'option')) :
 	endwhile;
 endif;
 
-//Fonts Settings
-if(have_rows('slider_fonts', 'option')) :
-	while(have_rows('slider_fonts', 'option')) : the_row();
-		$slidefontfam = '';
-		$sliderfontsize = '';
-		$sliderfontstyle = '';
-		$sliderfontweight = '';
-
-		$slidefontfam =  ( ! empty( get_sub_field('slider_font_family', 'option') ) ) ? qqlanding_fontfam(get_sub_field('slider_font_family', 'option')) : '' ;
-		$sliderfontsize =  ( ! empty( get_sub_field('slider_font_size', 'option') ) ) ? get_sub_field('slider_font_size', 'option') : '' ;
-		$sliderfontstyle =  ( ! empty( get_sub_field('slider_font_style', 'option') ) ) ? get_sub_field('slider_font_style', 'option') : '' ;
-		$sliderfontweight =  ( ! empty( get_sub_field('slider_font_weight', 'option') ) ) ? get_sub_field('slider_font_weight', 'option') : '' ;
-	endwhile;
-endif;
-
 $filter = get_field( 'filter_fields', 'option' ); /*--filters*/
 $filter_a = get_field( 'filter_fields_a', 'option' ); /*--filters*/
 ?>
@@ -40,12 +25,46 @@ $filter_a = get_field( 'filter_fields_a', 'option' ); /*--filters*/
 /* ================================= */
 /* =========== Slider ============== */
 /* ================================= */ 
-<?php if(have_rows('slider_fonts', 'option')) : ?>
+<?php 
+//Fonts Settings title
+$slider_fonts_title = get_field('slider_fonts_title', 'option');
+$slider_fonts_content = get_field('slider_fonts_content', 'option');
+$slider_padding = get_field('slider_padding', 'option');
+$slider_margin = get_field('slider_margin', 'option');
+
+/*Padding*/
+$pad_slider_top = ( ! empty( $slider_padding['slider_padding_top'] ) ) ? $slider_padding['slider_padding_top'] . 'px' : '0px';
+$pad_slider_left = ( ! empty( $slider_padding['slider_padding_left'] ) ) ? $slider_padding['slider_padding_left'] . 'px' : '0px';
+$pad_slider_bottom = ( ! empty( $slider_padding['slider_padding_bottom'] ) ) ? $slider_padding['slider_padding_bottom'] . 'px' : '0px';
+$pad_slider_right = ( ! empty( $slider_padding['slider_padding_right'] ) ) ? $slider_padding['slider_padding_right'] . 'px' : '0px';
+
+/*Margin*/
+$margin_slider_top = ( ! empty( $slider_margin['slider_margin_top'] ) ) ? $slider_margin['slider_margin_top'] . 'px' : '0px';
+$margin_slider_left = ( ! empty( $slider_margin['slider_margin_left'] ) ) ? $slider_margin['slider_margin_left'] . 'px' : '0px';
+$margin_slider_bottom = ( ! empty( $slider_margin['slider_margin_bottom'] ) ) ? $slider_margin['slider_margin_bottom'] . 'px' : '0px';
+$margin_slider_right = ( ! empty( $slider_margin['slider_margin_right'] ) ) ? $slider_margin['slider_margin_right'] . 'px' : '0px';
+
+if($slider_fonts_title) : ?>
+	#banner .post-entry-title{
+		color: <?php echo $slider_fonts_title['slider_font_color']; ?>;
+		font-family: <?php echo ( ! empty($slider_fonts_title['slider_font_family']) ) ? qqlanding_fontfam($slider_fonts_title['slider_font_family']) : ''; ?>;
+		font-size: <?php echo ( ! empty($slider_fonts_title['slider_font_size']) ) ? $slider_fonts_title['slider_font_size'] : ''; ?>px;
+		font-style: <?php echo ( ! empty($slider_fonts_title['slider_font_style']) ) ? $slider_fonts_title['slider_font_style'] : ''; ?>;
+		font-weight: <?php echo ( ! empty($slider_fonts_title['slider_font_weight']) ) ? $slider_fonts_title['slider_font_weight'] : ''; ?>;
+		padding: <?php echo $pad_slider_top . ' ' . $pad_slider_left . ' ' . $pad_slider_bottom . ' ' . $pad_slider_right; ?>;
+		margin: <?php echo $margin_slider_top . ' ' . $margin_slider_left . ' ' . $margin_slider_bottom . ' ' . $margin_slider_right; ?>;
+	}
+<?php endif;
+
+if($slider_fonts_content) : ?>
 	#banner .banner-static-content{
-		font-family: <?php echo $slidefontfam; ?>;
-		font-size: <?php echo $sliderfontsize; ?>px;
-		font-style: <?php echo $sliderfontstyle; ?>;
-		font-weight: <?php echo $sliderfontweight; ?>;
+		font-family: <?php echo ( ! empty($slider_fonts_content['slider_font_family']) ) ? qqlanding_fontfam($slider_fonts_content['slider_font_family']) : ''; ?>;
+		font-size: <?php echo ( ! empty($slider_fonts_content['slider_font_size']) ) ? $slider_fonts_content['slider_font_size'] : ''; ?>px;
+		font-style: <?php echo ( ! empty($slider_fonts_content['slider_font_style']) ) ? $slider_fonts_content['slider_font_style'] : ''; ?>;
+		font-weight: <?php echo ( ! empty($slider_fonts_content['slider_font_weight']) ) ? $slider_fonts_content['slider_font_weight'] : ''; ?>;
+	}
+	#banner .banner-static-content .entry-content{
+		color: <?php echo $slider_fonts_content['slider_font_color']; ?>;
 	}
 <?php endif; ?>
 

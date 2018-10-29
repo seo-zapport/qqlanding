@@ -767,15 +767,21 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites.qqland-qq828 .card-overlay .card-o-btm, .qqlanding-sites.qqland-qq828 .slider-item .card-o-btm { background-color: rgba(236, 72, 1, 0.78); }
 .qqlanding-sites.qqland-front .sec-entry-title { font-size: 25.024px; font-size: 1.564rem; margin-bottom: 45px; }
 .qqlanding-sites.qqland-front #banner { margin-bottom: 0em; }
-.qqlanding-sites #banner { margin-bottom: 2em; max-height: 100%; overflow: hidden; position: relative; width: 100%; }
+.qqlanding-sites #banner { margin-bottom: 2em; max-height: 100%; overflow: hidden; position: relative; width: 100%; /*Video*/ /*Skew Transitions*/ }
 .qqlanding-sites #banner #banner-static { width: 100%; }
-.qqlanding-sites #banner #banner-static:after { content: ''; display: block; height: 100%; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; z-index: -1; }
-.qqlanding-sites #banner .banner-static-content { padding-top: 2.5em; padding-bottom: 2.5em; }
+.qqlanding-sites #banner #banner-static:after { content: ''; display: block; position: absolute; left: 0; bottom: 0; height: 100%; width: 100%; }
+.qqlanding-sites #banner .banner-static-content { height: 100%; padding-top: 2.5em; padding-bottom: 2.5em; text-shadow: 1px 3px 1px #313131; }
 .qqlanding-sites #banner .slider-filters { position: absolute; top: 0; bottom: 0; width: 100%; z-index: -1; }
 .qqlanding-sites #banner #banner-slider .carousel-caption { position: static; bottom: 0; left: 0; }
 .qqlanding-sites #banner #banner-slider [class*='slider-views-'].slider-filter:after { content: ''; display: block; position: absolute; top: 0; bottom: 0; width: 100%; z-index: -1; }
 .qqlanding-sites #banner #banner-no-item { position: relative; }
 .qqlanding-sites #banner #banner-no-item .slider-img-overlay { position: absolute; right: 0; bottom: 0; left: 0; padding: 1.25rem; }
+.qqlanding-sites #banner #video_wrap { overflow: hidden; width: 100%; }
+.qqlanding-sites #banner #video_wrap video { height: 100%; object-fit: cover; width: 100%; }
+.qqlanding-sites #banner .banner-skew { position: relative; }
+.qqlanding-sites #banner .banner-skew:before, .qqlanding-sites #banner .banner-skew:after { content: ''; display: block; height: 0 !important; position: absolute; border-bottom: 140px solid #fff; width: 0 !important; z-index: 1; }
+.qqlanding-sites #banner .banner-skew:after { border-right: 68em solid transparent; bottom: 0; left: 0; }
+.qqlanding-sites #banner .banner-skew:before { border-left: 68em solid transparent; bottom: 0; right: 0; }
 .qqlanding-sites .sectionsNoItem { box-shadow: inset 0 0px 2px 0px rgba(0, 0, 0, 0.15); min-height: 250px; }
 .qqlanding-sites .sectionsNoItem .sectionsItem { line-height: 125px; }
 .qqlanding-sites #Fcontent_a, .qqlanding-sites #Fcontent_b { position: relative; overflow: hidden; box-shadow: inset 0 0px 2px 0px rgba(0, 0, 0, 0.15); }
@@ -1092,7 +1098,8 @@ embed, iframe, object { max-width: 100%; }
 @media (min-width: 1200px) { .qqlanding-sites .container { max-width: 1240px; }
   .qqlanding-sites.qqlayout-default #site-navigation #primary-menu { max-width: 1240px; margin: 0 auto; } }
 @media (min-width: 960px) { .qqlanding-sites #site-navigation #primary-menu { max-width: 960px; margin: 0 auto; }
-  .qqlanding-sites .site-footer #footer-menu-wrap .footer-menu > li { display: inline-block; margin-bottom: 0.3em; padding-left: 0.7em; } }
+  .qqlanding-sites .site-footer #footer-menu-wrap .footer-menu > li { display: inline-block; margin-bottom: 0.3em; padding-left: 0.7em; }
+  .qqlanding-sites #banner #video_wrap { height: 450px; margin-top: 54px; } }
 @media (min-width: 768px) { .full-wh, .full-wrap { height: 520px; }
   .provider-group { margin-right: 10px; }
   .provider-group:last-child { margin-right: inherit; }
@@ -1112,7 +1119,7 @@ embed, iframe, object { max-width: 100%; }
   .qqlanding-sites #site-navigation.navbar-light .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); } }
 @media (max-width: 768px) { .provider-item { float: none; display: inline-block; margin-right: 15px; margin-bottom: 10px; }
   .desk { display: none; }
-  #banner-static { height: 100%; } }
+  #banner #banner-static { height: 100%; } }
 @media (max-width: 640px) { .provider-group .provider-wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; }
   .provider-group[class*='-banks'] .provider-wrap { justify-content: inherit; } }
 @media only screen and (min-width: 996px) and (max-width: 1198px) { .provider-group { max-width: 100% !important; margin-right: 5px; }
