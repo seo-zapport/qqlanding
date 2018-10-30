@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package QQLanding
+ * @package qqlanding
  */
 if ( ! defined('ABSPATH')) exit; ?>
 <!doctype html>
@@ -46,9 +46,10 @@ if ( ! defined('ABSPATH')) exit; ?>
 		<?php qqlanding_header_set(); ?>
 	</header><!-- #masthead -->
 	<?php if ( is_front_page() && ! is_home() ) qqlanding_load_section('slider'); ?>
-	<div id="content" class="site-content <?php echo ( ! is_page_template( 'template-page.php' ) ) ? 'container' : ''; ?>">
+	<div id="content" class="site-content <?php echo ( ! is_page_template( 'template-page.php' ) && ! is_page_template( 'template-videos.php' ) ) ? 'container' : ''; ?>">
+		
 		<?php 
 			qqlanding_breadcrumb_list(); //breadcrumbs
-			if ( ! is_page_template( 'template-page.php' ) || is_home() ): ?>
+			if ( ! is_page_template( 'template-page.php' ) && ! is_page_template( 'template-videos.php' ) || is_home() ): ?>
 			<div class="row">
 		<?php endif; ?>

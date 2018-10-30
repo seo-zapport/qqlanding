@@ -439,7 +439,73 @@ if ( have_rows( 'fb_layout_settings' ,'option' ) ) :
 	endwhile;//end of fb_layout_settings
 endif;//end of fb_layout_settings
 
-?>
+
+//if ( is_page_template( 'template-videos.php' ) ) :
+	/**
+	 * #Videos Content Editor
+	 *----------------------------*/
+	$positions = get_field( 'vm_position_property' );
+	$img_post = get_field( 'vm_img_position' );
+
+	if ( have_rows( 'vm_editor_settings', 'option') ) :
+		while ( have_rows( 'vm_editor_settings', 'option') ) : the_row();
+
+			$bg_attr = get_sub_field('vm_bg_attr');
+			$repeat = get_sub_field('vm_repeat_bg_img');
+			$scroll = get_sub_field('vm_scroll_with_page');
+			$screen = get_sub_field('vm_presets');
+			$position = get_sub_field('vm_image_position');
+			$image_size = get_sub_field('vm_image_size');
+			$image = get_sub_field('vm_image');
+
+
+			$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size); ?>
+			#videoContent{<?php if ( $bg_attr == 'bg-color' ): ?>background-color: <?php echo get_sub_field('vm_color'); ?>;<?php else: ?>background-image: url(<?php echo $image; ?>);<?php echo $bg_attr; ?><?php endif; ?>}
+		<?php endwhile;
+	endif;
+	
+	if ( have_rows( 'vm_match_settings', 'option') ) :
+		while ( have_rows( 'vm_match_settings', 'option') ) : the_row();
+
+			$bg_attr = get_sub_field('vm_bg_attr');
+			$repeat = get_sub_field('vm_repeat_bg_img');
+			$scroll = get_sub_field('vm_scroll_with_page');
+			$screen = get_sub_field('vm_presets');
+			$position = get_sub_field('vm_image_position');
+			$image_size = get_sub_field('vm_image_size');
+			$image = get_sub_field('vm_image');
+			
+			$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size); ?>
+			#matchWrap{<?php if ( $bg_attr == 'bg-color' ): ?>background-color: <?php echo get_sub_field('vm_color'); ?>;<?php else: ?>background-image: url(<?php echo $image; ?>);<?php echo $bg_attr; ?><?php endif; ?>}
+		<?php endwhile;
+	endif;
+
+	if ( have_rows( 'vm_video_settings', 'option') ) :
+		while ( have_rows( 'vm_video_settings', 'option') ) : the_row();
+
+			$bg_attr = get_sub_field('vm_bg_attr');
+			$repeat = get_sub_field('vm_repeat_bg_img');
+			$scroll = get_sub_field('vm_scroll_with_page');
+			$screen = get_sub_field('vm_presets');
+			$position = get_sub_field('vm_image_position');
+			$image_size = get_sub_field('vm_image_size');
+			$image = get_sub_field('vm_image');
+
+
+			$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size); ?>
+			#videoWrap{<?php if ( $bg_attr == 'bg-color' ): ?>background-color: <?php echo get_sub_field('vm_color'); ?>;<?php else: ?>background-image: url(<?php echo $image; ?>);<?php echo $bg_attr; ?><?php endif; ?>}
+		<?php endwhile;
+	endif;
+
+	if ( $positions === true ) :
+		if ( ! empty($img_post) ) : ?>
+			#videoContent .cont-videos-image img{
+				<?php echo content_img_postion($positions,$img_post['vm_position_top'],$img_post['vm_position_right'],$img_post['vm_position_left'],$img_post['vm_position_buttom']); ?>
+			}
+		<?php endif; ?>
+	<?php endif; ?>
+
+<?php //endif; //end page template ?>
 
 
 /**

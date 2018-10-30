@@ -7,45 +7,37 @@
  *
  * @package QQLanding
  */
-if ( ! defined('ABSPATH')) exit;
-
 get_header();
-if ( ! is_front_page() ) 
-	$page_sidebar_layout = qqlanding_grid_sets( 'right','video');
-
-	if ( get_theme_mod( 'qqlanding_page_sidebar_layout', 'both' ) == 'left' || get_theme_mod( 'qqlanding_page_sidebar_layout', 'both' ) == 'both' ) :
-		get_sidebar( 'left' );
-	endif;
 ?>
-
-	<div id="primary" class="content-area <?php echo ( ! is_front_page() ) ? $page_sidebar_layout['grid_sets'] : ''; ?>">
-		<main id="main" class="site-main">
-
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 		<?php
-		while ( have_posts() ) :
-			the_post();
+			do_action( 'qqlanding_page_before_video_parts' );
+			if ( ! has_action( 'qqlanding_page_video_parts' ) ) :
+				/*'provider','content-a','post',*/
+				 $value = array(
 
-			get_template_part( 'template-parts/content', 'video' );
+					'content','match','videos'
 
-			if ( ! is_front_page() ){
-				if ( get_theme_mod( 'qqlanding_page_display_comment', 0 ) == 1 ) {
-					
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				}
-			}
+				); //items
 
-		endwhile; // End of the loop.
+				//array push
+				
+				/*if(get_field('fa_show_content') == "Yes" ){
+					array_push($value,"content-b");
+				}*/
+				$videos = apply_filters( 'qqlanding_page_videos_order', $value );
+
+				foreach ($videos as $video) :
+					qqlanding_load_vsections($video);
+				endforeach;
+
+			else:
+				do_action( 'qqlanding_page_video_parts' );
+			endif;
+			do_action( 'qqlanding_page_after_video_parts' );
 		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-if ( ! is_front_page() ) 
-	if ( get_theme_mod( 'qqlanding_page_sidebar_layout', 'both' ) == 'right' || get_theme_mod( 'qqlanding_page_sidebar_layout', 'both' ) == 'both' ) :
-	get_sidebar( 'right' );
-	endif;
+	</main>
+</div>
+<?php 
 get_footer();

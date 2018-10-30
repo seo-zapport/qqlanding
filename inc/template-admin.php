@@ -7,12 +7,12 @@
 
 function qqlanding_admin_func(){
 	/**#Video Admin Page*/
-	add_menu_page( 'Videos', 'Videos Settings', 'manage_options', 'videos_settings', 'qqLand_vid_func', 'dashicons-playlist-video', 12 );
+	add_menu_page( 'Videos', 'Videos & Matches', 'manage_options', 'videos_settings', 'qqLand_vid_func', 'dashicons-playlist-video', 12 );
 	/**##Video Sub admin Page*/
 	/*add_submenu_page( 'videos_settings', 'Videos Settings', 'Add Videos', 'manage_options', 'videos_settings', 'videos_add_item_settings' );*/
 
-	add_submenu_page( 'videos_settings', 'Videos Settings', 'Videos', 'edit_posts', 'edit.php?post_type=video' );
-	add_submenu_page( 'videos_settings', 'Matches Settings', 'Matches', 'edit_posts', 'edit.php?post_type=qqlanding-matches' );
+	add_submenu_page( 'videos_settings', 'Videos List', 'Videos List', 'edit_posts', 'edit.php?post_type=video' );
+	add_submenu_page( 'videos_settings', 'Matches List', 'Matches List', 'edit_posts', 'edit.php?post_type=qqlanding-matches' );
 
 	//Actovate custom settings
 	add_action( 'admin_init', 'qqlanding_custom_settings' );

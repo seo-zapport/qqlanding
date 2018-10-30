@@ -9,7 +9,7 @@
  * @package QQLanding
  */
 if ( ! defined( 'ABSPATH' ) ) die; ?>
-		<?php if ( ! is_page_template( 'template-page.php' ) || is_home() ): ?>
+		<?php if ( ! is_page_template( 'template-page.php' ) && ! is_page_template( 'template-videos.php' ) || is_home() ): ?>
 		</div><!-- .row -->
 		<?php endif; ?>
 	</div><!-- #content -->

@@ -144,12 +144,40 @@ if( ! function_exists( 'qqlanding_load_section' ) ):
 endif;
 
 /**
+ * Load the video sections for the front page
+ */
+if ( ! function_exists('qqlanding_load_vsections') ) :
+    /**
+     * Load section
+     * @since 1.0.0
+     * @param $video_id
+     */
+    
+	function qqlanding_load_vsections( $video_id ){
+        /**
+         * Hook before section
+         */
+        
+        do_action( 'qqlanding_before_video_', $video_id );
+        do_action( 'qqlanding_before_video_part_', $video_id );
+
+        get_template_part( 'video-parts/video' , $video_id );
+
+        /**
+         * Hook after video
+         */
+        do_action( 'qqlanding_after_video_part_', $video_id );
+        do_action( 'qqlanding_after_video_', $video_id );
+	}
+endif;
+
+/**
  * Load the slider
  */
 if( ! function_exists( 'qqlanding_load_slider' ) ):
 
 	function qqlanding_load_slider(){
-		if ( is_page_template( 'template-page.php' ) ) {
+		if ( is_page_template( 'template-page.php' ) || is_page_template( 'template-videos.php' ) ) {
 			qqlanding_load_slider('slider');
 		}
 	}
@@ -508,3 +536,17 @@ function custom_field_excerpt() {
 	}
 	return apply_filters('the_excerpt', $text);
 }
+
+/**
+ * Footer Extend script in video page template
+ */
+function qqlanding_video_script(){
+
+	if ( is_page_template( 'template-videos.php' ) ) : ?>
+		<script type="text/javascript">
+			var urlBase = '<?= get_bloginfo("template_url"); ?>';
+		</script>
+	<?php endif;
+}
+add_action( 'wp_footer','qqlanding_video_script' );
+

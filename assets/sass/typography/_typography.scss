@@ -5,6 +5,7 @@
 @include font-family('noto_sans_italic', '././assets/fonts/#{$noto_sans_italic}/#{$noto_sans_italic}', 'italic', 'normal');
 @include font-family('noto_sans_regular', '././assets/fonts/#{$noto_sans_regular}/#{$noto_sans_regular}', 'normal', 'normal');
 @include font-family('segoe_ui', '././assets/fonts/#{$segoe_ui}/#{$segoe_ui}', 'normal', 'normal');
+@include font-family('century_gothic', '././assets/fonts/#{$century_gothic}/#{$century_gothic}', 'normal', 'normal');
 
 body,
 button,

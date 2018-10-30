@@ -1,0 +1,37 @@
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+@include font-family('century_gothic', '../fonts/#{$century_gothic}/#{$century_gothic}', 'normal', 'normal');
+@include font-family('century_gothic_bold', '../fonts/#{$century_gothic_bold}/#{$century_gothic_bold}', 'normal', 'normal');
+//@import "typography/typography";
+
+
+/**
+ * Page: Videos
+ *-------------------------*/
+ #videoContent{
+ 	position: relative;
+ 	overflow: hidden;
+ 	.sec-video-title{
+    	color: #b71d1b;
+ 		font-family: 'century_gothic_bold';
+ 		@include font-size(2.375);
+ 		text-transform: uppercase;
+ 		span {
+ 			display: inline-block;
+ 			position: relative;
+ 			top:-5px;
+	 		>img{
+	 			display: inline-block;
+	 		}
+ 		}
+ 	}
+ 	.cont-videos-entry{
+	    font-family: 'century_gothic';
+	    font-weight: 500;
+ 	}
+ 	ul, ol{
+ 		li{
+ 			margin: 8px 0;
+ 		}
+ 	}
+ }
