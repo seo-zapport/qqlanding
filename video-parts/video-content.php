@@ -5,6 +5,7 @@ if ( acf_selective_refresh($disable) ) return $disable = false;
 if ($disable) : ?>
 <section id="videoContent">
 	<div class="container">
+
 		<h3 id="videoTitle" class="sec-entry-title sec-video-title text-center "><?php the_field( 'vm_title' ); ?></h3>
 		<?php
 			$con_setting = get_field('content_settings');

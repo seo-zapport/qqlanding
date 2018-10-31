@@ -1,3 +1,82 @@
+/**--Preview--*/
+.vm-preview{
+    background: #fec803;
+    height: auto;
+    padding: 1.2em;
+    margin-right: 20px;
+    margin-top: 20px;   
+}
+.clearfix:before,
+.clearfix:after{
+    content: " ";
+    display: table;
+}
+.clearfix:after{
+    clear:both;
+}
+.vm-sidebar-a,
+.vm-sidebar-b{
+    display: inline-block;
+    float:left;
+    width: 45%;
+}
+.vm-sidebar-a{
+    background: #fec803;
+}
+.vm-preview #prev-img-wrap{
+    float: left;
+    width: 25%;
+    height: auto;
+    max-height: 100%;
+    margin-right: 5px;    
+}
+.vm-preview #prev-img-wrap img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.vm-preview #prev-details-wrap{
+    padding: 10px;
+    position: relative;
+    vertical-align: middle;
+    height: auto;   
+}
+.vm-general-form{
+    padding:0;
+    margin:0;
+}
+/* .vm-general-form table.form-table:nth-of-type(1),
+.vm-general-form table.form-table:nth-of-type(2),
+.vm-general-form h2{
+    display: inline-block;
+    float: left;
+    width: 48%;
+}
+.vm-general-form table.form-table:nth-of-type(2){
+    background-color: blue;
+} */
+/**--flipclock--*/
+#prev-details-wrap .flip-clock-divider{
+    height: 86px;
+}
+#prev-details-wrap .flip-clock-wrapper ul {
+    font-size: 40px;
+    height: 60px;
+    width: 45px;
+}
+#prev-details-wrap .flip-clock-wrapper ul li{
+    line-height: 60px;
+}
+#prev-details-wrap  .flip-clock-wrapper ul li a div{
+    font-size: 40px;
+}
+#prev-details-wrap  .flip-clock-wrapper ul li a div div.inn{
+    font-size: 40px;
+}
+#prev-details-wrap  .flip-clock-dot.top{
+    top: 20px;
+}
+/**--Tables--*/
 table.table, .table th, .table td {
     border: 1px solid #e6e6e6;
     margin: 0 0 1.5em;

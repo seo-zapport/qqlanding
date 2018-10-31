@@ -10032,7 +10032,7 @@ if ( function_exists( 'acf_add_options_page' ) ) :
 	acf_add_options_sub_page( array(
 		'page_title' 	=> __( 'VM Front Settings', 'qqlanding' ),
 		'menu_title' 	=> __( 'VM Front Settings', 'qqlanding' ),
-		'parent_slug'	=> 'videos_settings',
+		'parent_slug'	=> 'vm_settings',
 	) ); //VM Front Settings
 	
 	/*acf_add_options_sub_page( array(
