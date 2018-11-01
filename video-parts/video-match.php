@@ -3,6 +3,40 @@ $disable = get_field( 'vm_match_enable_section', 'option' ); //Content Enable/Di
 if ( acf_selective_refresh($disable) ) return $disable = false;
 if ($disable) : ?>
 	<section id="matchWrap" class="py-5">
+		<div id="matchTimerWrap" class="mb-3 container">
+			<h2 id="matchTitle" class="text-center col-12 match-entry-title">Next Match Countdown</h2>
+			<div class="row">
+				<div class="col-12 col-md-12 col-lg-6  d-md-flex d-lg-flex">
+					<div class="col-12 col-md-3 col-lg-3 px-0">
+						<figure class="matchLogoWrap">
+							<img src="<?php echo esc_attr( get_option( 'match_logo_a' ) ); ?>" class="m-auto">
+						</figure>
+					</div>
+					<div class="col-12 col-md-9 col-lg-9 px-0">
+						<h3 class="match-entry-title match-italic"><?php echo get_option( 'match_title_a' ); ?></h3>
+						<span id="dateAStrtoInteger" data-dateA="<?php echo strtotime(get_option( 'match_date_a' )); ?>"></span>
+						<div id="timeWRapA">
+							<?php //echo get_option( 'match_date_a' ); ?>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-12 col-lg-6  d-md-flex d-lg-flex">
+					<div class="col-12 col-md-9 col-lg-9 px-0">
+						<h3 class="match-entry-title match-italic"><?php echo get_option( 'match_title_b' ); ?></h3>
+						<span id="dateBStrtoInteger" data-dateB="<?php echo strtotime(get_option( 'match_date_b' )); ?>"></span>
+						<div id="timeWRapB">
+							<?php echo get_option( 'match_date_b' ); ?>
+						</div>
+					</div>
+					<div class="col-12 col-md-3 col-lg-3 px-0">
+						<figure class="matchLogoWrap">
+							<img src="<?php echo esc_attr( get_option( 'match_logo_b' ) ); ?>" class="m-auto">
+						</figure>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="container">
 			<?php 
 			$match_args_a = array(
@@ -24,11 +58,12 @@ if ($disable) : ?>
 			$match_a = new WP_Query($match_args_a);
 			$match_b = new WP_Query($match_args_b);?>
 			<div class="row mb-4">
+				<h2 class="text-center col-12 match-entry-title">Date of away match as below (2018-2019)</h2>
 				<?php if ( $match_a->have_posts() ) : ?>
 					<div class="col-12 col-lg-6">
 						<table class="table table-striped">
 							<thead>
-								<tr>
+								<tr class="text-center">
 									<th scope="col">Date</th>
 									<th scope="col">Home Team</th>
 									<th scope="col">Away Team</th>
@@ -36,7 +71,7 @@ if ($disable) : ?>
 							</thead>
 							<tbody>
 								<?php while($match_a->have_posts()) : $match_a->the_post(); ?>
-								<tr>
+								<tr class="text-center text-white">
 									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_date_matches_key', true ) ); ?></td>
 									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_home_matches_key', true ) ); ?></td>
 									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_away_matches_key', true ) ); ?></td>
@@ -51,7 +86,7 @@ if ($disable) : ?>
 					<div class="col-12 col-lg-6">
 						<table class="table table-striped">
 							<thead>
-								<tr>
+								<tr class="text-center">
 									<th scope="col">Date</th>
 									<th scope="col">Home Team</th>
 									<th scope="col">Away Team</th>
@@ -59,7 +94,7 @@ if ($disable) : ?>
 							</thead>
 							<tbody>
 								<?php while($match_b->have_posts()) : $match_b->the_post(); ?>
-								<tr>
+								<tr class="text-center text-white">
 									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_date_matches_key', true ) ); ?></td>
 									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_home_matches_key', true ) ); ?></td>
 									<td><?php echo esc_attr( get_post_meta( get_the_ID(), '_away_matches_key', true ) ); ?></td>

@@ -26,20 +26,29 @@
 .vm-preview #prev-img-wrap{
     float: left;
     width: 25%;
-    height: auto;
+    height: 162px;
     max-height: 100%;
-    margin-right: 5px;    
+    margin-right: 5px;
+    overflow: hidden;   
 }
 .vm-preview #prev-img-wrap img{
     display: block;
+    margin: auto;
     max-width: 100%;
     height: auto;
 }
 .vm-preview #prev-details-wrap{
-    padding: 10px;
+    padding: 0px;
+    margin: 0px;
     position: relative;
     vertical-align: middle;
     height: auto;   
+}
+.vm-preview  #prev-details-wrap h2{
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
 }
 .vm-general-form{
     padding:0;

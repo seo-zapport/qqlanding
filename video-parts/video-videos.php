@@ -7,7 +7,6 @@ if ($disable) : ?>
 			<!-- Start of Embeded Videos -->
 			<div class="row aritcle-content-img mb-5" id="appendItem">
 			<?php
-
 				$args = array(
 					'post_type'			=> 'video',
 					'post_status'		=> 'post',
@@ -53,12 +52,14 @@ if ($disable) : ?>
 												<?php endif; ?>
 											</a>
 										</div>
-										<div class="vid-body">
-											<h3 class="vid-title"><a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a></h3>
-											<?php //echo custom_field_excerpt(); ?>
-										</div>
-										<div class="vid-footer">
-											<i class="far fa-clock"></i><small class="muted"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></small>
+										<div class="position-absolute w-100 vid-pos-abs">
+											<div class="vid-body">
+												<h3 class="vid-title"><a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a></h3>
+												<?php //echo custom_field_excerpt(); ?>
+											</div>
+											<div class="vid-footer">
+												<i class="far fa-clock"></i><small class="muted"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></small>
+											</div>
 										</div>
 								
 									</div>
@@ -69,7 +70,7 @@ if ($disable) : ?>
 					endwhile;
    	 				wp_reset_postdata(); ?>
 					<div class="col-12 d-block text-center mb-5">
-						<button id="qqlandingLoadMoreVideo" class="btn btn-lg btn-primary">Please Load new Things here</button>
+						<button id="qqlandingLoadMoreVideo" class="btn btn-block btn-lg btn-danger">Please Load new Things here</button>
 					</div>
 				<?php endif; ?>
 			</div><!-- End of Embeded Videos -->

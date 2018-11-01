@@ -34,4 +34,255 @@
  			margin: 8px 0;
  		}
  	}
+
  }
+
+
+ #matchWrap{
+	.match-entry-title{
+		@include font-size(1.5);
+		font-family: noto_sans_regular;
+		color: $color__white;
+		text-shadow: 1px 0px 8px #b8572c;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.match-italic{
+		font-family: noto_sans_italic;
+	}
+ 	#matchTimerWrap{
+
+ 		/**--flipclock--*/
+ 		.flip-clock-wrapper{
+ 			margin: auto;
+			ul{
+			    font-size: 38px;
+			    height: 57px;
+			    width: 40px;
+			    margin: 3px;
+			    li{
+			    	line-height: 57px;
+			    	a div,
+			    	a div div.inn{
+			    		font-size: 38px;
+			    	}
+			    	a div div.inn{
+			    		background-color: #fff;
+			    		color: #4c4c4a;
+			    		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+			    	}
+			    }
+			}
+ 		}
+		.flip-clock-divider{
+			height: 86px;
+			width: 15px;
+			.flip-clock-label{
+				top:auto;
+				bottom: 0px;
+				right: -69px;
+				color: #fff;
+				text-shadow: none;
+				font-size: 14px;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+			&.minutes{
+				.flip-clock-label{
+					right: -79px;
+				}
+			}
+			&.seconds{
+				.flip-clock-label{
+					right: -82px;
+				}
+			}
+		}
+		.flip-clock-dot{
+			display: none;
+			&.top{
+				top: 20px;
+			}
+		}
+ 	}
+ 	table, th, td{
+		border-color: #d6e935;
+		border-width: 2px;
+ 	}
+ 	.table thead th{
+ 		padding: 0;
+	    border-color: #d6e935;
+	    font-family: helvetica;
+	    text-transform: uppercase;
+	    font-size: 20px;
+ 	}
+ 	.table th, .table td{
+	 	padding: 0.5em;
+	    font-family: noto_sans_regular;
+ 	}
+ 	th{
+ 		background-color: #222;
+ 		color: #d6e935;
+ 		font-weight: bold;
+ 	}
+ 	td{
+ 		font-size: 15px;
+ 	}
+ }
+
+
+#videoWrap{
+	#video{
+		position: relative;
+	}
+	.embed-container { 
+		position: relative; 
+		padding-bottom: 56.25%;
+		overflow: hidden;
+		max-width: 100%;
+		height: auto;
+
+		iframe,
+		object,
+		embed,
+		video { 
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		video{
+			background-color: #000;
+			max-width:100%;
+		}
+	} 
+	.vid-card{
+	    position: relative;
+	    background-color: #f7f7f7;
+	    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.35);
+	    word-wrap: break-word;
+	    &:hover,&:focus{
+	    	background-color: #f4f4f4;
+	    	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.35);
+	    	#vid-oflow{
+	    		background-color: rgba(14, 14, 14, 0.45);
+		    	i{
+		    		color:$color__white;
+		    	}
+	    	}
+	    }
+	    &.vgrid-1{
+	    	.vid-img-wrap{
+	    		height: 100%;
+	    	}
+	    }
+	    &.vgrid-3{
+			.vid-img-wrap,.vid-img{
+				min-height: 287px;
+				max-height: 287px;
+			}
+	    }
+	    #vid-oflow{
+	    	background-color: rgba(14, 14, 14, 0.15);
+	    	display: block;
+	    	height: 100%;
+	    	position: absolute;
+	    	top: 0;
+	    	width: 100%;
+	    	> i{
+				position: absolute;
+				top: 28%;
+				bottom: 28%;
+				right: 25%;
+				left: 25%;
+				color: $color__e6;
+				text-align: center;
+				height: 0;
+				line-height: 1;
+	    	}
+	    }
+	    .vid-img-wrap{
+	    	position: relative;
+	    	overflow: hidden;
+	    }
+	    .vid-img{
+			display: block;
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+	    }
+	    .vid-body,.vid-footer{
+	    	color: $color__white;
+	    	padding: 0.6em;
+	    	position: relative;
+	    }
+	    .vid-pos-abs{
+	    	background: rgba(183, 28, 32, 0.7);
+	    	bottom: 0;
+	    }
+	    .vid-title{
+			margin: 0rem 0px 0rem;
+			@include font-size(1);
+			font-weight: 600;
+			line-height: 1.5;
+	    }
+	    .vid-footer{
+	    	i{
+	    		margin-right: 5px;
+	    	}
+	    	i,small{
+	    		display: inline-block;
+	    	}
+	    }
+	}
+
+	.modal-btn{
+		position: fixed;
+		bottom: 0.75%;
+		right: 8%;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (min-width: 968px) and (max-width: 1024px){
+	#matchTimerWrap{
+		/**--flipclock--*/
+		.flip-clock-wrapper{
+			margin: auto;
+			ul{
+				font-size: 30px !important;
+				height: 43px !important;
+				width: 28px !important;
+				li{
+					line-height: 45px !important;
+					a div,
+					a div div.inn{
+					font-size: 30px !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width:680px) and (max-width:768px){
+	/**--flipclock--*/
+	.flip-clock-wrapper{
+		margin: auto;
+		ul{
+			font-size: 30px !important;
+			height: 43px !important;
+			width: 28px !important;
+			li{
+				line-height: 45px !important;
+				a div,
+				a div div.inn{
+				font-size: 30px !important;
+				}
+			}
+		}
+	}
+}
+
+
