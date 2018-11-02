@@ -50,9 +50,11 @@
 		&:last-child{margin-right:inherit}
 		.provider-wrap{display:flex;justify-content:space-evenly}
 		&:first-child{max-width:32%}
-		&.prov-banks{max-width:100%;}
+		&.prov-banks,
+		&.prov-network{max-width:100%;}
 		&.prov-license{max-width:100%!important}
-		.prov-banks{
+		.prov-banks,
+		.prov-network{
 			flex-wrap: wrap;
 		}
 	}
@@ -139,7 +141,8 @@
 			align-items: center;
 			justify-content:center;
 		}
-		&[class*='-banks']{
+		&[class*='-banks'],
+		&[class*='-network']{
 			.provider-wrap{
 				justify-content:inherit;
 			}
@@ -150,7 +153,8 @@
 	.provider-group{
 		max-width:100%!important;margin-right:5px;
 		.provider-wrap{display:initial;justify-content:initial}
-		&[class*='-banks']{
+		&[class*='-banks'],
+		&[class*='-network']{
 			.provider-wrap{
 				justify-content:inherit;
 			}
@@ -161,7 +165,8 @@
 	.provider-group{
 		max-width:100%!important;margin-right:5px;
 		.provider-wrap{flex-wrap: wrap;align-items: center;justify-content:center}
-		&[class*='-banks']{
+		&[class*='-banks'],
+		&[class*='-network']{
 			.provider-wrap{
 				display:flex;
 				justify-content:space-between;
@@ -185,7 +190,8 @@
 	.provider-group{
 		max-width:100%!important;margin-right:5px;
 		.provider-wrap{flex-wrap: wrap;align-items: center;justify-content:center}
-		&[class*='-banks']{
+		&[class*='-banks'],
+		&[class*='-network']{
 			.provider-wrap{
 				justify-content:space-evenly;
 			}

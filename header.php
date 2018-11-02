@@ -50,6 +50,6 @@ if ( ! defined('ABSPATH')) exit; ?>
 		
 		<?php 
 			qqlanding_breadcrumb_list(); //breadcrumbs
-			if ( ! is_page_template( 'template-page.php' ) && ! is_page_template( 'template-videos.php' ) || is_home() ): ?>
+			if ( ! is_page_template( 'template-page.php' ) && ! is_page_template( 'template-videos.php' ) && ! is_singular( 'video' ) || is_home() ): ?>
 			<div class="row">
 		<?php endif; ?>

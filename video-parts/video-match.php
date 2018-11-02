@@ -41,24 +41,32 @@ if ($disable) : ?>
 			<?php 
 			$match_args_a = array(
 				'post_type' 		=> 'qqlanding-matches',
-				'post_status'		=> 'post',
+				'post_status'		=> array('post','publish'),
 				'posts_per_page'	=> 6,
 				'meta_key'			=>  '_type_matches_key',
 				'meta_value'		=>  'match_a',
 				'meta_compare' 		=> '=',
+				'suppress_filters' 		=> true,
+				'orderby'			=> 'date',
+				'order'				=> 'ASC'
 			);
 			$match_args_b = array(
 				'post_type' 		=> 'qqlanding-matches',
-				'post_status'		=> 'post',
+				'post_status'		=> array('post','publish'),
 				'posts_per_page'	=> 6,
 				'meta_key'			=>  '_type_matches_key',
 				'meta_value'		=>  'match_b',
 				'meta_compare' 		=> '=',
+				'suppress_filters' 		=> true,
+				'orderby'			=> 'date',
+				'order'				=> 'ASC'
 			);
 			$match_a = new WP_Query($match_args_a);
 			$match_b = new WP_Query($match_args_b);?>
 			<div class="row mb-4">
-				<h2 class="text-center col-12 match-entry-title">Date of away match as below (2018-2019)</h2>
+				<?php if ( $match_a->have_posts() || $match_b->have_posts() ): ?>	
+					<h2 class="text-center col-12 match-entry-title">Date of away match as below (2018-2019)</h2>
+				<?php endif; ?>
 				<?php if ( $match_a->have_posts() ) : ?>
 					<div class="col-12 col-lg-6">
 						<table class="table table-striped">

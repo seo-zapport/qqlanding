@@ -31,7 +31,7 @@ function qqlanding_load_admin_scripts( $hook ){
 		wp_enqueue_script( 'flipclock-script' );
 
 	}
-	else if( 'post.php' == $hook ){
+	else if( 'post-new.php' == $hook || 'post.php' == $hook ){
 
 		/** Style -------*/
 		wp_register_style( 'admin-style', get_template_directory_uri() . '/inc/admin-template/assets/css/admin-style.css', array() , '0.0.1', 'all' );
@@ -39,6 +39,7 @@ function qqlanding_load_admin_scripts( $hook ){
 		
 	} else{
 		return;
-	}	
+	}
+
 }
 add_action( 'admin_enqueue_scripts', 'qqlanding_load_admin_scripts' );

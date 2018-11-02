@@ -266,6 +266,61 @@
 	}
 }
 
+@media only screen and (min-width:320px) and (max-width:480px){
+	/**--flipclock--*/
+	.flip-clock-wrapper{
+		margin: auto;
+		ul{
+			font-size: 21px !important;
+			height: 35px !important;
+			width: 21px !important;
+			li{
+				line-height: 34px !important;
+				a div,
+				a div div.inn{
+				font-size: 21px !important;
+				}
+			}
+		}
+	}
+	.flip-clock-divider{
+		.flip-clock-label{
+			bottom: 25px !important;
+			right: -47px !important;
+			font-size: 11px !important;
+		}
+		&.minutes{
+			.flip-clock-label{
+				right: -54px !important;
+			}
+		}
+		&.seconds{
+			.flip-clock-label{
+				right: -50px !important;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width:360px) and (max-width:580px){
+	/**--flipclock--*/
+	.flip-clock-wrapper{
+		margin: auto;
+		ul{
+			font-size: 28px !important;
+			height: 40px !important;
+			width: 25px !important;
+			li{
+				line-height: 40px !important;
+				a div,
+				a div div.inn{
+				font-size: 28px !important;
+				}
+			}
+		}
+	}
+}
+
 @media only screen and (min-width:680px) and (max-width:768px){
 	/**--flipclock--*/
 	.flip-clock-wrapper{

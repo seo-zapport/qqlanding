@@ -48,4 +48,8 @@
 		$('#timeWRapA').FlipClock(countdownA, opts);
 		$('#timeWRapB').FlipClock(countdownB, opts);
 	});
+
+	/**find the parent then add new class------*/
+	$('#timeWRapA').addClass( 'd-flex justify-content-center' );
+	$('#timeWRapB').addClass( 'd-flex justify-content-center' );
 })(jQuery);

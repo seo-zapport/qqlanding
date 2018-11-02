@@ -60,9 +60,9 @@ if ($disable) : ?>
 									<div class="<?php echo $hide_mob; ?> col-12 col-lg-6 text-white align-self-center">
 										<?php if ( $format == 'image' ): ?>
 											<?php echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider'); ?>
-										<?php else: ?>
-											Video Here left
-										<?php endif ?>
+										<?php else: 
+											echo fpv_video_settings($video, 'video');
+										endif ?>
 									</div>
 								<?php endif; //left?>
 								<div class="col-12 col-lg-6 text-white align-self-center">

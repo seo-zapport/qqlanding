@@ -4516,7 +4516,15 @@ acf_add_local_field_group(array(
 					'type' => 'radio',
 					'instructions' => '',
 					'required' => 0,
-					'conditional_logic' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bdac6af1e4ba',
+								'operator' => '!=',
+								'value' => 'default',
+							),
+						),
+					),
 					'wrapper' => array(
 						'width' => '25',
 						'class' => '',
@@ -4547,7 +4555,22 @@ acf_add_local_field_group(array(
 					'type' => 'true_false',
 					'instructions' => '',
 					'required' => 0,
-					'conditional_logic' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bdac6af1e4ba',
+								'operator' => '==',
+								'value' => 'fit-to-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5bdac6af1e4ba',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
 					'wrapper' => array(
 						'width' => '25',
 						'class' => '',
@@ -4566,7 +4589,22 @@ acf_add_local_field_group(array(
 					'type' => 'true_false',
 					'instructions' => '',
 					'required' => 0,
-					'conditional_logic' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bdac6af1e4ba',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5bdac6af1e4ba',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
 					'wrapper' => array(
 						'width' => '25',
 						'class' => '',
@@ -4585,7 +4623,15 @@ acf_add_local_field_group(array(
 					'type' => 'select',
 					'instructions' => '',
 					'required' => 0,
-					'conditional_logic' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bdac6af1e4ba',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
 					'wrapper' => array(
 						'width' => '25',
 						'class' => '',
@@ -4665,8 +4711,8 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5b88e65db051d',
-			'label' => 'Banks',
-			'name' => 'banks',
+			'label' => 'Providers',
+			'name' => 'providers',
 			'type' => 'group',
 			'instructions' => 'This is the settings where you can set up your banks by country.',
 			'required' => 0,
@@ -4674,7 +4720,7 @@ acf_add_local_field_group(array(
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
-				'id' => 'banks',
+				'id' => 'providers',
 			),
 			'layout' => 'block',
 			'sub_fields' => array(
@@ -4700,21 +4746,26 @@ acf_add_local_field_group(array(
 				array(
 					'key' => 'field_5b88edacb051f',
 					'label' => '',
-					'name' => 'b_allow_bank',
-					'type' => 'true_false',
-					'instructions' => 'Allow enabling the bank\'s item.',
+					'name' => 'b_providers',
+					'type' => 'radio',
+					'instructions' => 'Select whether you want to bank or tv to be enabled.',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '33.33333333333333',
 						'class' => '',
-						'id' => 'b_allow_bank',
+						'id' => 'b_providers',
 					),
-					'message' => 'Enable bank items',
-					'default_value' => 0,
-					'ui' => 0,
-					'ui_on_text' => '',
-					'ui_off_text' => '',
+					'choices' => array(
+						'bank' => 'Banks',
+						'network' => 'Tv Network',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => '',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
 				),
 				array(
 					'key' => 'field_5b88ee69b0522',
@@ -4748,7 +4799,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5b88edfeb0520',
-					'label' => 'Item',
+					'label' => 'Bank Item',
 					'name' => 'b_item',
 					'type' => 'repeater',
 					'instructions' => 'Allow choosing a bank item here.',
@@ -4758,7 +4809,7 @@ acf_add_local_field_group(array(
 							array(
 								'field' => 'field_5b88edacb051f',
 								'operator' => '==',
-								'value' => '1',
+								'value' => 'bank',
 							),
 						),
 					),
@@ -4997,6 +5048,93 @@ acf_add_local_field_group(array(
 							),
 							'default_value' => array(
 								0 => 'bos',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+					),
+				),
+				array(
+					'key' => 'field_5bdb97f02fbb3',
+					'label' => 'Tv Network Item',
+					'name' => 'b_tv_item',
+					'type' => 'repeater',
+					'instructions' => 'Allow choosing a tv network item here.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5b88edacb051f',
+								'operator' => '==',
+								'value' => 'network',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'b_tv_item',
+					),
+					'collapsed' => '',
+					'min' => 1,
+					'max' => 0,
+					'layout' => 'table',
+					'button_label' => 'Add banks',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5bdb97f12fbb4',
+							'label' => 'Network Title',
+							'name' => 'prov_net__title',
+							'type' => 'text',
+							'instructions' => 'Indicate the title of your bank.',
+							'required' => 1,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'prov_net__title',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5bdb97f12fbb5',
+							'label' => 'Network Logo',
+							'name' => 'prov_net_logo_id',
+							'type' => 'select',
+							'instructions' => 'Choose the banks that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'id',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'prov_net_logo_id',
+							),
+							'choices' => array(
+								'sctv' => 'SCTV',
+								'orangetv' => 'Orange TV',
+								'k_vision' => 'K-Vision',
+								'nexmedia' => 'Nexmedia',
+								'indovision' => 'Indovision Digital',
+								'supersoccer' => 'Super Soccer Tv',
+							),
+							'default_value' => array(
+								0 => 'sctv',
 							),
 							'allow_null' => 0,
 							'multiple' => 0,

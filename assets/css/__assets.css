@@ -5,6 +5,37 @@
 .full-wh .full-wrap { display: table-cell; vertical-align: middle; }
 
 /**--Enter site*/
+.qqlanding-sites { /**Site-Info-----*/ /**Enter-site-----*/ }
+.qqlanding-sites .site-top-info, .qqlanding-sites .site-footer-info { border-bottom: 1px solid transparent; padding: 0px 10px; line-height: 1.5; position: relative; }
+.qqlanding-sites .site-top-info #social_media, .qqlanding-sites .site-top-info ul#social_media, .qqlanding-sites .site-footer-info #social_media, .qqlanding-sites .site-footer-info ul#social_media { list-style-type: none; margin: 0; padding: 0; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li, .qqlanding-sites .site-top-info ul#social_media.sm-circle li, .qqlanding-sites .site-footer-info #social_media.sm-circle li, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li { margin-right: 5px; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a, .qqlanding-sites .site-top-info ul#social_media.sm-circle li a, .qqlanding-sites .site-footer-info #social_media.sm-circle li a, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a { background-color: #fff; border-radius: 50%; line-height: 24px; width: 24px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="icon-facebook"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="icon-facebook"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="icon-facebook"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="icon-facebook"] { background-color: #4267b2; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="twitter"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="twitter"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="twitter"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="twitter"] { background-color: #1da1f2; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="instagram"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="instagram"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="instagram"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="instagram"] { background-color: #c32aa3; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="linkedin"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="linkedin"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="linkedin"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="linkedin"] { background-color: #007bb5; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="youtube"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="youtube"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="youtube"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="youtube"] { background-color: #ff0000; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="google-plus"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="google-plus"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="google-plus"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="google-plus"] { background-color: #dd4b39; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="pinterest"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="pinterest"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="pinterest"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="pinterest"] { background-color: #bd081c; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="rss"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="rss"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="rss"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="rss"] { background-color: #FB6405; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="flickr"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="flickr"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="flickr"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="flickr"] { background-color: #f40083; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover i, .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover i, .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover i, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover i { color: #fff !important; }
+.qqlanding-sites .site-top-info #social_media.sm-circle li a i, .qqlanding-sites .site-top-info ul#social_media.sm-circle li a i, .qqlanding-sites .site-footer-info #social_media.sm-circle li a i, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a i { color: #222222; }
+.qqlanding-sites .site-top-info #social_media.sm-circle i[class*='fa-'], .qqlanding-sites .site-top-info ul#social_media.sm-circle i[class*='fa-'], .qqlanding-sites .site-footer-info #social_media.sm-circle i[class*='fa-'], .qqlanding-sites .site-footer-info ul#social_media.sm-circle i[class*='fa-'] { font-size: 12.8px; font-size: 0.8rem; }
+.qqlanding-sites .site-top-info #social_media li, .qqlanding-sites .site-top-info ul#social_media li, .qqlanding-sites .site-footer-info #social_media li, .qqlanding-sites .site-footer-info ul#social_media li { display: inline-block; position: relative; padding: 0.45em 0; margin-bottom: 0em; }
+.qqlanding-sites .site-top-info #social_media li a, .qqlanding-sites .site-top-info ul#social_media li a, .qqlanding-sites .site-footer-info #social_media li a, .qqlanding-sites .site-footer-info ul#social_media li a { display: block; line-height: 30px; padding-right: 3px; padding-left: 3px; text-align: center; width: 30px; vertical-align: middle; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.qqlanding-sites .site-top-info #social_media li a:hover, .qqlanding-sites .site-top-info ul#social_media li a:hover, .qqlanding-sites .site-footer-info #social_media li a:hover, .qqlanding-sites .site-footer-info ul#social_media li a:hover { background-color: #fff; }
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="facebook"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="facebook"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="facebook"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="facebook"] { color: #4267b2; }
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="twitter"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="twitter"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="twitter"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="twitter"] { color: #1da1f2; }
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="instagram"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="instagram"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="instagram"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="instagram"] { color: #c32aa3; }
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="linkedin"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="linkedin"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="linkedin"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="linkedin"] { color: #007bb5; }
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="youtube"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="youtube"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="youtube"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="youtube"] { color: #ff0000; }
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="google-plus"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="google-plus"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="google-plus"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="google-plus"] { color: #dd4b39; }
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="pinterest"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="pinterest"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="pinterest"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="pinterest"] { color: #bd081c; }
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="rss"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="rss"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="rss"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="rss"] { color: #FB6405; }
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="flickr"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="flickr"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="flickr"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="flickr"] { color: #f40083; }
+.qqlanding-sites .site-top-info #social_media li i[class*='fa-'], .qqlanding-sites .site-top-info ul#social_media li i[class*='fa-'], .qqlanding-sites .site-footer-info #social_media li i[class*='fa-'], .qqlanding-sites .site-footer-info ul#social_media li i[class*='fa-'] { font-size: 16.4px; font-size: 1.025rem; color: #fff; }
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a { line-height: 35px; width: 35px; }
 .qqlanding-sites .btn-entersite { color: #fff !important; }
 .qqlanding-sites .btn-entersite.bg_color_288 { border-color: #02849c; }
 .qqlanding-sites .btn-entersite.bg_color_288:hover, .qqlanding-sites .btn-entersite.bg_color_288:focus { background: #005c6b; border-color: #005c6b; }
@@ -34,8 +65,10 @@
 .provider-item > i { display: block; font-size: 0; height: 38px; width: 80px; text-indent: -999999px; }
 
 .provider-group { position: relative; flex-direction: column; flex: auto; display: -ms-flexbox; display: flex; /** prov-cat ----------*/ /**
-* prov-default
-*--------------*/ }
+* prov-default banks
+*--------------------*/ /**
+* prov-default banks
+*--------------------*/ }
 .provider-group[class*='-category'], .provider-group[class*='-default'] { border: 1px solid #7f7f7f; border-radius: 5px; margin-bottom: 18px; padding: 8px 10px; }
 .provider-group[class*='-license'] .pagcor { background-position: 0 0; width: 140px; }
 .provider-group[class*='-category'] .bet368 { width: 86px; background-position: 3px -302px; }
@@ -174,5 +207,13 @@
 .provider-group[class*='-banks'] .bank-china .cminshing_bank { background-position: 3px -2680px; width: 130px; }
 .provider-group[class*='-banks'] .bank-china .crm_bank { background-position: 3px -2765px; width: 130px; }
 .provider-group[class*='-banks'] .bank-china .psbchina { background-position: 3px -2848px; width: 130px; }
+.provider-group[class*='-network'] .provider-item > i { background: url("../../assets/images/providers/ico_net.png") no-repeat; }
+.provider-group[class*='-network'] .network-indo .provider-item { margin-bottom: 10px; }
+.provider-group[class*='-network'] .network-indo .provider-item .sctv { background-position: -16px -10px; width: 115px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item .orangetv { background-position: -16px -68px; width: 150px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item .k_vision { background-position: -16px -133px; width: 185px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item .nexmedia { background-position: -16px -195px; width: 114px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item .indovision { background-position: -16px -264px; width: 90px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item .supersoccer { background-position: -16px -338px; width: 138px; height: 41px; }
 
 /*# sourceMappingURL=__assets.css.map */

@@ -57,7 +57,8 @@
 	}
 	//site-info
 	&.qqland-qq288{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $qq288_cerulean;
 		}
 		&.qqlayout-default{
@@ -170,7 +171,8 @@
 		}
 	}
 	&.qqland-qq188{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $color__ea;
 			border-bottom-color:$color__e6;
 			ul#social_media{
@@ -273,7 +275,8 @@
 		}
 	}
 	&.qqland-qq101{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $qq101_english_holly;
 			border-bottom-color:$qq101_celtic;
 			color:$color__white;
@@ -370,7 +373,8 @@
 		}
 	}
 	&.qqland-qq1x2{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $qq1x2_default;
 			border-bottom-color:$qq1x2_mercury;
 			color:$color__white;
@@ -483,7 +487,8 @@
 		}
 	}
 	&.qqland-qq724{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $qq724_mine_shaft;
 			border-bottom-color:$color__e6;
 			color:$color__white;
@@ -580,7 +585,8 @@
 		}
 	}
 	&.qqland-qqfortuna{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $qqfortuna_temptress;
 			border-bottom-color:$color__e6;
 			color:$color__white;
@@ -696,7 +702,8 @@
 		}
 	} 
 	&.qqland-qq801{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $qq801_regal_blue;
 			border-bottom-color:$color__7f;
 			color:$color__white;
@@ -793,7 +800,8 @@
 		}
 	}
 	&.qqland-qq882{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $qq882_dark;
 			border-bottom-color:$color__ea;
 			color:$color__7f;
@@ -925,7 +933,8 @@
 		}
 	}
 	&.qqland-qq808{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $qq808_brown_bramble;
 			border-bottom-color:$qq808_di_serria;
 			color:$color__7f;
@@ -1040,7 +1049,8 @@
 		}
 	}
 	&.qqland-qq828{
-		.site-top-info{
+		.site-top-info,
+		.site-footer-info{
 			background-color: $qq828_fire;
 			border-bottom-color:$qq828_givry;
 			color:$color__white;

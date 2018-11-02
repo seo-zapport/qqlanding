@@ -410,6 +410,29 @@ if ( have_rows( 'th_presets', 'option') ) :
 endif;
 
 
+/**
+ * #Footer
+ *---------------------*/
+if ( have_rows( 'footer_bg_settings', 'option' ) ) :
+	while ( have_rows( 'footer_bg_settings', 'option' ) )  : the_row();
+
+		$repeat = get_sub_field('footer_repeat_bg_img');
+		$scroll = get_sub_field('footer_scroll_with_page');
+		$screen = get_sub_field('footer_presets');
+		$position = get_sub_field('footer_image_position');
+		$image_size = get_sub_field('footer_image_size');
+
+		$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size);
+		if ( ! empty( get_sub_field('footer_image','option') ) ) :
+		?>
+		.qqlanding-sites .site-footer{
+		 	background-image: url(<?php echo get_sub_field('footer_image','option'); ?>);<?php echo $bg_attr; ?>
+		}
+	<?php
+		endif; //not empty the image
+	endwhile;
+endif;
+
 
 
 /**

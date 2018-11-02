@@ -39,7 +39,7 @@ if ($disable) : ?>
 						    		$card_class = 'vgrid-1';
 						    	}
 					    	?>
-								<div class="col-12 <?php /*echo ( $counter > 1 ) ? 'col-12 col-xl-4' : 'col-12 col-xl-12';*/ echo $grid_class; ?> mb-4">
+								<div class="col-12 <?php echo $grid_class; ?> mb-4">
 									<!-- <div class="row"> -->
 									<div class="vid-card <?php echo $card_class; ?>">
 										<div class="vid-img-wrap">
@@ -69,11 +69,11 @@ if ($disable) : ?>
 					    $checker++;
 					endwhile;
    	 				wp_reset_postdata(); ?>
-					<div class="col-12 d-block text-center mb-5">
-						<button id="qqlandingLoadMoreVideo" class="btn btn-block btn-lg btn-danger">Please Load new Things here</button>
-					</div>
 				<?php endif; ?>
 			</div><!-- End of Embeded Videos -->
+			<div class="col-12 d-block text-center mb-5 px-0">
+				<button id="qqlandingLoadMoreVideo" class="btn btn-block btn-lg btn-danger">Load more</button>
+			</div>
 		</div>
 	</section>
 <?php endif; ?>

@@ -21,6 +21,106 @@
 }
 /**--Enter site*/
 .qqlanding-sites{
+
+	/**Site-Info-----*/
+	.site-top-info,
+	.site-footer-info{
+		border-bottom:1px solid transparent;
+		padding:0px 10px;
+		line-height: 1.5;
+		position: relative;
+		#social_media,
+		ul#social_media{
+			list-style-type: none;
+			margin:0;
+			padding:0;
+			&.sm-circle{
+				li{
+					margin-right: 5px;
+					a{
+						background-color: $color__white;
+						border-radius: 50%;
+						line-height: 24px;
+						width: 24px;
+						@include ease-in-out();
+						&:hover{
+							&[class*="icon-facebook"]{background-color: #4267b2;}
+							&[class*="twitter"]{background-color: #1da1f2;}
+							&[class*="instagram"]{background-color: #c32aa3;}
+							&[class*="linkedin"]{background-color: #007bb5;}
+							&[class*="youtube"]{background-color: #ff0000;}
+							&[class*="google-plus"]{background-color: #dd4b39;}
+							&[class*="pinterest"]{background-color: #bd081c;}
+							&[class*="rss"]{background-color: #FB6405;}
+							&[class*="flickr"]{background-color: #f40083;}
+							i{
+								color: $color__white !important;
+							}
+						}
+						i{
+							color: $color__22;
+						}
+					}
+				}
+				i{
+					&[class*='fa-']{
+						@include font-size(0.8);
+					}
+				}
+			}
+			li{
+				display: inline-block;
+				position: relative;
+				padding: 0.45em 0;
+				margin-bottom: 0em;
+				a{
+					display: block;
+					line-height: 30px;
+					padding-right: 3px;
+					padding-left: 3px;
+					text-align: center;
+					width: 30px;
+					vertical-align: middle;
+					@include ease-in-out();
+					&:hover{
+						background-color:$color__white;
+						i{
+							&[class*="facebook"]{color: #4267b2;}
+							&[class*="twitter"]{color: #1da1f2;}
+							&[class*="instagram"]{color: #c32aa3;}
+							&[class*="linkedin"]{color: #007bb5;}
+							&[class*="youtube"]{color: #ff0000;}
+							&[class*="google-plus"]{color: #dd4b39;}
+							&[class*="pinterest"]{color: #bd081c;}
+							&[class*="rss"]{color: #FB6405;}
+							&[class*="flickr"]{color: #f40083;}
+						}
+					}
+				}
+				i{
+					&[class*='fa-']{
+						@include font-size(1.025);
+						color:$color__white;
+					}
+				}
+			}
+		}
+	}
+	.site-footer-info{
+		#social_media,
+		ul#social_media{
+			&.sm-circle{
+				li{
+					a{
+						line-height: 35px;
+						width: 35px;
+					}
+				}
+			}
+		}
+	}
+
+	/**Enter-site-----*/
 	.btn-entersite{
 		color: $color__white !important;
 		&.bg_color_288{
@@ -239,8 +339,8 @@
 	}
 
 	/**
-	* prov-default
-	*--------------*/
+	* prov-default banks
+	*--------------------*/
 	&[class*='-banks']{
 		.provider-item{
 			> i{
@@ -306,6 +406,28 @@
 			.cminshing_bank{background-position: 3px -2680px;width: 130px;}
 			.crm_bank{background-position: 3px -2765px;width: 130px;}
 			.psbchina{background-position: 3px -2848px;width: 130px;}
+		}
+	}
+
+	/**
+	* prov-default banks
+	*--------------------*/
+	&[class*='-network']{
+		.provider-item{
+			> i{
+				background: url('../../assets/images/providers/ico_net.png') no-repeat;
+			}
+		}
+		.network-indo{
+			.provider-item{
+				margin-bottom: 10px;
+				.sctv{background-position: -16px -10px;width: 115px;height:41px;}
+				.orangetv{background-position: -16px -68px;width: 150px;height:41px;}
+				.k_vision{background-position: -16px -133px;width: 185px;height:41px;}
+				.nexmedia{background-position: -16px -195px;width: 114px;height:41px;}
+				.indovision{background-position: -16px -264px;width: 90px;height:41px;}
+				.supersoccer{background-position: -16px -338px;width: 138px;height:41px;}
+			}
 		}
 	}
 }

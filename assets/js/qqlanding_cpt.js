@@ -10,7 +10,7 @@
 			pageNumber++;			
 			var button = $(this);
 			e.preventDefault;
-			/*console.log(item);*/
+			//console.log(item);
 			$.ajax({
 				type: 'POST',
 				dataType: 'html',
@@ -36,7 +36,7 @@
 		        complete: function(data){
 					var data = $(data);
 		        	if (data.length > 0) {
-		        		button.text('Please Load new Things here');
+		        		button.text('Load more');
 		        	}else{
 		        		button.attr("disabled",true);
 		        	}		        	

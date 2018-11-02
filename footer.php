@@ -9,11 +9,11 @@
  * @package QQLanding
  */
 if ( ! defined( 'ABSPATH' ) ) die; ?>
-		<?php if ( ! is_page_template( 'template-page.php' ) && ! is_page_template( 'template-videos.php' ) || is_home() ): ?>
+		<?php if ( ! is_page_template( 'template-page.php' ) && ! is_page_template( 'template-videos.php' ) && ! is_singular( 'video' ) || is_home() ): ?>
 		</div><!-- .row -->
 		<?php endif; ?>
 	</div><!-- #content -->
-	<footer id="footer" class="site-footer" itemscope itemtype="http://schema.org/WPFooter"> 
+	<footer id="footer" class="site-footer py-0" itemscope itemtype="http://schema.org/WPFooter"> 
 		<meta itemprop="name" content="Webpage footer for <?php wp_title('&raquo;', true, 'right'); ?>"/>
 		<meta itemprop="description" content="Information about imprint and data protection"/>
 		<meta itemprop="keywords" content="Imprint, Data Protection, Copyright Data, QR-Code"/>
@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 
 		<div class="container">
 			<?php $licensed = get_field('licensed_settings', 'option');
-			$banks_enabled = get_field('banks', 'option'); ?>
-			<?php if ($licensed['lcs_allow'] == true || $banks_enabled['b_allow_bank'] == true): ?>
+			$banks_enabled = get_field('providers', 'option'); ?>
+			<?php if ($licensed['lcs_allow'] == true ): ?>
 				<div class="site-bank-wrapper widget py-3">
 					<div class="row">
 						<?php if ( have_rows('licensed_settings', 'option')  ): ?>
@@ -44,8 +44,10 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 								<?php endif;?>
 							<?php endwhile; ?>
 						<?php endif; ?>
-						<?php if ( have_rows('banks', 'option')  ): ?>
-							<?php while ( have_rows('banks', 'option')  ): the_row(); ?>
+						<?php 
+						$dislay_footer = ( get_field( 'sm_footer', 'option' ) === true ) ? 'col-md-5 col-lg-5' : 'col-md-9 col-lg-9' ;
+						if ( have_rows('providers', 'option')  ): ?>
+							<?php while ( have_rows('providers', 'option')  ): the_row(); ?>
 								<?php $country = get_sub_field( 'b_country', 'option' );
 									switch ($country) {
 										case 'my': $country_class = 'malaysia'; break;
@@ -55,14 +57,14 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 										default: $country_class = 'indo'; break;
 									} 
 								?>
-								<div class="col-12 col-md-9 col-lg-9">
-									<div class="provider-group prov-banks flex-wrap">
+								<div class="col-12 <?php echo $dislay_footer; ?>">
+									<div class="provider-group prov-<?php echo ( get_sub_field( 'b_providers','option' ) == 'banks' ) ? 'banks' : 'network'; ?> flex-wrap">
 										<?php if ( ! empty( get_sub_field( 'b_title','option' ) ) ): ?>
 											<div class="widget-title-container">
 												<h4 class="widget-title"><?php echo get_sub_field( 'b_title','option' ); ?></h4>
 											</div>
 										<?php endif; ?>
-										<?php if ( get_sub_field( 'b_allow_bank','option' ) == true ): ?>
+										<?php if ( get_sub_field( 'b_providers','option' ) === 'bank' ): ?>
 											<?php if ( have_rows( 'b_item','option' ) ): ?>
 												<div class="provider-wrap bank-<?php echo $country_class; ?> flex-wrap">
 													<?php while ( have_rows('b_item', 'option')  ): the_row(); ?>
@@ -73,10 +75,35 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 													<?php endwhile; ?>
 												</div>
 											<?php endif; ?>
-										<?php endif; ?>
+										<?php else: ?>
+											<?php if ( have_rows( 'b_tv_item','option' ) ): ?>
+												<div class="provider-wrap network-<?php echo $country_class; ?> flex-wrap">
+													<?php while ( have_rows('b_tv_item', 'option')  ): the_row(); ?>
+														<?php 
+														$val = 'prov_net_logo_' . $country;
+														$logo = get_sub_field( $val, 'option' ); 
+														//var_dump($logo);
+														?>
+														<span class="provider-item"><i class="<?php echo $logo; ?>"><?php the_sub_field('prov_net__title','option'); ?></i></span>
+													<?php endwhile; ?>
+												</div>
+											<?php endif; ?>
+										<?php endif; //check what providers include ?>
 									</div>
 								</div>
 							<?php endwhile; ?>
+						<?php endif; ?>
+						<?php if ( get_field( 'sm_footer', 'option' ) === true ): ?>
+							<div class="col-12 col-md-4 col-lg-4">
+								<div class="widget-title-container">
+									<h4 class="widget-title">Social Media</h4>
+								</div>
+								<div class="site-footer-info">
+									<div class="container">
+										<?php qqlanding_social_media(); ?>
+									</div>
+								</div>
+							</div>
 						<?php endif; ?>
 					</div>
 				</div>

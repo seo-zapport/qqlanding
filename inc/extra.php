@@ -19,7 +19,7 @@ function more_post_ajax(){
     $off = (isset($_POST['off'])) ? $_POST['off'] : 3;
     header("Content-Type: text/html");
     $args = array(
-    	'post_type' 		=> 'qqlanding-video',
+    	'post_type' 		=> 'video',
     	'post_status'		=> 'post',
     	'posts_per_page'	=> $ppp,
     	'offset'    		=> $off,
@@ -53,12 +53,14 @@ function more_post_ajax(){
 							<?php endif; ?>
 						</a>
 					</div>
-					<div class="vid-body">
-						<h3 class="vid-title"><a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a></h3>
-					</div>
-					<div class="vid-footer">
-						<i class="far fa-clock"></i><small class="muted"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></small>
-					</div>
+					<div class="position-absolute w-100 vid-pos-abs">
+						<div class="vid-body">
+							<h3 class="vid-title"><a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a></h3>
+						</div>
+						<div class="vid-footer">
+							<i class="far fa-clock"></i><small class="muted"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></small>
+						</div>
+	    			</div>
 	    		</div>
 	    	</div>
     	<?php endwhile;
@@ -159,6 +161,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 		$post        		= get_queried_object();
 		$post_type 			= get_post_type(); // If post is a custom post type
 		$parent_id  		= isset( $post->post_parent ) ? $post->post_parent : '';
+		$singular_video		= ( ! is_singular( 'video' ) ) ?: ' mt-5';
 
 
 		$html_output		= '';
@@ -166,7 +169,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 		global $wp_query; // Get the query & post information
 
 		if ( ! is_front_page() ) :
-			$html_output		.= '<nav class="' . $breadcrumb__grp_class . '" itemprop="breadcrumb" itemscope itemtype="' . $schema_url . '/BreadcrumbList">';
+			$html_output		.= '<nav class="' . $breadcrumb__grp_class . $singular_video . '" itemprop="breadcrumb" itemscope itemtype="' . $schema_url . '/BreadcrumbList">';
 				$html_output .= '<li class="' . $breadcrumb__item_class . '" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem">';
 					$html_output .= '<meta itemprop="position" content="1">';
 					$html_output .= '<a href="' . $home_url . '" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">'. $text['home'] . '</span></a>';
