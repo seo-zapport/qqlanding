@@ -25,6 +25,9 @@ function qqlanding_load_admin_scripts( $hook ){
 		wp_enqueue_media();
 		wp_register_script( 'admin-script', get_template_directory_uri() . '/inc/admin-template/assets/js/admin-script.js', array('jquery'), '0.0.1', true);
 		wp_enqueue_script( 'admin-script' );
+
+		wp_register_script( 'admin-flipclock', get_template_directory_uri() . '/inc/admin-template/assets/js/admin-flipclock.js', array('jquery'), '0.0.1', true);
+		wp_enqueue_script( 'admin-flipclock' );
 		
 		wp_enqueue_script("jquery");
 		wp_register_script( 'flipclock-script', get_template_directory_uri() . '/assets/js/flipclock.js', array('jquery'), '0.0.1', true);
@@ -36,6 +39,11 @@ function qqlanding_load_admin_scripts( $hook ){
 		/** Style -------*/
 		wp_register_style( 'admin-style', get_template_directory_uri() . '/inc/admin-template/assets/css/admin-style.css', array() , '0.0.1', 'all' );
 		wp_enqueue_style( 'admin-style' );
+
+		/** Script -------*/
+		wp_enqueue_media();
+		wp_register_script( 'admin-script', get_template_directory_uri() . '/inc/admin-template/assets/js/admin-script.js', array('jquery'), '0.0.1', true);
+		wp_enqueue_script( 'admin-script' );
 		
 	} else{
 		return;

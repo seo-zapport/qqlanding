@@ -1,17 +1,17 @@
 (function($){
 	$(document).ready(function(){
-		var ppp = 3,
+		var ppp = 6,
 		pageNumber = 1,
 		offset = 1;
 
 		$('#qqlandingLoadMoreVideo').on('click', function(e){
-			var off = pageNumber * 3;
+			var off = pageNumber * 6;
 			var item = '&pageNumber=' + pageNumber + '&off=' + off + '&ppp=' + ppp + '&action=more_post_ajax';
 			pageNumber++;			
 			var button = $(this);
 			e.preventDefault;
-			//console.log(item);
-			$.ajax({
+			console.log(item);
+			/*$.ajax({
 				type: 'POST',
 				dataType: 'html',
 				url: ajax_post.ajaxurl,
@@ -41,7 +41,7 @@
 		        		button.attr("disabled",true);
 		        	}		        	
 		        }
-			});
+			});*/
 			return false;
 		});
 

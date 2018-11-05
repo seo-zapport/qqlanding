@@ -20,7 +20,7 @@ function more_post_ajax(){
     header("Content-Type: text/html");
     $args = array(
     	'post_type' 		=> 'video',
-    	'post_status'		=> 'post',
+    	'post_status'		=> array('post','publish'),
     	'posts_per_page'	=> $ppp,
     	'offset'    		=> $off,
     	'paged'				=> $page

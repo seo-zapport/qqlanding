@@ -295,5 +295,9 @@
 			text-transform:uppercase;
 		}
 	}
-
+}
+.site-bank-wrapper{
+	&.widget{
+		margin-bottom: 0;
+	}
 }

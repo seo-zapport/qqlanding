@@ -22,13 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 
 		<div class="container">
 			<?php $licensed = get_field('licensed_settings', 'option');
-			$banks_enabled = get_field('providers', 'option'); ?>
-			<?php if ($licensed['lcs_allow'] == true ): ?>
-				<div class="site-bank-wrapper widget py-3">
+			$banks_enabled = get_field('providers', 'option');
+			if ($licensed['lcs_allow'] == true ): ?>
+				<div class="site-bank-wrapper widget py-4">
 					<div class="row">
 						<?php if ( have_rows('licensed_settings', 'option')  ): ?>
 							<?php while ( have_rows('licensed_settings', 'option')  ): the_row(); ?>
-								<?php if ( get_sub_field( 'lcs_allow','option' ) == true ): ?>
+								<?php if ( get_sub_field( 'lcs_allow','option' ) === true ): ?>
 									<div class="col-12 col-md-3 col-lg-3">
 										<div class="provider-group prov-license">
 											<?php if ( ! empty( get_sub_field( 'lcs_title','option' ) ) ): ?>
@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 							<?php endwhile; ?>
 						<?php endif; ?>
 						<?php 
-						$dislay_footer = ( get_field( 'sm_footer', 'option' ) === true ) ? 'col-md-5 col-lg-5' : 'col-md-9 col-lg-9' ;
+						$dislay_footer = ( get_field( 'sm_footer', 'option' ) === true ) ? 'col-md-6 col-lg-6' : 'col-md-9 col-lg-9' ;
 						if ( have_rows('providers', 'option')  ): ?>
 							<?php while ( have_rows('providers', 'option')  ): the_row(); ?>
 								<?php $country = get_sub_field( 'b_country', 'option' );
@@ -94,12 +94,12 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 							<?php endwhile; ?>
 						<?php endif; ?>
 						<?php if ( get_field( 'sm_footer', 'option' ) === true ): ?>
-							<div class="col-12 col-md-4 col-lg-4">
+							<div class="col-12 col-md-3 col-lg-3">
 								<div class="widget-title-container">
 									<h4 class="widget-title">Social Media</h4>
 								</div>
-								<div class="site-footer-info">
-									<div class="container">
+								<div class="site-footer-info px-0">
+									<div class="container px-0">
 										<?php qqlanding_social_media(); ?>
 									</div>
 								</div>
@@ -122,10 +122,10 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 					</div>
 				</div>
 			</div>
-			<?php endif; ?>
-			<div class="row">
-				<?php $footer_socket_class = qqlanding_footer_socket_class( get_theme_mod('qqlanding_display_footer_option'),  has_nav_menu('footer') ); ?>
-				<?php if( get_theme_mod("qqlanding_display_footer_option") == 1 ): ?>
+			<?php endif; 
+			$footer_socket_class = qqlanding_footer_socket_class( get_theme_mod('qqlanding_display_footer_option'),  has_nav_menu('footer') );
+			if( get_theme_mod("qqlanding_display_footer_option") == 1 ): ?>
+				<div class="row">
 					<div class="site-info <?php echo $footer_socket_class['footer_class']; ?>">		
 						<?php if(get_theme_mod('qqlanding_footer_settings')): 
 								echo get_theme_mod('qqlanding_footer_settings');
@@ -143,22 +143,21 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 							?>
 						<?php endif; //end copyright editor?>			
 					</div><!-- .site-info -->
-				<?php endif; //end qqlanding_display_footer_option
-					if ( has_nav_menu('footer') ):
-						wp_nav_menu( array(
-							'theme_location'  => 'footer',
-							'container'       => 'div',
-							'container_class' => $footer_socket_class['has_nav_class'] . ' mt-3 mt-md-3 mt-lg-0',
-							'container_id'    => 'footer-menu-wrap',
-							'menu_class'      => 'footer-menu',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-							'depth'           => 0,
-						) );
-					endif; ?>
-			</div>
-
+				</div>
+			<?php endif; //end qqlanding_display_footer_option
+				if ( has_nav_menu('footer') ):
+					wp_nav_menu( array(
+						'theme_location'  => 'footer',
+						'container'       => 'div',
+						'container_class' => $footer_socket_class['has_nav_class'] . ' mt-3 mt-md-3 mt-lg-0',
+						'container_id'    => 'footer-menu-wrap',
+						'menu_class'      => 'footer-menu',
+						'echo'            => true,
+						'fallback_cb'     => 'wp_page_menu',
+						'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+						'depth'           => 0,
+					) );
+				endif; ?>
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
 	<?php if ( th_layout() === 'box' ): ?>

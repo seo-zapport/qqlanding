@@ -70,6 +70,7 @@
 * prov-default banks
 *--------------------*/ }
 .provider-group[class*='-category'], .provider-group[class*='-default'] { border: 1px solid #7f7f7f; border-radius: 5px; margin-bottom: 18px; padding: 8px 10px; }
+.provider-group[class*='-license'] .provider-item > i { background: url("../../assets/images/providers/ico_reco-g.png") no-repeat; }
 .provider-group[class*='-license'] .pagcor { background-position: 0 0; width: 140px; }
 .provider-group[class*='-category'] .bet368 { width: 86px; background-position: 3px -302px; }
 .provider-group[class*='-category'] .opus { width: 138px; background-position: 5px -2001px; }
@@ -208,11 +209,11 @@
 .provider-group[class*='-banks'] .bank-china .crm_bank { background-position: 3px -2765px; width: 130px; }
 .provider-group[class*='-banks'] .bank-china .psbchina { background-position: 3px -2848px; width: 130px; }
 .provider-group[class*='-network'] .provider-item > i { background: url("../../assets/images/providers/ico_net.png") no-repeat; }
-.provider-group[class*='-network'] .network-indo .provider-item { margin-bottom: 10px; }
-.provider-group[class*='-network'] .network-indo .provider-item .sctv { background-position: -16px -10px; width: 115px; height: 41px; }
-.provider-group[class*='-network'] .network-indo .provider-item .orangetv { background-position: -16px -68px; width: 150px; height: 41px; }
-.provider-group[class*='-network'] .network-indo .provider-item .k_vision { background-position: -16px -133px; width: 185px; height: 41px; }
-.provider-group[class*='-network'] .network-indo .provider-item .nexmedia { background-position: -16px -195px; width: 114px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item { margin-bottom: 25px; }
+.provider-group[class*='-network'] .network-indo .provider-item .sctv { background-position: -16px -10px; width: 125px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item .orangetv { background-position: -11px -68px; width: 160px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item .k_vision { background-position: -8px -133px; width: 210px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item .nexmedia { background-position: -14px -195px; width: 119px; height: 41px; }
 .provider-group[class*='-network'] .network-indo .provider-item .indovision { background-position: -16px -264px; width: 90px; height: 41px; }
 .provider-group[class*='-network'] .network-indo .provider-item .supersoccer { background-position: -16px -338px; width: 138px; height: 41px; }
 

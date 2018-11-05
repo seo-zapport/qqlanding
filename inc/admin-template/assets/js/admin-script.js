@@ -1,26 +1,3 @@
-var clock;
-
-$(document).ready(function() {
-	var clock;
-	var dateToIntegerA = $('#dateAStrtoInteger').attr('data-dateA');
-	var dateToIntegerB = $('#dateBStrtoInteger').attr('data-dateB');
-	//console.log( ((new Date().getTime())/1000) + dateToInteger );
-	FlipClock.Lang.Custom = { days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds' };
-	var opts = {
-		clockFace: 'DailyCounter',
-		countdown: true,
-		language: 'Custom'
-	};  
-
-	var countdownA = dateToIntegerA - ((new Date().getTime())/1000); // from: 11/01/2018 08:31 am +0800
-	var countdownB = dateToIntegerB - ((new Date().getTime())/1000); // from: 11/01/2018 08:31 am +0800
-	//var countdown = dateToInteger - ((new Date().getTime())/1000); // from: 11/01/2018 08:31 am +0800
-	countdownA = Math.max(1, countdownA);
-	countdownB = Math.max(1, countdownB);
-	$('#dateAWrap').FlipClock(countdownA, opts);
-	$('#dateBWrap').FlipClock(countdownB, opts);
-});
-
 /**Media Uploader---*/
 (function($){
 	var mediaUploader_a;
@@ -46,6 +23,7 @@ $(document).ready(function() {
 		});
 		mediaUploader_a.open();
 	});
+
 	var mediaUploader_b;
 	$('#upload_logo_b').on('click', function(e){
 		e.preventDefault;
@@ -68,6 +46,19 @@ $(document).ready(function() {
 
 		});
 		mediaUploader_b.open();
+	});
+
+	$('#matches_status').on('change', function(){
+	    var optionSelected = $("option:selected", this);
+	    var valueSelected = this.value;
+	    /*if ( valueSelected == 'match_a' ) {
+	    	//$('#dateMatchWrap').html('Hello A');
+	    	$('#dateMatchWrap').find( 'input' ).attr({ id: 'matches_a_date', name:'matches_a_date'});
+	    }else{
+	    	//$('#dateMatchWrap').html('Hello B');
+	    	$('#dateMatchWrap').find( 'input' ).attr({ id: 'matches_b_date', name:'matches_b_date'});
+	    }*/
+	    console.log(valueSelected);
 	});
 
 })(jQuery);

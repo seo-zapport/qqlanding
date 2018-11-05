@@ -234,6 +234,11 @@
 		padding:8px 10px;
 	}
 	&[class*='-license']{
+		.provider-item{
+			> i{
+				background: url('../../assets/images/providers/ico_reco-g.png') no-repeat;
+			}
+		}
 		.pagcor{
 			background-position:0 0;width:140px;
 		}
@@ -420,11 +425,11 @@
 		}
 		.network-indo{
 			.provider-item{
-				margin-bottom: 10px;
-				.sctv{background-position: -16px -10px;width: 115px;height:41px;}
-				.orangetv{background-position: -16px -68px;width: 150px;height:41px;}
-				.k_vision{background-position: -16px -133px;width: 185px;height:41px;}
-				.nexmedia{background-position: -16px -195px;width: 114px;height:41px;}
+				margin-bottom: 25px;
+				.sctv{background-position: -16px -10px;width: 125px;height:41px;}
+				.orangetv{background-position: -11px -68px;width: 160px;height:41px;}
+				.k_vision{background-position: -8px -133px;width: 210px;height:41px;}
+				.nexmedia{background-position: -14px -195px;width: 119px;height:41px;}
 				.indovision{background-position: -16px -264px;width: 90px;height:41px;}
 				.supersoccer{background-position: -16px -338px;width: 138px;height:41px;}
 			}

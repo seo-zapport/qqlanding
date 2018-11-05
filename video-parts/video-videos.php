@@ -9,8 +9,8 @@ if ($disable) : ?>
 			<?php
 				$args = array(
 					'post_type'			=> 'video',
-					'post_status'		=> 'post',
-					'posts_per_page'	=> 3,
+					'post_status'		=> array('post','publish'),
+					'posts_per_page'	=> 6,
 				);
 				$video = new WP_Query($args);
 

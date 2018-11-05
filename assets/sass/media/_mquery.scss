@@ -21,6 +21,12 @@
 				margin:0 auto;
 			}
 		}
+		#banner{
+			#video_wrap{
+				height: 450px;
+				margin-top: 54px;
+			}
+		}
 		.site-footer{
 			#footer-menu-wrap{
 				.footer-menu{
@@ -30,12 +36,6 @@
 						padding-left: 0.7em;
 					}
 				}
-			}
-		}
-		#banner{
-			#video_wrap{
-				height: 450px;
-				margin-top: 54px;
 			}
 		}
 	}
@@ -96,7 +96,7 @@
 	    }
     }
 }
-@media (max-width: 960px){
+@media (max-width: 991px){
 	.qqlanding-sites{
 		.qqland-grid-2{
 			.qqland-post{
@@ -121,6 +121,15 @@
 					background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 				}
 		 	 }
+		}
+		.banner-skew{
+			padding-bottom: 200px;
+		}
+		#banner{
+			#video_wrap{
+				height: 450px;
+				margin-top: 54px;
+			}
 		}
 	}
 }
@@ -217,7 +226,16 @@
 	    }
     }
 }
-@media only screen and (min-width:320px) and (max-width:639px){}
+@media only screen and (min-width:320px) and (max-width:480px){
+
+	.qqlanding-sites{
+		#banner{
+			#video_wrap{
+				height: 245px;
+			}
+		}
+	}
+}
 @media only screen and (min-width:1024px) and (max-width:1366px){.float-flat .qqgroup-img{width:175px}}
 @media only screen and (min-width:950px) and (max-width:1280px){.float-flat .qqgroup-img{width:185px}}
 @media only screen and (min-width:900px) and (max-width:1440px){.float-flat .qqgroup-img{width:178px}.float-flat .p_logo{height:180px}.float-flat .p_logo:nth-of-type(1){height:160px}}
