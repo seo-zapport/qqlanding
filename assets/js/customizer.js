@@ -39,4 +39,25 @@
 			}
 		} );
 	} );
+
+    /*-Range----*/
+
+    wp.customize('qqlanding_range_settings', function( value){
+        value.bind(function( newValue ){
+            $('.post-entry-title').html(newValue);
+        })
+    });
+
+    /*wp.customize( 'qqlanding_bg_settings',function(value){
+    	value.bind(function(to){
+    		if ( 'image' == to ) {
+    			alert('image is here');
+    		}else{
+    			alert('color is here');
+    		}
+    	});
+    });*/
+    /*$( '#customize-control-qqlanding_bg_settings input:radio' ).on('change',function(){
+    	console.log('hello');
+    });*/
 } )( jQuery );

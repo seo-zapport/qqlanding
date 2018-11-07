@@ -169,3 +169,11 @@ function qqlanding_sanitize_js_code( $input ){
 function qqlanding_sanitize_js_output( $input ){
 	return esc_textarea( base64_decode($input) );
 }
+
+
+/**
+ * output escape function
+ */
+function wpse_intval( $input ){
+	return (int) $input;
+}

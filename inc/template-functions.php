@@ -537,6 +537,12 @@ function custom_field_excerpt() {
 	return apply_filters('the_excerpt', $text);
 }
 
+
+function qqlanding_preloader(){
+	echo qqlanding_preload_item();
+ }
+add_action( 'wp_head', 'qqlanding_preloader' );
+
 /**
  * Footer Extend script in video page template
  */

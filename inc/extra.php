@@ -330,3 +330,46 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 		echo $html_output;
 	}
 endif;
+
+
+function qqlanding_preload_item(){ 
+
+	if ( get_theme_mod( 'qqlanding_display_preloading_settings', true ) ) :?>
+	<div id="qqpreload">
+		<div id="qqpreload_center">
+			<?php
+			$loader = get_theme_mod('qqlanding_loader_item_settings');
+			$loader_item = ''; 
+			switch ($loader) {
+				case 'five': $loader_class = 'animate_five'; 
+					$loader_item = '<div class="qqpreload_object" id="qqpreload_four"></div><div class="qqpreload_object" id="qqpreload_five"></div><div class="qqpreload_object" id="qqpreload_six"></div><div class="qqpreload_object" id="qqpreload_seven"></div><div class="qqpreload_object" id="qqpreload_eight"></div><div class="qqpreload_object" id="qqpreload_nine"></div>'; 
+					break;
+				case 'seven': $loader_class = 'animate_seven';
+					$loader_item = '<div class="qqpreload_object" id="qqpreload_four"></div>'; 
+					break;
+				case 'eleven': $loader_class = 'animate_eleven';
+					break;
+				case 'sixteen': $loader_class = 'animate_sixteen';
+					$loader_item = '<div class="qqpreload_object" id="qqpreload_four"></div>'; 
+					break;
+				case 'twenty': $loader_class = 'animate_twenty'; 
+					$loader_item = '<div class="qqpreload_object" id="qqpreload_four"></div><div class="qqpreload_object" id="qqpreload_five"></div><div class="qqpreload_object" id="qqpreload_six"></div><div class="qqpreload_object" id="qqpreload_seven"></div><div class="qqpreload_object" id="qqpreload_eight"></div>'; 
+					break;
+				case 'twenty_four': $loader_class = 'animate_twenty_four'; 
+					$loader_item = '<div class="qqpreload_object" ></div><div class="qqpreload_object" ></div><div class="qqpreload_object" ></div><div class="qqpreload_object" ></div><div class="qqpreload_object" ></div><div class="qqpreload_object" ></div><div class="qqpreload_object" ></div><div class="qqpreload_object" ></div>'; 
+					break;
+				default:
+					$loader_class = 'animate_two';
+					$loader_item = '<div class="qqpreload_object" id="qqpreload_four"></div><div class="qqpreload_object" id="qqpreload_five"></div><div class="qqpreload_object" id="qqpreload_six"></div><div class="qqpreload_object" id="qqpreload_seven"></div><div class="qqpreload_object" id="qqpreload_eight"></div><div class="qqpreload_object" id="qqpreload_big"></div>';
+					break;
+			} ?>
+			<div id="qqpreload_center_absolute" class="<?php echo $loader_class; ?>">
+				<div class="qqpreload_object" id="qqpreload_one"></div>
+				<div class="qqpreload_object" id="qqpreload_two"></div>
+				<div class="qqpreload_object" id="qqpreload_three"></div>
+				<?php echo $loader_item; ?>
+			</div>
+		</div> 
+	</div>
+<?php endif;
+}

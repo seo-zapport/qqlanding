@@ -142,13 +142,9 @@
     $('.btn-pangclose').click(function() {
         var toggle = $.data(this, 'clickToggle') == null ? true : $.data(this, 'clickToggle');
         if ( toggle ) {
-            /*$('.boxWrap').stop(true,false).animate({marginLeft : "0px"},500);
-            $(this).find('i.fa').removeClass('fa-angle-double-right').addClass('fa-angle-double-left');*/
             $('.boxWrap').stop(true,false).animate({marginLeft : "-178px"},500);
             $(this).find('i.fa').removeClass('fa-angle-double-left').addClass('fa-angle-double-right');
-        } else {
-            /*$('.boxWrap').stop(true,false).animate({marginLeft : "-178px"},500);
-            $(this).find('i.fa').removeClass('fa-angle-double-left').addClass('fa-angle-double-right');  */    
+        } else { 
             $('.boxWrap').stop(true,false).animate({marginLeft : "0px"},500);
             $(this).find('i.fa').removeClass('fa-angle-double-right').addClass('fa-angle-double-left');
         }
@@ -190,7 +186,7 @@
      });
 
 
-    function sample(){
+    function qqland_resize(){
         var body_h = $(window).height(),
             wrap_innerh = $('#qqgroup-wrap').innerHeight(),
             body_w = $(window).width();
@@ -213,12 +209,16 @@
         } 
     }
     $(window).on('load resize', function(){
-        sample();
+        qqland_resize();
     });
 
     /**
-     * Video
+     * Preload
      *------------------*/
-    
+    $(window).load(function(){
+        // $("#qqpreload").fadeOut(500);
+        $('#qqpreload').fadeOut('slow',function(){$(this).remove();});
+    });
+
 
 })(jQuery);

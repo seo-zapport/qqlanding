@@ -10,8 +10,8 @@
 			pageNumber++;			
 			var button = $(this);
 			e.preventDefault;
-			console.log(item);
-			/*$.ajax({
+			//console.log(item);
+			$.ajax({
 				type: 'POST',
 				dataType: 'html',
 				url: ajax_post.ajaxurl,
@@ -41,7 +41,7 @@
 		        		button.attr("disabled",true);
 		        	}		        	
 		        }
-			});*/
+			});
 			return false;
 		});
 

@@ -831,6 +831,234 @@ function qqlanding_customizer_register( $wp_customize ){
 			);
 
 
+	/**
+	 * # Preloader Panel
+	 *-------------------------------------*/
+	$wp_customize->add_panel(
+		'qqlanding_preloader_panel',
+		array(
+			'priority' 	> 25,
+			'capability'	=> 'edit_theme_options',
+			'theme_support'	=> '',
+			'title'			=> __( 'Preloader Settings', 'qqlanding' ),
+			'description'	=> esc_html__( 'Use this panel to set the preloader settings', 'qqlanding' )
+		)
+	);
+
+		/**
+	 	* ## Preloader Settings section
+	 	*-------------------------------------*/
+		$wp_customize->add_section( 'qqlanding_preloading_section',
+			array(
+				'priority'		=> 3,
+				'title'			=> __( 'Settings', 'qqlanding' ),
+				'description'	=> esc_html__( 'Use this section to set the settings/options for preloader', 'qqlanding' ),
+				'panel'			=> 'qqlanding_preloader_panel'
+			)
+		);
+
+			$wp_customize->add_setting( 'qqlanding_display_preloading_settings',
+				array(
+					'default'		=> true,
+					'sanitize_callback'	=> 'qqlanding_sanitize_checkbox'
+				)
+			);
+
+				$wp_customize->add_control('qqlanding_display_preloading_settings',
+					array(
+						'type'			=> 'checkbox',
+						'label'			=> esc_html__( 'Display Preloader', 'qqlanding' ),
+						'description'	=> esc_html__( '', 'qqlanding' ),
+						'section'		=> 'qqlanding_preloading_section'
+					)
+				);
+		/**
+	 	* ## Preloader Background section
+	 	*-------------------------------------*/
+		$wp_customize->add_section( 'qqlanding_bg_section',
+			array(
+				'priority'		=> 4,
+				'title'			=> __( 'Background', 'qqlanding' ),
+				'description'	=> esc_html__( 'Use this section to set the background for preloader', 'qqlanding' ),
+				'panel'			=> 'qqlanding_preloader_panel'
+			)
+		);
+
+			/*-BG-selection-----*/
+			$wp_customize->add_setting( 'qqlanding_bg_settings',
+				array(
+					'default'		=> 'color',
+					'transport'		=> 'refresh',
+					'sanitize_callback' => 'qqlanding_sanitize_radio'
+				)
+			);
+
+				$wp_customize->add_control( 'qqlanding_bg_settings',
+					array(
+						'label'		=> __( 'Select Attribute', 'qqlanding' ),
+						'description'	=> esc_html__( 'Use this settings to indicate your bacground for the pre-loader.', 'qqlanding' ),
+						'section'		=> 'qqlanding_bg_section',
+						'priority'		=> 4,
+						'type'			=> 'radio',
+						'capability'	=> 'edit_theme_options',
+						'choices'		=> array(
+							'color'		=> __( 'Background Color', 'qqlanding'),
+							'image'		=> __( 'Background Image', 'qqlanding'),
+						)
+					)
+				);
+
+			/*-Range-----*/
+			$wp_customize->add_setting( 'qqlanding_range_settings',
+				array(
+					'default'		=> 0,
+					'transport'   => 'refresh',
+				)
+			);
+
+				$wp_customize->add_control( new QQLanding_Customize_Range(
+						$wp_customize, 'qqlanding_range_settings', array(
+
+							'label'		=> __( 'Opacity', 'qqlanding' ),
+							'description'	=> esc_html__( 'Use this range to indicate the opacity of your bacground.', 'qqlanding' ),
+							'section'		=> 'qqlanding_bg_section',
+							'priority'		=> 7,
+							'type'			=> 'range',
+							'capability'	=> 'edit_theme_options',
+							'input_attrs'	=> array(
+								'min'		=> 0,
+								'max'		=> 1,
+								'step'		=> 0.05,
+								'class'		=> __( 'qqlanding-range', 'qqlanding'),
+							)
+						)
+					)
+				);
+
+			/*-Color-Picker----*/
+		 	$wp_customize->add_setting( 'qqlanding_bg_color_settings',
+		 		array(
+		 			'default'	=> '#272525',
+		 			'transport'	=> 'refresh',
+					'type'				=> 'theme_mod',
+					'capability'		=> 'edit_theme_options',
+					'sanitize_callback'	=> 'qqLanding_sanitize_hex_color'
+		 		)
+		 	);
+
+		 		$wp_customize->add_control( new WP_Customize_Color_Control(
+		 				$wp_customize, 'qqlanding_bg_color_settings', array(
+		 					'label'		=> __( 'Color', 'qqlanding' ),
+		 					'section'	=> 'qqlanding_bg_section',
+		 					'setting'	=> 'qqlanding_bg_color_settings',
+		 				)
+		 			)
+		 		);
+
+			/*-Upload-Image----*/
+			$wp_customize->add_setting( 'qqlanding_bg_image_settings',
+				array(
+					'sanitize_callback' => 'qqlanding_sanitize_image'
+				)
+			);
+
+				$wp_customize->add_control(
+					new WP_Customize_Image_Control( $wp_customize, 'qqlanding_bg_image_settings',
+						array(
+							'label'		=> __( 'Image', 'qqLanding' ),
+							'section'	=> 'qqlanding_bg_section',
+							'setting'	=> 'qqlanding_bg_image_settings',
+							/*'description' => __( 'Upload a logo for your website. Recommended height for your logo is 135px.', 'qqLanding' )*/
+						)
+					)
+				);
+
+
+		/**
+	 	* ## Preloader View section
+	 	*-------------------------------------*/
+	 	$wp_customize->add_section( 'qqlanding_loader_view_section',
+	 		array(
+	 			'priority'		=> 5,
+	 			'title'			=> __( 'Loader', 'qqlanding' ),
+	 			'description'	=> esc_html__( 'Use this section to select the icon\'s in your preloader. ', 'qqlanding' ),
+				'panel'			=> 'qqlanding_preloader_panel'
+	 		)
+	 	);
+
+			
+			/*-Loader-Picker----*/
+			$wp_customize->add_setting( 'qqlanding_loader_item_settings',
+				array(
+					'default'		=> 'one',
+					'transport'		=> 'refresh',
+					'sanitize_callback' => 'qqlanding_sanitize_radio'
+				)
+			);
+				$wp_customize->add_control(
+					new QQLanding_Customize_Radio_Image(
+						$wp_customize, 'qqlanding_loader_item_settings',
+						array(
+							'label'		=> __( 'Sidebar Layouts', 'qqlanding' ),
+							'section'	=> 'qqlanding_loader_view_section',
+							'settings'	=> 'qqlanding_loader_item_settings',
+							'description'	=> esc_html__( 'Use this settings to indicate your bacground for the pre-loader.', 'qqlanding' ),
+							'capability'	=> 'edit_theme_options',
+							'choices'	=> array(
+								'two'	=> array(
+									'label'		=> esc_html__( 'One', 'qqlanding' ),
+									'url'		=> '%spreloader_2.png'
+								),
+								'five'	=> array(
+									'label'		=> esc_html__( 'Two', 'qqlanding' ),
+									'url'		=> '%spreloader_5.png'
+								),
+								'seven'	=> array(
+									'label'		=> esc_html__( 'Three', 'qqlanding' ),
+									'url'		=> '%spreloader_7.png'
+								),
+								'eleven'	=> array(
+									'label'		=> esc_html__( 'Four', 'qqlanding' ),
+									'url'		=> '%spreloader_11.png'
+								),
+								'sixteen'	=> array(
+									'label'		=> esc_html__( 'Five', 'qqlanding' ),
+									'url'		=> '%spreloader_16.png'
+								),
+								'twenty'	=> array(
+									'label'		=> esc_html__( 'Six', 'qqlanding' ),
+									'url'		=> '%spreloader_20.png'
+								),
+								'twenty_four'	=> array(
+									'label'		=> esc_html__( 'Seven', 'qqlanding' ),
+									'url'		=> '%spreloader_24.png'
+								),
+							)
+						)
+					)
+				);
+
+			
+			/*-Color-Picker----*/
+		 	$wp_customize->add_setting( 'qqlanding_vcolor_settings',
+		 		array(
+		 			'default'	=> '#ffffff',
+		 			'transport'	=> 'refresh',
+					'type'				=> 'theme_mod',
+					'capability'		=> 'edit_theme_options',
+					'sanitize_callback'	=> 'qqLanding_sanitize_hex_color'
+		 		)
+		 	);
+
+		 		$wp_customize->add_control( new WP_Customize_Color_Control(
+		 				$wp_customize, 'qqlanding_vcolor_settings', array(
+		 					'label'		=> __( 'Color', 'qqlanding' ),
+		 					'section'	=> 'qqlanding_loader_view_section',
+		 					'setting'	=> 'qqlanding_vcolor_settings',
+		 				)
+		 			)
+		 		);
+
 }
 add_action( 'customize_register', 'qqlanding_customizer_register' );
 

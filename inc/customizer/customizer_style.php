@@ -5,6 +5,7 @@
 
 function theme_site_colors(){
 	$theme_custom_style = '';
+	$preloader_custom_style = '';
 	$theme_layout = get_field( 'th_layout', 'option' );
 
 	//echo $theme_layout;
@@ -18,6 +19,14 @@ function theme_site_colors(){
 	$theme_text_color = esc_attr( $theme_text_color );
 	$theme_link_color = esc_attr( $theme_link_color );
 	$theme_link_hover_color = esc_attr( $theme_link_hover_color );
+
+	/*-Pre-loader---**/
+	$display_preloader = get_theme_mod( 'qqlanding_display_preloading_settings', true);
+	$preloader_bg = get_theme_mod( 'qqlanding_bg_settings', 'color' );
+	$preloader_bg_color = get_theme_mod( 'qqlanding_bg_color_settings', '#272525' );
+	$preloader_bg_image = get_theme_mod( 'qqlanding_bg_image_settings' );
+	$preloader_bg_opacity = get_theme_mod( 'qqlanding_range_settings', 0 );
+	$preloader_item_color = get_theme_mod( 'qqlanding_vcolor_settings', '#ffffff' );
 
 	if ( $theme_layout === 'wide' && ! is_front_page() || $theme_layout === 'wide' && is_home() ) {
 		if ( $theme_wrap_color != '#f7f8f9' ) {
@@ -59,9 +68,27 @@ function theme_site_colors(){
 		$theme_custom_style .= '.qqlanding-sites .site-content{padding-top: 0;}';
 	}
 
+	if ( $preloader_bg == 'image' ) {
+		$preloader_custom_style .= '#qqpreload{background:url(' . $preloader_bg_image . ') no-repeat;background-position:top center;background-size:cover;opacity:' . $preloader_bg_opacity . ';}';
+	}else{
+		$preloader_custom_style .= '#qqpreload{background-color:' . $preloader_bg_color . ';opacity:' . $preloader_bg_opacity . ';}';
+	}
+
+	if ( $preloader_item_color != '#ffffff' ) {
+		$preloader_custom_style .='.qqpreload_object{background-color:' . $preloader_item_color . ' !important;}';
+	}
+
+	
+
 	if ( ! empty($theme_custom_style) ) : ?>
 		<style type="text/css">
 			<?php echo $theme_custom_style; ?>
+		</style>
+	<?php endif;
+
+	if ( $display_preloader && ! empty($preloader_custom_style) ) : ?>
+		<style type="text/css">
+			<?php echo $preloader_custom_style; ?>
 		</style>
 	<?php endif;
 }
