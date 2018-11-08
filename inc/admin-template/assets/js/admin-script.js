@@ -48,6 +48,30 @@
 		mediaUploader_b.open();
 	});
 
+	var mediaUploader_c;
+	$('#upload_logo_c').on('click', function(e){
+		e.preventDefault;
+
+		if (mediaUploader_c) {
+			mediaUploader_c.open();
+			return;
+		}
+		mediaUploader_c = wp.media.frames.file_frame = wp.media({
+			title: 'Choose a Logo',
+			button: {
+				text: 'Choose Logo'
+			},
+			multiple: false
+		});
+		mediaUploader_c.on('select',function(){
+			attachment = mediaUploader_c.state().get('selection').first().toJSON();
+			$('#match_logo_c').val(attachment.url);
+			$('#logo_wrap_c').attr('src',attachment.url);
+
+		});
+		mediaUploader_c.open();
+	});
+
 	$('#matches_status').on('change', function(){
 	    var optionSelected = $("option:selected", this);
 	    var valueSelected = this.value;
@@ -59,6 +83,11 @@
 	    	$('#dateMatchWrap').find( 'input' ).attr({ id: 'matches_b_date', name:'matches_b_date'});
 	    }*/
 	    console.log(valueSelected);
+	});
+
+	//find the th tag and add sr-only class
+	$('.vm-general-form > table.form-table tbody tr').each(function(index){
+		$(this).find('th').addClass('sr-only');
 	});
 
 })(jQuery);

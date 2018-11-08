@@ -10,23 +10,24 @@
 
 #matchWrap .match-entry-title { font-size: 24px; font-size: 1.5rem; font-family: noto_sans_regular; color: #fff; text-shadow: 1px 0px 8px #b8572c; text-transform: uppercase; text-align: center; }
 #matchWrap .match-italic { font-family: noto_sans_italic; }
+#matchWrap .match-timer-title { font-size: 20.8px; font-size: 1.3rem; }
 #matchWrap #matchTimerWrap { /**--flipclock--*/ }
 #matchWrap #matchTimerWrap .flip-clock-wrapper { margin: auto; }
-#matchWrap #matchTimerWrap .flip-clock-wrapper ul { font-size: 38px; height: 57px; width: 40px; margin: 3px; }
-#matchWrap #matchTimerWrap .flip-clock-wrapper ul li { line-height: 57px; }
-#matchWrap #matchTimerWrap .flip-clock-wrapper ul li a div, #matchWrap #matchTimerWrap .flip-clock-wrapper ul li a div div.inn { font-size: 38px; }
+#matchWrap #matchTimerWrap .flip-clock-wrapper ul { font-size: 29px; height: 48px; width: 40px; margin: 3px; }
+#matchWrap #matchTimerWrap .flip-clock-wrapper ul li { line-height: 50px; }
+#matchWrap #matchTimerWrap .flip-clock-wrapper ul li a div, #matchWrap #matchTimerWrap .flip-clock-wrapper ul li a div div.inn { font-size: 29px; }
 #matchWrap #matchTimerWrap .flip-clock-wrapper ul li a div div.inn { background-color: #fff; color: #4c4c4a; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
 #matchWrap #matchTimerWrap .flip-clock-divider { height: 86px; width: 15px; }
-#matchWrap #matchTimerWrap .flip-clock-divider .flip-clock-label { top: auto; bottom: 0px; right: -69px; color: #fff; text-shadow: none; font-size: 14px; text-transform: uppercase; font-weight: 600; }
-#matchWrap #matchTimerWrap .flip-clock-divider.minutes .flip-clock-label { right: -79px; }
-#matchWrap #matchTimerWrap .flip-clock-divider.seconds .flip-clock-label { right: -82px; }
+#matchWrap #matchTimerWrap .flip-clock-divider .flip-clock-label { top: auto; bottom: 5px; right: -55px; color: #fff; text-shadow: none; font-size: 12px; text-transform: uppercase; font-weight: 600; }
+#matchWrap #matchTimerWrap .flip-clock-divider.minutes .flip-clock-label { right: -63px; }
+#matchWrap #matchTimerWrap .flip-clock-divider.seconds .flip-clock-label { right: -64px; }
 #matchWrap #matchTimerWrap .flip-clock-dot { display: none; }
 #matchWrap #matchTimerWrap .flip-clock-dot.top { top: 20px; }
 #matchWrap table, #matchWrap th, #matchWrap td { border-color: #d6e935; border-width: 2px; }
-#matchWrap .table thead th { padding: 0; border-color: #d6e935; font-family: helvetica; text-transform: uppercase; font-size: 20px; }
+#matchWrap .table thead th { padding: 0.3em; border-color: #d6e935; font-family: helvetica; text-transform: uppercase; font-size: 16px; font-size: 1rem; }
 #matchWrap .table th, #matchWrap .table td { padding: 0.5em; font-family: noto_sans_regular; }
 #matchWrap th { background-color: #222; color: #d6e935; font-weight: bold; }
-#matchWrap td { font-size: 15px; }
+#matchWrap td { font-size: 15px; font-size: 0.9375rem; }
 
 #videoWrap #video { position: relative; }
 #videoWrap .embed-container { position: relative; padding-bottom: 56.25%; overflow: hidden; max-width: 100%; height: auto; }
@@ -49,11 +50,15 @@
 #videoWrap .vid-card .vid-footer i, #videoWrap .vid-card .vid-footer small { display: inline-block; }
 #videoWrap .modal-btn { position: fixed; bottom: 0.75%; right: 8%; cursor: pointer; }
 
+@media (min-width: 968px) { .match-timer-title { margin: 8px auto; } }
 @media only screen and (min-width: 968px) and (max-width: 1024px) { #matchTimerWrap { /**--flipclock--*/ }
   #matchTimerWrap .flip-clock-wrapper { margin: auto; }
-  #matchTimerWrap .flip-clock-wrapper ul { font-size: 30px !important; height: 43px !important; width: 28px !important; }
-  #matchTimerWrap .flip-clock-wrapper ul li { line-height: 45px !important; }
-  #matchTimerWrap .flip-clock-wrapper ul li a div, #matchTimerWrap .flip-clock-wrapper ul li a div div.inn { font-size: 30px !important; } }
+  #matchTimerWrap .flip-clock-wrapper ul { font-size: 20px !important; height: 32px !important; width: 28px !important; }
+  #matchTimerWrap .flip-clock-wrapper ul li { line-height: 35px !important; }
+  #matchTimerWrap .flip-clock-wrapper ul li a div, #matchTimerWrap .flip-clock-wrapper ul li a div div.inn { font-size: 20px !important; }
+  #matchTimerWrap .flip-clock-divider .flip-clock-label { bottom: 25px !important; right: -45px !important; font-size: 10px !important; }
+  #matchTimerWrap .flip-clock-divider.minutes .flip-clock-label { right: -50px !important; }
+  #matchTimerWrap .flip-clock-divider.seconds .flip-clock-label { right: -50px !important; } }
 @media only screen and (min-width: 320px) and (max-width: 480px) { /**--flipclock--*/
   .flip-clock-wrapper { margin: auto; }
   .flip-clock-wrapper ul { font-size: 21px !important; height: 35px !important; width: 21px !important; }

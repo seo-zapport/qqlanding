@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * Style of the admin template
  *
  * @package QQLanding
  */

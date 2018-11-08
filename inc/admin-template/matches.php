@@ -1,6 +1,8 @@
 <?php
 /**
+ * This is the matches post type
  * 
+ * @package QQLanding
  */
 
 add_action( 'init', 'qqlanding_matches_custom_post_type' );
@@ -49,6 +51,8 @@ function qqlanding_matches_custom_column($column, $post_id){
 				$sample =  'Match A';
 			}else if(get_post_meta( $post_id, '_type_matches_key', true ) === 'match_b'){
 				$sample =  'Match B';
+			}else if(get_post_meta( $post_id, '_type_matches_key', true ) === 'match_c'){
+				$sample =  'Match C';
 			}else{
 				$sample =  '';
 			}
@@ -95,6 +99,7 @@ function qqlanding_matches_callback( $post ){
 					<select name="matches_status" id="matches_status">
 						<option value="match_a" <?php echo selected( $type_val, 'match_a' ); ?> >Match A</option>
 						<option value="match_b" <?php echo selected( $type_val, 'match_b' ); ?> >Match B</option>
+						<option value="match_c" <?php echo selected( $type_val, 'match_c' ); ?> >Match C</option>
 					</select>
 					<div class="desc">*Select your match type</div>
 				</td>

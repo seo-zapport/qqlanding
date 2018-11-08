@@ -1,4 +1,10 @@
 <?php
+/**
+ * This is the videos post type
+ * 
+ * @package QQLanding
+ */
+
 add_action( 'init', 'qqlanding_video_custom_post_type' );
 add_filter( 'manage_video_posts_columns', 'qqlanding_set_video_columns');
 add_action( 'manage_video_posts_custom_column', 'qqlanding_video_custom_column' , 10, 2);
