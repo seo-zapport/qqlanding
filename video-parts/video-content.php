@@ -2,9 +2,7 @@
 $disable = get_field( 'vm_editor_enable_section', 'option' ); //Content Enable/Disable
 $content_images = get_field('vm_content_images');
 if ( acf_selective_refresh($disable) ) return $disable = false;
-if ($disable) : 
-
-?>
+if ($disable) : ?>
 <section id="videoContent">
 	<div class="container">
 
@@ -21,7 +19,7 @@ if ($disable) :
 			<?php else: ?>
 				<?php if ( $con_setting['vm_content_position'] == 'left' ): ?>
 					<div class="<?php echo $hide_images; ?> col-12 col-md-6 col-lg-6 cont-videos-image">
-						<?php echo fpcontent_img_position($content_images,'first');	?>
+						<?php echo fpcontent_img_position($content_images,'vm');	?>
 					</div>
 				<?php endif; ?>
 				<div class="col-12 col-md-6 col-lg-6 cont-videos-entry">
@@ -29,7 +27,7 @@ if ($disable) :
 				</div>
 				<?php if ( $con_setting['vm_content_position'] == 'right' ): ?>
 					<div class="<?php echo $hide_images; ?> col-12 col-md-6 col-lg-6 cont-videos-image">
-						<?php echo fpcontent_img_position($content_images,'first');?>
+						<?php echo fpcontent_img_position($content_images,'vm');?>
 					</div>
 				<?php endif; ?>
 			<?php endif; ?>

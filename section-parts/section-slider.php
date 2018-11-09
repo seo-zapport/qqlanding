@@ -30,7 +30,7 @@ if ($disable) : ?>
 				<?php endif; ?>
 
 				<div id="banner-static" <?php echo ( $skew_opt !== true )? '' : 'class="banner-skew"'; ?>>
-					<div class="banner-static-content container text-<?php echo $txt_class; ?>">
+					<div class="banner-static-content container text-<?php echo $txt_class; ?> d-flex">
 						<?php if ( $con_settings['slider_content_size'] == 'full' ): ?>
 							<div class="col-12 col-md-12 col-lg-12 text-white">
 								<?php
@@ -54,10 +54,10 @@ if ($disable) : ?>
 								?>
 							</div> <!--Full-width-->
 						<?php else: ?>
-							<div class="row d-flex">
+							<div class="row">
 								<?php $slider_post = $con_settings['slider_content_position']; ?>
 								<?php if ( $slider_post == 'left' ): ?>
-									<div class="<?php echo ( $format == 'image' ) ?  $hide_mob : ''; ?> col-12 col-lg-6 text-white align-self-center">
+									<div class="<?php echo ( $format == 'image' ) ?  $hide_mob : ''; ?> col-12 col-lg-6 text-white align-self-center align-items-center">
 										<?php if ( $format == 'image' ): ?>
 											<?php echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider'); ?>
 										<?php else: 
@@ -65,7 +65,7 @@ if ($disable) : ?>
 										endif ?>
 									</div>
 								<?php endif; //left?>
-								<div class="col-12 col-lg-6 text-white align-self-center">
+								<div class="col-12 col-lg-6 text-white align-self-center align-items-center">
 									<?php
 										//echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'));
 										echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'));
@@ -86,7 +86,7 @@ if ($disable) : ?>
 									?>
 								</div>
 								<?php if ( $slider_post == 'right' ): ?>
-									<div class="<?php echo ( $format == 'image' ) ?  $hide_mob : ''; ?> col-12 col-lg-6 text-white align-self-center">
+									<div class="<?php echo ( $format == 'image' ) ?  $hide_mob : ''; ?> col-12 col-lg-6 text-white align-self-center align-items-center">
 										<?php if ( $format == 'image' ): 
 											echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
 										else:

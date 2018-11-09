@@ -69,7 +69,7 @@ function theme_site_colors(){
 	}
 
 	if ( $preloader_bg == 'image' ) {
-		$preloader_custom_style .= '#qqpreload{background:url(' . $preloader_bg_image . ') no-repeat;background-position:top center;background-size:cover;opacity:' . $preloader_bg_opacity . ';}';
+		$preloader_custom_style .= '#qqpreload{background:url(' . $preloader_bg_image . ') no-repeat;background-color:#fff;background-position:top center;background-size:cover;opacity:' . $preloader_bg_opacity . ';}';
 	}else{
 		$preloader_custom_style .= '#qqpreload{background-color:' . $preloader_bg_color . ';opacity:' . $preloader_bg_opacity . ';}';
 	}
@@ -78,11 +78,12 @@ function theme_site_colors(){
 		$preloader_custom_style .='.qqpreload_object{background-color:' . $preloader_item_color . ' !important;}';
 	}
 
-	
+	$positions = get_field( 'vm_position_property' );
+	$img_post = get_field( 'vm_img_position' );
 
 	if ( ! empty($theme_custom_style) ) : ?>
 		<style type="text/css">
-			<?php echo $theme_custom_style; ?>
+			<?php echo $theme_custom_style; ?>#videoContent .content-vm-img{<?php echo content_img_postion($positions,$img_post['vm_position_top'],$img_post['vm_position_right'],$img_post['vm_position_left'],$img_post['vm_position_buttom']); ?>}
 		</style>
 	<?php endif;
 

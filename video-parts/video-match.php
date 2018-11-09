@@ -3,7 +3,7 @@ $disable = get_field( 'vm_match_enable_section', 'option' ); //Content Enable/Di
 if ( acf_selective_refresh($disable) ) return $disable = false;
 if ($disable) : ?>
 	<section id="matchWrap" class="py-5">
-		<div id="matchTimerWrap" class="mb-3 container">
+		<div id="matchTimerWrap" class="mb-3 container container-lg-16w">
 			<h2 id="matchTitle" class="text-center col-12 match-entry-title">Next Match Countdown</h2>
 			<div class="row">
 				<div class="col-12 col-md-12 col-lg-4  d-md-flex d-lg-flex px-2">
@@ -47,7 +47,7 @@ if ($disable) : ?>
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container container-lg-16w">
 			<?php 
 			$match_args_a = array(
 				'post_type' 		=> 'qqlanding-matches',
@@ -86,15 +86,12 @@ if ($disable) : ?>
 			$match_b = new WP_Query($match_args_b);
 			$match_c = new WP_Query($match_args_c);?>
 			<div class="row mb-4">
-				<?php if ( $match_a->have_posts() || $match_b->have_posts() || $match_c->have_posts() ): ?>	
-					<h2 class="text-center col-12 match-entry-title">Date of away match as below (2018-2019)</h2>
-				<?php endif; ?>
 				<?php if ( $match_a->have_posts() ) : ?>
 					<div class="col-12 col-lg-4 px-md-2 px-lg-2">
 						<table class="table table-striped">
 							<thead>
 								<tr class="text-center">
-									<th scope="col">Date</th>
+									<th scope="col" class="td-w100">Date</th>
 									<th scope="col">Home Team</th>
 									<th scope="col">Away Team</th>
 								</tr>
@@ -117,7 +114,7 @@ if ($disable) : ?>
 						<table class="table table-striped">
 							<thead>
 								<tr class="text-center">
-									<th scope="col">Date</th>
+									<th scope="col" class="td-w100">Date</th>
 									<th scope="col">Home Team</th>
 									<th scope="col">Away Team</th>
 								</tr>
@@ -140,7 +137,7 @@ if ($disable) : ?>
 						<table class="table table-striped">
 							<thead>
 								<tr class="text-center">
-									<th scope="col">Date</th>
+									<th scope="col" class="td-w100">Date</th>
 									<th scope="col">Home Team</th>
 									<th scope="col">Away Team</th>
 								</tr>

@@ -463,12 +463,9 @@ if ( have_rows( 'fb_layout_settings' ,'option' ) ) :
 endif;//end of fb_layout_settings
 
 
-//if ( is_page_template( 'template-videos.php' ) ) :
 	/**
 	 * #Videos Content Editor
 	 *----------------------------*/
-	$positions = get_field( 'vm_position_property' );
-	$img_post = get_field( 'vm_img_position' );
 
 	if ( have_rows( 'vm_editor_settings', 'option') ) :
 		while ( have_rows( 'vm_editor_settings', 'option') ) : the_row();
@@ -519,16 +516,7 @@ endif;//end of fb_layout_settings
 			#videoWrap{<?php if ( $bg_attr == 'bg-color' ): ?>background-color: <?php echo get_sub_field('vm_color'); ?>;<?php else: ?>background-image: url(<?php echo $image; ?>);<?php echo $bg_attr; ?><?php endif; ?>}
 		<?php endwhile;
 	endif;
-
-	if ( $positions === true ) :
-		if ( ! empty($img_post) ) : ?>
-			#videoContent .cont-videos-image img{
-				<?php echo content_img_postion($positions,$img_post['vm_position_top'],$img_post['vm_position_right'],$img_post['vm_position_left'],$img_post['vm_position_buttom']); ?>
-			}
-		<?php endif; ?>
-	<?php endif; ?>
-
-<?php //endif; //end page template ?>
+	//end page template ?>
 
 
 /**
