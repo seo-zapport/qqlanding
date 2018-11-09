@@ -79,18 +79,15 @@ function theme_site_colors(){
 	}
 
 	$positions = get_field( 'vm_position_property' );
-	$img_post = get_field( 'vm_img_position' );
+	$img_post = get_field( 'vm_img_position' ); ?>
 
-	if ( ! empty($theme_custom_style) ) : ?>
-		<style type="text/css">
-			<?php echo $theme_custom_style; ?>#videoContent .content-vm-img{<?php echo content_img_postion($positions,$img_post['vm_position_top'],$img_post['vm_position_right'],$img_post['vm_position_left'],$img_post['vm_position_buttom']); ?>}
-		</style>
-	<?php endif;
-
-	if ( $display_preloader && ! empty($preloader_custom_style) ) : ?>
-		<style type="text/css">
-			<?php echo $preloader_custom_style; ?>
-		</style>
-	<?php endif;
+	<style type="text/css">
+	    <?php if ( ! empty($theme_custom_style) ) : ?>
+		    <?php echo $theme_custom_style; ?>
+	    <?php endif; ?>
+	    #videoContent .content-vm-img{<?php echo content_img_postion($positions,$img_post['vm_position_top'],$img_post['vm_position_right'],$img_post['vm_position_left'],$img_post['vm_position_buttom']); ?>}
+	    <?php if ( $display_preloader && ! empty($preloader_custom_style) ) : echo $preloader_custom_style; endif; ?>
+	</style>
+	<?php
 }
 add_action( 'wp_head', 'theme_site_colors');
