@@ -11,6 +11,7 @@
 #matchWrap .match-entry-title { font-size: 24px; font-size: 1.5rem; font-family: noto_sans_regular; color: #fff; text-shadow: 1px 0px 8px #b8572c; text-transform: uppercase; text-align: center; }
 #matchWrap .match-italic { font-family: noto_sans_italic; }
 #matchWrap .match-timer-title { font-size: 20.8px; font-size: 1.3rem; }
+#matchWrap .match-entry-tdesc { color: #edbb00; font-style: italic; }
 #matchWrap #matchTimerWrap { /**--flipclock--*/ }
 #matchWrap #matchTimerWrap .flip-clock-wrapper { margin: auto; }
 #matchWrap #matchTimerWrap .flip-clock-wrapper ul { font-size: 29px; height: 48px; width: 40px; margin: 3px; }

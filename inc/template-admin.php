@@ -4,7 +4,6 @@
  *
  * @package QQLanding
  */
-
 function qqlanding_admin_func(){
 	/**#Video Admin Page*/
 	add_menu_page( 'Videos', 'Videos & Matches', 'manage_options', 'vm_settings', 'qqLand_vid_func', 'dashicons-playlist-video', 12 );
@@ -41,9 +40,38 @@ function qqlanding_match_options(){
 }
 
 function qqlanding_match_a(){
+	$current_date = date( 'Y-m-d' );
+	$match_args_a = array(
+		'post_type'			=> 'qqlanding-matches',
+		'post_status'		=> array( 'post','publish' ),
+		'posts_per_page'	=> 1,
+		'meta_query'		=> array(
+			array(
+				'relation'	=> 'OR',
+				array( 'key' => '_date_matches_key','value' => $current_date,'type' => 'date','compare' => '==' ),
+				'upcoming_date_a' => array( 'key' => '_date_matches_key','value' => $current_date,'type' => 'date','compare' => '>' ),
+			),
+			array( 
+				'key' => '_type_matches_key',
+				'value' => 'match_a',
+				'compare' => '=='
+			)
+		),
+		'orderby'	=> 'upcoming_date_a',
+		'order'		=> 'ASC'
+	);
+	$query_match_a = new WP_Query($match_args_a);
+	if ( $query_match_a->have_posts() ):
+		while( $query_match_a->have_posts() ) : $query_match_a->the_post();
+			$set_new_date_a = get_post_meta(  get_the_ID(), '_date_matches_key', true );
+		endwhile;
+		wp_reset_postdata();
+	endif;
+
 	$logo_a = esc_attr( get_option('match_logo_a') );
 	$title = esc_attr( get_option('match_title_a') );
 	$date = esc_attr( get_option('match_date_a') );
+
 	$match_a = '<h3 class="vm-mt-title">Team A</h3>';
 	$match_a .= '<p class="vm-small-desc">* Please fill up all of the fields.</p>';
 	$match_a .= '<div class="input_wrapper">';
@@ -55,11 +83,40 @@ function qqlanding_match_a(){
 	$match_a .= '</div>';
 	$match_a .= '<div class="input_wrapper">';
 		$match_a .= '<label for="match_date_a">Date</label>';
-		$match_a .= '<input type="date" name="match_date_a" id="match_date_a" value="' . $date . '" />';
+		$match_a .= '<input type="date" name="match_date_a" id="match_date_a" value="' . $set_new_date_a . '" class="disabled" disabled/>';
+		$match_a .= '<small class="muted-text"><i class="required-text">*</i> Show the upcoming / current match date.</small>';
 	$match_a .= '</div>';
 	echo $match_a;
 }
 function qqlanding_match_b(){
+	$current_date = date( 'Y-m-d' );
+	$match_args_b = array(
+		'post_type'			=> 'qqlanding-matches',
+		'post_status'		=> array( 'post','publish' ),
+		'posts_per_page'	=> 1,
+		'meta_query'		=> array(
+			array(
+				'relation'	=> 'OR',
+				array( 'key' => '_date_matches_key','value' => $current_date,'type' => 'date','compare' => '==' ),
+				'upcoming_date_b' => array('key' => '_date_matches_key','value' => $current_date,'type' => 'date','compare' => '>' ),
+			),
+			array( 
+				'key' => '_type_matches_key',
+				'value' => 'match_b',
+				'compare' => '=='
+			)
+		),
+		'orderby'	=> 'upcoming_date_b',
+		'order'		=> 'ASC'
+	);
+	$query_match_b = new WP_Query($match_args_b);
+	if ( $query_match_b->have_posts() ):
+		while( $query_match_b->have_posts() ) : $query_match_b->the_post();
+			$set_new_date_b = get_post_meta(  get_the_ID(), '_date_matches_key', true );
+		endwhile;
+		wp_reset_postdata();
+	endif;
+
 	$logo_b = esc_attr( get_option('match_logo_b') );
 	$title_b = esc_attr( get_option('match_title_b') );
 	$date_b = esc_attr( get_option('match_date_b') );
@@ -75,12 +132,46 @@ function qqlanding_match_b(){
 	$match_b .= '</div>';
 	$match_b .= '<div class="input_wrapper">';
 		$match_b .= '<label for="match_date_b">Date</label>';
-		$match_b .= '<input type="date" name="match_date_b" id="match_date_b" value="' . $date_b . '" />';
+		$match_b .= '<input type="date" name="match_date_b" id="match_date_b" value="' . $set_new_date_b . '" class="disabled" disabled/>';
+		$match_b .= '<small class="muted-text"><i class="required-text">*</i> Show the upcoming / current match date.</small>';
 	$match_b .= '</div>';
 
 	echo $match_b;
 }
 function qqlanding_match_c(){
+	$current_date = date( 'Y-m-d' );
+	$match_args_c = array(
+		'post_type'			=> 'qqlanding-matches',
+		'post_status'		=> array( 'post','publish' ),
+		'posts_per_page'	=> 1,
+		'meta_query'		=> array(
+			array(
+				'relation'	=> 'OR',
+				array(
+					'key' => '_date_matches_key',
+					'value' => $current_date,
+					'type' => 'date',
+					'compare' => '==' 
+				),
+				'upcoming_date_c' => array( 'key' => '_date_matches_key','value' => $current_date,'type' => 'date','compare' => '>' ),
+			),
+			array( 
+				'key' => '_type_matches_key',
+				'value' => 'match_c',
+				'compare' => '=='
+			)
+		),
+		'orderby'	=> 'upcoming_date_c',
+		'order'		=> 'ASC'
+	);
+	$query_match_c = new WP_Query($match_args_c);
+	if ( $query_match_c->have_posts() ):
+		while( $query_match_c->have_posts() ) : $query_match_c->the_post();
+			$set_new_date_c = get_post_meta(  get_the_ID(), '_date_matches_key', true );
+		endwhile;
+		wp_reset_postdata();
+	endif;
+
 	$logo_c = esc_attr( get_option('match_logo_c') );
 	$title_c = esc_attr( get_option('match_title_c') );
 	$date_c = esc_attr( get_option('match_date_c') );
@@ -96,7 +187,8 @@ function qqlanding_match_c(){
 	$match_c .= '</div>';
 	$match_c .= '<div class="input_wrapper">';
 		$match_c .= '<label for="match_date_c">Date</label>';
-		$match_c .= '<input type="date" name="match_date_c" id="match_date_c" value="' . $date_c . '" />';
+		$match_c .= '<input type="date" name="match_date_c" id="match_date_c" value="' . $set_new_date_c . '" class="disabled" disabled/>';
+		$match_c .= '<small class="muted-text"><i class="required-text">*</i> Show the upcoming / current match date.</small>';
 	$match_c .= '</div>';
 
 	echo $match_c;

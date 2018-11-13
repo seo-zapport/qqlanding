@@ -93,19 +93,20 @@
 	$('input#match_title_a').on('keyup',function(e){
 		e.preventDefault;
 		var value = $(this).val();
-		$('.vm-wrapper-a > #prev-details-wrap').find('h2').text(value);
+		//console.log(value);
+		$('.vm-wrapper-a #admin_match_title_a').text(value);
 	});
 
 	$('input#match_title_b').on('keyup',function(e){
 		e.preventDefault;
 		var value = $(this).val();
-		$('.vm-wrapper-b > #prev-details-wrap').find('h2').text(value);
+		$('.vm-wrapper-b #admin_match_title_b').text(value);
 	});
 
 	$('input#match_title_c').on('keyup',function(e){
 		e.preventDefault;
 		var value = $(this).val();
-		$('.vm-wrapper-c > #prev-details-wrap').find('h2').text(value);
+		$('.vm-wrapper-c #admin_match_title_c').text(value);
 	});
 
 })(jQuery);
