@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 									<div class="col-12 col-md-3 col-lg-3">
 										<div class="provider-group prov-license">
 											<?php if ( ! empty( get_sub_field( 'lcs_title','option' ) ) ): ?>
-												<div class="widget-title-container">
+												<div class="<?php echo ( get_field('footer_enable_title_bg','option') === true ) ? 'widget-title-container' : 'widget-container'; ?>">
 													<h4 class="widget-title"><?php echo get_sub_field( 'lcs_title','option' ); ?></h4>
 												</div>
 											<?php endif; ?>
@@ -58,9 +58,9 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 									} 
 								?>
 								<div class="col-12 <?php echo $dislay_footer; ?>">
-									<div class="provider-group prov-<?php echo ( get_sub_field( 'b_providers','option' ) == 'banks' ) ? 'banks' : 'network'; ?> flex-wrap">
+									<div class="provider-group prov-<?php echo ( get_sub_field( 'b_providers','option' ) == 'bank' ) ? 'banks' : 'network'; ?> flex-wrap">
 										<?php if ( ! empty( get_sub_field( 'b_title','option' ) ) ): ?>
-											<div class="widget-title-container">
+											<div class="<?php echo ( get_field('footer_enable_title_bg','option') === true ) ? 'widget-title-container' : 'widget-container'; ?>">
 												<h4 class="widget-title"><?php echo get_sub_field( 'b_title','option' ); ?></h4>
 											</div>
 										<?php endif; ?>
@@ -95,7 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 						<?php endif; ?>
 						<?php if ( get_field( 'sm_footer', 'option' ) === true ): ?>
 							<div class="col-12 col-md-3 col-lg-3">
-								<div class="widget-title-container">
+								<div class="<?php echo ( get_field('footer_enable_title_bg','option') === true ) ? 'widget-title-container' : 'widget-container'; ?>">
 									<h4 class="widget-title">Social Media</h4>
 								</div>
 								<div class="site-footer-info px-0">

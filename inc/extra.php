@@ -161,7 +161,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 		$post        		= get_queried_object();
 		$post_type 			= get_post_type(); // If post is a custom post type
 		$parent_id  		= isset( $post->post_parent ) ? $post->post_parent : '';
-		$singular_video		= ( ! is_singular( 'video' ) ) ?: ' mt-5';
+		$singular_video		= ( ! is_singular( 'video' ) ) ? '' : ' mt-5';
 
 
 		$html_output		= '';

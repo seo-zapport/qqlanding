@@ -195,13 +195,14 @@ if ($disable) : ?>
 				'post_status'		=> array('post','publish'),
 				/*'posts_per_page'	=> 6,*/
 				'meta_query'		=> array(
-					'relation'		=> 'AND',
-					'date_a' => array( 'key' => '_date_matches_key', 'value'	=> 'match_a', 'compare' => '>=', 'type' => 'date'
-					),
-					'setnew' => array('key' => '_type_matches_key','value' => 'match_a','compare' => '==')
+					array(
+						'key' => '_type_matches_key',
+						'value' => 'match_a',
+						'compare' => '==',
+					)
 				),
 				'suppress_filters' 		=> true,
-				'orderby'			=> 'date_a',
+				'orderby'			=> 'date',
 				'order'				=> 'ASC',
 			);
 			$match_list_a = new WP_Query($match_args_a);?>
@@ -234,13 +235,14 @@ if ($disable) : ?>
 					'post_type' 		=> 'qqlanding-matches',
 					'post_status'		=> array('post','publish'),
 					'meta_query'		=> array(
-						'relation'		=> 'AND',
-						'date_b' => array( 'key' => '_date_matches_key', 'value'	=> 'match_b', 'compare' => '>=', 'type' => 'date'
-						),
-						'setnew' => array('key' => '_type_matches_key','value' => 'match_b','compare' => '==')
+						array(
+							'key' => '_type_matches_key',
+							'value' => 'match_b',
+							'compare' => '==',
+						)
 					),
 					'suppress_filters' 		=> true,
-					'orderby'			=> 'date_b',
+					'orderby'			=> 'date',
 					'order'				=> 'ASC',
 				);
 				$match_b = new WP_Query($match_args_b);
@@ -272,13 +274,14 @@ if ($disable) : ?>
 					'post_type' 		=> 'qqlanding-matches',
 					'post_status'		=> array('post','publish'),
 					'meta_query'		=> array(
-						'relation'		=> 'AND',
-						'date_c' => array( 'key' => '_date_matches_key', 'value'	=> 'match_c', 'compare' => '>=', 'type' => 'date'
+						array(
+							'key' => '_type_matches_key',
+							'value' => 'match_c',
+							'compare' => '=='
 						),
-						'setnew' => array('key' => '_type_matches_key','value' => 'match_c','compare' => '==')
 					),
 					'suppress_filters' 		=> true,
-					'orderby'			=> 'date_c',
+					'orderby'			=> 'date',
 					'order'				=> 'ASC',
 				);
 				$match_c = new WP_Query($match_args_c);
