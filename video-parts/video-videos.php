@@ -1,5 +1,5 @@
 <?php
-$disable = get_field( 'vm_match_enable_section', 'option' ); //Content Enable/Disable
+$disable = get_field( 'vm_videos_enable_section', 'option' ); //Content Enable/Disable
 if ( acf_selective_refresh($disable) ) return $disable = false;
 if ($disable) : ?>
 	<section id="videoWrap" class="py-5">
