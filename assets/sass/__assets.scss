@@ -21,7 +21,7 @@
 }
 /**--Enter site*/
 .qqlanding-sites{
-
+	line-height: 1.2;
 	/**Site-Info-----*/
 	.site-top-info,
 	.site-footer-info{
@@ -432,6 +432,27 @@
 				.nexmedia{background-position: -14px -195px;width: 119px;height:41px;}
 				.indovision{background-position: -16px -264px;width: 90px;height:41px;}
 				.supersoccer{background-position: -16px -338px;width: 138px;height:41px;}
+				.fox_sports{background-position: -16px -400px;width: 89px;height:55px;}
+			}
+		}
+		.network-malaysia{
+			.provider-item{
+				margin-bottom: 25px;
+				.astro{background-position: -16px -477px;width: 89px;height:41px;}
+			}
+		}
+		.network-thailand{
+			.provider-item{
+				margin-bottom: 25px;
+				.pptv_th{background-position: -16px -538px;width: 89px;height:41px;}
+				.truev_th{background-position: -16px -588px;width: 130px;height:41px;}
+			}
+		}
+		.network-vietnam{
+			.provider-item{
+				margin-bottom: 25px;
+				.vn_tv{background-position: -16px -650px;width: 95px;height:45px;}
+				.kplus{background-position: -16px -723px;width: 65px;height:45px;}
 			}
 		}
 	}

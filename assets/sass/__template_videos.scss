@@ -37,8 +37,8 @@
 
  }
 
-
  #matchWrap{
+ 	margin:0;
 	.match-entry-title{
 		@include font-size(1.5);
 		font-family: noto_sans_regular;
@@ -57,51 +57,95 @@
 		color: #edbb00;
 		font-style: italic;
 	}
- 	#matchTimerWrap{
 
- 		/**--flipclock--*/
- 		.flip-clock-wrapper{
- 			margin: auto;
-			ul{
-			    font-size: 29px;
-			    height: 48px;
-			    width: 40px;
-			    margin: 3px;
-			    li{
-			    	line-height: 50px;
-			    	a div,
-			    	a div div.inn{
-			    		font-size: 29px;
-			    	}
-			    	a div div.inn{
-			    		background-color: #fff;
-			    		color: #4c4c4a;
-			    		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-			    	}
-			    }
-			}
- 		}
+ 	/**--flipclock--*/
+ 	.flip-clock-wrapper{
+ 		margin: auto;
+		ul{
+		    margin: 3px;
+		    li{
+		    	a div div.inn{
+		    		background-color: #fff;
+		    		color: #4c4c4a;
+		    		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+		    	}
+		    }
+		}
 		.flip-clock-divider{
 			height: 86px;
 			width: 15px;
 			.flip-clock-label{
 				top:auto;
-				bottom: 5px;
-				right: -55px;
 				color: #fff;
 				text-shadow: none;
 				font-size: 12px;
 				text-transform: uppercase;
 				font-weight: 600;
 			}
-			&.minutes{
-				.flip-clock-label{
-					right: -63px;
+		}
+		&.grid-timer-2{
+			ul{
+			    font-size: 47px;
+			    height: 58px;
+			    width: 50px;
+				li{
+		    		line-height: 60px;
+			    	a div,
+			    	a div div.inn{
+			    		font-size: 47px;
+			    	}
 				}
 			}
-			&.seconds{
+			.flip-clock-divider{
 				.flip-clock-label{
-					right: -64px;
+					bottom: -5px;
+					right: -80px;
+					font-size: 14px;
+				}
+				&.minutes{
+					.flip-clock-label{
+						right: -90px;
+					}
+				}
+				&.seconds{
+					.flip-clock-label{
+						right: -94px;
+					}
+				}
+			}
+		}
+		&.grid-timer-3{
+			margin: auto;
+			ul{
+			    font-size: 29px;
+			    height: 48px;
+			    width: 40px;
+			    li{
+			    	line-height: 50px;
+			    	a div,
+			    	a div div.inn{
+			    		font-size: 29px;
+			    	}
+			    }
+			}
+			.flip-clock-divider{
+				height: 86px;
+				width: 15px;
+				.flip-clock-label{
+					top:auto;
+					bottom: 5px;
+					right: -55px;
+					font-size: 12px;
+				}
+				&.minutes{
+					.flip-clock-label{
+						right: -63px;
+					}
+				}
+				&.seconds{
+					.flip-clock-label{
+						right: -64px;
+					}
 				}
 			}
 		}
@@ -112,6 +156,7 @@
 			}
 		}
  	}
+ 	
  	table, th, td{
 		border-color: #d6e935;
 		border-width: 2px;
@@ -270,70 +315,135 @@
 	/**--flipclock--*/
 	.flip-clock-wrapper{
 		margin: auto;
-		ul{
-			font-size: 20px !important;
-			height: 32px !important;
-			width: 28px !important;
-			li{
-				line-height: 35px !important;
-				a div,
-				a div div.inn{
-					font-size: 20px !important;
+		&.grid-timer-2{
+			ul{
+				font-size: 30px !important;
+				height: 42px !important;
+				width: 38px !important;
+				li{
+					line-height: 45px !important;
+					a div,
+					a div div.inn{
+						font-size: 30px !important;
+					}
+				}
+			}
+			.flip-clock-divider{
+				.flip-clock-label{
+					bottom: 18px !important;
+					right: -45px !important;
+					font-size: 11px !important;
+				}
+				&.minutes{
+					.flip-clock-label{
+						right: -50px !important;
+					}
+				}
+				&.seconds{
+					.flip-clock-label{
+						right: -50px !important;
+					}
+				}
+			}
+		}
+		&.grid-timer-3{
+			ul{
+				font-size: 20px !important;
+				height: 32px !important;
+				width: 28px !important;
+				li{
+					line-height: 35px !important;
+					a div,
+					a div div.inn{
+						font-size: 20px !important;
+					}
+				}
+			}
+			.flip-clock-divider{
+				.flip-clock-label{
+					bottom: 25px !important;
+					right: -45px !important;
+					font-size: 10px !important;
+				}
+				&.minutes{
+					.flip-clock-label{
+						right: -50px !important;
+					}
+				}
+				&.seconds{
+					.flip-clock-label{
+						right: -50px !important;
+					}
 				}
 			}
 		}
 	}
-	.flip-clock-divider{
-		.flip-clock-label{
-			bottom: 25px !important;
-			right: -45px !important;
-			font-size: 10px !important;
-		}
-		&.minutes{
-			.flip-clock-label{
-				right: -50px !important;
-			}
-		}
-		&.seconds{
-			.flip-clock-label{
-				right: -50px !important;
-			}
-		}
-	}
-
 }
 
 @media only screen and (min-width:320px) and (max-width:480px){
 	/**--flipclock--*/
 	.flip-clock-wrapper{
 		margin: auto;
-		ul{
-			font-size: 21px !important;
-			height: 35px !important;
-			width: 21px !important;
-			li{
-				line-height: 34px !important;
-				a div,
-				a div div.inn{
+		&.grid-timer-2{
+			ul{
 				font-size: 21px !important;
+				height: 35px !important;
+				width: 25px !important;
+				li{
+					line-height: 34px !important;
+					a div,
+					a div div.inn{
+					font-size: 21px !important;
+					}
+				}
+			}
+			.flip-clock-divider{
+				.flip-clock-label{
+					bottom: 25px !important;
+					right: -47px !important;
+					font-size: 11px !important;
+				}
+				&.minutes{
+					.flip-clock-label{
+						right: -54px !important;
+					}
+				}
+				&.seconds{
+					.flip-clock-label{
+						right: -50px !important;
+					}
 				}
 			}
 		}
-	}
-	.flip-clock-divider{
-		.flip-clock-label{
-			bottom: 25px !important;
-			right: -47px !important;
-			font-size: 11px !important;
-		}
-		&.minutes{
-			.flip-clock-label{
-				right: -54px !important;
+		&.grid-timer-3{
+			ul{
+				font-size: 21px !important;
+				height: 35px !important;
+				width: 21px !important;
+				li{
+					line-height: 34px !important;
+					a div,
+					a div div.inn{
+					font-size: 21px !important;
+					}
+				}
 			}
-		}
-		&.seconds{
-			.flip-clock-label{
-				right: -50px !important;
+			.flip-clock-divider{
+				.flip-clock-label{
+					bottom: 25px !important;
+					right: -47px !important;
+					font-size: 11px !important;
+				}
+				&.minutes{
+					.flip-clock-label{
+						right: -54px !important;
+					}
+				}
+				&.seconds{
+					.flip-clock-label{
+						right: -50px !important;
+					}
+				}
 			}
 		}
 	}
@@ -343,15 +453,46 @@
 	/**--flipclock--*/
 	.flip-clock-wrapper{
 		margin: auto;
-		ul{
-			font-size: 28px !important;
-			height: 40px !important;
-			width: 25px !important;
-			li{
-				line-height: 40px !important;
-				a div,
-				a div div.inn{
+		&.grid-timer-2{
+			ul{
 				font-size: 28px !important;
+				height: 40px !important;
+				width: 35px !important;
+				li{
+					line-height: 40px !important;
+					a div,
+					a div div.inn{
+						font-size: 28px !important;
+					}
+				}
+			}
+			.flip-clock-divider{
+				.flip-clock-label{
+					right: -60px !important;
+				}
+				&.minutes{
+					.flip-clock-label{
+						right: -71px !important;
+					}
+				}
+				&.seconds{
+					.flip-clock-label{
+						right: -71px !important;
+					}
+				}
+			}
+		}
+		&.grid-timer-3{
+			ul{
+				font-size: 28px !important;
+				height: 40px !important;
+				width: 25px !important;
+				li{
+					line-height: 40px !important;
+					a div,
+					a div div.inn{
+					font-size: 28px !important;
+					}
 				}
 			}
 		}
@@ -362,15 +503,46 @@
 	/**--flipclock--*/
 	.flip-clock-wrapper{
 		margin: auto;
-		ul{
-			font-size: 30px !important;
-			height: 43px !important;
-			width: 28px !important;
-			li{
-				line-height: 45px !important;
-				a div,
-				a div div.inn{
+		&.grid-timer-2{
+			ul{
+				font-size: 35px !important;
+				height: 48px !important;
+				width: 38px !important;
+				li{
+					line-height: 48px !important;
+					a div,
+					a div div.inn{
+						font-size: 35px !important;
+					}
+				}
+			}
+			.flip-clock-divider{
+				.flip-clock-label{
+					right: -67px !important;
+				}
+				&.minutes{
+					.flip-clock-label{
+						right: -75px !important;
+					}
+				}
+				&.seconds{
+					.flip-clock-label{
+						right: -75px !important;
+					}
+				}
+			}
+		}
+		&.grid-timer-3{
+			ul{
 				font-size: 30px !important;
+				height: 43px !important;
+				width: 28px !important;
+				li{
+					line-height: 45px !important;
+					a div,
+					a div div.inn{
+					font-size: 30px !important;
+					}
 				}
 			}
 		}

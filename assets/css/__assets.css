@@ -5,7 +5,7 @@
 .full-wh .full-wrap { display: table-cell; vertical-align: middle; }
 
 /**--Enter site*/
-.qqlanding-sites { /**Site-Info-----*/ /**Enter-site-----*/ }
+.qqlanding-sites { line-height: 1.2; /**Site-Info-----*/ /**Enter-site-----*/ }
 .qqlanding-sites .site-top-info, .qqlanding-sites .site-footer-info { border-bottom: 1px solid transparent; padding: 0px 10px; line-height: 1.5; position: relative; }
 .qqlanding-sites .site-top-info #social_media, .qqlanding-sites .site-top-info ul#social_media, .qqlanding-sites .site-footer-info #social_media, .qqlanding-sites .site-footer-info ul#social_media { list-style-type: none; margin: 0; padding: 0; }
 .qqlanding-sites .site-top-info #social_media.sm-circle li, .qqlanding-sites .site-top-info ul#social_media.sm-circle li, .qqlanding-sites .site-footer-info #social_media.sm-circle li, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li { margin-right: 5px; }
@@ -216,5 +216,14 @@
 .provider-group[class*='-network'] .network-indo .provider-item .nexmedia { background-position: -14px -195px; width: 119px; height: 41px; }
 .provider-group[class*='-network'] .network-indo .provider-item .indovision { background-position: -16px -264px; width: 90px; height: 41px; }
 .provider-group[class*='-network'] .network-indo .provider-item .supersoccer { background-position: -16px -338px; width: 138px; height: 41px; }
+.provider-group[class*='-network'] .network-indo .provider-item .fox_sports { background-position: -16px -400px; width: 89px; height: 55px; }
+.provider-group[class*='-network'] .network-malaysia .provider-item { margin-bottom: 25px; }
+.provider-group[class*='-network'] .network-malaysia .provider-item .astro { background-position: -16px -477px; width: 89px; height: 41px; }
+.provider-group[class*='-network'] .network-thailand .provider-item { margin-bottom: 25px; }
+.provider-group[class*='-network'] .network-thailand .provider-item .pptv_th { background-position: -16px -538px; width: 89px; height: 41px; }
+.provider-group[class*='-network'] .network-thailand .provider-item .truev_th { background-position: -16px -588px; width: 130px; height: 41px; }
+.provider-group[class*='-network'] .network-vietnam .provider-item { margin-bottom: 25px; }
+.provider-group[class*='-network'] .network-vietnam .provider-item .vn_tv { background-position: -16px -650px; width: 95px; height: 45px; }
+.provider-group[class*='-network'] .network-vietnam .provider-item .kplus { background-position: -16px -723px; width: 65px; height: 45px; }
 
 /*# sourceMappingURL=__assets.css.map */

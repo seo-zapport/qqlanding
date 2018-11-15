@@ -1054,6 +1054,7 @@ embed, iframe, object { max-width: 100%; }
 --------------------------------------------------------------*/
 @media (min-width: 1200px) { .qqlanding-sites .container { max-width: 1240px; }
   .qqlanding-sites .container-lg-16w { max-width: 1600px; }
+  .qqlanding-sites .container-lg-14x5w { max-width: 1450px; }
   .qqlanding-sites.qqlayout-default #site-navigation #primary-menu { max-width: 1240px; margin: 0 auto; } }
 @media (min-width: 960px) { .qqlanding-sites #site-navigation #primary-menu { max-width: 960px; margin: 0 auto; }
   .qqlanding-sites #banner #video_wrap { height: 392px; margin-top: 54px; }

@@ -8,22 +8,32 @@
 #videoContent .cont-videos-entry { font-family: 'century_gothic'; font-weight: 500; }
 #videoContent ul li, #videoContent ol li { margin: 8px 0; }
 
+#matchWrap { margin: 0; /**--flipclock--*/ }
 #matchWrap .match-entry-title { font-size: 24px; font-size: 1.5rem; font-family: noto_sans_regular; color: #fff; text-shadow: 1px 0px 8px #b8572c; text-transform: uppercase; text-align: center; }
 #matchWrap .match-italic { font-family: noto_sans_italic; }
 #matchWrap .match-timer-title { font-size: 20.8px; font-size: 1.3rem; }
 #matchWrap .match-entry-tdesc { color: #edbb00; font-style: italic; }
-#matchWrap #matchTimerWrap { /**--flipclock--*/ }
-#matchWrap #matchTimerWrap .flip-clock-wrapper { margin: auto; }
-#matchWrap #matchTimerWrap .flip-clock-wrapper ul { font-size: 29px; height: 48px; width: 40px; margin: 3px; }
-#matchWrap #matchTimerWrap .flip-clock-wrapper ul li { line-height: 50px; }
-#matchWrap #matchTimerWrap .flip-clock-wrapper ul li a div, #matchWrap #matchTimerWrap .flip-clock-wrapper ul li a div div.inn { font-size: 29px; }
-#matchWrap #matchTimerWrap .flip-clock-wrapper ul li a div div.inn { background-color: #fff; color: #4c4c4a; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
-#matchWrap #matchTimerWrap .flip-clock-divider { height: 86px; width: 15px; }
-#matchWrap #matchTimerWrap .flip-clock-divider .flip-clock-label { top: auto; bottom: 5px; right: -55px; color: #fff; text-shadow: none; font-size: 12px; text-transform: uppercase; font-weight: 600; }
-#matchWrap #matchTimerWrap .flip-clock-divider.minutes .flip-clock-label { right: -63px; }
-#matchWrap #matchTimerWrap .flip-clock-divider.seconds .flip-clock-label { right: -64px; }
-#matchWrap #matchTimerWrap .flip-clock-dot { display: none; }
-#matchWrap #matchTimerWrap .flip-clock-dot.top { top: 20px; }
+#matchWrap .flip-clock-wrapper { margin: auto; }
+#matchWrap .flip-clock-wrapper ul { margin: 3px; }
+#matchWrap .flip-clock-wrapper ul li a div div.inn { background-color: #fff; color: #4c4c4a; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
+#matchWrap .flip-clock-wrapper .flip-clock-divider { height: 86px; width: 15px; }
+#matchWrap .flip-clock-wrapper .flip-clock-divider .flip-clock-label { top: auto; color: #fff; text-shadow: none; font-size: 12px; text-transform: uppercase; font-weight: 600; }
+#matchWrap .flip-clock-wrapper.grid-timer-2 ul { font-size: 47px; height: 58px; width: 50px; }
+#matchWrap .flip-clock-wrapper.grid-timer-2 ul li { line-height: 60px; }
+#matchWrap .flip-clock-wrapper.grid-timer-2 ul li a div, #matchWrap .flip-clock-wrapper.grid-timer-2 ul li a div div.inn { font-size: 47px; }
+#matchWrap .flip-clock-wrapper.grid-timer-2 .flip-clock-divider .flip-clock-label { bottom: -5px; right: -80px; font-size: 14px; }
+#matchWrap .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.minutes .flip-clock-label { right: -90px; }
+#matchWrap .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.seconds .flip-clock-label { right: -94px; }
+#matchWrap .flip-clock-wrapper.grid-timer-3 { margin: auto; }
+#matchWrap .flip-clock-wrapper.grid-timer-3 ul { font-size: 29px; height: 48px; width: 40px; }
+#matchWrap .flip-clock-wrapper.grid-timer-3 ul li { line-height: 50px; }
+#matchWrap .flip-clock-wrapper.grid-timer-3 ul li a div, #matchWrap .flip-clock-wrapper.grid-timer-3 ul li a div div.inn { font-size: 29px; }
+#matchWrap .flip-clock-wrapper.grid-timer-3 .flip-clock-divider { height: 86px; width: 15px; }
+#matchWrap .flip-clock-wrapper.grid-timer-3 .flip-clock-divider .flip-clock-label { top: auto; bottom: 5px; right: -55px; font-size: 12px; }
+#matchWrap .flip-clock-wrapper.grid-timer-3 .flip-clock-divider.minutes .flip-clock-label { right: -63px; }
+#matchWrap .flip-clock-wrapper.grid-timer-3 .flip-clock-divider.seconds .flip-clock-label { right: -64px; }
+#matchWrap .flip-clock-wrapper .flip-clock-dot { display: none; }
+#matchWrap .flip-clock-wrapper .flip-clock-dot.top { top: 20px; }
 #matchWrap table, #matchWrap th, #matchWrap td { border-color: #d6e935; border-width: 2px; }
 #matchWrap .table thead th { padding: 0.3em; border-color: #d6e935; font-family: helvetica; text-transform: uppercase; font-size: 16px; font-size: 1rem; }
 #matchWrap .table th, #matchWrap .table td { padding: 0.5em 0.3em; font-family: noto_sans_regular; }
@@ -55,29 +65,53 @@
   .td-w100 { width: 100px; } }
 @media only screen and (min-width: 968px) and (max-width: 1024px) { /**--flipclock--*/
   .flip-clock-wrapper { margin: auto; }
-  .flip-clock-wrapper ul { font-size: 20px !important; height: 32px !important; width: 28px !important; }
-  .flip-clock-wrapper ul li { line-height: 35px !important; }
-  .flip-clock-wrapper ul li a div, .flip-clock-wrapper ul li a div div.inn { font-size: 20px !important; }
-  .flip-clock-divider .flip-clock-label { bottom: 25px !important; right: -45px !important; font-size: 10px !important; }
-  .flip-clock-divider.minutes .flip-clock-label { right: -50px !important; }
-  .flip-clock-divider.seconds .flip-clock-label { right: -50px !important; } }
+  .flip-clock-wrapper.grid-timer-2 ul { font-size: 30px !important; height: 42px !important; width: 38px !important; }
+  .flip-clock-wrapper.grid-timer-2 ul li { line-height: 45px !important; }
+  .flip-clock-wrapper.grid-timer-2 ul li a div, .flip-clock-wrapper.grid-timer-2 ul li a div div.inn { font-size: 30px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider .flip-clock-label { bottom: 18px !important; right: -45px !important; font-size: 11px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.minutes .flip-clock-label { right: -50px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.seconds .flip-clock-label { right: -50px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul { font-size: 20px !important; height: 32px !important; width: 28px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul li { line-height: 35px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul li a div, .flip-clock-wrapper.grid-timer-3 ul li a div div.inn { font-size: 20px !important; }
+  .flip-clock-wrapper.grid-timer-3 .flip-clock-divider .flip-clock-label { bottom: 25px !important; right: -45px !important; font-size: 10px !important; }
+  .flip-clock-wrapper.grid-timer-3 .flip-clock-divider.minutes .flip-clock-label { right: -50px !important; }
+  .flip-clock-wrapper.grid-timer-3 .flip-clock-divider.seconds .flip-clock-label { right: -50px !important; } }
 @media only screen and (min-width: 320px) and (max-width: 480px) { /**--flipclock--*/
   .flip-clock-wrapper { margin: auto; }
-  .flip-clock-wrapper ul { font-size: 21px !important; height: 35px !important; width: 21px !important; }
-  .flip-clock-wrapper ul li { line-height: 34px !important; }
-  .flip-clock-wrapper ul li a div, .flip-clock-wrapper ul li a div div.inn { font-size: 21px !important; }
-  .flip-clock-divider .flip-clock-label { bottom: 25px !important; right: -47px !important; font-size: 11px !important; }
-  .flip-clock-divider.minutes .flip-clock-label { right: -54px !important; }
-  .flip-clock-divider.seconds .flip-clock-label { right: -50px !important; } }
+  .flip-clock-wrapper.grid-timer-2 ul { font-size: 21px !important; height: 35px !important; width: 25px !important; }
+  .flip-clock-wrapper.grid-timer-2 ul li { line-height: 34px !important; }
+  .flip-clock-wrapper.grid-timer-2 ul li a div, .flip-clock-wrapper.grid-timer-2 ul li a div div.inn { font-size: 21px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider .flip-clock-label { bottom: 25px !important; right: -47px !important; font-size: 11px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.minutes .flip-clock-label { right: -54px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.seconds .flip-clock-label { right: -50px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul { font-size: 21px !important; height: 35px !important; width: 21px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul li { line-height: 34px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul li a div, .flip-clock-wrapper.grid-timer-3 ul li a div div.inn { font-size: 21px !important; }
+  .flip-clock-wrapper.grid-timer-3 .flip-clock-divider .flip-clock-label { bottom: 25px !important; right: -47px !important; font-size: 11px !important; }
+  .flip-clock-wrapper.grid-timer-3 .flip-clock-divider.minutes .flip-clock-label { right: -54px !important; }
+  .flip-clock-wrapper.grid-timer-3 .flip-clock-divider.seconds .flip-clock-label { right: -50px !important; } }
 @media only screen and (min-width: 360px) and (max-width: 580px) { /**--flipclock--*/
   .flip-clock-wrapper { margin: auto; }
-  .flip-clock-wrapper ul { font-size: 28px !important; height: 40px !important; width: 25px !important; }
-  .flip-clock-wrapper ul li { line-height: 40px !important; }
-  .flip-clock-wrapper ul li a div, .flip-clock-wrapper ul li a div div.inn { font-size: 28px !important; } }
+  .flip-clock-wrapper.grid-timer-2 ul { font-size: 28px !important; height: 40px !important; width: 35px !important; }
+  .flip-clock-wrapper.grid-timer-2 ul li { line-height: 40px !important; }
+  .flip-clock-wrapper.grid-timer-2 ul li a div, .flip-clock-wrapper.grid-timer-2 ul li a div div.inn { font-size: 28px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider .flip-clock-label { right: -60px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.minutes .flip-clock-label { right: -71px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.seconds .flip-clock-label { right: -71px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul { font-size: 28px !important; height: 40px !important; width: 25px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul li { line-height: 40px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul li a div, .flip-clock-wrapper.grid-timer-3 ul li a div div.inn { font-size: 28px !important; } }
 @media only screen and (min-width: 680px) and (max-width: 768px) { /**--flipclock--*/
   .flip-clock-wrapper { margin: auto; }
-  .flip-clock-wrapper ul { font-size: 30px !important; height: 43px !important; width: 28px !important; }
-  .flip-clock-wrapper ul li { line-height: 45px !important; }
-  .flip-clock-wrapper ul li a div, .flip-clock-wrapper ul li a div div.inn { font-size: 30px !important; } }
+  .flip-clock-wrapper.grid-timer-2 ul { font-size: 35px !important; height: 48px !important; width: 38px !important; }
+  .flip-clock-wrapper.grid-timer-2 ul li { line-height: 48px !important; }
+  .flip-clock-wrapper.grid-timer-2 ul li a div, .flip-clock-wrapper.grid-timer-2 ul li a div div.inn { font-size: 35px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider .flip-clock-label { right: -67px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.minutes .flip-clock-label { right: -75px !important; }
+  .flip-clock-wrapper.grid-timer-2 .flip-clock-divider.seconds .flip-clock-label { right: -75px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul { font-size: 30px !important; height: 43px !important; width: 28px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul li { line-height: 45px !important; }
+  .flip-clock-wrapper.grid-timer-3 ul li a div, .flip-clock-wrapper.grid-timer-3 ul li a div div.inn { font-size: 30px !important; } }
 
 /*# sourceMappingURL=__template_videos.css.map */

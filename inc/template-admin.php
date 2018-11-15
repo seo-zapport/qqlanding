@@ -60,33 +60,41 @@ function qqlanding_match_a(){
 		'orderby'	=> 'upcoming_date_a',
 		'order'		=> 'ASC'
 	);
+	$set_new_date_a = '';
 	$query_match_a = new WP_Query($match_args_a);
 	if ( $query_match_a->have_posts() ):
 		while( $query_match_a->have_posts() ) : $query_match_a->the_post();
 			$set_new_date_a = get_post_meta(  get_the_ID(), '_date_matches_key', true );
+
+			$logo_a = esc_attr( get_option('match_logo_a') );
+			$title = esc_attr( get_option('match_title_a') );
+			$date = esc_attr( get_option('match_date_a') );
+
+			$match_a = '<h3 class="vm-mt-title">Team A</h3>';
+			$match_a .= '<p class="vm-small-desc">* Please fill up all of the fields.</p>';
+			$match_a .= '<div class="input_wrapper">';
+				$match_a .= '<input type="button" value="Upload Logo" id="upload_logo_a" class="button button-secondary"><input type="hidden" id="match_logo_a" name="match_logo_a" value="' . $logo_a . '" />';
+			$match_a .= '</div>';
+			$match_a .= '<div class="input_wrapper">';
+				$match_a .= '<label for="match_title_a">Title</label>';
+				$match_a .= '<input type="text" name="match_title_a" id="match_title_a" value="' . $title . '" />';
+			$match_a .= '</div>';
+			$match_a .= '<div class="input_wrapper">';
+				$match_a .= '<label for="match_date_a">Date</label>';
+				$match_a .= '<input type="date" name="match_date_a" id="match_date_a" value="' . $set_new_date_a . '" class="disabled" disabled/>';
+				$match_a .= '<small class="muted-text"><i class="required-text">*</i> Show the upcoming / current match date.</small>';
+			$match_a .= '</div>';
+			echo $match_a;
+
 		endwhile;
 		wp_reset_postdata();
+	else:
+		echo '<div class="input_wrapper vm-wrapper-d item-no-avail">';
+			echo '<div id="prev-details-wrap">';
+				echo '<h2>No Time Available</h2>';
+			echo '</div>';
+		echo '</div>';
 	endif;
-
-	$logo_a = esc_attr( get_option('match_logo_a') );
-	$title = esc_attr( get_option('match_title_a') );
-	$date = esc_attr( get_option('match_date_a') );
-
-	$match_a = '<h3 class="vm-mt-title">Team A</h3>';
-	$match_a .= '<p class="vm-small-desc">* Please fill up all of the fields.</p>';
-	$match_a .= '<div class="input_wrapper">';
-		$match_a .= '<input type="button" value="Upload Logo" id="upload_logo_a" class="button button-secondary"><input type="hidden" id="match_logo_a" name="match_logo_a" value="' . $logo_a . '" />';
-	$match_a .= '</div>';
-	$match_a .= '<div class="input_wrapper">';
-		$match_a .= '<label for="match_title_a">Title</label>';
-		$match_a .= '<input type="text" name="match_title_a" id="match_title_a" value="' . $title . '" />';
-	$match_a .= '</div>';
-	$match_a .= '<div class="input_wrapper">';
-		$match_a .= '<label for="match_date_a">Date</label>';
-		$match_a .= '<input type="date" name="match_date_a" id="match_date_a" value="' . $set_new_date_a . '" class="disabled" disabled/>';
-		$match_a .= '<small class="muted-text"><i class="required-text">*</i> Show the upcoming / current match date.</small>';
-	$match_a .= '</div>';
-	echo $match_a;
 }
 function qqlanding_match_b(){
 	$current_date = date( 'Y-m-d' );
@@ -110,33 +118,40 @@ function qqlanding_match_b(){
 		'order'		=> 'ASC'
 	);
 	$query_match_b = new WP_Query($match_args_b);
+	$set_new_date_b ='';
 	if ( $query_match_b->have_posts() ):
 		while( $query_match_b->have_posts() ) : $query_match_b->the_post();
 			$set_new_date_b = get_post_meta(  get_the_ID(), '_date_matches_key', true );
+
+			$logo_b = esc_attr( get_option('match_logo_b') );
+			$title_b = esc_attr( get_option('match_title_b') );
+			$date_b = esc_attr( get_option('match_date_b') );
+
+			$match_b = '<h3 class="vm-mt-title">Team B</h3>';
+			$match_b .= '<p class="vm-small-desc">* Please fill up all of the fields.</p>';
+			$match_b .= '<div class="input_wrapper">';
+				$match_b .= '<input type="button" value="Upload Logo" id="upload_logo_b" class="button button-secondary"><input type="hidden" id="match_logo_b" name="match_logo_b" value="' . $logo_b . '" />';
+			$match_b .= '</div>';
+			$match_b .= '<div class="input_wrapper">';
+				$match_b .= '<label for="match_title_b">Title</label>';
+				$match_b .= '<input type="text" name="match_title_b" id="match_title_b" value="' . $title_b . '" />';
+			$match_b .= '</div>';
+			$match_b .= '<div class="input_wrapper">';
+				$match_b .= '<label for="match_date_b">Date</label>';
+				$match_b .= '<input type="date" name="match_date_b" id="match_date_b" value="' . $set_new_date_b . '" class="disabled" disabled/>';
+				$match_b .= '<small class="muted-text"><i class="required-text">*</i> Show the upcoming / current match date.</small>';
+			$match_b .= '</div>';
+
+			echo $match_b;
 		endwhile;
 		wp_reset_postdata();
+	else:
+		echo '<div class="input_wrapper vm-wrapper-d item-no-avail">';
+			echo '<div id="prev-details-wrap">';
+				echo '<h2>No Time Available</h2>';
+			echo '</div>';
+		echo '</div>';
 	endif;
-
-	$logo_b = esc_attr( get_option('match_logo_b') );
-	$title_b = esc_attr( get_option('match_title_b') );
-	$date_b = esc_attr( get_option('match_date_b') );
-
-	$match_b = '<h3 class="vm-mt-title">Team B</h3>';
-	$match_b .= '<p class="vm-small-desc">* Please fill up all of the fields.</p>';
-	$match_b .= '<div class="input_wrapper">';
-		$match_b .= '<input type="button" value="Upload Logo" id="upload_logo_b" class="button button-secondary"><input type="hidden" id="match_logo_b" name="match_logo_b" value="' . $logo_b . '" />';
-	$match_b .= '</div>';
-	$match_b .= '<div class="input_wrapper">';
-		$match_b .= '<label for="match_title_b">Title</label>';
-		$match_b .= '<input type="text" name="match_title_b" id="match_title_b" value="' . $title_b . '" />';
-	$match_b .= '</div>';
-	$match_b .= '<div class="input_wrapper">';
-		$match_b .= '<label for="match_date_b">Date</label>';
-		$match_b .= '<input type="date" name="match_date_b" id="match_date_b" value="' . $set_new_date_b . '" class="disabled" disabled/>';
-		$match_b .= '<small class="muted-text"><i class="required-text">*</i> Show the upcoming / current match date.</small>';
-	$match_b .= '</div>';
-
-	echo $match_b;
 }
 function qqlanding_match_c(){
 	$current_date = date( 'Y-m-d' );
@@ -164,34 +179,42 @@ function qqlanding_match_c(){
 		'orderby'	=> 'upcoming_date_c',
 		'order'		=> 'ASC'
 	);
+	$set_new_date_c = '';
 	$query_match_c = new WP_Query($match_args_c);
 	if ( $query_match_c->have_posts() ):
 		while( $query_match_c->have_posts() ) : $query_match_c->the_post();
 			$set_new_date_c = get_post_meta(  get_the_ID(), '_date_matches_key', true );
+
+			$logo_c = esc_attr( get_option('match_logo_c') );
+			$title_c = esc_attr( get_option('match_title_c') );
+			$date_c = esc_attr( get_option('match_date_c') );
+
+			$match_c = '<h3 class="vm-mt-title">Team C</h3>';
+			$match_c .= '<p class="vm-small-desc">* Please fill up all of the fields.</p>';
+			$match_c .= '<div class="input_wrapper">';
+				$match_c .= '<input type="button" value="Upload Logo" id="upload_logo_c" class="button button-secondary"><input type="hidden" id="match_logo_c" name="match_logo_c" value="' . $logo_c . '" />';
+			$match_c .= '</div>';
+			$match_c .= '<div class="input_wrapper">';
+				$match_c .= '<label for="match_title_c">Title</label>';
+				$match_c .= '<input type="text" name="match_title_c" id="match_title_c" value="' . $title_c . '" />';
+			$match_c .= '</div>';
+			$match_c .= '<div class="input_wrapper">';
+				$match_c .= '<label for="match_date_c">Date</label>';
+				$match_c .= '<input type="date" name="match_date_c" id="match_date_c" value="' . $set_new_date_c . '" class="disabled" disabled/>';
+				$match_c .= '<small class="muted-text"><i class="required-text">*</i> Show the upcoming / current match date.</small>';
+			$match_c .= '</div>';
+
+			echo $match_c;
+			
 		endwhile;
 		wp_reset_postdata();
+	else:
+		echo '<div class="input_wrapper vm-wrapper-d item-no-avail">';
+			echo '<div id="prev-details-wrap">';
+				echo '<h2>No Time Available</h2>';
+			echo '</div>';
+		echo '</div>';
 	endif;
-
-	$logo_c = esc_attr( get_option('match_logo_c') );
-	$title_c = esc_attr( get_option('match_title_c') );
-	$date_c = esc_attr( get_option('match_date_c') );
-
-	$match_c = '<h3 class="vm-mt-title">Team C</h3>';
-	$match_c .= '<p class="vm-small-desc">* Please fill up all of the fields.</p>';
-	$match_c .= '<div class="input_wrapper">';
-		$match_c .= '<input type="button" value="Upload Logo" id="upload_logo_c" class="button button-secondary"><input type="hidden" id="match_logo_c" name="match_logo_c" value="' . $logo_c . '" />';
-	$match_c .= '</div>';
-	$match_c .= '<div class="input_wrapper">';
-		$match_c .= '<label for="match_title_c">Title</label>';
-		$match_c .= '<input type="text" name="match_title_c" id="match_title_c" value="' . $title_c . '" />';
-	$match_c .= '</div>';
-	$match_c .= '<div class="input_wrapper">';
-		$match_c .= '<label for="match_date_c">Date</label>';
-		$match_c .= '<input type="date" name="match_date_c" id="match_date_c" value="' . $set_new_date_c . '" class="disabled" disabled/>';
-		$match_c .= '<small class="muted-text"><i class="required-text">*</i> Show the upcoming / current match date.</small>';
-	$match_c .= '</div>';
-
-	echo $match_c;
 }
 function qqlanding_match_d(){
 	echo '<div class="input_wrapper vm-wrapper-d item-no-avail">';

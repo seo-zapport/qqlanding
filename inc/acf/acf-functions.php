@@ -5128,7 +5128,7 @@ acf_add_local_field_group(array(
 							'label' => 'Network Logo',
 							'name' => 'prov_net_logo_id',
 							'type' => 'select',
-							'instructions' => 'Choose the banks that you want to display.',
+							'instructions' => 'Choose the tv network that you want to display.',
 							'required' => 1,
 							'conditional_logic' => array(
 								array(
@@ -5145,6 +5145,7 @@ acf_add_local_field_group(array(
 								'id' => 'prov_net_logo_id',
 							),
 							'choices' => array(
+								'fox_sports' => 'Fox Sports',
 								'sctv' => 'SCTV',
 								'orangetv' => 'Orange TV',
 								'k_vision' => 'K-Vision',
@@ -5154,6 +5155,110 @@ acf_add_local_field_group(array(
 							),
 							'default_value' => array(
 								0 => 'sctv',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5bed03d0c64cb',
+							'label' => 'Network Logo',
+							'name' => 'prov_net_logo_my',
+							'type' => 'select',
+							'instructions' => 'Choose the tv network that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'my',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'prov_net_logo_my',
+							),
+							'choices' => array(
+								'astro' => 'Astro',
+							),
+							'default_value' => array(
+								0 => 'astro',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5bed0405c64cc',
+							'label' => 'Network Logo',
+							'name' => 'prov_net_logo_th',
+							'type' => 'select',
+							'instructions' => 'Choose the tv network that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'th',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'prov_net_logo_th',
+							),
+							'choices' => array(
+								'pptv_th' => 'PPTV HD',
+								'truev_th' => 'True Vision',
+							),
+							'default_value' => array(
+								0 => 'truev_th',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+							'ui' => 1,
+							'ajax' => 0,
+							'return_format' => 'value',
+							'placeholder' => '',
+						),
+						array(
+							'key' => 'field_5bed036cc64ca',
+							'label' => 'Network Logo',
+							'name' => 'prov_net_logo_vn',
+							'type' => 'select',
+							'instructions' => 'Choose the tv network that you want to display.',
+							'required' => 1,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5b88ee69b0522',
+										'operator' => '==',
+										'value' => 'vn',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => 'prov_net_logo_vn',
+							),
+							'choices' => array(
+								'vn_tv' => 'Vietnam Tv',
+								'kplus' => 'kPlus',
+							),
+							'default_value' => array(
+								0 => 'vn_tv',
 							),
 							'allow_null' => 0,
 							'multiple' => 0,
