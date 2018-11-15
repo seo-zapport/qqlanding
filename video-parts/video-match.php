@@ -2,6 +2,7 @@
 $disable = get_field( 'vm_match_enable_section', 'option' ); //Content Enable/Disable
 if ( acf_selective_refresh($disable) ) return $disable = false;
 $current_date = date( 'Y-m-d' );
+
 /*-Group-A--**/
 $get_item_a = array(
 	'post_type'			=> 'qqlanding-matches',
