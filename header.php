@@ -16,29 +16,35 @@ if ( ! defined('ABSPATH')) exit; ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
-	<?php 
-		$layout = get_field( 'th_color_scheme', 'option' );
-		$template = get_field( 'header_template', 'option' );
-		switch ($template) {
-			case 'bare': $nav_class = "qqlanding-bare"; break;
-			case 'overlay': $nav_class = "qqlanding-overlay"; break;
-			default: $nav_class = "qqlanding-default"; break;
-		}
-		$front_class = ( is_front_page() ) ? ' qqland-front' : '';
-	?>
 </head>
-<body <?php body_class( 'qqlanding-sites qqland-' . qqlanding_schema( $layout ) . $front_class); ?>>
+<body <?php body_class(); ?>>
 
 <div id="page" class="site container<?php echo ( get_field( 'th_layout', 'option' ) == 'wide' ) ? '-full qqland-site-full' : ' qqland-site-box'; ?>">
 	<?php if ( th_layout() === 'box' ): ?>
 		<div class="row">
 	<?php endif;?> <!--if wide/box only-->
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'qqlanding' ); ?></a>
-	<header id="masthead" class="site-header <?php echo $nav_class; ?>" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<header id="masthead" class="site-header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 		<?php if ( get_field( 'sm_header', 'option' ) === true): ?>
 		<?php //if ( get_field( 'header_top_menu', 'option' ) === true): ?>
 			<div class="site-top-info">
 				<div class="container">
+					<div id="qqlanding-lang" class="navbar navbar-expand-lg col-12 col-md-1 col-lg-1 p-0 float-md-right">
+						<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#lang-menu" aria-controls="lang-menu" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+						</button>
+						<?php
+							wp_nav_menu( array(
+								'theme_location'	=> 'top_menu',
+								'container'			=> 'div',
+								'container_id'		=> 'lang-menu',
+								'menu_class'		=> 'navbar-nav',
+								'container_class'	=> 'navbar-collapse collapse scollapsed',
+								'fallback_cb'		=> 'wp_navwalker::fallback',
+								'walker'			=> new wp_navwalker()
+							) );
+						?>
+					</div>
 					<?php qqlanding_social_media(); ?>
 				</div>
 			</div>

@@ -218,6 +218,10 @@
     $(window).load(function(){
         // $("#qqpreload").fadeOut(500);
         $('#qqpreload').fadeOut('slow',function(){$(this).remove();});
+
+        if ( $('body').hasClass('qqlayout-overlay') ) {
+            $('.breadcrumb').addClass('mt-4');
+        }
     });
 
 

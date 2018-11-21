@@ -53,6 +53,7 @@ if ( ! function_exists( 'qqlanding_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
+			'top_menu' => esc_html__( 'Top Menu', 'qqlanding' ),
 			'primary' => esc_html__( 'Primary Menu', 'qqlanding' ),
 			'footer' => esc_html__( 'Footer Menu', 'qqlanding' ),
 		) );

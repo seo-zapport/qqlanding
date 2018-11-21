@@ -19,6 +19,18 @@
 		vertical-align: middle;
 	}
 }
+#qqlanding-lang{
+	background-color: transparent;
+	a{
+		outline: none;
+	}
+	.dropdown-menu{
+		min-width: 5rem;
+		li{
+			display: inline-block;
+		}
+	}
+}
 /**--Enter site*/
 .qqlanding-sites{
 	line-height: 1.2;

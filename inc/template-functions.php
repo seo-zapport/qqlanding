@@ -544,15 +544,40 @@ function qqlanding_preloader(){
 add_action( 'wp_head', 'qqlanding_preloader' );
 
 /**
- * Footer Extend script in video page template
+ * Footer Extend script
  */
-function qqlanding_video_script(){
+function qqlanding_script(){
+	$template = get_field( 'header_template', 'option' );
+	switch ($template) {
+		case 'bare': $nav_class = "qqlanding-bare"; break;
+		case 'overlay': $nav_class = "qqlanding-overlay"; break;
+		default: $nav_class = "qqlanding-default"; break;
+	}
+	?>
+	<script type="text/javascript">
+		/*-Add some class in the header tags-**/
+		var nav_class = '<?= $nav_class; ?>';
+		jQuery(window).load(function(){
+			jQuery( '#masthead.site-header' ).addClass(nav_class);
+		});
 
-	if ( is_page_template( 'template-videos.php' ) ) : ?>
-		<script type="text/javascript">
+		/*-Store the url in var used it to connect the ajax**/
+		<?php if ( is_page_template( 'template-videos.php' ) ) : ?>
 			var urlBase = '<?= get_bloginfo("template_url"); ?>';
-		</script>
-	<?php endif;
+		<?php endif; ?>
+		
+	</script>
+
+<?php }
+add_action( 'wp_footer','qqlanding_script' );
+
+
+/**
+ * Add support for the QuickTime (.mov) video format.
+ */
+function qqlanding_extend_video($exts){
+	$exts[] = 'mov';
+	return $exts;
 }
-add_action( 'wp_footer','qqlanding_video_script' );
+add_filter( 'wp_video_extensions', 'qqlanding_extend_video');
 

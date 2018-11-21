@@ -6343,7 +6343,7 @@ acf_add_local_field_group(array(
 					'conditional_logic' => array(
 						array(
 							array(
-								'field' => 'field_5b74efcc29857',
+								'field' => 'field_5bd7b282122a6',
 								'operator' => '==',
 								'value' => 'bg-image',
 							),
@@ -6375,7 +6375,7 @@ acf_add_local_field_group(array(
 					'conditional_logic' => array(
 						array(
 							array(
-								'field' => 'field_5b74efcc29857',
+								'field' => 'field_5bd7b282122a6',
 								'operator' => '==',
 								'value' => 'bg-color',
 							),
@@ -10236,8 +10236,9 @@ endif;
 /**
  * This will add some class to your body
  */
-function qqlanding_schema( $class ){
+function qqlanding_schema( $classes ){
 	$add_affix = ( get_field('th_nav_settings','option') == true ) ? 'qqland-affix' : 'qqland-no-affix';
+	$layout = get_field( 'th_color_scheme', 'option' );
 
 	$template = get_field( 'header_template', 'option' );
 	switch ($template) {
@@ -10245,21 +10246,25 @@ function qqlanding_schema( $class ){
 		case 'overlay': $new_class = "qqlayout-overlay"; break;
 		default: $new_class = "qqlayout-default"; break;
 	}
-	switch ( $class ) {
-		case 'qq188': $class = 'qq188 ' . $add_affix . ' ' . $new_class; break;
-		case 'qq101': $class = 'qq101 ' . $add_affix . ' ' . $new_class; break;
-		case 'qq1x2': $class = 'qq1x2 ' . $add_affix . ' ' . $new_class; break;
-		case 'qq724': $class = 'qq724 ' . $add_affix . ' ' . $new_class; break;
-		case 'qqfortuna': $class = 'qqfortuna ' . $add_affix . ' ' . $new_class; break;
-		case 'qq801': $class = 'qq801 ' . $add_affix . ' ' . $new_class; break;
-		case 'qq882': $class = 'qq882 ' . $add_affix . ' ' . $new_class; break;
-		case 'qq808': $class = 'qq808 ' . $add_affix . ' ' . $new_class; break;
-		case 'qq828': $class = 'qq828 ' . $add_affix . ' ' . $new_class; break;
-		case 'custom': $class = 'custom ' . $add_affix . ' ' . $new_class; break;
-		default: $class = 'qq288 ' . $add_affix . ' ' . $new_class; break;
+	switch ( $layout ) {
+		case 'qq188': $qqclasses = 'qq188 ' . $add_affix . ' ' . $new_class; break;
+		case 'qq101': $qqclasses = 'qq101 ' . $add_affix . ' ' . $new_class; break;
+		case 'qq1x2': $qqclasses = 'qq1x2 ' . $add_affix . ' ' . $new_class; break;
+		case 'qq724': $qqclasses = 'qq724 ' . $add_affix . ' ' . $new_class; break;
+		case 'qqfortuna': $qqclasses = 'qqfortuna ' . $add_affix . ' ' . $new_class; break;
+		case 'qq801': $qqclasses = 'qq801 ' . $add_affix . ' ' . $new_class; break;
+		case 'qq882': $qqclasses = 'qq882 ' . $add_affix . ' ' . $new_class; break;
+		case 'qq808': $qqclasses = 'qq808 ' . $add_affix . ' ' . $new_class; break;
+		case 'qq828': $qqclasses = 'qq828 ' . $add_affix . ' ' . $new_class; break;
+		case 'custom': $qqclasses = 'custom ' . $add_affix . ' ' . $new_class; break;
+		default: $qqclasses = 'qq288 ' . $add_affix . ' ' . $new_class; break;
 	}
-	return $class;
+
+	$classes[] = 'qqlanding-sites qqland-' . $qqclasses;
+	$classes[] = ( is_front_page() ) ? 'qqland-front' : '';
+	return $classes;
 }
+add_filter( 'body_class', 'qqlanding_schema');
 
 function qqlanding_text_color($color){
 	switch ( $color ) {

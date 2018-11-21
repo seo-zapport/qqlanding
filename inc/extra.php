@@ -161,7 +161,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 		$post        		= get_queried_object();
 		$post_type 			= get_post_type(); // If post is a custom post type
 		$parent_id  		= isset( $post->post_parent ) ? $post->post_parent : '';
-		$singular_video		= ( ! is_singular( 'video' ) ) ? '' : ' mt-5';
+		//$singular_video		= ( ! is_singular( 'video' ) ) ? ' mt-4' : ' mt-5';
 
 
 		$html_output		= '';
@@ -169,7 +169,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 		global $wp_query; // Get the query & post information
 
 		if ( ! is_front_page() ) :
-			$html_output		.= '<nav class="' . $breadcrumb__grp_class . $singular_video . '" itemprop="breadcrumb" itemscope itemtype="' . $schema_url . '/BreadcrumbList">';
+			$html_output		.= '<nav class="' . $breadcrumb__grp_class . '" itemprop="breadcrumb" itemscope itemtype="' . $schema_url . '/BreadcrumbList">';
 				$html_output .= '<li class="' . $breadcrumb__item_class . '" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem">';
 					$html_output .= '<meta itemprop="position" content="1">';
 					$html_output .= '<a href="' . $home_url . '" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">'. $text['home'] . '</span></a>';

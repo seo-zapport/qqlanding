@@ -2,7 +2,7 @@
 	 $(window).on('load', function(){
 	 	var find =  $('#videoTitle');
 	 	var title = find.text().toLowerCase();
-	 	const qqarray = ["qq288","qq188","qq101","qqfortuna"];
+	 	const qqarray = ["qq288","qq188","qq101","qq1x2","qq724","qq801","qq828","qq882","qq802","qq820","qq808"];
 	 	const qqfreearray = ["free bonus"];
 	 	var qqfind = "";
 	 	var qqfindfree = "";
