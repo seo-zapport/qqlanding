@@ -199,6 +199,16 @@ require get_template_directory() . '/inc/admin-template/videos.php';
 require get_template_directory() . '/inc/admin-template/matches.php';
 
 /**
+ * Slider Functions.
+ */
+require get_template_directory() . '/inc/template-slider.php';
+
+/**
+ * Slider Matches Functions.
+ */
+require get_template_directory() . '/inc/admin-slider/slider.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';

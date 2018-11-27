@@ -774,7 +774,6 @@ a:hover, a:active { outline: 0; }
 .qqlanding-sites.qqland-front #banner { margin-bottom: 0em; }
 .qqlanding-sites #banner { margin-bottom: 2em; max-height: 100%; overflow: hidden; position: relative; width: 100%; /*Video*/ /*Skew Transitions*/ }
 .qqlanding-sites #banner #banner-static { width: 100%; }
-.qqlanding-sites #banner #banner-static:after { content: ''; display: block; position: absolute; left: 0; bottom: 0; height: 100%; width: 100%; }
 .qqlanding-sites #banner .banner-static-content { height: 100%; padding-top: 0.5em; padding-bottom: 4.5em; text-shadow: 1px 3px 1px #313131; }
 .qqlanding-sites #banner .slider-filters { position: absolute; top: 0; bottom: 0; width: 100%; z-index: -1; }
 .qqlanding-sites #banner #banner-slider .carousel-caption { position: static; bottom: 0; left: 0; }
@@ -1076,7 +1075,7 @@ embed, iframe, object { max-width: 100%; }
   .qqlanding-sites #site-navigation .navbar-nav .nav-link { padding-left: 10px; padding-right: 10px; }
   .qqlanding-sites #site-navigation.navbar-light .navbar-toggler { border-color: rgba(255, 255, 255, 0.65); outline: none; }
   .qqlanding-sites #site-navigation.navbar-light .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
-  .qqlanding-sites .banner-skew { padding-bottom: 200px; }
+  .qqlanding-sites .banner-skew .carousel-item { padding-top: 180px; padding-bottom: 200px; }
   .qqlanding-sites #banner #video_wrap { height: 392px; margin-top: 54px; } }
 @media (max-width: 768px) { .provider-item { float: none; display: inline-block; margin-right: 15px; margin-bottom: 10px; }
   .desk { display: none; }

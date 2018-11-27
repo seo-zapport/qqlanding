@@ -229,10 +229,10 @@ function qqLand_vid_func(){
 	require_once (get_template_directory() . '/inc/admin-template/dashboard.php' );
 }
 
-function videos_add_item_settings(){ 
+/*function videos_add_item_settings(){ 
 	require_once (get_template_directory() . '/inc/admin-template/create-video.php' );
 	//require_once (get_template_directory() . '/inc/admin-template/videos.php' );
-}
+}*/
 
 //Sanitization
 require_once (get_template_directory() . '/inc/admin-template/vid-sanitize.php' );

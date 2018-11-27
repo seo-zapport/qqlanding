@@ -89,6 +89,9 @@
 	$('.vm-general-form > table.form-table tbody tr').each(function(index){
 		$(this).find('th').addClass('sr-only');
 	});
+	$('.qqlanding-slider-settings table.form-table tbody tr').each(function(index){
+		$(this).find('th').addClass('sr-only');
+	});
 
 	$('input#match_title_a').on('keyup',function(e){
 		e.preventDefault;
@@ -109,4 +112,64 @@
 		$('.vm-wrapper-c #admin_match_title_c').text(value);
 	});
 
+
+	/*-Tab-pane*/
+	window.addEventListener('load', function(){
+		var tabs = document.querySelectorAll( 'ul.nav-tabs .nav-link' );
+
+		for(i = 0; i < tabs.length; i++){
+			tabs[i].addEventListener('click', magpalit);
+		}
+
+		function magpalit(event){
+			event.preventDefault();
+
+			document.querySelector(".nav-link.active").classList.remove("active");
+			document.querySelector(".tab-pane.active").classList.remove("active");
+
+			var clickedTab = event.currentTarget;
+			var anchor = event.target;
+			var activePaneId = anchor.getAttribute('href');
+
+			clickedTab.classList.add("active");
+			document.querySelector(activePaneId).classList.add("active");
+			
+		}
+	});
+
+	/*-Preset*/
+	$('#preset').on('change', function(){
+		var opt = $(this).val();
+		switch(opt){
+			case'default': 
+				$('#image_post_wrap').addClass('sr-only');
+				$('#repeat_image_wrap').addClass('sr-only');
+				$('#scroll_wrap').addClass('sr-only');
+				$('#image_size_wrap').addClass('sr-only');
+			break;
+			case'fill_screen': 
+				$('#image_post_wrap').removeClass('sr-only');
+				$('#repeat_image_wrap').addClass('sr-only');
+				$('#scroll_wrap').addClass('sr-only');
+				$('#image_size_wrap').addClass('sr-only');
+			break;
+			case'fit_screen': 
+				$('#image_post_wrap').removeClass('sr-only');
+				$('#repeat_image_wrap').removeClass('sr-only');
+				$('#scroll_wrap').addClass('sr-only');
+				$('#image_size_wrap').addClass('sr-only');
+			break;
+			case'repeat': 
+				$('#image_post_wrap').removeClass('sr-only');
+				$('#repeat_image_wrap').addClass('sr-only');
+				$('#scroll_wrap').removeClass('sr-only');
+				$('#image_size_wrap').addClass('sr-only');
+			break;
+			default:
+				$('#image_post_wrap').removeClass('sr-only');
+				$('#repeat_image_wrap').removeClass('sr-only');
+				$('#scroll_wrap').removeClass('sr-only');
+				$('#image_size_wrap').removeClass('sr-only');
+		}
+	});
 })(jQuery);

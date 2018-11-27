@@ -27,8 +27,8 @@ $filter_a = get_field( 'filter_fields_a', 'option' ); /*--filters*/
 /* ================================= */ 
 <?php 
 //Fonts Settings title
-$slider_fonts_title = get_field('slider_fonts_title', 'option');
-$slider_fonts_content = get_field('slider_fonts_content', 'option');
+$slider_fonts_title = get_field('slider_fonts_title');
+$slider_fonts_content = get_field('slider_fonts_content');
 $slider_padding = get_field('slider_padding', 'option');
 $slider_margin = get_field('slider_margin', 'option');
 
@@ -43,6 +43,41 @@ $margin_slider_top = ( ! empty( $slider_margin['slider_margin_top'] ) ) ? $slide
 $margin_slider_left = ( ! empty( $slider_margin['slider_margin_left'] ) ) ? $slider_margin['slider_margin_left'] . 'px' : '0px';
 $margin_slider_bottom = ( ! empty( $slider_margin['slider_margin_bottom'] ) ) ? $slider_margin['slider_margin_bottom'] . 'px' : '0px';
 $margin_slider_right = ( ! empty( $slider_margin['slider_margin_right'] ) ) ? $slider_margin['slider_margin_right'] . 'px' : '0px';
+
+/*New*/
+$preset = esc_attr( get_option('preset') );
+$image_position = esc_attr( get_option('image_position') );
+$repeat_image = esc_attr( get_option('repeat_image') );
+$scroll = esc_attr( get_option('scroll') );
+$image_size = esc_attr( get_option('image_size') );
+$m_top = esc_attr( get_option('m_top') );
+$m_left = esc_attr( get_option('m_left') );
+$m_bottom = esc_attr( get_option('m_bottom') );
+$m_right = esc_attr( get_option('m_right') );
+$p_top = esc_attr( get_option('p_top') );
+$p_left = esc_attr( get_option('p_left') );
+$p_bottom = esc_attr( get_option('p_bottom') );
+$p_right = esc_attr( get_option('p_right') );
+
+
+//$lang = wp_get_post_terms( $post->ID, 'language' )[0]->slug;
+if ( have_rows('slider_item') ) : $count = 1;
+
+	while (have_rows('slider_item')) : the_row();
+
+	$bg = qqlanding_sliding_bg(get_sub_field('slider_bg_attr'),get_sub_field('slide_image'),get_sub_field('slide_color'));
+	$presets = qqlanding_preset_acf($repeat_image,$scroll,$preset,$image_position,$image_size);?>
+
+	.carousel-item.slider-views-<?php echo $count; ?>{background:<?php echo $bg; ?>;<?php echo $presets; ?>;}
+<?php $count++;
+	endwhile;
+endif; /*-new*/
+/*-skew*/
+$skew_opt = get_option('slider_skew');
+if ( $skew_opt == true || $skew_opt == 1 ) { ?>
+	.qqlanding-sites #banner #banner-static:after{content:'';display:block;position:absolute;left:0;bottom:0;height:100%;width:100%}
+<?php }
+
 
 if($slider_fonts_title) : ?>
 	#banner .post-entry-title{
@@ -67,83 +102,6 @@ if($slider_fonts_content) : ?>
 		color: <?php echo $slider_fonts_content['slider_font_color']; ?>;
 	}
 <?php endif; ?>
-
-<?php if ( get_field('slider_layout','option') == 'static' ): ?>
-	<?php if ( have_rows( 'slider_item_static', 'option' ) ): ?>
-		<?php while ( have_rows( 'slider_item_static', 'option' ) ): the_row();
-			$bg = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
-			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
-			if ( ! empty($filter) ): ?>
-			#banner .slider-filters{background: <?php echo $bg;?>;<?php echo $presets; ?><?php if ( ! empty( get_field( 'slider_opacity', 'option' ) ) && get_field( 'slider_opacity', 'option' ) != '0' ) : ?>opacity: <?php the_field( 'slider_opacity', 'option' ); ?><?php endif; ?>;}
-			@media screen and (min-width: 1024px) {
-				.qqlanding-sites #banner-static,#banner .slider-filters{height: <?php echo $slide_height; ?>}
-			}
-			@media only screen and (min-width:768px) and (max-width:1024px){
-				.qqlanding-sites #banner-static,#banner .slider-filters{height: <?php echo $slide_tablet_height; ?>}
-			}
-			@media only screen and (min-width:320px) and (max-width:768px){
-				.qqlanding-sites #banner-static,#banner .slider-filters{height: <?php echo $slide_mobile_height; ?>}
-			}
-			<?php else: ?>
-			<?php if ( empty( get_field( 'slider_opacity', 'option' ) ) || get_field( 'slider_opacity', 'option' ) == '0' ) : ?>#banner-static{background: <?php echo $bg;?>;<?php echo $presets; ?>}<?php endif; ?>
-			<?php if ( ! empty( get_field( 'slider_opacity', 'option' ) ) && get_field( 'slider_opacity', 'option' ) != '0' ) : ?>#banner-static:after{background: <?php echo $bg;?>;<?php echo $presets; ?> opacity: <?php the_field( 'slider_opacity', 'option' ); ?>;}<?php endif; ?>
-			@media screen and (min-width: 1024px) {
-				.qqlanding-sites #banner-static{height: <?php echo $slide_height; ?>}
-			}
-			@media only screen and (min-width:768px) and (max-width:1024px){
-				.qqlanding-sites #banner-static{height: <?php echo $slide_tablet_height; ?>}
-			}
-			@media only screen and (min-width:320px) and (max-width:768px){
-				.qqlanding-sites #banner-static{height: <?php echo $slide_mobile_height; ?>}
-			}
-			<?php endif; ?>
-
-		<?php endwhile; //end of slider_item_static?>
-	<?php endif; //check the static slider?>
-<?php else: ?>
-	<?php if ( have_rows( 'slider_item_r', 'option' ) ): $count = 0;?>
-		<?php while ( have_rows( 'slider_item_r', 'option' ) ): the_row();
-			$filter = get_field( 'filter_fields', 'option' );
-			$bg = qqlanding_sliding_bg(get_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
-			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
-			if ( ! empty($filter) ): ?>
-				.slider-views-<?php echo $count;?>.slider-filter:after{
-					background: <?php echo $bg;?>;
-					<?php echo $presets;?>
-					<?php if (empty( get_field( 'slider_opacity', 'option' ) ) || get_field( 'slider_opacity', 'option' ) != '0'): ?>opacity: <?php the_field( 'slider_opacity', 'option' ); ?>;<?php endif; ?>
-				}
-			<?php else: ?>
-				.slider-views-<?php echo $count;?>{
-					background: <?php echo $bg;?>;
-					<?php echo $presets;?>
-					<?php if (empty( get_field( 'slider_opacity', 'option' ) ) || get_field( 'slider_opacity', 'option' ) != '0'): ?>opacity: <?php the_field( 'slider_opacity', 'option' ); ?>;<?php endif; ?>
-				}
-			<?php endif; ?>
-		<?php $count++; endwhile;
-		$countd = 0;
-		$countt = 0;
-		$countm = 0;
-		//desktop
-		while ( have_rows( 'slider_item_r', 'option' ) ): the_row();?>
-			.slider-views-<?php echo $countd;?>{height: <?php echo $slide_height; ?>px;}
-		<?php $countd++; endwhile; ?>
-		@media (min-width:768px) and (max-width:1024px){
-			<?php //Tablet
-			while ( have_rows( 'slider_item_r', 'option' ) ): the_row();?>
-				.slider-views-<?php echo $countt;?>{height: <?php echo $slide_tablet_height; ?>px;}
-			<?php $countt++; endwhile;?>
-		}
-		@media (min-width:320px) and (max-width:768px){
-			<?php //mobile
-			while ( have_rows( 'slider_item_r', 'option' ) ): the_row();?>
-				.slider-views-<?php echo $countm;?>{height: <?php echo $slide_mobile_height; ?>px;}
-			<?php $countm++; endwhile;?>
-		}
-		
-	<?php endif; //check the slider?>
-<?php endif; //check the slider layout ?>
-<?php if ( ! empty( get_field( 'filter_fields', 'option' ) ) ): ?>#banner .slider-filters{<?php echo qqlanding_filters( 'filter_fields', 'filter_selection', 'filter_values','filter_dimension' ); ?>}
-[class*='slider-views-'].slider-filter:after{<?php echo qqlanding_filters( 'filter_fields', 'filter_selection', 'filter_values','filter_dimension' ); ?>}<?php endif; ?>
 
 
 /* ================================= */

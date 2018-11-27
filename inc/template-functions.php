@@ -581,3 +581,13 @@ function qqlanding_extend_video($exts){
 }
 add_filter( 'wp_video_extensions', 'qqlanding_extend_video');
 
+add_filter( 'pll_get_post_types', 'add_cpt_to_pll', 10, 2 );
+function add_cpt_to_pll( $post_types, $hide ){
+	if ($hide)
+        // hides 'slider' from the list of custom post types in Polylang settings
+        unset($post_types['slider']);
+    else
+        // enables language and translation management for 'slider'
+    $post_types['slider'] = 'slider';
+    return $post_types;
+}

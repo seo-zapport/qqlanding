@@ -119,7 +119,8 @@
     });*/
 
    $('.carousel').carousel({
-        interval: _interval
+        interval: _interval,
+        pause: _pause
     });
     /**
      * Float classic
