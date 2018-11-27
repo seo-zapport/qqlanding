@@ -3,9 +3,32 @@
 	 	var find =  $('#videoTitle');
 	 	var title = find.text().toLowerCase();
 	 	const qqarray = ["qq288","qq188","qq101","qq1x2","qq724","qq801","qq828","qq882","qq802","qq820","qq808"];
-	 	const qqfreearray = ["free bonus"];
+	 	const qqfreearray = ["free bonus",'bonus gratis','Tiền Thưởng Miễn Phí'];
 	 	var qqfind = "";
 	 	var qqfindfree = "";
+	 	var pathArray = window.location.pathname;
+	 	var path_replace = pathArray.replace('/','');
+	 	var strpath = path_replace.substring(0,3);
+	 	var another = strpath.replace('/','');
+	 	var  image_title = '';
+
+	 		if (another == 'id') {
+	 			const qqfreearray = ["bonus gratis"];
+	 			var  image_title = 'bonus-gratis';
+	 		}
+	 		else if(another == 'vi'){
+	 			const qqfreearray = ["Tiền Thưởng Miễn Phí"];
+	 			var  image_title = 'tiền-thưởng miễn-phí';
+	 		}else if(another == 'th'){
+	 			const qqfreearray = ["โบนัสฟรี"];
+	 			var  image_title = 'โบนัสฟรี';
+	 		}else if(another == 'zh'){
+	 			const qqfreearray = ["免費獎金"];
+	 			var  image_title = '免費獎金';
+	 		}else{
+	 			const qqfreearray = ["free bonus"];
+	 			var  image_title = 'free-bonus';
+	 		}
 
 		qqarray.forEach(qqarray=>{  
 		  splitfind = title.match(qqarray);
@@ -22,8 +45,9 @@
 		   }
 		});
 		var freeval = qqfindfree;
+		console.log(freeval);
 		//console.log(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + freeval.replace(' ' , '-') + ".png'></span>");
-		find.html(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + freeval.replace(' ' , '-') + ".png'></span>");
+		find.html(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + image_title + ".png'></span>");
 	 });
 
 	var clock;

@@ -8909,7 +8909,7 @@ function qqlanding_owl_carousel(){ ?>
 	//banner
 	var _autoplay = '<?php echo $_autoplay; ?>',_nav = '<?php echo $_nav; ?>',_dots = '<?php echo $_dots; ?>';
 
-	var _interval = <?php echo $interval;?>;
+	var _interval = <?php echo ( ! empty( $interval ) ) ? $interval : 5000;?>;
 	var _pause = '<?php echo $pause;?>';
 </script>
 <?php }
