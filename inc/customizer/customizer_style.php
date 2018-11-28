@@ -29,15 +29,6 @@ function theme_site_colors(){
 	$preloader_bg_opacity = get_theme_mod( 'qqlanding_range_settings', 0 );
 	$preloader_item_color = get_theme_mod( 'qqlanding_vcolor_settings', '#ffffff' );
 
-	/*-slider-device---**/
-
-	$desk_w = get_option('desk_w');
-	$desk_h = get_option('desk_h');
-	$tab_w = get_option('tab_w');
-	$tab_h = get_option('tab_h');
-	$phone_w = get_option('phone_w');
-	$phone_h = get_option('phone_h');
-
 
 	if ( $theme_layout === 'wide' && ! is_front_page() || $theme_layout === 'wide' && is_home() ) {
 		if ( $theme_wrap_color != '#f7f8f9' ) {
@@ -98,15 +89,6 @@ function theme_site_colors(){
 	    <?php endif; ?>
 	    #videoContent .content-vm-img{<?php echo content_img_postion($positions,$img_post['vm_position_top'],$img_post['vm_position_right'],$img_post['vm_position_left'],$img_post['vm_position_buttom']); ?>}
 	    <?php if ( $display_preloader && ! empty($preloader_custom_style) ) : echo $preloader_custom_style; endif; ?>
-		@media screen and (min-width: 1024px) {
-			.qqlanding-sites .carousel-item,#banner .slider-filters{height: <?php echo $desk_h; ?>px;}
-		}
-		@media only screen and (min-width:768px) and (max-width:1024px){
-			.qqlanding-sites .carousel-item,#banner .slider-filters{height: <?php echo $tab_h; ?>px;}
-		}
-		@media only screen and (min-width:320px) and (max-width:768px){
-			.qqlanding-sites .carousel-item,#banner .slider-filters{height: <?php echo $phone_h; ?>px;}
-		}
 	</style>
 	<?php
 }

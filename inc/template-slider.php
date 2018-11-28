@@ -10,7 +10,7 @@ function qqlanding_slider_func(){
 
 	//add_menu_page( 'Slider', 'Slider', 'manage_options', 'slider_settings', 'edit.php?post_type=slider', 'dashicons-slides', 14 );
 	add_submenu_page( 'slider_settings', 'All Slider', 'All Slider', 'edit_posts', 'edit.php?post_type=slider' );
-	add_submenu_page( 'slider_settings', 'Settings', 'Settings', 'manage_options', 'qqslider-settings', 'qqslider_settings' );
+	//add_submenu_page( 'slider_settings', 'Settings', 'Settings', 'manage_options', 'qqslider-settings', 'qqslider_settings' );
 
 	//Activate custom settings
 	$add_init = array('qqlanding_app_custom_settings','qqlanding_nav_custom_settings','qqlanding_msc_custom_settings');

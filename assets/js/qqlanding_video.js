@@ -45,7 +45,7 @@
 		   }
 		});
 		var freeval = qqfindfree;
-		console.log(freeval);
+		//console.log(freeval);
 		//console.log(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + freeval.replace(' ' , '-') + ".png'></span>");
 		find.html(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + image_title + ".png'></span>");
 	 });

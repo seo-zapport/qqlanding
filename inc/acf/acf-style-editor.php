@@ -27,8 +27,8 @@ $filter_a = get_field( 'filter_fields_a', 'option' ); /*--filters*/
 /* ================================= */ 
 <?php 
 //Fonts Settings title
-$slider_fonts_title = get_field('slider_fonts_title');
-$slider_fonts_content = get_field('slider_fonts_content');
+$slider_fonts_title = get_field('slider_fonts_title', 'option');
+$slider_fonts_content = get_field('slider_fonts_content', 'option');
 $slider_padding = get_field('slider_padding', 'option');
 $slider_margin = get_field('slider_margin', 'option');
 
@@ -44,36 +44,64 @@ $margin_slider_left = ( ! empty( $slider_margin['slider_margin_left'] ) ) ? $sli
 $margin_slider_bottom = ( ! empty( $slider_margin['slider_margin_bottom'] ) ) ? $slider_margin['slider_margin_bottom'] . 'px' : '0px';
 $margin_slider_right = ( ! empty( $slider_margin['slider_margin_right'] ) ) ? $slider_margin['slider_margin_right'] . 'px' : '0px';
 
-/*New*/
-$preset = esc_attr( get_option('preset') );
-$image_position = esc_attr( get_option('image_position') );
-$repeat_image = esc_attr( get_option('repeat_image') );
-$scroll = esc_attr( get_option('scroll') );
-$image_size = esc_attr( get_option('image_size') );
-$m_top = esc_attr( get_option('m_top') );
-$m_left = esc_attr( get_option('m_left') );
-$m_bottom = esc_attr( get_option('m_bottom') );
-$m_right = esc_attr( get_option('m_right') );
-$p_top = esc_attr( get_option('p_top') );
-$p_left = esc_attr( get_option('p_left') );
-$p_bottom = esc_attr( get_option('p_bottom') );
-$p_right = esc_attr( get_option('p_right') );
+$args = array(
+	'post_type'			=> 'slider',
+	'post_status'		=> array( 'post','publish' ),
+);
+$newSlider = new WP_Query($args);
+if ( $newSlider->have_posts() ) :
+	while ( $newSlider->have_posts() ) : $newSlider->the_post();
+	$lang = wp_get_post_terms( get_the_ID(), 'language' )[0]->slug;
+	if ( have_rows('slider_item') ) : $count = 1;
+		while (have_rows('slider_item')) : the_row();
+			$filters = get_sub_field('filter_fields');
+			$img_property = get_sub_field('slid_position_property');
+			$slider_img_position = get_sub_field('slider_img_position');
+			$position = content_img_postion($img_property,$slider_img_position['slid_position_top'],$slider_img_position['slid_position_right'],$slider_img_position['slid_position_left'],$slider_img_position['slid_position_bottom']);
 
+			$opacity = get_field( 'slider_opacity', 'option' );
+			$bg = qqlanding_sliding_bg(get_sub_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
+			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
+			if ( ! empty($filters) ) :?>
+				.sliders-country-<?php echo $lang;?>.slider-views-<?php echo $count; ?> > .slider-filters:after{
+				content:'';position:absolute;height:100%;width:100%;
+				background:<?php echo $bg; ?>;<?php echo ( get_sub_field('slider_bg_attr', 'option') == 'bg-image' ) ?  $presets : ''; echo qqlanding_filters( 'filter_fields', 'filter_selection', 'filter_values','filter_dimension', 'sub' ); if ( ! empty( $opacity ) && $opacity != '0' ) : ?> opacity: <?php echo $opacity; ?><?php endif; ?>;
+				}
+			<?php else: ?>
+				.carousel-item.sliders-country-<?php echo $lang;?>.slider-views-<?php echo $count; ?>{background:<?php echo $bg; ?>;<?php echo ( get_sub_field('slider_bg_attr', 'option') == 'bg-image' ) ?  $presets : '';?>}				
+			<?php endif; 
 
-//$lang = wp_get_post_terms( $post->ID, 'language' )[0]->slug;
-if ( have_rows('slider_item') ) : $count = 1;
+			if ( $img_property == true ): ?>
+				.sliders-country-<?php echo $lang;?>.slider-views-<?php echo $count; ?> .content-slider-img{<?php echo $position; ?>}
+			<?php endif;
 
-	while (have_rows('slider_item')) : the_row();
+			$count++;
+		endwhile;
+	endif; /*-new*/ ?>
+	<?php endwhile;
+	wp_reset_postdata();
+endif;
+$slider_item = get_field( 'slider_opacity' );  
+$opacity = get_field( 'slider_opacity', 'option' );
+if ( empty( $slider_item['filter_fields'] ) ) {
+	if ( ! empty( $opacity ) && $opacity != '0' ) : ?>
+		.carousel-item:after{background-color:#fff;content:'';position:absolute;top:0;height:100%;width:100%;z-index:-1;opacity: <?php echo $opacity; ?>};
+	<?php endif;
+} ?>
 
-	$bg = qqlanding_sliding_bg(get_sub_field('slider_bg_attr'),get_sub_field('slide_image'),get_sub_field('slide_color'));
-	$presets = qqlanding_preset_acf($repeat_image,$scroll,$preset,$image_position,$image_size);?>
+@media screen and (min-width: 1024px) {
+	.qqlanding-sites .carousel-item,#banner .slider-filters{height: <?php echo $slide_height; ?>}
+}
+@media only screen and (min-width:768px) and (max-width:1024px){
+	.qqlanding-sites .carousel-item,#banner .slider-filters{height: <?php echo $slide_tablet_height; ?>}
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.qqlanding-sites .carousel-item,#banner .slider-filters{height: <?php echo $slide_mobile_height; ?>}
+}
 
-	.carousel-item.slider-views-<?php echo $count; ?>{background:<?php echo $bg; ?>;<?php echo $presets; ?>;}
-<?php $count++;
-	endwhile;
-endif; /*-new*/
+<?php
 /*-skew*/
-$skew_opt = get_option('slider_skew');
+$skew_opt = get_field('slider_skew', 'options');
 if ( $skew_opt == true || $skew_opt == 1 ) { ?>
 	.qqlanding-sites #banner #banner-static:after{content:'';display:block;position:absolute;left:0;bottom:0;height:100%;width:100%}
 <?php }
@@ -169,7 +197,7 @@ function conten_bg($field,$type){
 <?php 
 //Checking if the filters is not empty or empty. 
 if ( ! empty($filters) ): /*add the slider-filter class and put the bg values to it also add the filter values.*/ ?>
-	.content-<?php echo $class_var; ?> .slider-filters{background : <?php echo $backgroundcf; ?>;<?php echo @$presetscf; ?><?php echo qqlanding_filters( $filters_val, 'filter_selection', 'filter_values','filter_dimension' ); ?>}
+	.content-<?php echo $class_var; ?> .slider-filters{background : <?php echo $backgroundcf; ?>;<?php echo @$presetscf; ?><?php echo qqlanding_filters( $filters_val, 'filter_selection', 'filter_values','filter_dimension', '' ); ?>}
 <?php else: /* Usual class */  ?>
 .content-<?php echo $class_var; ?>{
 	background : <?php echo $backgroundcf; ?>;
