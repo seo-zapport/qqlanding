@@ -145,3 +145,31 @@ function qqlanding_header_set(){
 	</nav><!-- #site-navigation -->
 	<?php
 }
+
+/**
+ * This is were the language switcher
+ * customise and add to dropdown menu of
+ * info sections.
+ */
+function qqlanding_pll_sets(){
+ 
+	if ( function_exists('pll_register_string') ): 
+		$flags_sets = array('show_flags'=>1,'show_names'=>0,'hide_current'=>1); 
+		$current_flag = pll_current_language('slug');
+		$custom = pll_the_languages( array( 'raw' => 1 ) ); ?>
+		<div id="qqlanding-lang" class="dropdown float-right">
+			<button class="btn dropdown-toggle" type="button" id="pllDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<?php 
+					foreach ($custom as $customs) {
+						if ($current_flag === $customs['slug'] && $customs['current_lang'] == true ) { ?>
+							<img src="<?php echo $customs['flag']; ?>" title="<?php echo $customs['flag']; ?>" alt="<?php echo $customs['flag']; ?>">
+						<?php }
+					}
+				?>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="pllDropDown">
+				<?php pll_the_languages($flags_sets); ?>
+			</div>
+		</div>
+	<?php endif; 
+}

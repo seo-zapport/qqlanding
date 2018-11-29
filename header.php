@@ -29,22 +29,7 @@ if ( ! defined('ABSPATH')) exit; ?>
 		<?php //if ( get_field( 'header_top_menu', 'option' ) === true): ?>
 			<div class="site-top-info">
 				<div class="container">
-					<div id="qqlanding-lang" class="navbar navbar-expand-lg col-12 col-md-1 col-lg-1 p-0 float-md-right">
-						<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#lang-menu" aria-controls="lang-menu" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-						</button>
-						<?php
-							wp_nav_menu( array(
-								'theme_location'	=> 'top_menu',
-								'container'			=> 'div',
-								'container_id'		=> 'lang-menu',
-								'menu_class'		=> 'navbar-nav',
-								'container_class'	=> 'navbar-collapse collapse scollapsed',
-								'fallback_cb'		=> 'wp_navwalker::fallback',
-								'walker'			=> new wp_navwalker()
-							) );
-						?>
-					</div>
+					<?php qqlanding_pll_sets(); ?>
 					<?php qqlanding_social_media(); ?>
 				</div>
 			</div>
@@ -53,7 +38,6 @@ if ( ! defined('ABSPATH')) exit; ?>
 	</header><!-- #masthead -->
 	<?php if ( is_front_page() && ! is_home() ) qqlanding_load_section('slider'); ?>
 	<div id="content" class="site-content <?php echo ( ! is_page_template( 'template-page.php' ) && ! is_page_template( 'template-videos.php' ) ) ? 'container' : ''; ?>">
-		
 		<?php 
 			qqlanding_breadcrumb_list(); //breadcrumbs
 			if ( ! is_page_template( 'template-page.php' ) && ! is_page_template( 'template-videos.php' ) && ! is_singular( 'video' ) || is_home() ): ?>

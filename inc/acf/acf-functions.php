@@ -9130,14 +9130,15 @@ if ( function_exists( 'acf_add_options_page' ) ) :
 		'menu_title' 	=> __( 'General Theme', 'qqlanding' ),
 		'menu_slug'		=> 'general-theme-settings',
 		'capability'	=> 'edit_posts',
+		'icon_url'		=> 'dashicons-screenoptions',
 		'redirect'		=> false
 	) ); //General Settings
 	
-	acf_add_options_sub_page( array(
+	/*acf_add_options_sub_page( array(
 		'page_title' 	=> __( 'Slider Settings', 'qqlanding' ),
 		'menu_title' 	=> __( 'Slider', 'qqlanding' ),
 		'parent_slug'	=> 'general-theme-settings',
-	) ); //Front Page Settings
+	) );*/ //Front Page Settings
 	
 	acf_add_options_sub_page( array(
 		'page_title' 	=> __( 'Front Page Settings', 'qqlanding' ),

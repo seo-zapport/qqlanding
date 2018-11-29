@@ -6,8 +6,12 @@
 
 #qqlanding-lang { background-color: transparent; }
 #qqlanding-lang a { outline: none; }
+#qqlanding-lang button { background-color: transparent; color: #eee; }
+#qqlanding-lang button:active, #qqlanding-lang button:hover, #qqlanding-lang button:focus { border-color: transparent; color: #fdc153; }
+#qqlanding-lang button:focus { box-shadow: none; }
+#qqlanding-lang button img { display: inline-block; }
 #qqlanding-lang .dropdown-menu { min-width: 5rem; }
-#qqlanding-lang .dropdown-menu li { display: inline-block; }
+#qqlanding-lang .dropdown-menu li { display: inline-block; text-align: inherit; font-weight: 400; white-space: nowrap; padding: 0.025rem 0.5rem; width: auto; line-height: 1.2; position: relative; vertical-align: middle; height: 13px; }
 
 /**--Enter site*/
 .qqlanding-sites { line-height: 1.2; /**Site-Info-----*/ /**Enter-site-----*/ }
