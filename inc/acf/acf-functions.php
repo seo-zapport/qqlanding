@@ -9551,7 +9551,7 @@ function qqlanding_owl_carousel(){ ?>
 	var _autoplay = '<?php echo $_autoplay; ?>',_nav = '<?php echo $_nav; ?>',_dots = '<?php echo $_dots; ?>';
 
 	/*-carousel-slider*/
-	var _interval = <?php echo $intervals; ?>;
+	var _interval = <?php echo ( !empty($intervals) ) ? $intervals : 5000; ?>;
 	var _pause = '<?php echo $pauses;?>';
 </script>
 <?php }
