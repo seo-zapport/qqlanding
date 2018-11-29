@@ -15,19 +15,24 @@
 	 		if (another == 'id') {
 	 			const qqfreearray = ["bonus gratis"];
 	 			var  image_title = 'bonus-gratis';
+	 			var  image_src = 'bonus-gratis';
 	 		}
 	 		else if(another == 'vi'){
 	 			const qqfreearray = ["Tiền Thưởng Miễn Phí"];
 	 			var  image_title = 'tiền-thưởng miễn-phí';
+	 			var  image_src = 'bonus-vn';
 	 		}else if(another == 'th'){
 	 			const qqfreearray = ["โบนัสฟรี"];
 	 			var  image_title = 'โบนัสฟรี';
+	 			var  image_src = 'bonus-th';
 	 		}else if(another == 'zh'){
 	 			const qqfreearray = ["免費獎金"];
 	 			var  image_title = '免費獎金';
+	 			var  image_src = 'bonus-china';
 	 		}else{
 	 			const qqfreearray = ["free bonus"];
 	 			var  image_title = 'free-bonus';
+	 			var  image_src = 'free-bonus';
 	 		}
 
 		qqarray.forEach(qqarray=>{  
@@ -47,7 +52,7 @@
 		var freeval = qqfindfree;
 		//console.log(freeval);
 		//console.log(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + freeval.replace(' ' , '-') + ".png'></span>");
-		find.html(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + image_title + ".png'></span>");
+		find.html(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + image_src + ".png'></span>");
 	 });
 
 	var clock;
