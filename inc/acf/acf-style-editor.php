@@ -61,7 +61,7 @@ if ( $newSlider->have_posts() ) :
 
 			$opacity = get_field( 'slider_opacity', 'option' );
 			$bg = qqlanding_sliding_bg(get_sub_field('slider_bg_attr', 'option'),get_sub_field('slide_image'),get_sub_field('slide_color'));
-			$presets = qqlanding_preset_acf(get_sub_field('slide_repeat_bg_img'),get_sub_field('slide_scroll_with_page'),get_sub_field('slide_presets'),get_sub_field('slide_image_position'),get_sub_field('slide_image_size'));
+			$presets = qqlanding_preset_acf(get_field('slide_repeat_bg_img', 'option'),get_field('slide_scroll_with_page', 'option'),get_field('slide_presets', 'option'),get_field('slide_image_position', 'option'),get_field('slide_image_size', 'option'));
 			if ( ! empty($filters) ) :?>
 				.sliders-country-<?php echo $lang;?>.slider-views-<?php echo $count; ?> > .slider-filters:after{
 				content:'';position:absolute;height:100%;width:100%;
