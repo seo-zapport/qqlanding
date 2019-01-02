@@ -15,7 +15,7 @@ get_header();
 				/*'provider','content-a','post',*/
 				 $value = array(
 
-					'banner','provider','content-a','post','content-b',
+					'banner','provider','featured-content','match','post','videos','extra-content',
 
 				); //items
 

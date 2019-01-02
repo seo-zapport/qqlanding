@@ -130,6 +130,9 @@
 				}
 			}
 		}
+		#site-copyright{
+			background-color: transparent;
+		}
 	}
 	#site_back_top{
 		background-color: $color__7f;
@@ -293,6 +296,69 @@
 			margin: 0 0 0.5em;
 		}
 	}
+	.qqland-post{
+		&.qqvideos{
+			float: none;
+		    margin-right: 0;
+		    width: auto;
+		    .qqvideo-img-container{
+		    	position: relative;
+			    background: #F0F0F0;
+			    display: block;
+			    height: 0;
+			    text-decoration: none;
+			    width: 100%;
+			    &:hover,&:focus{
+			    	.qqvideo-wrap-play{
+					    background-color: rgba(14, 14, 14, 0.45);
+					    display: block;
+					    height: 100%;
+					    position: absolute;
+					    width: 100%;
+					    z-index: 3;
+			    	}
+			    }
+		    }
+		    .qqvideo-img{
+		    	position: absolute;
+			    margin: auto;
+			    top: 0;
+			    right: 0;
+			    left: 0;
+			    bottom: 0;
+			    width: auto;
+			    height: auto;
+			    max-width: 100%;
+			    max-height: 100%;
+			    z-index: 1;
+		    }
+		    .qqvideo-play{
+			   	position: absolute;
+			    color: $color__e6;
+			    width: auto;
+			    height: auto;
+			    line-height: 1;
+			    margin: -24px 0px 0px -24px !important;
+			    max-width: 100%;
+			    pointer-events: none;
+			    padding: 0px;
+			    top: 50%;
+			    left: 50%;
+			    z-index: 3;
+		    }
+		    .qqvideo-duration{
+				position: absolute;
+				padding: 2px 5px;
+				right: 0;
+				bottom: 0;
+				background-color: $color__border-abbr;
+				color: $color__white;
+				pointer-events: none;
+				z-index: 5;
+		    }
+		}	
+	}
+
 	
 	.single-entry-title{
 	  font-family: "Roboto Condensed", sans-serif;

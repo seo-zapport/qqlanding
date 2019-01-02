@@ -854,7 +854,7 @@ acf_add_local_field_group(array(
 			'endpoint' => 0,
 		),
 		array(
-			'key' => 'field_5b91d85e88701',
+			'key' => 'field_5c0105d6f2aaa',
 			'label' => '',
 			'name' => 'pvs_enable_section',
 			'type' => 'true_false',
@@ -890,6 +890,37 @@ acf_add_local_field_group(array(
 			'prepend' => '',
 			'append' => '',
 			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5c1ca0e334109',
+			'label' => 'Header Tags',
+			'name' => 'pvs_header_tags',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'pvs_header_tags',
+			),
+			'choices' => array(
+				'h1' => 'H1',
+				'h2' => 'H2',
+				'h3' => 'H3',
+				'h4' => 'H4',
+				'h5' => 'H5',
+				'h6' => 'H6',
+			),
+			'default_value' => array(
+				0 => 'h2',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
 		),
 		array(
 			'key' => 'field_5b83566409332',
@@ -1151,6 +1182,138 @@ acf_add_local_field_group(array(
 			'ui' => 1,
 			'ui_on_text' => 'Yes',
 			'ui_off_text' => 'No',
+		),
+		array(
+			'key' => 'field_5c299e34c0c7e',
+			'label' => 'Heading Settings',
+			'name' => 'fp_heading_settings',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'fp_heading_settings',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c299e35c0c7f',
+					'label' => 'Heading Tags',
+					'name' => 'tags',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '100',
+						'class' => '',
+						'id' => 'tags',
+					),
+					'choices' => array(
+						'h1' => 'H1',
+						'h2' => 'H2',
+						'h3' => 'H3',
+						'h4' => 'H4',
+						'h5' => 'H5',
+						'h6' => 'H6',
+					),
+					'default_value' => array(
+						0 => 'h2',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c299e35c0c80',
+					'label' => 'Custom Class',
+					'name' => 'class',
+					'type' => 'text',
+					'instructions' => 'Add some class to your title.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'class',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c299e35c0c81',
+					'label' => 'Custom ID',
+					'name' => 'id',
+					'type' => 'text',
+					'instructions' => 'Add some id to your title.',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'id',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c299e35c0c82',
+					'label' => 'Itemprop',
+					'name' => 'itemprop',
+					'type' => 'text',
+					'instructions' => 'This itemprop apply only to your data structure.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'itemprop',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c299e35c0c83',
+					'label' => 'Heading alignment',
+					'name' => 'alignment',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '50',
+						'class' => '',
+						'id' => 'alignment',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'top' => 'Top alignment',
+					),
+					'default_value' => array(
+						0 => 'default',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+			),
 		),
 		array(
 			'key' => 'field_5b83697ac7a85',
@@ -2172,7 +2335,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5b850324a4bc1',
-			'label' => 'Content',
+			'label' => 'Featured Content',
 			'name' => '',
 			'type' => 'tab',
 			'instructions' => '',
@@ -2206,6 +2369,165 @@ acf_add_local_field_group(array(
 			'ui_off_text' => 'No',
 		),
 		array(
+			'key' => 'field_5c22df8da20ac',
+			'label' => 'Heading Settings',
+			'name' => 'content_heading_settings',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'content_heading_settings',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c22df8da20ad',
+					'label' => 'Heading Tags',
+					'name' => 'tags',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '100',
+						'class' => '',
+						'id' => 'tags',
+					),
+					'choices' => array(
+						'h1' => 'H1',
+						'h2' => 'H2',
+						'h3' => 'H3',
+						'h4' => 'H4',
+						'h5' => 'H5',
+						'h6' => 'H6',
+					),
+					'default_value' => array(
+						0 => 'h2',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c22df8da20ae',
+					'label' => 'Custom Class',
+					'name' => 'class',
+					'type' => 'text',
+					'instructions' => 'Add some class to your title.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'class',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c22df8da20af',
+					'label' => 'Custom ID',
+					'name' => 'id',
+					'type' => 'text',
+					'instructions' => 'Add some id to your title.',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'id',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c22df8da20b0',
+					'label' => 'Itemprop',
+					'name' => 'itemprop',
+					'type' => 'text',
+					'instructions' => 'This itemprop apply only to your data structure.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'itemprop',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c22e188e4616',
+					'label' => 'Heading alignment',
+					'name' => 'alignment',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '50',
+						'class' => '',
+						'id' => 'alignment',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'top' => 'Top alignment',
+					),
+					'default_value' => array(
+						0 => 'default',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c22df8da20b2',
+					'label' => 'Show/Hide',
+					'name' => 'display',
+					'type' => 'true_false',
+					'instructions' => 'Enable the javascript for the change of branding text to the logo.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c22df8da20b1',
+								'operator' => '==',
+								'value' => 'top',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '50',
+						'class' => '',
+						'id' => 'display',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+			),
+		),
+		array(
 			'key' => 'field_5b92071bacb16',
 			'label' => 'Content Attributes',
 			'name' => 'content_item_a',
@@ -2218,7 +2540,7 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => 'content_item_a',
 			),
-			'layout' => 'block',
+			'layout' => 'row',
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5b92071cacb17',
@@ -2262,12 +2584,12 @@ acf_add_local_field_group(array(
 						),
 					),
 					'wrapper' => array(
-						'width' => '',
+						'width' => '50',
 						'class' => '',
 						'id' => 'fp_images',
 					),
 					'return_format' => 'array',
-					'preview_size' => 'default',
+					'preview_size' => 'medium',
 					'library' => 'all',
 					'min_width' => '',
 					'min_height' => '',
@@ -2276,61 +2598,6 @@ acf_add_local_field_group(array(
 					'max_height' => '',
 					'max_size' => '',
 					'mime_types' => 'jpg,png',
-				),
-				array(
-					'key' => 'field_5b92071cacb19',
-					'label' => 'Appearance Settings',
-					'name' => 'fp_app_set',
-					'type' => 'group',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'layout' => 'table',
-					'sub_fields' => array(
-						array(
-							'key' => 'field_5b92071cacb1a',
-							'label' => 'Height',
-							'name' => 'ca_height',
-							'type' => 'text',
-							'instructions' => 'Set Min and Max Height of the Article',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '50',
-								'class' => '',
-								'id' => 'ca_height',
-							),
-							'default_value' => '',
-							'placeholder' => '',
-							'prepend' => '',
-							'append' => '',
-							'maxlength' => '',
-						),
-						array(
-							'key' => 'field_5b92071cacb1b',
-							'label' => 'Hide Image',
-							'name' => 'ca_hide_image',
-							'type' => 'true_false',
-							'instructions' => 'Hide Image when it\'s Mobile Platform',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '50',
-								'class' => '',
-								'id' => 'ca_hide_image',
-							),
-							'message' => '',
-							'default_value' => 0,
-							'ui' => 1,
-							'ui_on_text' => 'Yes',
-							'ui_off_text' => 'No',
-						),
-					),
 				),
 				array(
 					'key' => 'field_5b92071cacb1c',
@@ -2349,7 +2616,7 @@ acf_add_local_field_group(array(
 						),
 					),
 					'wrapper' => array(
-						'width' => '',
+						'width' => '50',
 						'class' => '',
 						'id' => '',
 					),
@@ -2457,6 +2724,61 @@ acf_add_local_field_group(array(
 							'prepend' => '',
 							'append' => 'px',
 							'maxlength' => '',
+						),
+					),
+				),
+				array(
+					'key' => 'field_5b92071cacb19',
+					'label' => 'Appearance Settings',
+					'name' => 'fp_app_set',
+					'type' => 'group',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'layout' => 'table',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5b92071cacb1a',
+							'label' => 'Height',
+							'name' => 'ca_height',
+							'type' => 'text',
+							'instructions' => 'Set Min and Max Height of the Article',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => 'ca_height',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5b92071cacb1b',
+							'label' => 'Hide Image',
+							'name' => 'ca_hide_image',
+							'type' => 'true_false',
+							'instructions' => 'Hide Image when it\'s Mobile Platform',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => 'ca_hide_image',
+							),
+							'message' => '',
+							'default_value' => 0,
+							'ui' => 1,
+							'ui_on_text' => 'Yes',
+							'ui_off_text' => 'No',
 						),
 					),
 				),
@@ -2857,7 +3179,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5b922fba63aeb',
-			'label' => 'Content B',
+			'label' => 'Extra Content',
 			'name' => '',
 			'type' => 'tab',
 			'instructions' => '',
@@ -2874,7 +3196,7 @@ acf_add_local_field_group(array(
 		array(
 			'key' => 'field_5b922fc563aec',
 			'label' => '',
-			'name' => 'content_enable_section_b',
+			'name' => 'extra_content_enable_section',
 			'type' => 'true_false',
 			'instructions' => '',
 			'required' => 0,
@@ -2891,9 +3213,9 @@ acf_add_local_field_group(array(
 			'ui_off_text' => 'No',
 		),
 		array(
-			'key' => 'field_5b922f9663ad7',
-			'label' => 'Content Attributes',
-			'name' => 'content_item_b',
+			'key' => 'field_5c2c1f73a9440',
+			'label' => 'Heading Settings',
+			'name' => 'extra_heading_settings',
 			'type' => 'group',
 			'instructions' => '',
 			'required' => 0,
@@ -2901,7 +3223,166 @@ acf_add_local_field_group(array(
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
-				'id' => 'content_item_b',
+				'id' => 'extra_heading_settings',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c2c1f73a9441',
+					'label' => 'Heading Tags',
+					'name' => 'tags',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '100',
+						'class' => '',
+						'id' => 'tags',
+					),
+					'choices' => array(
+						'h1' => 'H1',
+						'h2' => 'H2',
+						'h3' => 'H3',
+						'h4' => 'H4',
+						'h5' => 'H5',
+						'h6' => 'H6',
+					),
+					'default_value' => array(
+						0 => 'h2',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c2c1f73a9442',
+					'label' => 'Custom Class',
+					'name' => 'class',
+					'type' => 'text',
+					'instructions' => 'Add some class to your title.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'class',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c2c1f73a9443',
+					'label' => 'Custom ID',
+					'name' => 'id',
+					'type' => 'text',
+					'instructions' => 'Add some id to your title.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'id',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c2c1f73a9444',
+					'label' => 'Itemprop',
+					'name' => 'itemprop',
+					'type' => 'text',
+					'instructions' => 'This itemprop apply only to your data structure.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'itemprop',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c2c1f73a9445',
+					'label' => 'Heading alignment',
+					'name' => 'alignment',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '50',
+						'class' => '',
+						'id' => 'alignment',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'top' => 'Top alignment',
+					),
+					'default_value' => array(
+						0 => 'default',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c2c1f73a9446',
+					'label' => 'Show/Hide',
+					'name' => 'display',
+					'type' => 'true_false',
+					'instructions' => 'Enable the javascript for the change of branding text to the logo.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c29bcfac95ad',
+								'operator' => '==',
+								'value' => 'top',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '50',
+						'class' => '',
+						'id' => 'display',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5b922f9663ad7',
+			'label' => 'Content Attributes',
+			'name' => 'extra_content_attr',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'extra_content_attr',
 			),
 			'layout' => 'block',
 			'sub_fields' => array(
@@ -3537,6 +4018,702 @@ acf_add_local_field_group(array(
 					'ajax' => 0,
 					'return_format' => 'value',
 					'placeholder' => '',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5c204328be05b',
+			'label' => 'Video',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5c204335be05c',
+			'label' => '',
+			'name' => 'video_enable_section',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'video_enable_section',
+			),
+			'message' => 'Indicate to enable this section.',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => 'Yes',
+			'ui_off_text' => 'No',
+		),
+		array(
+			'key' => 'field_5c204688dd7f6',
+			'label' => 'Section Title',
+			'name' => 'video_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'video_title',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5c29bcfac95a8',
+			'label' => 'Heading Settings',
+			'name' => 'video_header_settings',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'video_header_settings',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c29bcfac95a9',
+					'label' => 'Heading Tags',
+					'name' => 'tags',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '100',
+						'class' => '',
+						'id' => 'tags',
+					),
+					'choices' => array(
+						'h1' => 'H1',
+						'h2' => 'H2',
+						'h3' => 'H3',
+						'h4' => 'H4',
+						'h5' => 'H5',
+						'h6' => 'H6',
+					),
+					'default_value' => array(
+						0 => 'h2',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c29bcfac95aa',
+					'label' => 'Custom Class',
+					'name' => 'class',
+					'type' => 'text',
+					'instructions' => 'Add some class to your title.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'class',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c29bcfac95ab',
+					'label' => 'Custom ID',
+					'name' => 'id',
+					'type' => 'text',
+					'instructions' => 'Add some id to your title.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'id',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c29bcfac95ac',
+					'label' => 'Itemprop',
+					'name' => 'itemprop',
+					'type' => 'text',
+					'instructions' => 'This itemprop apply only to your data structure.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'itemprop',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c29bcfac95ad',
+					'label' => 'Heading alignment',
+					'name' => 'alignment',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '50',
+						'class' => '',
+						'id' => 'alignment',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'top' => 'Top alignment',
+					),
+					'default_value' => array(
+						0 => 'default',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5bd7c89171c41',
+			'label' => '',
+			'name' => 'video_video_settings',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'video_video_settings',
+			),
+			'layout' => 'block',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5bd7c89271c42',
+					'label' => 'BG Attribute',
+					'name' => 'vid_bg_attr',
+					'type' => 'radio',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'vid_bg_attr',
+					),
+					'choices' => array(
+						'bg-image' => 'Background Image',
+						'bg-color' => 'Background Color',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => 'bg-color',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
+				),
+				array(
+					'key' => 'field_5bd7c89271c43',
+					'label' => 'Image',
+					'name' => 'vid_image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'vid_image',
+					),
+					'return_format' => 'url',
+					'preview_size' => 'medium_large',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => 'jpg,png',
+				),
+				array(
+					'key' => 'field_5bd7c89271c44',
+					'label' => 'Color',
+					'name' => 'vid_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-color',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'vid_color',
+					),
+					'default_value' => '#000000',
+				),
+				array(
+					'key' => 'field_5bd7c89271c45',
+					'label' => 'Presets',
+					'name' => 'vid_presets',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '100',
+						'class' => '',
+						'id' => 'vid_presets',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'fill-screen' => 'Fill Screen',
+						'fit-to-screen' => 'Fit to Screen',
+						'repeat' => 'Repeat',
+						'custom' => 'Custom',
+					),
+					'default_value' => array(
+						0 => 'default',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 1,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5bd7c89271c46',
+					'label' => 'Image Position',
+					'name' => 'vid_image_position',
+					'type' => 'radio',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5bd7c89271c45',
+								'operator' => '==',
+								'value' => 'fill-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5bd7c89271c45',
+								'operator' => '==',
+								'value' => 'fit-to-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5bd7c89271c45',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5bd7c89271c45',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'vid_image_position',
+					),
+					'choices' => array(
+						'left top' => 'Left Top',
+						'center top' => 'Center Top',
+						'right top' => 'Right Top',
+						'left center' => 'Left Center',
+						'center center' => 'Center Center',
+						'right center' => 'Right Center',
+						'left bottom' => 'Left Bottom',
+						'center bottom' => 'Center Bottom',
+						'right-bottom' => 'Right Bottom',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => 'left top',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
+				),
+				array(
+					'key' => 'field_5bd7c89271c47',
+					'label' => 'Repeat Background Image',
+					'name' => 'vid_repeat_bg_img',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5bd7c89271c45',
+								'operator' => '==',
+								'value' => 'fit-to-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5bd7c89271c45',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'vid_repeat_bg_img',
+					),
+					'message' => 'Enable Repeat Background Image',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5bd7c89271c48',
+					'label' => 'Scroll with Page',
+					'name' => 'vid_scroll_with_page',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5bd7c89271c45',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5bd7c89271c45',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'vid_scroll_with_page',
+					),
+					'message' => 'Enable Scroll Page',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5bd7c89271c49',
+					'label' => 'Image Size',
+					'name' => 'vid_image_size',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5bd7c89271c42',
+								'operator' => '==',
+								'value' => 'bg-image',
+							),
+							array(
+								'field' => 'field_5bd7c89271c45',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '25',
+						'class' => '',
+						'id' => 'vid_image_size',
+					),
+					'choices' => array(
+						'auto' => 'Original',
+						'contain' => 'Fit to Screen',
+						'cover' => 'Fill Screen',
+					),
+					'default_value' => array(
+						0 => 'auto',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 1,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5c2c06d2d1da8',
+			'label' => 'Cards Settings',
+			'name' => 'video_cards_settings',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'video_cards_settings',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c2c074ed1da9',
+					'label' => 'Show/Hide Views',
+					'name' => '_showhide_views',
+					'type' => 'true_false',
+					'instructions' => 'Indicate to display the views to the video cards.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_showhide_views',
+					),
+					'message' => '',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5c2c081cd1dab',
+					'label' => 'Show/Hide Time',
+					'name' => '_showhide_time',
+					'type' => 'true_false',
+					'instructions' => 'Indicate to display the time to the video cards.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_showhide_time',
+					),
+					'message' => '',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5c2c0858d1dac',
+					'label' => 'Background Color',
+					'name' => '_bg_color',
+					'type' => 'extended-color-picker',
+					'instructions' => 'Select your background color for the caption.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_bg_color',
+					),
+					'default_value' => 'rgba(183, 28, 32, 0.7)',
+					'color_palette' => '',
+					'hide_palette' => 0,
+				),
+				array(
+					'key' => 'field_5c2c0911d1dad',
+					'label' => 'Color',
+					'name' => '_color',
+					'type' => 'extended-color-picker',
+					'instructions' => 'Select color for the text.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_color',
+					),
+					'default_value' => '#005c6b',
+					'color_palette' => '',
+					'hide_palette' => 0,
+				),
+				array(
+					'key' => 'field_5c2c131c3d1e0',
+					'label' => 'Hover Color',
+					'name' => '_hover_color',
+					'type' => 'extended-color-picker',
+					'instructions' => 'Select hover color for the text.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_hover_color',
+					),
+					'default_value' => '#10aec7',
+					'color_palette' => '',
+					'hide_palette' => 0,
+				),
+				array(
+					'key' => 'field_5c2c0bc4552c7',
+					'label' => 'Loader',
+					'name' => '_load_class',
+					'type' => 'select',
+					'instructions' => 'Indicate the class for your loader button.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_load_class',
+					),
+					'choices' => array(
+						'primary' => 'Primary',
+						'secondary' => 'Secondary',
+						'success' => 'Success',
+						'danger' => 'Danger',
+						'warning' => 'Warning',
+						'info' => 'Info',
+						'light' => 'Light',
+						'dark' => 'Dark',
+						'custom' => 'Custom',
+					),
+					'default_value' => array(
+						0 => 'primary',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c2c0d2b552c8',
+					'label' => 'Loader Custom Class',
+					'name' => '_load_custom_class',
+					'type' => 'text',
+					'instructions' => 'Indicate custom class for the button.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c2c0bc4552c7',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_load_custom_class',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
 				),
 			),
 		),
@@ -4674,6 +5851,73 @@ acf_add_local_field_group(array(
 			'ui_off_text' => 'No',
 		),
 		array(
+			'key' => 'field_5c2c5adc1aacf',
+			'label' => 'Copyright',
+			'name' => 'footer_copyright',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'footer_copyright',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c2c5afa1aad0',
+					'label' => 'Background Color',
+					'name' => '_bg_color',
+					'type' => 'extended-color-picker',
+					'instructions' => 'Indicate the background color for copyright text.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_bg_color',
+					),
+					'default_value' => 'transparent',
+					'color_palette' => '',
+					'hide_palette' => 0,
+				),
+				array(
+					'key' => 'field_5c2c5b2e1aad2',
+					'label' => 'Color',
+					'name' => '_color',
+					'type' => 'extended-color-picker',
+					'instructions' => 'Indicate the text color for copyright text.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_color',
+					),
+					'default_value' => '#757575',
+					'color_palette' => '',
+					'hide_palette' => 0,
+				),
+			),
+		),
+		array(
+			'key' => 'field_5c2c5a48c5f45',
+			'label' => 'Footer Providers',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
 			'key' => 'field_5b88e4a8b051a',
 			'label' => 'Licensed settings',
 			'name' => 'licensed_settings',
@@ -5304,6 +6548,1145 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_5c1c9b0b875d3',
+	'title' => 'Match Settings',
+	'fields' => array(
+		array(
+			'key' => 'field_5c1c9bb71daaf',
+			'label' => 'General Setting',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5bd7e39761ef1',
+			'label' => '',
+			'name' => 'match_enable_section',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'vm_match_enable_section',
+			),
+			'message' => 'Indicate to enable this section.',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => 'Yes',
+			'ui_off_text' => 'No',
+		),
+		array(
+			'key' => 'field_5c1ca13d3410a',
+			'label' => 'Header Title',
+			'name' => 'table_header_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'table_header_title',
+			),
+			'default_value' => 'NEXT MATCH COUNTDOWN',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5c208c7f65483',
+			'label' => 'Heading Settings',
+			'name' => 'table_heading_settings',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'table_heading_settings',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c203c7c4dc18',
+					'label' => 'Heading Tags',
+					'name' => 'tags',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '100',
+						'class' => '',
+						'id' => 'tags',
+					),
+					'choices' => array(
+						'h1' => 'H1',
+						'h2' => 'H2',
+						'h3' => 'H3',
+						'h4' => 'H4',
+						'h5' => 'H5',
+						'h6' => 'H6',
+					),
+					'default_value' => array(
+						0 => 'h2',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c208cc665484',
+					'label' => 'Custom Class',
+					'name' => 'class',
+					'type' => 'text',
+					'instructions' => 'Add some class to your title.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'class',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c208d397e28f',
+					'label' => 'Custom ID',
+					'name' => 'id',
+					'type' => 'text',
+					'instructions' => 'Add some id to your title.',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'id',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c208d5b7e290',
+					'label' => 'Itemprop',
+					'name' => 'itemprop',
+					'type' => 'text',
+					'instructions' => 'This itemprop apply only to your data structure.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33.33',
+						'class' => '',
+						'id' => 'itemprop',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c22df8da20b1',
+					'label' => 'Heading alignment',
+					'name' => 'alignment',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '50',
+						'class' => '',
+						'id' => 'alignment',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'top' => 'Top alignment',
+					),
+					'default_value' => array(
+						0 => 'default',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5c1c9bb21daae',
+			'label' => 'Number of Columns',
+			'name' => 'table_columns',
+			'type' => 'number',
+			'instructions' => 'Enter the number of columns you like to have in the frontpage view',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'table_columns',
+			),
+			'default_value' => 3,
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => 1,
+			'max' => 12,
+			'step' => 1,
+		),
+		array(
+			'key' => 'field_5c1c9c5af95be',
+			'label' => 'Limit',
+			'name' => 'table_limit',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'table_limit',
+			),
+			'default_value' => 10,
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => '',
+			'max' => '',
+			'step' => '',
+		),
+		array(
+			'key' => 'field_5c1c9e7e08dca',
+			'label' => 'Sort Match by',
+			'name' => 'table_order',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'table_order',
+			),
+			'choices' => array(
+				'asc' => 'Ascending',
+				'desc' => 'Descending',
+			),
+			'default_value' => array(
+				0 => 'asc',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5c1c9b9c1daad',
+			'label' => 'Appearance Setting',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5c25e0d14740a',
+			'label' => '',
+			'name' => 'table_match_settings',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'table_match_settings',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c25e1044740b',
+					'label' => 'Attribute',
+					'name' => '_attribute',
+					'type' => 'radio',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_attribute',
+					),
+					'choices' => array(
+						'table-image' => 'Background Image',
+						'table-color' => 'Background Color',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => 'table-color',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
+				),
+				array(
+					'key' => 'field_5c25e3b834f44',
+					'label' => 'Image',
+					'name' => '_image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_image',
+					),
+					'return_format' => 'url',
+					'preview_size' => 'medium_large',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => 'jpg,png',
+				),
+				array(
+					'key' => 'field_5c25e3d434f45',
+					'label' => 'Color',
+					'name' => '_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-color',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_color',
+					),
+					'default_value' => '#000000',
+				),
+				array(
+					'key' => 'field_5c25e5d2e7da4',
+					'label' => 'Presets',
+					'name' => '_presets',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_presets',
+					),
+					'choices' => array(
+						'default' => 'Default',
+						'fill-screen' => 'Fill Screen',
+						'fit-to-screen' => 'Fit to Screen',
+						'repeat' => 'Repeat',
+						'custom' => 'Custom',
+					),
+					'default_value' => array(
+						0 => 'default',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 1,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c25e613e7da5',
+					'label' => 'Image position',
+					'name' => '_image_position',
+					'type' => 'radio',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+							array(
+								'field' => 'field_5c25e5d2e7da4',
+								'operator' => '==',
+								'value' => 'fill-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+							array(
+								'field' => 'field_5c25e5d2e7da4',
+								'operator' => '==',
+								'value' => 'fit-to-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+							array(
+								'field' => 'field_5c25e5d2e7da4',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+							array(
+								'field' => 'field_5c25e5d2e7da4',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_image_position',
+					),
+					'choices' => array(
+						'left top' => 'Left Top',
+						'center top' => 'Center Top',
+						'right top' => 'Right Top',
+						'left center' => 'Left Center',
+						'center center' => 'Center Center',
+						'right center' => 'Right Center',
+						'left bottom' => 'Left Bottom',
+						'center bottom' => 'Center Bottom',
+						'right-bottom' => 'Right Bottom',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => 'left top',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
+				),
+				array(
+					'key' => 'field_5c25e67de7dad',
+					'label' => 'Repeat Background Image',
+					'name' => '_repeat_bg_image',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+							array(
+								'field' => 'field_5c25e5d2e7da4',
+								'operator' => '==',
+								'value' => 'fit-to-screen',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+							array(
+								'field' => 'field_5c25e5d2e7da4',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_repeat_bg_image',
+					),
+					'message' => 'Enable Repeat Background Image',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5c25e6c1e7db2',
+					'label' => 'Scroll with Page',
+					'name' => '_scroll_with_page',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+							array(
+								'field' => 'field_5c25e5d2e7da4',
+								'operator' => '==',
+								'value' => 'repeat',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+							array(
+								'field' => 'field_5c25e5d2e7da4',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_scroll_with_page',
+					),
+					'message' => 'Enable Scroll Page',
+					'default_value' => 1,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+				array(
+					'key' => 'field_5c25e6f3e7db6',
+					'label' => 'Image Size',
+					'name' => '_image_size',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c25e1044740b',
+								'operator' => '==',
+								'value' => 'table-image',
+							),
+							array(
+								'field' => 'field_5c25e5d2e7da4',
+								'operator' => '==',
+								'value' => 'custom',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '_image_size',
+					),
+					'choices' => array(
+						'auto' => 'Original',
+						'contain' => 'Fit to Screen',
+						'cover' => 'Fill Screen',
+					),
+					'default_value' => array(
+						0 => 'auto',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 1,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5c1ca3199c5db',
+			'label' => 'Match Timer',
+			'name' => 'table_match_timer',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'table_match_timer',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c1caf9c9c5e4',
+					'label' => 'Display style',
+					'name' => 'table_match_display_style',
+					'type' => 'radio',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_display_style',
+					),
+					'choices' => array(
+						'flipclock' => 'Flip Clock',
+						'text' => 'Text only',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => 'flipclock',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
+				),
+				array(
+					'key' => 'field_5c1caf3c9c5e3',
+					'label' => 'Display format',
+					'name' => 'table_match_display_format',
+					'type' => 'radio',
+					'instructions' => 'This will be the timer format, which is you can choose between hourly or daily.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_display_format',
+					),
+					'choices' => array(
+						'DailyCounter' => 'Day counter',
+						'HourCounter' => 'Hour counter',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'default_value' => 'DailyCounter',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+					'save_other_choice' => 0,
+				),
+				array(
+					'key' => 'field_5c1cae009c5df',
+					'label' => 'Tile color',
+					'name' => 'table_match_title_color',
+					'type' => 'color_picker',
+					'instructions' => 'Indicate the color of timer box.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c1caf9c9c5e4',
+								'operator' => '==',
+								'value' => 'flipclock',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_title_color',
+					),
+					'default_value' => '#ffffff',
+				),
+				array(
+					'key' => 'field_5c1cae259c5e0',
+					'label' => 'Text color',
+					'name' => 'table_match_text_color',
+					'type' => 'color_picker',
+					'instructions' => 'Indicate the color of timer.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c1caf9c9c5e4',
+								'operator' => '==',
+								'value' => 'flipclock',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_text_color',
+					),
+					'default_value' => '#4c4c4a',
+				),
+				array(
+					'key' => 'field_5c1caebc9c5e1',
+					'label' => 'Dot color',
+					'name' => 'table_match_dot_color',
+					'type' => 'color_picker',
+					'instructions' => 'Indicate the color of dots.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c1caf9c9c5e4',
+								'operator' => '==',
+								'value' => 'flipclock',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_dot_color',
+					),
+					'default_value' => '#4c4c4a',
+				),
+				array(
+					'key' => 'field_5c29634304cbb',
+					'label' => 'Text color',
+					'name' => 'table_match_style_text_color',
+					'type' => 'color_picker',
+					'instructions' => 'Indicate the color of timer.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c1caf9c9c5e4',
+								'operator' => '==',
+								'value' => 'text',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_style_text_color',
+					),
+					'default_value' => '#4c4c4a',
+				),
+				array(
+					'key' => 'field_5c296f027d47f',
+					'label' => 'Font Size',
+					'name' => 'table_match_font_size',
+					'type' => 'number',
+					'instructions' => 'Indicate the font size of your text.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c1caf9c9c5e4',
+								'operator' => '==',
+								'value' => 'text',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_font_size',
+					),
+					'default_value' => 14,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5c29648504cbd',
+					'label' => 'Font weight',
+					'name' => 'table_match_font_weight',
+					'type' => 'select',
+					'instructions' => 'Indicate the timer font size.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c1caf9c9c5e4',
+								'operator' => '==',
+								'value' => 'text',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_font_weight',
+					),
+					'choices' => array(
+						100 => '100',
+						200 => '200',
+						300 => '300',
+						400 => '400',
+						500 => '500',
+						600 => '600',
+						700 => '700',
+						800 => '800',
+						900 => '900',
+						'bold' => 'bold',
+						'bolder' => 'bolder',
+						'inherit' => 'inherit',
+						'initial' => 'initial',
+						'lighter' => 'lighter',
+						'normal' => 'normal',
+						'unset' => 'unset',
+					),
+					'default_value' => array(
+						0 => 'normal',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c29644c04cbc',
+					'label' => 'Letter Spacing',
+					'name' => 'table_match_letter_space',
+					'type' => 'number',
+					'instructions' => 'Indicate the space between your timer text.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c1caf9c9c5e4',
+								'operator' => '==',
+								'value' => 'text',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_letter_space',
+					),
+					'default_value' => 2,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'min' => '',
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5c296d0104cbe',
+					'label' => 'Text Alignment',
+					'name' => 'table_match_text_align',
+					'type' => 'select',
+					'instructions' => 'Indicate the timer font size.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c1caf9c9c5e4',
+								'operator' => '==',
+								'value' => 'text',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_text_align',
+					),
+					'choices' => array(
+						'center' => 'center',
+						'right' => 'right',
+						'left' => 'left',
+						'justify' => 'justify',
+						'inherit' => 'inherit',
+						'initial' => 'initial',
+						'unset' => 'unset',
+					),
+					'default_value' => array(
+						0 => 'left',
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5c1caed39c5e2',
+					'label' => 'Show / Hide Dot',
+					'name' => 'table_match_display_dot',
+					'type' => 'true_false',
+					'instructions' => 'Indicate whether you want to show or hide the timer dot.',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5c1caf9c9c5e4',
+								'operator' => '==',
+								'value' => 'flipclock',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_match_display_dot',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => 'Yes',
+					'ui_off_text' => 'No',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5c1ca1cc698f1',
+			'label' => 'Table Settings',
+			'name' => 'table_settings',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'vm_match_settings',
+			),
+			'layout' => 'row',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c2989cd24a90',
+					'label' => 'Heading background color',
+					'name' => 'table_heading_bg_color',
+					'type' => 'extended-color-picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_heading_background_color',
+					),
+					'default_value' => '#222222',
+					'color_palette' => '',
+					'hide_palette' => 0,
+				),
+				array(
+					'key' => 'field_5c2988b524a8d',
+					'label' => 'Heading font size',
+					'name' => 'table_heading_font_size',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_heading_font_size',
+					),
+					'default_value' => 22,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c29899624a8f',
+					'label' => 'Heading text color',
+					'name' => 'table_heading_text_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_heading_text_color',
+					),
+					'default_value' => '#d6e935',
+				),
+				array(
+					'key' => 'field_5c1ca1f1698fa',
+					'label' => 'Background color',
+					'name' => 'table_bg_color',
+					'type' => 'extended-color-picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_background_color',
+					),
+					'default_value' => 'transparent',
+					'color_palette' => '',
+					'hide_palette' => 0,
+				),
+				array(
+					'key' => 'field_5c298a0024a91',
+					'label' => 'Text color',
+					'name' => 'table_text_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_text_color',
+					),
+					'default_value' => '#FFFFFF',
+				),
+				array(
+					'key' => 'field_5c1ca21f698fb',
+					'label' => 'Border color',
+					'name' => 'table_border_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_border_color',
+					),
+					'default_value' => '#d6e935',
+				),
+				array(
+					'key' => 'field_5c1ca235698fc',
+					'label' => 'Border width',
+					'name' => 'table_border_width',
+					'type' => 'number',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_border_width',
+					),
+					'default_value' => 2,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'min' => 0,
+					'max' => '',
+					'step' => '',
+				),
+				array(
+					'key' => 'field_5c1ca2cd63ff7',
+					'label' => 'Font size',
+					'name' => 'table_font_size',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'table_font_size',
+					),
+					'default_value' => 13,
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => 'px',
+					'maxlength' => '',
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-match-settings',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => array(
+		0 => 'permalink',
+		1 => 'the_content',
+		2 => 'excerpt',
+		3 => 'discussion',
+		4 => 'comments',
+		5 => 'revisions',
+		6 => 'slug',
+		7 => 'author',
+		8 => 'format',
+		9 => 'page_attributes',
+		10 => 'featured_image',
+		11 => 'categories',
+		12 => 'tags',
+		13 => 'send-trackbacks',
+	),
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5bf640f7edc92',
 	'title' => 'Slider',
 	'fields' => array(
@@ -5322,25 +7705,6 @@ acf_add_local_field_group(array(
 			),
 			'placement' => 'left',
 			'endpoint' => 0,
-		),
-		array(
-			'key' => 'field_5bf647c84324e',
-			'label' => '',
-			'name' => 'slider_enable_section',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '50',
-				'class' => '',
-				'id' => 'slider_enable_section',
-			),
-			'message' => 'Indicate to enable this section.',
-			'default_value' => 0,
-			'ui' => 1,
-			'ui_on_text' => 'Yes',
-			'ui_off_text' => 'No',
 		),
 		array(
 			'key' => 'field_5bf6481d1507c',
@@ -6227,6 +8591,25 @@ acf_add_local_field_group(array(
 			'endpoint' => 0,
 		),
 		array(
+			'key' => 'field_5c20481492cfd',
+			'label' => '',
+			'name' => 'slider_enable_sections',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'slider_enable_sections',
+			),
+			'message' => '',
+			'default_value' => 1,
+			'ui' => 1,
+			'ui_on_text' => 'Yes',
+			'ui_off_text' => 'No',
+		),
+		array(
 			'key' => 'field_5bfe224bce778',
 			'label' => 'Presets',
 			'name' => 'slide_presets',
@@ -6493,6 +8876,37 @@ acf_add_local_field_group(array(
 			'min' => '',
 			'max' => '',
 			'step' => '',
+		),
+		array(
+			'key' => 'field_5c20435ebe05d',
+			'label' => 'Header Tags',
+			'name' => 'slider_header_tags',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'slider_header_tags',
+			),
+			'choices' => array(
+				'h1' => 'H1',
+				'h2' => 'H2',
+				'h3' => 'H3',
+				'h4' => 'H4',
+				'h5' => 'H5',
+				'h6' => 'H6',
+			),
+			'default_value' => array(
+				0 => 'h2',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
 		),
 		array(
 			'key' => 'field_5bfe224b85cb0',
@@ -7098,7 +9512,7 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'options_page',
 				'operator' => '==',
-				'value' => 'acf-options-settings',
+				'value' => 'acf-options-slider-settings',
 			),
 		),
 	),
@@ -7469,7 +9883,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5b85eda51d1a5',
-			'label' => 'Font page : Content',
+			'label' => 'Font page : Featured Content',
 			'name' => '',
 			'type' => 'tab',
 			'instructions' => '',
@@ -7523,7 +9937,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5b85eeb092112',
-			'label' => 'Font page : Content B',
+			'label' => 'Font page : Extra Content',
 			'name' => '',
 			'type' => 'tab',
 			'instructions' => '',
@@ -7540,7 +9954,7 @@ acf_add_local_field_group(array(
 		array(
 			'key' => 'field_5b85ef383190d',
 			'label' => 'Title',
-			'name' => 'fb_title_b',
+			'name' => 'fb_extra_title',
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
@@ -7548,7 +9962,7 @@ acf_add_local_field_group(array(
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
-				'id' => 'fb_title_b',
+				'id' => 'fb_extra_title',
 			),
 			'default_value' => '',
 			'placeholder' => '',
@@ -7586,357 +10000,7 @@ acf_add_local_field_group(array(
 		),
 	),
 	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => array(
-		0 => 'the_content',
-		1 => 'comments',
-		2 => 'featured_image',
-	),
-	'active' => 1,
-	'description' => 'Display the settings for Template: front page of qqlanding',
-));
-
-acf_add_local_field_group(array(
-	'key' => 'group_5bc3dd44610d9',
-	'title' => 'Template: VM',
-	'fields' => array(
-		array(
-			'key' => 'field_5b8ccb8df1eaa',
-			'label' => '',
-			'name' => 'vm_item_static',
-			'type' => 'group',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'slider_item_static',
-			),
-			'layout' => 'block',
-			'sub_fields' => array(
-			),
-		),
-		array(
-			'key' => 'field_5b8ccbfcf1eb2',
-			'label' => 'Title',
-			'name' => 'vm_title',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_title',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5b8ccbfef1eb3',
-			'label' => '',
-			'name' => 'vm_content',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_content',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5bd7aed7b644c',
-			'label' => 'Content Settings',
-			'name' => 'vm_content_settings',
-			'type' => 'group',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_content_settings',
-			),
-			'layout' => 'table',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5bd7aed7b644d',
-					'label' => 'Content Size',
-					'name' => 'vm_content_size',
-					'type' => 'radio',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_content_size',
-					),
-					'choices' => array(
-						'full' => 'Full',
-						'half' => 'Half',
-					),
-					'allow_null' => 0,
-					'other_choice' => 0,
-					'default_value' => 'full',
-					'layout' => 'horizontal',
-					'return_format' => 'value',
-					'save_other_choice' => 0,
-				),
-				array(
-					'key' => 'field_5bd7aed7b644e',
-					'label' => 'Content Position',
-					'name' => 'vm_content_position',
-					'type' => 'select',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7aed7b644d',
-								'operator' => '==',
-								'value' => 'half',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_content_position',
-					),
-					'choices' => array(
-						'left' => 'Left',
-						'right' => 'Right',
-					),
-					'default_value' => array(
-						0 => 'left',
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'ui' => 0,
-					'return_format' => 'value',
-					'ajax' => 0,
-					'placeholder' => '',
-				),
-				array(
-					'key' => 'field_5bd7aed7b644f',
-					'label' => 'Text Align',
-					'name' => 'vm_text_align',
-					'type' => 'select',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_text_align',
-					),
-					'choices' => array(
-						'center' => 'Center',
-						'left' => 'Left',
-						'right' => 'Right',
-					),
-					'default_value' => array(
-						0 => 'left',
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'ui' => 0,
-					'return_format' => 'value',
-					'ajax' => 0,
-					'placeholder' => '',
-				),
-			),
-		),
-		array(
-			'key' => 'field_5b8ccc03f1eb8',
-			'label' => 'Content Slider Images',
-			'name' => 'vm_content_images',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '33.33',
-				'class' => '',
-				'id' => 'vm_content_images',
-			),
-			'return_format' => 'array',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5b8ccc06f1eb9',
-			'label' => 'Images Position Property',
-			'name' => 'vm_position_property',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '33.33',
-				'class' => '',
-				'id' => 'vm_position_property',
-			),
-			'message' => '',
-			'default_value' => 0,
-			'ui' => 1,
-			'ui_on_text' => 'Yes',
-			'ui_off_text' => 'No',
-		),
-		array(
-			'key' => 'field_5b8ccc08f1eba',
-			'label' => 'Hide Image',
-			'name' => 'vm_hide_image',
-			'type' => 'true_false',
-			'instructions' => 'Hide Image when it\'s Mobile Platform',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '33.33',
-				'class' => '',
-				'id' => 'vm_hide_image',
-			),
-			'message' => '',
-			'default_value' => 0,
-			'ui' => 1,
-			'ui_on_text' => 'Yes',
-			'ui_off_text' => 'No',
-		),
-		array(
-			'key' => 'field_5b92071cacb1d',
-			'label' => 'Position',
-			'name' => 'vm_img_position',
-			'type' => 'group',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5b8ccc06f1eb9',
-						'operator' => '==',
-						'value' => '1',
-					),
-				),
-			),
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_img_position',
-			),
-			'layout' => 'table',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5b92071cacb1e',
-					'label' => 'Top',
-					'name' => 'vm_position_top',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => 0,
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => 'px',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5b92071cacb1f',
-					'label' => 'Left',
-					'name' => 'vm_position_left',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => 0,
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => 'px',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5b92071cacb20',
-					'label' => 'Right',
-					'name' => 'vm_position_right',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => 0,
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => 'px',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5b92071cacb21',
-					'label' => 'Buttom',
-					'name' => 'vm_position_buttom',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => 0,
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => 'px',
-					'maxlength' => '',
-				),
-			),
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'page_template',
-				'operator' => '==',
-				'value' => 'template-videos.php',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
+	'position' => 'acf_after_title',
 	'style' => 'default',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
@@ -7944,1181 +10008,11 @@ acf_add_local_field_group(array(
 		0 => 'the_content',
 		1 => 'discussion',
 		2 => 'comments',
+		3 => 'format',
+		4 => 'send-trackbacks',
 	),
 	'active' => 1,
-	'description' => '',
-));
-
-acf_add_local_field_group(array(
-	'key' => 'group_5bd7bec04c7a4',
-	'title' => 'VM Front Settings',
-	'fields' => array(
-		array(
-			'key' => 'field_5bd7c6507a461',
-			'label' => 'Editor Settings',
-			'name' => '',
-			'type' => 'tab',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'placement' => 'left',
-			'endpoint' => 0,
-		),
-		array(
-			'key' => 'field_5bd7e36a61ef0',
-			'label' => '',
-			'name' => 'vm_editor_enable_section',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_editor_enable_section',
-			),
-			'message' => 'Indicate to enable this section.',
-			'default_value' => 0,
-			'ui' => 1,
-			'ui_on_text' => 'Yes',
-			'ui_off_text' => 'No',
-		),
-		array(
-			'key' => 'field_5bd7c6cb32317',
-			'label' => '',
-			'name' => 'vm_editor_settings',
-			'type' => 'group',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_editor_settings',
-			),
-			'layout' => 'block',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5b74efcc29857',
-					'label' => 'BG Attribute',
-					'name' => 'vm_bg_attr',
-					'type' => 'radio',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '33.33',
-						'class' => '',
-						'id' => 'vm_bg_attr',
-					),
-					'choices' => array(
-						'bg-image' => 'Background Image',
-						'bg-color' => 'Background Color',
-					),
-					'allow_null' => 0,
-					'other_choice' => 0,
-					'default_value' => 'bg-color',
-					'layout' => 'horizontal',
-					'return_format' => 'value',
-					'save_other_choice' => 0,
-				),
-				array(
-					'key' => 'field_5b8ccbcdf1eab',
-					'label' => 'Image',
-					'name' => 'vm_image',
-					'type' => 'image',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => 'vm_image',
-					),
-					'return_format' => 'url',
-					'preview_size' => 'medium_large',
-					'library' => 'all',
-					'min_width' => '',
-					'min_height' => '',
-					'min_size' => '',
-					'max_width' => '',
-					'max_height' => '',
-					'max_size' => '',
-					'mime_types' => 'jpg,png',
-				),
-				array(
-					'key' => 'field_5b8ccbe0f1eac',
-					'label' => 'Color',
-					'name' => 'vm_color',
-					'type' => 'color_picker',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-color',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => 'vm_color',
-					),
-					'default_value' => '#000000',
-				),
-				array(
-					'key' => 'field_5b8ccbe6f1ead',
-					'label' => 'Presets',
-					'name' => 'vm_presets',
-					'type' => 'select',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '100',
-						'class' => '',
-						'id' => 'vm_presets',
-					),
-					'choices' => array(
-						'default' => 'Default',
-						'fill-screen' => 'Fill Screen',
-						'fit-to-screen' => 'Fit to Screen',
-						'repeat' => 'Repeat',
-						'custom' => 'Custom',
-					),
-					'default_value' => array(
-						0 => 'default',
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'ui' => 1,
-					'ajax' => 0,
-					'return_format' => 'value',
-					'placeholder' => '',
-				),
-				array(
-					'key' => 'field_5b8ccbedf1eae',
-					'label' => 'Image Position',
-					'name' => 'vm_image_position',
-					'type' => 'radio',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5b8ccbe6f1ead',
-								'operator' => '==',
-								'value' => 'fill-screen',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5b8ccbe6f1ead',
-								'operator' => '==',
-								'value' => 'fit-to-screen',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5b8ccbe6f1ead',
-								'operator' => '==',
-								'value' => 'repeat',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5b8ccbe6f1ead',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_image_position',
-					),
-					'choices' => array(
-						'left top' => 'Left Top',
-						'center top' => 'Center Top',
-						'right top' => 'Right Top',
-						'left center' => 'Left Center',
-						'center center' => 'Center Center',
-						'right center' => 'Right Center',
-						'left bottom' => 'Left Bottom',
-						'center bottom' => 'Center Bottom',
-						'right-bottom' => 'Right Bottom',
-					),
-					'allow_null' => 0,
-					'other_choice' => 0,
-					'default_value' => 'left top',
-					'layout' => 'horizontal',
-					'return_format' => 'value',
-					'save_other_choice' => 0,
-				),
-				array(
-					'key' => 'field_5b8ccbf5f1eaf',
-					'label' => 'Repeat Background Image',
-					'name' => 'vm_repeat_bg_img',
-					'type' => 'true_false',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5b8ccbe6f1ead',
-								'operator' => '==',
-								'value' => 'fit-to-screen',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5b8ccbe6f1ead',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_repeat_bg_img',
-					),
-					'message' => 'Enable Repeat Background Image',
-					'default_value' => 1,
-					'ui' => 1,
-					'ui_on_text' => 'Yes',
-					'ui_off_text' => 'No',
-				),
-				array(
-					'key' => 'field_5b8ccbf7f1eb0',
-					'label' => 'Scroll with Page',
-					'name' => 'vm_scroll_with_page',
-					'type' => 'true_false',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5b8ccbe6f1ead',
-								'operator' => '==',
-								'value' => 'repeat',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5b8ccbe6f1ead',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_scroll_with_page',
-					),
-					'message' => 'Enable Scroll Page',
-					'default_value' => 1,
-					'ui' => 1,
-					'ui_on_text' => 'Yes',
-					'ui_off_text' => 'No',
-				),
-				array(
-					'key' => 'field_5b8ccbfaf1eb1',
-					'label' => 'Image Size',
-					'name' => 'vm_image_size',
-					'type' => 'select',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5b74efcc29857',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5b8ccbe6f1ead',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_image_size',
-					),
-					'choices' => array(
-						'auto' => 'Original',
-						'contain' => 'Fit to Screen',
-						'cover' => 'Fill Screen',
-					),
-					'default_value' => array(
-						0 => 'auto',
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'ui' => 1,
-					'ajax' => 0,
-					'return_format' => 'value',
-					'placeholder' => '',
-				),
-			),
-		),
-		array(
-			'key' => 'field_5bd7c86e71c37',
-			'label' => 'Matches Settings',
-			'name' => '',
-			'type' => 'tab',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'placement' => 'left',
-			'endpoint' => 0,
-		),
-		array(
-			'key' => 'field_5bd7e39761ef1',
-			'label' => '',
-			'name' => 'vm_match_enable_section',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_match_enable_section',
-			),
-			'message' => 'Indicate to enable this section.',
-			'default_value' => 0,
-			'ui' => 1,
-			'ui_on_text' => 'Yes',
-			'ui_off_text' => 'No',
-		),
-		array(
-			'key' => 'field_5bd7c87171c38',
-			'label' => '',
-			'name' => 'vm_match_settings',
-			'type' => 'group',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_match_settings',
-			),
-			'layout' => 'block',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5bd7c87171c39',
-					'label' => 'BG Attribute',
-					'name' => 'vm_bg_attr',
-					'type' => 'radio',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '33.33',
-						'class' => '',
-						'id' => 'vm_bg_attr',
-					),
-					'choices' => array(
-						'bg-image' => 'Background Image',
-						'bg-color' => 'Background Color',
-					),
-					'allow_null' => 0,
-					'other_choice' => 0,
-					'default_value' => 'bg-color',
-					'layout' => 'horizontal',
-					'return_format' => 'value',
-					'save_other_choice' => 0,
-				),
-				array(
-					'key' => 'field_5bd7c87171c3a',
-					'label' => 'Image',
-					'name' => 'vm_image',
-					'type' => 'image',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => 'vm_image',
-					),
-					'return_format' => 'url',
-					'preview_size' => 'medium_large',
-					'library' => 'all',
-					'min_width' => '',
-					'min_height' => '',
-					'min_size' => '',
-					'max_width' => '',
-					'max_height' => '',
-					'max_size' => '',
-					'mime_types' => 'jpg,png',
-				),
-				array(
-					'key' => 'field_5bd7c87171c3b',
-					'label' => 'Color',
-					'name' => 'vm_color',
-					'type' => 'color_picker',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-color',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => 'vm_color',
-					),
-					'default_value' => '#000000',
-				),
-				array(
-					'key' => 'field_5bd7c87171c3c',
-					'label' => 'Presets',
-					'name' => 'vm_presets',
-					'type' => 'select',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '100',
-						'class' => '',
-						'id' => 'vm_presets',
-					),
-					'choices' => array(
-						'default' => 'Default',
-						'fill-screen' => 'Fill Screen',
-						'fit-to-screen' => 'Fit to Screen',
-						'repeat' => 'Repeat',
-						'custom' => 'Custom',
-					),
-					'default_value' => array(
-						0 => 'default',
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'ui' => 1,
-					'ajax' => 0,
-					'return_format' => 'value',
-					'placeholder' => '',
-				),
-				array(
-					'key' => 'field_5bd7c87171c3d',
-					'label' => 'Image Position',
-					'name' => 'vm_image_position',
-					'type' => 'radio',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c87171c3c',
-								'operator' => '==',
-								'value' => 'fill-screen',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c87171c3c',
-								'operator' => '==',
-								'value' => 'fit-to-screen',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c87171c3c',
-								'operator' => '==',
-								'value' => 'repeat',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c87171c3c',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_image_position',
-					),
-					'choices' => array(
-						'left top' => 'Left Top',
-						'center top' => 'Center Top',
-						'right top' => 'Right Top',
-						'left center' => 'Left Center',
-						'center center' => 'Center Center',
-						'right center' => 'Right Center',
-						'left bottom' => 'Left Bottom',
-						'center bottom' => 'Center Bottom',
-						'right-bottom' => 'Right Bottom',
-					),
-					'allow_null' => 0,
-					'other_choice' => 0,
-					'default_value' => 'left top',
-					'layout' => 'horizontal',
-					'return_format' => 'value',
-					'save_other_choice' => 0,
-				),
-				array(
-					'key' => 'field_5bd7c87171c3e',
-					'label' => 'Repeat Background Image',
-					'name' => 'vm_repeat_bg_img',
-					'type' => 'true_false',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c87171c3c',
-								'operator' => '==',
-								'value' => 'fit-to-screen',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c87171c3c',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_repeat_bg_img',
-					),
-					'message' => 'Enable Repeat Background Image',
-					'default_value' => 1,
-					'ui' => 1,
-					'ui_on_text' => 'Yes',
-					'ui_off_text' => 'No',
-				),
-				array(
-					'key' => 'field_5bd7c87171c3f',
-					'label' => 'Scroll with Page',
-					'name' => 'vm_scroll_with_page',
-					'type' => 'true_false',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c87171c3c',
-								'operator' => '==',
-								'value' => 'repeat',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c87171c3c',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_scroll_with_page',
-					),
-					'message' => 'Enable Scroll Page',
-					'default_value' => 1,
-					'ui' => 1,
-					'ui_on_text' => 'Yes',
-					'ui_off_text' => 'No',
-				),
-				array(
-					'key' => 'field_5bd7c87171c40',
-					'label' => 'Image Size',
-					'name' => 'vm_image_size',
-					'type' => 'select',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c87171c39',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c87171c3c',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_image_size',
-					),
-					'choices' => array(
-						'auto' => 'Original',
-						'contain' => 'Fit to Screen',
-						'cover' => 'Fill Screen',
-					),
-					'default_value' => array(
-						0 => 'auto',
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'ui' => 1,
-					'ajax' => 0,
-					'return_format' => 'value',
-					'placeholder' => '',
-				),
-			),
-		),
-		array(
-			'key' => 'field_5bd7c89371c4a',
-			'label' => 'Videos Settings',
-			'name' => '',
-			'type' => 'tab',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'placement' => 'left',
-			'endpoint' => 0,
-		),
-		array(
-			'key' => 'field_5bd7e3ad61ef2',
-			'label' => '',
-			'name' => 'vm_videos_enable_section',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_videos_enable_section',
-			),
-			'message' => 'Indicate to enable this section.',
-			'default_value' => 0,
-			'ui' => 1,
-			'ui_on_text' => 'Yes',
-			'ui_off_text' => 'No',
-		),
-		array(
-			'key' => 'field_5bd7c89171c41',
-			'label' => '',
-			'name' => 'vm_video_settings',
-			'type' => 'group',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => 'vm_video_settings',
-			),
-			'layout' => 'block',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5bd7c89271c42',
-					'label' => 'BG Attribute',
-					'name' => 'vm_bg_attr',
-					'type' => 'radio',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '33.33',
-						'class' => '',
-						'id' => 'vm_bg_attr',
-					),
-					'choices' => array(
-						'bg-image' => 'Background Image',
-						'bg-color' => 'Background Color',
-					),
-					'allow_null' => 0,
-					'other_choice' => 0,
-					'save_other_choice' => 0,
-					'default_value' => 'bg-color',
-					'layout' => 'horizontal',
-					'return_format' => 'value',
-				),
-				array(
-					'key' => 'field_5bd7c89271c43',
-					'label' => 'Image',
-					'name' => 'vm_image',
-					'type' => 'image',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => 'vm_image',
-					),
-					'return_format' => 'url',
-					'preview_size' => 'medium_large',
-					'library' => 'all',
-					'min_width' => '',
-					'min_height' => '',
-					'min_size' => '',
-					'max_width' => '',
-					'max_height' => '',
-					'max_size' => '',
-					'mime_types' => 'jpg,png',
-				),
-				array(
-					'key' => 'field_5bd7c89271c44',
-					'label' => 'Color',
-					'name' => 'vm_color',
-					'type' => 'color_picker',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-color',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => 'vm_color',
-					),
-					'default_value' => '#000000',
-				),
-				array(
-					'key' => 'field_5bd7c89271c45',
-					'label' => 'Presets',
-					'name' => 'vm_presets',
-					'type' => 'select',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '100',
-						'class' => '',
-						'id' => 'vm_presets',
-					),
-					'choices' => array(
-						'default' => 'Default',
-						'fill-screen' => 'Fill Screen',
-						'fit-to-screen' => 'Fit to Screen',
-						'repeat' => 'Repeat',
-						'custom' => 'Custom',
-					),
-					'default_value' => array(
-						0 => 'default',
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'ui' => 1,
-					'ajax' => 0,
-					'return_format' => 'value',
-					'placeholder' => '',
-				),
-				array(
-					'key' => 'field_5bd7c89271c46',
-					'label' => 'Image Position',
-					'name' => 'vm_image_position',
-					'type' => 'radio',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c89271c45',
-								'operator' => '==',
-								'value' => 'fill-screen',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c89271c45',
-								'operator' => '==',
-								'value' => 'fit-to-screen',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c89271c45',
-								'operator' => '==',
-								'value' => 'repeat',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c89271c45',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_image_position',
-					),
-					'choices' => array(
-						'left top' => 'Left Top',
-						'center top' => 'Center Top',
-						'right top' => 'Right Top',
-						'left center' => 'Left Center',
-						'center center' => 'Center Center',
-						'right center' => 'Right Center',
-						'left bottom' => 'Left Bottom',
-						'center bottom' => 'Center Bottom',
-						'right-bottom' => 'Right Bottom',
-					),
-					'allow_null' => 0,
-					'other_choice' => 0,
-					'save_other_choice' => 0,
-					'default_value' => 'left top',
-					'layout' => 'horizontal',
-					'return_format' => 'value',
-				),
-				array(
-					'key' => 'field_5bd7c89271c47',
-					'label' => 'Repeat Background Image',
-					'name' => 'vm_repeat_bg_img',
-					'type' => 'true_false',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c89271c45',
-								'operator' => '==',
-								'value' => 'fit-to-screen',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c89271c45',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_repeat_bg_img',
-					),
-					'message' => 'Enable Repeat Background Image',
-					'default_value' => 1,
-					'ui' => 1,
-					'ui_on_text' => 'Yes',
-					'ui_off_text' => 'No',
-				),
-				array(
-					'key' => 'field_5bd7c89271c48',
-					'label' => 'Scroll with Page',
-					'name' => 'vm_scroll_with_page',
-					'type' => 'true_false',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c89271c45',
-								'operator' => '==',
-								'value' => 'repeat',
-							),
-						),
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c89271c45',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_scroll_with_page',
-					),
-					'message' => 'Enable Scroll Page',
-					'default_value' => 1,
-					'ui' => 1,
-					'ui_on_text' => 'Yes',
-					'ui_off_text' => 'No',
-				),
-				array(
-					'key' => 'field_5bd7c89271c49',
-					'label' => 'Image Size',
-					'name' => 'vm_image_size',
-					'type' => 'select',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5bd7c89271c42',
-								'operator' => '==',
-								'value' => 'bg-image',
-							),
-							array(
-								'field' => 'field_5bd7c89271c45',
-								'operator' => '==',
-								'value' => 'custom',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '25',
-						'class' => '',
-						'id' => 'vm_image_size',
-					),
-					'choices' => array(
-						'auto' => 'Original',
-						'contain' => 'Fit to Screen',
-						'cover' => 'Fill Screen',
-					),
-					'default_value' => array(
-						0 => 'auto',
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'ui' => 1,
-					'ajax' => 0,
-					'return_format' => 'value',
-					'placeholder' => '',
-				),
-			),
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-vm-front-settings',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => array(
-		0 => 'the_content',
-		1 => 'excerpt',
-		2 => 'discussion',
-		3 => 'comments',
-		4 => 'revisions',
-		5 => 'slug',
-		6 => 'author',
-		7 => 'format',
-		8 => 'page_attributes',
-		9 => 'featured_image',
-		10 => 'categories',
-		11 => 'tags',
-		12 => 'send-trackbacks',
-	),
-	'active' => 1,
-	'description' => '',
+	'description' => 'Display the settings for Template: front page of qqlanding',
 ));
 
 endif;
@@ -9133,12 +10027,6 @@ if ( function_exists( 'acf_add_options_page' ) ) :
 		'icon_url'		=> 'dashicons-screenoptions',
 		'redirect'		=> false
 	) ); //General Settings
-	
-	/*acf_add_options_sub_page( array(
-		'page_title' 	=> __( 'Slider Settings', 'qqlanding' ),
-		'menu_title' 	=> __( 'Slider', 'qqlanding' ),
-		'parent_slug'	=> 'general-theme-settings',
-	) );*/ //Front Page Settings
 	
 	acf_add_options_sub_page( array(
 		'page_title' 	=> __( 'Front Page Settings', 'qqlanding' ),
@@ -9159,16 +10047,21 @@ if ( function_exists( 'acf_add_options_page' ) ) :
 	) ); //VM Front Settings
 	
 	acf_add_options_sub_page( array(
-		'page_title' 	=> __( 'Settings', 'qqlanding' ),
-		'menu_title' 	=> __( 'Settings', 'qqlanding' ),
-		'parent_slug'	=> 'slider_settings',
-	) ); //VM Slider Settings
-		
+		'page_title' 	=> __( 'Slider Settings', 'qqlanding' ),
+		'menu_title' 	=> __( 'Slider Settings', 'qqlanding' ),
+		'parent_slug'	=> 'edit.php?post_type=slider',
+	) ); //Slider Settings
+
+	acf_add_options_sub_page( array(
+		'page_title'	=> __( 'Match Settings', 'qqlanding' ),
+		'menu_title'	=> __( 'Match Settings', 'qqlanding' ),
+		'parent_slug'	=> 'edit.php?post_type=qqlanding-matchx'
+	) );
 	/*acf_add_options_sub_page( array(
-		'page_title' 	=> __( 'Video & Matches Settings', 'qqlanding' ),
-		'menu_title' 	=> __( 'Video & Matches', 'qqlanding' ),
+		'page_title' 	=> __( 'Slider Settings', 'qqlanding' ),
+		'menu_title' 	=> __( 'Slider', 'qqlanding' ),
 		'parent_slug'	=> 'general-theme-settings',
-	) );*/ //Videos
+	) );*/ //Front Page Settings
 
 endif;
 
@@ -9412,56 +10305,90 @@ function fpv_video_settings($video, $class){
  * @param  $img            [description]
  * @return                 [description]
  */
- function fpcontent_content_position($mmk_title, $mmk_content, $id_description,$img){
+ function fpcontent_content_position($mmk_title, $mmk_content, $id_description,$img, $array = array() ){
+	$img_args = get_image_attr( $img );
 
-		    $logo = get_theme_mod( 'site_logo', '' );
-		    $width = ''; 
-		    $height = ''; 
-	
-			if ( !empty( $logo ) ) list($width, $height, $type, $attr) = getimagesize($logo);	//check if logo is not empty
+	$attr = array(
+		'id'		=> $array['id'] ,
+		'class'		=> $array['class'],
+		'itemprop'	=> $array['itemprop'],
+		'tags'		=> $array['tags'],
+		'logo'		=> $img_args['logo'],
+		'imgObj' 	=> $img_args['imgObj'],
+		'imgWidth' 	=> $img_args['imgWidth'],
+		'imgHeight' => $img_args['imgHeight'],
+		'width' 	=> $img_args['width'],
+		'height' 	=> $img_args['height'],
+	);
 
- 			if($img):
-		 		$size = 'medium'; //thumbnail size
-				$thumb = $img['sizes'][ $size ]; //image size
- 				$imgObj = $img['url']; //image url
- 				$imgwidth = $img['sizes'][ $size . '-width' ]; //image exact width
- 				$imgheight = $img['sizes'][ $size . '-height' ]; //image exact hiegth
- 			else:
- 				$imgObj = esc_url( $logo ); // escape the url
- 				$imgwidth = $width; // image width
- 				$imgheight = $height; // image height
- 			endif;
+	$content = '<article id="post-'.$id_description.'" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">';
+		$content .= '<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="'.get_permalink().'"/>';
+		if ( $array['alignment'] == 'default' ) {
+			$content .= get_fp_content($mmk_title, $attr );
+		}
+		$content .= '<div id="content-'.$id_description.'" itemprop="description" class="entry-content">';	
+			$content .= $mmk_content;
+		$content .= '</div><!-- .entry-content -->';
+	$content .='</article>';
 
-
-			$content = '<article id="post-'.$id_description.'" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">';
-				$content .= '<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="'.get_permalink().'"/>';
-				$content .= '<header class="entry-header">';	
-					$content .= '<h3 class="h2 post-entry-title" itemprop="headline">'.$mmk_title.'</h3>';
-					$content .= '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
-						$content .= '<meta itemprop="url" content="'.$imgObj.'">';	
-						$content .= '<meta itemprop="width" content="' . $imgwidth . '"/>';	
-						$content .= '<meta itemprop="height" content="' . $imgheight . '"/>';	
-					$content .= '</div>';	
-					$content .= '<!-- .AMP  -->';
-					$content .= '<meta itemprop="author" content="'.get_the_author().'">';	
-					$content .= '<meta itemprop="datePublished" content="'.get_the_time('c').'">';	
-					$content .= '<meta itemprop="dateModified" content="'.get_the_modified_time('c').'">';	
-					$content .= '<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">';	
-						$content .= '<meta itemprop="name" content="'.get_permalink().'"/>';	
-						$content .= '<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">';	
-						$content .= '<meta itemprop="url" content="'.esc_url( $logo ).'"/>';	
-						$content .= '<meta itemprop="width" content="'  . $width . '"/>';	
-						$content .= '<meta itemprop="height" content="' . $height .'"/>';	
-					$content .= '</div>';	
-				$content .= '</header>';	
-				$content .= '<div id="content-'.$id_description.'" itemprop="description" class="entry-content">';	
-					$content .= $mmk_content;
-				$content .= '</div><!-- .entry-content -->';
-			$content .='</article>';
-
- 		return $content;
+	return $content;
 
  }
+
+function get_image_attr( $img ){
+
+	$logo = get_theme_mod( 'site_logo', '' );
+	$width = '169'; 
+	$height = '54';
+
+	if ( !empty( $logo ) ) list($width, $height, $type, $attr) = getimagesize($logo);	//check if logo is not empty
+
+	if( ! empty( $img  )  ):
+		$size = 'medium'; //thumbnail size
+		$thumb = $img['sizes'][ $size ]; //image size
+		$imgObj = $img['url']; //image url
+		$imgwidth = $img['sizes'][ $size . '-width' ]; //image exact width
+		$imgheight = $img['sizes'][ $size . '-height' ]; //image exact hiegth
+	else:
+		$imgObj = esc_url( $logo ); // escape the url
+		$imgwidth = $width; // image width
+		$imgheight = $height; // image height
+	endif;
+
+	return $img_args = array(
+		'logo'		=> $logo,
+		'imgObj' 	=> $imgObj,
+		'imgWidth' 	=> $imgwidth,
+		'imgHeight' => $imgheight,
+		'width' 	=> $width,
+		'height' 	=> $height
+	);
+}
+
+function get_fp_content( $title, $attr = array() ){
+
+	$output = '';
+	$output .= '<header class="entry-header">';
+		$output .= acf_the_header_tag_injection( $title, $attr ); //'post-entry-title'
+		$output .= '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
+			$output .= '<meta itemprop="url" content="' . $attr['imgObj'] . '">';	
+			$output .= '<meta itemprop="width" content="' . $attr['imgWidth'] . '"/>';	
+			$output .= '<meta itemprop="height" content="' . $attr['imgHeight'] . '"/>';	
+		$output .= '</div>';	
+		$output .= '<!-- .AMP  -->';
+		$output .= '<meta itemprop="author" content="'.get_the_author().'">';	
+		$output .= '<meta itemprop="datePublished" content="'.get_the_time('c').'">';	
+		$output .= '<meta itemprop="dateModified" content="'.get_the_modified_time('c').'">';	
+		$output .= '<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">';	
+			$output .= '<meta itemprop="name" content="'.get_permalink().'"/>';	
+			$output .= '<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">';	
+			$output .= '<meta itemprop="url" content="'.esc_url( $attr['logo'] ).'"/>';	
+			$output .= '<meta itemprop="width" content="'  . $attr['width'] . '"/>';	
+			$output .= '<meta itemprop="height" content="' . $attr['height'] .'"/>';	
+		$output .= '</div>';	
+	$output .= '</header>';
+	return $output;
+}
 
 /**
  * Display the actual link & banner image
@@ -9517,13 +10444,24 @@ function floating_banner( $field ){
  * & call it to each function in the 
  * General.js File
  */
-function qqlanding_owl_carousel(){ ?>
+function qqlanding__script(){ ?>
 <?php
 	$th_layout = get_field( 'th_layout', 'option' );
 	$template = get_field( 'header_template', 'option' );
 	$appearance = get_field( 'fp_slider_appearance_group', 'option');
 	$_appearance = get_field( 'fb_slider_appearance_group', 'option');
 	$slider_app = get_field('slider_appearance_group', 'option');
+	$heading_settings = get_field( 'content_heading_settings', 'option' );
+	$table_columns = get_field( 'table_columns', 'option' ); //Match Columns Settings
+	$match_timer = get_field( 'table_match_timer', 'option' ); //Match Timer Settings
+
+
+	$template = get_field( 'header_template', 'option' );
+	switch ($template) :
+		case 'bare': $nav_class = "qqlanding-bare"; break;
+		case 'overlay': $nav_class = "qqlanding-overlay"; break;
+		default: $nav_class = "qqlanding-default"; break;
+	endswitch;
 
 	//post settings
 	$autoplay = $appearance['slider_autoplay'];
@@ -9538,49 +10476,72 @@ function qqlanding_owl_carousel(){ ?>
 	//bootstrap carousel
 	$intervals = $slider_app['slider_autoplay_delays'];
 	$pauses = $slider_app['slider_autoplay_hover'];
+
+	//Change text to image ( Heading tag )
+	$alignment = $heading_settings['alignment'];
+	$display = $heading_settings['display'];
+	$id = $heading_settings['id'];
+
+	//Match Timer Settings
+	$match_display_format = $match_timer['table_match_display_format'];
+	$match_display_style = $match_timer['table_match_display_style'];
 ?>
 <script type="text/javascript">
-	console.log(<?php echo $intervals; ?>);
-	//Template
+
+	//console.log('<?php echo $match_display_format . ' - ' . $match_display_style; ?>');
+	
+	/*-Navigation-class*/
+	var nav_class = '<?php echo $nav_class;?>';
+
+	/*-Store the url in var used it to connect the ajax**/
+	<?php if ( is_page_template( 'template-page.php' ) ) : ?>
+	var urlBase = '<?= get_bloginfo("template_url"); ?>';
+	<?php endif; ?>
+	
+	/*-Template*/
 	var layout = '<?php echo $th_layout; ?>',template = '<?php echo $template; ?>';
 	
-	//post
+	/*-post*/
 	var autoplay = '<?php echo $autoplay; ?>',nav = '<?php echo $nav; ?>',dots = '<?php echo $dots; ?>';
 
-	//banner
+	/*-banner*/
 	var _autoplay = '<?php echo $_autoplay; ?>',_nav = '<?php echo $_nav; ?>',_dots = '<?php echo $_dots; ?>';
 
 	/*-carousel-slider*/
 	var _interval = <?php echo ( !empty($intervals) ) ? $intervals : 5000; ?>;
 	var _pause = '<?php echo $pauses;?>';
+
+	/*-Heading-title*/
+	var _tag_alignment = '<?php echo $alignment;?>';
+	var _tag_display = <?php echo ( $display == 1 ) ? 'true' : 'false'; ?>;
+	var _tag_id = '<?php echo $id;?>';
+
+	/*-Match-table*/
+	var _table_col = <?php echo $table_columns;?>;
+	var _table_style = '<?php echo $match_display_style;?>';
+	var _table_format = '<?php echo $match_display_format;?>';
 </script>
 <?php }
-add_action( 'wp_footer','qqlanding_owl_carousel' );
+add_action( 'wp_footer','qqlanding__script' );
 
 function content_img_postion($position_conditon, $top, $right, $left, $bottom) {
-
-		  	
-		  	if($position_conditon == true){
-		  	
-		  		$positionprop = "position: absolute;";				
-				  	
-				  	if($top){
-					  	 $positionprop .= "top: ".$top."px;"; 
-				  	} 
-				  	if($left){
-				  		 $positionprop .= "left: ".$left."px;";  
-				  	}
-				  	if($right){
-				  	 	$positionprop .= "right: ".$right."px;";  
-				  	}
-				  	if($bottom){
-				  	 	$positionprop .= "bottom: ".$bottom."px;"; 
-				  	}
-
-		  	}else{
-		  		$positionprop = "";
-		  	}
-
+	if($position_conditon == true){
+		$positionprop = "position: absolute;";
+		if($top){
+			$positionprop .= "top: ".$top."px;";
+		} 
+		if($left){
+			$positionprop .= "left: ".$left."px;";
+		}
+		if($right){
+			$positionprop .= "right: ".$right."px;";
+		}
+		if($bottom){
+			$positionprop .= "bottom: ".$bottom."px;";
+		}
+	}else{
+		$positionprop = "";
+	}
 	return $positionprop;
 }
 
@@ -9608,4 +10569,10 @@ function acf_selective_refresh($id){
 function th_layout(){
 	$th_layout = ( ! empty( get_field( 'th_layout', 'option' ) ) ) ? get_field( 'th_layout', 'option' ) : 'box';
 	return $th_layout;
+}
+
+function acf_the_header_tag_injection($title = null , $attr = array() ){
+
+	$output =  sprintf( '<%1$s id="%2$s" class="%3$s" itemprop="%4$s">%5$s</%6$s>', $attr['tags'], $attr['id'], $attr['class'], $attr['itemprop'], esc_attr( $title , 'qqlanding' ), $attr['tags'] );
+	return $output;
 }

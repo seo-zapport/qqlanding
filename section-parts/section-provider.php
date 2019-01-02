@@ -2,14 +2,24 @@
 //$disable = sanitize_text_field( get_field( 'pvs_enable_section', 'option' ) ); //Banner Enable/Disable
 $disable = get_field( 'pvs_enable_section', 'option' ); //Provider Enable/Disable
 $pvs_title = get_field( 'pvs_title', 'option' ); // providers custom repeater
+$pvs_tags = get_field( 'pvs_header_tags', 'option' );
 
 if ( acf_selective_refresh($disable) ) return $disable = false;
 
 if ($disable) : ?>
 <section id="Fproviders" class="py-5">
 	<div class="container">
-		<h3 class="sec-entry-title text-center"><?php esc_html_e( $pvs_title , 'qqlanding' ) ?></h3> <!--Nhà cung cấp-->
 		<?php
+
+		$heading_attr = array(
+			'tags'			=> $pvs_tags,
+			'class'			=> 'sec-entry-title text-center',
+			'id'			=> 'id',
+			'itemprop'		=> 'headline',
+			'alignment'		=> 'default',
+		);
+		acf_the_header_tag_injection($pvs_title, $heading_attr ); //Header tags
+
 		if ( have_rows( 'pvs_settings', 'option' ) ) :
 			while ( have_rows( 'pvs_settings', 'option' ) ) : the_row();
 				$pvs_layout = get_sub_field( 'pvs_icons_colors', 'option' );

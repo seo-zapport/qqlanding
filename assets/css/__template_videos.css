@@ -1,13 +1,6 @@
 @font-face { font-family: "century_gothic"; src: url("../fonts/century_gothic/century_gothic.eot?") format("eot"); src: url("../fonts/century_gothic/century_gothic.woff2") format("woff2"); src: url("../fonts/century_gothic/century_gothic.woff") format("woff"); src: url("../fonts/century_gothic/century_gothic.ttf") format("truetype"); font-style: "normal"; font-weight: "normal"; }
 @font-face { font-family: "century_gothic_bold"; src: url("../fonts/century_gothic_bold/century_gothic_bold.eot?") format("eot"); src: url("../fonts/century_gothic_bold/century_gothic_bold.woff2") format("woff2"); src: url("../fonts/century_gothic_bold/century_gothic_bold.woff") format("woff"); src: url("../fonts/century_gothic_bold/century_gothic_bold.ttf") format("truetype"); font-style: "normal"; font-weight: "normal"; }
 /** Page: Videos -------------------------*/
-#videoContent { position: relative; overflow: hidden; }
-#videoContent .sec-video-title { color: #b71d1b; font-family: 'century_gothic_bold'; font-size: 38px; font-size: 2.375rem; text-transform: uppercase; }
-#videoContent .sec-video-title span { display: inline-block; position: relative; top: -5px; }
-#videoContent .sec-video-title span > img { display: inline-block; }
-#videoContent .cont-videos-entry { font-family: 'century_gothic'; font-weight: 500; }
-#videoContent ul li, #videoContent ol li { margin: 8px 0; }
-
 #matchWrap { margin: 0; /**--flipclock--*/ }
 #matchWrap .match-entry-title { font-size: 24px; font-size: 1.5rem; font-family: noto_sans_regular; color: #fff; text-shadow: 1px 0px 8px #b8572c; text-transform: uppercase; text-align: center; }
 #matchWrap .match-italic { font-family: noto_sans_italic; }
@@ -35,7 +28,7 @@
 #matchWrap .flip-clock-wrapper .flip-clock-dot { display: none; }
 #matchWrap .flip-clock-wrapper .flip-clock-dot.top { top: 20px; }
 #matchWrap table, #matchWrap th, #matchWrap td { border-color: #d6e935; border-width: 2px; }
-#matchWrap .table thead th { padding: 0.3em; border-color: #d6e935; font-family: helvetica; text-transform: uppercase; font-size: 16px; font-size: 1rem; }
+#matchWrap .table thead th { padding: 0.3em; text-transform: uppercase; font-size: 16px; font-size: 1rem; }
 #matchWrap .table th, #matchWrap .table td { padding: 0.5em 0.3em; font-family: noto_sans_regular; }
 #matchWrap th { background-color: #222; color: #d6e935; font-weight: bold; }
 #matchWrap td { font-size: 15px; font-size: 0.9375rem; line-height: 1.3; word-break: break-all; word-spacing: normal; }

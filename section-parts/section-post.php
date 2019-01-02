@@ -5,6 +5,7 @@ $item_layout = get_field('fp_ts_layout', 'option'); // Item Layout
 $card_layout = get_field('fp_ts_cards_layout', 'option'); // Cards Theme
 $cpost_type = get_field('fp_post_type'); // Card Post Type
 $fp_excerpt = get_field( 'fp_post_excerpt_length' ); //excerpt
+$heading_settings = get_field( 'fp_heading_settings', 'option' );
 if ( acf_selective_refresh($disable) ) return $disable = false;
 $card_class = ( $layout == 'static' ) ? 'card-deck' : 'owl-post owl-carousel';
 							
@@ -15,7 +16,7 @@ else: $card_class_item = ''; endif;
 if ($disable) : ?>
 <section id="Fpost" class="py-5">
 	<div class="container">
-		<h3 class="sec-entry-title text-center"><?php the_field( 'fp_post_title' ); ?></h3>
+		<?php echo acf_the_header_tag_injection( get_field('fp_post_title'), $heading_settings ); ?>
 		<div class="<?php echo ( ! empty( get_field('fp_post_post') ) || ! empty( get_field('fp_recent_item') ) ) ? $card_class : ''; ?>"> <!--card-wrapper-->
 			<?php if ( $cpost_type == 'recent' ):
 				$fp_recent_g = get_field( 'fp_recent_item' );

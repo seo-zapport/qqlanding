@@ -43,6 +43,11 @@ function qqlanding_register_required_plugins() {
 			'slug'      => 'acf-rgba-color-picker',
 			'required'  => false,
 		),
+		array(
+			'name'      => 'All-in-One Video Gallery',
+			'slug'      => 'all-in-one-video-gallery',
+			'required'  => false,
+		),
 
 	);
 

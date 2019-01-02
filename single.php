@@ -19,19 +19,23 @@ endif; ?>
 		<main id="main" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		if( ! is_singular( 'qqvideos' ) ) :
+			while ( have_posts() ) :
+				the_post();
 
-			get_template_part( 'template-parts/content-single', 'single' );
+				get_template_part( 'template-parts/content-single', 'single' );
 
-			if( get_theme_mod( 'qqlanding_single_post_nav_display', true ) ) the_post_navigation(); // Display post navigation
+				if( get_theme_mod( 'qqlanding_single_post_nav_display', true ) ) the_post_navigation(); // Display post navigation
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
 
-		endwhile; // End of the loop.
+			endwhile; // End of the loop.
+		else:
+			get_template_part( 'template-parts/content-single-video', 'single' );	
+		endif;
 		?>
 
 		</main><!-- #main -->

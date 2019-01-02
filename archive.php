@@ -30,32 +30,40 @@ endif;
 			</header><!-- .page-header -->
 
 			<div class="qqland-grid-2">
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				<?php
+				/* Start the Loop */
+				/*if (  get_post_type( 'qqvideos' ) ) :
+					echo '<div class="row">';
+						get_template_part( 'template-parts/content', 'videos' );
+					echo '</div>';
+				else:
+*/
+					while ( have_posts() ) :
+						the_post();
 
-			endwhile;
+						/*
+						 * Include the Post-Type-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+						 */
+						get_template_part( 'template-parts/content', get_post_type() );
 
-			echo '<span class="clearfix"></span>';
-			echo '<div class="col-12">';
-				qqlanding_post_navigations();
-			echo '</div>';
+					endwhile;
+					
+					echo '<span class="clearfix"></span>';
+					echo '<div class="col-12">';
+						qqlanding_post_navigations();
+					echo '</div>';				
+				//endif;
+				?>
+			</div><!-- .qqland-grid-2 -->
 
-		else :
+		<?php else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
-			</div><!-- .qqland-grid-2 -->
+		endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

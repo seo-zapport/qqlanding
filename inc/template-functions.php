@@ -144,40 +144,12 @@ if( ! function_exists( 'qqlanding_load_section' ) ):
 endif;
 
 /**
- * Load the video sections for the front page
- */
-if ( ! function_exists('qqlanding_load_vsections') ) :
-    /**
-     * Load section
-     * @since 1.0.0
-     * @param $video_id
-     */
-    
-	function qqlanding_load_vsections( $video_id ){
-        /**
-         * Hook before section
-         */
-        
-        do_action( 'qqlanding_before_video_', $video_id );
-        do_action( 'qqlanding_before_video_part_', $video_id );
-
-        get_template_part( 'video-parts/video' , $video_id );
-
-        /**
-         * Hook after video
-         */
-        do_action( 'qqlanding_after_video_part_', $video_id );
-        do_action( 'qqlanding_after_video_', $video_id );
-	}
-endif;
-
-/**
  * Load the slider
  */
 if( ! function_exists( 'qqlanding_load_slider' ) ):
 
 	function qqlanding_load_slider(){
-		if ( is_page_template( 'template-page.php' ) || is_page_template( 'template-videos.php' ) ) {
+		if ( is_page_template( 'template-page.php' ) ) {
 			qqlanding_load_slider('slider');
 		}
 	}
@@ -537,49 +509,10 @@ function custom_field_excerpt() {
 	return apply_filters('the_excerpt', $text);
 }
 
-
 function qqlanding_preloader(){
 	echo qqlanding_preload_item();
  }
 add_action( 'wp_head', 'qqlanding_preloader' );
-
-/**
- * Footer Extend script
- */
-function qqlanding_script(){
-	$template = get_field( 'header_template', 'option' );
-	switch ($template) {
-		case 'bare': $nav_class = "qqlanding-bare"; break;
-		case 'overlay': $nav_class = "qqlanding-overlay"; break;
-		default: $nav_class = "qqlanding-default"; break;
-	}
-	?>
-	<script type="text/javascript">
-		/*-Add some class in the header tags-**/
-		var nav_class = '<?= $nav_class; ?>';
-		jQuery(window).load(function(){
-			jQuery( '#masthead.site-header' ).addClass(nav_class);
-		});
-
-		/*-Store the url in var used it to connect the ajax**/
-		<?php if ( is_page_template( 'template-videos.php' ) ) : ?>
-			var urlBase = '<?= get_bloginfo("template_url"); ?>';
-		<?php endif; ?>
-		
-	</script>
-
-<?php }
-add_action( 'wp_footer','qqlanding_script' );
-
-
-/**
- * Add support for the QuickTime (.mov) video format.
- */
-function qqlanding_extend_video($exts){
-	$exts[] = 'mov';
-	return $exts;
-}
-add_filter( 'wp_video_extensions', 'qqlanding_extend_video');
 
 add_filter( 'pll_get_post_types', 'add_cpt_to_pll', 10, 2 );
 function add_cpt_to_pll( $post_types, $hide ){

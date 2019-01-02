@@ -19,7 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 		<meta itemprop="keywords" content="Imprint, Data Protection, Copyright Data, QR-Code"/>
 		<meta itemprop="copyrightYear" content="2018"/>
 		<meta itemprop="copyrightHolder" content="<?php echo force_relative_url(); ?>"/>
-
 		<div class="container">
 			<?php $licensed = get_field('licensed_settings', 'option');
 			$banks_enabled = get_field('providers', 'option');
@@ -122,43 +121,49 @@ if ( ! defined( 'ABSPATH' ) ) die; ?>
 					</div>
 				</div>
 			</div>
-			<?php endif; 
-			$footer_socket_class = qqlanding_footer_socket_class( get_theme_mod('qqlanding_display_footer_option'),  has_nav_menu('footer') );
-			if( get_theme_mod("qqlanding_display_footer_option") == 1 ): ?>
-				<div class="row">
-					<div class="site-info <?php echo $footer_socket_class['footer_class']; ?>">		
-						<?php if(get_theme_mod('qqlanding_footer_settings')): 
-								echo get_theme_mod('qqlanding_footer_settings');
-						 else: ?>
-						<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'qqlanding' ) );*/ ?>">
-							<?php
-							/* translators: %s: CMS name, i.e. WordPress. */
-							printf( esc_html__( 'Proudly powered by %s', 'qqlanding' ), 'WordPress' );
-							?>
-						</a>
-						<span class="sep"> | </span>
-							<?php
-							/* translators: 1: Theme name, 2: Theme author. */
-							printf( esc_html__( 'Theme: %1$s by %2$s.', 'qqlanding' ), 'qqlanding', '<a href="https://github.com/seo-zapport">Zapport SEO Dev</a>' );
-							?>
-						<?php endif; //end copyright editor?>			
-					</div><!-- .site-info -->
-				</div>
-			<?php endif; //end qqlanding_display_footer_option
-				if ( has_nav_menu('footer') ):
-					wp_nav_menu( array(
-						'theme_location'  => 'footer',
-						'container'       => 'div',
-						'container_class' => $footer_socket_class['has_nav_class'] . ' mt-3 mt-md-3 mt-lg-0',
-						'container_id'    => 'footer-menu-wrap',
-						'menu_class'      => 'footer-menu',
-						'echo'            => true,
-						'fallback_cb'     => 'wp_page_menu',
-						'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-						'depth'           => 0,
-					) );
-				endif; ?>
+			<?php endif;?>
 		</div><!-- .container -->
+		<?php if ( has_nav_menu('footer') || get_theme_mod("qqlanding_display_footer_option") == 1 ): ?>
+			<div id="site-copyright" class="py-2">
+				<div class="container">
+					<div class="row">
+						<?php $footer_socket_class = qqlanding_footer_socket_class( get_theme_mod('qqlanding_display_footer_option'),  has_nav_menu('footer') );
+						if( get_theme_mod("qqlanding_display_footer_option") == 1 ): ?>
+							<div class="site-info <?php echo $footer_socket_class['footer_class']; ?>">		
+								<?php if(get_theme_mod('qqlanding_footer_settings')): 
+										echo get_theme_mod('qqlanding_footer_settings');
+								 else: ?>
+								<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'qqlanding' ) );*/ ?>">
+									<?php
+									/* translators: %s: CMS name, i.e. WordPress. */
+									printf( esc_html__( 'Proudly powered by %s', 'qqlanding' ), 'WordPress' );
+									?>
+								</a>
+								<span class="sep"> | </span>
+									<?php
+									/* translators: 1: Theme name, 2: Theme author. */
+									printf( esc_html__( 'Theme: %1$s by %2$s.', 'qqlanding' ), 'qqlanding', '<a href="https://github.com/seo-zapport">Zapport SEO Dev</a>' );
+									?>
+								<?php endif; //end copyright editor?>			
+							</div><!-- .site-info -->
+						<?php endif; //end qqlanding_display_footer_option
+						if ( has_nav_menu('footer') ):
+							wp_nav_menu( array(
+								'theme_location'  => 'footer',
+								'container'       => 'div',
+								'container_class' => $footer_socket_class['has_nav_class'] . ' mt-3 mt-md-3 mt-lg-0',
+								'container_id'    => 'footer-menu-wrap',
+								'menu_class'      => 'footer-menu',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+								'depth'           => 0,
+							) );
+						endif; ?>
+					</div>
+				</div>
+			</div>
+		<?php endif; ?>
 	</footer><!-- #colophon -->
 	<?php if ( th_layout() === 'box' ): ?>
 		</div>

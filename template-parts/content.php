@@ -8,7 +8,6 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class('qqland-post'); ?> itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 	<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="<?php echo get_permalink(); ?>"/>
 	<header class="entry-header">

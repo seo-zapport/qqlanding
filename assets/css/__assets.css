@@ -1,238 +1,1032 @@
 /**--assets*/
-.full-wh, .full-wrap { height: 320px; margin: 0; padding: 0; }
+.full-wh,
+.full-wrap {
+  height: 320px;
+  margin: 0;
+  padding: 0;
+}
 
-.full-wh { background-color: #eaeaea; font-family: 'arial_rounded_mt_std_regular',sans-serif; display: table; overflow: hidden; width: 100%; }
-.full-wh .full-wrap { display: table-cell; vertical-align: middle; }
+.full-wh {
+  background-color: #eaeaea;
+  font-family: 'arial_rounded_mt_std_regular',sans-serif;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+}
+.full-wh .full-wrap {
+  display: table-cell;
+  vertical-align: middle;
+}
 
-#qqlanding-lang { background-color: transparent; }
-#qqlanding-lang a { outline: none; }
-#qqlanding-lang button { background-color: transparent; color: #eee; }
-#qqlanding-lang button:active, #qqlanding-lang button:hover, #qqlanding-lang button:focus { border-color: transparent; color: #fdc153; }
-#qqlanding-lang button:focus { box-shadow: none; }
-#qqlanding-lang button img { display: inline-block; }
-#qqlanding-lang .dropdown-menu { min-width: 5rem; }
-#qqlanding-lang .dropdown-menu li { display: inline-block; text-align: inherit; font-weight: 400; white-space: nowrap; padding: 0.025rem 0.5rem; width: auto; line-height: 1.2; position: relative; vertical-align: middle; height: 13px; }
+#qqlanding-lang {
+  background-color: transparent;
+}
+#qqlanding-lang a {
+  outline: none;
+}
+#qqlanding-lang button {
+  background-color: transparent;
+  color: #eee;
+}
+#qqlanding-lang button:active, #qqlanding-lang button:hover, #qqlanding-lang button:focus {
+  border-color: transparent;
+  color: #fdc153;
+}
+#qqlanding-lang button:focus {
+  box-shadow: none;
+}
+#qqlanding-lang button img {
+  display: inline-block;
+}
+#qqlanding-lang .dropdown-menu {
+  min-width: 5rem;
+}
+#qqlanding-lang .dropdown-menu li {
+  display: inline-block;
+  text-align: inherit;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 0.025rem 0.5rem;
+  width: auto;
+  line-height: 1.2;
+  position: relative;
+  vertical-align: middle;
+  height: 13px;
+}
 
 /**--Enter site*/
-.qqlanding-sites { line-height: 1.2; /**Site-Info-----*/ /**Enter-site-----*/ }
-.qqlanding-sites .site-top-info, .qqlanding-sites .site-footer-info { border-bottom: 1px solid transparent; padding: 0px 10px; line-height: 1.5; position: relative; }
-.qqlanding-sites .site-top-info #social_media, .qqlanding-sites .site-top-info ul#social_media, .qqlanding-sites .site-footer-info #social_media, .qqlanding-sites .site-footer-info ul#social_media { list-style-type: none; margin: 0; padding: 0; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li, .qqlanding-sites .site-top-info ul#social_media.sm-circle li, .qqlanding-sites .site-footer-info #social_media.sm-circle li, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li { margin-right: 5px; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a, .qqlanding-sites .site-top-info ul#social_media.sm-circle li a, .qqlanding-sites .site-footer-info #social_media.sm-circle li a, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a { background-color: #fff; border-radius: 50%; line-height: 24px; width: 24px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="icon-facebook"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="icon-facebook"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="icon-facebook"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="icon-facebook"] { background-color: #4267b2; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="twitter"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="twitter"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="twitter"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="twitter"] { background-color: #1da1f2; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="instagram"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="instagram"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="instagram"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="instagram"] { background-color: #c32aa3; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="linkedin"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="linkedin"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="linkedin"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="linkedin"] { background-color: #007bb5; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="youtube"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="youtube"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="youtube"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="youtube"] { background-color: #ff0000; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="google-plus"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="google-plus"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="google-plus"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="google-plus"] { background-color: #dd4b39; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="pinterest"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="pinterest"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="pinterest"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="pinterest"] { background-color: #bd081c; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="rss"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="rss"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="rss"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="rss"] { background-color: #FB6405; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="flickr"], .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="flickr"], .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="flickr"], .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="flickr"] { background-color: #f40083; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover i, .qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover i, .qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover i, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover i { color: #fff !important; }
-.qqlanding-sites .site-top-info #social_media.sm-circle li a i, .qqlanding-sites .site-top-info ul#social_media.sm-circle li a i, .qqlanding-sites .site-footer-info #social_media.sm-circle li a i, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a i { color: #222222; }
-.qqlanding-sites .site-top-info #social_media.sm-circle i[class*='fa-'], .qqlanding-sites .site-top-info ul#social_media.sm-circle i[class*='fa-'], .qqlanding-sites .site-footer-info #social_media.sm-circle i[class*='fa-'], .qqlanding-sites .site-footer-info ul#social_media.sm-circle i[class*='fa-'] { font-size: 12.8px; font-size: 0.8rem; }
-.qqlanding-sites .site-top-info #social_media li, .qqlanding-sites .site-top-info ul#social_media li, .qqlanding-sites .site-footer-info #social_media li, .qqlanding-sites .site-footer-info ul#social_media li { display: inline-block; position: relative; padding: 0.45em 0; margin-bottom: 0em; }
-.qqlanding-sites .site-top-info #social_media li a, .qqlanding-sites .site-top-info ul#social_media li a, .qqlanding-sites .site-footer-info #social_media li a, .qqlanding-sites .site-footer-info ul#social_media li a { display: block; line-height: 30px; padding-right: 3px; padding-left: 3px; text-align: center; width: 30px; vertical-align: middle; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
-.qqlanding-sites .site-top-info #social_media li a:hover, .qqlanding-sites .site-top-info ul#social_media li a:hover, .qqlanding-sites .site-footer-info #social_media li a:hover, .qqlanding-sites .site-footer-info ul#social_media li a:hover { background-color: #fff; }
-.qqlanding-sites .site-top-info #social_media li a:hover i[class*="facebook"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="facebook"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="facebook"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="facebook"] { color: #4267b2; }
-.qqlanding-sites .site-top-info #social_media li a:hover i[class*="twitter"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="twitter"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="twitter"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="twitter"] { color: #1da1f2; }
-.qqlanding-sites .site-top-info #social_media li a:hover i[class*="instagram"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="instagram"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="instagram"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="instagram"] { color: #c32aa3; }
-.qqlanding-sites .site-top-info #social_media li a:hover i[class*="linkedin"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="linkedin"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="linkedin"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="linkedin"] { color: #007bb5; }
-.qqlanding-sites .site-top-info #social_media li a:hover i[class*="youtube"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="youtube"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="youtube"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="youtube"] { color: #ff0000; }
-.qqlanding-sites .site-top-info #social_media li a:hover i[class*="google-plus"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="google-plus"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="google-plus"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="google-plus"] { color: #dd4b39; }
-.qqlanding-sites .site-top-info #social_media li a:hover i[class*="pinterest"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="pinterest"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="pinterest"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="pinterest"] { color: #bd081c; }
-.qqlanding-sites .site-top-info #social_media li a:hover i[class*="rss"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="rss"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="rss"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="rss"] { color: #FB6405; }
-.qqlanding-sites .site-top-info #social_media li a:hover i[class*="flickr"], .qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="flickr"], .qqlanding-sites .site-footer-info #social_media li a:hover i[class*="flickr"], .qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="flickr"] { color: #f40083; }
-.qqlanding-sites .site-top-info #social_media li i[class*='fa-'], .qqlanding-sites .site-top-info ul#social_media li i[class*='fa-'], .qqlanding-sites .site-footer-info #social_media li i[class*='fa-'], .qqlanding-sites .site-footer-info ul#social_media li i[class*='fa-'] { font-size: 16.4px; font-size: 1.025rem; color: #fff; }
-.qqlanding-sites .site-footer-info #social_media.sm-circle li a, .qqlanding-sites .site-footer-info ul#social_media.sm-circle li a { line-height: 35px; width: 35px; }
-.qqlanding-sites .btn-entersite { color: #fff !important; }
-.qqlanding-sites .btn-entersite.bg_color_288 { border-color: #02849c; }
-.qqlanding-sites .btn-entersite.bg_color_288:hover, .qqlanding-sites .btn-entersite.bg_color_288:focus { background: #005c6b; border-color: #005c6b; }
-.qqlanding-sites .btn-entersite.bg_color_188 { border-color: #0153ff; }
-.qqlanding-sites .btn-entersite.bg_color_188:hover, .qqlanding-sites .btn-entersite.bg_color_188:focus { background: #002a80; border-color: #002a80; }
-.qqlanding-sites .btn-entersite.bg_color_101 { border-color: #01740F; }
-.qqlanding-sites .btn-entersite.bg_color_101:hover, .qqlanding-sites .btn-entersite.bg_color_101:focus { background: #153317; border-color: #153317; }
-.qqlanding-sites .btn-entersite.bg_color_1x2 { border-color: #015fe7; }
-.qqlanding-sites .btn-entersite.bg_color_1x2:hover, .qqlanding-sites .btn-entersite.bg_color_1x2:focus { background: #1f1f1f; border-color: #1f1f1f; }
-.qqlanding-sites .btn-entersite.bg_color_724 { border-color: #476f54; }
-.qqlanding-sites .btn-entersite.bg_color_724:hover, .qqlanding-sites .btn-entersite.bg_color_724:focus { background: #fdc153; border-color: #fdc153; }
-.qqlanding-sites .btn-entersite.bg_color_fortuna { border-color: #3f0000; }
-.qqlanding-sites .btn-entersite.bg_color_fortuna:hover, .qqlanding-sites .btn-entersite.bg_color_fortuna:focus { background: #c74547; border-color: #c74547; }
-.qqlanding-sites .btn-entersite.bg_color_801 { border-color: #f1392f; }
-.qqlanding-sites .btn-entersite.bg_color_801:hover, .qqlanding-sites .btn-entersite.bg_color_801:focus { background: #005395; border-color: #005395; }
-.qqlanding-sites .btn-entersite.bg_color_882 { border-color: #451465; }
-.qqlanding-sites .btn-entersite.bg_color_882:hover, .qqlanding-sites .btn-entersite.bg_color_882:focus { background: #db026b; border-color: #db026b; }
-.qqlanding-sites .btn-entersite.bg_color_808 { border-color: #da954a; }
-.qqlanding-sites .btn-entersite.bg_color_808:hover, .qqlanding-sites .btn-entersite.bg_color_808:focus { background: #874c00; border-color: #874c00; }
-.qqlanding-sites .btn-entersite.bg_color_828 { border-color: #ec4801; }
-.qqlanding-sites .btn-entersite.bg_color_828:hover, .qqlanding-sites .btn-entersite.bg_color_828:focus { background: #a63201; border-color: #a63201; }
+.qqlanding-sites {
+  line-height: 1.2;
+  /**Site-Info-----*/
+  /**Enter-site-----*/
+}
+.qqlanding-sites .site-top-info,
+.qqlanding-sites .site-footer-info {
+  border-bottom: 1px solid transparent;
+  padding: 0px 10px;
+  line-height: 1.5;
+  position: relative;
+}
+.qqlanding-sites .site-top-info #social_media,
+.qqlanding-sites .site-top-info ul#social_media,
+.qqlanding-sites .site-footer-info #social_media,
+.qqlanding-sites .site-footer-info ul#social_media {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li,
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li,
+.qqlanding-sites .site-footer-info #social_media.sm-circle li,
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li {
+  margin-right: 5px;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a,
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a,
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a,
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a {
+  background-color: #fff;
+  border-radius: 50%;
+  line-height: 24px;
+  width: 24px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="icon-facebook"],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="icon-facebook"],
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="icon-facebook"],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="icon-facebook"] {
+  background-color: #4267b2;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="twitter"],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="twitter"],
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="twitter"],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="twitter"] {
+  background-color: #1da1f2;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="instagram"],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="instagram"],
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="instagram"],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="instagram"] {
+  background-color: #c32aa3;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="linkedin"],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="linkedin"],
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="linkedin"],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="linkedin"] {
+  background-color: #007bb5;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="youtube"],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="youtube"],
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="youtube"],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="youtube"] {
+  background-color: #ff0000;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="google-plus"],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="google-plus"],
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="google-plus"],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="google-plus"] {
+  background-color: #dd4b39;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="pinterest"],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="pinterest"],
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="pinterest"],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="pinterest"] {
+  background-color: #bd081c;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="rss"],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="rss"],
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="rss"],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="rss"] {
+  background-color: #FB6405;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover[class*="flickr"],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover[class*="flickr"],
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover[class*="flickr"],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover[class*="flickr"] {
+  background-color: #f40083;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a:hover i,
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a:hover i,
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a:hover i,
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a:hover i {
+  color: #fff !important;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle li a i,
+.qqlanding-sites .site-top-info ul#social_media.sm-circle li a i,
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a i,
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a i {
+  color: #222222;
+}
+.qqlanding-sites .site-top-info #social_media.sm-circle i[class*='fa-'],
+.qqlanding-sites .site-top-info ul#social_media.sm-circle i[class*='fa-'],
+.qqlanding-sites .site-footer-info #social_media.sm-circle i[class*='fa-'],
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle i[class*='fa-'] {
+  font-size: 12.8px;
+  font-size: 0.8rem;
+}
+.qqlanding-sites .site-top-info #social_media li,
+.qqlanding-sites .site-top-info ul#social_media li,
+.qqlanding-sites .site-footer-info #social_media li,
+.qqlanding-sites .site-footer-info ul#social_media li {
+  display: inline-block;
+  position: relative;
+  padding: 0.45em 0;
+  margin-bottom: 0em;
+}
+.qqlanding-sites .site-top-info #social_media li a,
+.qqlanding-sites .site-top-info ul#social_media li a,
+.qqlanding-sites .site-footer-info #social_media li a,
+.qqlanding-sites .site-footer-info ul#social_media li a {
+  display: block;
+  line-height: 30px;
+  padding-right: 3px;
+  padding-left: 3px;
+  text-align: center;
+  width: 30px;
+  vertical-align: middle;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover,
+.qqlanding-sites .site-top-info ul#social_media li a:hover,
+.qqlanding-sites .site-footer-info #social_media li a:hover,
+.qqlanding-sites .site-footer-info ul#social_media li a:hover {
+  background-color: #fff;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="facebook"],
+.qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="facebook"],
+.qqlanding-sites .site-footer-info #social_media li a:hover i[class*="facebook"],
+.qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="facebook"] {
+  color: #4267b2;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="twitter"],
+.qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="twitter"],
+.qqlanding-sites .site-footer-info #social_media li a:hover i[class*="twitter"],
+.qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="twitter"] {
+  color: #1da1f2;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="instagram"],
+.qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="instagram"],
+.qqlanding-sites .site-footer-info #social_media li a:hover i[class*="instagram"],
+.qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="instagram"] {
+  color: #c32aa3;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="linkedin"],
+.qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="linkedin"],
+.qqlanding-sites .site-footer-info #social_media li a:hover i[class*="linkedin"],
+.qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="linkedin"] {
+  color: #007bb5;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="youtube"],
+.qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="youtube"],
+.qqlanding-sites .site-footer-info #social_media li a:hover i[class*="youtube"],
+.qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="youtube"] {
+  color: #ff0000;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="google-plus"],
+.qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="google-plus"],
+.qqlanding-sites .site-footer-info #social_media li a:hover i[class*="google-plus"],
+.qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="google-plus"] {
+  color: #dd4b39;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="pinterest"],
+.qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="pinterest"],
+.qqlanding-sites .site-footer-info #social_media li a:hover i[class*="pinterest"],
+.qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="pinterest"] {
+  color: #bd081c;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="rss"],
+.qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="rss"],
+.qqlanding-sites .site-footer-info #social_media li a:hover i[class*="rss"],
+.qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="rss"] {
+  color: #FB6405;
+}
+.qqlanding-sites .site-top-info #social_media li a:hover i[class*="flickr"],
+.qqlanding-sites .site-top-info ul#social_media li a:hover i[class*="flickr"],
+.qqlanding-sites .site-footer-info #social_media li a:hover i[class*="flickr"],
+.qqlanding-sites .site-footer-info ul#social_media li a:hover i[class*="flickr"] {
+  color: #f40083;
+}
+.qqlanding-sites .site-top-info #social_media li i[class*='fa-'],
+.qqlanding-sites .site-top-info ul#social_media li i[class*='fa-'],
+.qqlanding-sites .site-footer-info #social_media li i[class*='fa-'],
+.qqlanding-sites .site-footer-info ul#social_media li i[class*='fa-'] {
+  font-size: 16.4px;
+  font-size: 1.025rem;
+  color: #fff;
+}
+.qqlanding-sites .site-footer-info #social_media.sm-circle li a,
+.qqlanding-sites .site-footer-info ul#social_media.sm-circle li a {
+  line-height: 35px;
+  width: 35px;
+}
+.qqlanding-sites .btn-entersite {
+  color: #fff !important;
+}
+.qqlanding-sites .btn-entersite.bg_color_288 {
+  border-color: #02849c;
+}
+.qqlanding-sites .btn-entersite.bg_color_288:hover, .qqlanding-sites .btn-entersite.bg_color_288:focus {
+  background: #005c6b;
+  border-color: #005c6b;
+}
+.qqlanding-sites .btn-entersite.bg_color_188 {
+  border-color: #0153ff;
+}
+.qqlanding-sites .btn-entersite.bg_color_188:hover, .qqlanding-sites .btn-entersite.bg_color_188:focus {
+  background: #002a80;
+  border-color: #002a80;
+}
+.qqlanding-sites .btn-entersite.bg_color_101 {
+  border-color: #01740F;
+}
+.qqlanding-sites .btn-entersite.bg_color_101:hover, .qqlanding-sites .btn-entersite.bg_color_101:focus {
+  background: #153317;
+  border-color: #153317;
+}
+.qqlanding-sites .btn-entersite.bg_color_1x2 {
+  border-color: #015fe7;
+}
+.qqlanding-sites .btn-entersite.bg_color_1x2:hover, .qqlanding-sites .btn-entersite.bg_color_1x2:focus {
+  background: #1f1f1f;
+  border-color: #1f1f1f;
+}
+.qqlanding-sites .btn-entersite.bg_color_724 {
+  border-color: #476f54;
+}
+.qqlanding-sites .btn-entersite.bg_color_724:hover, .qqlanding-sites .btn-entersite.bg_color_724:focus {
+  background: #fdc153;
+  border-color: #fdc153;
+}
+.qqlanding-sites .btn-entersite.bg_color_fortuna {
+  border-color: #3f0000;
+}
+.qqlanding-sites .btn-entersite.bg_color_fortuna:hover, .qqlanding-sites .btn-entersite.bg_color_fortuna:focus {
+  background: #c74547;
+  border-color: #c74547;
+}
+.qqlanding-sites .btn-entersite.bg_color_801 {
+  border-color: #f1392f;
+}
+.qqlanding-sites .btn-entersite.bg_color_801:hover, .qqlanding-sites .btn-entersite.bg_color_801:focus {
+  background: #005395;
+  border-color: #005395;
+}
+.qqlanding-sites .btn-entersite.bg_color_882 {
+  border-color: #451465;
+}
+.qqlanding-sites .btn-entersite.bg_color_882:hover, .qqlanding-sites .btn-entersite.bg_color_882:focus {
+  background: #db026b;
+  border-color: #db026b;
+}
+.qqlanding-sites .btn-entersite.bg_color_808 {
+  border-color: #da954a;
+}
+.qqlanding-sites .btn-entersite.bg_color_808:hover, .qqlanding-sites .btn-entersite.bg_color_808:focus {
+  background: #874c00;
+  border-color: #874c00;
+}
+.qqlanding-sites .btn-entersite.bg_color_828 {
+  border-color: #ec4801;
+}
+.qqlanding-sites .btn-entersite.bg_color_828:hover, .qqlanding-sites .btn-entersite.bg_color_828:focus {
+  background: #a63201;
+  border-color: #a63201;
+}
 
 /**--Providers*/
-.provider-title { position: absolute; top: -12px; background: #e6e6e6; color: #222222; font-size: 14px; font-size: 0.875rem; font-weight: 600; margin: 0; padding: 2px 7px; text-transform: uppercase; }
+.provider-title {
+  position: absolute;
+  top: -12px;
+  background: #e6e6e6;
+  color: #222222;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 2px 7px;
+  text-transform: uppercase;
+}
 
-.provider-item { cursor: pointer; display: inline; float: left; margin-bottom: 3px; }
-.provider-item > i { display: block; font-size: 0; height: 38px; width: 80px; text-indent: -999999px; }
+.provider-item {
+  cursor: pointer;
+  display: inline;
+  float: left;
+  margin-bottom: 3px;
+}
+.provider-item > i {
+  display: block;
+  font-size: 0;
+  height: 38px;
+  width: 80px;
+  text-indent: -999999px;
+}
 
-.provider-group { position: relative; flex-direction: column; flex: auto; display: -ms-flexbox; display: flex; /** prov-cat ----------*/ /**
-* prov-default banks
-*--------------------*/ /**
-* prov-default banks
-*--------------------*/ }
-.provider-group[class*='-category'], .provider-group[class*='-default'] { border: 1px solid #7f7f7f; border-radius: 5px; margin-bottom: 18px; padding: 8px 10px; }
-.provider-group[class*='-license'] .provider-item > i { background: url("../../assets/images/providers/ico_reco-g.png") no-repeat; }
-.provider-group[class*='-license'] .pagcor { background-position: 0 0; width: 140px; }
-.provider-group[class*='-category'] .bet368 { width: 86px; background-position: 3px -302px; }
-.provider-group[class*='-category'] .opus { width: 138px; background-position: 5px -2001px; }
-.provider-group[class*='-category'] .onework { width: 105px; background-position: 3px -1517px; }
-.provider-group[class*='-category'] .gameplay { width: 130px; background-position: 5px -1420px; }
-.provider-group[class*='-category'] .gd { background-position: 5px -960px; }
-.provider-group[class*='-category'] .gp { background-position: 5px -906px; }
-.provider-group[class*='-category'] .allbet { width: 90px; background-position: 5px -1117px; }
-.provider-group[class*='-category'] .ag { width: 90px; background-position: 3px -1317px; }
-.provider-group[class*='-category'] .og { width: 58px; background-position: 5px -1904px; }
-.provider-group[class*='-category'] .royal { width: 90px; background-position: 5px -1218px; }
-.provider-group[class*='-category'] .playtech { width: 105px; background-position: 3px -731px; }
-.provider-group[class*='-category'] .ebet { width: 105px; background-position: -167px -41px; }
-.provider-group[class*='-category'] .spadegaming { width: 150px; background-position: 3px -648px; }
-.provider-group[class*='-category'] .ttg { width: 110px; background-position: 5px -2267px; }
-.provider-group[class*='-category'] .gameos { width: 120px; background-position: 5px -2189px; }
-.provider-group[class*='-category'] .mg { width: 130px; background-position: 3px -2100px; }
-.provider-group[class*='-category'] .betsoft { width: 90px; background-position: 3px -2436px; }
-.provider-group[class*='-category'] .habanero { width: 120px; background-position: 3px -1611px; }
-.provider-group[class*='-category'] .isin4d { background-position: 3px -1706px; }
-.provider-group[class*='-category'] .txbet { background-position: 3px -394px; }
-.provider-group[class*='-category'] .idn { width: 92px; background-position: 3px -806px; }
-.provider-group[class*='-category'] .xo { width: 116px; background-position: 3px -2345px; }
-.provider-group[class*='-category'] .txbet4d { width: 100px; background-position: -158px -144px; }
-.provider-group[class*='-category'] .txbet6d { width: 100px; background-position: -158px -240px; }
-.provider-group[class*='-category'] .lottery { width: 140px; height: 40px; background-position: 3px -160px; }
-.provider-group[class*='-category'] .saba { background-position: 3px -209px; }
-.provider-group[class*='-category'] .ok368 { background-position: -158px -352px; }
-.provider-group[class*='-category'] .pragmaticplay { background-position: -158px -412px; width: 90px; }
-.provider-group[class*='-category'] .thegamingplatform { background-position: -158px -556px; width: 127px; }
-.provider-group[class*='-default'].gray .allbet { width: 90px; background-position: 5px -1066px; }
-.provider-group[class*='-default'].gray .ag { width: 90px; background-position: 3px -1268px; }
-.provider-group[class*='-default'].gray .bet368 { width: 86px; background-position: 3px -256px; }
-.provider-group[class*='-default'].gray .betsoft { width: 90px; background-position: 3px -2392px; }
-.provider-group[class*='-default'].gray .ebet { width: 105px; background-position: -167px 4px; }
-.provider-group[class*='-default'].gray .gameplay { width: 130px; background-position: 5px -1368px; }
-.provider-group[class*='-default'].gray .gd { background-position: 5px -960px; }
-.provider-group[class*='-default'].gray .gp { background-position: 5px -855px; }
-.provider-group[class*='-default'].gray .gameos { width: 120px; background-position: 5px -2189px; }
-.provider-group[class*='-default'].gray .habanero { width: 120px; background-position: 3px -1562px; }
-.provider-group[class*='-default'].gray .isin4d { background-position: 3px -1655px; }
-.provider-group[class*='-default'].gray .idn { width: 92px; background-position: 3px -770px; }
-.provider-group[class*='-default'].gray .lottery { width: 140px; height: 40px; background-position: 3px -117px; }
-.provider-group[class*='-default'].gray .mg { width: 130px; background-position: 3px -2053px; }
-.provider-group[class*='-default'].gray .og { width: 58px; background-position: 5px -1853px; }
-.provider-group[class*='-default'].gray .ok368 { background-position: -158px -291px; }
-.provider-group[class*='-default'].gray .opus { width: 138px; background-position: 5px -1953px; }
-.provider-group[class*='-default'].gray .onework { width: 105px; background-position: 3px -1468px; }
-.provider-group[class*='-default'].gray .playtech { width: 105px; background-position: 3px -693px; }
-.provider-group[class*='-default'].gray .pragmaticplay { background-position: -158px -412px; width: 90px; }
-.provider-group[class*='-default'].gray .royal { width: 90px; background-position: 5px -1167px; }
-.provider-group[class*='-default'].gray .saba { background-position: 3px -209px; }
-.provider-group[class*='-default'].gray .spadegaming { width: 150px; background-position: 3px -600px; }
-.provider-group[class*='-default'].gray .ttg { width: 110px; background-position: 5px -2231px; }
-.provider-group[class*='-default'].gray .txbet { background-position: 3px -351px; }
-.provider-group[class*='-default'].gray .txbet4d { width: 100px; background-position: -158px -95px; }
-.provider-group[class*='-default'].gray .txbet6d { width: 100px; background-position: -158px -192px; }
-.provider-group[class*='-default'].gray .thegamingplatform { background-position: -158px -506px; width: 125px; }
-.provider-group[class*='-default'].gray .xo { width: 116px; background-position: 3px -2306px; }
-.provider-group[class*='-default'].white .allbet { width: 90px; background-position: 5px -1066px; }
-.provider-group[class*='-default'].white .ag { width: 90px; background-position: 3px -1268px; }
-.provider-group[class*='-default'].white .bet368 { width: 86px; background-position: 3px -301px; }
-.provider-group[class*='-default'].white .betsoft { width: 90px; background-position: 3px -2392px; }
-.provider-group[class*='-default'].white .ebet { width: 98px; background-position: -160px -5px; }
-.provider-group[class*='-default'].white .gameplay { width: 130px; background-position: 5px -1368px; }
-.provider-group[class*='-default'].white .gd { background-position: 5px -960px; }
-.provider-group[class*='-default'].white .gp { width: 95px; background-position: 5px -855px; }
-.provider-group[class*='-default'].white .gameos { width: 120px; background-position: 5px -2189px; }
-.provider-group[class*='-default'].white .habanero { width: 120px; background-position: 3px -1562px; }
-.provider-group[class*='-default'].white .isin4d { background-position: 3px -1655px; }
-.provider-group[class*='-default'].white .idn { width: 92px; background-position: 3px -770px; }
-.provider-group[class*='-default'].white .lottery { width: 140px; height: 40px; background-position: 3px -117px; }
-.provider-group[class*='-default'].white .mg { width: 130px; background-position: 3px -2053px; }
-.provider-group[class*='-default'].white .og { width: 58px; background-position: 5px -1853px; }
-.provider-group[class*='-default'].white .ok368 { width: 70px; background-position: -173px -250px; }
-.provider-group[class*='-default'].white .opus { width: 138px; background-position: 5px -1953px; }
-.provider-group[class*='-default'].white .onework { width: 105px; background-position: 3px -1468px; }
-.provider-group[class*='-default'].white .playtech { width: 105px; background-position: 3px -693px; }
-.provider-group[class*='-default'].white .pragmaticplay { background-position: -158px -353px; width: 90px; }
-.provider-group[class*='-default'].white .royal { width: 90px; background-position: 5px -1167px; }
-.provider-group[class*='-default'].white .saba { background-position: 3px -209px; }
-.provider-group[class*='-default'].white .spadegaming { width: 150px; background-position: 3px -600px; }
-.provider-group[class*='-default'].white .ttg { width: 110px; background-position: 5px -2231px; }
-.provider-group[class*='-default'].white .txbet { width: 50px; background-position: -3px -395px; }
-.provider-group[class*='-default'].white .txbet4d { width: 100px; background-position: -158px -95px; }
-.provider-group[class*='-default'].white .txbet6d { width: 100px; background-position: -158px -171px; }
-.provider-group[class*='-default'].white .thegamingplatform { background-position: -158px -457px; width: 125px; }
-.provider-group[class*='-default'].white .xo { width: 116px; background-position: 3px -2306px; }
-.provider-group[class*='-banks'] .provider-item > i { background: url("../../assets/images/providers/ico_bank.png") no-repeat; }
-.provider-group[class*='-banks'] .bank-indo .provider-item .bank_bri { background-position: 3px -406px; width: 115px; }
-.provider-group[class*='-banks'] .bank-indo .provider-item .bca { background-position: 3px -308px; width: 85px; }
-.provider-group[class*='-banks'] .bank-indo .provider-item .bni { background-position: 3px -188px; width: 83px; }
-.provider-group[class*='-banks'] .bank-indo .provider-item .danamon { background-position: 3px -73px; width: 135px; }
-.provider-group[class*='-banks'] .bank-indo .provider-item .mandiri { background-position: 3px -495px; width: 98px; }
-.provider-group[class*='-banks'] .bank-malaysia .affinbank { background-position: 3px -3604px; width: 125px; }
-.provider-group[class*='-banks'] .bank-malaysia .alliance_bank { background-position: 3px -3688px; width: 120px; }
-.provider-group[class*='-banks'] .bank-malaysia .ambank_group { background-position: 3px -3773px; width: 120px; }
-.provider-group[class*='-banks'] .bank-malaysia .bankrakyat { background-position: 3px -3856px; width: 135px; }
-.provider-group[class*='-banks'] .bank-malaysia .citibank { background-position: 3px -3940px; width: 120px; }
-.provider-group[class*='-banks'] .bank-malaysia .hongleong_bank { background-position: 3px -4023px; width: 127px; }
-.provider-group[class*='-banks'] .bank-malaysia .hsbc { background-position: 3px -4107px; width: 120px; }
-.provider-group[class*='-banks'] .bank-malaysia .ocbc_bank { background-position: 3px -4190px; width: 120px; }
-.provider-group[class*='-banks'] .bank-malaysia .rhb { background-position: 3px -4277px; width: 90px; }
-.provider-group[class*='-banks'] .bank-malaysia .uob { background-position: 3px -4361px; width: 98px; }
-.provider-group[class*='-banks'] .bank-thailand .bangkok_bank { background-position: 3px -601px; width: 125px; }
-.provider-group[class*='-banks'] .bank-thailand .gsb { background-position: 3px -688px; width: 102px; }
-.provider-group[class*='-banks'] .bank-thailand .kasikorn_bank { background-position: 3px -775px; width: 123px; }
-.provider-group[class*='-banks'] .bank-thailand .krungsri { background-position: 3px -863px; width: 94px; }
-.provider-group[class*='-banks'] .bank-thailand .krungthai_bank { background-position: 3px -950px; width: 133px; }
-.provider-group[class*='-banks'] .bank-thailand .scb { background-position: 3px -1040px; width: 90px; }
-.provider-group[class*='-banks'] .bank-vietnam .acb { background-position: 3px -3016px; width: 70px; }
-.provider-group[class*='-banks'] .bank-vietnam .bidv { background-position: 3px -3100px; width: 108px; }
-.provider-group[class*='-banks'] .bank-vietnam .donga { background-position: 3px -3185px; width: 125px; }
-.provider-group[class*='-banks'] .bank-vietnam .sacombank { background-position: 3px -3265px; width: 128px; }
-.provider-group[class*='-banks'] .bank-vietnam .techcombank { background-position: 3px -3350px; width: 130px; }
-.provider-group[class*='-banks'] .bank-vietnam .vietinbank { background-position: 3px -3434px; width: 127px; }
-.provider-group[class*='-banks'] .bank-vietnam .vietcombank { background-position: 3px -3520px; width: 120px; }
-.provider-group[class*='-banks'] .bank-china .bos { background-position: 3px -2183px; width: 97px; }
-.provider-group[class*='-banks'] .bank-china .ibank { background-position: 3px -1305px; width: 115px; }
-.provider-group[class*='-banks'] .bank-china .spd_bank { background-position: 3px -1392px; width: 109px; }
-.provider-group[class*='-banks'] .bank-china .ccbank { background-position: 3px -1480px; width: 120px; }
-.provider-group[class*='-banks'] .bank-china .b_beijing { background-position: 3px -1568px; width: 125px; }
-.provider-group[class*='-banks'] .bank-china .huaxia_bank { background-position: 3px -1655px; width: 127px; }
-.provider-group[class*='-banks'] .bank-china .pinganbank { background-position: 3px -1745px; width: 131px; }
-.provider-group[class*='-banks'] .bank-china .maybank { background-position: 3px -1840px; width: 120px; }
-.provider-group[class*='-banks'] .bank-china .public_bank { background-position: 3px -1928px; width: 120px; }
-.provider-group[class*='-banks'] .bank-china .cimb { background-position: 3px -2013px; width: 118px; }
-.provider-group[class*='-banks'] .bank-china .ce_bank { background-position: 3px -2095px; width: 130px; }
-.provider-group[class*='-banks'] .bank-china .b_china { background-position: 3px -2183px; width: 97px; }
-.provider-group[class*='-banks'] .bank-china .icbc { background-position: 3px -2268px; width: 81px; }
-.provider-group[class*='-banks'] .bank-china .abc { background-position: 3px -2350px; width: 127px; }
-.provider-group[class*='-banks'] .bank-china .cc_bank { background-position: 3px -2438px; width: 127px; }
-.provider-group[class*='-banks'] .bank-china .cm_bank { background-position: 3px -2520px; width: 101px; }
-.provider-group[class*='-banks'] .bank-china .bank_com { background-position: 3px -2600px; width: 125px; }
-.provider-group[class*='-banks'] .bank-china .cminshing_bank { background-position: 3px -2680px; width: 130px; }
-.provider-group[class*='-banks'] .bank-china .crm_bank { background-position: 3px -2765px; width: 130px; }
-.provider-group[class*='-banks'] .bank-china .psbchina { background-position: 3px -2848px; width: 130px; }
-.provider-group[class*='-network'] .provider-item > i { background: url("../../assets/images/providers/ico_net.png") no-repeat; }
-.provider-group[class*='-network'] .network-indo .provider-item { margin-bottom: 25px; }
-.provider-group[class*='-network'] .network-indo .provider-item .sctv { background-position: -16px -10px; width: 125px; height: 41px; }
-.provider-group[class*='-network'] .network-indo .provider-item .orangetv { background-position: -11px -68px; width: 160px; height: 41px; }
-.provider-group[class*='-network'] .network-indo .provider-item .k_vision { background-position: -8px -133px; width: 210px; height: 41px; }
-.provider-group[class*='-network'] .network-indo .provider-item .nexmedia { background-position: -14px -195px; width: 119px; height: 41px; }
-.provider-group[class*='-network'] .network-indo .provider-item .indovision { background-position: -16px -264px; width: 90px; height: 41px; }
-.provider-group[class*='-network'] .network-indo .provider-item .supersoccer { background-position: -16px -338px; width: 138px; height: 41px; }
-.provider-group[class*='-network'] .network-indo .provider-item .fox_sports { background-position: -16px -400px; width: 89px; height: 55px; }
-.provider-group[class*='-network'] .network-malaysia .provider-item { margin-bottom: 25px; }
-.provider-group[class*='-network'] .network-malaysia .provider-item .astro { background-position: -16px -477px; width: 89px; height: 41px; }
-.provider-group[class*='-network'] .network-thailand .provider-item { margin-bottom: 25px; }
-.provider-group[class*='-network'] .network-thailand .provider-item .pptv_th { background-position: -16px -538px; width: 89px; height: 41px; }
-.provider-group[class*='-network'] .network-thailand .provider-item .truev_th { background-position: -16px -588px; width: 130px; height: 41px; }
-.provider-group[class*='-network'] .network-vietnam .provider-item { margin-bottom: 25px; }
-.provider-group[class*='-network'] .network-vietnam .provider-item .vn_tv { background-position: -16px -650px; width: 95px; height: 45px; }
-.provider-group[class*='-network'] .network-vietnam .provider-item .kplus { background-position: -16px -723px; width: 65px; height: 45px; }
+.provider-group {
+  position: relative;
+  flex-direction: column;
+  flex: auto;
+  display: -ms-flexbox;
+  display: flex;
+  /**
+   * prov-cat
+   *----------*/
+  /**
+  * prov-default banks
+  *--------------------*/
+  /**
+  * prov-default banks
+  *--------------------*/
+}
+.provider-group[class*='-category'], .provider-group[class*='-default'] {
+  border: 1px solid #7f7f7f;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  padding: 8px 10px;
+}
+.provider-group[class*='-license'] .provider-item > i {
+  background: url("../../assets/images/providers/ico_reco-g.png") no-repeat;
+}
+.provider-group[class*='-license'] .pagcor {
+  background-position: 0 0;
+  width: 140px;
+}
+.provider-group[class*='-category'] .bet368 {
+  width: 86px;
+  background-position: 3px -302px;
+}
+.provider-group[class*='-category'] .opus {
+  width: 138px;
+  background-position: 5px -2001px;
+}
+.provider-group[class*='-category'] .onework {
+  width: 105px;
+  background-position: 3px -1517px;
+}
+.provider-group[class*='-category'] .gameplay {
+  width: 130px;
+  background-position: 5px -1420px;
+}
+.provider-group[class*='-category'] .gd {
+  background-position: 5px -960px;
+}
+.provider-group[class*='-category'] .gp {
+  background-position: 5px -906px;
+}
+.provider-group[class*='-category'] .allbet {
+  width: 90px;
+  background-position: 5px -1117px;
+}
+.provider-group[class*='-category'] .ag {
+  width: 90px;
+  background-position: 3px -1317px;
+}
+.provider-group[class*='-category'] .og {
+  width: 58px;
+  background-position: 5px -1904px;
+}
+.provider-group[class*='-category'] .royal {
+  width: 90px;
+  background-position: 5px -1218px;
+}
+.provider-group[class*='-category'] .playtech {
+  width: 105px;
+  background-position: 3px -731px;
+}
+.provider-group[class*='-category'] .ebet {
+  width: 105px;
+  background-position: -167px -41px;
+}
+.provider-group[class*='-category'] .spadegaming {
+  width: 150px;
+  background-position: 3px -648px;
+}
+.provider-group[class*='-category'] .ttg {
+  width: 110px;
+  background-position: 5px -2267px;
+}
+.provider-group[class*='-category'] .gameos {
+  width: 120px;
+  background-position: 5px -2189px;
+}
+.provider-group[class*='-category'] .mg {
+  width: 130px;
+  background-position: 3px -2100px;
+}
+.provider-group[class*='-category'] .betsoft {
+  width: 90px;
+  background-position: 3px -2436px;
+}
+.provider-group[class*='-category'] .habanero {
+  width: 120px;
+  background-position: 3px -1611px;
+}
+.provider-group[class*='-category'] .isin4d {
+  background-position: 3px -1706px;
+}
+.provider-group[class*='-category'] .txbet {
+  background-position: 3px -394px;
+}
+.provider-group[class*='-category'] .idn {
+  width: 92px;
+  background-position: 3px -806px;
+}
+.provider-group[class*='-category'] .xo {
+  width: 116px;
+  background-position: 3px -2345px;
+}
+.provider-group[class*='-category'] .txbet4d {
+  width: 100px;
+  background-position: -158px -144px;
+}
+.provider-group[class*='-category'] .txbet6d {
+  width: 100px;
+  background-position: -158px -240px;
+}
+.provider-group[class*='-category'] .lottery {
+  width: 140px;
+  height: 40px;
+  background-position: 3px -160px;
+}
+.provider-group[class*='-category'] .saba {
+  background-position: 3px -209px;
+}
+.provider-group[class*='-category'] .ok368 {
+  background-position: -158px -352px;
+}
+.provider-group[class*='-category'] .pragmaticplay {
+  background-position: -158px -412px;
+  width: 90px;
+}
+.provider-group[class*='-category'] .thegamingplatform {
+  background-position: -158px -556px;
+  width: 127px;
+}
+.provider-group[class*='-default'].gray .allbet {
+  width: 90px;
+  background-position: 5px -1066px;
+}
+.provider-group[class*='-default'].gray .ag {
+  width: 90px;
+  background-position: 3px -1268px;
+}
+.provider-group[class*='-default'].gray .bet368 {
+  width: 86px;
+  background-position: 3px -256px;
+}
+.provider-group[class*='-default'].gray .betsoft {
+  width: 90px;
+  background-position: 3px -2392px;
+}
+.provider-group[class*='-default'].gray .ebet {
+  width: 105px;
+  background-position: -167px 4px;
+}
+.provider-group[class*='-default'].gray .gameplay {
+  width: 130px;
+  background-position: 5px -1368px;
+}
+.provider-group[class*='-default'].gray .gd {
+  background-position: 5px -960px;
+}
+.provider-group[class*='-default'].gray .gp {
+  background-position: 5px -855px;
+}
+.provider-group[class*='-default'].gray .gameos {
+  width: 120px;
+  background-position: 5px -2189px;
+}
+.provider-group[class*='-default'].gray .habanero {
+  width: 120px;
+  background-position: 3px -1562px;
+}
+.provider-group[class*='-default'].gray .isin4d {
+  background-position: 3px -1655px;
+}
+.provider-group[class*='-default'].gray .idn {
+  width: 92px;
+  background-position: 3px -770px;
+}
+.provider-group[class*='-default'].gray .lottery {
+  width: 140px;
+  height: 40px;
+  background-position: 3px -117px;
+}
+.provider-group[class*='-default'].gray .mg {
+  width: 130px;
+  background-position: 3px -2053px;
+}
+.provider-group[class*='-default'].gray .og {
+  width: 58px;
+  background-position: 5px -1853px;
+}
+.provider-group[class*='-default'].gray .ok368 {
+  background-position: -158px -291px;
+}
+.provider-group[class*='-default'].gray .opus {
+  width: 138px;
+  background-position: 5px -1953px;
+}
+.provider-group[class*='-default'].gray .onework {
+  width: 105px;
+  background-position: 3px -1468px;
+}
+.provider-group[class*='-default'].gray .playtech {
+  width: 105px;
+  background-position: 3px -693px;
+}
+.provider-group[class*='-default'].gray .pragmaticplay {
+  background-position: -158px -412px;
+  width: 90px;
+}
+.provider-group[class*='-default'].gray .royal {
+  width: 90px;
+  background-position: 5px -1167px;
+}
+.provider-group[class*='-default'].gray .saba {
+  background-position: 3px -209px;
+}
+.provider-group[class*='-default'].gray .spadegaming {
+  width: 150px;
+  background-position: 3px -600px;
+}
+.provider-group[class*='-default'].gray .ttg {
+  width: 110px;
+  background-position: 5px -2231px;
+}
+.provider-group[class*='-default'].gray .txbet {
+  background-position: 3px -351px;
+}
+.provider-group[class*='-default'].gray .txbet4d {
+  width: 100px;
+  background-position: -158px -95px;
+}
+.provider-group[class*='-default'].gray .txbet6d {
+  width: 100px;
+  background-position: -158px -192px;
+}
+.provider-group[class*='-default'].gray .thegamingplatform {
+  background-position: -158px -506px;
+  width: 125px;
+}
+.provider-group[class*='-default'].gray .xo {
+  width: 116px;
+  background-position: 3px -2306px;
+}
+.provider-group[class*='-default'].white .allbet {
+  width: 90px;
+  background-position: 5px -1066px;
+}
+.provider-group[class*='-default'].white .ag {
+  width: 90px;
+  background-position: 3px -1268px;
+}
+.provider-group[class*='-default'].white .bet368 {
+  width: 86px;
+  background-position: 3px -301px;
+}
+.provider-group[class*='-default'].white .betsoft {
+  width: 90px;
+  background-position: 3px -2392px;
+}
+.provider-group[class*='-default'].white .ebet {
+  width: 98px;
+  background-position: -160px -5px;
+}
+.provider-group[class*='-default'].white .gameplay {
+  width: 130px;
+  background-position: 5px -1368px;
+}
+.provider-group[class*='-default'].white .gd {
+  background-position: 5px -960px;
+}
+.provider-group[class*='-default'].white .gp {
+  width: 95px;
+  background-position: 5px -855px;
+}
+.provider-group[class*='-default'].white .gameos {
+  width: 120px;
+  background-position: 5px -2189px;
+}
+.provider-group[class*='-default'].white .habanero {
+  width: 120px;
+  background-position: 3px -1562px;
+}
+.provider-group[class*='-default'].white .isin4d {
+  background-position: 3px -1655px;
+}
+.provider-group[class*='-default'].white .idn {
+  width: 92px;
+  background-position: 3px -770px;
+}
+.provider-group[class*='-default'].white .lottery {
+  width: 140px;
+  height: 40px;
+  background-position: 3px -117px;
+}
+.provider-group[class*='-default'].white .mg {
+  width: 130px;
+  background-position: 3px -2053px;
+}
+.provider-group[class*='-default'].white .og {
+  width: 58px;
+  background-position: 5px -1853px;
+}
+.provider-group[class*='-default'].white .ok368 {
+  width: 70px;
+  background-position: -173px -250px;
+}
+.provider-group[class*='-default'].white .opus {
+  width: 138px;
+  background-position: 5px -1953px;
+}
+.provider-group[class*='-default'].white .onework {
+  width: 105px;
+  background-position: 3px -1468px;
+}
+.provider-group[class*='-default'].white .playtech {
+  width: 105px;
+  background-position: 3px -693px;
+}
+.provider-group[class*='-default'].white .pragmaticplay {
+  background-position: -158px -353px;
+  width: 90px;
+}
+.provider-group[class*='-default'].white .royal {
+  width: 90px;
+  background-position: 5px -1167px;
+}
+.provider-group[class*='-default'].white .saba {
+  background-position: 3px -209px;
+}
+.provider-group[class*='-default'].white .spadegaming {
+  width: 150px;
+  background-position: 3px -600px;
+}
+.provider-group[class*='-default'].white .ttg {
+  width: 110px;
+  background-position: 5px -2231px;
+}
+.provider-group[class*='-default'].white .txbet {
+  width: 50px;
+  background-position: -3px -395px;
+}
+.provider-group[class*='-default'].white .txbet4d {
+  width: 100px;
+  background-position: -158px -95px;
+}
+.provider-group[class*='-default'].white .txbet6d {
+  width: 100px;
+  background-position: -158px -171px;
+}
+.provider-group[class*='-default'].white .thegamingplatform {
+  background-position: -158px -457px;
+  width: 125px;
+}
+.provider-group[class*='-default'].white .xo {
+  width: 116px;
+  background-position: 3px -2306px;
+}
+.provider-group[class*='-banks'] .provider-item > i {
+  background: url("../../assets/images/providers/ico_bank.png") no-repeat;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .bank_bri {
+  background-position: 3px -406px;
+  width: 115px;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .bca {
+  background-position: 3px -308px;
+  width: 85px;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .bni {
+  background-position: 3px -188px;
+  width: 83px;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .danamon {
+  background-position: 3px -73px;
+  width: 135px;
+}
+.provider-group[class*='-banks'] .bank-indo .provider-item .mandiri {
+  background-position: 3px -495px;
+  width: 98px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .affinbank {
+  background-position: 3px -3604px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .alliance_bank {
+  background-position: 3px -3688px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .ambank_group {
+  background-position: 3px -3773px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .bankrakyat {
+  background-position: 3px -3856px;
+  width: 135px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .citibank {
+  background-position: 3px -3940px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .hongleong_bank {
+  background-position: 3px -4023px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .hsbc {
+  background-position: 3px -4107px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .ocbc_bank {
+  background-position: 3px -4190px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .rhb {
+  background-position: 3px -4277px;
+  width: 90px;
+}
+.provider-group[class*='-banks'] .bank-malaysia .uob {
+  background-position: 3px -4361px;
+  width: 98px;
+}
+.provider-group[class*='-banks'] .bank-thailand .bangkok_bank {
+  background-position: 3px -601px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-thailand .gsb {
+  background-position: 3px -688px;
+  width: 102px;
+}
+.provider-group[class*='-banks'] .bank-thailand .kasikorn_bank {
+  background-position: 3px -775px;
+  width: 123px;
+}
+.provider-group[class*='-banks'] .bank-thailand .krungsri {
+  background-position: 3px -863px;
+  width: 94px;
+}
+.provider-group[class*='-banks'] .bank-thailand .krungthai_bank {
+  background-position: 3px -950px;
+  width: 133px;
+}
+.provider-group[class*='-banks'] .bank-thailand .scb {
+  background-position: 3px -1040px;
+  width: 90px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .acb {
+  background-position: 3px -3016px;
+  width: 70px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .bidv {
+  background-position: 3px -3100px;
+  width: 108px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .donga {
+  background-position: 3px -3185px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .sacombank {
+  background-position: 3px -3265px;
+  width: 128px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .techcombank {
+  background-position: 3px -3350px;
+  width: 130px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .vietinbank {
+  background-position: 3px -3434px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-vietnam .vietcombank {
+  background-position: 3px -3520px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-china .bos {
+  background-position: 3px -2183px;
+  width: 97px;
+}
+.provider-group[class*='-banks'] .bank-china .ibank {
+  background-position: 3px -1305px;
+  width: 115px;
+}
+.provider-group[class*='-banks'] .bank-china .spd_bank {
+  background-position: 3px -1392px;
+  width: 109px;
+}
+.provider-group[class*='-banks'] .bank-china .ccbank {
+  background-position: 3px -1480px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-china .b_beijing {
+  background-position: 3px -1568px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-china .huaxia_bank {
+  background-position: 3px -1655px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-china .pinganbank {
+  background-position: 3px -1745px;
+  width: 131px;
+}
+.provider-group[class*='-banks'] .bank-china .maybank {
+  background-position: 3px -1840px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-china .public_bank {
+  background-position: 3px -1928px;
+  width: 120px;
+}
+.provider-group[class*='-banks'] .bank-china .cimb {
+  background-position: 3px -2013px;
+  width: 118px;
+}
+.provider-group[class*='-banks'] .bank-china .ce_bank {
+  background-position: 3px -2095px;
+  width: 130px;
+}
+.provider-group[class*='-banks'] .bank-china .b_china {
+  background-position: 3px -2183px;
+  width: 97px;
+}
+.provider-group[class*='-banks'] .bank-china .icbc {
+  background-position: 3px -2268px;
+  width: 81px;
+}
+.provider-group[class*='-banks'] .bank-china .abc {
+  background-position: 3px -2350px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-china .cc_bank {
+  background-position: 3px -2438px;
+  width: 127px;
+}
+.provider-group[class*='-banks'] .bank-china .cm_bank {
+  background-position: 3px -2520px;
+  width: 101px;
+}
+.provider-group[class*='-banks'] .bank-china .bank_com {
+  background-position: 3px -2600px;
+  width: 125px;
+}
+.provider-group[class*='-banks'] .bank-china .cminshing_bank {
+  background-position: 3px -2680px;
+  width: 130px;
+}
+.provider-group[class*='-banks'] .bank-china .crm_bank {
+  background-position: 3px -2765px;
+  width: 130px;
+}
+.provider-group[class*='-banks'] .bank-china .psbchina {
+  background-position: 3px -2848px;
+  width: 130px;
+}
+.provider-group[class*='-network'] .provider-item > i {
+  background: url("../../assets/images/providers/ico_net.png") no-repeat;
+}
+.provider-group[class*='-network'] .network-indo .provider-item {
+  margin-bottom: 25px;
+}
+.provider-group[class*='-network'] .network-indo .provider-item .sctv {
+  background-position: -16px -10px;
+  width: 125px;
+  height: 41px;
+}
+.provider-group[class*='-network'] .network-indo .provider-item .orangetv {
+  background-position: -11px -68px;
+  width: 160px;
+  height: 41px;
+}
+.provider-group[class*='-network'] .network-indo .provider-item .k_vision {
+  background-position: -8px -133px;
+  width: 210px;
+  height: 41px;
+}
+.provider-group[class*='-network'] .network-indo .provider-item .nexmedia {
+  background-position: -14px -195px;
+  width: 119px;
+  height: 41px;
+}
+.provider-group[class*='-network'] .network-indo .provider-item .indovision {
+  background-position: -16px -264px;
+  width: 90px;
+  height: 41px;
+}
+.provider-group[class*='-network'] .network-indo .provider-item .supersoccer {
+  background-position: -16px -338px;
+  width: 138px;
+  height: 41px;
+}
+.provider-group[class*='-network'] .network-indo .provider-item .fox_sports {
+  background-position: -16px -400px;
+  width: 89px;
+  height: 55px;
+}
+.provider-group[class*='-network'] .network-malaysia .provider-item {
+  margin-bottom: 25px;
+}
+.provider-group[class*='-network'] .network-malaysia .provider-item .astro {
+  background-position: -16px -477px;
+  width: 89px;
+  height: 41px;
+}
+.provider-group[class*='-network'] .network-thailand .provider-item {
+  margin-bottom: 25px;
+}
+.provider-group[class*='-network'] .network-thailand .provider-item .pptv_th {
+  background-position: -16px -538px;
+  width: 89px;
+  height: 41px;
+}
+.provider-group[class*='-network'] .network-thailand .provider-item .truev_th {
+  background-position: -16px -588px;
+  width: 130px;
+  height: 41px;
+}
+.provider-group[class*='-network'] .network-vietnam .provider-item {
+  margin-bottom: 25px;
+}
+.provider-group[class*='-network'] .network-vietnam .provider-item .vn_tv {
+  background-position: -16px -650px;
+  width: 95px;
+  height: 45px;
+}
+.provider-group[class*='-network'] .network-vietnam .provider-item .kplus {
+  background-position: -16px -723px;
+  width: 65px;
+  height: 45px;
+}
+
+.qqlanding-player-container {
+  margin-bottom: 10px;
+}
+
+.qqlanding-player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+}
+.qqlanding-player iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.qqlanding-player video {
+  object-fit: cover;
+  height: 100%;
+}
 
 /*# sourceMappingURL=__assets.css.map */

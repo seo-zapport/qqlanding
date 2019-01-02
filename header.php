@@ -18,7 +18,6 @@ if ( ! defined('ABSPATH')) exit; ?>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
 <div id="page" class="site container<?php echo ( get_field( 'th_layout', 'option' ) == 'wide' ) ? '-full qqland-site-full' : ' qqland-site-box'; ?>">
 	<?php if ( th_layout() === 'box' ): ?>
 		<div class="row">

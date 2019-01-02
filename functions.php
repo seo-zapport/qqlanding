@@ -115,6 +115,8 @@ add_action( 'after_setup_theme', 'qqlanding_content_width', 0 );
  */
 function qqlanding_scripts() {
 
+	$match_timer = get_field( 'table_match_timer', 'option' );
+
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.css', 'v4.1.1', true);
 
 	wp_enqueue_style( 'fontawesome-css', get_template_directory_uri() . '/assets/css/fontawesome-all.css', 'v5.0.9', true);
@@ -141,25 +143,27 @@ function qqlanding_scripts() {
 
 
 
-	if ( is_page_template( 'template-videos.php' ) ) {
+	if ( is_page_template( 'template-page.php' ) ) {
 		wp_register_style( 'flipclock-style', get_template_directory_uri() . '/assets/css/flipclock.css', array() , '0.0.1', 'all' );
 		wp_enqueue_style( 'flipclock-style' );
 
 		wp_enqueue_style( 'qqlanding-videos', get_template_directory_uri() . '/assets/css/__template_videos.css', 'v0.0.1', true );
-		wp_register_script( 'qqlanding-page-video', get_template_directory_uri() . '/assets/js/qqlanding_video.js', array('jquery'), 'v0.1.1', true );
+		wp_register_script( 'qqlanding-page-video', get_template_directory_uri() . '/assets/js/qqlanding-front-script.js', array('jquery'), 'v0.1.1', true );
 		wp_enqueue_script( 'qqlanding-page-video' );
+		wp_localize_script( 'qqlanding-page-video', 'ajax_post', array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'noposts' => __('No older posts found', 'qqLanding'),
+		) );
 
 		wp_register_script( 'flipclock-script', get_template_directory_uri() . '/assets/js/flipclock.js', array('jquery'), '0.0.1', true);
 		wp_enqueue_script( 'flipclock-script' );
 
-		wp_enqueue_script( 'cpt-script', get_template_directory_uri() . '/assets/js/qqlanding_cpt.js', array('jquery'), 'v0.1.1', true );
-		wp_localize_script( 'cpt-script', 'ajax_post', array(
-			'ajaxurl' => admin_url( 'admin-ajax.php' ),
-			'noposts' => __('No older posts found', 'qqLanding'),
-		) );
+		if ( $match_timer['table_match_display_style'] == 'text' ) {
+			wp_register_script( 'countdown-script', get_template_directory_uri() . '/assets/js/jquery.countdown.min.js', array('jquery'), '0.0.1', true);
+			wp_enqueue_script( 'countdown-script' );
+		}
 	}
 	
-
 	//wp_enqueue_script( 'qqlanding-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'qqlanding-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -181,34 +185,16 @@ require get_template_directory() . '/inc/wp_menu_nav.php';
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Admin Functions.
- */
-require get_template_directory() . '/inc/template-admin.php';
-
-/**
- * Admin Functions.
- */
-require get_template_directory() . '/inc/admin-template/template-enqueue.php';
-
-/**
- * Admin Videos Functions.
- */
-require get_template_directory() . '/inc/admin-template/videos.php';
-
-/**
- * Admin Matches Functions.
- */
-require get_template_directory() . '/inc/admin-template/matches.php';
-
-/**
- * Slider Functions.
- */
-require get_template_directory() . '/inc/template-slider.php';
-
-/**
  * Slider Matches Functions.
  */
 require get_template_directory() . '/inc/admin-slider/slider.php';
+
+/**
+ * Matches Functions.
+ */
+//require get_template_directory() . '/inc/admin-video/qqvideo.php';
+require get_template_directory() . '/inc/admin-table/qqtable.php';
+
 
 /**
  * Custom template tags for this theme.

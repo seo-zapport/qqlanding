@@ -13,14 +13,14 @@ if ( ! defined('ABSPATH')) exit;
 function more_post_ajax(){
 
 	//global $post;
-
+	$card_settings = get_field( 'video_cards_settings', 'option' ); //Card Setting
     $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
     $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
     $off = (isset($_POST['off'])) ? $_POST['off'] : 3;
     header("Content-Type: text/html");
     $args = array(
-    	'post_type' 		=> 'video',
-    	'post_status'		=> array('post','publish'),
+    	'post_type' 		=> 'aiovg_videos',
+    	'post_status'		=> 'publish',
     	'posts_per_page'	=> $ppp,
     	'offset'    		=> $off,
     	'paged'				=> $page
@@ -46,9 +46,13 @@ function more_post_ajax(){
 					<div class="vid-img-wrap">
 						<a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank">
 							<span id="vid-oflow"><i class="far fa-play-circle fa-7x"></i></span>
-							<?php if ( has_post_thumbnail()) :
-								the_post_thumbnail( 'fp-featured', array('class' => 'img-fluid vid-img') );
-							else : ?>
+							<?php 
+							// if ( has_post_thumbnail()) :
+								// the_post_thumbnail( 'fp-featured', array('class' => 'img-fluid vid-img') );
+							$image = get_post_meta( get_the_ID() , 'image', true );
+							if ( $image ) : ?>
+								<img src="<?php echo $image; ?>" class="img-fluid vid-img">
+							<?php else : ?>
 								<img src="<?php echo get_first_image(); ?>" class="img-fluid vid-img">
 							<?php endif; ?>
 						</a>
@@ -58,7 +62,13 @@ function more_post_ajax(){
 							<h3 class="vid-title"><a href="<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a></h3>
 						</div>
 						<div class="vid-footer">
-							<i class="far fa-clock"></i><small class="muted"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></small>
+							<?php if ( $card_settings['_showhide_time'] == true ): ?>
+								<span class="vid-clock"><i class="far fa-clock"></i><small class="muted"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></small></span>
+							<?php endif; ?>
+							<?php if ( $card_settings['_showhide_views'] == true ): ?>
+								<span class="float-right vid-views"><i class="fa fa-eye" aria-hidden="true"></i>
+								<?php $view_count = get_post_meta( get_the_ID(), 'views', true ); printf(__( '%d','qqlanding' ), $view_count ); ?></span>
+							<?php endif; ?>
 						</div>
 	    			</div>
 	    		</div>
@@ -211,10 +221,7 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 					$html_output .= sprintf('<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><a href="%1$s" itemprop="' . $schema_item . '"><span itemprop="' . $schema_name . '">%2$s</span></a>',$post_type_archive, $custom_tax_name);
 
 				elseif( is_single() && ! is_attachment() ):
-					if( $post_type === 'video' ){
-						$html_output .= '<li class="' . $breadcrumb__item_class . ' active" itemprop="' . $schema_item_elem . '" itemscope itemtype="' . $schema_url . '/ListItem"><meta itemprop="position" content="3"><span itemprop="' . $schema_name . '">' . get_the_title() . '</span></li>';
-					}
-					else if ( $post_type != 'post' ) {
+					if ( $post_type != 'post' ) {
 						$post_type_object = get_post_type_object($post_type);
 						$post_type_archive = get_post_type_archive_link($post_type);
 						

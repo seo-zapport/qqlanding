@@ -6,11 +6,11 @@
  //Appearance Settings
 if(have_rows('rwd_settings', 'option')) :
 	while(have_rows('rwd_settings', 'option')) : the_row();
-		$slide_width = get_sub_field('slider_width');
+		//$slide_width = get_sub_field('slider_width');
 		$slide_height = get_sub_field('slider_height');
-		$slide_tablet_width = get_sub_field('slider_tablet_width');
+		//$slide_tablet_width = get_sub_field('slider_tablet_width');
 		$slide_tablet_height = get_sub_field('slider_tablet_height');
-		$slide_mobile_width = get_sub_field('slider_mobile_width');
+		//$slide_mobile_width = get_sub_field('slider_mobile_width');
 		$slide_mobile_height = get_sub_field('slider_mobile_height');
 		$slide_height = ( ! empty($slide_height) ) ? $slide_height . 'px;': 'auto;';
 		$slide_tablet_height = ( ! empty($slide_tablet_height) ) ? $slide_tablet_height . 'px;': 'auto;';
@@ -51,7 +51,12 @@ $args = array(
 $newSlider = new WP_Query($args);
 if ( $newSlider->have_posts() ) :
 	while ( $newSlider->have_posts() ) : $newSlider->the_post();
-	$lang = wp_get_post_terms( get_the_ID(), 'language' )[0]->slug;
+		if ( function_exists('pll_register_string') ) {
+			$lang = wp_get_post_terms( get_the_ID(), 'language' )[0]->slug;
+		}else{
+			$lang = 'en';
+		}
+	
 	if ( have_rows('slider_item') ) : $count = 1;
 		while (have_rows('slider_item')) : the_row();
 			$filters = get_sub_field('filter_fields');
@@ -213,9 +218,9 @@ if ( ! empty($filters) ): /*add the slider-filter class and put the bg values to
 }
 
 $content_item_a = get_field( 'content_item_a', 'option' );
-$content_item_b = get_field( 'content_item_b', 'option' );
+$extra_content_attr = get_field( 'extra_content_attr', 'option' );
 echo conten_bg($content_item_a,'a');
-echo conten_bg($content_item_b,'b');
+echo conten_bg($extra_content_attr,'b');
 
 /**
  * #Theme Default
@@ -419,6 +424,13 @@ if ( have_rows( 'footer_bg_settings', 'option' ) ) :
 	endwhile;
 endif;
 
+/**
+ * ##Copyright
+ *---------------------*/
+$copyright = get_field( 'footer_copyright', 'option' );
+if ( $copyright ) : ?>
+	.qqlanding-sites .site-footer #site-copyright{background-color:<?php echo $copyright['_bg_color']; ?>;color:<?php echo $copyright['_color']; ?>;}
+<?php endif;
 
 
 /**
@@ -449,60 +461,92 @@ if ( have_rows( 'fb_layout_settings' ,'option' ) ) :
 endif;//end of fb_layout_settings
 
 
-	/**
-	 * #Videos Content Editor
-	 *----------------------------*/
+/**
+ * #Videos Content Editor
+ *----------------------------*/
 
-	if ( have_rows( 'vm_editor_settings', 'option') ) :
-		while ( have_rows( 'vm_editor_settings', 'option') ) : the_row();
+$match_settings = get_field('table_match_settings', 'option');
+$timer_settings = get_field('table_match_timer', 'option');
 
-			$bg_attr = get_sub_field('vm_bg_attr');
-			$repeat = get_sub_field('vm_repeat_bg_img');
-			$scroll = get_sub_field('vm_scroll_with_page');
-			$screen = get_sub_field('vm_presets');
-			$position = get_sub_field('vm_image_position');
-			$image_size = get_sub_field('vm_image_size');
-			$image = get_sub_field('vm_image');
+if ( $match_settings ) :
+	$repeat = match_settings['_repeat_bg_image'];
+	$scroll = match_settings['_scroll_with_page'];
+	$screen = match_settings['_presets'];
+	$position = match_settings['_image_position'];
+	$image_size = match_settings['_image_size'];
 
+	$bg_attr = qqlanding_preset_acf( $match_settings['_repeat_bg_image'], $match_settings['_scroll_with_page'], $match_settings['_presets'], $match_settings['_image_position'], $match_settings['_image_size']); ?>
+	#matchWrap{
+		<?php if ( $match_settings['_attribute'] == 'table-color' ) : ?>background-color: <?php echo $match_settings['_color']; ?>;<?php else: ?>background-image: url(<?php echo $match_settings['_image']; ?>);<?php echo $bg_attr; ?><?php endif;?>}
+	<?php
+endif;
+if ( $timer_settings ) :
+	$tile_color = $timer_settings['table_match_title_color'];
+	$text_color = $timer_settings['table_match_text_color'];
+	$dot_color = $timer_settings['table_match_dot_color'];
+	$hide_show_dot = $timer_settings['table_match_display_dot'];
 
-			$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size); ?>
-			#videoContent{<?php if ( $bg_attr == 'bg-color' ): ?>background-color: <?php echo get_sub_field('vm_color'); ?>;<?php else: ?>background-image: url(<?php echo $image; ?>);<?php echo $bg_attr; ?><?php endif; ?>}
-		<?php endwhile;
-	endif;
-	
-	if ( have_rows( 'vm_match_settings', 'option') ) :
-		while ( have_rows( 'vm_match_settings', 'option') ) : the_row();
-
-			$bg_attr = get_sub_field('vm_bg_attr');
-			$repeat = get_sub_field('vm_repeat_bg_img');
-			$scroll = get_sub_field('vm_scroll_with_page');
-			$screen = get_sub_field('vm_presets');
-			$position = get_sub_field('vm_image_position');
-			$image_size = get_sub_field('vm_image_size');
-			$image = get_sub_field('vm_image');
-			
-			$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size); ?>
-			#matchWrap{<?php if ( $bg_attr == 'bg-color' ): ?>background-color: <?php echo get_sub_field('vm_color'); ?>;<?php else: ?>background-image: url(<?php echo $image; ?>);<?php echo $bg_attr; ?><?php endif; ?>}
-		<?php endwhile;
-	endif;
-
-	if ( have_rows( 'vm_video_settings', 'option') ) :
-		while ( have_rows( 'vm_video_settings', 'option') ) : the_row();
-
-			$bg_attr = get_sub_field('vm_bg_attr');
-			$repeat = get_sub_field('vm_repeat_bg_img');
-			$scroll = get_sub_field('vm_scroll_with_page');
-			$screen = get_sub_field('vm_presets');
-			$position = get_sub_field('vm_image_position');
-			$image_size = get_sub_field('vm_image_size');
-			$image = get_sub_field('vm_image');
+	if ( $tile_color || $text_color ) : ?>
+		#matchWrap .flip-clock-wrapper ul li a div div.inn{
+			background-color:<?php echo $tile_color; ?> !important;
+			color:<?php echo $text_color; ?> !important;
+		}
+	<?php endif;
+	if ( $dot_color ) : ?>
+		.flip-clock-dot{background-color:<?php echo $dot_color; ?> !important;<?php echo ( $hide_show_dot == true ) ? 'display:block' : 'display:none'; ?> !important;}
+	<?php endif;
+	if ( $timer_settings['table_match_display_style'] == 'text' ) : ?>
+		#matchWrap .timer-text{
+		color: <?php echo $timer_settings['table_match_style_text_color']; ?>;
+		font-size: <?php echo $timer_settings['table_match_font_size']; ?>px;
+		font-weight: <?php echo $timer_settings['table_match_font_weight']; ?>;
+		letter-spacing: <?php echo $timer_settings['table_match_letter_space']; ?>px;
+		text-align: <?php echo $timer_settings['table_match_text_align']; ?>;
+	}
+	<?php endif;
+endif;
 
 
-			$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size); ?>
-			#videoWrap{<?php if ( $bg_attr == 'bg-color' ): ?>background-color: <?php echo get_sub_field('vm_color'); ?>;<?php else: ?>background-image: url(<?php echo $image; ?>);<?php echo $bg_attr; ?><?php endif; ?>}
-		<?php endwhile;
-	endif;
-	//end page template ?>
+/**-Match-table-*/
+$table_settings = get_field('table_settings', 'option');
+//table-custom
+if (table_settings) : ?>
+	#matchWrap table.table-custom{background-color:<?php echo $table_settings['table_bg_color']; ?>;}
+	#matchWrap table.table-custom, #matchWrap .table-custom th, #matchWrap .table-custom td{border-color:<?php echo $table_settings['table_border_color']; ?>;border-width:<?php echo $table_settings['table_border_width']; ?>px;}
+	#matchWrap .table.table-custom thead th{background-color:<?php echo $table_settings['table_heading_bg_color']; ?>;color:<?php echo $table_settings['table_heading_text_color']; ?>;font-size:<?php echo $table_settings['table_heading_font_size']; ?>px;}
+	#matchWrap .table.table-custom tbody tr{color:<?php echo $table_settings['table_text_color']; ?>;font-size:<?php echo $table_settings['table_font_size']; ?>px;}
+<?php endif;
+
+/**-Video-*/
+$video_settings = get_field('video_video_settings', 'option');
+$card_settings = get_field('video_cards_settings', 'option');
+if ( $video_settings ) :
+	//$vid_bg_attr = match_settings['vid_bg_attr'];
+	$repeat = $video_settings['vid_repeat_bg_img'];
+	$scroll = $video_settings['vid_scroll_with_page'];
+	$screen = $video_settings['vid_presets'];
+	$position = $video_settings['vid_image_position'];
+	$image_size = $video_settings['vid_image_size'];
+
+
+	$bg_attr = qqlanding_preset_acf( $repeat, $scroll, $screen, $position, $image_size);?>
+	#videoWrap{<?php if ( $video_settings['vid_bg_attr'] == 'bg-color' ): ?>background-color: <?php echo $video_settings['vid_color']; ?>;<?php else: ?>background-image: url(<?php echo $video_settings['vid_image']; ?>);<?php echo $bg_attr; ?><?php endif; ?>}
+<?php endif; //end page template
+if( $card_settings ) :
+	$_bg_color = $card_settings['_bg_color'];
+	$_color = $card_settings['_color'];
+	$_hover_color = $card_settings['_hover_color'];
+	if( $_bg_color ) : ?>
+		#videoWrap .vid-card .vid-pos-abs{background:<?php echo $_bg_color; ?> !important;}
+	<?php endif;
+	if( $_color ) : ?>
+		.qqlanding-sites #videoWrap .vid-card a{color:<?php echo $_color; ?>;}
+	<?php endif;
+	if( $_hover_color ) : ?>
+		.qqlanding-sites #videoWrap .vid-card a:hover{color:<?php echo $_hover_color; ?>;}
+	<?php endif;
+endif; //end card setting
+?>
 
 
 /**

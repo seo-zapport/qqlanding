@@ -28,6 +28,14 @@
     }
 
     /**
+     * Add some class in the header tags
+     *-----------------------------------*/
+    $(window).load(function(e){
+        e.preventDefault();
+        $( '#masthead.site-header' ).addClass(nav_class);
+    });
+
+    /**
      * Add height the extra div element when it
      * have the class of qqland-affix
      *------------------------------------------*/
