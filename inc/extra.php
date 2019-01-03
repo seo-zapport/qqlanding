@@ -339,9 +339,9 @@ if ( ! function_exists('qqlanding_breadcrumb_list') ) :
 endif;
 
 
-function qqlanding_preload_item(){ 
+function qqlanding_preload_item(){
 
-	if ( get_theme_mod( 'qqlanding_display_preloading_settings', true ) ) :?>
+	if ( get_theme_mod( 'qqlanding_display_preloading_settings', false ) != false ) : ?>
 	<div id="qqpreload">
 		<div id="qqpreload_center">
 			<?php

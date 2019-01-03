@@ -5,6 +5,7 @@ $disable = get_field( 'slider_enable_sections', 'option' );
 $slider_app = get_field('slider_appearance_group', 'option');
 $animation = get_field('slider_animations_group', 'option');
 $skew_opt = get_field('slider_skew', 'options');
+$heading_settings = get_field('slider_heading_settings', 'options');
 
 if ( acf_selective_refresh($disable) ) return $disable = false;
 
@@ -51,22 +52,16 @@ if ($disable) : ?>
 							$video = get_sub_field('content_slider_video');
 							$filters = get_sub_field('filter_fields');
 							$filter_class = ( !empty($filters) ) ? 'slider-filters': '';
-							$args = array( 
-								'tags' 			=> 'h2',
-								'class'			=> 'sec-entry-title text-center',
-								'id'			=> 'id',
-								'itemprop'		=> 'headline',
-								'alignment'		=> 'default',
-							);
+							// 	'class'			=> 'py-5 sec-entry-title m-0 text-center'
 							?>
 							<?php if ( $con_settings['slider_content_size'] == 'full' ): ?>
-								<div class="carousel-item sliders-country-<?php echo $language;?> slider-views-<?php echo $count; ?> <?php echo ( $count <= 1 ) ? 'active' : ''; ?>">
-									<div class="col-12 col-md-12 col-lg-12">
-										<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'), $args) ; ?>
+								<div class="carousel-item sliders-country-<?php echo $language;?> slider-views-<?php echo $count; ?> <?php echo ( $count <= 1 ) ? 'active' : ''; ?>" style="overflow:hidden;">
+									<div class="container"><!--col-12-col-md-12-col-lg-12-->
+										<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'), $heading_settings) ; ?>
 									</div>
 								</div><!--Full-width-->
 							<?php else: ?>
-								<div class="carousel-item  sliders-country-<?php echo $language;?> slider-views-<?php echo $count; ?> <?php echo ( $count <= 1 ) ? 'active' : ''; ?>">
+								<div class="carousel-item  sliders-country-<?php echo $language;?> slider-views-<?php echo $count; ?> <?php echo ( $count <= 1 ) ? 'active' : ''; ?>" style="overflow:hidden;">
 									<?php echo ( ! empty($filter_class) ) ? '<div class="slider-filters"></div>' : ''; ?>
 									<div class="banner-static-content container d-flex">
 										<div class="row">
@@ -81,7 +76,7 @@ if ($disable) : ?>
 												</div>
 											<?php endif; //left?>
 											<div class="col-12 col-lg-6 align-self-center align-items-center">
-												<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'), $args);
+												<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'), $heading_settings);
 													if (have_rows('enter_site_button')) :
 														while (have_rows('enter_site_button')) : the_row();
 

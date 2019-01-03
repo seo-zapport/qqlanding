@@ -839,7 +839,7 @@ function qqlanding_customizer_register( $wp_customize ){
 
 			$wp_customize->add_setting( 'qqlanding_display_preloading_settings',
 				array(
-					'default'		=> true,
+					'default'		=> false,
 					'sanitize_callback'	=> 'qqlanding_sanitize_checkbox'
 				)
 			);

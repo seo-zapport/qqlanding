@@ -2,7 +2,7 @@
 //$disable = sanitize_text_field( get_field( 'pvs_enable_section', 'option' ) ); //Banner Enable/Disable
 $disable = get_field( 'pvs_enable_section', 'option' ); //Provider Enable/Disable
 $pvs_title = get_field( 'pvs_title', 'option' ); // providers custom repeater
-$pvs_tags = get_field( 'pvs_header_tags', 'option' );
+$heading_attr = get_field( 'pvs_heading_settings', 'option' );
 
 if ( acf_selective_refresh($disable) ) return $disable = false;
 
@@ -11,14 +11,14 @@ if ($disable) : ?>
 	<div class="container">
 		<?php
 
-		$heading_attr = array(
+		/*$heading_attr = array(
 			'tags'			=> $pvs_tags,
 			'class'			=> 'sec-entry-title text-center',
 			'id'			=> 'id',
 			'itemprop'		=> 'headline',
 			'alignment'		=> 'default',
-		);
-		acf_the_header_tag_injection($pvs_title, $heading_attr ); //Header tags
+		);*/
+		echo acf_the_header_tag_injection($pvs_title, $heading_attr ); //Header tags
 
 		if ( have_rows( 'pvs_settings', 'option' ) ) :
 			while ( have_rows( 'pvs_settings', 'option' ) ) : the_row();
