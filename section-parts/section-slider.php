@@ -4,8 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) die;
 $disable = get_field( 'slider_enable_sections', 'option' );
 $slider_app = get_field('slider_appearance_group', 'option');
 $animation = get_field('slider_animations_group', 'option');
-$skew_opt = get_field('slider_skew', 'options');
-$heading_settings = get_field('slider_heading_settings', 'options');
+$skew_opt = get_field('slider_skew', 'option');
+$heading_settings = get_field('slider_heading_settings', 'option');
 
 if ( acf_selective_refresh($disable) ) return $disable = false;
 
@@ -57,7 +57,23 @@ if ($disable) : ?>
 							<?php if ( $con_settings['slider_content_size'] == 'full' ): ?>
 								<div class="carousel-item sliders-country-<?php echo $language;?> slider-views-<?php echo $count; ?> <?php echo ( $count <= 1 ) ? 'active' : ''; ?>" style="overflow:hidden;">
 									<div class="container"><!--col-12-col-md-12-col-lg-12-->
-										<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'), $heading_settings) ; ?>
+										<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'), $heading_settings);
+											if (have_rows('enter_site_button')) :
+												while (have_rows('enter_site_button')) : the_row();
+													$btn_args = array(
+														'type' => get_sub_field('btn_type'),
+														'link' => get_sub_field('btn_link'),
+														'image' => get_sub_field('btn_image'),
+														'text' => get_sub_field('btn_text'),
+														'xfn' => get_sub_field('btn_xfn_r'),
+														'target' => get_sub_field('btn_target'),
+														'device' => get_sub_field('btn_device'),
+														'class' => get_sub_field('btn_custom_class'),
+														'id' => get_sub_field('btn_custom_id')
+													);
+													echo qqlanding_btn_entersite( $btn_args );
+												endwhile;
+											endif; ?>
 									</div>
 								</div><!--Full-width-->
 							<?php else: ?>
@@ -79,16 +95,18 @@ if ($disable) : ?>
 												<?php echo fpcontent_content_position(get_sub_field('slider_title'),get_sub_field('slider_content'),'banner',get_sub_field('content_slider_images'), $heading_settings);
 													if (have_rows('enter_site_button')) :
 														while (have_rows('enter_site_button')) : the_row();
-
-															$esite_type = get_sub_field('btn_type');
-															$esite_link = get_sub_field('btn_link');
-															$esite_img = get_sub_field('btn_image');
-															$esite_txt = get_sub_field('btn_text');
-															$esite_xfn = get_sub_field('btn_xfn_r');
-															$esite_trget = get_sub_field('btn_target');
-															$esite_dev = get_sub_field('btn_device');
-															echo qqlanding_btn_entersite($esite_type,$esite_link,$esite_img,$esite_txt,$esite_xfn,$esite_trget,$esite_dev);
-
+															$btn_args = array(
+																'type' => get_sub_field('btn_type'),
+																'link' => get_sub_field('btn_link'),
+																'image' => get_sub_field('btn_image'),
+																'text' => get_sub_field('btn_text'),
+																'xfn' => get_sub_field('btn_xfn_r'),
+																'target' => get_sub_field('btn_target'),
+																'device' => get_sub_field('btn_device'),
+																'class' => get_sub_field('btn_custom_class'),
+																'id' => get_sub_field('btn_custom_id')
+															);
+															echo qqlanding_btn_entersite( $btn_args );
 														endwhile;
 													endif; ?>
 											</div>

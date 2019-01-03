@@ -10,14 +10,7 @@ if ($disable) : ?>
 <section id="Fproviders" class="py-5">
 	<div class="container">
 		<?php
-
-		/*$heading_attr = array(
-			'tags'			=> $pvs_tags,
-			'class'			=> 'sec-entry-title text-center',
-			'id'			=> 'id',
-			'itemprop'		=> 'headline',
-			'alignment'		=> 'default',
-		);*/
+		
 		echo acf_the_header_tag_injection($pvs_title, $heading_attr ); //Header tags
 
 		if ( have_rows( 'pvs_settings', 'option' ) ) :

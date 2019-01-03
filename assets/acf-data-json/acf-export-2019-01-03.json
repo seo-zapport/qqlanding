@@ -8354,7 +8354,7 @@
                 "collapsed": "",
                 "min": 0,
                 "max": 2,
-                "layout": "block",
+                "layout": "row",
                 "button_label": "Add button",
                 "sub_fields": [
                     {
@@ -8362,7 +8362,7 @@
                         "label": "Track Links",
                         "name": "btn_link",
                         "type": "text",
-                        "instructions": "",
+                        "instructions": "Add the link of your button here.",
                         "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -8377,11 +8377,49 @@
                         "maxlength": ""
                     },
                     {
+                        "key": "field_5c2dacb872225",
+                        "label": "Custom Class",
+                        "name": "btn_custom_class",
+                        "type": "text",
+                        "instructions": "Indicate the custom class for enter site.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": "btn_custom_class"
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5c2dad2372226",
+                        "label": "Custom ID",
+                        "name": "btn_custom_id",
+                        "type": "text",
+                        "instructions": "Indicate the custom id for enter site.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": "btn_custom_id"
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
                         "key": "field_5bd7afc05d141",
                         "label": "Image",
                         "name": "btn_image",
                         "type": "image",
-                        "instructions": "",
+                        "instructions": "Add some images that will appear in the button.",
                         "required": 0,
                         "conditional_logic": [
                             [
@@ -8398,7 +8436,7 @@
                             "id": "btn_image"
                         },
                         "return_format": "array",
-                        "preview_size": "thumbnail",
+                        "preview_size": "full",
                         "library": "all",
                         "min_width": 235,
                         "min_height": 52,
@@ -8413,7 +8451,7 @@
                         "label": "Link Text",
                         "name": "btn_text",
                         "type": "text",
-                        "instructions": "",
+                        "instructions": "Indicate the text you want to add.",
                         "required": 1,
                         "conditional_logic": [
                             [
@@ -8440,7 +8478,7 @@
                         "label": "Link Relationship (xfn)",
                         "name": "btn_xfn_r",
                         "type": "repeater",
-                        "instructions": "",
+                        "instructions": "Indicate the link relationship of the button.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -8480,7 +8518,7 @@
                         "label": "Link Target",
                         "name": "btn_target",
                         "type": "select",
-                        "instructions": "",
+                        "instructions": "Indicate whether blank or self the target link of the button.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -8498,8 +8536,8 @@
                         "allow_null": 0,
                         "multiple": 0,
                         "ui": 0,
-                        "ajax": 0,
                         "return_format": "value",
+                        "ajax": 0,
                         "placeholder": ""
                     },
                     {
@@ -8507,7 +8545,7 @@
                         "label": "Buttons Type",
                         "name": "btn_type",
                         "type": "radio",
-                        "instructions": "",
+                        "instructions": "Choose between image and text.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -8521,17 +8559,17 @@
                         },
                         "allow_null": 0,
                         "other_choice": 0,
-                        "save_other_choice": 0,
                         "default_value": "image",
                         "layout": "horizontal",
-                        "return_format": "value"
+                        "return_format": "value",
+                        "save_other_choice": 0
                     },
                     {
                         "key": "field_5bd7afc05d147",
                         "label": "Device",
                         "name": "btn_device",
                         "type": "select",
-                        "instructions": "",
+                        "instructions": "Choose between desktop or mobile.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -8549,8 +8587,8 @@
                         "allow_null": 0,
                         "multiple": 0,
                         "ui": 0,
-                        "ajax": 0,
                         "return_format": "value",
+                        "ajax": 0,
                         "placeholder": ""
                     }
                 ]

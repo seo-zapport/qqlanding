@@ -8397,7 +8397,7 @@ acf_add_local_field_group(array(
 			'collapsed' => '',
 			'min' => 0,
 			'max' => 2,
-			'layout' => 'block',
+			'layout' => 'row',
 			'button_label' => 'Add button',
 			'sub_fields' => array(
 				array(
@@ -8405,7 +8405,7 @@ acf_add_local_field_group(array(
 					'label' => 'Track Links',
 					'name' => 'btn_link',
 					'type' => 'text',
-					'instructions' => '',
+					'instructions' => 'Add the link of your button here.',
 					'required' => 1,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -8420,11 +8420,49 @@ acf_add_local_field_group(array(
 					'maxlength' => '',
 				),
 				array(
+					'key' => 'field_5c2dacb872225',
+					'label' => 'Custom Class',
+					'name' => 'btn_custom_class',
+					'type' => 'text',
+					'instructions' => 'Indicate the custom class for enter site.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'btn_custom_class',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c2dad2372226',
+					'label' => 'Custom ID',
+					'name' => 'btn_custom_id',
+					'type' => 'text',
+					'instructions' => 'Indicate the custom id for enter site.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => 'btn_custom_id',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
 					'key' => 'field_5bd7afc05d141',
 					'label' => 'Image',
 					'name' => 'btn_image',
 					'type' => 'image',
-					'instructions' => '',
+					'instructions' => 'Add some images that will appear in the button.',
 					'required' => 0,
 					'conditional_logic' => array(
 						array(
@@ -8441,7 +8479,7 @@ acf_add_local_field_group(array(
 						'id' => 'btn_image',
 					),
 					'return_format' => 'array',
-					'preview_size' => 'thumbnail',
+					'preview_size' => 'full',
 					'library' => 'all',
 					'min_width' => 235,
 					'min_height' => 52,
@@ -8456,7 +8494,7 @@ acf_add_local_field_group(array(
 					'label' => 'Link Text',
 					'name' => 'btn_text',
 					'type' => 'text',
-					'instructions' => '',
+					'instructions' => 'Indicate the text you want to add.',
 					'required' => 1,
 					'conditional_logic' => array(
 						array(
@@ -8483,7 +8521,7 @@ acf_add_local_field_group(array(
 					'label' => 'Link Relationship (xfn)',
 					'name' => 'btn_xfn_r',
 					'type' => 'repeater',
-					'instructions' => '',
+					'instructions' => 'Indicate the link relationship of the button.',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -8523,7 +8561,7 @@ acf_add_local_field_group(array(
 					'label' => 'Link Target',
 					'name' => 'btn_target',
 					'type' => 'select',
-					'instructions' => '',
+					'instructions' => 'Indicate whether blank or self the target link of the button.',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -8541,8 +8579,8 @@ acf_add_local_field_group(array(
 					'allow_null' => 0,
 					'multiple' => 0,
 					'ui' => 0,
-					'ajax' => 0,
 					'return_format' => 'value',
+					'ajax' => 0,
 					'placeholder' => '',
 				),
 				array(
@@ -8550,7 +8588,7 @@ acf_add_local_field_group(array(
 					'label' => 'Buttons Type',
 					'name' => 'btn_type',
 					'type' => 'radio',
-					'instructions' => '',
+					'instructions' => 'Choose between image and text.',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -8564,17 +8602,17 @@ acf_add_local_field_group(array(
 					),
 					'allow_null' => 0,
 					'other_choice' => 0,
-					'save_other_choice' => 0,
 					'default_value' => 'image',
 					'layout' => 'horizontal',
 					'return_format' => 'value',
+					'save_other_choice' => 0,
 				),
 				array(
 					'key' => 'field_5bd7afc05d147',
 					'label' => 'Device',
 					'name' => 'btn_device',
 					'type' => 'select',
-					'instructions' => '',
+					'instructions' => 'Choose between desktop or mobile.',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -8592,8 +8630,8 @@ acf_add_local_field_group(array(
 					'allow_null' => 0,
 					'multiple' => 0,
 					'ui' => 0,
-					'ajax' => 0,
 					'return_format' => 'value',
+					'ajax' => 0,
 					'placeholder' => '',
 				),
 			),
@@ -10403,26 +10441,27 @@ function qqlanding_sliding_bg($slider_attrib, $slide_img, $slide_color){
 	return $background;
 }
 
-function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn, $link_target, $btn_dev){
+function qqlanding_btn_entersite( $args ){
+// function qqlanding_btn_entersite($type, $link, $btn_image, $btn_text, $link_xfn, $link_target, $btn_dev){
 	$th_layout = get_field( 'th_color_scheme', 'option' );
-	$links = ($link) ? do_shortcode( $link ) : esc_url( home_url( '/' ) ); //links
-	$imgbutton = ($btn_image['url']) ? $btn_image['url'] : get_template_directory_uri().'/assets/images/default/enter.png'; //image
+	$links = ( $args['link'] ) ? do_shortcode( $args['link'] ) : esc_url( home_url( '/' ) ); //links
+	$imgbutton = ( $args['image']['url'] ) ? $args['image']['url'] : get_template_directory_uri().'/assets/images/default/enter.png'; //image
 	//if( ! empty($link_xfn)){ $linkRel = $link_xfn; }else{$linkRel = '';} //link relationship
-	$linkRel = implode(' ', array_map(function ($i) { return $i['btn_xfn_item']; }, $link_xfn)); //link relationship
-	$linktar = ($link_target == '_blank') ? '_blank' : '_self'; //Target
-	$device = ( $btn_dev == 'desktop' ) ? 'd-none d-md-inline-block d-lg-inline-block mt-3' : 'd-block d-md-none d-lg-none mt-3'; //Device Item
+	$linkRel = implode(' ', array_map(function ($i) { return $i['btn_xfn_item']; }, $args['xfn'])); //link relationship
+	$linktar = ( $args['target'] == '_blank' ) ? '_blank' : '_self'; //Target
+	$device  = ( $args['device'] == 'desktop' ) ? 'd-none d-md-inline-block d-lg-inline-block mt-3' : 'd-block d-md-none d-lg-none mt-3'; //Device Item
 
-	if ( $type == 'image' ) {
-		$item_class = '';
-		$item = '<img class="img-responsive enter-site" src="' . $imgbutton . '" alt="' . $btn_image['alt'] . '" title="' . $btn_image['title'] . '">';
+	if ( $args['type'] == 'image' ) {
+		$item_class = '' . $args['class'];
+		$item = '<img class="img-responsive enter-site" src="' . $imgbutton . '" alt="' . $args['image']['alt'] . '" title="' . $args['image']['title'] . '">';
 	}else{
 		$item_class = 'btn btn-lg btn-entersite bg_color_' . qqlanding_bg_color($th_layout, 'button') ;
 
-		$devices = ( $btn_dev == 'desktop' ) ? "<i class='fas fa-desktop'></i> " : "<i class='fas fa-mobile-alt'></i> ";
+		$devices = ( $args['device'] == 'desktop' ) ? "<i class='fas fa-desktop'></i> " : "<i class='fas fa-mobile-alt'></i> ";
 
-		$item = $devices . ' ' . $btn_text;
+		$item = $devices . ' ' . $args['text'] . ' ' . $args['class'];
 	}
-	$entersite = '<div class="' . $device . '">';
+	$entersite = '<div class="' . $device . '" id="' . $args['id'] . '">';
 		$entersite .= '<a href="' . $links . '" rel="' . $linkRel . '" target="'.$linktar.'" class="' . $item_class . '">' . $item . '</a>';
 	$entersite .= '</div>';
 
