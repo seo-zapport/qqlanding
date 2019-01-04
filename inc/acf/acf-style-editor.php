@@ -222,7 +222,7 @@ $extra_content_attr = get_field( 'extra_content_attr', 'option' );
 echo conten_bg($content_item_a,'a');
 echo conten_bg($extra_content_attr,'b');
 
-$featured_content = get_field( 'extra_heading_settings', 'option' );
+$featured_content = get_field( 'content_heading_settings', 'option' );
 
 if ( $featured_content['alignment'] == 'top' ) : ?>
 	#Fcontent_a{position:relative;overflow:hidden;}
@@ -523,7 +523,7 @@ if (table_settings) : ?>
 	#matchWrap table.table-custom{background-color:<?php echo $table_settings['table_bg_color']; ?>;}
 	#matchWrap table.table-custom, #matchWrap .table-custom th, #matchWrap .table-custom td{border-color:<?php echo $table_settings['table_border_color']; ?>;border-width:<?php echo $table_settings['table_border_width']; ?>px;}
 	#matchWrap .table.table-custom thead th{background-color:<?php echo $table_settings['table_heading_bg_color']; ?>;color:<?php echo $table_settings['table_heading_text_color']; ?>;font-size:<?php echo $table_settings['table_heading_font_size']; ?>px;}
-	#matchWrap .table.table-custom tbody tr{color:<?php echo $table_settings['table_text_color']; ?>;font-size:<?php echo $table_settings['table_font_size']; ?>px;}
+	#matchWrap .table.table-custom tbody tr td{color:<?php echo $table_settings['table_text_color']; ?>;font-size:<?php echo $table_settings['table_font_size']; ?>px;}
 <?php endif;
 
 /**-Video-*/

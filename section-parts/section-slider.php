@@ -83,7 +83,7 @@ if ($disable) : ?>
 										<div class="row">
 											<?php $slider_post = $con_settings['slider_content_position']; ?>
 											<?php if ( $slider_post == 'left' ): ?>
-												<div class="<?php echo ( $format == 'image' ) ?  $hide_mob : ''; ?> col-12 col-lg-6  align-self-center align-items-center">
+												<div class="<?php echo $hide_mob ; ?> col-12 col-lg-6  align-self-center align-items-center">
 													<?php if ( $format == 'image' ): ?>
 														<?php echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider'); ?>
 													<?php else: 
@@ -111,11 +111,10 @@ if ($disable) : ?>
 													endif; ?>
 											</div>
 											<?php if ( $slider_post == 'right' ): ?>
-												<div class="<?php echo ( $format == 'image' ) ?  $hide_mob : ''; ?> col-12 col-lg-6 text-white align-self-center align-items-center">
+												<div class="<?php echo $hide_mob; ?> col-12 col-lg-6 text-white align-self-center align-items-center">
 													<?php if ( $format == 'image' ): 
 														echo fpcontent_img_position(get_sub_field('content_slider_images'),'slider');
 													else:
-														//var_dump($video);
 														echo fpv_video_settings($video, 'video');
 													endif ?>
 												</div>

@@ -2,42 +2,35 @@
 	$(window).on('load', function(){
 		if ( _tag_alignment == 'top' && _tag_display == true ) {
 			var find =  $('#' + _tag_id );
-			// console.log(find);
 			var title = find.text().toLowerCase();
 			const qqarray = ["qq288","qq188","qq101","qq1x2","qq724","qq801","qq828","qq882","qq802","qq820","qq808"];
-			const qqfreearray = ["free bonus",'bonus gratis','Tiền Thưởng Miễn Phí'];
+			const qqfreearray = ["free bonus",'bonus gratis','tiền thưởng miễn phí', 'โบนัสฟรี', '免費獎金'];
 			var qqfind = "";
 			var qqfindfree = "";
 			var pathArray = window.location.pathname;
 			var path_replace = pathArray.replace('/','');
 			var strpath = path_replace.substring(0,3);
-			var another = strpath.replace('/','');
+			var country = strpath.replace('/','');
 			var  image_title = '';
 			var val = '';
 
-
-				if (another == 'id') {
-					const qqfreearray = ["bonus gratis"];
-					var  image_title = 'bonus-gratis';
-					var  image_src = 'bonus-gratis';
-				}
-				else if(another == 'vi'){
-					const qqfreearray = ["Tiền Thưởng Miễn Phí"];
-					var  image_title = 'tiền-thưởng miễn-phí';
-					var  image_src = 'bonus-vn';
-				}else if(another == 'th'){
-					const qqfreearray = ["โบนัสฟรี"];
-					var  image_title = 'โบนัสฟรี';
-					var  image_src = 'bonus-th';
-				}else if(another == 'zh'){
-					const qqfreearray = ["免費獎金"];
-					var  image_title = '免費獎金';
-					var  image_src = 'bonus-china';
-				}else{
-					const qqfreearray = ["free bonus"];
-					var  image_title = 'free-bonus';
-					var  image_src = 'free-bonus';
-				}
+			if (country == 'id') {
+				var  image_title = 'bonus-gratis';
+				var  image_src = 'bonus-gratis';
+			}
+			else if(country == 'vi'){
+				var  image_title = 'tiền-thưởng miễn-phí';
+				var  image_src = 'bonus-vn';
+			}else if(country == 'th'){
+				var  image_title = 'โบนัสฟรี';
+				var  image_src = 'bonus-th';
+			}else if(country == 'zh'){
+				var  image_title = '免費獎金';
+				var  image_src = 'bonus-china';
+			}else{
+				var  image_title = 'free-bonus';
+				var  image_src = 'free-bonus';
+			}
 
 			qqarray.forEach(qqarray=>{  
 			  splitfind = title.match(qqarray);
@@ -46,6 +39,7 @@
 			   }
 			   val = title.split(qqfind);
 			});
+			
 
 			qqfreearray.forEach(qqfreearray=>{  
 				if(qqfind.length > 0){
@@ -59,6 +53,7 @@
 				   }
 			});
 
+			
 			if(qqfind.length > 0)
 			{
 			  val = title.split(qqfind);
@@ -67,21 +62,22 @@
 			}
 			  var freeval = qqfindfree;
 
-			//console.log(freeval);
+			//console.log(qqfreearray);
+
 			//find.html(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + image_src + ".png'></span>");
 			
 			if ( qqfind.length > 0 && freeval.length == 0 ) {
-				console.log(' qqfind >  0 && qqfindfree == 0 ');
+				// console.log(' qqfind >  0 && qqfindfree == 0 ');
 				find.html(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1] );
 			}else if( qqfind.length == 0 && freeval.length > 0 ){
-				console.log(' qqfind == 0 && qqfindfree > 0 ');
+				// console.log(' qqfind == 0 && qqfindfree > 0 ');
 				find.html(val[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + image_src + ".png'></span>");
 			}else if( qqfind.length > 0 && freeval.length > 0 ){
-				console.log(' qqfind >  0 && qqfindfree > 0 ');
+				// console.log(' qqfind >  0 && qqfindfree > 0 ');
 				find.html(val[0] + "<span><img src='" + urlBase + "/assets/images/brands/QQ" + qqfind.split('qq')[1] + ".png'></span>" + val[1].split(freeval)[0] + "<span><img src='" + urlBase + "/assets/images/videos/" + image_src + ".png'></span>");
 			}
 			else{
-				console.log(' else ');
+				// console.log(' else ');
 				find.text(title);
 			}
 		}

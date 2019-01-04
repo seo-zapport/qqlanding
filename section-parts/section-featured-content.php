@@ -6,7 +6,7 @@ $heading_settings = get_field( 'content_heading_settings', 'option' );
 if ( acf_selective_refresh($disable) ) return $disable = false;
 
 if ($disable) : ?>
-<section id="Fcontent_a" class="content-first py-5">
+<section id="Fcontent_a" class="content-first pt-5">
 	<?php if ( ! empty( $filters ) ): ?>
 		<div class="slider-filters"></div>
 	<?php endif; ?>
