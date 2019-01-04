@@ -222,6 +222,15 @@ $extra_content_attr = get_field( 'extra_content_attr', 'option' );
 echo conten_bg($content_item_a,'a');
 echo conten_bg($extra_content_attr,'b');
 
+$featured_content = get_field( 'extra_heading_settings', 'option' );
+
+if ( $featured_content['alignment'] == 'top' ) : ?>
+	#Fcontent_a{position:relative;overflow:hidden;}
+	#Fcontent_a .sec-video-title{color:#b71d1b;font-family:'century_gothic_bold';font-size:2.375rem;text-transform:uppercase;}
+	#Fcontent_a .sec-video-title span{display:inline-block;position:relative;top:-5px}
+	#Fcontent_a .sec-video-title span img{display:inline-block}
+<?php endif;
+
 /**
  * #Theme Default
  *---------------------*/
